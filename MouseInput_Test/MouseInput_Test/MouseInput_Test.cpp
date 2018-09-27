@@ -3,6 +3,7 @@
 //
 #include "stdafx.h"
 #include <iostream>
+#include <thread>
 #include <Windows.h>
 
 const char g_szClassName[] = "myWindowClass";
@@ -168,14 +169,15 @@ void ConnectToDevice(RID_DEVICE_INFO mouse, HWND hwnd) {
 	RegisterRawInputDevices(devices, 1, sizeof(devices[0]));
 }
 
-HWND InitWindow(HINSTANCE hInstance, int nCmdShow) {
+HWND InitWindow() {
 	WNDCLASSEX wc;
 	wc.cbSize = sizeof(WNDCLASSEX);
 	wc.style = 0;
 	wc.lpfnWndProc = WndProc;
 	wc.cbClsExtra = 0;
 	wc.cbWndExtra = 0;
-	wc.hInstance = hInstance;
+	wc.hInstance = GetModuleHandle(NULL);
+	//wc.hInstance = hInstance;
 	wc.hIcon = LoadIcon(NULL, IDI_APPLICATION);
 	wc.hCursor = LoadCursor(NULL, IDC_ARROW);
 	wc.hbrBackground = (HBRUSH)(COLOR_WINDOW + 1);
@@ -189,7 +191,8 @@ HWND InitWindow(HINSTANCE hInstance, int nCmdShow) {
 		"Title",
 		WS_OVERLAPPEDWINDOW,
 		CW_USEDEFAULT, CW_USEDEFAULT, 240, 120,
-		NULL, NULL, hInstance, NULL);
+		NULL, NULL, GetModuleHandle(NULL), NULL);
+		//NULL, NULL, hInstance, NULL);
 
 	//ShowWindow(hwnd, nCmdShow);
 	//UpdateWindow(hwnd);
@@ -205,13 +208,27 @@ void MessagePump(HWND hwnd) {
 }
 
 
-int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE, PWSTR pCmdLine, int nCmdShow)
+//int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE, PWSTR pCmdLine, int nCmdShow)
+int main()
 {
-	HWND hwnd = InitWindow(hInstance, nCmdShow);
+
+	std::thread thread1([]() {
+
+	HWND hwnd = InitWindow();
 	RID_DEVICE_INFO mouse = GetRawInputDevices();
 	ConnectToDevice(mouse, hwnd);
 
 	MessagePump(hwnd);
+	});
+	
+	std::thread thread2([]() {
+		for (size_t i = 0; true; i++)
+		{
+		printf("testing %d\n", i);
+		}
+	});
+
 	std::cin.get();
 	return 0;
+
 }
