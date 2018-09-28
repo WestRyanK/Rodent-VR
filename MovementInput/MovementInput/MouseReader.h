@@ -12,6 +12,7 @@ private:
 	float delta[2];
 	std::mutex delta_mutex;
 	Window* window = NULL;
+	bool is_reading = false;
 
 	void handle_input(LPARAM lparam);
 
@@ -29,4 +30,6 @@ public:
 
 	void lock_mouse_reader();
 	void unlock_mouse_reader();
+	void start_reader();
+	void stop_reader();
 };

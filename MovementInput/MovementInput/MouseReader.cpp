@@ -1,3 +1,4 @@
+#include "stdafx.h"
 #include "MouseReader.h"
 
 MouseReader::MouseReader()
@@ -5,7 +6,8 @@ MouseReader::MouseReader()
 	this->delta[AXIS_X] = 0;
 	this->delta[AXIS_Y] = 0;
 
-	this->window = new Window(&this->handle_input);
+	this->window = Window::getInstance();
+	this->window->set_handle_input([&](LPARAM lparam) { this->handle_input(lparam); });
 }
 
 MouseReader::~MouseReader()
@@ -59,12 +61,12 @@ void MouseReader::handle_input(LPARAM lparam)
 		// refresh rate than other devices. Could that make it 
 		// appear that some devices are moving faster than others?
 
-		if (raw->header.hDevice == this->cursorA_id) 
+		if (raw->header.hDevice == this->cursorA_id)
 		{
 			this->delta[AXIS_X] += raw->data.mouse.lLastX;
 		}
 		else if (raw->header.hDevice == this->cursorB_id)
-		{ 
+		{
 			this->delta[AXIS_Y] += raw->data.mouse.lLastX;
 		}
 
@@ -72,4 +74,19 @@ void MouseReader::handle_input(LPARAM lparam)
 	}
 
 	delete[] lparam_buffer;
+}
+
+void MouseReader::start_reader()
+{
+	if (!this->is_reading)
+	{
+		this->window->start_message_pump_async();
+		this->is_reading = this->window->get_is_running();
+	}
+}
+
+void MouseReader::stop_reader()
+{
+	this->window->stop_message_pump();
+	this->is_reading = this->window->get_is_running();
 }
