@@ -3,43 +3,53 @@
 
 MouseReader::MouseReader()
 {
-	this->delta[AXIS_X] = 0;
-	this->delta[AXIS_Y] = 0;
-
-	this->window = Window::getInstance();
-	this->window->set_handle_input([&](LPARAM lparam) { this->handle_input(lparam); });
+	this->window = Window::get_instance();
+	this->window->set_input_handler([&](LPARAM lparam) { this->handle_input(lparam); });
+	this->window->set_post_init([&](HWND hwnd) { this->accept_raw_mouse_input(hwnd); });
 }
 
 MouseReader::~MouseReader()
 {
 	delete window;
 }
-
-float MouseReader::read_delta(unsigned int axis)
-{
-	float out = this->delta[axis];
-	this->delta[axis] = 0;
-	return out;
-}
-
-
-void MouseReader::set_cursor_ids(HANDLE cursorA_id, HANDLE cursorB_id)
-{
-	this->cursorA_id = cursorA_id;
-	this->cursorB_id = cursorB_id;
-}
-
 void MouseReader::lock_mouse_reader()
 {
-	this->delta_mutex.lock();
+	this->reader_mutex.lock();
 }
 
 void MouseReader::unlock_mouse_reader()
 {
-	this->delta_mutex.unlock();
+	this->reader_mutex.unlock();
 }
 
-void MouseReader::handle_input(LPARAM lparam)
+void MouseReader::start_reader()
+{
+	if (!this->is_reading)
+	{
+		this->window->start_message_pump_async();
+		this->is_reading = this->window->get_is_running();
+	}
+}
+
+void MouseReader::accept_raw_mouse_input(HWND hwnd)
+{
+	RAWINPUTDEVICE devices[1];
+	devices[0].usUsagePage = 1;
+	devices[0].usUsage = 2;
+	devices[0].dwFlags = RIDEV_INPUTSINK;
+	devices[0].hwndTarget = hwnd;
+
+	RegisterRawInputDevices(devices, 1, sizeof(devices[0]));
+
+}
+
+void MouseReader::stop_reader()
+{
+	this->window->stop_message_pump();
+	this->is_reading = this->window->get_is_running();
+}
+
+RAWINPUT* MouseReader::get_raw_input(LPARAM lparam)
 {
 	UINT dw_size;
 
@@ -53,40 +63,5 @@ void MouseReader::handle_input(LPARAM lparam)
 
 	RAWINPUT* raw = (RAWINPUT*)lparam_buffer;
 
-	if (raw->header.dwType == RIM_TYPEMOUSE)
-	{
-		this->lock_mouse_reader();
-
-		// TODO: I could imagine that some devices have a faster 
-		// refresh rate than other devices. Could that make it 
-		// appear that some devices are moving faster than others?
-
-		if (raw->header.hDevice == this->cursorA_id)
-		{
-			this->delta[AXIS_X] += raw->data.mouse.lLastX;
-		}
-		else if (raw->header.hDevice == this->cursorB_id)
-		{
-			this->delta[AXIS_Y] += raw->data.mouse.lLastX;
-		}
-
-		this->unlock_mouse_reader();
-	}
-
-	delete[] lparam_buffer;
-}
-
-void MouseReader::start_reader()
-{
-	if (!this->is_reading)
-	{
-		this->window->start_message_pump_async();
-		this->is_reading = this->window->get_is_running();
-	}
-}
-
-void MouseReader::stop_reader()
-{
-	this->window->stop_message_pump();
-	this->is_reading = this->window->get_is_running();
+	return raw;
 }

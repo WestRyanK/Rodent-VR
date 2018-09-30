@@ -138,7 +138,6 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="MouseHandleReader.h" />
     <ClInclude Include="MouseMovementReader.h" />
     <ClInclude Include="MouseReader.h" />
     <ClInclude Include="MovementInput.h" />
@@ -161,7 +160,6 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
       </PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="MouseHandleReader.cpp" />
     <ClCompile Include="MouseMovementReader.cpp" />
     <ClCompile Include="MouseReader.cpp" />
     <ClCompile Include="MovementInput.cpp" />

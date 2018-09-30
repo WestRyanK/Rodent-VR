@@ -6,7 +6,7 @@
 #include <thread>
 #include <Windows.h>
 
-const char g_szClassName[] = "myWindowClass";
+const LPCSTR g_szClassName = "myWindowClass";
 
 void Error() {
 	auto error = GetLastError();
@@ -34,17 +34,17 @@ RID_DEVICE_INFO GetRawInputDevices() {
 		UINT size = 256;
 		TCHAR buffer[256] = { 0 };
 
-		if (GetRawInputDeviceInfo(rawInputDeviceList[i].hDevice, RIDI_DEVICENAME, buffer, &size) < 0) Error();
-
-		printf("Device Name: ");
-		fwrite(buffer, 1, 255, stdout);
-		printf("\n");
-
 		UINT cbSize = rid.cbSize;
 		if (GetRawInputDeviceInfo(rawInputDeviceList[i].hDevice, RIDI_DEVICEINFO, &rid, &cbSize) < 0) Error();
 
 		if (rid.dwType == RIM_TYPEMOUSE)
 		{
+			if (GetRawInputDeviceInfo(rawInputDeviceList[i].hDevice, RIDI_DEVICENAME, buffer, &size) < 0) Error();
+
+			printf("Device Name: ");
+			fwrite(buffer, 1, 255, stdout);
+			printf("\n");
+
 			printf("ID for mouse: %d\n", rid.mouse.dwId);
 			printf("Button Count: %d\n", rid.mouse.dwNumberOfButtons);
 			printf("Sample Rate: %d\n", rid.mouse.dwSampleRate);
@@ -53,26 +53,27 @@ RID_DEVICE_INFO GetRawInputDevices() {
 				mouse = rid;
 				//foundMouse = true;
 			//}
-		}
-		if (rid.dwType == RIM_TYPEKEYBOARD)
-		{
-			printf("Keyboard Mode: %d\n", rid.keyboard.dwKeyboardMode);
-			printf("Number of function keys: %d\n", rid.keyboard.dwNumberOfFunctionKeys);
-			printf("Number of indicators: %d\n", rid.keyboard.dwNumberOfIndicators);
-			printf("Number of keys total: %d\n", rid.keyboard.dwNumberOfKeysTotal);
-			printf("Type of the keyboard: %d\n", rid.keyboard.dwType);
-			printf("Subtype of the keyboard: %d\n", rid.keyboard.dwSubType);
-		}
-
-		if (rid.dwType == RIM_TYPEHID)
-		{
-			printf("Vendor Id: %d\n", rid.hid.dwVendorId);
-			printf("Product Id: %d\n", rid.hid.dwProductId);
-			printf("Version No: %d\n", rid.hid.dwVersionNumber);
-			printf("Usage for the device: %d\n", rid.hid.usUsage);
-			printf("Usage Page for the device: %d\n", rid.hid.usUsagePage);
-		}
 		printf("\n***********\n");
+		}
+		//if (rid.dwType == RIM_TYPEKEYBOARD)
+		//{
+		//	printf("Keyboard Mode: %d\n", rid.keyboard.dwKeyboardMode);
+		//	printf("Number of function keys: %d\n", rid.keyboard.dwNumberOfFunctionKeys);
+		//	printf("Number of indicators: %d\n", rid.keyboard.dwNumberOfIndicators);
+		//	printf("Number of keys total: %d\n", rid.keyboard.dwNumberOfKeysTotal);
+		//	printf("Type of the keyboard: %d\n", rid.keyboard.dwType);
+		//	printf("Subtype of the keyboard: %d\n", rid.keyboard.dwSubType);
+		//}
+
+		//if (rid.dwType == RIM_TYPEHID)
+		//{
+		//	printf("Vendor Id: %d\n", rid.hid.dwVendorId);
+		//	printf("Product Id: %d\n", rid.hid.dwProductId);
+		//	printf("Version No: %d\n", rid.hid.dwVersionNumber);
+		//	printf("Usage for the device: %d\n", rid.hid.usUsage);
+		//	printf("Usage Page for the device: %d\n", rid.hid.usUsagePage);
+		//}
+		//printf("\n***********\n");
 	}
 
 	free(rawInputDeviceList);
@@ -208,26 +209,21 @@ void MessagePump(HWND hwnd) {
 }
 
 
-//int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE, PWSTR pCmdLine, int nCmdShow)
 int main()
 {
 
-	std::thread thread1([]() {
 
 	HWND hwnd = InitWindow();
-	RID_DEVICE_INFO mouse = GetRawInputDevices();
-	ConnectToDevice(mouse, hwnd);
+	do
+	{
+		RID_DEVICE_INFO mouse = GetRawInputDevices();
+		std::cin.get();
+		printf("\n\n\n\n\n\n\n\n\n\n\n");
+	} while (true);
+	//ConnectToDevice(mouse, hwnd);
 
 	MessagePump(hwnd);
-	});
 	
-	std::thread thread2([]() {
-		for (size_t i = 0; true; i++)
-		{
-		printf("testing %d\n", i);
-		}
-	});
-
 	std::cin.get();
 	return 0;
 
