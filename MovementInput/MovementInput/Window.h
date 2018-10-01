@@ -16,7 +16,7 @@ class Window
 private:
 	Window();
 	static Window* instance;
-	std::function<void(LPARAM)> handle_input_func;
+	std::function<void(UINT, WPARAM, LPARAM)> message_handler_func;
 	std::function<void(HWND)> post_init_func;
 	HWND hwnd;
 	const LPCWSTR g_szClassName = L"myWindowClass";
@@ -41,9 +41,9 @@ public:
 	// Returns the handle to the currently running Window.
 	HWND get_window_handle();
 	// Sets a custom handler that is run each time a Windows Message is received.
-	void set_input_handler(std::function<void(LPARAM)> handle_input);
+	void set_message_handler(std::function<void(UINT, WPARAM, LPARAM)> message_handler);
 	// Sets a callback that is run once the Window has been created.
 	void set_post_init(std::function<void(HWND)> post_init);
 	// Runs the custom handler for Windows Messages.
-	void handle_input(LPARAM lparam);
+	void handle_message(UINT msg, WPARAM wparam, LPARAM lparam);
 };

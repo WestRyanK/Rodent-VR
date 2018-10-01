@@ -13,7 +13,7 @@ private:
 	void set_cursor_handles(const wchar_t* mouse_a_name, const wchar_t* mouse_b_name);
 
 protected:
-	void handle_input(LPARAM lparam);
+	void handle_message(UINT msg, WPARAM wparam, LPARAM lparam);
 
 public:
 	MouseMovementReader(std::wstring mouse_a_name, std::wstring mouse_b_name);

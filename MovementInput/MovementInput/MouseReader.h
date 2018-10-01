@@ -19,7 +19,7 @@ public:
 	MouseReader();
 	~MouseReader();
 
-	virtual void handle_input(LPARAM lparam) = 0;
+	virtual void handle_message(UINT msg, WPARAM wparam, LPARAM lparam) = 0;
 	void lock_mouse_reader();
 	void unlock_mouse_reader();
 	void start_reader();

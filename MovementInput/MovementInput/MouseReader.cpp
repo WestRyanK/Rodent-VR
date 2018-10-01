@@ -4,7 +4,7 @@
 MouseReader::MouseReader()
 {
 	this->window = Window::get_instance();
-	this->window->set_input_handler([&](LPARAM lparam) { this->handle_input(lparam); });
+	this->window->set_message_handler([&](UINT msg, WPARAM wparam, LPARAM lparam) { this->handle_message(msg, wparam, lparam); });
 	this->window->set_post_init([&](HWND hwnd) { this->accept_raw_mouse_input(hwnd); });
 }
 

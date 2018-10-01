@@ -30,10 +30,8 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT msg, WPARAM wparam, LPARAM lparam)
 	case WM_DESTROY:
 		PostQuitMessage(0);
 		break;
-	case WM_INPUT:
-			Window::get_instance()->handle_input(lparam);
-		break;
 	default:
+		Window::get_instance()->handle_message(msg, wparam, lparam);
 		return DefWindowProc(hwnd, msg, wparam, lparam);
 	}
 	return 0;
@@ -116,15 +114,15 @@ bool Window::get_is_running()
 	return this->is_running;
 }
 
-void Window::handle_input(LPARAM lparam)
+void Window::handle_message(UINT msg, WPARAM wparam, LPARAM lparam)
 {
-	if (this->handle_input_func != NULL)
-		this->handle_input_func(lparam);
+	if (this->message_handler_func != NULL)
+		this->message_handler_func(msg, wparam, lparam);
 }
 
-void Window::set_input_handler(std::function<void(LPARAM)> handle_input)
+void Window::set_message_handler(std::function<void(UINT, WPARAM, LPARAM)> message_handler)
 {
-	this->handle_input_func = handle_input;
+	this->message_handler_func = message_handler;
 }
 
 void Window::set_post_init(std::function<void(HWND)> post_init)
