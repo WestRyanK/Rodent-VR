@@ -138,6 +138,7 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="RawInputDevicesReader.h" />
     <ClInclude Include="MouseHandleReader.h" />
     <ClInclude Include="MouseMovementReader.h" />
     <ClInclude Include="MouseReader.h" />
@@ -147,6 +148,7 @@
     <ClInclude Include="Window.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="RawInputDevicesReader.cpp" />
     <ClCompile Include="dllmain.cpp">
       <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsManaged>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">

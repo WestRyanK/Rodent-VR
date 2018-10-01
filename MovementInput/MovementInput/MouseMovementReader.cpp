@@ -1,13 +1,15 @@
 #include "stdafx.h"
 #include <String.h>
 #include <string>
-#include <algorithm>
+#include "RawInputDevicesReader.h"
 #include "MouseMovementReader.h"
 
-MouseMovementReader::MouseMovementReader()
+MouseMovementReader::MouseMovementReader(std::wstring mouse_a_name, std::wstring mouse_b_name)
 {
 	this->delta[AXIS_X] = 0;
 	this->delta[AXIS_Y] = 0;
+
+	this->set_cursor_handles(mouse_a_name.c_str(), mouse_b_name.c_str());
 }
 
 float MouseMovementReader::read_delta(unsigned int axis)
@@ -17,37 +19,14 @@ float MouseMovementReader::read_delta(unsigned int axis)
 	return out;
 }
 
-wchar_t* MouseMovementReader::get_device_name(HANDLE device_handle)
-{
-	UINT size = 256;
-	wchar_t device_name_buffer[256] = { 0 };
-	GetRawInputDeviceInfo( device_handle, RIDI_DEVICENAME, device_name_buffer, &size);
-	std::wstring source(device_name_buffer);
-	// Crop out leading slashes and the trailing {guid}.
-	UINT len = wcschr(device_name_buffer, '{') - device_name_buffer - 5;
-	std::wstring device_name_string = source.substr(4, len);
-
-	// Replace all #s with \s.
-	std::replace(device_name_string.begin(), device_name_string.end(), '#', '\\');
-	
-	wchar_t device_name[256] = { 0 };
-	wcscpy(device_name, device_name_string.c_str());
-	return device_name;
-}
-
 void MouseMovementReader::set_cursor_handles(const wchar_t* mouse_a_name, const wchar_t* mouse_b_name)
 {
-	UINT deviceCount;
 	PRAWINPUTDEVICELIST rawInputDeviceList;
-	GetRawInputDeviceList(NULL, &deviceCount, sizeof(RAWINPUTDEVICELIST));
-	UINT size = sizeof(RAWINPUTDEVICELIST) * deviceCount;
-	rawInputDeviceList = (PRAWINPUTDEVICELIST)malloc(size);
-	GetRawInputDeviceList(rawInputDeviceList, &deviceCount, sizeof(RAWINPUTDEVICELIST));
-
+	UINT deviceCount = RawInputDevicesReader::get_device_list(&rawInputDeviceList);
 
 	for (size_t i = 0; i < deviceCount; i++)
 	{
-		const wchar_t* device_name = this->get_device_name(rawInputDeviceList[i].hDevice);
+		const wchar_t* device_name = RawInputDevicesReader::get_device_name(rawInputDeviceList[i].hDevice);
 
 		if (_wcsicmp(mouse_a_name, device_name) == 0)
 		{

@@ -4,11 +4,14 @@
 #include "stdafx.h"
 #include "MovementInput.h"
 #include "MouseMovementReader.h"
+#include "RawInputDevicesReader.h"
 #include <iostream>
 #include <mutex>
 #include <thread>
 
 MouseMovementReader* movement_reader = NULL;
+const std::wstring CONFIG_MOUSE_A_KEY = L"mouse_a_name";
+const std::wstring CONFIG_MOUSE_B_KEY = L"mouse_b_name";
 
 void get_movement_delta(float* out_x, float* out_y)
 {
@@ -24,17 +27,11 @@ void get_movement_delta(float* out_x, float* out_y)
 	}
 }
 
-// TODO: Add ability to configure input.
-void configure()
+void initialize(std::map<std::wstring, std::wstring> config_params)
 {
-}
-
-void initialize()
-{
-	movement_reader = new MouseMovementReader();
-	movement_reader->set_cursor_handles(
-		L"HID\\VID_046D&PID_C016\\6&d2a8b0a&0&0000",
-		L"HID\\VID_0461&PID_4D15\\6&31d2d65f&0&0000");
+	std::wstring mouse_a_name = config_params[CONFIG_MOUSE_A_KEY];
+	std::wstring mouse_b_name = config_params[CONFIG_MOUSE_B_KEY];
+	movement_reader = new MouseMovementReader(mouse_a_name, mouse_b_name);
 }
 
 void start()
@@ -47,3 +44,7 @@ void stop()
 	movement_reader->stop_reader();
 }
 
+void print_devices(UINT device_types)
+{
+	RawInputDevicesReader::print_devices(device_types);
+}
