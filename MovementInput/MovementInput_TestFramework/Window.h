@@ -19,7 +19,7 @@ private:
 	std::function<void(UINT, WPARAM, LPARAM)> message_handler_func;
 	std::function<void(HWND)> post_init_func;
 	HWND hwnd;
-	const LPCWSTR g_szClassName = L"myWindowClass";
+	const LPCWSTR g_szClassName = L"windowClass2";
 	bool is_running = false;
 	std::mutex is_running_mutex;
 	HMODULE module_handle;
