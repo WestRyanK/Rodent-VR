@@ -55,33 +55,3 @@ void UMazeEvents::ControlNIDAQ(bool isOn, FString deviceName)
 		data = 0x00000000;
 	NIDAQWriteDigital(TCHAR_TO_ANSI(*deviceName), data);
 }
-
-const float MIN_FRONT_ANGLE = 20.0f;
-void UMazeEvents::PuffAir(float puff_angle_degrees)
-{
-
-	unsigned long data;
-	if (puff_angle_degrees < -MIN_FRONT_ANGLE)
-	{
-		Debug(0.01f, FColor::Red, TEXT("Right"));
-		data = 0xFFFFFFFF;
-		NIDAQWriteDigital("Dev1/port1/line0", data);
-	}
-	else if (puff_angle_degrees > MIN_FRONT_ANGLE)
-	{
-		Debug(0.01f, FColor::Red, TEXT("Left"));
-		data = 0xFFFFFFFF;
-		NIDAQWriteDigital("Dev1/port1/line1", data);
-	}
-	else
-	{
-		Debug(0.01f, FColor::Red, TEXT("Front"));
-		data = 0xFFFFFFFF;
-		NIDAQWriteDigital("Dev1/port1/line0:1", data);
-	}
-
-		data = 0x00000000;
-		NIDAQWriteDigital("Dev1/port1/line0:1", data);
-
-	Debug(0.01f, FColor::Red, FString::Printf(TEXT("Puff! %f"), puff_angle_degrees));
-} 

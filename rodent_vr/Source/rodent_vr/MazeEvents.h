@@ -17,9 +17,6 @@ class RODENT_VR_API UMazeEvents : public UBlueprintFunctionLibrary
 	GENERATED_BODY()
 
 	UFUNCTION(BlueprintCallable, Category="Maze Events")
-	static void PuffAir(float puff_angle_degrees);
-
-	UFUNCTION(BlueprintCallable, Category="Maze Events")
 	static void ControlNIDAQ(bool isOn, FString deviceName);
 	
 	static void NIDAQWriteDigital(const char* deviceName, unsigned long data);
