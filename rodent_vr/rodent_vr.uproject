@@ -15,8 +15,8 @@
 	],
 	"Plugins": [
 		{
-			"Name": "RawInput",
-			"Enabled": true
+			"Name": "BallInputPlugin",
+			"Enabled": false
 		}
 	]
 }
