@@ -82,6 +82,57 @@ Maze_02_Triggers=(IsEnabled=true, Reward=2, Duration=2.0)
 
 
 ;#################################################
+; Mouse Configuration
+;#################################################
+
+; Mouse Device Instance Paths
+; The following entries are the Device Instance Paths for
+; the computer mice that will be used to read input from 
+; the ball.
+; To retrieve the Device Instance Path of a computer mouse,
+; do the following:
+; 1. Open Control Panel > Device Manager
+; 2. Open Mice and other pointing devices
+; 3. Find the mouse you want to identify under the list of mice.
+;    Protip: Unplug all the other mice to be sure you're looking
+;            at the correct one.
+; 4. Right-click > Properties > Details
+; 5. On the drop down Property menu, select "Device Instance Path"
+; 6. Right-click and copy the entire path into the config file
+;    as shown below
+; MouseADeviceName=HID\VID_0461&PID_4D15\6&31D2D65F&0&0000
+;
+; MouseA controls forward motion
+; MouseB controls rotational motion
+;
+; Protip: As long as you consistently plug the computer mice into
+; the same usb ports, they will keep the same Device 
+; Instance Paths. You can unplug them, just be sure to plug
+; it back into the same port. A mouse plugged into usb port 1
+; will have a different Device Instance Path than the same
+; mouse plugged into usb port 2, for example.
+
+MouseADeviceName=HID\VID_0461&PID_4D15\6&31D2D65F&0&0000
+MouseBDeviceName=HID\VID_046D&PID_C016\6&D2A8B0A&0&0000
+
+
+; Mouse velocity multipliers
+; You may want to tweak how fast the rodent can rotate the
+; camera or walk forward. The movement values reported by
+; the computer mice are multiplied by the following values
+; before moving the camera.
+; MouseA controls forward motion
+; MouseB controls rotational motion
+
+MouseAMultiplier=-0.5
+MouseBMultiplier=0.25
+
+
+
+
+
+
+;#################################################
 ; Start Up Maze
 ;#################################################
 
