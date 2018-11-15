@@ -26,8 +26,6 @@ void BallInput::get_movement_delta(float* out_x, float* out_y)
 
 void BallInput::initialize(std::wstring mouse_a_name, std::wstring mouse_b_name)
 {
-	//std::wstring mouse_a_name = config_params[CONFIG_MOUSE_A_KEY];
-	//std::wstring mouse_b_name = config_params[CONFIG_MOUSE_B_KEY];
 	if (movement_reader == NULL)
 	{
 		movement_reader = new MouseMovementReader(mouse_a_name, mouse_b_name);

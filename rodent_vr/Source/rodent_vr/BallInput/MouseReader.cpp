@@ -1,22 +1,20 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 #include "MouseReader.h"
+#include "Framework/Application/SlateApplication.h"
 
 MouseReader::MouseReader()
 {
-	this->window = Window::get_instance();
-	this->window->set_message_handler([&](unsigned int msg, WPARAM wparam, LPARAM lparam) { this->handle_message(msg, wparam, lparam); });
-	this->window->set_post_init([&](HWND hwnd) { this->accept_raw_mouse_input(hwnd); });
 }
 
 MouseReader::~MouseReader()
 {
-	delete window;
 }
 void MouseReader::lock_mouse_reader()
 {
 	this->reader_mutex.lock();
 }
+
 
 void MouseReader::unlock_mouse_reader()
 {
@@ -27,9 +25,12 @@ void MouseReader::start_reader()
 {
 	if (!this->is_reading)
 	{
+		FWindowsApplication* application = this->get_application();
+		if (application != NULL)
+		{
+			application->AddMessageHandler(*((IWindowsMessageHandler*)this));
+		}
 		this->is_reading = true;
-		this->window->start_message_pump_async();
-		//this->is_reading = this->window->get_is_running();
 	}
 }
 
@@ -45,10 +46,24 @@ void MouseReader::accept_raw_mouse_input(HWND hwnd)
 
 }
 
+FWindowsApplication* MouseReader::get_application()
+{
+	if (!FSlateApplication::IsInitialized())
+	{
+		return NULL;
+	}
+	return (FWindowsApplication*)FSlateApplication::Get().GetPlatformApplication().Get();
+}
+
 void MouseReader::stop_reader()
 {
-	this->window->stop_message_pump();
-	this->is_reading = this->window->get_is_running();
+	FWindowsApplication* application = this->get_application();
+
+	if (application != nullptr)
+	{
+		application->RemoveMessageHandler(*((IWindowsMessageHandler*)this));
+	}
+	this->is_reading = false;
 }
 
 RAWINPUT* MouseReader::get_raw_input(LPARAM lparam)

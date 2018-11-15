@@ -21,6 +21,38 @@ MouseMovementReader::~MouseMovementReader()
 	
 }
 
+bool MouseMovementReader::ProcessMessage(HWND Hwnd, uint32 Message, WPARAM WParam, LPARAM LParam, int32& OutResult)
+{
+	if (Message == WM_INPUT)
+	{
+		RAWINPUT* raw = this->get_raw_input(LParam);
+
+		if (raw->header.dwType == RIM_TYPEMOUSE)
+		{
+			this->lock_mouse_reader();
+
+			// TODO: I could imagine that some devices have a faster 
+			// refresh rate than other devices. Could that make it 
+			// appear that some devices are moving faster than others?
+
+			if (raw->header.hDevice == this->mouse_a_id)
+			{
+				this->delta[AXIS_X] += raw->data.mouse.lLastY;
+			}
+			else if (raw->header.hDevice == this->mouse_b_id)
+			{
+				this->delta[AXIS_Y] += raw->data.mouse.lLastY;
+			}
+
+			this->unlock_mouse_reader();
+		}
+
+		delete raw;
+	}
+
+	return false;
+}
+
 float MouseMovementReader::read_delta(unsigned int axis)
 {
 	float out = this->delta[axis];
@@ -52,31 +84,5 @@ void MouseMovementReader::set_cursor_handles(const wchar_t* mouse_a_name, const 
 
 void MouseMovementReader::handle_message(unsigned int msg, WPARAM wparam, LPARAM lparam)
 {
-	if (msg == WM_INPUT)
-	{
-		RAWINPUT* raw = this->get_raw_input(lparam);
-
-		if (raw->header.dwType == RIM_TYPEMOUSE)
-		{
-			this->lock_mouse_reader();
-
-			// TODO: I could imagine that some devices have a faster 
-			// refresh rate than other devices. Could that make it 
-			// appear that some devices are moving faster than others?
-
-			if (raw->header.hDevice == this->mouse_a_id)
-			{
-				this->delta[AXIS_X] += raw->data.mouse.lLastY;
-			}
-			else if (raw->header.hDevice == this->mouse_b_id)
-			{
-				this->delta[AXIS_Y] += raw->data.mouse.lLastY;
-			}
-
-			this->unlock_mouse_reader();
-		}
-
-		delete raw;
-	}
 }
 

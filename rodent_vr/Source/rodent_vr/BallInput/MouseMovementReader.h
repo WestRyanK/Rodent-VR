@@ -20,6 +20,7 @@ private:
 
 protected:
 	void handle_message(unsigned int msg, WPARAM wparam, LPARAM lparam);
+	bool ProcessMessage(HWND Hwnd, uint32 Message, WPARAM WParam, LPARAM LParam, int32& OutResult);
 
 public:
 	MouseMovementReader(std::wstring mouse_a_name, std::wstring mouse_b_name);
