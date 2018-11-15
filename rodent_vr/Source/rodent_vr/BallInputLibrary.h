@@ -3,8 +3,6 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "Engine/GameEngine.h"
-#define Debug(time, color, x) if(GEngine){GEngine->AddOnScreenDebugMessage(-1, time, color, x);}
 #include "Kismet/BlueprintFunctionLibrary.h"
 #include "BallInputLibrary.generated.h"
 
