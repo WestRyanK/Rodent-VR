@@ -22,7 +22,6 @@ protected:
 	void handle_message(unsigned int msg, WPARAM wparam, LPARAM lparam);
 
 public:
-	~MouseMovementReader();
 	MouseMovementReader(std::wstring mouse_a_name, std::wstring mouse_b_name);
 	~MouseMovementReader();
 	static const unsigned int AXIS_X = 0;

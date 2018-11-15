@@ -1,13 +1,12 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 #include "MouseMovementReader.h"
+#include "Engine/GameEngine.h"
 #include <String.h>
 #include <string>
 #include "RawInputDevicesReader.h"
 
-MouseMovementReader::~MouseMovementReader()
-{
-}
+#define Debug(time, color, x) if(GEngine){GEngine->AddOnScreenDebugMessage(-1, time, color, x);}
 
 MouseMovementReader::MouseMovementReader(std::wstring mouse_a_name, std::wstring mouse_b_name)
 {

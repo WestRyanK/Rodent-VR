@@ -27,8 +27,9 @@ void MouseReader::start_reader()
 {
 	if (!this->is_reading)
 	{
+		this->is_reading = true;
 		this->window->start_message_pump_async();
-		this->is_reading = this->window->get_is_running();
+		//this->is_reading = this->window->get_is_running();
 	}
 }
 

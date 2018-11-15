@@ -3,11 +3,12 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#define WIN32_LEAN_AND_MEAN
 #include <windows.h>
 #include <thread>
 #include <mutex>
 
-extern HMODULE module_handle;
+//HMODULE module_handle = 0;
 LRESULT CALLBACK WndProc(HWND hwnd, unsigned int msg, WPARAM wparam, LPARAM lparam);
 
 /**
@@ -21,8 +22,8 @@ private:
 	static Window* instance;
 	std::function<void(unsigned int, WPARAM, LPARAM)> message_handler_func;
 	std::function<void(HWND)> post_init_func;
-	HWND hwnd;
-	const LPCWSTR g_szClassName = L"myWindowClass";
+	HWND hwnd = NULL;
+	const LPCWSTR g_szClassName = L"myOwnWindowClass";
 	bool is_running = false;
 	std::mutex is_running_mutex;
 	HMODULE module_handle;
@@ -32,8 +33,6 @@ private:
 	void pump_messages();
 
 public:
-	Window();
-	~Window();
 	// Get the singleton instance of the Window.
 	static Window* get_instance();
 	// Begins the Window's message pump on another thread.

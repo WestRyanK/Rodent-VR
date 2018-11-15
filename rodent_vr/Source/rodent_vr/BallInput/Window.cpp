@@ -1,9 +1,11 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 #include "Window.h"
+#include "Engine/GameEngine.h"
+#define Debug(time, color, x) if(GEngine){GEngine->AddOnScreenDebugMessage(-1, time, color, x);}
 
 Window* Window::instance = NULL;
-HMODULE module_handle;
+//HMODULE module_handle = NULL;
 
 Window* Window::get_instance()
 {
@@ -14,19 +16,27 @@ Window* Window::get_instance()
 	return Window::instance;
 }
 
-Window::~Window()
+HMODULE GetCurrentModule()
 {
+  HMODULE hModule = NULL;
+  GetModuleHandleEx(
+    GET_MODULE_HANDLE_EX_FLAG_FROM_ADDRESS,
+    (LPCTSTR)GetCurrentModule,
+    &hModule);
+
+  return hModule;
 }
 
 Window::Window()
 {
-	this->module_handle = module_handle;
+	this->module_handle = GetCurrentModule();
 
 	this->is_running = false;
 }
 
 LRESULT CALLBACK WndProc(HWND hwnd, unsigned int msg, WPARAM wparam, LPARAM lparam)
 {
+	Debug(1.0f, FColor::Green, TEXT("WndProc"));
 	switch (msg)
 	{
 	case WM_CLOSE:
@@ -89,13 +99,16 @@ void Window::pump_messages()
 	this->is_running_mutex.lock();
 	this->is_running = true;
 
-	MSG msg;
-	while (this->is_running && GetMessage(&msg, this->hwnd, 0, 0))
+	//MSG msg;
+	// TODO: GetMessage stops working when you click on the window?...
+	while (this->is_running)// && GetMessage(&msg, this->hwnd, 0, 0))
 	{
+		Sleep(500);
 		this->is_running_mutex.unlock();
 
-		TranslateMessage(&msg);
-		DispatchMessage(&msg);
+		Debug(1.0f, FColor::Green, TEXT("Pump Messages"));
+		//TranslateMessage(&msg);
+		//DispatchMessage(&msg);
 
 		this->is_running_mutex.lock();
 	}
@@ -107,6 +120,7 @@ void Window::start_message_pump_async()
 {
 	if (!this->is_running)
 	{
+		//this->pump_messages();
 		message_pump_thread = new std::thread([&]() { this->pump_messages(); });
 	}
 }

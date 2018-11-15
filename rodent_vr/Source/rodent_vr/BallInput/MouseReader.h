@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include <mutex>
+#define WIN32_LEAN_AND_MEAN
 #include <windows.h>
 #include "Window.h"
 
@@ -23,7 +24,7 @@ protected:
 
 public:
 	MouseReader();
-	~MouseReader();
+	virtual ~MouseReader();
 	virtual void handle_message(unsigned int msg, WPARAM wparam, LPARAM lparam) = 0;
 	void lock_mouse_reader();
 	void unlock_mouse_reader();

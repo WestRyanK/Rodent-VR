@@ -3,7 +3,8 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include <Windows.h>
+#define WIN32_LEAN_AND_MEAN
+#include <windows.h>
 
 /**
 *	Provides utilities for reading all of the RawInput devices on a system.
