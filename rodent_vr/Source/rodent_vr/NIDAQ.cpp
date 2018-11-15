@@ -1,13 +1,13 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
-#include "MazeEvents.h"
+#include "NIDAQ.h"
 #include "Engine/GameEngine.h"
 //extern "C"
 //{
 #include <NIDAQmx.h>
 //}
 
-void UMazeEvents::NIDAQWriteDigital(const char* deviceName, unsigned long data)
+void UNIDAQ::NIDAQWriteDigital(const char* deviceName, unsigned long data)
 {
 	int         error=0;
 	TaskHandle	taskHandle=0;
@@ -46,7 +46,7 @@ Error:
 		//printf("DAQmx Error: %s\n",errBuff);
 }
 
-void UMazeEvents::ControlNIDAQ(bool isOn, FString deviceName)
+void UNIDAQ::ControlNIDAQ(bool isOn, FString deviceName)
 {
 	unsigned long data;
 	if (isOn)
