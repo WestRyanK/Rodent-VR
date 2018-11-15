@@ -23,14 +23,15 @@ void UBehaviorRecorder::save(FString filename)
 {
 	std::ofstream output;
 	output.open(*filename);
+	char tab = '\t';
 	for (int i = 0; i < UBehaviorRecorder::snapshots.size(); i++)
 	{
 		BehaviorSnapshot snapshot = UBehaviorRecorder::snapshots[i];
 		output 
-			<< snapshot.get_timestamp() << " " 
-			<< snapshot.get_current_region() << " "
-			<< snapshot.get_position().X << " " << snapshot.get_position().Y << " " << snapshot.get_position().Z << " "  
-			<< snapshot.get_forward().X << " " << snapshot.get_forward().Y << " " << snapshot.get_forward().Z 
+			<< snapshot.get_timestamp() << tab
+			<< snapshot.get_current_region() << tab
+			<< snapshot.get_position().X << tab << snapshot.get_position().Y << tab << snapshot.get_position().Z << tab 
+			<< snapshot.get_forward().X << tab << snapshot.get_forward().Y << tab << snapshot.get_forward().Z 
 			<< std::endl;
 	}
 	output.close();

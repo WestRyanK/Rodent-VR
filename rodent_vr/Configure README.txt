@@ -130,7 +130,30 @@ MouseBMultiplier=0.25
 
 
 
+;#################################################
+; Behavior Recording
+;#################################################
 
+; The behavior of the lab rodent is recorded every frame
+; of the game. The data is stored in the text file specified below.
+; In the text file, each line represents a single frame.
+; On each line, variables are separated by a tab.
+; The following is the format of the data:
+; T R P.X P.Y P.Z F.X F.Y F.Z
+;
+; T - The timestamp of the frame. Measured in seconds from 
+;     when the simulation first started.
+; R - A number representing the region that the rodent is
+;     currently in. If the value is -1, the rodent is not in
+;     any of the trigger regions.
+; P - A 3D vector (X, Y, Z) representing the position of the
+;     rodent at the time of the frame sample.
+; F - A 3D vector representing the direction that the rodent is facing.
+;
+; BehaviorRecordingFileName should be a filename including the path to
+; the file, such as C:\Path\To\Containing\Folder\BehavioralRecording.txt
+
+BehaviorRecordingFileName=C:\Users\Ryan\Downloads\BehavioralRecording.txt
 
 ;#################################################
 ; Start Up Maze

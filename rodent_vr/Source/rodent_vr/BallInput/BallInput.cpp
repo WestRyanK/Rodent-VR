@@ -5,6 +5,9 @@
 #include <iostream>
 #include <mutex>
 #include <thread>
+#include <stdexcept>
+#include "Engine/GameEngine.h"
+#define Debug(time, color, x) if(GEngine){GEngine->AddOnScreenDebugMessage(-1, time, color, x);}
 
 MouseMovementReader* movement_reader = NULL;
 const std::wstring CONFIG_MOUSE_A_KEY = L"mouse_a_name";
@@ -12,7 +15,11 @@ const std::wstring CONFIG_MOUSE_B_KEY = L"mouse_b_name";
 
 void BallInput::get_movement_delta(float* out_x, float* out_y)
 {
-	if (out_x != NULL && out_y != NULL)
+	if (movement_reader == NULL)
+	{
+		Debug(10.0f, FColor::Red,TEXT("BallInput must be initialized before calling get_movement_delta()!"));
+	}
+	else if (out_x != NULL && out_y != NULL)
 	{
 		movement_reader->lock_mouse_reader();
 

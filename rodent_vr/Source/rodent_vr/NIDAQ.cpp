@@ -7,28 +7,27 @@
 #include <NIDAQmx.h>
 //}
 
-void UNIDAQ::NIDAQWriteDigital(const char* deviceName, unsigned long data)
+void UNIDAQ::NIDAQ_write_digital(const char* deviceName, unsigned long data)
 {
 	int         error=0;
 	TaskHandle	taskHandle=0;
 	char        errBuff[2048]={'\0'};
 	int32		written;
 
-
-	/*********************************************/
+	//*********************************************
 	// DAQmx Configure Code
-	/*********************************************/
+	//*********************************************
 	DAQmxErrChk (DAQmxCreateTask("",&taskHandle));
 	DAQmxErrChk (DAQmxCreateDOChan(taskHandle, deviceName,"",DAQmx_Val_ChanForAllLines));
 
-	/*********************************************/
+	//*********************************************
 	// DAQmx Start Code
-	/*********************************************/
+	//*********************************************
 	DAQmxErrChk (DAQmxStartTask(taskHandle));
 
-	/*********************************************/
+	//*********************************************
 	// DAQmx Write Code
-	/*********************************************/
+	//*********************************************
 	DAQmxErrChk (DAQmxWriteDigitalU32(taskHandle,1,1,10.0,DAQmx_Val_GroupByChannel,&data,&written,NULL));
 	
 Error:
@@ -46,12 +45,25 @@ Error:
 		//printf("DAQmx Error: %s\n",errBuff);
 }
 
-void UNIDAQ::ControlNIDAQ(bool isOn, FString deviceName)
+/**
+* This method "initializes" the NIDAQ device.
+* The device doesn't really need initializing, but it seems like the first time the
+* method is called, the game lags for a second as the DLLs are loading. So, we can just
+* call the init_NIDAQ() method right at start up so it doesn't lab in the middle of game play.
+*/
+void UNIDAQ::init_NIDAQ()
+{
+	TaskHandle	taskHandle=0;
+	DAQmxCreateTask("",&taskHandle);
+	DAQmxClearTask(taskHandle);
+}
+
+void UNIDAQ::control_NIDAQ(bool isOn, FString deviceName)
 {
 	unsigned long data;
 	if (isOn)
 		data = 0xFFFFFFFF;
 	else
 		data = 0x00000000;
-	NIDAQWriteDigital(TCHAR_TO_ANSI(*deviceName), data);
+	NIDAQ_write_digital(TCHAR_TO_ANSI(*deviceName), data);
 }

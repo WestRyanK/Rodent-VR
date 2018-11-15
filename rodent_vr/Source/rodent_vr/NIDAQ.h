@@ -17,7 +17,10 @@ class RODENT_VR_API UNIDAQ : public UBlueprintFunctionLibrary
 	GENERATED_BODY()
 
 	UFUNCTION(BlueprintCallable, Category="Maze Events")
-	static void ControlNIDAQ(bool isOn, FString deviceName);
+	static void control_NIDAQ(bool isOn, FString deviceName);
 	
-	static void NIDAQWriteDigital(const char* deviceName, unsigned long data);
+	UFUNCTION(BlueprintCallable, Category="Maze Events")
+	static void init_NIDAQ();
+
+	static void NIDAQ_write_digital(const char* deviceName, unsigned long data);
 };
