@@ -23,22 +23,25 @@ namespace BehaviorVisualizer.Models
 
 		static void Draw(Graphics g, BehaviorSnapshot snapshotA, BehaviorSnapshot snapshotB, BehaviorVisualizationRendererSettings settings)
 		{
-			Pen pen = Pens.Black;
-			Brush brush = Brushes.Black;
-
 			Point pA = GetPoint(snapshotA, settings);
 			Point pB = GetPoint(snapshotB, settings);
 			float width = GetWidth(snapshotA, snapshotB, settings);
-			//pen.Width = width;
 
 			switch (settings.PathStyle)
 			{
 				case BehaviorVisualizationRendererSettings.PathStyleEnum.Dots:
 					float halfWidth = width / 2.0f;
-					g.FillEllipse(brush, pA.X - halfWidth, pA.Y - halfWidth, width, width);
+					using (SolidBrush b = new SolidBrush(settings.PathColor))
+					{
+						g.FillEllipse(b, pA.X - halfWidth, pA.Y - halfWidth, width, width);
+					}
 					break;
 				case BehaviorVisualizationRendererSettings.PathStyleEnum.Lines:
-					g.DrawLine(pen, pA, pB);
+					using (Pen p = new Pen(settings.PathColor, width))
+					{
+						p.EndCap = System.Drawing.Drawing2D.LineCap.Round;
+						g.DrawLine(p, pA, pB);
+					}
 					break;
 				default:
 					break;

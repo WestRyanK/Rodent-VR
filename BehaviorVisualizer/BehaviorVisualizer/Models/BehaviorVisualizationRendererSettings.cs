@@ -99,6 +99,14 @@ namespace BehaviorVisualizer.Models
 		}
 		#endregion
 
+		private System.Drawing.Color pathColor;
+
+		public System.Drawing.Color PathColor
+		{
+			get { return pathColor; }
+			set { pathColor = value; }
+		}
+
 		public enum PathStyleEnum
 		{
 			None,

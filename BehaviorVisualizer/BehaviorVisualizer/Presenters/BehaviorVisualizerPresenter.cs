@@ -1,4 +1,5 @@
-﻿using BehaviorVisualizer.Models;
+﻿using System.Drawing;
+using BehaviorVisualizer.Models;
 
 namespace BehaviorVisualizer.Presenters
 {
@@ -31,6 +32,7 @@ namespace BehaviorVisualizer.Presenters
 			this.PixelsPerWorldUnit = 800;
 			this.OpenRecordFileName = @"C:\Users\Ryan\Downloads\BehavioralRecording.txt";
 			this.SaveFileName = @"C:\Users\Ryan\Downloads\Test.png";
+			this.PathColor = Color.Black;
 		}
 
 		public BehaviorVisualizationRendererSettings.PathStyleEnum PathStyle
@@ -164,6 +166,22 @@ namespace BehaviorVisualizer.Presenters
 				{
 					Settings.WorldHeight = value;
 					View.ImageWorldHeight = value;
+				}
+			}
+		}
+
+		public Color PathColor
+		{
+			get
+			{
+				return Settings.PathColor;
+			}
+			set
+			{
+				if (PathColor != value)
+				{
+					Settings.PathColor = value;
+					View.PathColor = value;
 				}
 			}
 		}
