@@ -24,8 +24,8 @@ bAddPacks=False
 
 AirPuffLeftDeviceName=Dev1/port1/line0
 AirPuffRightDeviceName=Dev1/port1/line1
-Reward1DeviceName=Dev1/port1/line0
-Reward2DeviceName=Dev1/port1/line1
+Reward1DeviceName=Dev1/port1/line2
+Reward2DeviceName=Dev1/port1/line3
 
 ; Air Puffer Configuration
 ;--------------------------
