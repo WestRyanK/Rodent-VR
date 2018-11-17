@@ -28,6 +28,8 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
+			System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("Maze 2 Perspective");
+			System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem("Maze 2 Outline");
 			this.bttnSave = new System.Windows.Forms.Button();
 			this.tbSaveFileName = new System.Windows.Forms.TextBox();
 			this.gbSave = new System.Windows.Forms.GroupBox();
@@ -56,6 +58,12 @@
 			this.bttnOpenRecordFileName = new System.Windows.Forms.Button();
 			this.tbOpenRecordFileName = new System.Windows.Forms.TextBox();
 			this.openRecordFileDialog = new System.Windows.Forms.OpenFileDialog();
+			this.gbColor = new System.Windows.Forms.GroupBox();
+			this.pnlColor = new System.Windows.Forms.Panel();
+			this.bttnColor = new System.Windows.Forms.Button();
+			this.colorDialog = new System.Windows.Forms.ColorDialog();
+			this.gbBackground = new System.Windows.Forms.GroupBox();
+			this.lvBackground = new System.Windows.Forms.ListView();
 			this.gbSave.SuspendLayout();
 			this.gbPath.SuspendLayout();
 			this.gbPathWidth.SuspendLayout();
@@ -71,6 +79,8 @@
 			this.gbPixelsPerWorldUnit.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.nudPixelsPerWorldUnit)).BeginInit();
 			this.gbOpenRecordFileName.SuspendLayout();
+			this.gbColor.SuspendLayout();
+			this.gbBackground.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// bttnSave
@@ -99,7 +109,7 @@
 			this.gbSave.Controls.Add(this.bttnSaveFileName);
 			this.gbSave.Controls.Add(this.bttnSave);
 			this.gbSave.Controls.Add(this.tbSaveFileName);
-			this.gbSave.Location = new System.Drawing.Point(12, 503);
+			this.gbSave.Location = new System.Drawing.Point(12, 500);
 			this.gbSave.Name = "gbSave";
 			this.gbSave.Size = new System.Drawing.Size(283, 55);
 			this.gbSave.TabIndex = 2;
@@ -119,11 +129,12 @@
 			// 
 			// gbPath
 			// 
+			this.gbPath.Controls.Add(this.gbColor);
 			this.gbPath.Controls.Add(this.gbPathWidth);
 			this.gbPath.Controls.Add(this.gbPathStyle);
 			this.gbPath.Location = new System.Drawing.Point(12, 12);
 			this.gbPath.Name = "gbPath";
-			this.gbPath.Size = new System.Drawing.Size(283, 160);
+			this.gbPath.Size = new System.Drawing.Size(283, 221);
 			this.gbPath.TabIndex = 3;
 			this.gbPath.TabStop = false;
 			this.gbPath.Text = "Path";
@@ -198,7 +209,7 @@
 			this.gbSize.Controls.Add(this.gbImageWorldSize);
 			this.gbSize.Controls.Add(this.gbImageOrigin);
 			this.gbSize.Controls.Add(this.gbPixelsPerWorldUnit);
-			this.gbSize.Location = new System.Drawing.Point(12, 178);
+			this.gbSize.Location = new System.Drawing.Point(12, 239);
 			this.gbSize.Name = "gbSize";
 			this.gbSize.Size = new System.Drawing.Size(283, 194);
 			this.gbSize.TabIndex = 4;
@@ -407,7 +418,7 @@
 			// 
 			this.gbOpenRecordFileName.Controls.Add(this.bttnOpenRecordFileName);
 			this.gbOpenRecordFileName.Controls.Add(this.tbOpenRecordFileName);
-			this.gbOpenRecordFileName.Location = new System.Drawing.Point(12, 433);
+			this.gbOpenRecordFileName.Location = new System.Drawing.Point(12, 439);
 			this.gbOpenRecordFileName.Name = "gbOpenRecordFileName";
 			this.gbOpenRecordFileName.Size = new System.Drawing.Size(283, 55);
 			this.gbOpenRecordFileName.TabIndex = 3;
@@ -439,12 +450,64 @@
 			// 
 			this.openRecordFileDialog.Filter = "Text Record|*.txt|All Files|*.*";
 			// 
+			// gbColor
+			// 
+			this.gbColor.Controls.Add(this.bttnColor);
+			this.gbColor.Controls.Add(this.pnlColor);
+			this.gbColor.Location = new System.Drawing.Point(6, 160);
+			this.gbColor.Name = "gbColor";
+			this.gbColor.Size = new System.Drawing.Size(271, 55);
+			this.gbColor.TabIndex = 5;
+			this.gbColor.TabStop = false;
+			this.gbColor.Text = "Color";
+			// 
+			// pnlColor
+			// 
+			this.pnlColor.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+			this.pnlColor.Location = new System.Drawing.Point(6, 21);
+			this.pnlColor.Name = "pnlColor";
+			this.pnlColor.Size = new System.Drawing.Size(217, 28);
+			this.pnlColor.TabIndex = 0;
+			// 
+			// bttnColor
+			// 
+			this.bttnColor.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.bttnColor.Location = new System.Drawing.Point(229, 21);
+			this.bttnColor.Name = "bttnColor";
+			this.bttnColor.Size = new System.Drawing.Size(36, 23);
+			this.bttnColor.TabIndex = 3;
+			this.bttnColor.Text = "...";
+			this.bttnColor.UseVisualStyleBackColor = true;
+			this.bttnColor.Click += new System.EventHandler(this.bttnColor_Click);
+			// 
+			// gbBackground
+			// 
+			this.gbBackground.Controls.Add(this.lvBackground);
+			this.gbBackground.Location = new System.Drawing.Point(301, 12);
+			this.gbBackground.Name = "gbBackground";
+			this.gbBackground.Size = new System.Drawing.Size(238, 543);
+			this.gbBackground.TabIndex = 5;
+			this.gbBackground.TabStop = false;
+			this.gbBackground.Text = "Background";
+			// 
+			// lvBackground
+			// 
+			this.lvBackground.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
+            listViewItem1,
+            listViewItem2});
+			this.lvBackground.Location = new System.Drawing.Point(6, 21);
+			this.lvBackground.Name = "lvBackground";
+			this.lvBackground.Size = new System.Drawing.Size(226, 516);
+			this.lvBackground.TabIndex = 0;
+			this.lvBackground.UseCompatibleStateImageBehavior = false;
+			// 
 			// FormBehaviorVisualizer
 			// 
 			this.AcceptButton = this.bttnSave;
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(757, 567);
+			this.Controls.Add(this.gbBackground);
 			this.Controls.Add(this.gbOpenRecordFileName);
 			this.Controls.Add(this.gbSize);
 			this.Controls.Add(this.gbPath);
@@ -471,6 +534,8 @@
 			((System.ComponentModel.ISupportInitialize)(this.nudPixelsPerWorldUnit)).EndInit();
 			this.gbOpenRecordFileName.ResumeLayout(false);
 			this.gbOpenRecordFileName.PerformLayout();
+			this.gbColor.ResumeLayout(false);
+			this.gbBackground.ResumeLayout(false);
 			this.ResumeLayout(false);
 
 		}
@@ -505,6 +570,12 @@
 		private System.Windows.Forms.Label lblImageSizeWidth;
 		private System.Windows.Forms.NumericUpDown nudImageSizeHeight;
 		private System.Windows.Forms.NumericUpDown nudImageSizeWidth;
+		private System.Windows.Forms.GroupBox gbColor;
+		private System.Windows.Forms.Button bttnColor;
+		private System.Windows.Forms.Panel pnlColor;
+		private System.Windows.Forms.ColorDialog colorDialog;
+		private System.Windows.Forms.GroupBox gbBackground;
+		private System.Windows.Forms.ListView lvBackground;
 	}
 }
 

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 using System.Windows.Forms;
 using BehaviorVisualizer.Models;
 
@@ -183,6 +184,23 @@ namespace BehaviorVisualizer
 		private void bttnSave_Click(object sender, EventArgs e)
 		{
 			Presenter.Save();
+		}
+
+		public Color PathColor
+		{
+			set
+			{
+				pnlColor.BackColor = value;
+			}
+		}
+
+		private void bttnColor_Click(object sender, EventArgs e)
+		{
+			var result = colorDialog.ShowDialog();
+			if (result == DialogResult.OK)
+			{
+				Presenter.PathColor = colorDialog.Color;
+			}
 		}
 	}
 }

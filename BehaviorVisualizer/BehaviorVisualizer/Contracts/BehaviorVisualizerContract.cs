@@ -20,6 +20,8 @@ namespace BehaviorVisualizer.Contracts
 		string OpenRecordFileName { set; }
 
 		string SaveFileName { set; }
+
+		System.Drawing.Color PathColor { set; }
 	}
 
 	public interface BehaviorVisualizerPresenterContract
@@ -41,6 +43,8 @@ namespace BehaviorVisualizer.Contracts
 		string OpenRecordFileName { set; }
 
 		string SaveFileName { set; }
+
+		System.Drawing.Color PathColor { set; }
 
 		void Save();
 
