@@ -1,0 +1,14 @@
+﻿<controls:MetroWindow x:Class="BehaviorVisualizer.MainWindow"
+                      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                      xmlns:controls="http://metro.mahapps.com/winfx/xaml/controls"
+        xmlns:local="clr-namespace:BehaviorVisualizer"
+                      Title="MainWindow"
+                      Height="600"
+                      Width="800">
+  <Grid>
+
+    <!-- your content -->
+
+  </Grid>
+</controls:MetroWindow>
