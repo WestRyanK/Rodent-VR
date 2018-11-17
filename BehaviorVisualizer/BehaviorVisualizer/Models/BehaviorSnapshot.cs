@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace BehaviorVisualizer.Models
 {
 	public class BehaviorSnapshot
@@ -43,6 +38,11 @@ namespace BehaviorVisualizer.Models
 			this.region = region;
 			this.position = position;
 			this.forward = forward;
+		}
+
+		public override string ToString()
+		{
+			return $"{{ Timestamp={Timestamp:0.##}, Region={Region}, Position={Position}, Forward={Forward} }}";
 		}
 	}
 }

@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BehaviorVisualizer.Models
 {
@@ -12,7 +9,9 @@ namespace BehaviorVisualizer.Models
 		{
 			var snapshots = new List<BehaviorSnapshot>();
 
-			string[] lines = data.Split('\n');
+			string[] separators = { "\r\n", "\n" };
+
+			string[] lines = data.Split(separators, StringSplitOptions.RemoveEmptyEntries);
 			foreach (var line in lines)
 			{
 				string[] values = line.Split('\t');

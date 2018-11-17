@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BehaviorVisualizer.Models
 {
@@ -107,6 +103,20 @@ namespace BehaviorVisualizer.Models
 			float length = (float)Math.Sqrt(Dot(a, a));
 			Vector normalized = a / length;
 			return normalized;
+		}
+
+		public override string ToString()
+		{
+			return $"{{ X={X:0.####}, Y={Y:0.####}, Z={Z:0.####} }}";
+		}
+
+		public override bool Equals(object obj)
+		{
+			Vector other = obj as Vector;
+			if (other == null)
+				return false;
+
+			return (this.X == other.X && this.Y == other.Y && this.Z == other.Z) ;
 		}
 	}
 }

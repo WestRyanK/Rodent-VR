@@ -1,20 +1,17 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BehaviorVisualizer.Models
 {
 	public class BehaviorVisualizationRendererSettings
 	{
 		#region Width
-		private int width;
 
 		public int Width
 		{
-			get { return width; }
-			set { width = value; }
+			get
+			{
+				return (int)Math.Floor(worldWidth * pixelsPerWorldUnit);
+			}
 		}
 		#endregion
 
@@ -23,12 +20,44 @@ namespace BehaviorVisualizer.Models
 
 		public int Height
 		{
-			get { return height; }
-			set { height = value; }
+			get
+			{
+				return (int)Math.Floor(worldHeight * pixelsPerWorldUnit);
+			}
 		}
 		#endregion
 
-		#region ImageOriginPosition
+		#region World Width
+		private float worldWidth;
+
+		public float WorldWidth
+		{
+			get { return worldWidth; }
+			set { worldWidth = value; }
+		}
+		#endregion
+
+		#region World Height
+		private float worldHeight;
+
+		public float WorldHeight
+		{
+			get { return worldHeight; }
+			set { worldHeight = value; }
+		}
+		#endregion
+
+		#region Pixels Per World Unit
+		private float pixelsPerWorldUnit;
+
+		public float PixelsPerWorldUnit
+		{
+			get { return pixelsPerWorldUnit; }
+			set { pixelsPerWorldUnit = value; }
+		}
+		#endregion
+
+		#region Image Origin Position
 		private Vector imageOriginPosition;
 
 		public Vector ImageOriginPosition
@@ -38,18 +67,41 @@ namespace BehaviorVisualizer.Models
 		}
 		#endregion
 
-		#region Style
-		private LineStyleEnum lineStyle;
+		#region Path Style
+		private PathStyleEnum pathStyle;
 
-		public LineStyleEnum LineStyle
+		public PathStyleEnum PathStyle
 		{
-			get { return lineStyle; }
-			set { lineStyle = value; }
+			get { return pathStyle; }
+			set { pathStyle = value; }
 		}
 		#endregion
 
-		public enum LineStyleEnum
+		#region Path World Width
+		private float pathWorldWidth;
+
+		public float PathWorldWidth
 		{
+			get { return pathWorldWidth; }
+			set { pathWorldWidth = value; }
+		}
+		#endregion
+
+		#region Path Width
+		private float pathWidth;
+
+		public float PathWidth
+		{
+			get
+			{
+				return pathWorldWidth * pixelsPerWorldUnit;
+			}
+		}
+		#endregion
+
+		public enum PathStyleEnum
+		{
+			None,
 			Dots,
 			Lines
 		}
