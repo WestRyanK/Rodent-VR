@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using BehaviorVisualizer.Converters;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -39,6 +40,34 @@ namespace BehaviorVisualizer
 
 		private void CreateBackgroundOptions()
 		{
+			var maze_01_outline = new BehaviorVisualizationRendererSettings();
+			maze_01_outline.ImageOriginPosition = new Models.Vector(-300, -300, 0);
+			maze_01_outline.WorldWidth = 3200;
+			maze_01_outline.WorldHeight = 650;
+			maze_01_outline.BackgroundImage = Properties.Resources.maze_01_outline;
+			maze_01_outline.Title = "Maze 01 Outline";
+
+			var maze_01_ortho_textured = new BehaviorVisualizationRendererSettings();
+			maze_01_ortho_textured.ImageOriginPosition = new Models.Vector(-300, -300, 0);
+			maze_01_ortho_textured.WorldWidth = 3200;
+			maze_01_ortho_textured.WorldHeight = 650;
+			maze_01_ortho_textured.BackgroundImage = Properties.Resources.maze_01_ortho_textured;
+			maze_01_ortho_textured.Title = "Maze 01 Orthographic";
+
+			var maze_01_perspective = new BehaviorVisualizationRendererSettings();
+			maze_01_perspective.ImageOriginPosition = new Models.Vector(-300, -300, 0);
+			maze_01_perspective.WorldWidth = 3200;
+			maze_01_perspective.WorldHeight = 650;
+			maze_01_perspective.BackgroundImage = Properties.Resources.maze_01_perspective;
+			maze_01_perspective.Title = "Maze 01 Perspective";
+
+			var maze_01_perspective_textured = new BehaviorVisualizationRendererSettings();
+			maze_01_perspective_textured.ImageOriginPosition = new Models.Vector(-300, -300, 0);
+			maze_01_perspective_textured.WorldWidth = 3200;
+			maze_01_perspective_textured.WorldHeight = 650;
+			maze_01_perspective_textured.BackgroundImage = Properties.Resources.maze_01_perspective_textured;
+			maze_01_perspective_textured.Title = "Maze 01 Perspective Textured";
+
 			var maze_02_outline = new BehaviorVisualizationRendererSettings();
 			maze_02_outline.ImageOriginPosition = new Models.Vector(-700, -1100, 0);
 			maze_02_outline.WorldWidth = 1400;
@@ -68,6 +97,10 @@ namespace BehaviorVisualizer
 			maze_02_perspective_textured.Title = "Maze 02 Perspective Textured";
 
 			List<BehaviorVisualizationRendererSettings> items = new List<BehaviorVisualizationRendererSettings>();
+			items.Add(maze_01_outline);
+			items.Add(maze_01_ortho_textured);
+			items.Add(maze_01_perspective);
+			items.Add(maze_01_perspective_textured);
 			items.Add(maze_02_outline);
 			items.Add(maze_02_ortho_textured);
 			items.Add(maze_02_perspective);
@@ -82,6 +115,8 @@ namespace BehaviorVisualizer
 			if (rbPathDots.IsChecked == true)
 			{
 				Presenter.PathStyle = Models.BehaviorVisualizationRendererSettings.PathStyleEnum.Dots;
+
+				Presenter.Render();
 			}
 		}
 
@@ -90,6 +125,8 @@ namespace BehaviorVisualizer
 			if (rbPathLines.IsChecked == true)
 			{
 				Presenter.PathStyle = Models.BehaviorVisualizationRendererSettings.PathStyleEnum.Lines;
+
+				Presenter.Render();
 			}
 		}
 
@@ -116,6 +153,8 @@ namespace BehaviorVisualizer
 		private void nudPathWidth_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double?> e)
 		{
 			Presenter.PathWorldWidth = (float)nudPathWidth.Value;
+
+			Presenter.Render();
 		}
 
 		public float PathWorldWidth
@@ -131,6 +170,8 @@ namespace BehaviorVisualizer
 		private void nudResolution_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double?> e)
 		{
 			Presenter.PixelsPerWorldUnit = (float)nudResolution.Value;
+
+			Presenter.Render();
 		}
 
 		public float PixelsPerWorldUnit
@@ -155,6 +196,8 @@ namespace BehaviorVisualizer
 		private void nudWorldPosition_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double?> e)
 		{
 			Presenter.ImageOriginWorldPosition = new Models.Vector((float?)nudWorldPositionX.Value ?? 0.0f, (float?)nudWorldPositionY.Value ?? 0.0f, 0);
+
+			Presenter.Render();
 		}
 		#endregion
 
@@ -178,11 +221,15 @@ namespace BehaviorVisualizer
 		private void nudSizeWidth_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double?> e)
 		{
 			Presenter.ImageWorldWidth = (float)nudSizeWidth.Value;
+
+			Presenter.Render();
 		}
 
 		private void nudSizeHeight_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double?> e)
 		{
 			Presenter.ImageWorldHeight = (float)nudSizeHeight.Value;
+
+			Presenter.Render();
 		}
 		#endregion
 
@@ -190,6 +237,8 @@ namespace BehaviorVisualizer
 		private void tbOpenRecordFileName_TextChanged(object sender, TextChangedEventArgs e)
 		{
 			Presenter.OpenRecordFileName = tbOpenRecordFileName.Text;
+
+			Presenter.Render();
 		}
 
 		public string OpenRecordFileName
@@ -258,16 +307,28 @@ namespace BehaviorVisualizer
 			}
 		}
 
+		public Bitmap Preview
+		{
+			set
+			{
+				imgPreview.Source = value?.ToWpfBitmap();
+			}
+		}
+
 		private void cpPathColor_SelectedColorChanged(object sender, RoutedPropertyChangedEventArgs<System.Windows.Media.Color?> e)
 		{
 			var color = cpPathColor.SelectedColor;
 			Presenter.PathColor = System.Drawing.Color.FromArgb(color.Value.A, color.Value.R, color.Value.G, color.Value.B);
+
+			Presenter.Render();
 		}
 
 		private void cpBackgroundColor_SelectedColorChanged(object sender, RoutedPropertyChangedEventArgs<System.Windows.Media.Color?> e)
 		{
 			var color = cpBackgroundColor.SelectedColor;
 			Presenter.BackgroundColor = System.Drawing.Color.FromArgb(color.Value.A, color.Value.R, color.Value.G, color.Value.B);
+
+			Presenter.Render();
 		}
 
 		private void lbBackgrounds_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -277,6 +338,9 @@ namespace BehaviorVisualizer
 			Presenter.ImageOriginWorldPosition = selected.ImageOriginPosition;
 			Presenter.ImageWorldHeight = selected.WorldHeight;
 			Presenter.ImageWorldWidth = selected.WorldWidth;
+
+			Presenter.Render();
 		}
+
 	}
 }

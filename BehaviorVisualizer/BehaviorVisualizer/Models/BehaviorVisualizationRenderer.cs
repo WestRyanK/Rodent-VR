@@ -8,6 +8,9 @@ namespace BehaviorVisualizer.Models
 		private const float SCALE = 0.001f;
 		public static Bitmap Render(List<BehaviorSnapshot> behaviorSnapshots, BehaviorVisualizationRendererSettings settings)
 		{
+			if (settings.Width * SCALE < 1 || settings.Height * SCALE < 1)
+				return null;
+
 			Bitmap bmp = new Bitmap((int)(settings.Width * SCALE), (int)(settings.Height * SCALE));
 			using (Graphics g = Graphics.FromImage(bmp))
 			{

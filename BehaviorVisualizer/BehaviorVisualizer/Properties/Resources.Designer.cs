@@ -63,6 +63,46 @@ namespace BehaviorVisualizer.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap maze_01_ortho_textured {
+            get {
+                object obj = ResourceManager.GetObject("maze_01_ortho_textured", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap maze_01_outline {
+            get {
+                object obj = ResourceManager.GetObject("maze_01_outline", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap maze_01_perspective {
+            get {
+                object obj = ResourceManager.GetObject("maze_01_perspective", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap maze_01_perspective_textured {
+            get {
+                object obj = ResourceManager.GetObject("maze_01_perspective_textured", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap maze_02_ortho_textured {
             get {
                 object obj = ResourceManager.GetObject("maze_02_ortho_textured", resourceCulture);
