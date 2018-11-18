@@ -1,14 +1,95 @@
 ﻿<controls:MetroWindow x:Class="BehaviorVisualizer.MainWindow"
                       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+					  xmlns:colorpicker="clr-namespace:ColorPickerLib.Controls;assembly=ColorPickerLib"
                       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                       xmlns:controls="http://metro.mahapps.com/winfx/xaml/controls"
+					  xmlns:converters="clr-namespace:BehaviorVisualizer.Converters"
         xmlns:local="clr-namespace:BehaviorVisualizer"
                       Title="MainWindow"
                       Height="600"
                       Width="800">
-  <Grid>
-
-    <!-- your content -->
-
-  </Grid>
+	<Grid>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="auto"/>
+			<ColumnDefinition Width="auto"/>
+			<ColumnDefinition Width="*"/>
+		</Grid.ColumnDefinitions>
+		<StackPanel Orientation="Vertical" Width="250" Grid.Column="0">
+			<GroupBox Header="Path">
+				<StackPanel Orientation="Vertical">
+					<Label Content="Style"/>
+					<RadioButton Name="rbPathDots" Checked="rbPathDots_Checked" Content="Dots"/>
+					<RadioButton Name="rbPathLines" Checked="rbPathLines_Checked" Content="Lines"/>
+					<Label Content="Width"/>
+					<controls:NumericUpDown ValueChanged="nudPathWidth_ValueChanged" Name="nudPathWidth"/>
+					<Label Content="Color"/>
+					<colorpicker:ColorPicker Background="Green" SelectedColorChanged="cpPathColor_SelectedColorChanged" Name="cpPathColor"/>
+				</StackPanel>
+			</GroupBox>
+			<GroupBox Header="Size">
+				<StackPanel Orientation="Vertical">
+					<Label Content="Resolution"/>
+					<controls:NumericUpDown ValueChanged="nudResolution_ValueChanged" Name="nudResolution"/>
+					<Label Content="World Position"/>
+					<Grid>
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition Width="auto"/>
+							<ColumnDefinition Width="*"/>
+							<ColumnDefinition Width="auto"/>
+							<ColumnDefinition Width="*"/>
+						</Grid.ColumnDefinitions>
+						<Label Grid.Column="0" Content="X:" />
+						<controls:NumericUpDown ValueChanged="nudWorldPosition_ValueChanged" Name="nudWorldPositionX" Grid.Column="1"/>
+						<Label Content="Y:" Grid.Column="2"/>
+						<controls:NumericUpDown ValueChanged="nudWorldPosition_ValueChanged" Name="nudWorldPositionY" Grid.Column="3"/>
+					</Grid>
+					<Label Content="Image World Size"/>
+					<Grid>
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition Width="auto"/>
+							<ColumnDefinition Width="*"/>
+							<ColumnDefinition Width="auto"/>
+							<ColumnDefinition Width="*"/>
+						</Grid.ColumnDefinitions>
+						<Label Grid.Column="0" Content="W:"/>
+						<controls:NumericUpDown ValueChanged="nudSizeWidth_ValueChanged" Name="nudSizeWidth" Grid.Column="1"/>
+						<Label Content="H:" Grid.Column="2"/>
+						<controls:NumericUpDown  ValueChanged="nudSizeHeight_ValueChanged" Name="nudSizeHeight" Grid.Column="3"/>
+					</Grid>
+				</StackPanel>
+			</GroupBox>
+			<GroupBox Header="Open Behavior Record">
+				<DockPanel>
+					<Button Name="bttnOpenRecordFileName" Click="bttnOpenRecordFileName_Click" DockPanel.Dock="Right" Content="..."/>
+					<TextBox Name="tbOpenRecordFileName" TextChanged="tbOpenRecordFileName_TextChanged" DockPanel.Dock="Left"/>
+				</DockPanel>
+			</GroupBox>
+			<GroupBox Header="Save Visualization">
+				<DockPanel>
+					<Button Name="bttnSave" Click="bttnSave_Click" DockPanel.Dock="Right" Content="Save"/>
+					<Button Name="bttnSaveFileName" Click="bttnSaveFileName_Click" DockPanel.Dock="Right" Content="..."/>
+					<TextBox Name="tbSaveFileName" TextChanged="tbSaveFileName_TextChanged" DockPanel.Dock="Left"/>
+				</DockPanel>
+			</GroupBox>
+		</StackPanel>
+		<StackPanel Orientation="Vertical" Grid.Column="1">
+			<GroupBox Width="250" Header="Background">
+				<StackPanel Orientation="Vertical">
+					<Label Content="Background Color"/>
+					<colorpicker:ColorPicker Name="cpBackgroundColor" SelectedColorChanged="cpBackgroundColor_SelectedColorChanged"/>
+					<Label Content="Background Image"/>
+					<ListBox Name="lbBackgrounds" SelectionChanged="lbBackgrounds_SelectionChanged">
+						<ListBox.ItemTemplate>
+							<DataTemplate>
+								<StackPanel Orientation="Vertical">
+									<Image MaxHeight="100" MaxWidth="100" Source="{Binding BackgroundImage, Converter={converters:BitmapConverter}}"/>
+									<Label HorizontalContentAlignment="Center" Content="{Binding Title}"/>
+								</StackPanel>
+							</DataTemplate>
+						</ListBox.ItemTemplate>
+					</ListBox>
+				</StackPanel>
+			</GroupBox>
+		</StackPanel>
+	</Grid>
 </controls:MetroWindow>

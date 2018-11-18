@@ -186,6 +186,36 @@ namespace BehaviorVisualizer.Presenters
 			}
 		}
 
+		public Color BackgroundColor
+		{
+			get
+			{
+				return Settings.BackgroundColor;
+			}
+			set
+			{
+				if (Settings.BackgroundColor != value)
+				{
+					Settings.BackgroundColor = value;
+					View.BackgroundColor = value;
+				}
+			}
+		}
+		public Bitmap BackgroundImage
+		{
+			get
+			{
+				return Settings.BackgroundImage;
+			}
+			set
+			{
+				if (Settings.BackgroundImage != value)
+				{
+					Settings.BackgroundImage = value;
+				}
+			}
+		}
+
 		public void Save()
 		{
 			var data = System.IO.File.ReadAllText(this.OpenRecordFileName);

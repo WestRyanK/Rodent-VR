@@ -35,14 +35,21 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ColorPickerLib, Version=1.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dirkster.ColorPickerLib.1.5.0\lib\net4\ColorPickerLib.dll</HintPath>
+    </Reference>
     <Reference Include="ControlzEx, Version=3.0.2.4, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\ControlzEx.3.0.2.4\lib\net45\ControlzEx.dll</HintPath>
     </Reference>
     <Reference Include="MahApps.Metro, Version=1.6.5.1, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\MahApps.Metro.1.6.5\lib\net46\MahApps.Metro.dll</HintPath>
     </Reference>
+    <Reference Include="NumericUpDownLib, Version=2.1.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dirkster.ColorPickerLib.1.5.0\lib\net4\NumericUpDownLib.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\ControlzEx.3.0.2.4\lib\net45\System.Windows.Interactivity.dll</HintPath>
     </Reference>
@@ -64,20 +71,32 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="MainWindow.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
+    <Compile Include="Converters\BitmapConversion.cs" />
+    <Compile Include="Converters\BitmapConverter.cs" />
+    <Compile Include="Views\BehaviorVisualizerWindow.xaml.cs">
+      <DependentUpon>BehaviorVisualizerWindow.xaml</DependentUpon>
+    </Compile>
+    <None Include="Views\FormBehaviorVisualizer.cs" />
+    <None Include="Views\FormBehaviorVisualizer.Designer.cs">
+      <DependentUpon>FormBehaviorVisualizer.cs</DependentUpon>
+    </None>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="MainWindow.xaml.cs">
-      <DependentUpon>MainWindow.xaml</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
+    <Compile Include="Contracts\BehaviorVisualizerContract.cs" />
+    <Page Include="Views\BehaviorVisualizerWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\BehaviorRecordParser.cs" />
+    <Compile Include="Models\BehaviorSnapshot.cs" />
+    <Compile Include="Models\BehaviorVisualizationRenderer.cs" />
+    <Compile Include="Models\BehaviorVisualizationRendererSettings.cs" />
+    <Compile Include="Models\Vector.cs" />
+    <Compile Include="Presenters\BehaviorVisualizerPresenter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -95,6 +114,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="Views\FormBehaviorVisualizer.resx">
+      <DependentUpon>FormBehaviorVisualizer.cs</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -102,7 +124,27 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\maze_02_perspective.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\maze_02_wire.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\maze_02_outline.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\maze_02_ortho_outline.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\maze_02_ortho_textured.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\maze_02_perspective_textured.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

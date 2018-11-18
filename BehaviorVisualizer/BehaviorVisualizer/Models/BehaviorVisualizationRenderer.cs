@@ -11,7 +11,10 @@ namespace BehaviorVisualizer.Models
 			Bitmap bmp = new Bitmap((int)(settings.Width * SCALE), (int)(settings.Height * SCALE));
 			using (Graphics g = Graphics.FromImage(bmp))
 			{
-				g.Clear(Color.White);
+				g.Clear(settings.BackgroundColor);
+				if (settings.BackgroundImage != null)
+					g.DrawImage(settings.BackgroundImage, 0, 0, settings.Width * SCALE, settings.Height * SCALE);
+
 				for (int i = 1; i < behaviorSnapshots.Count; i++)
 				{
 					Draw(g, behaviorSnapshots[i], behaviorSnapshots[i - 1], settings);
