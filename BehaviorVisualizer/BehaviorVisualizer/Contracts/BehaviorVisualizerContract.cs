@@ -25,6 +25,7 @@ namespace BehaviorVisualizer.Contracts
 
 		System.Drawing.Color BackgroundColor { set; }
 
+		System.Drawing.Bitmap Preview { set; }
 		//System.Drawing.Bitmap BackgroundImage { set; }
 	}
 
@@ -55,6 +56,8 @@ namespace BehaviorVisualizer.Contracts
 		System.Drawing.Bitmap BackgroundImage { set; }
 
 		void Save();
+
+		void Render();
 
 		void Reset();
 	}

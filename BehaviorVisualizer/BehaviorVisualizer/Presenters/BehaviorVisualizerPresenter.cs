@@ -33,6 +33,8 @@ namespace BehaviorVisualizer.Presenters
 			this.OpenRecordFileName = @"C:\Users\Ryan\Downloads\BehavioralRecording.txt";
 			this.SaveFileName = @"C:\Users\Ryan\Downloads\Test.png";
 			this.PathColor = Color.Black;
+			this.BackgroundColor = Color.White;
+			this.BackgroundImage = null;
 		}
 
 		public BehaviorVisualizationRendererSettings.PathStyleEnum PathStyle
@@ -218,12 +220,32 @@ namespace BehaviorVisualizer.Presenters
 
 		public void Save()
 		{
-			var data = System.IO.File.ReadAllText(this.OpenRecordFileName);
-			var behaviorSnapshots = BehaviorRecordParser.Parse(data);
-			var bmp = BehaviorVisualizationRenderer.Render(behaviorSnapshots, this.Settings);
+			var bmp = renderImage();
 			bmp.Save(this.SaveFileName);
-
 			System.Diagnostics.Process.Start(this.SaveFileName);
+		}
+
+		private Bitmap renderImage()
+		{
+			if (this.OpenRecordFileName != null)
+			{
+				var data = System.IO.File.ReadAllText(this.OpenRecordFileName);
+				var behaviorSnapshots = BehaviorRecordParser.Parse(data);
+				var bmp = BehaviorVisualizationRenderer.Render(behaviorSnapshots, this.Settings);
+				return bmp;
+			}
+
+			return null;
+		}
+
+		Bitmap renderPreview;
+
+		public void Render()
+		{
+			var bmp = renderImage();
+			renderPreview?.Dispose();
+			renderPreview = bmp;
+			View.Preview = renderPreview;
 		}
 	}
 }

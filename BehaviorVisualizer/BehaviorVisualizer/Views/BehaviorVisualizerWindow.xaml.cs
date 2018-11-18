@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using BehaviorVisualizer.Converters;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -82,6 +83,8 @@ namespace BehaviorVisualizer
 			if (rbPathDots.IsChecked == true)
 			{
 				Presenter.PathStyle = Models.BehaviorVisualizationRendererSettings.PathStyleEnum.Dots;
+
+				Presenter.Render();
 			}
 		}
 
@@ -90,6 +93,8 @@ namespace BehaviorVisualizer
 			if (rbPathLines.IsChecked == true)
 			{
 				Presenter.PathStyle = Models.BehaviorVisualizationRendererSettings.PathStyleEnum.Lines;
+
+				Presenter.Render();
 			}
 		}
 
@@ -116,6 +121,8 @@ namespace BehaviorVisualizer
 		private void nudPathWidth_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double?> e)
 		{
 			Presenter.PathWorldWidth = (float)nudPathWidth.Value;
+
+			Presenter.Render();
 		}
 
 		public float PathWorldWidth
@@ -131,6 +138,8 @@ namespace BehaviorVisualizer
 		private void nudResolution_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double?> e)
 		{
 			Presenter.PixelsPerWorldUnit = (float)nudResolution.Value;
+
+			Presenter.Render();
 		}
 
 		public float PixelsPerWorldUnit
@@ -155,6 +164,8 @@ namespace BehaviorVisualizer
 		private void nudWorldPosition_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double?> e)
 		{
 			Presenter.ImageOriginWorldPosition = new Models.Vector((float?)nudWorldPositionX.Value ?? 0.0f, (float?)nudWorldPositionY.Value ?? 0.0f, 0);
+
+			Presenter.Render();
 		}
 		#endregion
 
@@ -178,11 +189,15 @@ namespace BehaviorVisualizer
 		private void nudSizeWidth_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double?> e)
 		{
 			Presenter.ImageWorldWidth = (float)nudSizeWidth.Value;
+
+			Presenter.Render();
 		}
 
 		private void nudSizeHeight_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double?> e)
 		{
 			Presenter.ImageWorldHeight = (float)nudSizeHeight.Value;
+
+			Presenter.Render();
 		}
 		#endregion
 
@@ -190,6 +205,8 @@ namespace BehaviorVisualizer
 		private void tbOpenRecordFileName_TextChanged(object sender, TextChangedEventArgs e)
 		{
 			Presenter.OpenRecordFileName = tbOpenRecordFileName.Text;
+
+			Presenter.Render();
 		}
 
 		public string OpenRecordFileName
@@ -258,16 +275,28 @@ namespace BehaviorVisualizer
 			}
 		}
 
+		public Bitmap Preview
+		{
+			set
+			{
+				imgPreview.Source = value?.ToWpfBitmap();
+			}
+		}
+
 		private void cpPathColor_SelectedColorChanged(object sender, RoutedPropertyChangedEventArgs<System.Windows.Media.Color?> e)
 		{
 			var color = cpPathColor.SelectedColor;
 			Presenter.PathColor = System.Drawing.Color.FromArgb(color.Value.A, color.Value.R, color.Value.G, color.Value.B);
+
+			Presenter.Render();
 		}
 
 		private void cpBackgroundColor_SelectedColorChanged(object sender, RoutedPropertyChangedEventArgs<System.Windows.Media.Color?> e)
 		{
 			var color = cpBackgroundColor.SelectedColor;
 			Presenter.BackgroundColor = System.Drawing.Color.FromArgb(color.Value.A, color.Value.R, color.Value.G, color.Value.B);
+
+			Presenter.Render();
 		}
 
 		private void lbBackgrounds_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -277,6 +306,9 @@ namespace BehaviorVisualizer
 			Presenter.ImageOriginWorldPosition = selected.ImageOriginPosition;
 			Presenter.ImageWorldHeight = selected.WorldHeight;
 			Presenter.ImageWorldWidth = selected.WorldWidth;
+
+			Presenter.Render();
 		}
+
 	}
 }

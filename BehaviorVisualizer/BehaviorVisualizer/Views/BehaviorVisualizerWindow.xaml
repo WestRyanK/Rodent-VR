@@ -2,6 +2,7 @@
                       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
 					  xmlns:colorpicker="clr-namespace:ColorPickerLib.Controls;assembly=ColorPickerLib"
                       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+					  xmlns:xceed="http://schemas.xceed.com/wpf/xaml/toolkit"
                       xmlns:controls="http://metro.mahapps.com/winfx/xaml/controls"
 					  xmlns:converters="clr-namespace:BehaviorVisualizer.Converters"
         xmlns:local="clr-namespace:BehaviorVisualizer"
@@ -91,5 +92,13 @@
 				</StackPanel>
 			</GroupBox>
 		</StackPanel>
+		<xceed:Zoombox Cursor="Hand" Background="LightGray" Grid.Column="2" ViewStackMode="Disabled" >
+			<xceed:Zoombox.DragModifiers>None</xceed:Zoombox.DragModifiers>
+			<xceed:Zoombox.RelativeZoomModifiers>None</xceed:Zoombox.RelativeZoomModifiers>
+			<xceed:Zoombox.ZoomToSelectionModifiers>Blocked</xceed:Zoombox.ZoomToSelectionModifiers>
+			<xceed:Zoombox.ZoomModifiers>Blocked</xceed:Zoombox.ZoomModifiers>
+			<xceed:Zoombox.ViewFinderVisibility>Hidden</xceed:Zoombox.ViewFinderVisibility>
+				<Image Name="imgPreview" Source="{Binding ImagePreview}"/>
+		</xceed:Zoombox>
 	</Grid>
 </controls:MetroWindow>
