@@ -22,6 +22,10 @@ namespace BehaviorVisualizer.Contracts
 		string SaveFileName { set; }
 
 		System.Drawing.Color PathColor { set; }
+
+		System.Drawing.Color BackgroundColor { set; }
+
+		//System.Drawing.Bitmap BackgroundImage { set; }
 	}
 
 	public interface BehaviorVisualizerPresenterContract
@@ -45,6 +49,10 @@ namespace BehaviorVisualizer.Contracts
 		string SaveFileName { set; }
 
 		System.Drawing.Color PathColor { set; }
+
+		System.Drawing.Color BackgroundColor { set; }
+
+		System.Drawing.Bitmap BackgroundImage { set; }
 
 		void Save();
 

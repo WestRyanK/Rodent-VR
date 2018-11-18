@@ -99,6 +99,7 @@ namespace BehaviorVisualizer.Models
 		}
 		#endregion
 
+		#region Path Color
 		private System.Drawing.Color pathColor;
 
 		public System.Drawing.Color PathColor
@@ -106,6 +107,35 @@ namespace BehaviorVisualizer.Models
 			get { return pathColor; }
 			set { pathColor = value; }
 		}
+		#endregion
+
+		#region Background
+		private System.Drawing.Color backgroundColor;
+
+		public System.Drawing.Color BackgroundColor
+		{
+			get { return backgroundColor; }
+			set { backgroundColor = value; }
+		}
+
+		private System.Drawing.Bitmap backgroundImage;
+
+		public System.Drawing.Bitmap BackgroundImage
+		{
+			get { return backgroundImage; }
+			set { backgroundImage = value; }
+		}
+		#endregion
+
+		#region Title
+		private string title;
+
+		public string Title
+		{
+			get { return title; }
+			set { title = value; }
+		}
+		#endregion
 
 		public enum PathStyleEnum
 		{
