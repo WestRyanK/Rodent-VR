@@ -40,6 +40,34 @@ namespace BehaviorVisualizer
 
 		private void CreateBackgroundOptions()
 		{
+			var maze_01_outline = new BehaviorVisualizationRendererSettings();
+			maze_01_outline.ImageOriginPosition = new Models.Vector(-300, -300, 0);
+			maze_01_outline.WorldWidth = 3200;
+			maze_01_outline.WorldHeight = 650;
+			maze_01_outline.BackgroundImage = Properties.Resources.maze_01_outline;
+			maze_01_outline.Title = "Maze 01 Outline";
+
+			var maze_01_ortho_textured = new BehaviorVisualizationRendererSettings();
+			maze_01_ortho_textured.ImageOriginPosition = new Models.Vector(-300, -300, 0);
+			maze_01_ortho_textured.WorldWidth = 3200;
+			maze_01_ortho_textured.WorldHeight = 650;
+			maze_01_ortho_textured.BackgroundImage = Properties.Resources.maze_01_ortho_textured;
+			maze_01_ortho_textured.Title = "Maze 01 Orthographic";
+
+			var maze_01_perspective = new BehaviorVisualizationRendererSettings();
+			maze_01_perspective.ImageOriginPosition = new Models.Vector(-300, -300, 0);
+			maze_01_perspective.WorldWidth = 3200;
+			maze_01_perspective.WorldHeight = 650;
+			maze_01_perspective.BackgroundImage = Properties.Resources.maze_01_perspective;
+			maze_01_perspective.Title = "Maze 01 Perspective";
+
+			var maze_01_perspective_textured = new BehaviorVisualizationRendererSettings();
+			maze_01_perspective_textured.ImageOriginPosition = new Models.Vector(-300, -300, 0);
+			maze_01_perspective_textured.WorldWidth = 3200;
+			maze_01_perspective_textured.WorldHeight = 650;
+			maze_01_perspective_textured.BackgroundImage = Properties.Resources.maze_01_perspective_textured;
+			maze_01_perspective_textured.Title = "Maze 01 Perspective Textured";
+
 			var maze_02_outline = new BehaviorVisualizationRendererSettings();
 			maze_02_outline.ImageOriginPosition = new Models.Vector(-700, -1100, 0);
 			maze_02_outline.WorldWidth = 1400;
@@ -69,6 +97,10 @@ namespace BehaviorVisualizer
 			maze_02_perspective_textured.Title = "Maze 02 Perspective Textured";
 
 			List<BehaviorVisualizationRendererSettings> items = new List<BehaviorVisualizationRendererSettings>();
+			items.Add(maze_01_outline);
+			items.Add(maze_01_ortho_textured);
+			items.Add(maze_01_perspective);
+			items.Add(maze_01_perspective_textured);
 			items.Add(maze_02_outline);
 			items.Add(maze_02_ortho_textured);
 			items.Add(maze_02_perspective);
