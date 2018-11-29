@@ -446,3 +446,11 @@ rodent_vr/DerivedDataCache/*
 
 # Don't ignore ThirdParty NIDAQ library!
 !rodent_vr/ThirdParty/*
+
+
+# Don't ignore installers!
+!BehaviorVisualizer/BehaviorVisualizerSetup/Release/setup.exe
+!BehaviorVisualizer/BehaviorVisualizerSetup/Release/BehaviorVisualizerSetup.msi
+
+# Ignore built files
+rodent_vr/Output/*
