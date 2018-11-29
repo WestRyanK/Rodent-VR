@@ -1,4 +1,5 @@
-﻿using System.Drawing;
+﻿using System;
+using System.Drawing;
 using BehaviorVisualizer.Models;
 
 namespace BehaviorVisualizer.Presenters
@@ -30,8 +31,8 @@ namespace BehaviorVisualizer.Presenters
 			this.ImageWorldWidth = 1200;
 			this.ImageOriginWorldPosition = new Vector(-600, -1000, 0);
 			this.PixelsPerWorldUnit = 800;
-			this.OpenRecordFileName = @"C:\Users\Ryan\Downloads\BehavioralRecording.txt";
-			this.SaveFileName = @"C:\Users\Ryan\Downloads\Test.png";
+			this.OpenRecordFileName = @"";
+			this.SaveFileName = @"";
 			this.PathColor = Color.Black;
 			this.BackgroundColor = Color.White;
 			this.BackgroundImage = null;
@@ -227,7 +228,7 @@ namespace BehaviorVisualizer.Presenters
 
 		private Bitmap renderImage()
 		{
-			if (this.OpenRecordFileName != null)
+			if (this.OpenRecordFileName != null && System.IO.File.Exists(this.OpenRecordFileName))
 			{
 				var data = System.IO.File.ReadAllText(this.OpenRecordFileName);
 				var behaviorSnapshots = BehaviorRecordParser.Parse(data);

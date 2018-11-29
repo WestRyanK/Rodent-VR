@@ -271,6 +271,7 @@ namespace BehaviorVisualizer
 			if (result == true)
 			{
 				OpenRecordFileName = openRecordFileDialog.FileName;
+				Presenter.Render();
 			}
 		}
 

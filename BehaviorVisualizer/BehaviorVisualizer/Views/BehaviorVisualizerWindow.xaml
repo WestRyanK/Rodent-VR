@@ -7,8 +7,8 @@
 					  xmlns:converters="clr-namespace:BehaviorVisualizer.Converters"
         xmlns:local="clr-namespace:BehaviorVisualizer"
                       Title="MainWindow"
-                      Height="600"
-                      Width="800">
+                      Height="650"
+                      Width="1200">
 	<Grid>
 		<Grid.ColumnDefinitions>
 			<ColumnDefinition Width="auto"/>
@@ -16,6 +16,12 @@
 			<ColumnDefinition Width="*"/>
 		</Grid.ColumnDefinitions>
 		<StackPanel Orientation="Vertical" Width="250" Grid.Column="0">
+			<GroupBox Header="Open Behavior Record">
+				<DockPanel>
+					<Button Name="bttnOpenRecordFileName" Click="bttnOpenRecordFileName_Click" DockPanel.Dock="Right" Content="..."/>
+					<TextBox Name="tbOpenRecordFileName" TextChanged="tbOpenRecordFileName_TextChanged" DockPanel.Dock="Left"/>
+				</DockPanel>
+			</GroupBox>
 			<GroupBox Header="Path">
 				<StackPanel Orientation="Vertical">
 					<Label Content="Style"/>
@@ -31,39 +37,40 @@
 				<StackPanel Orientation="Vertical">
 					<Label Content="Resolution"/>
 					<controls:NumericUpDown ValueChanged="nudResolution_ValueChanged" Name="nudResolution"/>
-					<Label Content="World Position"/>
-					<Grid>
-						<Grid.ColumnDefinitions>
-							<ColumnDefinition Width="auto"/>
-							<ColumnDefinition Width="*"/>
-							<ColumnDefinition Width="auto"/>
-							<ColumnDefinition Width="*"/>
-						</Grid.ColumnDefinitions>
-						<Label Grid.Column="0" Content="X:" />
-						<controls:NumericUpDown ValueChanged="nudWorldPosition_ValueChanged" Name="nudWorldPositionX" Grid.Column="1"/>
-						<Label Content="Y:" Grid.Column="2"/>
-						<controls:NumericUpDown ValueChanged="nudWorldPosition_ValueChanged" Name="nudWorldPositionY" Grid.Column="3"/>
-					</Grid>
-					<Label Content="Image World Size"/>
-					<Grid>
-						<Grid.ColumnDefinitions>
-							<ColumnDefinition Width="auto"/>
-							<ColumnDefinition Width="*"/>
-							<ColumnDefinition Width="auto"/>
-							<ColumnDefinition Width="*"/>
-						</Grid.ColumnDefinitions>
-						<Label Grid.Column="0" Content="W:"/>
-						<controls:NumericUpDown ValueChanged="nudSizeWidth_ValueChanged" Name="nudSizeWidth" Grid.Column="1"/>
-						<Label Content="H:" Grid.Column="2"/>
-						<controls:NumericUpDown  ValueChanged="nudSizeHeight_ValueChanged" Name="nudSizeHeight" Grid.Column="3"/>
-					</Grid>
+					<Expander Background="LightGray" Margin="0,5,0,5" IsExpanded="False">
+						<Expander.Header>
+							<Label FontSize="10" Foreground="White">ADVANCED</Label>
+						</Expander.Header>
+						<StackPanel Orientation="Vertical">
+							<Label Content="World Position"/>
+							<Grid>
+								<Grid.ColumnDefinitions>
+									<ColumnDefinition Width="auto"/>
+									<ColumnDefinition Width="*"/>
+									<ColumnDefinition Width="auto"/>
+									<ColumnDefinition Width="*"/>
+								</Grid.ColumnDefinitions>
+								<Label Grid.Column="0" Content="X:" />
+								<controls:NumericUpDown ValueChanged="nudWorldPosition_ValueChanged" Name="nudWorldPositionX" Grid.Column="1"/>
+								<Label Content="Y:" Grid.Column="2"/>
+								<controls:NumericUpDown ValueChanged="nudWorldPosition_ValueChanged" Name="nudWorldPositionY" Grid.Column="3"/>
+							</Grid>
+							<Label Content="Image World Size"/>
+							<Grid>
+								<Grid.ColumnDefinitions>
+									<ColumnDefinition Width="auto"/>
+									<ColumnDefinition Width="*"/>
+									<ColumnDefinition Width="auto"/>
+									<ColumnDefinition Width="*"/>
+								</Grid.ColumnDefinitions>
+								<Label Grid.Column="0" Content="W:"/>
+								<controls:NumericUpDown ValueChanged="nudSizeWidth_ValueChanged" Name="nudSizeWidth" Grid.Column="1"/>
+								<Label Content="H:" Grid.Column="2"/>
+								<controls:NumericUpDown  ValueChanged="nudSizeHeight_ValueChanged" Name="nudSizeHeight" Grid.Column="3"/>
+							</Grid>
+						</StackPanel>
+					</Expander>
 				</StackPanel>
-			</GroupBox>
-			<GroupBox Header="Open Behavior Record">
-				<DockPanel>
-					<Button Name="bttnOpenRecordFileName" Click="bttnOpenRecordFileName_Click" DockPanel.Dock="Right" Content="..."/>
-					<TextBox Name="tbOpenRecordFileName" TextChanged="tbOpenRecordFileName_TextChanged" DockPanel.Dock="Left"/>
-				</DockPanel>
 			</GroupBox>
 			<GroupBox Header="Save Visualization">
 				<DockPanel>
@@ -85,18 +92,18 @@
 				<colorpicker:ColorPicker Name="cpBackgroundColor" SelectedColorChanged="cpBackgroundColor_SelectedColorChanged" Grid.Row="1"/>
 				<Label Content="Background Image" Grid.Row="2"/>
 				<ScrollViewer Grid.Row="3">
-					
-				
-				<ListBox Name="lbBackgrounds" SelectionChanged="lbBackgrounds_SelectionChanged" >
-					<ListBox.ItemTemplate>
-						<DataTemplate>
-							<StackPanel Orientation="Vertical">
-								<Image Height="100" Width="100" Source="{Binding BackgroundImage, Converter={converters:BitmapConverter}}"/>
-								<Label HorizontalContentAlignment="Center" Content="{Binding Title}"/>
-							</StackPanel>
-						</DataTemplate>
-					</ListBox.ItemTemplate>
-				</ListBox>
+
+
+					<ListBox Name="lbBackgrounds" SelectionChanged="lbBackgrounds_SelectionChanged" >
+						<ListBox.ItemTemplate>
+							<DataTemplate>
+								<StackPanel Orientation="Vertical">
+									<Image Height="100" Width="100" Source="{Binding BackgroundImage, Converter={converters:BitmapConverter}}"/>
+									<Label HorizontalContentAlignment="Center" Content="{Binding Title}"/>
+								</StackPanel>
+							</DataTemplate>
+						</ListBox.ItemTemplate>
+					</ListBox>
 				</ScrollViewer>
 			</Grid>
 		</GroupBox>
