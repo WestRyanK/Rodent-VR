@@ -1,0 +1,104 @@
+﻿<controls:MetroWindow x:Class="RodentVRSettings.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	    xmlns:converters="clr-namespace:RodentVRSettings.Converters"
+	    xmlns:controls="http://metro.mahapps.com/winfx/xaml/controls"
+	    xmlns:xceed="http://schemas.xceed.com/wpf/xaml/toolkit"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RodentVRSettings"
+        mc:Ignorable="d"
+        Title="Rodent VR Settings" Height="450" Width="800">
+	<controls:MetroAnimatedSingleRowTabControl>
+		<controls:MetroTabItem Header="Air Puffers">
+			<Grid>
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="200"/>
+					<ColumnDefinition Width="200"/>
+				</Grid.ColumnDefinitions>
+				<Grid.RowDefinitions>
+					<RowDefinition Height="auto"/>
+					<RowDefinition Height="auto"/>
+					<RowDefinition Height="auto"/>
+					<RowDefinition Height="auto"/>
+				</Grid.RowDefinitions>
+				<Label Content="Left Air Puffer Device Name" Grid.Column="0" Grid.Row="0"/>
+				<TextBox Name="tbAirPufferLeftName" Grid.Column="1" Grid.Row="0"/>
+				<Label Content="Right Air Puffer Device Name" Grid.Column="0" Grid.Row="1"/>
+				<TextBox Name="tbAirPufferRightName" Grid.Column="1" Grid.Row="1"/>
+				<Label Content="Front-Facing Angle Tolerance" Grid.Column="0" Grid.Row="2"/>
+				<controls:NumericUpDown Name="nudAirPufferFrontAngle" Minimum="0" Maximum="90" HasDecimals="True" StringFormat="{}{0:#.0} degrees" Interval="0.5" Grid.Column="1" Grid.Row="1" Margin="2.2,30.8,-2.4,1" Grid.RowSpan="3" />
+			</Grid>
+		</controls:MetroTabItem>
+		<controls:MetroTabItem Header="Reward System">
+			
+		</controls:MetroTabItem>
+		<controls:MetroTabItem Header="Mouse Input">
+			<Grid>
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="200"/>
+					<ColumnDefinition Width="200"/>
+				</Grid.ColumnDefinitions>
+				<Grid.RowDefinitions>
+					<RowDefinition Height="auto"/>
+					<RowDefinition Height="auto"/>
+					<RowDefinition Height="auto"/>
+					<RowDefinition Height="auto"/>
+				</Grid.RowDefinitions>
+				<Label Content="Mouse A Device Name" Grid.Column="0" Grid.Row="0"/>
+				<TextBox Name="tbMouseAName" Grid.Column="1" Grid.Row="0"/>
+				<Label Content="Mouse A Multiplier" Grid.Column="0" Grid.Row="1"/>
+				<controls:NumericUpDown Name="nudMouseAMultiplier" Minimum="-100" Maximum="100" HasDecimals="True" Interval="0.0025" StringFormat="N4" Grid.Column="1" Grid.Row="1"/>
+				<Label Content="Mouse B Device Name" Grid.Column="0" Grid.Row="2"/>
+				<TextBox Name="tbMouseBName" Grid.Column="1" Grid.Row="2"/>
+				<Label Content="Mouse B Multiplier" Grid.Column="0" Grid.Row="3"/>
+				<controls:NumericUpDown Name="nudMouseBMultiplier" Minimum="-100" Maximum="100" HasDecimals="True" Interval="0.0025" StringFormat="N4" Grid.Column="1" Grid.Row="3"/>
+			</Grid>
+		</controls:MetroTabItem>
+		<controls:MetroTabItem Header="Behavior Recording">
+			<Grid>
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="200"/>
+					<ColumnDefinition Width="200"/>
+				</Grid.ColumnDefinitions>
+				<Grid.RowDefinitions>
+					<RowDefinition Height="auto"/>
+					<RowDefinition Height="auto"/>
+					<RowDefinition Height="auto"/>
+					<RowDefinition Height="auto"/>
+				</Grid.RowDefinitions>
+				<Label Content="Behavior Recording File Name" Grid.Column="0" Grid.Row="0"/>
+				<StackPanel Orientation="Horizontal" Grid.Column="1" Grid.Row="0">
+					<TextBox Name="tbBehaviorRecordingFileName" Width="160" />
+					<Button Content="..."/>
+				</StackPanel>
+			</Grid>
+		</controls:MetroTabItem>
+		<controls:MetroTabItem Header="Mazes">
+			<Grid>
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="200"/>
+					<ColumnDefinition Width="200"/>
+				</Grid.ColumnDefinitions>
+				<Grid.RowDefinitions>
+					<RowDefinition Height="auto"/>
+					<RowDefinition Height="auto"/>
+				</Grid.RowDefinitions>
+				<Label Content="Initial Maze" Grid.Column="0" Grid.Row="0"/>
+				<controls:DropDownButton Name="ddMazeInitial" Grid.Column="1" Grid.Row="0">
+					<controls:DropDownButton.ItemTemplate>
+						<DataTemplate>
+							<StackPanel Orientation="Vertical">
+								<Image Height="100" Width="100" Source="{Binding MazeImage, Converter={converters:BitmapConverter}}"/>
+								<Label HorizontalContentAlignment="Center" Content="{Binding Title}"/>
+							</StackPanel>
+						</DataTemplate>
+					</controls:DropDownButton.ItemTemplate>
+				</controls:DropDownButton>
+			</Grid>
+		</controls:MetroTabItem>
+		<controls:MetroTabItem Header="Materials">
+			
+		</controls:MetroTabItem>
+	</controls:MetroAnimatedSingleRowTabControl>
+</controls:MetroWindow>

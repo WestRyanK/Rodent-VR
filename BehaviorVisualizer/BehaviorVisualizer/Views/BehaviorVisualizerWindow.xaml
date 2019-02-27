@@ -6,7 +6,7 @@
                       xmlns:controls="http://metro.mahapps.com/winfx/xaml/controls"
 					  xmlns:converters="clr-namespace:BehaviorVisualizer.Converters"
         xmlns:local="clr-namespace:BehaviorVisualizer"
-                      Title="MainWindow"
+                      Title="Behavior Visualizer"
                       Height="650"
                       Width="1200">
 	<Grid>
