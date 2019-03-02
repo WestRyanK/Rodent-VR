@@ -7,6 +7,8 @@ namespace RodentVRSettingsTest
 	[TestClass]
 	public class ConfigurationFileTest
 	{
+		private const string TEST_FILENAME = "test.ini";
+
 		private void AddConfigEntry(PrivateObject config, string setting, object value)
 		{
 			config.Invoke("AddConfigurationEntry", setting, value);
@@ -169,6 +171,26 @@ namespace RodentVRSettingsTest
 			for (int i = 0; i < output2.Length; i++)
 			{
 				Assert.AreEqual(lines[i], output2[i]);
+			}
+		}
+
+		[TestMethod]
+		public void TestRoundTripSave()
+		{
+			ConfigurationFile file = new ConfigurationFile();
+			file.AddConfigurationEntry("string", "i am a string");
+			file.AddConfigurationEntry("bool", true);
+			file.AddConfigurationEntry("float", 12.345f);
+			file.AddConfigurationEntry("int", 40);
+			file.AddConfigurationEntry("float", 60.0f);
+			file.SaveFile(TEST_FILENAME);
+
+			var file2 = ConfigurationFile.Read(TEST_FILENAME);
+
+			Assert.AreEqual(file.Entries.Count, file2.Entries.Count);
+			for (int i = 0; i < file.Entries.Count; i++)
+			{
+				Assert.AreEqual(file.Entries[i].EntryValue, file2.Entries[i].EntryValue);
 			}
 		}
 	}
