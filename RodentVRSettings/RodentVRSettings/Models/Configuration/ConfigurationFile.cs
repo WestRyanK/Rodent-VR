@@ -14,9 +14,14 @@ namespace RodentVRSettings.Models.Configuration
 		{
 		}
 
-		public void WriteConfigurationToFile(string fileName)
+		public void SaveFile(string fileName)
 		{
-			string contents = this.ToString();
+			ConfigurationFile.Save(fileName, this);
+		}
+
+		public static void Save(string fileName, ConfigurationFile file)
+		{
+			string contents = file.ToString();
 
 			System.IO.File.WriteAllText(fileName, contents);
 		}
@@ -29,11 +34,22 @@ namespace RodentVRSettings.Models.Configuration
 			return entryString;
 		}
 
-		public void ReadConfigurationFromFile(string fileName)
+		public void ReadFile(string fileName)
+		{
+			var readFile = Read(fileName);
+
+			foreach (var entry in readFile.Entries)
+			{
+				this.AddConfigurationEntry(entry);
+			}
+		}
+
+		public static ConfigurationFile Read(string fileName)
 		{
 			string[] lines = System.IO.File.ReadAllLines(fileName);
 
-			var entries = ConfigurationFile.ParseConfigurationLines(lines);
+			var readFile = ConfigurationFile.ParseConfigurationLines(lines);
+			return readFile;
 		}
 
 		private static ConfigurationFile ParseConfigurationLines(string[] lines)
