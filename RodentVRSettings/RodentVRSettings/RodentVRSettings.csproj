@@ -89,8 +89,11 @@
     <Compile Include="Converters\BitmapConversion.cs" />
     <Compile Include="Converters\BitmapConverter.cs" />
     <Compile Include="Models\Configuration\ConfigurationFile.cs" />
+    <Compile Include="Models\Configuration\ConfigurationSettings.cs" />
     <Compile Include="Models\Configuration\Entry.cs" />
+    <Compile Include="Models\Configuration\MaterialsEnum.cs" />
     <Compile Include="Models\Configuration\MultiEntry.cs" />
+    <Compile Include="Models\Configuration\RewardTrigger.cs" />
     <Compile Include="Views\RodentVRSettingsWindow.xaml.cs">
       <DependentUpon>RodentVRSettingsWindow.xaml</DependentUpon>
       <SubType>Code</SubType>

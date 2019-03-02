@@ -8,7 +8,9 @@ namespace RodentVRSettings.Models.Configuration
 {
     public class ConfigurationFile : MultiEntry
     {
-		public ConfigurationFile() : base("Root")
+
+		private const string ROOTNAME = "Root";
+		public ConfigurationFile() : base(ROOTNAME)
 		{
 		}
 
@@ -25,6 +27,34 @@ namespace RodentVRSettings.Models.Configuration
 			var entryString = string.Join("\n", entryStrings);
 
 			return entryString;
+		}
+
+		public void ReadConfigurationFromFile(string fileName)
+		{
+			string[] lines = System.IO.File.ReadAllLines(fileName);
+
+			var entries = ConfigurationFile.ParseConfigurationLines(lines);
+		}
+
+		private static ConfigurationFile ParseConfigurationLines(string[] lines)
+		{
+			ConfigurationFile root = new ConfigurationFile();
+
+			foreach (var line in lines)
+			{
+				if (MultiEntry.IsMultiEntry(line))
+				{
+					var multiEntry = MultiEntry.ParseConfigurationLine(line);
+					root.AddConfigurationEntry(multiEntry);
+				}
+				else
+				{
+					var entry = Entry.ParseConfigurationLine(line);
+					root.AddConfigurationEntry(entry);
+				}
+			}
+
+			return root;
 		}
     }
 
