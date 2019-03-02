@@ -1,0 +1,20 @@
+﻿<UserControl x:Class="RodentVRSettings.Views.MouseInputView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:RodentVRSettings.Views"
+			 xmlns:controls="http://metro.mahapps.com/winfx/xaml/controls"
+			 mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+			<StackPanel Orientation="Vertical">
+				<Label Content="Mouse A Device Name" />
+				<TextBox Name="tbMouseADeviceName" TextChanged="tbMouseADeviceName_TextChanged" Width="{StaticResource controlWidth}" HorizontalAlignment="Left"/>
+				<Label Content="Mouse A Multiplier" />
+				<controls:NumericUpDown Name="nudMouseAMultiplier" ValueChanged="nudMouseAMultiplier_ValueChanged" Minimum="-100" Maximum="100" HasDecimals="True" Interval="0.0025" StringFormat="N4" HorizontalAlignment="Left" Width="{StaticResource controlWidth}" />
+				<Label Content="Mouse B Device Name" />
+				<TextBox Name="tbMouseBDeviceName" TextChanged="tbMouseBDeviceName_TextChanged" Width="{StaticResource controlWidth}" HorizontalAlignment="Left"/>
+				<Label Content="Mouse B Multiplier" />
+				<controls:NumericUpDown Name="nudMouseBMultiplier" ValueChanged="nudMouseBMultiplier_ValueChanged" Minimum="-100" Maximum="100" HasDecimals="True" Interval="0.0025" StringFormat="N4" HorizontalAlignment="Left" Width="{StaticResource controlWidth}" />
+			</StackPanel>
+</UserControl>
