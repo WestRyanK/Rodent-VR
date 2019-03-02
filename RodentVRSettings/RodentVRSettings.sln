@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28010.2046
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RodentVRSettings", "RodentVRSettings\RodentVRSettings.csproj", "{1305F032-31AD-484B-B15B-1ED9D500F4F0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RodentVRSettingsTest", "RodentVRSettingsTest\RodentVRSettingsTest.csproj", "{34A383E5-3592-46A0-BABC-82C01BE54AD3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{1305F032-31AD-484B-B15B-1ED9D500F4F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1305F032-31AD-484B-B15B-1ED9D500F4F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1305F032-31AD-484B-B15B-1ED9D500F4F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{34A383E5-3592-46A0-BABC-82C01BE54AD3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34A383E5-3592-46A0-BABC-82C01BE54AD3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34A383E5-3592-46A0-BABC-82C01BE54AD3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34A383E5-3592-46A0-BABC-82C01BE54AD3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
