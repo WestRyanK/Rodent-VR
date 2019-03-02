@@ -7,85 +7,51 @@
 	    xmlns:xceed="http://schemas.xceed.com/wpf/xaml/toolkit"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RodentVRSettings"
+	    xmlns:sys="clr-namespace:System;assembly=mscorlib"
         mc:Ignorable="d"
         Title="Rodent VR Settings" Height="450" Width="800">
-	<controls:MetroAnimatedSingleRowTabControl>
-		<controls:MetroTabItem Header="Air Puffers">
-			<Grid>
-				<Grid.ColumnDefinitions>
-					<ColumnDefinition Width="200"/>
-					<ColumnDefinition Width="200"/>
-				</Grid.ColumnDefinitions>
-				<Grid.RowDefinitions>
-					<RowDefinition Height="auto"/>
-					<RowDefinition Height="auto"/>
-					<RowDefinition Height="auto"/>
-					<RowDefinition Height="auto"/>
-				</Grid.RowDefinitions>
-				<Label Content="Left Air Puffer Device Name" Grid.Column="0" Grid.Row="0"/>
-				<TextBox Name="tbAirPufferLeftName" Grid.Column="1" Grid.Row="0"/>
-				<Label Content="Right Air Puffer Device Name" Grid.Column="0" Grid.Row="1"/>
-				<TextBox Name="tbAirPufferRightName" Grid.Column="1" Grid.Row="1"/>
-				<Label Content="Front-Facing Angle Tolerance" Grid.Column="0" Grid.Row="2"/>
-				<controls:NumericUpDown Name="nudAirPufferFrontAngle" Minimum="0" Maximum="90" HasDecimals="True" StringFormat="{}{0:#.0} degrees" Interval="0.5" Grid.Column="1" Grid.Row="1" Margin="2.2,30.8,-2.4,1" Grid.RowSpan="3" />
-			</Grid>
+	<controls:MetroWindow.Resources>
+		<sys:Double x:Key="controlWidth">300</sys:Double>
+	</controls:MetroWindow.Resources>
+	<controls:MetroAnimatedSingleRowTabControl TabStripPlacement="Left">
+		<controls:MetroTabItem Header="Air Puffers" Margin="5,0,-5.2,0.2">
+			<StackPanel Orientation="Vertical">
+				<Label Content="Left Air Puffer Device Name"/>
+				<TextBox Name="tbAirPufferLeftName" Width="{StaticResource controlWidth}" HorizontalAlignment="Left"/>
+				<Label Content="Right Air Puffer Device Name" />
+				<TextBox Name="tbAirPufferRightName" Width="{StaticResource controlWidth}" HorizontalAlignment="Left"/>
+				<Label Content="Front-Facing Angle Tolerance" />
+				<controls:NumericUpDown Name="nudAirPufferFrontAngle" Minimum="0" Maximum="90" HasDecimals="True" StringFormat="{}{0:#.0} degrees" Interval="0.5" Width="{StaticResource controlWidth}" HorizontalAlignment="Left"/>
+			</StackPanel>
 		</controls:MetroTabItem>
 		<controls:MetroTabItem Header="Reward System">
 			
 		</controls:MetroTabItem>
 		<controls:MetroTabItem Header="Mouse Input">
-			<Grid>
-				<Grid.ColumnDefinitions>
-					<ColumnDefinition Width="200"/>
-					<ColumnDefinition Width="200"/>
-				</Grid.ColumnDefinitions>
-				<Grid.RowDefinitions>
-					<RowDefinition Height="auto"/>
-					<RowDefinition Height="auto"/>
-					<RowDefinition Height="auto"/>
-					<RowDefinition Height="auto"/>
-				</Grid.RowDefinitions>
-				<Label Content="Mouse A Device Name" Grid.Column="0" Grid.Row="0"/>
-				<TextBox Name="tbMouseAName" Grid.Column="1" Grid.Row="0"/>
-				<Label Content="Mouse A Multiplier" Grid.Column="0" Grid.Row="1"/>
-				<controls:NumericUpDown Name="nudMouseAMultiplier" Minimum="-100" Maximum="100" HasDecimals="True" Interval="0.0025" StringFormat="N4" Grid.Column="1" Grid.Row="1"/>
-				<Label Content="Mouse B Device Name" Grid.Column="0" Grid.Row="2"/>
-				<TextBox Name="tbMouseBName" Grid.Column="1" Grid.Row="2"/>
-				<Label Content="Mouse B Multiplier" Grid.Column="0" Grid.Row="3"/>
-				<controls:NumericUpDown Name="nudMouseBMultiplier" Minimum="-100" Maximum="100" HasDecimals="True" Interval="0.0025" StringFormat="N4" Grid.Column="1" Grid.Row="3"/>
-			</Grid>
+			<StackPanel Orientation="Vertical">
+				<Label Content="Mouse A Device Name" />
+				<TextBox Name="tbMouseAName" Width="{StaticResource controlWidth}" HorizontalAlignment="Left"/>
+				<Label Content="Mouse A Multiplier" />
+				<controls:NumericUpDown Name="nudMouseAMultiplier" Minimum="-100" Maximum="100" HasDecimals="True" Interval="0.0025" StringFormat="N4" HorizontalAlignment="Left" Width="{StaticResource controlWidth}" />
+				<Label Content="Mouse B Device Name" />
+				<TextBox Name="tbMouseBName" Width="{StaticResource controlWidth}" HorizontalAlignment="Left"/>
+				<Label Content="Mouse B Multiplier" />
+				<controls:NumericUpDown Name="nudMouseBMultiplier" Minimum="-100" Maximum="100" HasDecimals="True" Interval="0.0025" StringFormat="N4" HorizontalAlignment="Left" Width="{StaticResource controlWidth}" />
+			</StackPanel>
 		</controls:MetroTabItem>
 		<controls:MetroTabItem Header="Behavior Recording">
-			<Grid>
-				<Grid.ColumnDefinitions>
-					<ColumnDefinition Width="200"/>
-					<ColumnDefinition Width="200"/>
-				</Grid.ColumnDefinitions>
-				<Grid.RowDefinitions>
-					<RowDefinition Height="auto"/>
-					<RowDefinition Height="auto"/>
-					<RowDefinition Height="auto"/>
-					<RowDefinition Height="auto"/>
-				</Grid.RowDefinitions>
+			<StackPanel Orientation="Vertical">
 				<Label Content="Behavior Recording File Name" Grid.Column="0" Grid.Row="0"/>
 				<StackPanel Orientation="Horizontal" Grid.Column="1" Grid.Row="0">
-					<TextBox Name="tbBehaviorRecordingFileName" Width="160" />
+					<TextBox Name="tbBehaviorRecordingFileName" Width="{StaticResource controlWidth}" />
 					<Button Content="..."/>
 				</StackPanel>
-			</Grid>
+			</StackPanel>
 		</controls:MetroTabItem>
 		<controls:MetroTabItem Header="Mazes">
-			<Grid>
-				<Grid.ColumnDefinitions>
-					<ColumnDefinition Width="200"/>
-					<ColumnDefinition Width="200"/>
-				</Grid.ColumnDefinitions>
-				<Grid.RowDefinitions>
-					<RowDefinition Height="auto"/>
-					<RowDefinition Height="auto"/>
-				</Grid.RowDefinitions>
-				<Label Content="Initial Maze" Grid.Column="0" Grid.Row="0"/>
-				<controls:DropDownButton Name="ddMazeInitial" Grid.Column="1" Grid.Row="0">
+			<StackPanel Orientation="Vertical">
+				<Label Content="Initial Maze" />
+				<controls:DropDownButton Name="ddMazeInitial" Width="{StaticResource controlWidth}" HorizontalAlignment="Left">
 					<controls:DropDownButton.ItemTemplate>
 						<DataTemplate>
 							<StackPanel Orientation="Vertical">
@@ -95,7 +61,7 @@
 						</DataTemplate>
 					</controls:DropDownButton.ItemTemplate>
 				</controls:DropDownButton>
-			</Grid>
+			</StackPanel>
 		</controls:MetroTabItem>
 		<controls:MetroTabItem Header="Materials">
 			
