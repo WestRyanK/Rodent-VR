@@ -1,0 +1,18 @@
+﻿<UserControl x:Class="RodentVRSettings.Views.AirPuffersView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+			xmlns:controls="http://metro.mahapps.com/winfx/xaml/controls"
+             xmlns:local="clr-namespace:RodentVRSettings.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+			<StackPanel Orientation="Vertical">
+				<Label Content="Left Air Puffer Device Name"/>
+				<TextBox Name="tbAirPufferLeftDeviceName" TextChanged="tbAirPufferLeftDeviceName_TextChanged" Width="{StaticResource controlWidth}" HorizontalAlignment="Left"/>
+				<Label Content="Right Air Puffer Device Name" />
+				<TextBox Name="tbAirPufferRightDeviceName" TextChanged="tbAirPufferRightDeviceName_TextChanged" Width="{StaticResource controlWidth}" HorizontalAlignment="Left"/>
+				<Label Content="Front-Facing Angle Tolerance" />
+				<controls:NumericUpDown Name="nudAirPufferFrontAngle" ValueChanged="nudAirPufferFrontAngle_ValueChanged" Minimum="0" Maximum="90" HasDecimals="True" StringFormat="{}{0:#.0} degrees" Interval="0.5" Width="{StaticResource controlWidth}" HorizontalAlignment="Left"/>
+			</StackPanel>
+</UserControl>

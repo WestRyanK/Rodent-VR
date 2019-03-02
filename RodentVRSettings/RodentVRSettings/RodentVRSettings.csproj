@@ -78,6 +78,18 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Views\AirPuffersView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\BehaviorRecordingView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\MouseInputView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\RodentVRSettingsWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -86,6 +98,9 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Contracts\AirPuffersContract.cs" />
+    <Compile Include="Contracts\BehaviorRecordingContract.cs" />
+    <Compile Include="Contracts\MouseInputContract.cs" />
     <Compile Include="Converters\BitmapConversion.cs" />
     <Compile Include="Converters\BitmapConverter.cs" />
     <Compile Include="Models\Configuration\ConfigurationFile.cs" />
@@ -94,6 +109,18 @@
     <Compile Include="Models\Configuration\MaterialsEnum.cs" />
     <Compile Include="Models\Configuration\MultiEntry.cs" />
     <Compile Include="Models\Configuration\RewardTrigger.cs" />
+    <Compile Include="Presenters\AirPuffersPresenter.cs" />
+    <Compile Include="Presenters\BehaviorRecordingPresenter.cs" />
+    <Compile Include="Presenters\MouseInputPresenter.cs" />
+    <Compile Include="Views\AirPuffersView.xaml.cs">
+      <DependentUpon>AirPuffersView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\BehaviorRecordingView.xaml.cs">
+      <DependentUpon>BehaviorRecordingView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MouseInputView.xaml.cs">
+      <DependentUpon>MouseInputView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\RodentVRSettingsWindow.xaml.cs">
       <DependentUpon>RodentVRSettingsWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -126,9 +153,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Contracts\" />
-    <Folder Include="Presenters\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

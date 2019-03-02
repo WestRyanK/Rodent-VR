@@ -14,6 +14,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using RodentVRSettings.Models.Configuration;
 
 namespace RodentVRSettings
 {
@@ -27,6 +28,11 @@ namespace RodentVRSettings
 		public MainWindow()
 		{
 			InitializeComponent();
+
+			ConfigurationSettings settings = new ConfigurationSettings();
+			viewAirPuffers.Init(settings);
+			viewMouseInput.Init(settings);
+			viewBehaviorRecording.Init(settings);
 
 			//this.Presenter = new Presenters.BehaviorVisualizerPresenter();
 			//this.Presenter.View = this;

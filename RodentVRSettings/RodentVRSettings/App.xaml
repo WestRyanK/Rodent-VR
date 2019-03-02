@@ -16,7 +16,8 @@
 				<ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.AnimatedSingleRowTabControl.xaml" />
 			</ResourceDictionary.MergedDictionaries>
 
-			<Thickness x:Key="defaultMargin">4</Thickness>
+		<Thickness x:Key="defaultMargin">4</Thickness>
+		<sys:Double x:Key="controlWidth">300</sys:Double>
 
 		<Style TargetType="{x:Type Button}" BasedOn="{StaticResource MetroButton}">
 			<Setter Property="Margin" Value="{StaticResource defaultMargin}"/>

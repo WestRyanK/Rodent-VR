@@ -8,45 +8,20 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RodentVRSettings"
 	    xmlns:sys="clr-namespace:System;assembly=mscorlib"
-        mc:Ignorable="d"
+					  xmlns:views="clr-namespace:RodentVRSettings.Views"
+					  mc:Ignorable="d"
         Title="Rodent VR Settings" Height="450" Width="800">
-	<controls:MetroWindow.Resources>
-		<sys:Double x:Key="controlWidth">300</sys:Double>
-	</controls:MetroWindow.Resources>
 	<controls:MetroAnimatedSingleRowTabControl TabStripPlacement="Left">
-		<controls:MetroTabItem Header="Air Puffers" Margin="5,0,-5.2,0.2">
-			<StackPanel Orientation="Vertical">
-				<Label Content="Left Air Puffer Device Name"/>
-				<TextBox Name="tbAirPufferLeftName" Width="{StaticResource controlWidth}" HorizontalAlignment="Left"/>
-				<Label Content="Right Air Puffer Device Name" />
-				<TextBox Name="tbAirPufferRightName" Width="{StaticResource controlWidth}" HorizontalAlignment="Left"/>
-				<Label Content="Front-Facing Angle Tolerance" />
-				<controls:NumericUpDown Name="nudAirPufferFrontAngle" Minimum="0" Maximum="90" HasDecimals="True" StringFormat="{}{0:#.0} degrees" Interval="0.5" Width="{StaticResource controlWidth}" HorizontalAlignment="Left"/>
-			</StackPanel>
+		<controls:MetroTabItem Header="Air Puffers">
+			<views:AirPuffersView x:Name="viewAirPuffers"/>
 		</controls:MetroTabItem>
 		<controls:MetroTabItem Header="Reward System">
-			
 		</controls:MetroTabItem>
 		<controls:MetroTabItem Header="Mouse Input">
-			<StackPanel Orientation="Vertical">
-				<Label Content="Mouse A Device Name" />
-				<TextBox Name="tbMouseAName" Width="{StaticResource controlWidth}" HorizontalAlignment="Left"/>
-				<Label Content="Mouse A Multiplier" />
-				<controls:NumericUpDown Name="nudMouseAMultiplier" Minimum="-100" Maximum="100" HasDecimals="True" Interval="0.0025" StringFormat="N4" HorizontalAlignment="Left" Width="{StaticResource controlWidth}" />
-				<Label Content="Mouse B Device Name" />
-				<TextBox Name="tbMouseBName" Width="{StaticResource controlWidth}" HorizontalAlignment="Left"/>
-				<Label Content="Mouse B Multiplier" />
-				<controls:NumericUpDown Name="nudMouseBMultiplier" Minimum="-100" Maximum="100" HasDecimals="True" Interval="0.0025" StringFormat="N4" HorizontalAlignment="Left" Width="{StaticResource controlWidth}" />
-			</StackPanel>
+			<views:MouseInputView x:Name="viewMouseInput"/>
 		</controls:MetroTabItem>
 		<controls:MetroTabItem Header="Behavior Recording">
-			<StackPanel Orientation="Vertical">
-				<Label Content="Behavior Recording File Name" Grid.Column="0" Grid.Row="0"/>
-				<StackPanel Orientation="Horizontal" Grid.Column="1" Grid.Row="0">
-					<TextBox Name="tbBehaviorRecordingFileName" Width="{StaticResource controlWidth}" />
-					<Button Content="..."/>
-				</StackPanel>
-			</StackPanel>
+			<views:BehaviorRecordingView x:Name="viewBehaviorRecording"/>
 		</controls:MetroTabItem>
 		<controls:MetroTabItem Header="Mazes">
 			<StackPanel Orientation="Vertical">
