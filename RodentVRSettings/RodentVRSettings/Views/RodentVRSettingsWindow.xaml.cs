@@ -33,6 +33,7 @@ namespace RodentVRSettings
 			viewAirPuffers.Init(settings);
 			viewMouseInput.Init(settings);
 			viewBehaviorRecording.Init(settings);
+			viewMaterials.Init(settings);
 
 			//this.Presenter = new Presenters.BehaviorVisualizerPresenter();
 			//this.Presenter.View = this;

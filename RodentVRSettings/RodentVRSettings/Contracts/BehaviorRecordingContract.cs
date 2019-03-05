@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RodentVRSettings.Models.Configuration;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,6 +10,8 @@ namespace RodentVRSettings.Contracts
 	public interface BehaviorRecordingViewContract
 	{
 		string BehaviorRecordingFileName { set; }
+
+		void Init(ConfigurationSettings settings);
 	}
 
 	public interface BehaviorRecordingPresenterContract

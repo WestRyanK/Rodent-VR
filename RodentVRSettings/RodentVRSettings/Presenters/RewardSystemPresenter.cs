@@ -14,19 +14,7 @@ namespace RodentVRSettings.Presenters
 
 		void RewardSystemPresenterContract.SetRewardTrigger(MazesEnum maze, int triggerIndex, RewardTrigger trigger)
 		{
-			RewardTrigger[] triggers;
-			switch (maze)
-			{
-				case MazesEnum.maze_01_level:
-					triggers = this.Settings.Maze01Triggers;
-					break;
-				case MazesEnum.maze_02_level:
-					triggers = this.Settings.Maze02Triggers;
-					break;
-				default:
-					throw new Exception("update switch plz!");
-			}
-
+			var triggers = this.Settings.GetRewardTriggers(maze);
 			triggers[triggerIndex] = trigger;
 		}
 
@@ -39,8 +27,6 @@ namespace RodentVRSettings.Presenters
 			get { return settings; }
 			set { settings = value; }
 		}
-
-		RewardSystemViewContract RewardSystemPresenterContract.View { set => throw new NotImplementedException(); }
 		#endregion
 
 		public RewardSystemPresenter(ConfigurationSettings settings)
@@ -50,8 +36,8 @@ namespace RodentVRSettings.Presenters
 
 		public void Init()
 		{
-			View.Maze01RewardTriggers = this.Maze01RewardTriggers;
-			View.Maze02RewardTriggers = this.Maze02RewardTriggers;
+			//View.Maze01RewardTriggers = this.Maze01RewardTriggers;
+			//View.Maze02RewardTriggers = this.Maze02RewardTriggers;
 		}
 
 	}

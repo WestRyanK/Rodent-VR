@@ -1,5 +1,4 @@
-﻿using RodentVRSettings.Contracts;
-using RodentVRSettings.Models.Configuration;
+﻿using RodentVRSettings.Models.Configuration;
 using RodentVRSettings.Presenters;
 using System;
 using System.Collections.Generic;
@@ -19,32 +18,41 @@ using System.Windows.Shapes;
 namespace RodentVRSettings.Views
 {
 	/// <summary>
-	/// Interaction logic for RewardSystemView.xaml
+	/// Interaction logic for MaterialsView.xaml
 	/// </summary>
-	public partial class RewardSystemView : UserControl, Contracts.RewardSystemViewContract
+	public partial class MaterialsView : UserControl, Contracts.MaterialsViewContract
 	{
-		Contracts.RewardSystemPresenterContract Presenter { get; set; }
+		Contracts.MaterialsPresenterContract Presenter { get; set; }
 
-		public RewardSystemView()
+		public MaterialsEnum[] Maze01Materials
+		{
+			set { }
+		}
+		public MaterialsEnum[] Maze02Materials
+		{
+			set { }
+		}
+
+		public MaterialsView()
 		{
 			InitializeComponent();
 		}
 
 		public void Init(ConfigurationSettings settings)
 		{
-			this.Presenter = new RewardSystemPresenter(settings);
+			this.Presenter = new MaterialsPresenter(settings);
 			this.Presenter.View = this;
 			this.Presenter.Init();
 		}
 
-		public void SetRewardTrigger(MazesEnum maze, int triggerIndex, RewardTrigger trigger)
+		public void SetMaterial(MazesEnum maze, int materialIndex, MaterialsEnum material)
 		{
 			throw new NotImplementedException();
 		}
 
-		void RewardSystemViewContract.SetMazeMaterials(MaterialsEnum[] maze01Materials, MaterialsEnum[] maze02Materials)
+		private void mazeVisualizer_OnMazeClicked(object sender, int selectedIndex)
 		{
-			throw new NotImplementedException();
+			Presenter.SelectedIndex = selectedIndex;
 		}
 	}
 }

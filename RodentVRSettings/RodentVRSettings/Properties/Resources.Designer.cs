@@ -163,6 +163,146 @@ namespace RodentVRSettings.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap maze_01_level_mask_00 {
+            get {
+                object obj = ResourceManager.GetObject("maze_01_level_mask_00", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap maze_01_level_mask_01 {
+            get {
+                object obj = ResourceManager.GetObject("maze_01_level_mask_01", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap maze_01_level_mask_02 {
+            get {
+                object obj = ResourceManager.GetObject("maze_01_level_mask_02", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap maze_01_level_mask_03 {
+            get {
+                object obj = ResourceManager.GetObject("maze_01_level_mask_03", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap maze_01_level_mask_04 {
+            get {
+                object obj = ResourceManager.GetObject("maze_01_level_mask_04", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap maze_01_level_mask_05 {
+            get {
+                object obj = ResourceManager.GetObject("maze_01_level_mask_05", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap maze_01_level_mask_06 {
+            get {
+                object obj = ResourceManager.GetObject("maze_01_level_mask_06", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap maze_01_level_selection_00 {
+            get {
+                object obj = ResourceManager.GetObject("maze_01_level_selection_00", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap maze_01_level_selection_01 {
+            get {
+                object obj = ResourceManager.GetObject("maze_01_level_selection_01", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap maze_01_level_selection_02 {
+            get {
+                object obj = ResourceManager.GetObject("maze_01_level_selection_02", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap maze_01_level_selection_03 {
+            get {
+                object obj = ResourceManager.GetObject("maze_01_level_selection_03", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap maze_01_level_selection_04 {
+            get {
+                object obj = ResourceManager.GetObject("maze_01_level_selection_04", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap maze_01_level_selection_05 {
+            get {
+                object obj = ResourceManager.GetObject("maze_01_level_selection_05", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap maze_01_level_selection_06 {
+            get {
+                object obj = ResourceManager.GetObject("maze_01_level_selection_06", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap maze_02_level_mask_00 {
             get {
                 object obj = ResourceManager.GetObject("maze_02_level_mask_00", resourceCulture);
@@ -196,6 +336,46 @@ namespace RodentVRSettings.Properties {
         internal static System.Drawing.Bitmap maze_02_level_mask_03 {
             get {
                 object obj = ResourceManager.GetObject("maze_02_level_mask_03", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap maze_02_level_selection_00 {
+            get {
+                object obj = ResourceManager.GetObject("maze_02_level_selection_00", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap maze_02_level_selection_01 {
+            get {
+                object obj = ResourceManager.GetObject("maze_02_level_selection_01", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap maze_02_level_selection_02 {
+            get {
+                object obj = ResourceManager.GetObject("maze_02_level_selection_02", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap maze_02_level_selection_03 {
+            get {
+                object obj = ResourceManager.GetObject("maze_02_level_selection_03", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

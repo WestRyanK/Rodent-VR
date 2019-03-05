@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RodentVRSettings.Models.Configuration;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,6 +14,8 @@ namespace RodentVRSettings.Contracts
 		string AirPufferRightDeviceName { set; }
 
 		float AirPufferFrontAngle { set; }
+
+		void Init(ConfigurationSettings settings);
 	}
 
 	public interface AirPuffersPresenterContract

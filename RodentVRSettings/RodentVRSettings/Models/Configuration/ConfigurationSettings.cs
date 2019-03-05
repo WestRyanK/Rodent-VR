@@ -344,5 +344,41 @@ namespace RodentVRSettings.Models.Configuration
 			return triggers.ToArray();
 		}
 		#endregion
+
+		public RewardTrigger[] GetRewardTriggers(MazesEnum maze)
+		{
+
+			RewardTrigger[] triggers;
+			switch (maze)
+			{
+				case MazesEnum.maze_01_level:
+					triggers = this.Maze01Triggers;
+					break;
+				case MazesEnum.maze_02_level:
+					triggers = this.Maze02Triggers;
+					break;
+				default:
+					throw new Exception("update switch plz!");
+			}
+			return triggers;
+		}
+		
+		public MaterialsEnum[] GetMaterials(MazesEnum maze)
+		{
+
+			MaterialsEnum[] materials;
+			switch (maze)
+			{
+				case MazesEnum.maze_01_level:
+					materials = this.Maze01Materials;
+					break;
+				case MazesEnum.maze_02_level:
+					materials = this.Maze02Materials;
+					break;
+				default:
+					throw new Exception("update switch plz!");
+			}
+			return materials;
+		}
 	}
 }

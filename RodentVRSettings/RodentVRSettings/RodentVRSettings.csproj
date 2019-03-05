@@ -86,11 +86,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\MaterialsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\MazeVisualizer.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\MouseInputView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\RewardSystemView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -104,7 +112,9 @@
     </Compile>
     <Compile Include="Contracts\AirPuffersContract.cs" />
     <Compile Include="Contracts\BehaviorRecordingContract.cs" />
+    <Compile Include="Contracts\MaterialsContract.cs" />
     <Compile Include="Contracts\MouseInputContract.cs" />
+    <Compile Include="Contracts\RewardSystemContract.cs" />
     <Compile Include="Converters\BitmapConversion.cs" />
     <Compile Include="Converters\BitmapConverter.cs" />
     <Compile Include="Converters\ResourceLoader.cs" />
@@ -117,7 +127,9 @@
     <Compile Include="Models\Configuration\RewardTrigger.cs" />
     <Compile Include="Presenters\AirPuffersPresenter.cs" />
     <Compile Include="Presenters\BehaviorRecordingPresenter.cs" />
+    <Compile Include="Presenters\MaterialsPresenter.cs" />
     <Compile Include="Presenters\MouseInputPresenter.cs" />
+    <Compile Include="Presenters\RewardSystemPresenter.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -129,11 +141,17 @@
     <Compile Include="Views\BehaviorRecordingView.xaml.cs">
       <DependentUpon>BehaviorRecordingView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\MaterialsView.xaml.cs">
+      <DependentUpon>MaterialsView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\MazeVisualizer.xaml.cs">
       <DependentUpon>MazeVisualizer.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\MouseInputView.xaml.cs">
       <DependentUpon>MouseInputView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RewardSystemView.xaml.cs">
+      <DependentUpon>RewardSystemView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\RodentVRSettingsWindow.xaml.cs">
       <DependentUpon>RodentVRSettingsWindow.xaml</DependentUpon>
@@ -212,6 +230,60 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\maze_01_level_mask_00.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\maze_01_level_mask_01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\maze_01_level_mask_02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\maze_01_level_mask_03.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\maze_01_level_mask_04.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\maze_01_level_mask_05.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\maze_01_level_mask_06.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\maze_01_level_selection_00.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\maze_01_level_selection_01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\maze_01_level_selection_02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\maze_01_level_selection_03.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\maze_01_level_selection_04.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\maze_01_level_selection_05.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\maze_01_level_selection_06.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\maze_02_level_selection_00.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\maze_02_level_selection_01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\maze_02_level_selection_02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\maze_02_level_selection_03.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -42,7 +42,7 @@
 			</StackPanel>
 		</controls:MetroTabItem>
 		<controls:MetroTabItem Header="Materials">
-			
+			<views:MaterialsView x:Name="viewMaterials"/>
 		</controls:MetroTabItem>
 	</controls:MetroAnimatedSingleRowTabControl>
 </controls:MetroWindow>

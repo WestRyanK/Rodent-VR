@@ -8,6 +8,7 @@ namespace RodentVRSettings.Models.Configuration
 {
 	public enum MazesEnum
 	{
+		none,
 		maze_01_level,
 		maze_02_level
 	}
