@@ -97,12 +97,12 @@ namespace RodentVRSettings.Presenters
 		{
 			this.Settings = settings;
 		}
-		public void Reset()
+		public void Init()
 		{
-			this.MouseADeviceName = @"HID\VID_0461&PID_4D15\6&31D2D65F&0&0000";
-			this.MouseBDeviceName = @"HID\VID_046D&PID_C016\6&D2A8B0A&0&0000";
-			this.MouseAMultiplier = -0.05f;
-			this.MouseBMultiplier = 0.025f;
+			View.MouseADeviceName = this.MouseADeviceName;
+			View.MouseBDeviceName = this.MouseBDeviceName;
+			View.MouseAMultiplier = this.MouseAMultiplier;
+			View.MouseBMultiplier = this.MouseBMultiplier;
 		}
 }
 }

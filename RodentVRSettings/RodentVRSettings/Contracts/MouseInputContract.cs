@@ -29,6 +29,6 @@ namespace RodentVRSettings.Contracts
 
 		float MouseBMultiplier { set; }
 
-		void Reset();
+		void Init();
 	}
 }

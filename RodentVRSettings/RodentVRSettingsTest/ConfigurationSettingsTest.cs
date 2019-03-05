@@ -15,7 +15,7 @@ namespace RodentVRSettingsTest
 			settings.AirPuffLeftDeviceName = "AirPufferLeft";
 			settings.AirPuffRightDeviceName = "AirPufferRight";
 			settings.BehaviorRecordingFileName = "BehaviorFile";
-			settings.InitialMaze = "firstMaze";
+			settings.InitialMaze = MazesEnum.maze_02_level;
 			var materials = Enum.GetValues(typeof(MaterialsEnum));
 			for (int i = 0; i < settings.Maze01Materials.Length; i++)
 			{

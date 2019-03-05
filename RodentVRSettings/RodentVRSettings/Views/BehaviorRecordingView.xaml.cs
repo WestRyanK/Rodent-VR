@@ -33,7 +33,7 @@ namespace RodentVRSettings.Views
 		{
 			this.Presenter = new Presenters.BehaviorRecordingPresenter(settings);
 			this.Presenter.View = this;
-			this.Presenter.Reset();
+			this.Presenter.Init();
 		}
 
 		#region Behavior Recording File Name

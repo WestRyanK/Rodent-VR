@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace RodentVRSettings.Models.Configuration
 {
-    public class ConfigurationSettings
-    {
+	public class ConfigurationSettings
+	{
 
 		#region Properties
 		#region Device Paths
@@ -140,9 +140,9 @@ namespace RodentVRSettings.Models.Configuration
 
 		#region Initial Maze
 		#region InitialMaze Property
-		private string initialMaze;
+		private MazesEnum initialMaze;
 
-		public string InitialMaze
+		public MazesEnum InitialMaze
 		{
 			get { return initialMaze; }
 			set { initialMaze = value; }
@@ -187,17 +187,49 @@ namespace RodentVRSettings.Models.Configuration
 			"InitialMaze",
 			"Maze_01_Materials",
 			"Maze_02_Materials" };
-		private const int MAZE_01_TRIGGER_COUNT = 3;
-		private const int MAZE_02_TRIGGER_COUNT = 3;
-		private const int MAZE_01_MATERIAL_COUNT = 7;
-		private const int MAZE_02_MATERIAL_COUNT = 3;
+		public const int MAZE_01_TRIGGER_COUNT = 3;
+		public const int MAZE_02_TRIGGER_COUNT = 3;
+		public const int MAZE_01_MATERIAL_COUNT = 7;
+		public const int MAZE_02_MATERIAL_COUNT = 3;
 
 		public ConfigurationSettings()
 		{
-			this.Maze01Materials = Enumerable.Repeat(MaterialsEnum.gray, 7).ToArray();
-			this.Maze02Materials = Enumerable.Repeat(MaterialsEnum.gray, 3).ToArray();
-			this.Maze01Triggers = Enumerable.Repeat(new RewardTrigger(), MAZE_01_TRIGGER_COUNT).ToArray();
-			this.Maze02Triggers = Enumerable.Repeat(new RewardTrigger(), MAZE_02_TRIGGER_COUNT).ToArray();
+			this.Reset();
+		}
+
+		public void Reset()
+		{
+			this.AirPuffLeftDeviceName = @"Dev1/port1/line0";
+			this.AirPuffRightDeviceName = @"Dev1/port1/line1";
+			this.Reward1DeviceName = @"Dev1/port1/line2";
+			this.Reward2DeviceName = @"Dev1/port1/line3";
+			this.AirPufferFrontAngle = 30.0f;
+			this.Maze01Triggers = new RewardTrigger[] {
+				 new RewardTrigger(false, 1, 1.0f),
+				 new RewardTrigger(true, 1, 1.0f),
+				 new RewardTrigger(true, 1, 2.0f) };
+			this.Maze02Triggers = new RewardTrigger[] {
+				 new RewardTrigger(false, 1, 1.0f),
+				 new RewardTrigger(true, 1, 1.0f),
+				 new RewardTrigger(true, 1, 2.0f) };
+			this.MouseADeviceName = @"HID\VID_0461&PID_4D15\6&31D2D65F&0&0000";
+			this.MouseBDeviceName = @"HID\VID_046D&PID_C016\6&D2A8B0A&0&0000";
+			this.MouseAMultiplier = -0.05f;
+			this.MouseBMultiplier = 0.025f;
+			this.BehaviorRecordingFileName = @"C:\BehavioralRecording.txt";
+			this.InitialMaze = MazesEnum.maze_02_level;
+			this.Maze01Materials = new MaterialsEnum[] {
+				MaterialsEnum.green,
+				MaterialsEnum.cyan,
+				MaterialsEnum.blue,
+				MaterialsEnum.gray,
+				MaterialsEnum.checkers_large,
+				MaterialsEnum.dots_1,
+				MaterialsEnum.stripes_small };
+			this.Maze02Materials = new MaterialsEnum[] {
+				MaterialsEnum.dots_1,
+				MaterialsEnum.stripes_small,
+				MaterialsEnum.checkers_large };
 		}
 
 		#region To ConfigurationFile
@@ -250,7 +282,12 @@ namespace RodentVRSettings.Models.Configuration
 
 		private static void AddEntry(ConfigurationFile file, string name, object value)
 		{
-			var entry = new Entry(name, value);
+			Entry entry;
+			if (value is Enum)
+				entry = new Entry(name, value.ToString());
+			else
+				entry = new Entry(name, value);
+
 			file.AddConfigurationEntry(entry);
 		}
 
@@ -276,7 +313,7 @@ namespace RodentVRSettings.Models.Configuration
 			settings.MouseAMultiplier = (float)file.GetFirstEntryByName(settingsNames[i++]).EntryValue;
 			settings.MouseBMultiplier = (float)file.GetFirstEntryByName(settingsNames[i++]).EntryValue;
 			settings.BehaviorRecordingFileName = (string)file.GetFirstEntryByName(settingsNames[i++]).EntryValue;
-			settings.InitialMaze = (string)file.GetFirstEntryByName(settingsNames[i++]).EntryValue;
+			settings.InitialMaze = (MazesEnum)Enum.Parse(typeof(MazesEnum), (string)file.GetFirstEntryByName(settingsNames[i++]).EntryValue);
 
 			settings.Maze01Materials = CreateMaterials(file.GetEntriesByName(settingsNames[i++]));
 			settings.Maze02Materials = CreateMaterials(file.GetEntriesByName(settingsNames[i++]));

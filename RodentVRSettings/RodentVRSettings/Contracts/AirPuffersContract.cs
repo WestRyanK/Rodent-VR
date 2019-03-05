@@ -25,6 +25,6 @@ namespace RodentVRSettings.Contracts
 
 		float AirPufferFrontAngle { set; }
 
-		void Reset();
+		void Init();
 	}
 }
