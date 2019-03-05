@@ -14,15 +14,19 @@
 			<RowDefinition Height="*"/>
 		</Grid.RowDefinitions>
 		<views:MazeVisualizer x:Name="mazeVisualizer" OnMazeClicked="mazeVisualizer_OnMazeClicked" Grid.Column="0" Grid.Row="0" Maze="maze_01_level"/>
-		<!--<controls:DropDownButton Name="ddMazeMaterial" Width="{StaticResource controlWidth}" HorizontalAlignment="Left">
-			<controls:DropDownButton.ItemTemplate>
+		<ComboBox Name="ddMazeMaterial" Width="{StaticResource controlWidth}" Height="100" HorizontalAlignment="Center"  Grid.Row="1">
+			<ComboBox.ItemTemplate>
 				<DataTemplate>
-					<StackPanel Orientation="Vertical">
-						<Image Height="100" Width="100" Source="{Binding MaterialImage, Converter={converters:BitmapConverter}}"/>
-						<Label HorizontalContentAlignment="Center" Content="{Binding MaterialName}"/>
-					</StackPanel>
+					<Grid>
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition Width="*"/>
+							<ColumnDefinition Width="Auto"/>
+						</Grid.ColumnDefinitions>
+						<Label VerticalContentAlignment="Center" Grid.Column="0" Content="{Binding }"/>
+						<Image Height="50" Width="50" Grid.Column="1" Source="{Binding Converter={converters:ResourceLoaderConverter}}"/>
+					</Grid>
 				</DataTemplate>
-			</controls:DropDownButton.ItemTemplate>
-		</controls:DropDownButton>-->
+			</ComboBox.ItemTemplate>
+		</ComboBox>
 	</Grid>
 </UserControl>

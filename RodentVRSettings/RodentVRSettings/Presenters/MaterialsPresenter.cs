@@ -18,7 +18,14 @@ namespace RodentVRSettings.Presenters
 		public int SelectedIndex
 		{
 			private get { return selectedIndex; }
-			set { selectedIndex = value; }
+			set
+			{
+				if (SelectedIndex != value)
+				{
+					selectedIndex = value;
+					View.SelectedIndex = value;
+				}
+			}
 		}
 		#endregion
 
@@ -43,10 +50,23 @@ namespace RodentVRSettings.Presenters
 			View.Maze02Materials = this.Settings.Maze02Materials;
 		}
 
-		public void SetMaterial(MaterialsEnum material)
+		public MaterialsEnum CurrentMaterial
 		{
-			var materials = this.Settings.GetMaterials(this.Settings.InitialMaze);
-			materials[this.SelectedIndex] = material;
+			get
+			{
+				if (this.SelectedIndex < 0)
+					return MaterialsEnum.gray;
+				var materials = this.Settings.GetMaterials(this.Settings.InitialMaze);
+				return materials[this.SelectedIndex];
+			}
+			set
+			{
+				if (this.SelectedIndex >= 0)
+				{
+					var materials = this.Settings.GetMaterials(this.Settings.InitialMaze);
+					materials[this.SelectedIndex] = value;
+				}
+			}
 		}
 	}
 }

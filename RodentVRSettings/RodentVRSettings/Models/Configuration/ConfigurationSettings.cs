@@ -217,7 +217,7 @@ namespace RodentVRSettings.Models.Configuration
 			this.MouseAMultiplier = -0.05f;
 			this.MouseBMultiplier = 0.025f;
 			this.BehaviorRecordingFileName = @"C:\BehavioralRecording.txt";
-			this.InitialMaze = MazesEnum.maze_02_level;
+			this.InitialMaze = MazesEnum.maze_01_level;
 			this.Maze01Materials = new MaterialsEnum[] {
 				MaterialsEnum.green,
 				MaterialsEnum.cyan,

@@ -15,6 +15,8 @@ namespace RodentVRSettings.Contracts
 
 		MaterialsEnum[] Maze02Materials { set; }
 
+		int SelectedIndex { set; }
+
 		void Init(ConfigurationSettings settings);
 	}
 
@@ -22,7 +24,7 @@ namespace RodentVRSettings.Contracts
 	{
 		Contracts.MaterialsViewContract View { set; }
 
-		void SetMaterial(MaterialsEnum material);
+		MaterialsEnum CurrentMaterial { get; set; }
 
 		int SelectedIndex { set; }
 

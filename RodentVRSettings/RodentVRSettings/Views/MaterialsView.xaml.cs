@@ -1,4 +1,5 @@
-﻿using RodentVRSettings.Models.Configuration;
+﻿using RodentVRSettings.Converters;
+using RodentVRSettings.Models.Configuration;
 using RodentVRSettings.Presenters;
 using System;
 using System.Collections.Generic;
@@ -40,9 +41,22 @@ namespace RodentVRSettings.Views
 
 		public void Init(ConfigurationSettings settings)
 		{
+			InitMaterialsDropDown();
+
 			this.Presenter = new MaterialsPresenter(settings);
 			this.Presenter.View = this;
 			this.Presenter.Init();
+		}
+
+		private void InitMaterialsDropDown()
+		{
+			this.ddMazeMaterial.Items.Clear();
+			var materials = Enum.GetValues(typeof(MaterialsEnum));
+			foreach (MaterialsEnum material in materials)
+			{
+				//this.ddMazeMaterial.Items.Add(new MaterialItem(material));
+				this.ddMazeMaterial.Items.Add(material);
+			}
 		}
 
 		public void SetMaterial(MazesEnum maze, int materialIndex, MaterialsEnum material)
@@ -54,5 +68,56 @@ namespace RodentVRSettings.Views
 		{
 			Presenter.SelectedIndex = selectedIndex;
 		}
+
+		public int SelectedIndex
+		{
+			set
+			{
+				this.ddMazeMaterial.SelectedItem = Presenter.CurrentMaterial;
+			}
+		}
+
+
+		class MaterialItem
+		{
+			#region MaterialName Property
+			private string materialName;
+
+			public string MaterialName
+			{
+				get { return materialName; }
+				private set { materialName = value; }
+			}
+			#endregion
+
+			#region MaterialImage Property
+			private BitmapImage materialImage;
+
+			public BitmapImage MaterialImage
+			{
+				get { return materialImage; }
+				private set { materialImage = value; }
+			}
+			#endregion
+
+			#region Material Property
+			private MaterialsEnum material;
+
+			public MaterialsEnum Material
+			{
+				get { return material; }
+				private set { material = value; }
+			}
+			#endregion
+
+			public MaterialItem(MaterialsEnum material)
+			{
+				this.Material = material;
+				this.MaterialName = this.Material.ToString();
+				this.MaterialImage = this.Material.ToBitmapImageResource();
+			}
+		}
 	}
+
+
 }
