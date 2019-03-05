@@ -207,7 +207,9 @@ namespace RodentVRSettings.Views
 		private System.Drawing.Point TransformToMaskSpace(double x, double y, int maskWidth, int maskHeight)
 		{
 			double scale;
-			if (this.ActualWidth < this.ActualHeight)
+			double controlAspectRatio = this.ActualWidth / this.ActualHeight;
+			double maskAspectRatio = (double)maskWidth / maskHeight;
+			if (controlAspectRatio < maskAspectRatio)
 				scale = this.ActualWidth / maskWidth;
 			else
 				scale = this.ActualHeight / maskHeight;
