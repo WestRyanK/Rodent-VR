@@ -24,7 +24,9 @@
 							<ColumnDefinition Width="*"/>
 							<ColumnDefinition Width="Auto"/>
 						</Grid.ColumnDefinitions>
-						<Image Height="50" Width="50" Grid.Column="0" Source="{Binding Converter={converters:ResourceLoaderConverter}}"/>
+						<Border Margin="10" BorderBrush="Black" BorderThickness="1" Grid.Column="0">
+							<Image Height="50" Width="50"  Source="{Binding Converter={converters:ResourceLoaderConverter}}"/>
+						</Border>
 						<Label VerticalContentAlignment="Center" Grid.Column="1" Content="{Binding }"/>
 					</Grid>
 				</DataTemplate>
