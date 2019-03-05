@@ -10,11 +10,13 @@
              d:DesignHeight="450" d:DesignWidth="800">
 	<Grid>
 		<Grid.RowDefinitions>
-			<RowDefinition Height="*"/>
+			<RowDefinition Height="3*"/>
 			<RowDefinition Height="*"/>
 		</Grid.RowDefinitions>
-		<views:MazeVisualizer x:Name="mazeVisualizer" OnMazeClicked="mazeVisualizer_OnMazeClicked" Grid.Column="0" Grid.Row="0" Maze="maze_01_level"/>
-		<ComboBox Name="ddMazeMaterial" Width="{StaticResource controlWidth}" Height="100" HorizontalAlignment="Center"  Grid.Row="1">
+		<Border Margin="10" BorderBrush="Black" BorderThickness="1" Grid.Column="0" Grid.Row="0">
+			<views:MazeVisualizer x:Name="mazeVisualizer" OnMazeClicked="mazeVisualizer_OnMazeClicked"   Maze="maze_01_level"/>
+		</Border>
+		<ComboBox Name="ddMazeMaterial" SelectionChanged="ddMazeMaterial_SelectionChanged" Width="{StaticResource controlWidth}" Height="75" HorizontalAlignment="Center"  Grid.Row="1">
 			<ComboBox.ItemTemplate>
 				<DataTemplate>
 					<Grid>
@@ -22,8 +24,8 @@
 							<ColumnDefinition Width="*"/>
 							<ColumnDefinition Width="Auto"/>
 						</Grid.ColumnDefinitions>
-						<Label VerticalContentAlignment="Center" Grid.Column="0" Content="{Binding }"/>
-						<Image Height="50" Width="50" Grid.Column="1" Source="{Binding Converter={converters:ResourceLoaderConverter}}"/>
+						<Image Height="50" Width="50" Grid.Column="0" Source="{Binding Converter={converters:ResourceLoaderConverter}}"/>
+						<Label VerticalContentAlignment="Center" Grid.Column="1" Content="{Binding }"/>
 					</Grid>
 				</DataTemplate>
 			</ComboBox.ItemTemplate>

@@ -45,11 +45,7 @@ namespace RodentVRSettings.Views
 					control.materials = Enumerable.Repeat(defaultMaterial, ConfigurationSettings.MAZE_01_MATERIAL_COUNT).ToArray();
 					break;
 				case MazesEnum.maze_02_level:
-					control.materials = Enumerable.Repeat(defaultMaterial, ConfigurationSettings.MAZE_02_MATERIAL_COUNT + 1).ToArray();
-					control.materials[0] = MaterialsEnum.dots_1;
-					control.materials[1] = MaterialsEnum.stripes_small;
-					control.materials[2] = MaterialsEnum.checkers_large;
-					control.materials[3] = MaterialsEnum.gray;
+					control.materials = Enumerable.Repeat(defaultMaterial, ConfigurationSettings.MAZE_02_MATERIAL_COUNT).ToArray();
 					break;
 				default:
 					throw new Exception("Should update switch plz!");
@@ -82,13 +78,13 @@ namespace RodentVRSettings.Views
 		private const double MATERIAL_SCALE = 1 / 10f;
 		private List<ImageBrush> materialBrushes = new List<ImageBrush>();
 		private List<Bitmap> maskImages = new List<Bitmap>();
-		private TextBlock tb;
+		//private TextBlock tb;
 
 		public MazeVisualizer()
 		{
 			InitializeComponent();
 			this.Maze = MazesEnum.maze_02_level;
-			tb = new TextBlock();
+			//tb = new TextBlock();
 			this.Update();
 		}
 
@@ -119,34 +115,40 @@ namespace RodentVRSettings.Views
 			}
 			this.maskImages.Clear();
 
-			if (this.Materials != null)
+			try
 			{
-				for (int i = 0; i < this.Materials.Length; i++)
+				if (this.Materials != null)
 				{
-					var layer = new System.Windows.Shapes.Rectangle();
-					var materialBrush = GetMaterialBrush(this.Materials[i]);
-					var maskImage = GetMaskImage(this.Maze, i);
-					var maskBrush = GetMaskBrush(maskImage);
+					for (int i = 0; i < this.Materials.Length; i++)
+					{
+						var layer = new System.Windows.Shapes.Rectangle();
+						var materialBrush = GetMaterialBrush(this.Materials[i]);
+						var maskImage = GetMaskImage(this.Maze, i);
+						var maskBrush = GetMaskBrush(maskImage);
 
-					this.materialBrushes.Add(materialBrush);
-					this.maskImages.Add(maskImage.ToGDIBitmap());
+						this.materialBrushes.Add(materialBrush);
+						this.maskImages.Add(maskImage.ToGDIBitmap());
 
-					layer.Fill = materialBrush;
-					layer.OpacityMask = maskBrush;
-					this.gridImage.Children.Add(layer);
+						layer.Fill = materialBrush;
+						layer.OpacityMask = maskBrush;
+						this.gridImage.Children.Add(layer);
+					}
 				}
-			}
 
-			if (this.SelectedIndex >= 0)
-			{
-				var selectionLayer = new System.Windows.Shapes.Rectangle();
-				var selectionBrush = GetMaskBrush(GetMaskImage(this.Maze, this.SelectedIndex, true));
-				selectionLayer.Fill = selectionBrush;
-				//selectionLayer.OpacityMask = selectionBrush;
-				this.gridImage.Children.Add(selectionLayer);
+				if (this.SelectedIndex >= 0)
+				{
+					var selectionLayer = new System.Windows.Shapes.Rectangle();
+					var selectionBrush = GetMaskBrush(GetMaskImage(this.Maze, this.SelectedIndex, true));
+					selectionLayer.Fill = selectionBrush;
+					this.gridImage.Children.Add(selectionLayer);
+				}
+				//this.gridImage.Children.Add(tb);
+				this.UpdateMaterialScale();
 			}
-			//this.gridImage.Children.Add(tb);
-			this.UpdateMaterialScale();
+			catch (System.IO.IOException e)
+			{
+
+			}
 		}
 
 		private void UpdateMaterialScale()

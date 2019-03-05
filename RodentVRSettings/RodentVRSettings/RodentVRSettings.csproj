@@ -126,6 +126,7 @@
     <Compile Include="Models\Configuration\MazesEnum.cs" />
     <Compile Include="Models\Configuration\MultiEntry.cs" />
     <Compile Include="Models\Configuration\RewardTrigger.cs" />
+    <Compile Include="Models\ViewModelBase.cs" />
     <Compile Include="Presenters\AirPuffersPresenter.cs" />
     <Compile Include="Presenters\BehaviorRecordingPresenter.cs" />
     <Compile Include="Presenters\MaterialsPresenter.cs" />

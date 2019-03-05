@@ -15,8 +15,8 @@ namespace RodentVRSettings.Converters
 		#region IValueConverter Implementation
 		public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
 		{
-			MaterialsEnum material = (MaterialsEnum)value;
-			var bmp = material.ToBitmapImageResource();
+			MaterialsEnum? material = value as MaterialsEnum?;
+			var bmp = material?.ToBitmapImageResource();
 			return bmp;
 		}
 

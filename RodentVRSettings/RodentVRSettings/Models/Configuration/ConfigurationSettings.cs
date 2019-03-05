@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace RodentVRSettings.Models.Configuration
 {
-	public class ConfigurationSettings
+	public class ConfigurationSettings : ViewModelBase
 	{
 
 		#region Properties
@@ -145,7 +146,14 @@ namespace RodentVRSettings.Models.Configuration
 		public MazesEnum InitialMaze
 		{
 			get { return initialMaze; }
-			set { initialMaze = value; }
+			set
+			{
+				if (initialMaze != value)
+				{
+					initialMaze = value;
+					OnPropertyChanged(nameof(InitialMaze));
+				}
+			}
 		}
 		#endregion
 		#endregion
@@ -190,7 +198,7 @@ namespace RodentVRSettings.Models.Configuration
 		public const int MAZE_01_TRIGGER_COUNT = 3;
 		public const int MAZE_02_TRIGGER_COUNT = 3;
 		public const int MAZE_01_MATERIAL_COUNT = 7;
-		public const int MAZE_02_MATERIAL_COUNT = 3;
+		public const int MAZE_02_MATERIAL_COUNT = 4;
 
 		public ConfigurationSettings()
 		{
@@ -217,7 +225,7 @@ namespace RodentVRSettings.Models.Configuration
 			this.MouseAMultiplier = -0.05f;
 			this.MouseBMultiplier = 0.025f;
 			this.BehaviorRecordingFileName = @"C:\BehavioralRecording.txt";
-			this.InitialMaze = MazesEnum.maze_01_level;
+			this.InitialMaze = MazesEnum.maze_02_level;
 			this.Maze01Materials = new MaterialsEnum[] {
 				MaterialsEnum.green,
 				MaterialsEnum.cyan,
@@ -229,7 +237,9 @@ namespace RodentVRSettings.Models.Configuration
 			this.Maze02Materials = new MaterialsEnum[] {
 				MaterialsEnum.dots_1,
 				MaterialsEnum.stripes_small,
-				MaterialsEnum.checkers_large };
+				MaterialsEnum.checkers_large,
+				MaterialsEnum.gray
+			};
 		}
 
 		#region To ConfigurationFile

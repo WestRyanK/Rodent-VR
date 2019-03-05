@@ -25,15 +25,6 @@ namespace RodentVRSettings.Views
 	{
 		Contracts.MaterialsPresenterContract Presenter { get; set; }
 
-		public MaterialsEnum[] Maze01Materials
-		{
-			set { }
-		}
-		public MaterialsEnum[] Maze02Materials
-		{
-			set { }
-		}
-
 		public MaterialsView()
 		{
 			InitializeComponent();
@@ -59,9 +50,9 @@ namespace RodentVRSettings.Views
 			}
 		}
 
-		public void SetMaterial(MazesEnum maze, int materialIndex, MaterialsEnum material)
+		public void SetMaterial(int materialIndex, MaterialsEnum material)
 		{
-			throw new NotImplementedException();
+			this.mazeVisualizer.SetMaterial(materialIndex, material);
 		}
 
 		private void mazeVisualizer_OnMazeClicked(object sender, int selectedIndex)
@@ -73,51 +64,34 @@ namespace RodentVRSettings.Views
 		{
 			set
 			{
-				this.ddMazeMaterial.SelectedItem = Presenter.CurrentMaterial;
+				if (Presenter.SelectedIndexInRange(value))
+				{
+					this.ddMazeMaterial.SelectedItem = Presenter.CurrentMaterial;
+					this.ddMazeMaterial.IsEnabled = true;
+				}
+				else
+				{
+					this.ddMazeMaterial.SelectedItem = null;
+					this.ddMazeMaterial.IsEnabled = false;
+				}
 			}
 		}
 
-
-		class MaterialItem
+		private void ddMazeMaterial_SelectionChanged(object sender, SelectionChangedEventArgs e)
 		{
-			#region MaterialName Property
-			private string materialName;
-
-			public string MaterialName
+			MaterialsEnum? selectedMaterial = ddMazeMaterial.SelectedItem as MaterialsEnum?;
+			if (selectedMaterial != null)
 			{
-				get { return materialName; }
-				private set { materialName = value; }
+				Presenter.CurrentMaterial = (MaterialsEnum)selectedMaterial;
 			}
-			#endregion
+		}
 
-			#region MaterialImage Property
-			private BitmapImage materialImage;
-
-			public BitmapImage MaterialImage
+		public MazesEnum CurrentMaze
+		{
+			set
 			{
-				get { return materialImage; }
-				private set { materialImage = value; }
-			}
-			#endregion
-
-			#region Material Property
-			private MaterialsEnum material;
-
-			public MaterialsEnum Material
-			{
-				get { return material; }
-				private set { material = value; }
-			}
-			#endregion
-
-			public MaterialItem(MaterialsEnum material)
-			{
-				this.Material = material;
-				this.MaterialName = this.Material.ToString();
-				this.MaterialImage = this.Material.ToBitmapImageResource();
+				this.mazeVisualizer.Maze = value;
 			}
 		}
 	}
-
-
 }
