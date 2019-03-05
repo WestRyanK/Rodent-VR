@@ -94,6 +94,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\InitialMazeView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Views\MouseInputView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -113,6 +117,7 @@
     <Compile Include="Contracts\AirPuffersContract.cs" />
     <Compile Include="Contracts\BehaviorRecordingContract.cs" />
     <Compile Include="Contracts\MaterialsContract.cs" />
+    <Compile Include="Contracts\InitialMazeContract.cs" />
     <Compile Include="Contracts\MouseInputContract.cs" />
     <Compile Include="Contracts\RewardSystemContract.cs" />
     <Compile Include="Converters\BitmapConversion.cs" />
@@ -130,6 +135,7 @@
     <Compile Include="Presenters\AirPuffersPresenter.cs" />
     <Compile Include="Presenters\BehaviorRecordingPresenter.cs" />
     <Compile Include="Presenters\MaterialsPresenter.cs" />
+    <Compile Include="Presenters\InitialMazePresenter.cs" />
     <Compile Include="Presenters\MouseInputPresenter.cs" />
     <Compile Include="Presenters\RewardSystemPresenter.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
@@ -148,6 +154,9 @@
     </Compile>
     <Compile Include="Views\MazeVisualizer.xaml.cs">
       <DependentUpon>MazeVisualizer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\InitialMazeView.xaml.cs">
+      <DependentUpon>InitialMazeView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\MouseInputView.xaml.cs">
       <DependentUpon>MouseInputView.xaml</DependentUpon>

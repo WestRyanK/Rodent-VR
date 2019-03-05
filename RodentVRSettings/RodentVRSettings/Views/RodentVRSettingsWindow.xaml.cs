@@ -34,6 +34,7 @@ namespace RodentVRSettings
 			viewMouseInput.Init(settings);
 			viewBehaviorRecording.Init(settings);
 			viewMaterials.Init(settings);
+			viewInitialMaze.Init(settings);
 
 			//this.Presenter = new Presenters.BehaviorVisualizerPresenter();
 			//this.Presenter.View = this;

@@ -45,7 +45,6 @@ namespace RodentVRSettings.Views
 			var materials = Enum.GetValues(typeof(MaterialsEnum));
 			foreach (MaterialsEnum material in materials)
 			{
-				//this.ddMazeMaterial.Items.Add(new MaterialItem(material));
 				this.ddMazeMaterial.Items.Add(material);
 			}
 		}

@@ -81,7 +81,6 @@ namespace RodentVRSettings.Presenters
 			}
 			set
 			{
-				this.Settings.InitialMaze = MazesEnum.maze_01_level;
 				if (this.SelectedIndex >= 0)
 				{
 					var materials = this.Settings.GetMaterials(this.Settings.InitialMaze);
