@@ -1,4 +1,5 @@
-﻿using RodentVRSettings.Models.Configuration;
+﻿using RawInput;
+using RodentVRSettings.Models.Configuration;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,7 +18,9 @@ namespace RodentVRSettings.Contracts
 
 		float MouseBMultiplier { set; }
 
-		void Init(ConfigurationSettings settings);
+		RawMouseInput RawMouseInputDevice { get; }
+
+		void Init(ConfigurationSettings settings, IntPtr hwnd);
 	}
 
 	public interface MouseInputPresenterContract
