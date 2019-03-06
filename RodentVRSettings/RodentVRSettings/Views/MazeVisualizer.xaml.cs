@@ -78,6 +78,7 @@ namespace RodentVRSettings.Views
 		private const double MATERIAL_SCALE = 1 / 10f;
 		private List<ImageBrush> materialBrushes = new List<ImageBrush>();
 		private List<Bitmap> maskImages = new List<Bitmap>();
+		private System.Windows.Shapes.Rectangle selectionLayer = new System.Windows.Shapes.Rectangle();
 		//private TextBlock tb;
 
 		public MazeVisualizer()
@@ -101,8 +102,19 @@ namespace RodentVRSettings.Views
 			var index = GetMaskIndex(position.X, position.Y);
 			this.SelectedIndex = index;
 			OnMazeClicked?.Invoke(this, index);
-			this.Update();
+			this.UpdateSelection();
 			//this.tb.Text = index.ToString();
+		}
+
+		private void UpdateSelection()
+		{
+				if (this.SelectedIndex >= 0)
+				{
+					var selectionBrush = GetMaskBrush(GetMaskImage(this.Maze, this.SelectedIndex, true));
+					this.selectionLayer.Fill = selectionBrush;
+					this.gridImage.Children.Remove(this.selectionLayer);
+					this.gridImage.Children.Add(this.selectionLayer);
+				}
 		}
 
 		private void Update()
@@ -135,14 +147,8 @@ namespace RodentVRSettings.Views
 					}
 				}
 
-				if (this.SelectedIndex >= 0)
-				{
-					var selectionLayer = new System.Windows.Shapes.Rectangle();
-					var selectionBrush = GetMaskBrush(GetMaskImage(this.Maze, this.SelectedIndex, true));
-					selectionLayer.Fill = selectionBrush;
-					this.gridImage.Children.Add(selectionLayer);
-				}
 				//this.gridImage.Children.Add(tb);
+				this.UpdateSelection();
 				this.UpdateMaterialScale();
 			}
 			catch (System.IO.IOException e)
