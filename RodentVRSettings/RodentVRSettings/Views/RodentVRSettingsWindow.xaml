@@ -16,6 +16,9 @@
 			<views:AirPuffersView x:Name="viewAirPuffers"/>
 		</controls:MetroTabItem>
 		<controls:MetroTabItem Header="Reward System">
+			<Grid>
+				<views:MazeVisualizer/>
+			</Grid>
 		</controls:MetroTabItem>
 		<controls:MetroTabItem Header="Mouse Input">
 			<views:MouseInputView x:Name="viewMouseInput"/>
@@ -24,22 +27,10 @@
 			<views:BehaviorRecordingView x:Name="viewBehaviorRecording"/>
 		</controls:MetroTabItem>
 		<controls:MetroTabItem Header="Mazes">
-			<StackPanel Orientation="Vertical">
-				<Label Content="Initial Maze" />
-				<controls:DropDownButton Name="ddMazeInitial" Width="{StaticResource controlWidth}" HorizontalAlignment="Left">
-					<controls:DropDownButton.ItemTemplate>
-						<DataTemplate>
-							<StackPanel Orientation="Vertical">
-								<Image Height="100" Width="100" Source="{Binding MazeImage, Converter={converters:BitmapConverter}}"/>
-								<Label HorizontalContentAlignment="Center" Content="{Binding Title}"/>
-							</StackPanel>
-						</DataTemplate>
-					</controls:DropDownButton.ItemTemplate>
-				</controls:DropDownButton>
-			</StackPanel>
+			<views:InitialMazeView x:Name="viewInitialMaze"/>
 		</controls:MetroTabItem>
 		<controls:MetroTabItem Header="Materials">
-			
+			<views:MaterialsView x:Name="viewMaterials"/>
 		</controls:MetroTabItem>
 	</controls:MetroAnimatedSingleRowTabControl>
 </controls:MetroWindow>

@@ -33,7 +33,7 @@ namespace RodentVRSettings.Views
 		{
 			this.Presenter = new AirPuffersPresenter(settings);
 			this.Presenter.View = this;
-			this.Presenter.Reset();
+			this.Presenter.Init();
 		}
 
 		#region Air Puffer Left Device Name

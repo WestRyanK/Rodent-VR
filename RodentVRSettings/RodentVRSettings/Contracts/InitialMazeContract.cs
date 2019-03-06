@@ -7,18 +7,18 @@ using System.Threading.Tasks;
 
 namespace RodentVRSettings.Contracts
 {
-	public interface BehaviorRecordingViewContract
+	public interface InitialMazeViewContract
 	{
-		string BehaviorRecordingFileName { set; }
+		MazesEnum InitialMaze { set; }
 
 		void Init(ConfigurationSettings settings);
 	}
 
-	public interface BehaviorRecordingPresenterContract
+	public interface InitialMazePresenterContract
 	{
-		Contracts.BehaviorRecordingViewContract View { set; }
+		Contracts.InitialMazeViewContract View { set; }
 
-		string BehaviorRecordingFileName { set; }
+		MazesEnum InitialMaze { set; }
 
 		void Init();
 	}

@@ -44,9 +44,9 @@ namespace RodentVRSettings.Presenters
 			this.Settings = settings;
 		}
 
-		public void Reset()
+		public void Init()
 		{
-			this.BehaviorRecordingFileName = "recording.txt";
+			View.BehaviorRecordingFileName = this.BehaviorRecordingFileName;
 		}
 	}
 }

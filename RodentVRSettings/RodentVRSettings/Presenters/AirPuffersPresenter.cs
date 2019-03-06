@@ -81,11 +81,11 @@ namespace RodentVRSettings.Presenters
 			this.Settings = settings;
 		}
 
-		public void Reset()
+		public void Init()
 		{
-			this.AirPufferFrontAngle = 30.0f;
-			this.AirPufferLeftDeviceName = "Dev1/port1/line0";
-			this.AirPufferRightDeviceName = "Dev1/port1/line1";
+			View.AirPufferFrontAngle = this.AirPufferFrontAngle;
+			View.AirPufferLeftDeviceName = this.AirPufferLeftDeviceName;
+			View.AirPufferRightDeviceName = this.AirPufferRightDeviceName;
 		}
 	}
 }

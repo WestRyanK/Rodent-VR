@@ -33,7 +33,7 @@ namespace RodentVRSettings.Views
 		{
 			this.Presenter = new MouseInputPresenter(settings);
 			this.Presenter.View = this;
-			this.Presenter.Reset();
+			this.Presenter.Init();
 		}
 
 		#region Mouse A Device Name
