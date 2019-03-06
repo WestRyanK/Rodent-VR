@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using RawInput;
 
 namespace RodentVRSettings.Presenters
 {
@@ -104,5 +105,6 @@ namespace RodentVRSettings.Presenters
 			View.MouseAMultiplier = this.MouseAMultiplier;
 			View.MouseBMultiplier = this.MouseBMultiplier;
 		}
-}
+
+	}
 }

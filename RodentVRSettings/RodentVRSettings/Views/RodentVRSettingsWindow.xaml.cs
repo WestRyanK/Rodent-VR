@@ -1,19 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using MahApps.Metro;
+using System.Windows.Interop;
 using MahApps.Metro.Controls;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 using RodentVRSettings.Models.Configuration;
 
 namespace RodentVRSettings
@@ -24,21 +11,30 @@ namespace RodentVRSettings
 	public partial class MainWindow : MetroWindow//, Contracts.RodentVRSettingsViewContract
 	{
 		//public Contracts.RodentVRSettingsPresenterContract Presenter { get; set; }
+		private ConfigurationSettings settings;
 
 		public MainWindow()
 		{
 			InitializeComponent();
 
-			ConfigurationSettings settings = new ConfigurationSettings();
-			viewAirPuffers.Init(settings);
-			viewMouseInput.Init(settings);
-			viewBehaviorRecording.Init(settings);
-			viewMaterials.Init(settings);
-			viewInitialMaze.Init(settings);
+			this.settings = new ConfigurationSettings();
+			viewAirPuffers.Init(this.settings);
+
+			viewBehaviorRecording.Init(this.settings);
+			viewMaterials.Init(this.settings);
+			viewInitialMaze.Init(this.settings);
 
 			//this.Presenter = new Presenters.BehaviorVisualizerPresenter();
 			//this.Presenter.View = this;
 			//this.Presenter.Reset();
+		}
+
+		protected override void OnSourceInitialized(EventArgs e)
+		{
+			base.OnSourceInitialized(e);
+			viewMouseInput.Init(this.settings, this.CriticalHandle);
+			HwndSource source = HwndSource.FromHwnd(this.CriticalHandle);
+			source.AddHook(new HwndSourceHook(viewMouseInput.RawMouseInputDevice.WndProc));
 		}
 	}
 }
