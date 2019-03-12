@@ -9,19 +9,36 @@ namespace RodentVRSettings.Contracts
 {
 	public interface RewardSystemViewContract
 	{
-		void SetRewardTrigger(MazesEnum maze, int triggerIndex, RewardTrigger trigger);
+		void SetMaterials(MaterialsEnum[] materials);
 
-		void SetMazeMaterials(MaterialsEnum[] maze01Materials, MaterialsEnum[] maze02Materials);
+		void SetRewardTriggerIsEnabled(bool isEnabled);
+
+		void SetRewardTriggerDuration(float duration);
+
+		void SetRewardTriggerReward(int reward);
+
+		int SelectedIndex { set; }
+
+		MazesEnum CurrentMaze { set; }
 
 		void Init(ConfigurationSettings settings);
+
 	}
 
 	public interface RewardSystemPresenterContract
 	{
 		Contracts.RewardSystemViewContract View { set; }
+		
+		bool CurrentRewardTriggerIsEnabled { get; set; }
 
-		void SetRewardTrigger(MazesEnum maze, int triggerIndex, RewardTrigger trigger);
+		float CurrentRewardTriggerDuration { get; set; }
+
+		int CurrentRewardTriggerReward { get; set; }
+
+		int SelectedIndex { get; set; }
 
 		void Init();
+
+		bool SelectedIndexInRange(int value);
 	}
 }

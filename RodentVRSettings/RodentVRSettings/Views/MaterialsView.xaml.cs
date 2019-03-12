@@ -56,7 +56,8 @@ namespace RodentVRSettings.Views
 
 		private void mazeVisualizer_OnMazeClicked(object sender, int selectedIndex)
 		{
-			Presenter.SelectedIndex = selectedIndex;
+			if (Presenter != null)
+				Presenter.SelectedIndex = selectedIndex;
 		}
 
 		public int SelectedIndex

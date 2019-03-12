@@ -16,9 +16,7 @@
 			<views:AirPuffersView x:Name="viewAirPuffers"/>
 		</controls:MetroTabItem>
 		<controls:MetroTabItem Header="Reward System">
-			<Grid>
-				<views:MazeVisualizer/>
-			</Grid>
+			<views:RewardSystemView x:Name="viewRewardSystem"/>
 		</controls:MetroTabItem>
 		<controls:MetroTabItem Header="Mouse Input">
 			<views:MouseInputView x:Name="viewMouseInput"/>

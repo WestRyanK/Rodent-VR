@@ -50,6 +50,7 @@ namespace RodentVRSettings.Views
 				default:
 					throw new Exception("Should update switch plz!");
 			}
+			control.SelectedIndex = -1;
 			control.Update();
 		}
 		#endregion
@@ -69,11 +70,15 @@ namespace RodentVRSettings.Views
 		public int SelectedIndex
 		{
 			get { return selectedIndex; }
-			set { selectedIndex = value; }
+			set
+			{
+				selectedIndex = value;
+				OnSelectedMazeIndexChanged?.Invoke(this, selectedIndex);
+			}
 		}
 		#endregion
 
-		public event EventHandler<int> OnMazeClicked;
+		public event EventHandler<int> OnSelectedMazeIndexChanged;
 
 		private const double MATERIAL_SCALE = 1 / 10f;
 		private List<ImageBrush> materialBrushes = new List<ImageBrush>();
@@ -101,7 +106,7 @@ namespace RodentVRSettings.Views
 			var position = e.GetPosition(this);
 			var index = GetMaskIndex(position.X, position.Y);
 			this.SelectedIndex = index;
-			OnMazeClicked?.Invoke(this, index);
+			OnSelectedMazeIndexChanged?.Invoke(this, index);
 			this.UpdateSelection();
 			//this.tb.Text = index.ToString();
 		}

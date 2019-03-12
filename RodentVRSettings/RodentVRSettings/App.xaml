@@ -31,7 +31,7 @@
 		<Style TargetType="{x:Type controls:NumericUpDown}">
 			<Setter Property="Margin" Value="{StaticResource defaultMargin}"/>
 		</Style>
-		<Style TargetType="{x:Type controls:DropDownButton}">
+		<Style TargetType="{x:Type ComboBox}">
 			<Setter Property="Margin" Value="{StaticResource defaultMargin}"/>
 		</Style>
 		<Style TargetType="{x:Type GroupBox}" BasedOn="{StaticResource MetroGroupBox}">

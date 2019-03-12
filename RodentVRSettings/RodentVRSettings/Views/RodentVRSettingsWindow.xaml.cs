@@ -8,9 +8,8 @@ namespace RodentVRSettings
 	/// <summary>
 	/// Interaction logic for MainWindow.xaml
 	/// </summary>
-	public partial class MainWindow : MetroWindow//, Contracts.RodentVRSettingsViewContract
+	public partial class MainWindow : MetroWindow
 	{
-		//public Contracts.RodentVRSettingsPresenterContract Presenter { get; set; }
 		private ConfigurationSettings settings;
 
 		public MainWindow()
@@ -18,15 +17,12 @@ namespace RodentVRSettings
 			InitializeComponent();
 
 			this.settings = new ConfigurationSettings();
-			viewAirPuffers.Init(this.settings);
 
+			viewRewardSystem.Init(this.settings);
+			viewAirPuffers.Init(this.settings);
 			viewBehaviorRecording.Init(this.settings);
 			viewMaterials.Init(this.settings);
 			viewInitialMaze.Init(this.settings);
-
-			//this.Presenter = new Presenters.BehaviorVisualizerPresenter();
-			//this.Presenter.View = this;
-			//this.Presenter.Reset();
 		}
 
 		protected override void OnSourceInitialized(EventArgs e)

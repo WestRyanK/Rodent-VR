@@ -25,6 +25,37 @@ namespace RodentVRSettings.Views
 	{
 		Contracts.RewardSystemPresenterContract Presenter { get; set; }
 
+		public int SelectedIndex
+		{
+			set
+			{
+				if (Presenter.SelectedIndexInRange(value))
+				{
+					this.toggleRewardTriggerIsEnabled.IsEnabled = true;
+					this.nudRewardTriggerDuration.IsEnabled = true;
+					this.ddRewardTriggerReward.IsEnabled = true;
+
+					this.toggleRewardTriggerIsEnabled.IsChecked = Presenter.CurrentRewardTriggerIsEnabled;
+					this.nudRewardTriggerDuration.Value = Presenter.CurrentRewardTriggerDuration;
+					this.ddRewardTriggerReward.SelectedItem = Presenter.CurrentRewardTriggerReward;
+				}
+				else
+				{
+					this.toggleRewardTriggerIsEnabled.IsEnabled = false;
+					this.nudRewardTriggerDuration.IsEnabled = false;
+					this.ddRewardTriggerReward.IsEnabled = false;
+				}
+			}
+		}
+
+		public MazesEnum CurrentMaze
+		{
+			set
+			{
+				this.mazeVisualizer.Maze = value;
+			}
+		}
+
 		public RewardSystemView()
 		{
 			InitializeComponent();
@@ -37,14 +68,48 @@ namespace RodentVRSettings.Views
 			this.Presenter.Init();
 		}
 
-		public void SetRewardTrigger(MazesEnum maze, int triggerIndex, RewardTrigger trigger)
+		public void SetMaterials(MaterialsEnum[] materials)
 		{
-			throw new NotImplementedException();
+			for (int i = 0; i < materials.Length; i++)
+			{
+				this.mazeVisualizer.SetMaterial(i, materials[i]);
+			}
 		}
 
-		void RewardSystemViewContract.SetMazeMaterials(MaterialsEnum[] maze01Materials, MaterialsEnum[] maze02Materials)
+		public void SetRewardTriggerIsEnabled(bool isEnabled)
 		{
-			throw new NotImplementedException();
+			this.toggleRewardTriggerIsEnabled.IsChecked = isEnabled;
+		}
+
+		public void SetRewardTriggerDuration(float duration)
+		{
+			this.nudRewardTriggerDuration.Value = duration;
+		}
+
+		public void SetRewardTriggerReward(int reward)
+		{
+			this.ddRewardTriggerReward.SelectedItem = reward;
+		}
+
+		private void nudRewardTriggerDuration_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double?> e)
+		{
+			this.Presenter.CurrentRewardTriggerDuration = (float)this.nudRewardTriggerDuration.Value;
+		}
+
+		private void ddRewardTriggerReward_SelectionChanged(object sender, SelectionChangedEventArgs e)
+		{
+			this.Presenter.CurrentRewardTriggerReward = (int)this.ddRewardTriggerReward.SelectedItem;
+		}
+
+		private void mazeVisualizer_OnMazeClicked(object sender, int selectedIndex)
+		{
+			if (Presenter != null)
+				Presenter.SelectedIndex = selectedIndex;
+		}
+
+		private void toggleRewardTriggerIsEnabled_IsCheckedChanged(object sender, EventArgs e)
+		{
+			this.Presenter.CurrentRewardTriggerIsEnabled = this.toggleRewardTriggerIsEnabled.IsChecked ?? false;
 		}
 	}
 }

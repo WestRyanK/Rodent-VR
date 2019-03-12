@@ -1,12 +1,39 @@
 ﻿<UserControl x:Class="RodentVRSettings.Views.RewardSystemView"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:views="clr-namespace:RodentVRSettings.Views"
+			 xmlns:controls="http://metro.mahapps.com/winfx/xaml/controls"
+			 xmlns:sys="clr-namespace:System;assembly=mscorlib"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:RodentVRSettings.Views"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
-            
-    </Grid>
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="*"/>
+			<RowDefinition Height="auto"/>
+		</Grid.RowDefinitions>
+		<Border Margin="10" BorderBrush="Black" BorderThickness="1" Grid.Column="0" Grid.Row="0">
+			<views:MazeVisualizer x:Name="mazeVisualizer" OnSelectedMazeIndexChanged="mazeVisualizer_OnMazeClicked"   Maze="maze_01_level"/>
+		</Border>
+		<StackPanel Grid.Row="2" HorizontalAlignment="Left" Orientation="Vertical">
+			<Label Content="Is Reward Trigger Enabled?"/>
+			<controls:ToggleSwitch Name="toggleRewardTriggerIsEnabled" OffLabel="" OnLabel="" HorizontalContentAlignment="Left" IsCheckedChanged="toggleRewardTriggerIsEnabled_IsCheckedChanged" Width="{StaticResource controlWidth}"/>
+			<Label Content="Duration"/>
+			<controls:NumericUpDown Name="nudRewardTriggerDuration" Minimum="0" Maximum="100" HasDecimals="True" StringFormat="{}{0:#.0} seconds" Interval="0.1" Width="{StaticResource controlWidth}" ValueChanged="nudRewardTriggerDuration_ValueChanged"/>
+			<Label Content="Reward"/>
+			<ComboBox Name="ddRewardTriggerReward" SelectionChanged="ddRewardTriggerReward_SelectionChanged" Width="{StaticResource controlWidth}" HorizontalAlignment="Center">
+				<ComboBox.Items>
+					<sys:Int32>1</sys:Int32>
+					<sys:Int32>2</sys:Int32>
+				</ComboBox.Items>
+				<ComboBox.ItemTemplate>
+					<DataTemplate>
+						<TextBlock Text="{Binding}"/>
+					</DataTemplate>
+				</ComboBox.ItemTemplate>
+			</ComboBox>
+		</StackPanel>
+	</Grid>
 </UserControl>
