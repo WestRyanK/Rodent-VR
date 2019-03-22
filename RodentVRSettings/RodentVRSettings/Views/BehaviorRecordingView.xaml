@@ -10,7 +10,7 @@
 				<Label Content="Behavior Recording File Name" Grid.Column="0" Grid.Row="0"/>
 				<StackPanel Orientation="Horizontal" Grid.Column="1" Grid.Row="0">
 					<TextBox Name="tbBehaviorRecordingFileName" Width="{StaticResource controlWidth}" />
-					<Button Name="bttnBehaviorRecordingFileName" Click="bttnBehaviorRecordingFileName_Click" Content="..."/>
+					<Button Name="bttnBehaviorRecordingFileName" Click="bttnBehaviorRecordingFileName_Click" Content="Select Save Location"/>
 				</StackPanel>
 			</StackPanel>
 </UserControl>

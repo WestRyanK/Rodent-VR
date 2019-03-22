@@ -16,7 +16,7 @@ namespace RodentVRSettings.Presenters
 		{
 			get
 			{
-				return settings.AirPuffLeftDeviceName;
+				return settings.BehaviorRecordingFileName;
 			}
 			set
 			{
