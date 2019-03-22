@@ -27,6 +27,7 @@ namespace RodentVRSettings.Contracts
 		int SelectedIndex { get; set; }
 
 		void Init();
+
 		bool SelectedIndexInRange(int value);
 	}
 }

@@ -10,13 +10,17 @@
              d:DesignHeight="450" d:DesignWidth="800">
 	<Grid>
 		<Grid.RowDefinitions>
-			<RowDefinition Height="3*"/>
 			<RowDefinition Height="*"/>
+			<RowDefinition Height="auto"/>
+			<!--<RowDefinition Height="3*"/>
+			<RowDefinition Height="*"/>-->
 		</Grid.RowDefinitions>
 		<Border Margin="10" BorderBrush="Black" BorderThickness="1" Grid.Column="0" Grid.Row="0">
-			<views:MazeVisualizer x:Name="mazeVisualizer" OnMazeClicked="mazeVisualizer_OnMazeClicked"   Maze="maze_01_level"/>
+			<views:MazeVisualizer x:Name="mazeVisualizer" OnSelectedMazeIndexChanged="mazeVisualizer_OnMazeClicked"   Maze="maze_01_level"/>
 		</Border>
-		<ComboBox Name="ddMazeMaterial" SelectionChanged="ddMazeMaterial_SelectionChanged" Width="{StaticResource controlWidth}" Height="75" HorizontalAlignment="Center"  Grid.Row="1">
+		<StackPanel Orientation="Vertical" Grid.Row="1" HorizontalAlignment="Left">
+			<Label Content="Region Material"/>
+			<ComboBox Name="ddMazeMaterial" SelectionChanged="ddMazeMaterial_SelectionChanged" Width="{StaticResource controlWidth}" Height="75" HorizontalAlignment="Center"  >
 			<ComboBox.ItemTemplate>
 				<DataTemplate>
 					<Grid>
@@ -32,5 +36,6 @@
 				</DataTemplate>
 			</ComboBox.ItemTemplate>
 		</ComboBox>
+		</StackPanel>
 	</Grid>
 </UserControl>
