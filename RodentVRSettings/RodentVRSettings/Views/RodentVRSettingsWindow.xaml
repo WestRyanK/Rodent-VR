@@ -11,6 +11,13 @@
 					  xmlns:views="clr-namespace:RodentVRSettings.Views"
 					  mc:Ignorable="d"
         Title="Rodent VR Settings" Height="450" Width="800">
+	<DockPanel>
+		<Menu DockPanel.Dock="Top">
+			<MenuItem Header="_File">
+				<MenuItem Name="menuitemOpen" Header="_Open..." Click="menuitemOpen_Click"/>
+				<MenuItem Name="menuitemSave" Header="_Save..." Click="menuitemSave_Click"/>
+			</MenuItem>
+		</Menu>
 	<controls:MetroAnimatedSingleRowTabControl TabStripPlacement="Left">
 		<controls:MetroTabItem Header="Mazes">
 			<views:InitialMazeView x:Name="viewInitialMaze"/>
@@ -31,4 +38,5 @@
 			<views:BehaviorRecordingView x:Name="viewBehaviorRecording"/>
 		</controls:MetroTabItem>
 	</controls:MetroAnimatedSingleRowTabControl>
+	</DockPanel>
 </controls:MetroWindow>

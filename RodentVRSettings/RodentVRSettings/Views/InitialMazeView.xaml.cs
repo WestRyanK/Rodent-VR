@@ -52,7 +52,9 @@ namespace RodentVRSettings.Views
 		#region Initial Maze
 		private void ddInitialMaze_SelectionChanged(object sender, SelectionChangedEventArgs e)
 		{
-			Presenter.InitialMaze = (MazesEnum)ddInitialMaze.SelectedItem;
+			var selectedMaze = ddInitialMaze.SelectedItem as MazesEnum?;
+			if (selectedMaze != null)
+				Presenter.InitialMaze = (MazesEnum)selectedMaze;
 		}
 
 		public MazesEnum InitialMaze

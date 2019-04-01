@@ -20,6 +20,6 @@ namespace RodentVRSettings.Contracts
 
 		MazesEnum InitialMaze { set; }
 
-		void Init();
+		void Init(ConfigurationSettings settings = null);
 	}
 }

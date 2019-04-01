@@ -32,13 +32,14 @@ namespace RodentVRSettings.Views
 			InitializeComponent();
 		}
 
-		public void Init(ConfigurationSettings settings, IntPtr hwnd)
+		public void Init(ConfigurationSettings settings, IntPtr? hwnd = null)
 		{
 			this.Presenter = new MouseInputPresenter(settings);
 			this.Presenter.View = this;
 			this.Presenter.Init();
 
-			createRawInputDevice(hwnd);
+			if (hwnd != null)
+				createRawInputDevice((IntPtr)hwnd);
 		}
 
 		#region Mouse A Device Name

@@ -98,8 +98,12 @@ namespace RodentVRSettings.Presenters
 		{
 			this.Settings = settings;
 		}
-		public void Init()
+
+		public void Init(ConfigurationSettings settings = null)
 		{
+			if (settings != null)
+				this.Settings = settings;
+
 			View.MouseADeviceName = this.MouseADeviceName;
 			View.MouseBDeviceName = this.MouseBDeviceName;
 			View.MouseAMultiplier = this.MouseAMultiplier;

@@ -53,8 +53,11 @@ namespace RodentVRSettings.Presenters
 			}
 		}
 
-		public void Init()
+		public void Init(ConfigurationSettings settings = null)
 		{
+			if (settings != null)
+				this.Settings = settings;
+
 			View.CurrentMaze = this.Settings.InitialMaze;
 
 			var materials = this.Settings.GetMaterials(this.Settings.InitialMaze);

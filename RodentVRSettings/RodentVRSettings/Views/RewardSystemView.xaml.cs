@@ -65,7 +65,7 @@ namespace RodentVRSettings.Views
 		{
 			this.Presenter = new RewardSystemPresenter(settings);
 			this.Presenter.View = this;
-			this.Presenter.Init();
+			this.Presenter.Init(settings);
 		}
 
 		public void SetMaterials(MaterialsEnum[] materials)
