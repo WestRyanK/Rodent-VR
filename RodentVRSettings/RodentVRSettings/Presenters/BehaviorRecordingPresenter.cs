@@ -16,7 +16,7 @@ namespace RodentVRSettings.Presenters
 		{
 			get
 			{
-				return settings.AirPuffLeftDeviceName;
+				return settings.BehaviorRecordingFileName;
 			}
 			set
 			{
@@ -44,8 +44,11 @@ namespace RodentVRSettings.Presenters
 			this.Settings = settings;
 		}
 
-		public void Init()
+		public void Init(ConfigurationSettings settings = null)
 		{
+			if (settings != null)
+				this.Settings = settings;
+
 			View.BehaviorRecordingFileName = this.BehaviorRecordingFileName;
 		}
 	}

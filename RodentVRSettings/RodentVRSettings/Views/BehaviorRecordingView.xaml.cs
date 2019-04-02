@@ -52,11 +52,14 @@ namespace RodentVRSettings.Views
 
 		private void bttnBehaviorRecordingFileName_Click(object sender, RoutedEventArgs e)
 		{
-			OpenFileDialog openRecordFileDialog = new OpenFileDialog();
-			bool? result = openRecordFileDialog.ShowDialog();
+			SaveFileDialog saveRecordFileDialog = new SaveFileDialog();
+			saveRecordFileDialog.AddExtension = true;
+			saveRecordFileDialog.Filter = "Text File (*.txt)|*.txt|All Files|*.*";
+			saveRecordFileDialog.DefaultExt = "*.txt";
+			bool? result = saveRecordFileDialog.ShowDialog();
 			if (result == true)
 			{
-				BehaviorRecordingFileName = openRecordFileDialog.FileName;
+				BehaviorRecordingFileName = saveRecordFileDialog.FileName;
 			}
 		}
 		#endregion

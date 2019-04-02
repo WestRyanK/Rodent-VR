@@ -74,5 +74,16 @@ namespace RodentVRSettings.Models.Configuration
 
 			return multiEntry;
 		}
+
+		public override bool Equals(object obj)
+		{
+			var other = obj as RewardTrigger;
+			if (other == null)
+				return false;
+
+			return (this.IsEnabled == other.IsEnabled)
+				&& (this.Reward == other.Reward)
+				&& (this.Duration == other.Duration);
+		}
 	}
 }

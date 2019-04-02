@@ -20,6 +20,6 @@ namespace RodentVRSettings.Contracts
 
 		string BehaviorRecordingFileName { set; }
 
-		void Init();
+		void Init(ConfigurationSettings settings = null);
 	}
 }

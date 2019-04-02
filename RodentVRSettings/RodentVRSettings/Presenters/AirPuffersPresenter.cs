@@ -81,8 +81,11 @@ namespace RodentVRSettings.Presenters
 			this.Settings = settings;
 		}
 
-		public void Init()
+		public void Init(ConfigurationSettings settings = null)
 		{
+			if (settings != null)
+				this.Settings = settings;
+
 			View.AirPufferFrontAngle = this.AirPufferFrontAngle;
 			View.AirPufferLeftDeviceName = this.AirPufferLeftDeviceName;
 			View.AirPufferRightDeviceName = this.AirPufferRightDeviceName;

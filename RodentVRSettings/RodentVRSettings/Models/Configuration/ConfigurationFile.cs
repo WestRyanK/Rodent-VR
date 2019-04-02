@@ -29,7 +29,7 @@ namespace RodentVRSettings.Models.Configuration
 		public override string ToString()
 		{
 			var entryStrings = this.GetConfigurationStrings();
-			var entryString = string.Join("\n", entryStrings);
+			var entryString = string.Join(Environment.NewLine, entryStrings);
 
 			return entryString;
 		}

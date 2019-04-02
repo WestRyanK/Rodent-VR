@@ -184,7 +184,7 @@ namespace RodentVRSettings.Models.Configuration
 			"AirPuffRightDeviceName",
 			"Reward1DeviceName",
 			"Reward2DeviceName",
-			"AirPufferFrontAngle",
+			"AirPuffFrontAngle",
 			"Maze_01_Triggers",
 			"Maze_02_Triggers",
 			"MouseADeviceName",
@@ -389,6 +389,19 @@ namespace RodentVRSettings.Models.Configuration
 					throw new Exception("update switch plz!");
 			}
 			return materials;
+		}
+
+		public static void Save(string fileName, ConfigurationSettings settings)
+		{
+			var configurationFile = ToConfigurationFile(settings);
+			configurationFile.SaveFile(fileName);
+		}
+
+		public static ConfigurationSettings Read(string fileName)
+		{
+			var configurationFile = ConfigurationFile.Read(fileName);
+			var configurationSettings = FromConfigurationFile(configurationFile);
+			return configurationSettings;
 		}
 	}
 }

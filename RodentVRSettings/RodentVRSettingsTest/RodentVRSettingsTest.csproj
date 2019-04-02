@@ -54,6 +54,9 @@
     <Compile Include="ConfigurationSettingsTest.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Game.ini">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>

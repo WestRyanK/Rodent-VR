@@ -11,12 +11,25 @@
 					  xmlns:views="clr-namespace:RodentVRSettings.Views"
 					  mc:Ignorable="d"
         Title="Rodent VR Settings" Height="450" Width="800">
+	<DockPanel>
+		<Menu DockPanel.Dock="Top">
+			<MenuItem Header="_File">
+				<MenuItem Name="menuitemOpen" Header="_Open..." Click="menuitemOpen_Click"/>
+				<MenuItem Name="menuitemSave" Header="_Save..." Click="menuitemSave_Click"/>
+			</MenuItem>
+		</Menu>
 	<controls:MetroAnimatedSingleRowTabControl TabStripPlacement="Left">
-		<controls:MetroTabItem Header="Air Puffers">
-			<views:AirPuffersView x:Name="viewAirPuffers"/>
+		<controls:MetroTabItem Header="Mazes">
+			<views:InitialMazeView x:Name="viewInitialMaze"/>
+		</controls:MetroTabItem>
+		<controls:MetroTabItem Header="Materials">
+			<views:MaterialsView x:Name="viewMaterials"/>
 		</controls:MetroTabItem>
 		<controls:MetroTabItem Header="Reward System">
 			<views:RewardSystemView x:Name="viewRewardSystem"/>
+		</controls:MetroTabItem>
+		<controls:MetroTabItem Header="Air Puffers">
+			<views:AirPuffersView x:Name="viewAirPuffers"/>
 		</controls:MetroTabItem>
 		<controls:MetroTabItem Header="Mouse Input">
 			<views:MouseInputView x:Name="viewMouseInput"/>
@@ -24,11 +37,6 @@
 		<controls:MetroTabItem Header="Behavior Recording">
 			<views:BehaviorRecordingView x:Name="viewBehaviorRecording"/>
 		</controls:MetroTabItem>
-		<controls:MetroTabItem Header="Mazes">
-			<views:InitialMazeView x:Name="viewInitialMaze"/>
-		</controls:MetroTabItem>
-		<controls:MetroTabItem Header="Materials">
-			<views:MaterialsView x:Name="viewMaterials"/>
-		</controls:MetroTabItem>
 	</controls:MetroAnimatedSingleRowTabControl>
+	</DockPanel>
 </controls:MetroWindow>

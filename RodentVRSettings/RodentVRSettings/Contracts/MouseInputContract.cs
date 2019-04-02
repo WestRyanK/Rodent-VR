@@ -20,7 +20,7 @@ namespace RodentVRSettings.Contracts
 
 		RawMouseInput RawMouseInputDevice { get; }
 
-		void Init(ConfigurationSettings settings, IntPtr hwnd);
+		void Init(ConfigurationSettings settings, IntPtr? hwnd = null);
 	}
 
 	public interface MouseInputPresenterContract
@@ -35,6 +35,6 @@ namespace RodentVRSettings.Contracts
 
 		float MouseBMultiplier { set; }
 
-		void Init();
+		void Init(ConfigurationSettings settings = null);
 	}
 }
