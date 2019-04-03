@@ -14,9 +14,7 @@
 			<RowDefinition Height="*"/>
 			<RowDefinition Height="auto"/>
 		</Grid.RowDefinitions>
-		<Border Margin="10" BorderBrush="Black" BorderThickness="1" Grid.Column="0" Grid.Row="0">
-			<views:MazeVisualizer x:Name="mazeVisualizer" OnSelectedMazeIndexChanged="mazeVisualizer_OnMazeClicked"   Maze="maze_01_level"/>
-		</Border>
+		<views:MazeVisualizer x:Name="mazeVisualizer" OnSelectedMazeIndexChanged="mazeVisualizer_OnMazeClicked"   Maze="maze_01_level"/>
 		<StackPanel Grid.Row="2" HorizontalAlignment="Left" Orientation="Vertical">
 			<Label Content="Is Reward Trigger Enabled?"/>
 			<controls:ToggleSwitch Name="toggleRewardTriggerIsEnabled" OffLabel="" OnLabel="" HorizontalContentAlignment="Left" IsCheckedChanged="toggleRewardTriggerIsEnabled_IsCheckedChanged" Width="{StaticResource controlWidth}"/>
