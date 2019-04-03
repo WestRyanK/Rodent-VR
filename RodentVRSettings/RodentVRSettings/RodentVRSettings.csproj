@@ -123,6 +123,7 @@
     <Compile Include="Contracts\RewardSystemContract.cs" />
     <Compile Include="Converters\BitmapConversion.cs" />
     <Compile Include="Converters\BitmapConverter.cs" />
+    <Compile Include="Converters\PufferAngleConverter.cs" />
     <Compile Include="Converters\ResourceLoader.cs" />
     <Compile Include="Converters\ResourceLoaderConverter.cs" />
     <Compile Include="Models\Configuration\ConfigurationFile.cs" />
@@ -162,6 +163,7 @@
     <Compile Include="Views\MouseInputView.xaml.cs">
       <DependentUpon>MouseInputView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\PieSlice.cs" />
     <Compile Include="Views\RewardSystemView.xaml.cs">
       <DependentUpon>RewardSystemView.xaml</DependentUpon>
     </Compile>
@@ -302,6 +304,9 @@
       <Project>{4143d085-38cf-4640-bb05-2fdffaf94d76}</Project>
       <Name>RawInput</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\rodent.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

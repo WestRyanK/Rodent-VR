@@ -17,7 +17,7 @@
 			</ResourceDictionary.MergedDictionaries>
 
 		<Thickness x:Key="defaultMargin">4</Thickness>
-		<sys:Double x:Key="controlWidth">300</sys:Double>
+		<sys:Double x:Key="controlWidth">400</sys:Double>
 
 		<Style TargetType="{x:Type Button}" BasedOn="{StaticResource MetroButton}">
 			<Setter Property="Margin" Value="{StaticResource defaultMargin}"/>

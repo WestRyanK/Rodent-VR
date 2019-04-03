@@ -3,16 +3,98 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-			xmlns:controls="http://metro.mahapps.com/winfx/xaml/controls"
-             xmlns:local="clr-namespace:RodentVRSettings.Views"
+			 xmlns:controls="http://metro.mahapps.com/winfx/xaml/controls"
+		     xmlns:view="clr-namespace:RodentVRSettings.Views"
+			 xmlns:converters="clr-namespace:RodentVRSettings.Converters"
+			 xmlns:sys="clr-namespace:System;assembly=mscorlib"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-			<StackPanel Orientation="Vertical">
-				<Label Content="Left Air Puffer Device Name"/>
-				<TextBox Name="tbAirPufferLeftDeviceName" TextChanged="tbAirPufferLeftDeviceName_TextChanged" Width="{StaticResource controlWidth}" HorizontalAlignment="Left"/>
-				<Label Content="Right Air Puffer Device Name" />
-				<TextBox Name="tbAirPufferRightDeviceName" TextChanged="tbAirPufferRightDeviceName_TextChanged" Width="{StaticResource controlWidth}" HorizontalAlignment="Left"/>
-				<Label Content="Front-Facing Angle Tolerance" />
-				<controls:NumericUpDown Name="nudAirPufferFrontAngle" ValueChanged="nudAirPufferFrontAngle_ValueChanged" Minimum="0" Maximum="90" HasDecimals="True" StringFormat="{}{0:#.0} degrees" Interval="0.5" Width="{StaticResource controlWidth}" HorizontalAlignment="Left"/>
-			</StackPanel>
+	<UserControl.Resources>
+		<sys:Boolean x:Key="true">true</sys:Boolean>
+		<sys:Boolean x:Key="false">false</sys:Boolean>
+		<sys:Double x:Key="PufferSize">200</sys:Double>
+		<SolidColorBrush x:Key="LeftColor">AliceBlue</SolidColorBrush>
+		<SolidColorBrush x:Key="RightColor">DarkCyan</SolidColorBrush>
+		<SolidColorBrush x:Key="BothColor">LightSlateGray</SolidColorBrush>
+		<!--Template when the orientation of the Slider is Horizontal.-->
+		<ControlTemplate x:Key="TestSlider"
+						 TargetType="{x:Type Slider}">
+			<Grid>
+				<Track x:Name="PART_Track">
+					<Track.DecreaseRepeatButton>
+						<RepeatButton/>
+					</Track.DecreaseRepeatButton>
+					<Track.IncreaseRepeatButton>
+						<RepeatButton/>
+					</Track.IncreaseRepeatButton>
+					<Track.Thumb>
+						<Thumb/>
+					</Track.Thumb>
+				</Track>
+			</Grid>
+		</ControlTemplate>
+	</UserControl.Resources>
+	<StackPanel Orientation="Vertical">
+		<Label Content="Left Air Puffer Device Name"/>
+		<TextBox Name="tbAirPufferLeftDeviceName" TextChanged="tbAirPufferLeftDeviceName_TextChanged" Width="{StaticResource controlWidth}" HorizontalAlignment="Left"/>
+		<Label Content="Right Air Puffer Device Name" />
+		<TextBox Name="tbAirPufferRightDeviceName" TextChanged="tbAirPufferRightDeviceName_TextChanged" Width="{StaticResource controlWidth}" HorizontalAlignment="Left"/>
+		<Label Content="Front-Facing Angle Tolerance" />
+		<controls:NumericUpDown Name="nudAirPufferFrontAngle" ValueChanged="nudAirPufferFrontAngle_ValueChanged" 
+								Minimum="0" Maximum="90" HasDecimals="True" StringFormat="{}{0:#.0} degrees" Interval="0.5" Width="{StaticResource controlWidth}" 
+								HorizontalAlignment="Left" Speedup="False"/>
+
+		<Border HorizontalAlignment="Left" Margin="10" BorderBrush="Black" BorderThickness="1" Grid.Column="0" Grid.Row="0" Background="LightGray" Width="{StaticResource controlWidth}">
+			<Grid Margin="10">
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="*"/>
+					<ColumnDefinition Width="auto"/>
+				</Grid.ColumnDefinitions>
+				<Grid Grid.Column="0">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="30"/>
+						<ColumnDefinition Width="auto"/>
+					</Grid.ColumnDefinitions>
+					<Grid.RowDefinitions>
+						<RowDefinition Height="30"/>
+						<RowDefinition Height="30"/>
+						<RowDefinition Height="30"/>
+					</Grid.RowDefinitions>
+					<Rectangle Stroke="Black" StrokeThickness="2" Fill="White" Grid.Column="0" Grid.Row="0" Margin="4" />
+					<Rectangle Stroke="Black" StrokeThickness="2" Fill="{StaticResource AccentColorBrush}" Grid.Column="0" Grid.Row="0" Margin="4" />
+					<Rectangle Stroke="Black" StrokeThickness="2" Fill="White" Grid.Column="0" Grid.Row="1" Margin="4" />
+					<Rectangle Stroke="Black" StrokeThickness="2" Fill="{StaticResource AccentColorBrush3}" Grid.Column="0" Grid.Row="1" Margin="4" />
+					<Rectangle Stroke="Black" StrokeThickness="2" Fill="White" Grid.Column="0" Grid.Row="2" Margin="4" />
+					<Rectangle Stroke="Black" StrokeThickness="2" Fill="{StaticResource AccentColorBrush4}" Grid.Column="0" Grid.Row="2" Margin="4" />
+					<TextBlock Text="Both Air Puffers (Front)" Grid.Column="1" Grid.Row="0" VerticalAlignment="Center"/>
+					<TextBlock Text="Left Air Puffer" Grid.Column="1" Grid.Row="1" VerticalAlignment="Center"/>
+					<TextBlock Text="Right Air Puffer" Grid.Column="1" Grid.Row="2" VerticalAlignment="Center"/>
+				</Grid>
+
+
+				<Ellipse Width="{StaticResource PufferSize}" Height="{StaticResource PufferSize}" Fill="White" Grid.Column="1"/>
+				<view:PieSlice  x:Name="RightPufferActiveAngle" Grid.Column="1"
+			Width="{StaticResource PufferSize}" Height="{StaticResource PufferSize}"
+			Fill="{StaticResource AccentColorBrush4}" Stroke="White" StrokeThickness="2"
+			StartAngle="270" EndAngle="90"/>
+				<view:PieSlice  x:Name="LeftPufferActiveAngle" Grid.Column="1"
+			Width="{StaticResource PufferSize}" Height="{StaticResource PufferSize}"
+			Fill="{StaticResource AccentColorBrush3}" Stroke="White" StrokeThickness="2"
+			StartAngle="90" EndAngle="270"/>
+
+				<view:PieSlice x:Name="BothPufferActiveAngleBackground" Grid.Column="1"
+			Width="{StaticResource PufferSize}" Height="{StaticResource PufferSize}" 
+			Fill="White" Stroke="White" StrokeThickness="2"
+			StartAngle="{Binding ElementName=nudAirPufferFrontAngle, Path=Value, Converter={converters:PufferAngleConverter}, ConverterParameter={StaticResource true}}"
+			EndAngle="{Binding ElementName=nudAirPufferFrontAngle, Path=Value, Converter={converters:PufferAngleConverter}, ConverterParameter={StaticResource false}}"/>
+				<view:PieSlice x:Name="BothPufferActiveAngle" Grid.Column="1"
+			Width="{StaticResource PufferSize}" Height="{StaticResource PufferSize}" 
+			Fill="{StaticResource AccentColorBrush}" Stroke="White" StrokeThickness="2"
+			StartAngle="{Binding ElementName=nudAirPufferFrontAngle, Path=Value, Converter={converters:PufferAngleConverter}, ConverterParameter={StaticResource true}}"
+			EndAngle="{Binding ElementName=nudAirPufferFrontAngle, Path=Value, Converter={converters:PufferAngleConverter}, ConverterParameter={StaticResource false}}"/>
+
+				<Image Width="100" Height="100" Source="pack://application:,,,/resources/rodent.png" Grid.Column="1" RenderOptions.BitmapScalingMode="HighQuality"/>
+			</Grid>
+		</Border>
+	</StackPanel>
 </UserControl>

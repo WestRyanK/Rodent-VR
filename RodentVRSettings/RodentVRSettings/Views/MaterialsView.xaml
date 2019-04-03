@@ -15,9 +15,7 @@
 			<!--<RowDefinition Height="3*"/>
 			<RowDefinition Height="*"/>-->
 		</Grid.RowDefinitions>
-		<Border Margin="10" BorderBrush="Black" BorderThickness="1" Grid.Column="0" Grid.Row="0">
 			<views:MazeVisualizer x:Name="mazeVisualizer" OnSelectedMazeIndexChanged="mazeVisualizer_OnMazeClicked"   Maze="maze_01_level"/>
-		</Border>
 		<StackPanel Orientation="Vertical" Grid.Row="1" HorizontalAlignment="Left">
 			<Label Content="Region Material"/>
 			<ComboBox Name="ddMazeMaterial" SelectionChanged="ddMazeMaterial_SelectionChanged" Width="{StaticResource controlWidth}" Height="75" HorizontalAlignment="Center"  >
