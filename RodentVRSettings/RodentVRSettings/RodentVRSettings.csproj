@@ -308,5 +308,11 @@
   <ItemGroup>
     <Resource Include="Resources\rodent.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\maze_01_level.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\maze_02_level.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

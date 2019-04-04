@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Data;
 using System.Windows.Markup;
+using System.Windows.Media.Imaging;
 
 namespace RodentVRSettings.Converters
 {
@@ -15,8 +16,8 @@ namespace RodentVRSettings.Converters
 		#region IValueConverter Implementation
 		public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
 		{
-			MaterialsEnum? material = value as MaterialsEnum?;
-			var bmp = material?.ToBitmapImageResource();
+			var resourceType = (string)parameter;
+			var bmp = value?.ToString()?.ToBitmapImageResource();
 			return bmp;
 		}
 

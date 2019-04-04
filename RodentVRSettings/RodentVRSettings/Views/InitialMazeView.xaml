@@ -9,17 +9,17 @@
 			 mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
 
-			<StackPanel Orientation="Vertical">
-				<Label Content="Initial Maze" />
-				<ComboBox Name="ddInitialMaze" SelectionChanged="ddInitialMaze_SelectionChanged" Width="{StaticResource controlWidth}" HorizontalAlignment="Left">
-					<ComboBox.ItemTemplate>
-						<DataTemplate>
-							<StackPanel Orientation="Vertical">
-								<!--<Image Height="100" Width="100" Source="{Binding Converter={converters:BitmapConverter}}"/>-->
-								<Label HorizontalContentAlignment="Center" Content="{Binding}"/>
-							</StackPanel>
-						</DataTemplate>
-					</ComboBox.ItemTemplate>
-				</ComboBox>
-			</StackPanel>
+	<StackPanel Orientation="Vertical">
+		<Label Content="Initial Maze" />
+		<ComboBox Name="ddInitialMaze" SelectionChanged="ddInitialMaze_SelectionChanged" Width="{StaticResource controlWidth}" HorizontalAlignment="Left">
+			<ComboBox.ItemTemplate>
+				<DataTemplate>
+					<StackPanel Orientation="Horizontal">
+						<Image HorizontalAlignment="Right" VerticalAlignment="Center" Width="150" Height="150" Source="{ Binding Converter={converters:ResourceLoaderConverter}}"/>
+						<Label VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Content="{Binding}"/>
+					</StackPanel>
+				</DataTemplate>
+			</ComboBox.ItemTemplate>
+		</ComboBox>
+	</StackPanel>
 </UserControl>
