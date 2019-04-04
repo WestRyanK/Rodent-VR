@@ -32,7 +32,7 @@ namespace RodentVRSettings.Views
 
 		// Using a DependencyProperty as the backing store for Maze.  This enables animation, styling, binding, etc...
 		public static readonly DependencyProperty MazeProperty =
-			DependencyProperty.Register("Maze", typeof(MazesEnum), typeof(MazeVisualizer), new PropertyMetadata(MazesEnum.none, MazeChanged));
+			DependencyProperty.Register("Maze", typeof(MazesEnum), typeof(MazeVisualizer), new PropertyMetadata(MazesEnum.maze_01_level, MazeChanged));
 
 		private static void MazeChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
 		{
