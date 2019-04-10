@@ -49,7 +49,7 @@ namespace RodentVRSettingsTest
 				Assert.AreEqual(correctValues[i], configStrings[i], $"string {i} is wrong");
 			}
 
-			string correctString = string.Join("\n", correctValues);
+			string correctString = string.Join(Environment.NewLine, correctValues);
 			Assert.AreEqual(correctString, config.Target.ToString());
 
 		}
@@ -166,7 +166,7 @@ namespace RodentVRSettingsTest
 
 			MultiEntry output1 = (MultiEntry)privateType.InvokeStatic("ParseConfigurationLines", paramTypes, methodParams);
 
-			var output2 = output1.ToString().Split('\n');
+			var output2 = output1.ToString().Split(new[] { Environment.NewLine }, StringSplitOptions.None);
 			Assert.AreEqual(lines.Length, output2.Length);
 			for (int i = 0; i < output2.Length; i++)
 			{
