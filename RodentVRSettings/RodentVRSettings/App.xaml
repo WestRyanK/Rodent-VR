@@ -35,6 +35,7 @@
 			<Style TargetType="{x:Type controls:NumericUpDown}">
 				<Setter Property="Margin" Value="{StaticResource defaultMargin}"/>
 				<Setter Property="Width" Value="{StaticResource controlWidth}"/>
+				<Setter Property="HorizontalContentAlignment" Value="Left"/>
 			</Style>
 			<Style TargetType="{x:Type ComboBox}">
 				<Setter Property="Margin" Value="{StaticResource defaultMargin}"/>
