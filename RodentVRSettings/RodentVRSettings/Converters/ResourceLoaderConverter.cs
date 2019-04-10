@@ -16,6 +16,9 @@ namespace RodentVRSettings.Converters
 		#region IValueConverter Implementation
 		public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
 		{
+			if (value == null || value as string == "")
+				return null;
+
 			var resourceType = (string)parameter;
 			var bmp = value?.ToString()?.ToBitmapImageResource();
 			return bmp;
