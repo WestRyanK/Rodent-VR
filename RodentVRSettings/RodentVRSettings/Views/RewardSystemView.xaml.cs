@@ -29,21 +29,21 @@ namespace RodentVRSettings.Views
 		{
 			set
 			{
-				if (Presenter.SelectedIndexInRange(value))
+				bool isValidSelection = Presenter.SelectedIndexInRange(value);
+
+				this.toggleRewardTriggerIsEnabledLabel.IsEnabled =
+					this.toggleRewardTriggerIsEnabled.IsEnabled =
+					this.nudRewardTriggerDurationLabel.IsEnabled =
+					this.nudRewardTriggerDuration.IsEnabled =
+					this.ddRewardTriggerRewardLabel.IsEnabled = 
+					this.ddRewardTriggerReward.IsEnabled = isValidSelection;
+
+				if (isValidSelection)
 				{
-					this.toggleRewardTriggerIsEnabled.IsEnabled = true;
-					this.nudRewardTriggerDuration.IsEnabled = true;
-					this.ddRewardTriggerReward.IsEnabled = true;
 
 					this.toggleRewardTriggerIsEnabled.IsChecked = Presenter.CurrentRewardTriggerIsEnabled;
 					this.nudRewardTriggerDuration.Value = Presenter.CurrentRewardTriggerDuration;
 					this.ddRewardTriggerReward.SelectedItem = Presenter.CurrentRewardTriggerReward;
-				}
-				else
-				{
-					this.toggleRewardTriggerIsEnabled.IsEnabled = false;
-					this.nudRewardTriggerDuration.IsEnabled = false;
-					this.ddRewardTriggerReward.IsEnabled = false;
 				}
 			}
 		}

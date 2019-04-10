@@ -16,11 +16,11 @@
 		</Grid.RowDefinitions>
 		<views:MazeVisualizer x:Name="mazeVisualizer" OnSelectedMazeIndexChanged="mazeVisualizer_OnMazeClicked"   Maze="maze_01_level"/>
 		<StackPanel Grid.Row="2" HorizontalAlignment="Left" Orientation="Vertical">
-			<Label Content="Is Reward Trigger Enabled?"/>
-			<controls:ToggleSwitch Name="toggleRewardTriggerIsEnabled" OffLabel="" OnLabel="" HorizontalContentAlignment="Left" IsCheckedChanged="toggleRewardTriggerIsEnabled_IsCheckedChanged" Width="{StaticResource controlWidth}"/>
-			<Label Content="Duration"/>
+			<Label Name="toggleRewardTriggerIsEnabledLabel" Content="Is Reward Trigger Enabled?"/>
+			<controls:ToggleSwitch HorizontalAlignment="Left" Name="toggleRewardTriggerIsEnabled" OffLabel="" OnLabel="" IsCheckedChanged="toggleRewardTriggerIsEnabled_IsCheckedChanged"/>
+			<Label Name="nudRewardTriggerDurationLabel" Content="Duration"/>
 			<controls:NumericUpDown Name="nudRewardTriggerDuration" Minimum="0" Maximum="100" HasDecimals="True" StringFormat="{}{0:#.0} seconds" Interval="0.1" Width="{StaticResource controlWidth}" ValueChanged="nudRewardTriggerDuration_ValueChanged"/>
-			<Label Content="Reward"/>
+			<Label Name="ddRewardTriggerRewardLabel" Content="Reward"/>
 			<ComboBox Name="ddRewardTriggerReward" SelectionChanged="ddRewardTriggerReward_SelectionChanged" Width="{StaticResource controlWidth}" HorizontalAlignment="Center">
 				<ComboBox.Items>
 					<sys:Int32>1</sys:Int32>
@@ -32,6 +32,7 @@
 					</DataTemplate>
 				</ComboBox.ItemTemplate>
 			</ComboBox>
+			<Separator Background="Transparent" Height="50"/>
 		</StackPanel>
 	</Grid>
 </UserControl>

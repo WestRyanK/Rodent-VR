@@ -10,7 +10,7 @@
 	    xmlns:sys="clr-namespace:System;assembly=mscorlib"
 					  xmlns:views="clr-namespace:RodentVRSettings.Views"
 					  mc:Ignorable="d"
-        Title="Rodent VR Settings" Height="450" Width="800">
+        Title="Rodent VR Settings" Height="600" Width="800">
 	<DockPanel>
 		<Menu DockPanel.Dock="Top">
 			<MenuItem Header="_File">

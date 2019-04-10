@@ -15,25 +15,26 @@
 			<!--<RowDefinition Height="3*"/>
 			<RowDefinition Height="*"/>-->
 		</Grid.RowDefinitions>
-			<views:MazeVisualizer x:Name="mazeVisualizer" OnSelectedMazeIndexChanged="mazeVisualizer_OnMazeClicked"   Maze="maze_01_level"/>
+		<views:MazeVisualizer x:Name="mazeVisualizer" OnSelectedMazeIndexChanged="mazeVisualizer_OnMazeClicked"   Maze="maze_01_level"/>
 		<StackPanel Orientation="Vertical" Grid.Row="1" HorizontalAlignment="Left">
-			<Label Content="Region Material"/>
+			<Label Name="ddMazeMaterialLabel" Content="Region Material"/>
 			<ComboBox Name="ddMazeMaterial" SelectionChanged="ddMazeMaterial_SelectionChanged" Width="{StaticResource controlWidth}" Height="75" HorizontalAlignment="Center"  >
-			<ComboBox.ItemTemplate>
-				<DataTemplate>
-					<Grid>
-						<Grid.ColumnDefinitions>
-							<ColumnDefinition Width="*"/>
-							<ColumnDefinition Width="Auto"/>
-						</Grid.ColumnDefinitions>
-						<Border Margin="10" BorderBrush="Black" BorderThickness="1" Grid.Column="0">
-							<Image Height="50" Width="50"  Source="{Binding Converter={converters:ResourceLoaderConverter}}"/>
-						</Border>
-						<Label VerticalContentAlignment="Center" Grid.Column="1" Content="{Binding }"/>
-					</Grid>
-				</DataTemplate>
-			</ComboBox.ItemTemplate>
-		</ComboBox>
+				<ComboBox.ItemTemplate>
+					<DataTemplate>
+						<Grid>
+							<Grid.ColumnDefinitions>
+								<ColumnDefinition Width="*"/>
+								<ColumnDefinition Width="Auto"/>
+							</Grid.ColumnDefinitions>
+							<Border Margin="10" BorderBrush="Black" BorderThickness="1" Grid.Column="0">
+								<Image Height="50" Width="50"  Source="{Binding Converter={converters:ResourceLoaderConverter}}"/>
+							</Border>
+							<Label VerticalContentAlignment="Center" Grid.Column="1" Content="{Binding }"/>
+						</Grid>
+					</DataTemplate>
+				</ComboBox.ItemTemplate>
+			</ComboBox>
+			<Separator Background="Transparent" Height="50"/>
 		</StackPanel>
 	</Grid>
 </UserControl>
