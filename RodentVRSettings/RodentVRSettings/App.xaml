@@ -5,7 +5,7 @@
 			 xmlns:sys="clr-namespace:System;assembly=mscorlib"
              xmlns:local="clr-namespace:RodentVRSettings"
              StartupUri="Views/RodentVRSettingsWindow.xaml">
-    <Application.Resources>
+	<Application.Resources>
 		<ResourceDictionary>
 			<ResourceDictionary.MergedDictionaries>
 				<ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.xaml" />
@@ -16,27 +16,33 @@
 				<ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.AnimatedSingleRowTabControl.xaml" />
 			</ResourceDictionary.MergedDictionaries>
 
-		<Thickness x:Key="defaultMargin">4</Thickness>
-		<sys:Double x:Key="controlWidth">400</sys:Double>
+			<Thickness x:Key="defaultMargin">4,0,4,10</Thickness>
+			<sys:Double x:Key="controlWidth">400</sys:Double>
+			<sys:Double x:Key="thumbnailSize">90</sys:Double>
+			<sys:Double x:Key="thumbnailComboHeight">100</sys:Double>
 
-		<Style TargetType="{x:Type Button}" BasedOn="{StaticResource MetroButton}">
-			<Setter Property="Margin" Value="{StaticResource defaultMargin}"/>
-		</Style>
-		<Style TargetType="{x:Type TextBox}" BasedOn="{StaticResource MetroTextBox}">
-			<Setter Property="Margin" Value="{StaticResource defaultMargin}"/>
-		</Style>
-		<Style TargetType="{x:Type RadioButton}" BasedOn="{StaticResource MetroRadioButton}">
-			<Setter Property="Margin" Value="{StaticResource defaultMargin}"/>
-		</Style>
-		<Style TargetType="{x:Type controls:NumericUpDown}">
-			<Setter Property="Margin" Value="{StaticResource defaultMargin}"/>
-		</Style>
-		<Style TargetType="{x:Type ComboBox}">
-			<Setter Property="Margin" Value="{StaticResource defaultMargin}"/>
-		</Style>
-		<Style TargetType="{x:Type GroupBox}" BasedOn="{StaticResource MetroGroupBox}">
-			<Setter Property="Margin" Value="{StaticResource defaultMargin}"/>
-		</Style>
+			<Style TargetType="{x:Type Button}" BasedOn="{StaticResource MetroButton}">
+				<Setter Property="Margin" Value="{StaticResource defaultMargin}"/>
+			</Style>
+			<Style x:Key="textbox" TargetType="{x:Type TextBox}" BasedOn="{StaticResource MetroTextBox}">
+				<Setter Property="Margin" Value="{StaticResource defaultMargin}"/>
+				<Setter Property="Width" Value="{StaticResource controlWidth}"/>
+			</Style>
+			<Style TargetType="{x:Type RadioButton}" BasedOn="{StaticResource MetroRadioButton}">
+				<Setter Property="Margin" Value="{StaticResource defaultMargin}"/>
+				<Setter Property="Width" Value="{StaticResource controlWidth}"/>
+			</Style>
+			<Style TargetType="{x:Type controls:NumericUpDown}">
+				<Setter Property="Margin" Value="{StaticResource defaultMargin}"/>
+				<Setter Property="Width" Value="{StaticResource controlWidth}"/>
+			</Style>
+			<Style TargetType="{x:Type ComboBox}">
+				<Setter Property="Margin" Value="{StaticResource defaultMargin}"/>
+				<Setter Property="Width" Value="{StaticResource controlWidth}"/>
+			</Style>
+			<Style TargetType="{x:Type GroupBox}" BasedOn="{StaticResource MetroGroupBox}">
+				<Setter Property="Margin" Value="{StaticResource defaultMargin}"/>
+			</Style>
 		</ResourceDictionary>
-    </Application.Resources>
+	</Application.Resources>
 </Application>

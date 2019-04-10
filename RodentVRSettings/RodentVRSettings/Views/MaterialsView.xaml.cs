@@ -64,15 +64,18 @@ namespace RodentVRSettings.Views
 		{
 			set
 			{
-				if (Presenter.SelectedIndexInRange(value))
+				bool isValidSelection = Presenter.SelectedIndexInRange(value);
+
+				this.ddMazeMaterial.IsEnabled =
+					this.ddMazeMaterialLabel.IsEnabled = isValidSelection;
+
+				if (isValidSelection)
 				{
 					this.ddMazeMaterial.SelectedItem = Presenter.CurrentMaterial;
-					this.ddMazeMaterial.IsEnabled = true;
 				}
 				else
 				{
 					this.ddMazeMaterial.SelectedItem = null;
-					this.ddMazeMaterial.IsEnabled = false;
 				}
 			}
 		}

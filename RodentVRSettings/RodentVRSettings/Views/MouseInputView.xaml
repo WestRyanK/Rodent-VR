@@ -10,17 +10,17 @@
 	<StackPanel Orientation="Vertical">
 		<Label Content="Mouse A Device Name" />
 		<StackPanel Orientation="Horizontal">
-			<TextBox Name="tbMouseADeviceName" TextChanged="tbMouseADeviceName_TextChanged" Width="{StaticResource controlWidth}" HorizontalAlignment="Left"/>
+			<TextBox Name="tbMouseADeviceName" TextChanged="tbMouseADeviceName_TextChanged"  HorizontalAlignment="Left" Style="{StaticResource textbox}"/>
 			<Button Name="bttnMouseA" Click="bttnMouse_Click" Content="Click with Mouse A"/>
 		</StackPanel>
 		<Label Content="Mouse A Multiplier" />
-		<controls:NumericUpDown Name="nudMouseAMultiplier" ValueChanged="nudMouseAMultiplier_ValueChanged" Minimum="-100" Maximum="100" HasDecimals="True" Interval="0.0025" StringFormat="N4" HorizontalAlignment="Left" Width="{StaticResource controlWidth}" />
+		<controls:NumericUpDown Name="nudMouseAMultiplier" ValueChanged="nudMouseAMultiplier_ValueChanged" Minimum="-100" Maximum="100" HasDecimals="True" Interval="0.0025" StringFormat="N4" HorizontalAlignment="Left" />
 		<Label Content="Mouse B Device Name" />
 		<StackPanel Orientation="Horizontal">
-			<TextBox Name="tbMouseBDeviceName" TextChanged="tbMouseBDeviceName_TextChanged" Width="{StaticResource controlWidth}" HorizontalAlignment="Left"/>
+			<TextBox Name="tbMouseBDeviceName" TextChanged="tbMouseBDeviceName_TextChanged"  HorizontalAlignment="Left" Style="{StaticResource textbox}"/>
 			<Button Name="bttnMouseB" Click="bttnMouse_Click" Content="Click with Mouse B"/>
 		</StackPanel>
 		<Label Content="Mouse B Multiplier" />
-		<controls:NumericUpDown Name="nudMouseBMultiplier" ValueChanged="nudMouseBMultiplier_ValueChanged" Minimum="-100" Maximum="100" HasDecimals="True" Interval="0.0025" StringFormat="N4" HorizontalAlignment="Left" Width="{StaticResource controlWidth}" />
+		<controls:NumericUpDown Name="nudMouseBMultiplier" ValueChanged="nudMouseBMultiplier_ValueChanged" Minimum="-100" Maximum="100" HasDecimals="True" Interval="0.0025" StringFormat="N4" HorizontalAlignment="Left"  />
 	</StackPanel>
 </UserControl>
