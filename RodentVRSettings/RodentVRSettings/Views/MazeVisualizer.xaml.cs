@@ -113,13 +113,14 @@ namespace RodentVRSettings.Views
 
 		private void UpdateSelection()
 		{
-				if (this.SelectedIndex >= 0)
-				{
-					var selectionBrush = GetMaskBrush(GetMaskImage(this.Maze, this.SelectedIndex, true));
-					this.selectionLayer.Fill = selectionBrush;
-					this.gridImage.Children.Remove(this.selectionLayer);
-					this.gridImage.Children.Add(this.selectionLayer);
-				}
+			if (this.selectionLayer != null)
+				this.gridImage.Children.Remove(this.selectionLayer);
+			if (this.SelectedIndex >= 0)
+			{
+				var selectionBrush = GetMaskBrush(GetMaskImage(this.Maze, this.SelectedIndex, true));
+				this.selectionLayer.Fill = selectionBrush;
+				this.gridImage.Children.Add(this.selectionLayer);
+			}
 		}
 
 		private void Update()
