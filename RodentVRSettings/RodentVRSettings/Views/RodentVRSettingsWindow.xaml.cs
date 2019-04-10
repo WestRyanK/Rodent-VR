@@ -28,6 +28,7 @@ namespace RodentVRSettings
 			}
 			catch (Exception e)
 			{
+				MessageBox.Show("The current configuration file could not be found.\nDefault configuration settings will be used.");
 				this.settings = new ConfigurationSettings();
 			}
 
