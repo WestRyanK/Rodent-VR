@@ -11,10 +11,17 @@
              d:DesignHeight="450" d:DesignWidth="800">
 	<Grid>
 		<Grid.RowDefinitions>
+			<RowDefinition Height="auto"/>
 			<RowDefinition Height="*"/>
 			<RowDefinition Height="auto"/>
 		</Grid.RowDefinitions>
-		<views:MazeVisualizer x:Name="mazeVisualizer" OnSelectedMazeIndexChanged="mazeVisualizer_OnMazeClicked" Maze="maze_01_level"/>
+		<StackPanel Orientation="Vertical" Grid.Row="0">
+			<Label Content="Reward 1 Device Name" />
+			<TextBox Name="tbReward1DeviceName" TextChanged="tbReward1DeviceName_TextChanged"  HorizontalAlignment="Left" Style="{StaticResource textbox}"/>
+			<Label Content="Reward 2 Device Name" />
+			<TextBox Name="tbReward2DeviceName" TextChanged="tbReward2DeviceName_TextChanged"  HorizontalAlignment="Left" Style="{StaticResource textbox}"/>
+		</StackPanel>
+		<views:MazeVisualizer Grid.Row="1" x:Name="mazeVisualizer" OnSelectedMazeIndexChanged="mazeVisualizer_OnMazeClicked" Maze="maze_01_level"/>
 		<StackPanel Grid.Row="2" HorizontalAlignment="Left" Orientation="Vertical">
 			<Label Name="toggleRewardTriggerIsEnabledLabel" Content="Is Reward Trigger Enabled?"/>
 			<controls:ToggleSwitch HorizontalAlignment="Left" Name="toggleRewardTriggerIsEnabled" OffLabel="" OnLabel="" IsCheckedChanged="toggleRewardTriggerIsEnabled_IsCheckedChanged"/>

@@ -14,6 +14,43 @@ namespace RodentVRSettings.Presenters
 
 		const int REWARD_TRIGGER_OFFSET = 4;
 
+		#region Reward1DeviceName 
+		public string Reward1DeviceName
+		{
+			get
+			{
+				return settings.Reward1DeviceName;
+			}
+			set
+			{
+				if (Reward1DeviceName != value)
+				{
+					settings.Reward1DeviceName = value;
+					View.Reward1DeviceName = value;
+				}
+			}
+		}
+		#endregion
+
+		#region Reward2DeviceName
+		public string Reward2DeviceName
+		{
+			get
+			{
+				return settings.Reward2DeviceName;
+			}
+			set
+			{
+				if (Reward2DeviceName != value)
+				{
+					settings.Reward2DeviceName = value;
+					View.Reward2DeviceName = value;
+				}
+			}
+		}
+		#endregion
+
+
 		#region SelectedIndex Property
 		private int selectedIndex;
 
@@ -64,6 +101,9 @@ namespace RodentVRSettings.Presenters
 
 			var materials = this.Settings.GetMaterials(this.Settings.InitialMaze);
 			View.SetMaterials(materials);
+
+			View.Reward1DeviceName = this.Reward1DeviceName;
+			View.Reward2DeviceName = this.Reward2DeviceName;
 		}
 
 		public bool SelectedIndexInRange(int value)
