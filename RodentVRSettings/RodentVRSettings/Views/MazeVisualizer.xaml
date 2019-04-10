@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:RodentVRSettings.Views"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-	<Border Margin="10" BorderBrush="Black" BorderThickness="1" Grid.Column="0" Grid.Row="0" Background="LightGray">
+	<Border Margin="{StaticResource defaultMargin}" BorderBrush="Black" BorderThickness="1" Grid.Column="0" Grid.Row="0" Background="LightGray">
 		<Grid Name="gridImage">
 
 		</Grid>

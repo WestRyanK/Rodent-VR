@@ -68,6 +68,36 @@ namespace RodentVRSettings.Views
 			this.Presenter.Init(settings);
 		}
 
+		#region Reward 1 Device Name
+		private void tbReward1DeviceName_TextChanged(object sender, TextChangedEventArgs e)
+		{
+			Presenter.Reward1DeviceName = tbReward1DeviceName.Text;
+		}
+
+		public string Reward1DeviceName
+		{
+			set
+			{
+				tbReward1DeviceName.Text = value;
+			}
+		}
+		#endregion
+
+		#region Reward 2 Device Name
+		private void tbReward2DeviceName_TextChanged(object sender, TextChangedEventArgs e)
+		{
+			Presenter.Reward2DeviceName = tbReward2DeviceName.Text;
+		}
+
+		public string Reward2DeviceName
+		{
+			set
+			{
+				tbReward2DeviceName.Text = value;
+			}
+		}
+		#endregion
+
 		public void SetMaterials(MaterialsEnum[] materials)
 		{
 			for (int i = 0; i < materials.Length; i++)

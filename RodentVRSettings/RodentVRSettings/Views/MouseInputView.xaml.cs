@@ -57,7 +57,6 @@ namespace RodentVRSettings.Views
 		}
 		#endregion
 
-
 		#region Mouse B Device Name
 		private void tbMouseBDeviceName_TextChanged(object sender, TextChangedEventArgs e)
 		{

@@ -9,6 +9,10 @@ namespace RodentVRSettings.Contracts
 {
 	public interface RewardSystemViewContract
 	{
+		string Reward1DeviceName { set; }
+
+		string Reward2DeviceName { set; }
+
 		void SetMaterials(MaterialsEnum[] materials);
 
 		void SetRewardTriggerIsEnabled(bool isEnabled);
@@ -29,6 +33,10 @@ namespace RodentVRSettings.Contracts
 	{
 		Contracts.RewardSystemViewContract View { set; }
 		
+		string Reward1DeviceName { set; }
+
+		string Reward2DeviceName { set; }
+
 		bool CurrentRewardTriggerIsEnabled { get; set; }
 
 		float CurrentRewardTriggerDuration { get; set; }
