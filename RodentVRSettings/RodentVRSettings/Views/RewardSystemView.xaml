@@ -14,14 +14,14 @@
 			<RowDefinition Height="*"/>
 			<RowDefinition Height="auto"/>
 		</Grid.RowDefinitions>
-		<views:MazeVisualizer x:Name="mazeVisualizer" OnSelectedMazeIndexChanged="mazeVisualizer_OnMazeClicked"   Maze="maze_01_level"/>
+		<views:MazeVisualizer x:Name="mazeVisualizer" OnSelectedMazeIndexChanged="mazeVisualizer_OnMazeClicked" Maze="maze_01_level"/>
 		<StackPanel Grid.Row="2" HorizontalAlignment="Left" Orientation="Vertical">
 			<Label Name="toggleRewardTriggerIsEnabledLabel" Content="Is Reward Trigger Enabled?"/>
 			<controls:ToggleSwitch HorizontalAlignment="Left" Name="toggleRewardTriggerIsEnabled" OffLabel="" OnLabel="" IsCheckedChanged="toggleRewardTriggerIsEnabled_IsCheckedChanged"/>
 			<Label Name="nudRewardTriggerDurationLabel" Content="Duration"/>
-			<controls:NumericUpDown Name="nudRewardTriggerDuration" Minimum="0" Maximum="100" HasDecimals="True" StringFormat="{}{0:#.0} seconds" Interval="0.1" Width="{StaticResource controlWidth}" ValueChanged="nudRewardTriggerDuration_ValueChanged"/>
+			<controls:NumericUpDown Name="nudRewardTriggerDuration" Minimum="0" Maximum="100" HasDecimals="True" StringFormat="{}{0:#.0} seconds" Interval="0.1"  ValueChanged="nudRewardTriggerDuration_ValueChanged"/>
 			<Label Name="ddRewardTriggerRewardLabel" Content="Reward"/>
-			<ComboBox Name="ddRewardTriggerReward" SelectionChanged="ddRewardTriggerReward_SelectionChanged" Width="{StaticResource controlWidth}" HorizontalAlignment="Center">
+			<ComboBox Name="ddRewardTriggerReward" SelectionChanged="ddRewardTriggerReward_SelectionChanged"  HorizontalAlignment="Center">
 				<ComboBox.Items>
 					<sys:Int32>1</sys:Int32>
 					<sys:Int32>2</sys:Int32>

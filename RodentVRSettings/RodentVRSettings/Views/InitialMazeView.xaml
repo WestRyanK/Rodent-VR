@@ -11,11 +11,11 @@
 
 	<StackPanel Orientation="Vertical">
 		<Label Content="Initial Maze" />
-		<ComboBox Name="ddInitialMaze" SelectionChanged="ddInitialMaze_SelectionChanged" Width="{StaticResource controlWidth}" HorizontalAlignment="Left">
+		<ComboBox Name="ddInitialMaze" SelectionChanged="ddInitialMaze_SelectionChanged" HorizontalAlignment="Left" Height="{StaticResource thumbnailComboHeight}">
 			<ComboBox.ItemTemplate>
 				<DataTemplate>
-					<StackPanel Orientation="Horizontal">
-						<Image HorizontalAlignment="Right" VerticalAlignment="Center" Width="100" Height="100" Source="{ Binding Converter={converters:ResourceLoaderConverter}}"/>
+					<StackPanel Orientation="Horizontal" Margin="5" VerticalAlignment="Center">
+						<Image HorizontalAlignment="Right" VerticalAlignment="Center" Width="{StaticResource thumbnailSize}" Height="{StaticResource thumbnailSize}" Source="{ Binding Converter={converters:ResourceLoaderConverter}}"/>
 						<Label VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Content="{Binding}"/>
 					</StackPanel>
 				</DataTemplate>

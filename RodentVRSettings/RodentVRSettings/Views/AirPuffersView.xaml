@@ -36,15 +36,15 @@
 	</UserControl.Resources>
 	<StackPanel Orientation="Vertical">
 		<Label Content="Left Air Puffer Device Name"/>
-		<TextBox Name="tbAirPufferLeftDeviceName" TextChanged="tbAirPufferLeftDeviceName_TextChanged" Width="{StaticResource controlWidth}" HorizontalAlignment="Left"/>
+		<TextBox Name="tbAirPufferLeftDeviceName" TextChanged="tbAirPufferLeftDeviceName_TextChanged"  HorizontalAlignment="Left" Style="{StaticResource textbox}"/>
 		<Label Content="Right Air Puffer Device Name" />
-		<TextBox Name="tbAirPufferRightDeviceName" TextChanged="tbAirPufferRightDeviceName_TextChanged" Width="{StaticResource controlWidth}" HorizontalAlignment="Left"/>
+		<TextBox Name="tbAirPufferRightDeviceName" TextChanged="tbAirPufferRightDeviceName_TextChanged"  HorizontalAlignment="Left" Style="{StaticResource textbox}"/>
 		<Label Content="Front-Facing Angle Tolerance" />
 		<controls:NumericUpDown Name="nudAirPufferFrontAngle" ValueChanged="nudAirPufferFrontAngle_ValueChanged" 
-								Minimum="0" Maximum="90" HasDecimals="True" StringFormat="{}{0:#.0} degrees" Interval="0.5" Width="{StaticResource controlWidth}" 
-								HorizontalAlignment="Left" Speedup="False"/>
-
-		<Border HorizontalAlignment="Left" Margin="10" BorderBrush="Black" BorderThickness="1" Grid.Column="0" Grid.Row="0" Background="LightGray" Width="{StaticResource controlWidth}">
+								Minimum="0" Maximum="90" HasDecimals="True" StringFormat="{}{0:#.0} degrees" Interval="0.5"  
+								HorizontalAlignment="Left" Speedup="False" />
+		<Label Content="Visualization of Air Puffer Activation Angles" />
+		<Border HorizontalAlignment="Left" Width="{StaticResource controlWidth}" Margin="{StaticResource defaultMargin}" BorderBrush="Black" BorderThickness="1" Grid.Column="0" Grid.Row="0" Background="LightGray" >
 			<Grid Margin="10">
 				<Grid.ColumnDefinitions>
 					<ColumnDefinition Width="*"/>
