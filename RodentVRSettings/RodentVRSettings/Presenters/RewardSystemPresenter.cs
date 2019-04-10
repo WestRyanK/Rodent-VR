@@ -12,6 +12,8 @@ namespace RodentVRSettings.Presenters
 	{
 		public RewardSystemViewContract View { get; set; }
 
+		const int REWARD_TRIGGER_OFFSET = 4;
+
 		#region SelectedIndex Property
 		private int selectedIndex;
 
@@ -58,13 +60,37 @@ namespace RodentVRSettings.Presenters
 			if (settings != null)
 				this.Settings = settings;
 
+			View.CurrentMaze = this.Settings.InitialMaze;
+
 			var materials = this.Settings.GetMaterials(this.Settings.InitialMaze);
 			View.SetMaterials(materials);
 		}
 
 		public bool SelectedIndexInRange(int value)
 		{
+			if (this.Settings.InitialMaze == MazesEnum.maze_01_level)
+				value -= REWARD_TRIGGER_OFFSET;
+
 			return (value >= 0 && value < this.Settings.GetRewardTriggers(this.Settings.InitialMaze).Length);
+		}
+
+		private RewardTrigger GetRewardTrigger()
+		{
+			var rewards = this.Settings.GetRewardTriggers(this.Settings.InitialMaze);
+			int index;
+			switch (this.Settings.InitialMaze)
+			{
+				case MazesEnum.maze_01_level:
+					index = this.SelectedIndex - REWARD_TRIGGER_OFFSET;
+					break;
+				case MazesEnum.maze_02_level:
+					index = this.SelectedIndex;
+					break;
+				default:
+					throw new Exception("Please update me!");
+			}
+
+		return rewards[index];
 		}
 
 		#region CurrentRewardTriggerDuration Property
@@ -74,15 +100,16 @@ namespace RodentVRSettings.Presenters
 			{
 				if (this.SelectedIndex < 0)
 					return 0;
-				var rewards = this.Settings.GetRewardTriggers(this.Settings.InitialMaze);
-				return rewards[this.SelectedIndex].Duration;
+				var reward = this.GetRewardTrigger();
+				return reward.Duration;
+
 			}
 			set
 			{
 				if (this.SelectedIndex >= 0)
 				{
-					var rewards = this.Settings.GetRewardTriggers(this.Settings.InitialMaze);
-					rewards[this.SelectedIndex].Duration = value;
+					var reward = this.GetRewardTrigger();
+					reward.Duration = value;
 					View.SetRewardTriggerDuration(value);
 				}
 			}
@@ -96,15 +123,15 @@ namespace RodentVRSettings.Presenters
 			{
 				if (this.SelectedIndex < 0)
 					return 0;
-				var rewards = this.Settings.GetRewardTriggers(this.Settings.InitialMaze);
-				return rewards[this.SelectedIndex].Reward;
+				var reward = this.GetRewardTrigger();
+				return reward.Reward;
 			}
 			set
 			{
 				if (this.SelectedIndex >= 0)
 				{
-					var rewards = this.Settings.GetRewardTriggers(this.Settings.InitialMaze);
-					rewards[this.SelectedIndex].Reward = value;
+					var reward = this.GetRewardTrigger();
+					reward.Reward = value;
 					View.SetRewardTriggerReward(value);
 				}
 			}
@@ -118,15 +145,15 @@ namespace RodentVRSettings.Presenters
 			{
 				if (this.SelectedIndex < 0)
 					return false;
-				var rewards = this.Settings.GetRewardTriggers(this.Settings.InitialMaze);
-				return rewards[this.SelectedIndex].IsEnabled;
+				var reward = this.GetRewardTrigger();
+				return reward.IsEnabled;
 			}
 			set
 			{
 				if (this.SelectedIndex >= 0)
 				{
-					var rewards = this.Settings.GetRewardTriggers(this.Settings.InitialMaze);
-					rewards[this.SelectedIndex].IsEnabled = value;
+					var reward = this.GetRewardTrigger();
+					reward.IsEnabled = value;
 					View.SetRewardTriggerIsEnabled(value);
 				}
 			}
