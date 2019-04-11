@@ -40,8 +40,8 @@ Error:
 		DAQmxStopTask(taskHandle);
 		DAQmxClearTask(taskHandle);
 	}
-	if( DAQmxFailed(error) )
-		Debug(5.0f, FColor::Red, FString::Printf(TEXT("DAQmx Error: %S\n"),errBuff));
+	//if( DAQmxFailed(error) )
+	//	Debug(5.0f, FColor::Red, FString::Printf(TEXT("DAQmx Error: %S\n"),errBuff));
 		//printf("DAQmx Error: %s\n",errBuff);
 }
 
