@@ -9,7 +9,7 @@ namespace RodentVRSettings.Models.Configuration
 {
 	public class MultiEntry : Entry
 	{
-		protected const string IS_MULTIENTRY_REGEX = @"^\s*\w+=\(";
+		protected const string MULTIENTRY_REGEX = @"^\s*\w+=\(";
 		protected const int TRAILING_MULTIENTRY_LENGTH = 2; // "=(" is trailing part of string
 		protected const char END_OF_MULTIENTRY = ')';
 		protected const char MULTIENTRY_SEPARATOR = ',';
@@ -137,7 +137,7 @@ namespace RodentVRSettings.Models.Configuration
 
 		public static bool IsMultiEntry(string line)
 		{
-			bool isMultiEntry = Regex.IsMatch(line, IS_MULTIENTRY_REGEX);
+			bool isMultiEntry = Regex.IsMatch(line, MULTIENTRY_REGEX);
 			return isMultiEntry;
 		}
 		#endregion
