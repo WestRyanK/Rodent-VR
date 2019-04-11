@@ -246,6 +246,7 @@ namespace RodentVRSettings.Models.Configuration
 		public static ConfigurationFile ToConfigurationFile(ConfigurationSettings settings)
 		{
 			ConfigurationFile file = new ConfigurationFile();
+			InsertHeader(file);
 			object[] values = new object[]
 				{
 					settings.AirPuffLeftDeviceName,
@@ -270,6 +271,13 @@ namespace RodentVRSettings.Models.Configuration
 			}
 
 			return file;
+		}
+
+		private static void InsertHeader(ConfigurationFile file)
+		{
+			file.AddConfigurationEntry(new HeaderEntry("StartupActions"));
+			file.AddConfigurationEntry("bAddPacks", false);
+			file.AddConfigurationEntry(new HeaderEntry("/Game/RodentVR.RodentVR_C"));
 		}
 
 		private static void AddEntry(ConfigurationFile file, string name, RewardTrigger[] triggers)

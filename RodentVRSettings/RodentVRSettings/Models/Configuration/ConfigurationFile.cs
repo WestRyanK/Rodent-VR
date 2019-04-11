@@ -63,6 +63,11 @@ namespace RodentVRSettings.Models.Configuration
 					var multiEntry = MultiEntry.ParseConfigurationLine(line);
 					root.AddConfigurationEntry(multiEntry);
 				}
+				else if (HeaderEntry.IsHeaderEntry(line))
+				{
+					var headerEntry = HeaderEntry.ParseHeaderLine(line);
+					root.AddConfigurationEntry(headerEntry);
+				}
 				else
 				{
 					var entry = Entry.ParseConfigurationLine(line);
