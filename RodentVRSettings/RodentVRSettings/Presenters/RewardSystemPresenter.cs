@@ -89,6 +89,10 @@ namespace RodentVRSettings.Presenters
 			{
 				Init();
 			}
+			else if (e.PropertyName == nameof(this.Settings.Maze01Materials) || e.PropertyName == nameof(this.Settings.Maze02Materials))
+			{
+				Init();
+			}
 		}
 
 		public void Init(ConfigurationSettings settings = null)
