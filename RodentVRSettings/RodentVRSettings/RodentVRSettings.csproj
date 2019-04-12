@@ -132,6 +132,7 @@
     <Compile Include="Models\Configuration\MaterialsEnum.cs" />
     <Compile Include="Models\Configuration\MazesEnum.cs" />
     <Compile Include="Models\Configuration\MultiEntry.cs" />
+    <Compile Include="Models\Configuration\HeaderEntry.cs" />
     <Compile Include="Models\Configuration\RewardTrigger.cs" />
     <Compile Include="Models\ViewModelBase.cs" />
     <Compile Include="Presenters\AirPuffersPresenter.cs" />
@@ -258,15 +259,6 @@
     <Resource Include="Resources\maze_01_level_mask_03.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\maze_01_level_mask_04.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\maze_01_level_mask_05.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\maze_01_level_mask_06.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Resources\maze_01_level_selection_00.png" />
   </ItemGroup>
   <ItemGroup>
@@ -277,15 +269,6 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\maze_01_level_selection_03.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\maze_01_level_selection_04.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\maze_01_level_selection_05.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\maze_01_level_selection_06.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\maze_02_level_selection_00.png" />
@@ -313,6 +296,24 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\maze_02_level.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\maze_01_level_mask_04.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\maze_01_level_mask_05.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\maze_01_level_mask_06.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\maze_01_level_selection_04.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\maze_01_level_selection_05.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\maze_01_level_selection_06.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -26,7 +26,7 @@ void UBehaviorRecorder::save(FString filename)
 	char tab = '\t';
 
 	output << "#Snapshot Timestamp\tTrigger Region Identifier\tPosition.X\tPosition.Y\tPosition.Z\tForward.X\tForward.Y\tForward.Z" << std::endl;
-	for (int i = 0; i < UBehaviorRecorder::snapshots.size(); i++)
+	for (unsigned int i = 0; i < UBehaviorRecorder::snapshots.size(); i++)
 	{
 		BehaviorSnapshot snapshot = UBehaviorRecorder::snapshots[i];
 		output 
