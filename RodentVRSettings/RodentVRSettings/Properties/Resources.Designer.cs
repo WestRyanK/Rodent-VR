@@ -393,6 +393,16 @@ namespace RodentVRSettings.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap RodentIcon {
+            get {
+                object obj = ResourceManager.GetObject("RodentIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap stripes_large {
             get {
                 object obj = ResourceManager.GetObject("stripes_large", resourceCulture);

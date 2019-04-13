@@ -93,7 +93,7 @@
 			StartAngle="{Binding ElementName=nudAirPufferFrontAngle, Path=Value, Converter={converters:PufferAngleConverter}, ConverterParameter={StaticResource true}}"
 			EndAngle="{Binding ElementName=nudAirPufferFrontAngle, Path=Value, Converter={converters:PufferAngleConverter}, ConverterParameter={StaticResource false}}"/>
 
-				<Image Width="100" Height="100" Source="pack://application:,,,/resources/rodent.png" Grid.Column="1" RenderOptions.BitmapScalingMode="HighQuality"/>
+				<Image Width="100" Height="100" Source="pack://application:,,,/resources/RodentIcon.png" Grid.Column="1" RenderOptions.BitmapScalingMode="HighQuality"/>
 			</Grid>
 		</Border>
 	</StackPanel>

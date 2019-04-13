@@ -238,6 +238,7 @@
     <Resource Include="Resources\green.png" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Resources\RodentIcon.png" />
     <Resource Include="Resources\stripes_large.png" />
   </ItemGroup>
   <ItemGroup>
