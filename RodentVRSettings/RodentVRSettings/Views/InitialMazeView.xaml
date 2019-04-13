@@ -15,7 +15,7 @@
 			<ComboBox.ItemTemplate>
 				<DataTemplate>
 					<StackPanel Orientation="Horizontal" Margin="5" VerticalAlignment="Center">
-						<Image HorizontalAlignment="Right" VerticalAlignment="Center" Width="{StaticResource thumbnailSize}" Height="{StaticResource thumbnailSize}" Source="{ Binding Converter={converters:ResourceLoaderConverter}}"/>
+						<Image RenderOptions.BitmapScalingMode="HighQuality" HorizontalAlignment="Right" VerticalAlignment="Center" Width="{StaticResource thumbnailSize}" Height="{StaticResource thumbnailSize}" Source="{ Binding Converter={converters:ResourceLoaderConverter}}"/>
 						<Label VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Content="{Binding}"/>
 					</StackPanel>
 				</DataTemplate>
