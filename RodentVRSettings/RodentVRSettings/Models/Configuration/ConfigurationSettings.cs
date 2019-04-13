@@ -399,6 +399,23 @@ namespace RodentVRSettings.Models.Configuration
 			return materials;
 		}
 
+		public void SetMaterial(MazesEnum maze, int index, MaterialsEnum material)
+		{
+			var materials = this.GetMaterials(maze);
+			materials[index] = material;
+			switch (maze)
+			{
+				case MazesEnum.maze_01_level:
+					OnPropertyChanged(nameof(Maze01Materials));
+					break;
+				case MazesEnum.maze_02_level:
+					OnPropertyChanged(nameof(Maze02Materials));
+					break;
+				default:
+					break;
+			}
+		}
+
 		public static void Save(string fileName, ConfigurationSettings settings)
 		{
 			var configurationFile = ToConfigurationFile(settings);

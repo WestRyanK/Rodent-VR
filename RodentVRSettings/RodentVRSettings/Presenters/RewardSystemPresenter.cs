@@ -89,6 +89,10 @@ namespace RodentVRSettings.Presenters
 			{
 				Init();
 			}
+			else if (e.PropertyName == nameof(this.Settings.Maze01Materials) || e.PropertyName == nameof(this.Settings.Maze02Materials))
+			{
+				Init();
+			}
 		}
 
 		public void Init(ConfigurationSettings settings = null)
@@ -121,15 +125,9 @@ namespace RodentVRSettings.Presenters
 			{
 				case MazesEnum.maze_01_level:
 					index = this.SelectedIndex - REWARD_TRIGGER_OFFSET;
-					// Indices for reward triggers are different in RodentVRSettings and RodentVR.
-					//if (index == 2) index = 1;
-					//else if (index == 1) index = 2;
 					break;
 				case MazesEnum.maze_02_level:
 					index = this.SelectedIndex;
-					// Indices for reward triggers are different in RodentVRSettings and RodentVR.
-					//if (index == 2) index = 0;
-					//else if (index == 0) index = 2;
 					break;
 				default:
 					throw new Exception("Please update me!");

@@ -86,8 +86,7 @@ namespace RodentVRSettings.Presenters
 			{
 				if (this.SelectedIndex >= 0)
 				{
-					var materials = this.Settings.GetMaterials(this.Settings.InitialMaze);
-					materials[this.SelectedIndex] = value;
+					this.Settings.SetMaterial(this.Settings.InitialMaze, this.SelectedIndex, value);
 					View.SetMaterial(this.SelectedIndex, value);
 				}
 			}
