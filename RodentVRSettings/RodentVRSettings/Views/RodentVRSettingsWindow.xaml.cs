@@ -2,6 +2,7 @@
 using System.Windows;
 using System.Windows.Interop;
 using MahApps.Metro.Controls;
+using MahApps.Metro.Controls.Dialogs;
 using Microsoft.Win32;
 using RodentVRSettings.Models.Configuration;
 
@@ -28,11 +29,19 @@ namespace RodentVRSettings
 			}
 			catch (Exception e)
 			{
-				MessageBox.Show("The current configuration file could not be found.\nDefault configuration settings will be used.");
-				this.settings = new ConfigurationSettings();
 			}
+		}
 
+		protected override async void OnSourceInitialized(EventArgs e)
+		{
+			base.OnSourceInitialized(e);
+			await DisplayWelcomeMessageAsync();
+			InitMouseInput();
+			InitPresenters();
+		}
 
+		private void InitPresenters()
+		{
 			viewRewardSystem.Init(this.settings);
 			viewAirPuffers.Init(this.settings);
 			viewBehaviorRecording.Init(this.settings);
@@ -40,9 +49,30 @@ namespace RodentVRSettings
 			viewInitialMaze.Init(this.settings);
 		}
 
-		protected override void OnSourceInitialized(EventArgs e)
+		private async System.Threading.Tasks.Task DisplayWelcomeMessageAsync()
 		{
-			base.OnSourceInitialized(e);
+			do
+			{
+				MetroDialogSettings dialogSettings = new MetroDialogSettings();
+				dialogSettings.AffirmativeButtonText = "Create New";
+				dialogSettings.NegativeButtonText = "Open Existing";
+				var result = await this.ShowMessageAsync("Get Started", "Do you want to create a new settings file or open an existing one?", MessageDialogStyle.AffirmativeAndNegative, dialogSettings);
+
+				if (result == MessageDialogResult.Negative)
+				{
+					var settings = OpenConfig();
+					this.settings = settings;
+				}
+				else
+				{
+					this.settings = new ConfigurationSettings();
+				}
+			}
+			while (this.settings == null);
+		}
+
+		private void InitMouseInput()
+		{
 			viewMouseInput.Init(this.settings, this.CriticalHandle);
 			HwndSource source = HwndSource.FromHwnd(this.CriticalHandle);
 			source.AddHook(new HwndSourceHook(viewMouseInput.RawMouseInputDevice.WndProc));
@@ -68,21 +98,27 @@ namespace RodentVRSettings
 			return result;
 		}
 
-		private void menuitemOpen_Click(object sender, System.Windows.RoutedEventArgs e)
+		private ConfigurationSettings OpenConfig()
 		{
 			OpenFileDialog openConfigFileDialog = new OpenFileDialog();
 			bool? result = ShowConfigDialog(openConfigFileDialog);
 			if (result == true)
 			{
 				var configFileName = openConfigFileDialog.FileName;
-				this.settings = ConfigurationSettings.Read(configFileName);
+				var settings = ConfigurationSettings.Read(configFileName);
+				return settings;
+			}
+			return null;
+		}
 
-				viewRewardSystem.Init(this.settings);
-				viewAirPuffers.Init(this.settings);
-				viewBehaviorRecording.Init(this.settings);
-				viewMaterials.Init(this.settings);
-				viewMouseInput.Init(this.settings);
-				viewInitialMaze.Init(this.settings);
+		private void menuitemOpen_Click(object sender, System.Windows.RoutedEventArgs e)
+		{
+			var settings = OpenConfig();
+
+			if (settings != null)
+			{
+				this.settings = settings;
+				InitPresenters();
 			}
 		}
 
@@ -94,6 +130,16 @@ namespace RodentVRSettings
 			{
 				var configFileName = saveConfigFileDialog.FileName;
 				ConfigurationSettings.Save(configFileName, this.settings);
+			}
+		}
+
+		private async void menuitemNew_Click(object sender, RoutedEventArgs e)
+		{
+			var result = await this.ShowMessageAsync("New Configuration", "Are you sure you want to open a new configuration file? This will erase any unsaved changes.");
+			if (result == MessageDialogResult.Affirmative)
+			{
+				this.settings = new ConfigurationSettings();
+				InitPresenters();
 			}
 		}
 	}
