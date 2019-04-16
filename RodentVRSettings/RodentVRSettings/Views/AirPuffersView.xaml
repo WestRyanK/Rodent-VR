@@ -4,7 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
 			 xmlns:controls="http://metro.mahapps.com/winfx/xaml/controls"
-		     xmlns:view="clr-namespace:RodentVRSettings.Views"
+		     xmlns:views="clr-namespace:RodentVRSettings.Views"
 			 xmlns:converters="clr-namespace:RodentVRSettings.Converters"
 			 xmlns:sys="clr-namespace:System;assembly=mscorlib"
              mc:Ignorable="d" 
@@ -26,16 +26,18 @@
 			Use NI MAX to determine the device names, ports, and lines that are used to control the mechanisms for air puff feedback.
 			<LineBreak/>
 		</TextBlock>
-		<Label Content="Left Air Puffer Device Name"/>
+		<Label Content="Left Air Puffer Device Path"/>
 		<TextBlock Style="{StaticResource Description}">
 			When the rodent runs into a wall on its left side, this air puffer device will fire.
 		</TextBlock>
-		<TextBox Name="tbAirPufferLeftDeviceName" TextChanged="tbAirPufferLeftDeviceName_TextChanged"  HorizontalAlignment="Left" Style="{StaticResource textbox}"/>
-		<Label Content="Right Air Puffer Device Name" />
+		<views:DevicePathControl x:Name="devicenameAirPufferLeft" HorizontalAlignment="Left" OnDevicePathChanged="devicenameAirPufferLeft_OnDevicePathChanged"/>
+		<!--<TextBox Name="devicenameAirPufferLeft" TextChanged="devicenameAirPufferLeft_OnDevicePathChanged"  HorizontalAlignment="Left" Style="{StaticResource textbox}"/>-->
+		<Label Content="Right Air Puffer Device Path" />
 		<TextBlock Style="{StaticResource Description}">
 			When the rodent runs into a wall on its right side, this air puffer device will fire.
 		</TextBlock>
-		<TextBox Name="tbAirPufferRightDeviceName" TextChanged="tbAirPufferRightDeviceName_TextChanged"  HorizontalAlignment="Left" Style="{StaticResource textbox}"/>
+		<views:DevicePathControl x:Name="devicenameAirPufferRight" HorizontalAlignment="Left" OnDevicePathChanged="devicenameAirPufferRight_OnDevicePathChanged"/>
+		<!--<TextBox Name="devicenameAirPufferRight" TextChanged="tbAirPufferRightDeviceName_TextChanged"  HorizontalAlignment="Left" Style="{StaticResource textbox}"/>-->
 		<Label Content="Front-Facing Angle Tolerance" />
 		<TextBlock Style="{StaticResource Description}">
 			When the rodent runs into a wall head on, both air puffer devices will fire.
@@ -78,21 +80,21 @@
 
 
 				<Ellipse Width="{StaticResource PufferSize}" Height="{StaticResource PufferSize}" Fill="White" Grid.Column="1"/>
-				<view:PieSlice  x:Name="RightPufferActiveAngle" Grid.Column="1"
+				<views:PieSlice  x:Name="RightPufferActiveAngle" Grid.Column="1"
 			Width="{StaticResource PufferSize}" Height="{StaticResource PufferSize}"
 			Fill="{StaticResource AccentColorBrush4}" Stroke="White" StrokeThickness="2"
 			StartAngle="270" EndAngle="90"/>
-				<view:PieSlice  x:Name="LeftPufferActiveAngle" Grid.Column="1"
+				<views:PieSlice  x:Name="LeftPufferActiveAngle" Grid.Column="1"
 			Width="{StaticResource PufferSize}" Height="{StaticResource PufferSize}"
 			Fill="{StaticResource AccentColorBrush3}" Stroke="White" StrokeThickness="2"
 			StartAngle="90" EndAngle="270"/>
 
-				<view:PieSlice x:Name="BothPufferActiveAngleBackground" Grid.Column="1"
+				<views:PieSlice x:Name="BothPufferActiveAngleBackground" Grid.Column="1"
 			Width="{StaticResource PufferSize}" Height="{StaticResource PufferSize}" 
 			Fill="White" Stroke="White" StrokeThickness="2"
 			StartAngle="{Binding ElementName=nudAirPufferFrontAngle, Path=Value, Converter={converters:PufferAngleConverter}, ConverterParameter={StaticResource true}}"
 			EndAngle="{Binding ElementName=nudAirPufferFrontAngle, Path=Value, Converter={converters:PufferAngleConverter}, ConverterParameter={StaticResource false}}"/>
-				<view:PieSlice x:Name="BothPufferActiveAngle" Grid.Column="1"
+				<views:PieSlice x:Name="BothPufferActiveAngle" Grid.Column="1"
 			Width="{StaticResource PufferSize}" Height="{StaticResource PufferSize}" 
 			Fill="{StaticResource AccentColorBrush}" Stroke="White" StrokeThickness="2"
 			StartAngle="{Binding ElementName=nudAirPufferFrontAngle, Path=Value, Converter={converters:PufferAngleConverter}, ConverterParameter={StaticResource true}}"

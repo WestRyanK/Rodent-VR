@@ -37,31 +37,31 @@ namespace RodentVRSettings.Views
 		}
 
 		#region Air Puffer Left Device Name
-		private void tbAirPufferLeftDeviceName_TextChanged(object sender, TextChangedEventArgs e)
+		private void devicenameAirPufferLeft_OnDevicePathChanged(object sender, string e)
 		{
-			Presenter.AirPufferLeftDeviceName = tbAirPufferLeftDeviceName.Text;
+			Presenter.AirPufferLeftDeviceName = devicenameAirPufferLeft.DevicePath;
 		}
 
 		public string AirPufferLeftDeviceName
 		{
 			set
 			{
-				tbAirPufferLeftDeviceName.Text = value;
+				devicenameAirPufferLeft.DevicePath = value;
 			}
 		}
 		#endregion
 
 		#region Air Puffer Right Device Name
-		private void tbAirPufferRightDeviceName_TextChanged(object sender, TextChangedEventArgs e)
+		private void devicenameAirPufferRight_OnDevicePathChanged(object sender, string e)
 		{
-			Presenter.AirPufferRightDeviceName = tbAirPufferRightDeviceName.Text;
+			Presenter.AirPufferRightDeviceName = devicenameAirPufferRight.DevicePath;
 		}
 
 		public string AirPufferRightDeviceName
 		{
 			set
 			{
-				tbAirPufferRightDeviceName.Text = value;
+				devicenameAirPufferRight.DevicePath = value;
 			}
 		}
 		#endregion
