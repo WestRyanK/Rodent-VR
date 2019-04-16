@@ -32,10 +32,13 @@ namespace RodentVRSettings.Views
 				bool isValidSelection = Presenter.SelectedIndexInRange(value);
 
 				this.toggleRewardTriggerIsEnabledLabel.IsEnabled =
+					this.toggleRewardTriggerIsEnabledDescription.IsEnabled =
 					this.toggleRewardTriggerIsEnabled.IsEnabled =
 					this.nudRewardTriggerDurationLabel.IsEnabled =
+					this.nudRewardTriggerDurationDescription.IsEnabled =
 					this.nudRewardTriggerDuration.IsEnabled =
 					this.ddRewardTriggerRewardLabel.IsEnabled = 
+					this.ddRewardTriggerRewardDescription.IsEnabled = 
 					this.ddRewardTriggerReward.IsEnabled = isValidSelection;
 
 				if (isValidSelection)
