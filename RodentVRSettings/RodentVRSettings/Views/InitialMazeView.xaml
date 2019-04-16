@@ -10,13 +10,18 @@
              d:DesignHeight="450" d:DesignWidth="800">
 
 	<StackPanel Orientation="Vertical">
-		<Label Content="Initial Maze" />
+		<TextBlock Style="{StaticResource Description}">
+			The RodentVR simulator allows a rodent to explore a configurable virtual maze.
+			Multiple mazes are available for experimentation.
+		</TextBlock>
+		<Label Content="Current Maze" />
+		<TextBlock Style="{StaticResource Description}" Text="The maze that will be used in RodentVR"/>
 		<ComboBox Name="ddInitialMaze" SelectionChanged="ddInitialMaze_SelectionChanged" HorizontalAlignment="Left" Height="{StaticResource thumbnailComboHeight}">
 			<ComboBox.ItemTemplate>
 				<DataTemplate>
 					<StackPanel Orientation="Horizontal" Margin="5" VerticalAlignment="Center">
 						<Image RenderOptions.BitmapScalingMode="HighQuality" HorizontalAlignment="Right" VerticalAlignment="Center" Width="{StaticResource thumbnailSize}" Height="{StaticResource thumbnailSize}" Source="{ Binding Converter={converters:ResourceLoaderConverter}}"/>
-						<Label VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Content="{Binding}"/>
+						<TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding}"/>
 					</StackPanel>
 				</DataTemplate>
 			</ComboBox.ItemTemplate>

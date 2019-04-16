@@ -21,6 +21,15 @@
 			<sys:Double x:Key="thumbnailSize">50</sys:Double>
 			<sys:Double x:Key="thumbnailComboHeight">65</sys:Double>
 
+			<Style TargetType="{x:Type Label}">
+				<Setter Property="FontSize" Value="16"/>
+			</Style>
+			<Style TargetType="{x:Type TextBlock}" x:Key="Description">
+				<Setter Property="Margin" Value="4,0,4,4"/>
+				<Setter Property="MaxWidth" Value="500"/>
+				<Setter Property="TextWrapping" Value="Wrap"/>
+				<Setter Property="HorizontalAlignment" Value="Left"/>
+			</Style>
 			<Style TargetType="{x:Type Button}" BasedOn="{StaticResource MetroButton}">
 				<Setter Property="Margin" Value="{StaticResource defaultMargin}"/>
 			</Style>

@@ -21,32 +21,32 @@
 		</Menu>
 		<controls:MetroAnimatedSingleRowTabControl TabStripPlacement="Left">
 			<controls:MetroTabItem Header="Mazes">
-				<ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
+				<ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
 					<views:InitialMazeView x:Name="viewInitialMaze"/>
 				</ScrollViewer>
 			</controls:MetroTabItem>
 			<controls:MetroTabItem Header="Materials">
-				<ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
+				<ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
 					<views:MaterialsView x:Name="viewMaterials"/>
 				</ScrollViewer>
 			</controls:MetroTabItem>
 			<controls:MetroTabItem Header="Reward System">
-				<ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
+				<ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
 					<views:RewardSystemView x:Name="viewRewardSystem"/>
 				</ScrollViewer>
 			</controls:MetroTabItem>
 			<controls:MetroTabItem Header="Air Puffers">
-				<ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
+				<ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
 					<views:AirPuffersView x:Name="viewAirPuffers"/>
 				</ScrollViewer>
 			</controls:MetroTabItem>
 			<controls:MetroTabItem Header="Mouse Input">
-				<ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
+				<ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
 					<views:MouseInputView x:Name="viewMouseInput"/>
 				</ScrollViewer>
 			</controls:MetroTabItem>
 			<controls:MetroTabItem Header="Behavior Recording">
-				<ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
+				<ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
 					<views:BehaviorRecordingView x:Name="viewBehaviorRecording"/>
 				</ScrollViewer>
 			</controls:MetroTabItem>

@@ -16,34 +16,39 @@
 		<SolidColorBrush x:Key="LeftColor">AliceBlue</SolidColorBrush>
 		<SolidColorBrush x:Key="RightColor">DarkCyan</SolidColorBrush>
 		<SolidColorBrush x:Key="BothColor">LightSlateGray</SolidColorBrush>
-		<!--Template when the orientation of the Slider is Horizontal.-->
-		<ControlTemplate x:Key="TestSlider"
-						 TargetType="{x:Type Slider}">
-			<Grid>
-				<Track x:Name="PART_Track">
-					<Track.DecreaseRepeatButton>
-						<RepeatButton/>
-					</Track.DecreaseRepeatButton>
-					<Track.IncreaseRepeatButton>
-						<RepeatButton/>
-					</Track.IncreaseRepeatButton>
-					<Track.Thumb>
-						<Thumb/>
-					</Track.Thumb>
-				</Track>
-			</Grid>
-		</ControlTemplate>
 	</UserControl.Resources>
 	<StackPanel Orientation="Vertical">
+		<TextBlock Style="{StaticResource Description}">
+			When the rodent runs into a wall, haptic feedback is given in the form of air puffs.
+			<LineBreak/>
+			The mechanism used to give air puff feedback is controlled by a National Instruments DAQ.
+			<LineBreak/>
+			Use NI MAX to determine the device names, ports, and lines that are used to control the mechanisms for air puff feedback.
+			<LineBreak/>
+		</TextBlock>
 		<Label Content="Left Air Puffer Device Name"/>
+		<TextBlock Style="{StaticResource Description}">
+			When the rodent runs into a wall on its left side, this air puffer device will fire.
+		</TextBlock>
 		<TextBox Name="tbAirPufferLeftDeviceName" TextChanged="tbAirPufferLeftDeviceName_TextChanged"  HorizontalAlignment="Left" Style="{StaticResource textbox}"/>
 		<Label Content="Right Air Puffer Device Name" />
+		<TextBlock Style="{StaticResource Description}">
+			When the rodent runs into a wall on its right side, this air puffer device will fire.
+		</TextBlock>
 		<TextBox Name="tbAirPufferRightDeviceName" TextChanged="tbAirPufferRightDeviceName_TextChanged"  HorizontalAlignment="Left" Style="{StaticResource textbox}"/>
 		<Label Content="Front-Facing Angle Tolerance" />
+		<TextBlock Style="{StaticResource Description}">
+			When the rodent runs into a wall head on, both air puffer devices will fire.
+			<LineBreak/>
+			This changes the range of angles which is considered a head on collision with the wall.
+		</TextBlock>
 		<controls:NumericUpDown Name="nudAirPufferFrontAngle" ValueChanged="nudAirPufferFrontAngle_ValueChanged" 
 								Minimum="0" Maximum="90" HasDecimals="True" StringFormat="{}{0:#.0} degrees" Interval="0.5"  
 								HorizontalAlignment="Left" Speedup="False" />
 		<Label Content="Visualization of Air Puffer Activation Angles" />
+		<TextBlock Style="{StaticResource Description}">
+			A graphical representation for the ranges of angles which will trigger air puffers.
+		</TextBlock>
 		<Border HorizontalAlignment="Left" Width="{StaticResource controlWidth}" Margin="{StaticResource defaultMargin}" BorderBrush="Black" BorderThickness="1" Grid.Column="0" Grid.Row="0" Background="LightGray" >
 			<Grid Margin="10">
 				<Grid.ColumnDefinitions>

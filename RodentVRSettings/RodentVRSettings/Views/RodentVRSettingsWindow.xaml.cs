@@ -21,15 +21,6 @@ namespace RodentVRSettings
 		public MainWindow()
 		{
 			InitializeComponent();
-
-			try
-			{
-				var configFileName = System.IO.Path.Combine(GetInitialDirectory(), DEFAULT_FILENAME);
-				this.settings = ConfigurationSettings.Read(configFileName);
-			}
-			catch (Exception e)
-			{
-			}
 		}
 
 		protected override async void OnSourceInitialized(EventArgs e)
@@ -56,6 +47,7 @@ namespace RodentVRSettings
 				MetroDialogSettings dialogSettings = new MetroDialogSettings();
 				dialogSettings.AffirmativeButtonText = "Create New";
 				dialogSettings.NegativeButtonText = "Open Existing";
+				dialogSettings.AnimateShow = false;
 				var result = await this.ShowMessageAsync("Get Started", "Do you want to create a new settings file or open an existing one?", MessageDialogStyle.AffirmativeAndNegative, dialogSettings);
 
 				if (result == MessageDialogResult.Negative)
