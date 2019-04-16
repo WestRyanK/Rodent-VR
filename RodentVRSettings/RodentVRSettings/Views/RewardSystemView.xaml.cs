@@ -37,8 +37,8 @@ namespace RodentVRSettings.Views
 					this.nudRewardTriggerDurationLabel.IsEnabled =
 					this.nudRewardTriggerDurationDescription.IsEnabled =
 					this.nudRewardTriggerDuration.IsEnabled =
-					this.ddRewardTriggerRewardLabel.IsEnabled = 
-					this.ddRewardTriggerRewardDescription.IsEnabled = 
+					this.ddRewardTriggerRewardLabel.IsEnabled =
+					this.ddRewardTriggerRewardDescription.IsEnabled =
 					this.ddRewardTriggerReward.IsEnabled = isValidSelection;
 
 				if (isValidSelection)
@@ -79,31 +79,31 @@ namespace RodentVRSettings.Views
 		}
 
 		#region Reward 1 Device Name
-		private void tbReward1DeviceName_TextChanged(object sender, TextChangedEventArgs e)
+		private void devicenameReward1_OnDevicePathChanged(object sender, string e)
 		{
-			Presenter.Reward1DeviceName = tbReward1DeviceName.Text;
+			Presenter.Reward1DeviceName = devicenameReward1.DevicePath;
 		}
 
 		public string Reward1DeviceName
 		{
 			set
 			{
-				tbReward1DeviceName.Text = value;
+				devicenameReward1.DevicePath = value;
 			}
 		}
 		#endregion
 
 		#region Reward 2 Device Name
-		private void tbReward2DeviceName_TextChanged(object sender, TextChangedEventArgs e)
+		private void devicenameReward2_OnDevicePathChanged(object sender, string e)
 		{
-			Presenter.Reward2DeviceName = tbReward2DeviceName.Text;
+			Presenter.Reward2DeviceName = devicenameReward2.DevicePath;
 		}
 
 		public string Reward2DeviceName
 		{
 			set
 			{
-				tbReward2DeviceName.Text = value;
+				devicenameReward2.DevicePath = value;
 			}
 		}
 		#endregion
@@ -134,7 +134,7 @@ namespace RodentVRSettings.Views
 		private void nudRewardTriggerDuration_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double?> e)
 		{
 			if (Presenter.SelectedIndex != -1)
-			this.Presenter.CurrentRewardTriggerDuration = (float)this.nudRewardTriggerDuration.Value;
+				this.Presenter.CurrentRewardTriggerDuration = (float)this.nudRewardTriggerDuration.Value;
 		}
 
 		private void ddRewardTriggerReward_SelectionChanged(object sender, SelectionChangedEventArgs e)

@@ -87,6 +87,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\DevicePathControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\MaterialsView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -151,6 +155,9 @@
     </Compile>
     <Compile Include="Views\BehaviorRecordingView.xaml.cs">
       <DependentUpon>BehaviorRecordingView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DevicePathControl.xaml.cs">
+      <DependentUpon>DevicePathControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\MaterialsView.xaml.cs">
       <DependentUpon>MaterialsView.xaml</DependentUpon>
