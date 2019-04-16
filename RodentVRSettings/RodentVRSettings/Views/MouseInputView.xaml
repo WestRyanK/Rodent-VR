@@ -21,30 +21,30 @@
 			To record which computer mouse is positioned behind the rodent and which is to its side, click the buttons
 			below with the correct mice. The mouse's name will be displayed in the text box to the side of the button.
 		</TextBlock>
-		<Label Content="Behind Mouse Device Name" />
-		<TextBlock Style="{StaticResource Description}">
-			The mouse that is positioned behind the rodent.
-		</TextBlock>
-		<StackPanel Orientation="Horizontal">
-			<TextBox Name="tbMouseADeviceName" Style="{StaticResource textbox}" Grid.Column="0" TextChanged="tbMouseADeviceName_TextChanged" />
-			<Button Name="bttnMouseA" Click="bttnMouse_Click" Margin="4,0,0,10" Content="Click with Behind Mouse"/>
-		</StackPanel>
-		<Label Content="Behind Mouse Multiplier" />
-		<TextBlock Style="{StaticResource Description}">
-			How much to move RodentVR simulation forward when the rodent rolls the ball forward.
-		</TextBlock>
-		<controls:NumericUpDown Name="nudMouseAMultiplier" ValueChanged="nudMouseAMultiplier_ValueChanged" Minimum="-100" Maximum="100" HasDecimals="True" Interval="0.0025" StringFormat="N4" HorizontalAlignment="Left" />
 		<Label Content="Side Mouse Device Name" />
 		<TextBlock Style="{StaticResource Description}">
 			The mouse that is positioned to the right of the rodent.
 		</TextBlock>
 		<StackPanel Orientation="Horizontal">
-			<TextBox Name="tbMouseBDeviceName" Style="{StaticResource textbox}" TextChanged="tbMouseBDeviceName_TextChanged"/>
-			<Button Name="bttnMouseB" Click="bttnMouse_Click" Margin="4,0,0,10" Content="Click with Side Mouse"/>
+			<TextBox Name="tbMouseADeviceName" Style="{StaticResource textbox}" Grid.Column="0" TextChanged="tbMouseADeviceName_TextChanged" />
+			<Button Name="bttnMouseA" Click="bttnMouse_Click" Margin="4,0,0,10" Content="Click with Side Mouse"/>
 		</StackPanel>
 		<Label Content="Side Mouse Multiplier" />
 		<TextBlock Style="{StaticResource Description}">
 			How much to rotate the RodentVR simulation when the rodent rolls the ball sideways.
+		</TextBlock>
+		<controls:NumericUpDown Name="nudMouseAMultiplier" ValueChanged="nudMouseAMultiplier_ValueChanged" Minimum="-100" Maximum="100" HasDecimals="True" Interval="0.0025" StringFormat="N4" HorizontalAlignment="Left" />
+		<Label Content="Behind Mouse Device Name" />
+		<TextBlock Style="{StaticResource Description}">
+			The mouse that is positioned behind the rodent.
+		</TextBlock>
+		<StackPanel Orientation="Horizontal">
+			<TextBox Name="tbMouseBDeviceName" Style="{StaticResource textbox}" TextChanged="tbMouseBDeviceName_TextChanged"/>
+			<Button Name="bttnMouseB" Click="bttnMouse_Click" Margin="4,0,0,10" Content="Click with Behind Mouse"/>
+		</StackPanel>
+		<Label Content="Behind Mouse Multiplier" />
+		<TextBlock Style="{StaticResource Description}">
+			How much to move RodentVR simulation forward when the rodent rolls the ball forward.
 		</TextBlock>
 		<controls:NumericUpDown Name="nudMouseBMultiplier" ValueChanged="nudMouseBMultiplier_ValueChanged" Minimum="-100" Maximum="100" HasDecimals="True" Interval="0.0025" StringFormat="N4" HorizontalAlignment="Left"  />
 		<Separator Background="Transparent" Height="50"/>

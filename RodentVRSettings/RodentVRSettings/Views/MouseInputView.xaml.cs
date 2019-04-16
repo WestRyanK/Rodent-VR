@@ -75,14 +75,14 @@ namespace RodentVRSettings.Views
 		#region Mouse A Multiplier
 		private void nudMouseAMultiplier_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double?> e)
 		{
-			Presenter.MouseAMultiplier = (float)nudMouseAMultiplier.Value;
+			Presenter.MouseAMultiplier = -(float)nudMouseAMultiplier.Value;
 		}
 
 		public float MouseAMultiplier
 		{
 			set
 			{
-				nudMouseAMultiplier.Value = value;
+				nudMouseAMultiplier.Value = -value;
 			}
 		}
 		#endregion
