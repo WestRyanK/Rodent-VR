@@ -17,7 +17,7 @@
 			</ResourceDictionary.MergedDictionaries>
 
 			<Thickness x:Key="defaultMargin">4,0,4,10</Thickness>
-			<sys:Double x:Key="controlWidth">400</sys:Double>
+			<sys:Double x:Key="controlWidth">375</sys:Double>
 			<sys:Double x:Key="thumbnailSize">50</sys:Double>
 			<sys:Double x:Key="thumbnailComboHeight">65</sys:Double>
 

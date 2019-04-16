@@ -18,10 +18,10 @@
 				Use NI MAX to determine the device names, ports, and lines that are used to control the reward dispenser mechanism.
 		</TextBlock>
 		<Label Content="Reward 1 Device Path" />
-		<views:DevicePathControl x:Name="devicenameReward1" HorizontalAlignment="Left" OnDevicePathChanged="devicenameReward1_OnDevicePathChanged"/>
+		<views:DevicePathControl x:Name="devicenameReward1" HorizontalAlignment="Left" OnDevicePathChanged="devicenameReward1_OnDevicePathChanged" Width="{StaticResource controlWidth}"/>
 		<!--<TextBox Name="devicenameReward1" TextChanged="devicenameReward1_OnDevicePathChanged"  HorizontalAlignment="Left" Style="{StaticResource textbox}"/>-->
 		<Label Content="Reward 2 Device Path" />
-		<views:DevicePathControl x:Name="devicenameReward2" HorizontalAlignment="Left" OnDevicePathChanged="devicenameReward2_OnDevicePathChanged"/>
+		<views:DevicePathControl x:Name="devicenameReward2" HorizontalAlignment="Left" OnDevicePathChanged="devicenameReward2_OnDevicePathChanged" Width="{StaticResource controlWidth}"/>
 		<!--<TextBox Name="devicenameReward2" TextChanged="devicenameReward2_OnDevicePathChanged"  HorizontalAlignment="Left" Style="{StaticResource textbox}"/>-->
 		<Label Content="Reward Regions Visualizer"/>
 		<TextBlock Style="{StaticResource Description}">

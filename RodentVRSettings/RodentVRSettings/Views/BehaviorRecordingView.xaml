@@ -28,18 +28,11 @@
 			The following is the format of the data:
 		</TextBlock>
 		<TextBlock Style="{StaticResource Description}" xml:space="preserve">T      R      P.X      P.Y      P.Z      F.X      F.Y      F.Z</TextBlock>
-		<TextBlock Style="{StaticResource Description}">
- <Bold>T</Bold> - The timestamp of the frame. Measured in seconds from 
-     when the simulation first started.
-			<LineBreak/>
- <Bold>R</Bold> - A number representing the reward region that the rodent is
-     currently in. If the value is -1, the rodent is not in
-     any of the reward regions.
-			<LineBreak/>
- <Bold>P</Bold> - A 3D vector (X, Y, Z) representing the position of the
-     rodent at the time of the frame.
-			<LineBreak/>
- <Bold>F</Bold> - A 3D vector (X, Y, Z) representing the direction that the rodent is facing.
-		</TextBlock>
+		<TextBlock xml:space="preserve" Style="{StaticResource Description}"><Bold>T</Bold> - The timestamp of the frame. Measured in seconds from 
+      when the simulation first started.
+<Bold>R</Bold> - A number representing the reward region that the rodent is currently in. 
+      If the value is -1, the rodent is not in any of the reward regions.
+<Bold>P</Bold> - A 3D vector (X, Y, Z) representing the position of the rodent at the time of the frame.
+<Bold>F</Bold> - A 3D vector (X, Y, Z) representing the direction that the rodent is facing.</TextBlock>
 	</StackPanel>
 </UserControl>

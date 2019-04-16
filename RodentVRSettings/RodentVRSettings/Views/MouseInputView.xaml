@@ -8,19 +8,54 @@
 			 mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
 	<StackPanel Orientation="Vertical">
-		<Label Content="Mouse A Device Name" />
+		<TextBlock Style="{StaticResource Description}">
+			Movement input for the RodentVR simulation is received through two mice plugged into the computer.
+			The mice are positioned so as to touch the equator of the ball that the rodent walks on, with one 
+			mouse behind the rodent and the other to the right of the rodent. The mouse behind the rodent measures
+			the rodent's forward and backward movement, while the mouse on the side measures the rodent's orientation.
+			<LineBreak/>
+			Since multiple computer mice are used as input, RodentVR needs to be told which computer mouse is placed
+			behind the rodent and which is placed to its side.
+			<LineBreak/>
+			<LineBreak/>
+			To record which computer mouse is positioned behind the rodent and which is to its side, click the buttons
+			below with the correct mice. The mouse's name will be displayed in the text box to the side of the button.
+		</TextBlock>
+		<Label Content="Side Mouse Device Name" />
+		<TextBlock Style="{StaticResource Description}">
+			The mouse that is positioned to the right of the rodent.
+		</TextBlock>
 		<StackPanel Orientation="Horizontal">
-			<TextBox Name="tbMouseADeviceName" TextChanged="tbMouseADeviceName_TextChanged"  HorizontalAlignment="Left" Style="{StaticResource textbox}"/>
-			<Button Name="bttnMouseA" Click="bttnMouse_Click" Content="Click with Mouse A"/>
+			<TextBox Name="tbMouseADeviceName" Style="{StaticResource textbox}" Grid.Column="0" TextChanged="tbMouseADeviceName_TextChanged" />
+			<Button Name="bttnMouseA" Click="bttnMouse_Click" Margin="4,0,0,10" Content="Click with Side Mouse"/>
 		</StackPanel>
-		<Label Content="Mouse A Multiplier" />
+		<Label Content="Side Mouse Multiplier" />
+		<TextBlock Style="{StaticResource Description}">
+			How much to rotate the RodentVR simulation when the rodent rolls the ball sideways.
+		</TextBlock>
 		<controls:NumericUpDown Name="nudMouseAMultiplier" ValueChanged="nudMouseAMultiplier_ValueChanged" Minimum="-100" Maximum="100" HasDecimals="True" Interval="0.0025" StringFormat="N4" HorizontalAlignment="Left" />
-		<Label Content="Mouse B Device Name" />
+		<Label Content="Behind Mouse Device Name" />
+		<TextBlock Style="{StaticResource Description}">
+			The mouse that is positioned behind the rodent.
+		</TextBlock>
 		<StackPanel Orientation="Horizontal">
-			<TextBox Name="tbMouseBDeviceName" TextChanged="tbMouseBDeviceName_TextChanged"  HorizontalAlignment="Left" Style="{StaticResource textbox}"/>
-			<Button Name="bttnMouseB" Click="bttnMouse_Click" Content="Click with Mouse B"/>
+			<TextBox Name="tbMouseBDeviceName" Style="{StaticResource textbox}" TextChanged="tbMouseBDeviceName_TextChanged"/>
+			<Button Name="bttnMouseB" Click="bttnMouse_Click" Margin="4,0,0,10" Content="Click with Behind Mouse"/>
 		</StackPanel>
-		<Label Content="Mouse B Multiplier" />
+		<Label Content="Behind Mouse Multiplier" />
+		<TextBlock Style="{StaticResource Description}">
+			How much to move RodentVR simulation forward when the rodent rolls the ball forward.
+		</TextBlock>
 		<controls:NumericUpDown Name="nudMouseBMultiplier" ValueChanged="nudMouseBMultiplier_ValueChanged" Minimum="-100" Maximum="100" HasDecimals="True" Interval="0.0025" StringFormat="N4" HorizontalAlignment="Left"  />
+		<Separator Background="Transparent" Height="50"/>
+		<TextBlock xml:space="preserve" Style="{StaticResource Description}">To manually find the computer mouse's Device Name, follow these steps:
+    1. Open Windows' Device Manager.
+    2. Click 'Mice and other pointing devices'.
+    3. Find the correct computer mouse in the list (it helps to unplug the other mice).
+    4. Right-click on the correct mouse and select 'Properties'.
+    5. Click on the 'Details' tab page.
+    6. In the 'Property' dropdown select 'Device instance path'.
+    7. Right-click copy the 'Value' and paste it into the 'Device Name' text box.
+		</TextBlock>
 	</StackPanel>
 </UserControl>
