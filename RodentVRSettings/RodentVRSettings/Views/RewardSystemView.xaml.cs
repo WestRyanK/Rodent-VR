@@ -50,6 +50,7 @@ namespace RodentVRSettings.Views
 				}
 				else
 				{
+					this.mazeVisualizer.SelectedIndex = -1;
 					this.toggleRewardTriggerIsEnabled.IsChecked = false;
 					this.ddRewardTriggerReward.SelectedValue = null;
 					this.nudRewardTriggerDuration.Value = null;
