@@ -48,6 +48,13 @@ namespace RodentVRSettings.Views
 					this.nudRewardTriggerDuration.Value = Presenter.CurrentRewardTriggerDuration;
 					this.ddRewardTriggerReward.SelectedItem = Presenter.CurrentRewardTriggerReward;
 				}
+				else
+				{
+					this.mazeVisualizer.SelectedIndex = -1;
+					this.toggleRewardTriggerIsEnabled.IsChecked = false;
+					this.ddRewardTriggerReward.SelectedValue = null;
+					this.nudRewardTriggerDuration.Value = null;
+				}
 			}
 		}
 
@@ -126,12 +133,14 @@ namespace RodentVRSettings.Views
 
 		private void nudRewardTriggerDuration_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double?> e)
 		{
+			if (Presenter.SelectedIndex != -1)
 			this.Presenter.CurrentRewardTriggerDuration = (float)this.nudRewardTriggerDuration.Value;
 		}
 
 		private void ddRewardTriggerReward_SelectionChanged(object sender, SelectionChangedEventArgs e)
 		{
-			this.Presenter.CurrentRewardTriggerReward = (int)this.ddRewardTriggerReward.SelectedItem;
+			if (Presenter.SelectedIndex != -1)
+				this.Presenter.CurrentRewardTriggerReward = (int)this.ddRewardTriggerReward.SelectedItem;
 		}
 
 		private void mazeVisualizer_OnMazeClicked(object sender, int selectedIndex)
@@ -142,7 +151,8 @@ namespace RodentVRSettings.Views
 
 		private void toggleRewardTriggerIsEnabled_IsCheckedChanged(object sender, EventArgs e)
 		{
-			this.Presenter.CurrentRewardTriggerIsEnabled = this.toggleRewardTriggerIsEnabled.IsChecked ?? false;
+			if (Presenter.SelectedIndex != -1)
+				this.Presenter.CurrentRewardTriggerIsEnabled = this.toggleRewardTriggerIsEnabled.IsChecked ?? false;
 		}
 	}
 }
