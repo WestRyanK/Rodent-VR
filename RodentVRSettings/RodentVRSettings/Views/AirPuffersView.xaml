@@ -49,7 +49,7 @@
 								HorizontalAlignment="Left" Speedup="False" />
 		<Label Content="Visualization of Air Puffer Activation Angles" />
 		<TextBlock Style="{StaticResource Description}">
-			A graphical representation for the ranges of angles which will trigger air puffers.
+			A graphical representation for the ranges of angles which will trigger the air puffers.
 		</TextBlock>
 		<Border HorizontalAlignment="Left" Width="{StaticResource controlWidth}" Margin="{StaticResource defaultMargin}" BorderBrush="Black" BorderThickness="1" Grid.Column="0" Grid.Row="0" Background="LightGray" >
 			<Grid Margin="10">
