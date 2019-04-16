@@ -76,6 +76,8 @@ namespace RodentVRSettings.Views
 			this.Presenter = new RewardSystemPresenter(settings);
 			this.Presenter.View = this;
 			this.Presenter.Init(settings);
+
+			this.SelectedIndex = -1;
 		}
 
 		#region Reward 1 Device Name
