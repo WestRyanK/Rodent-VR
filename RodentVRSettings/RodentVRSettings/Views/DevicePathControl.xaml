@@ -6,10 +6,9 @@
              xmlns:local="clr-namespace:RodentVRSettings.Views"
              mc:Ignorable="d" 
              d:DesignHeight="100" d:DesignWidth="800">
-    <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
-		<StackPanel.Resources>
+    <Grid>
+		<Grid.Resources>
 			<Style TargetType="{x:Type TextBox}" BasedOn="{StaticResource MetroTextBox}">
-				<Setter Property="Width" Value="100"/>
 				<Setter Property="MaxLines" Value="1"/>
 				<Setter Property="TextWrapping" Value="NoWrap"/>
 				<Setter Property="VerticalAlignment" Value="Center"/>
@@ -20,12 +19,20 @@
 				<Setter Property="VerticalAlignment" Value="Center"/>
 				<Setter Property="Margin" Value="4,0,4,0"/>
 			</Style>
-		</StackPanel.Resources>
-		<TextBlock Text="Name"/>
-		<TextBox Name="tbName" TextChanged="tbName_TextChanged"/>
-		<TextBlock Text="Port"/>
-		<TextBox Name="tbPort" TextChanged="tbPort_TextChanged"/>
-		<TextBlock Text="Line"/>
-		<TextBox Name="tbLine" TextChanged="tbLine_TextChanged"/>
-	</StackPanel>
+		</Grid.Resources>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="auto"/>
+			<ColumnDefinition Width="*"/>
+			<ColumnDefinition Width="auto"/>
+			<ColumnDefinition Width="*"/>
+			<ColumnDefinition Width="auto"/>
+			<ColumnDefinition Width="*"/>
+		</Grid.ColumnDefinitions>
+		<TextBlock Text="Name" Grid.Column="0"/>
+		<TextBox Name="tbName" TextChanged="tbName_TextChanged" Grid.Column="1"/>
+		<TextBlock Text="Port" Grid.Column="2"/>
+		<TextBox Name="tbPort" TextChanged="tbPort_TextChanged" Grid.Column="3"/>
+		<TextBlock Text="Line" Grid.Column="4"/>
+		<TextBox Name="tbLine" TextChanged="tbLine_TextChanged" Grid.Column="5"/>
+	</Grid>
 </UserControl>

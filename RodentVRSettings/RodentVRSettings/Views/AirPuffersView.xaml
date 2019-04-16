@@ -30,13 +30,13 @@
 		<TextBlock Style="{StaticResource Description}">
 			When the rodent runs into a wall on its left side, this air puffer device will fire.
 		</TextBlock>
-		<views:DevicePathControl x:Name="devicenameAirPufferLeft" HorizontalAlignment="Left" OnDevicePathChanged="devicenameAirPufferLeft_OnDevicePathChanged"/>
+		<views:DevicePathControl x:Name="devicenameAirPufferLeft" HorizontalAlignment="Left" OnDevicePathChanged="devicenameAirPufferLeft_OnDevicePathChanged" Width="{StaticResource controlWidth}"/>
 		<!--<TextBox Name="devicenameAirPufferLeft" TextChanged="devicenameAirPufferLeft_OnDevicePathChanged"  HorizontalAlignment="Left" Style="{StaticResource textbox}"/>-->
 		<Label Content="Right Air Puffer Device Path" />
 		<TextBlock Style="{StaticResource Description}">
 			When the rodent runs into a wall on its right side, this air puffer device will fire.
 		</TextBlock>
-		<views:DevicePathControl x:Name="devicenameAirPufferRight" HorizontalAlignment="Left" OnDevicePathChanged="devicenameAirPufferRight_OnDevicePathChanged"/>
+		<views:DevicePathControl x:Name="devicenameAirPufferRight" HorizontalAlignment="Left" OnDevicePathChanged="devicenameAirPufferRight_OnDevicePathChanged" Width="{StaticResource controlWidth}"/>
 		<!--<TextBox Name="devicenameAirPufferRight" TextChanged="tbAirPufferRightDeviceName_TextChanged"  HorizontalAlignment="Left" Style="{StaticResource textbox}"/>-->
 		<Label Content="Front-Facing Angle Tolerance" />
 		<TextBlock Style="{StaticResource Description}">

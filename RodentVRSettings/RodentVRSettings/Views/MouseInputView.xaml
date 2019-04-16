@@ -26,8 +26,8 @@
 			The mouse that is positioned behind the rodent.
 		</TextBlock>
 		<StackPanel Orientation="Horizontal">
-			<TextBox Name="tbMouseADeviceName" TextChanged="tbMouseADeviceName_TextChanged"  HorizontalAlignment="Left" Style="{StaticResource textbox}"/>
-			<Button Name="bttnMouseA" Click="bttnMouse_Click" Content="Click with Behind Mouse"/>
+			<TextBox Name="tbMouseADeviceName" Style="{StaticResource textbox}" Grid.Column="0" TextChanged="tbMouseADeviceName_TextChanged" />
+			<Button Name="bttnMouseA" Click="bttnMouse_Click" Margin="4,0,0,10" Content="Click with Behind Mouse"/>
 		</StackPanel>
 		<Label Content="Behind Mouse Multiplier" />
 		<TextBlock Style="{StaticResource Description}">
@@ -39,8 +39,8 @@
 			The mouse that is positioned to the right of the rodent.
 		</TextBlock>
 		<StackPanel Orientation="Horizontal">
-			<TextBox Name="tbMouseBDeviceName" TextChanged="tbMouseBDeviceName_TextChanged"  HorizontalAlignment="Left" Style="{StaticResource textbox}"/>
-			<Button Name="bttnMouseB" Click="bttnMouse_Click" Content="Click with Side Mouse"/>
+			<TextBox Name="tbMouseBDeviceName" Style="{StaticResource textbox}" TextChanged="tbMouseBDeviceName_TextChanged"/>
+			<Button Name="bttnMouseB" Click="bttnMouse_Click" Margin="4,0,0,10" Content="Click with Side Mouse"/>
 		</StackPanel>
 		<Label Content="Side Mouse Multiplier" />
 		<TextBlock Style="{StaticResource Description}">
