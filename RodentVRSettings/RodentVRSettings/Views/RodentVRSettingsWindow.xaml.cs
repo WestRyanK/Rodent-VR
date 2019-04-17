@@ -47,17 +47,28 @@ namespace RodentVRSettings
 				MetroDialogSettings dialogSettings = new MetroDialogSettings();
 				dialogSettings.AffirmativeButtonText = "Create New";
 				dialogSettings.NegativeButtonText = "Open Existing";
-				dialogSettings.AnimateShow = false;
-				var result = await this.ShowMessageAsync("Get Started", "Do you want to create a new settings file or open an existing one?", MessageDialogStyle.AffirmativeAndNegative, dialogSettings);
+				dialogSettings.FirstAuxiliaryButtonText = "Exit";
+				var result = await this.ShowMessageAsync("Get Started", "Do you want to create a new settings file or open an existing one?", MessageDialogStyle.AffirmativeAndNegativeAndSingleAuxiliary, dialogSettings);
 
 				if (result == MessageDialogResult.Negative)
 				{
-					var settings = OpenConfig();
-					this.settings = settings;
+					try
+					{
+						var settings = OpenConfig();
+						this.settings = settings;
+					}
+					catch (Exception e)
+					{
+						await this.ShowMessageAsync("Error", "There was a problem opening the settings file.");
+					}
+				}
+				else if (result == MessageDialogResult.Affirmative)
+				{
+					this.settings = new ConfigurationSettings();
 				}
 				else
 				{
-					this.settings = new ConfigurationSettings();
+					Close();
 				}
 			}
 			while (this.settings == null);
@@ -81,11 +92,18 @@ namespace RodentVRSettings
 
 		private bool? ShowConfigDialog(FileDialog dialog)
 		{
+			var initialDirectory = GetInitialDirectory();
 			dialog.AddExtension = true;
 			dialog.FileName = DEFAULT_FILENAME;
 			dialog.Filter = "Configuration File|" + DEFAULT_FILENAME;
 			dialog.DefaultExt = "*" + DEFAULT_EXTENSION;
-			dialog.InitialDirectory = GetInitialDirectory();
+			dialog.InitialDirectory = initialDirectory;
+
+			if (!System.IO.Directory.Exists(initialDirectory))
+			{
+				System.IO.Directory.CreateDirectory(initialDirectory);
+			}
+
 			var result = dialog.ShowDialog();
 			return result;
 		}
