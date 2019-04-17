@@ -89,9 +89,6 @@ namespace RodentVRSettings.Views
 		public MazeVisualizer()
 		{
 			InitializeComponent();
-			this.Maze = MazesEnum.maze_02_level;
-			//tb = new TextBlock();
-			this.Update();
 		}
 
 		public void SetMaterials(MaterialsEnum[] materials)
