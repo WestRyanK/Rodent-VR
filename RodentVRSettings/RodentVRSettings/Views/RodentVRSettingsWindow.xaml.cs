@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Interop;
 using MahApps.Metro.Controls;
@@ -47,17 +48,21 @@ namespace RodentVRSettings
 				MetroDialogSettings dialogSettings = new MetroDialogSettings();
 				dialogSettings.AffirmativeButtonText = "Create New";
 				dialogSettings.NegativeButtonText = "Open Existing";
-				dialogSettings.AnimateShow = false;
-				var result = await this.ShowMessageAsync("Get Started", "Do you want to create a new settings file or open an existing one?", MessageDialogStyle.AffirmativeAndNegative, dialogSettings);
+				dialogSettings.FirstAuxiliaryButtonText = "Exit";
+				var result = await this.ShowMessageAsync("Get Started", "Do you want to create a new settings file or open an existing one?", MessageDialogStyle.AffirmativeAndNegativeAndSingleAuxiliary, dialogSettings);
 
 				if (result == MessageDialogResult.Negative)
 				{
-					var settings = OpenConfig();
+					var settings = await OpenConfig();
 					this.settings = settings;
+				}
+				else if (result == MessageDialogResult.Affirmative)
+				{
+					this.settings = new ConfigurationSettings();
 				}
 				else
 				{
-					this.settings = new ConfigurationSettings();
+					Close();
 				}
 			}
 			while (this.settings == null);
@@ -81,31 +86,46 @@ namespace RodentVRSettings
 
 		private bool? ShowConfigDialog(FileDialog dialog)
 		{
+			var initialDirectory = GetInitialDirectory();
 			dialog.AddExtension = true;
 			dialog.FileName = DEFAULT_FILENAME;
 			dialog.Filter = "Configuration File|" + DEFAULT_FILENAME;
 			dialog.DefaultExt = "*" + DEFAULT_EXTENSION;
-			dialog.InitialDirectory = GetInitialDirectory();
+			dialog.InitialDirectory = initialDirectory;
+
+			if (!System.IO.Directory.Exists(initialDirectory))
+			{
+				System.IO.Directory.CreateDirectory(initialDirectory);
+			}
+
 			var result = dialog.ShowDialog();
 			return result;
 		}
 
-		private ConfigurationSettings OpenConfig()
+		private async Task<ConfigurationSettings> OpenConfig()
 		{
 			OpenFileDialog openConfigFileDialog = new OpenFileDialog();
 			bool? result = ShowConfigDialog(openConfigFileDialog);
 			if (result == true)
 			{
 				var configFileName = openConfigFileDialog.FileName;
-				var settings = ConfigurationSettings.Read(configFileName);
+				ConfigurationSettings settings = null;
+				try
+				{
+					settings = ConfigurationSettings.Read(configFileName);
+				}
+				catch (Exception e)
+				{
+					await this.ShowMessageAsync("Opening Error", "There was a problem opening the settings file.");
+				}
 				return settings;
 			}
 			return null;
 		}
 
-		private void menuitemOpen_Click(object sender, System.Windows.RoutedEventArgs e)
+		private async void menuitemOpen_Click(object sender, System.Windows.RoutedEventArgs e)
 		{
-			var settings = OpenConfig();
+			var settings = await OpenConfig();
 
 			if (settings != null)
 			{
@@ -114,14 +134,26 @@ namespace RodentVRSettings
 			}
 		}
 
-		private void menuitemSave_Click(object sender, System.Windows.RoutedEventArgs e)
+		private async Task SaveConfig(string configFileName)
+		{
+			try
+			{
+				ConfigurationSettings.Save(configFileName, this.settings);
+			}
+			catch (Exception e)
+			{
+				await this.ShowMessageAsync("Saving Error", "There was a problem saving the settings file. The file was not saved.");
+			}
+		}
+
+		private async void menuitemSave_Click(object sender, System.Windows.RoutedEventArgs e)
 		{
 			SaveFileDialog saveConfigFileDialog = new SaveFileDialog();
 			bool? result = ShowConfigDialog(saveConfigFileDialog);
 			if (result == true)
 			{
 				var configFileName = saveConfigFileDialog.FileName;
-				ConfigurationSettings.Save(configFileName, this.settings);
+				await SaveConfig(configFileName);
 			}
 		}
 
