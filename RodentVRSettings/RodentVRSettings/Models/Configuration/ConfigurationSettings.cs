@@ -316,6 +316,9 @@ namespace RodentVRSettings.Models.Configuration
 		{
 			ConfigurationSettings settings = new ConfigurationSettings();
 
+			if (file.Entries.Count < 4)
+				return settings;
+
 			int i = 0;
 			settings.AirPuffLeftDeviceName = (string)file.GetFirstEntryByName(settingsNames[i++]).EntryValue;
 			settings.AirPuffRightDeviceName = (string)file.GetFirstEntryByName(settingsNames[i++]).EntryValue;
@@ -380,7 +383,7 @@ namespace RodentVRSettings.Models.Configuration
 			}
 			return triggers;
 		}
-		
+
 		public MaterialsEnum[] GetMaterials(MazesEnum maze)
 		{
 
