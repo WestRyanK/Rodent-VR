@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Interop;
 using MahApps.Metro.Controls;
@@ -52,15 +53,8 @@ namespace RodentVRSettings
 
 				if (result == MessageDialogResult.Negative)
 				{
-					try
-					{
-						var settings = OpenConfig();
-						this.settings = settings;
-					}
-					catch (Exception e)
-					{
-						await this.ShowMessageAsync("Error", "There was a problem opening the settings file.");
-					}
+					var settings = await OpenConfig();
+					this.settings = settings;
 				}
 				else if (result == MessageDialogResult.Affirmative)
 				{
@@ -108,22 +102,30 @@ namespace RodentVRSettings
 			return result;
 		}
 
-		private ConfigurationSettings OpenConfig()
+		private async Task<ConfigurationSettings> OpenConfig()
 		{
 			OpenFileDialog openConfigFileDialog = new OpenFileDialog();
 			bool? result = ShowConfigDialog(openConfigFileDialog);
 			if (result == true)
 			{
 				var configFileName = openConfigFileDialog.FileName;
-				var settings = ConfigurationSettings.Read(configFileName);
+				ConfigurationSettings settings = null;
+				try
+				{
+					settings = ConfigurationSettings.Read(configFileName);
+				}
+				catch (Exception e)
+				{
+					await this.ShowMessageAsync("Error", "There was a problem opening the settings file.");
+				}
 				return settings;
 			}
 			return null;
 		}
 
-		private void menuitemOpen_Click(object sender, System.Windows.RoutedEventArgs e)
+		private async void menuitemOpen_Click(object sender, System.Windows.RoutedEventArgs e)
 		{
-			var settings = OpenConfig();
+			var settings = await OpenConfig();
 
 			if (settings != null)
 			{
