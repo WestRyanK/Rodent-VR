@@ -61,10 +61,7 @@ namespace RodentVRSettings.Presenters
 			View.CurrentMaze = this.Settings.InitialMaze;
 
 			var materials = this.Settings.GetMaterials(this.Settings.InitialMaze);
-			for (int i = 0; i < materials.Length; i++)
-			{
-				View.SetMaterial(i, materials[i]);
-			}
+			View.SetMaterials(materials);
 		}
 
 		public bool SelectedIndexInRange(int value)

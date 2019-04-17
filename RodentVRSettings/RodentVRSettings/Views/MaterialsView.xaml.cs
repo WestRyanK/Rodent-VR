@@ -54,6 +54,11 @@ namespace RodentVRSettings.Views
 			this.mazeVisualizer.SetMaterial(materialIndex, material);
 		}
 
+		public void SetMaterials(MaterialsEnum[] materials)
+		{
+			this.mazeVisualizer.SetMaterials(materials);
+		}
+
 		private void mazeVisualizer_OnMazeClicked(object sender, int selectedIndex)
 		{
 			if (Presenter != null)

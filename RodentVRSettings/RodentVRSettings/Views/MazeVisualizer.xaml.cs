@@ -94,6 +94,12 @@ namespace RodentVRSettings.Views
 			this.Update();
 		}
 
+		public void SetMaterials(MaterialsEnum[] materials)
+		{
+			this.materials = materials;
+			this.Update();
+		}
+
 		public void SetMaterial(int index, MaterialsEnum material)
 		{
 			this.materials[index] = material;
