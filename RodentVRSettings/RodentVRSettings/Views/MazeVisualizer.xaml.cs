@@ -84,11 +84,56 @@ namespace RodentVRSettings.Views
 		private List<ImageBrush> materialBrushes = new List<ImageBrush>();
 		private List<Bitmap> maskImages = new List<Bitmap>();
 		private System.Windows.Shapes.Rectangle selectionLayer = new System.Windows.Shapes.Rectangle();
-		//private TextBlock tb;
 
 		public MazeVisualizer()
 		{
 			InitializeComponent();
+		}
+
+		private static Dictionary<MazesEnum, Dictionary<MaterialsEnum, ImageBrush>> allMaterialBrushes;
+		private static Dictionary<MazesEnum, Dictionary<int, BitmapImage>> allMaskImages;
+		private static Dictionary<MazesEnum, Dictionary<int, Bitmap>> allMasks;
+		private static Dictionary<MazesEnum, Dictionary<int, ImageBrush>> allMaskBrushes;
+
+		static MazeVisualizer()
+		{
+			allMaterialBrushes = new Dictionary<MazesEnum, Dictionary<MaterialsEnum, ImageBrush>>();
+			allMaskImages = new Dictionary<MazesEnum, Dictionary<int, BitmapImage>>();
+			allMasks = new Dictionary<MazesEnum, Dictionary<int, Bitmap>>();
+			allMaskBrushes = new Dictionary<MazesEnum, Dictionary<int, ImageBrush>>();
+
+			var mazes = (MazesEnum[])Enum.GetValues(typeof(MazesEnum));
+			var materials = (MaterialsEnum[])Enum.GetValues(typeof(MaterialsEnum));
+			var masksCounts = new Dictionary<MazesEnum, int>();
+			masksCounts.Add(MazesEnum.maze_01_level, ConfigurationSettings.MAZE_01_MATERIAL_COUNT);
+			masksCounts.Add(MazesEnum.maze_02_level, ConfigurationSettings.MAZE_02_MATERIAL_COUNT);
+
+			foreach (var maze in mazes)
+			{
+				var mazeMaterialBrushes = new Dictionary<MaterialsEnum, ImageBrush>();
+				allMaterialBrushes.Add(maze, mazeMaterialBrushes);
+				foreach (var material in materials)
+				{
+					var materialBrush = GetMaterialBrush(material);
+					mazeMaterialBrushes.Add(material, materialBrush);
+				}
+
+				var mazeMaskImages = new Dictionary<int, BitmapImage>();
+				allMaskImages.Add(maze, mazeMaskImages);
+				var mazeMasks = new Dictionary<int, Bitmap>();
+				allMasks.Add(maze, mazeMasks);
+				var mazeMaskBrushes = new Dictionary<int, ImageBrush>();
+				allMaskBrushes.Add(maze, mazeMaskBrushes);
+				for (int i = 0; i < masksCounts[maze]; i++)
+				{
+					var maskImage = GetMaskImage(maze, i);
+					var maskBrush = GetMaskBrush(maskImage);
+
+					mazeMaskImages.Add(i, maskImage);
+					mazeMaskBrushes.Add(i, maskBrush);
+					mazeMasks.Add(i, maskImage.ToGDIBitmap());
+				}
+			}
 		}
 
 		public void SetMaterials(MaterialsEnum[] materials)
@@ -130,10 +175,10 @@ namespace RodentVRSettings.Views
 		{
 			this.gridImage.Children.Clear();
 			this.materialBrushes.Clear();
-			foreach (var maskImage in this.maskImages)
-			{
-				maskImage.Dispose();
-			}
+			//foreach (var maskImage in this.maskImages)
+			//{
+			//	maskImage.Dispose();
+			//}
 			this.maskImages.Clear();
 
 			try
@@ -143,12 +188,12 @@ namespace RodentVRSettings.Views
 					for (int i = 0; i < this.Materials.Length; i++)
 					{
 						var layer = new System.Windows.Shapes.Rectangle();
-						var materialBrush = GetMaterialBrush(this.Materials[i]);
-						var maskImage = GetMaskImage(this.Maze, i);
-						var maskBrush = GetMaskBrush(maskImage);
+						var materialBrush = allMaterialBrushes[this.Maze][this.Materials[i]];
+						var maskImage = allMaskImages[this.Maze][i];
+						var maskBrush = allMaskBrushes[this.Maze][i];
 
 						this.materialBrushes.Add(materialBrush);
-						this.maskImages.Add(maskImage.ToGDIBitmap());
+						this.maskImages.Add(allMasks[this.Maze][i]);
 
 						layer.Fill = materialBrush;
 						layer.OpacityMask = maskBrush;
@@ -156,7 +201,6 @@ namespace RodentVRSettings.Views
 					}
 				}
 
-				//this.gridImage.Children.Add(tb);
 				this.UpdateSelection();
 				this.UpdateMaterialScale();
 			}
