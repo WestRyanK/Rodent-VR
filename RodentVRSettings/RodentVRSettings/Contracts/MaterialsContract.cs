@@ -16,6 +16,8 @@ namespace RodentVRSettings.Contracts
 		MazesEnum CurrentMaze { set; }
 
 		void Init(ConfigurationSettings settings);
+
+		void SetMaterials(MaterialsEnum[] materials);
 	}
 
 	public interface MaterialsPresenterContract

@@ -112,10 +112,7 @@ namespace RodentVRSettings.Views
 
 		public void SetMaterials(MaterialsEnum[] materials)
 		{
-			for (int i = 0; i < materials.Length; i++)
-			{
-				this.mazeVisualizer.SetMaterial(i, materials[i]);
-			}
+			this.mazeVisualizer.SetMaterials(materials);
 		}
 
 		public void SetRewardTriggerIsEnabled(bool isEnabled)
