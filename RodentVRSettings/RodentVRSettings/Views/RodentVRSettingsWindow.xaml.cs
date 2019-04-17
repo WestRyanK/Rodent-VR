@@ -127,7 +127,7 @@ namespace RodentVRSettings
 
 		private async void menuitemNew_Click(object sender, RoutedEventArgs e)
 		{
-			var result = await this.ShowMessageAsync("New Configuration", "Are you sure you want to open a new configuration file? This will erase any unsaved changes.");
+			var result = await this.ShowMessageAsync("New Configuration", "Are you sure you want to open a new configuration file? This will erase any unsaved changes.", MessageDialogStyle.AffirmativeAndNegative);
 			if (result == MessageDialogResult.Affirmative)
 			{
 				this.settings = new ConfigurationSettings();
