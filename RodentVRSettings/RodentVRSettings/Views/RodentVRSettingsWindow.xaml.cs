@@ -116,7 +116,7 @@ namespace RodentVRSettings
 				}
 				catch (Exception e)
 				{
-					await this.ShowMessageAsync("Error", "There was a problem opening the settings file.");
+					await this.ShowMessageAsync("Opening Error", "There was a problem opening the settings file.");
 				}
 				return settings;
 			}
@@ -134,14 +134,26 @@ namespace RodentVRSettings
 			}
 		}
 
-		private void menuitemSave_Click(object sender, System.Windows.RoutedEventArgs e)
+		private async Task SaveConfig(string configFileName)
+		{
+			try
+			{
+				ConfigurationSettings.Save(configFileName, this.settings);
+			}
+			catch (Exception e)
+			{
+				await this.ShowMessageAsync("Saving Error", "There was a problem saving the settings file. The file was not saved.");
+			}
+		}
+
+		private async void menuitemSave_Click(object sender, System.Windows.RoutedEventArgs e)
 		{
 			SaveFileDialog saveConfigFileDialog = new SaveFileDialog();
 			bool? result = ShowConfigDialog(saveConfigFileDialog);
 			if (result == true)
 			{
 				var configFileName = saveConfigFileDialog.FileName;
-				ConfigurationSettings.Save(configFileName, this.settings);
+				await SaveConfig(configFileName);
 			}
 		}
 
