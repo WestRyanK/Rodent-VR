@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
-	<Product Id="*" Name="RodentVR" Language="1033" Version="1.0.0.0" Manufacturer="Ryan West" UpgradeCode="75b2ed01-8844-4c55-965c-28fa2278f90b">
+	<Product Id="f61c2ebb-cad5-409b-8c6f-e3872ac05e8a" Name="RodentVR" Language="1033" Version="1.0.0.0" Manufacturer="Ryan West" UpgradeCode="75b2ed01-8844-4c55-965c-28fa2278f90b">
 		<Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine" />
 		<UIRef Id="WixUI_MyInstall"/>
 		<Property Id="WIXUI_EXITDIALOGOPTIONALTEXT" xml:space="preserve">The following products have been installed:
