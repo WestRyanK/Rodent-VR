@@ -8,15 +8,14 @@
   • RodentVR Settings
   • RodentVR Behavior Visualizer
 </Property>
-		<Icon Id="icon.ico" SourceFile="Resources/RodentVRIcon.ico"/>
-		<Property Id="ARPPRODUCTICON" Value="icon.ico" />
+		<Property Id="ARPPRODUCTICON" Value="RodentVR.exe" />
 		<Property Id="ARPNOREPAIR" Value="yes" Secure="yes" />
 		<Property Id="ARPNOMODIFY" Value="yes" Secure="yes" />
 		<WixVariable Id="WixUIDialogBmp" Overridable="yes" Value="Resources\WelcomeLogo.jpg" />
 		<WixVariable Id="WixUIBannerBmp" Overridable="yes" Value="Resources\TopBanner.jpg" />
-		<Icon Id="RodentVR.exe" SourceFile="Resources/RodentVRIcon.ico" />
-		<Icon Id="RodentVRBehaviorVisualizer.exe" SourceFile="Resources/RodentVRBehaviorVisualizerIcon.ico" />
-		<Icon Id="RodentVRSettings.exe" SourceFile="Resources/RodentVRSettingsIcon.ico" />
+		<Icon Id="RodentVR.exe" SourceFile="Resources/RodentVR.ico" />
+		<Icon Id="RodentVRBehaviorVisualizer.exe" SourceFile="Resources/RodentVRBehaviorVisualizer.ico" />
+		<Icon Id="RodentVRSettings.exe" SourceFile="Resources/RodentVRSettings.ico" />
 
 		<MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed." />
 		<MediaTemplate />
@@ -174,8 +173,8 @@
 					<Directory Id="RodentVRSettings_INSTALLDIR" Name="RodentVRSettings">
 						<Component Id="RodentVRSettingsEXEComponent" Guid="*">
 							<File Source="ApplicationFiles/RodentVRSettings/RodentVRSettings.exe" KeyPath="yes">
-								<Shortcut Id="startMenuRodentVRSettings" Icon="RodentVRSettingsIcon.exe" Name="RodentVR Settings" Directory="RodentVRProgramMenu" WorkingDirectory="RodentVRSettings_INSTALLDIR" Advertise="yes"/>
-								<Shortcut Id="desktopRodentVRSettings" Icon="RodentVRSettingsIcon.exe" Name="RodentVR Settings" Directory="DesktopFolder" WorkingDirectory="RodentVRSettings_INSTALLDIR" Advertise="yes"/>
+								<Shortcut Id="startMenuRodentVRSettings" Icon="RodentVRSettings.exe" Name="RodentVR Settings" Directory="RodentVRProgramMenu" WorkingDirectory="RodentVRSettings_INSTALLDIR" Advertise="yes"/>
+								<Shortcut Id="desktopRodentVRSettings" Icon="RodentVRSettings.exe" Name="RodentVR Settings" Directory="DesktopFolder" WorkingDirectory="RodentVRSettings_INSTALLDIR" Advertise="yes"/>
 							</File>
 						</Component>
 						<Component Id="RodentVRSettingsControlzExComponent" Guid="*">
@@ -195,8 +194,8 @@
 					<Directory Id="RodentVRBehavioralVisualizer_INSTALLDIR" Name="RodentVRBehaviorVisualizer">
 						<Component Id="BehaviorVisualizerEXEComponent" Guid="*">
 							<File Source="ApplicationFiles/BehaviorVisualizer/BehaviorVisualizer.exe" KeyPath="yes">
-								<Shortcut Id="startMenuBehaviorVisualizer" Icon="RodentVRBehaviorVisualizerIcon.exe" Name="RodentVR Behavior Visualizer" Directory="RodentVRProgramMenu" WorkingDirectory="RodentVRBehavioralVisualizer_INSTALLDIR" Advertise="yes"/>
-								<Shortcut Id="desktopBehaviorVisualizer" Icon="RodentVRBehaviorVisualizerIcon.exe" Name="RodentVR Behavior Visualizer" Directory="DesktopFolder" WorkingDirectory="RodentVRBehavioralVisualizer_INSTALLDIR" Advertise="yes"/>
+								<Shortcut Id="startMenuBehaviorVisualizer" Icon="RodentVRBehaviorVisualizer.exe" Name="RodentVR Behavior Visualizer" Directory="RodentVRProgramMenu" WorkingDirectory="RodentVRBehavioralVisualizer_INSTALLDIR" Advertise="yes"/>
+								<Shortcut Id="desktopBehaviorVisualizer" Icon="RodentVRBehaviorVisualizer.exe" Name="RodentVR Behavior Visualizer" Directory="DesktopFolder" WorkingDirectory="RodentVRBehavioralVisualizer_INSTALLDIR" Advertise="yes"/>
 							</File>
 						</Component>
 						<Component Id="BehaviorVisualizerColorPickerLibComponent" Guid="*">

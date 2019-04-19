@@ -35,7 +35,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>RodentVRSettingsIcon.ico</ApplicationIcon>
+    <ApplicationIcon>RodentVRSettings.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="ControlzEx, Version=3.0.2.4, Culture=neutral, processorArchitecture=MSIL">
@@ -306,7 +306,7 @@
     <Resource Include="Resources\maze_01_level_selection_06.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="RodentVRSettingsIcon.ico" />
+    <Resource Include="RodentVRSettings.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
