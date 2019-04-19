@@ -8,6 +8,14 @@
   • RodentVR Settings
   • RodentVR Behavior Visualizer
 </Property>
+		<Property Id="ARPPRODUCTICON" Value="RodentVR.exe" />
+		<Property Id="ARPNOREPAIR" Value="yes" Secure="yes" />
+		<Property Id="ARPNOMODIFY" Value="yes" Secure="yes" />
+		<WixVariable Id="WixUIDialogBmp" Overridable="yes" Value="Resources\WelcomeLogo.jpg" />
+		<WixVariable Id="WixUIBannerBmp" Overridable="yes" Value="Resources\TopBanner.jpg" />
+		<Icon Id="RodentVR.exe" SourceFile="Resources/RodentVR.ico" />
+		<Icon Id="RodentVRBehaviorVisualizer.exe" SourceFile="Resources/RodentVRBehaviorVisualizer.ico" />
+		<Icon Id="RodentVRSettings.exe" SourceFile="Resources/RodentVRSettings.ico" />
 
 		<MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed." />
 		<MediaTemplate />
@@ -31,9 +39,9 @@
 
 			<ComponentRef Id="RodentVREXEComponent" />
 			<ComponentRef Id="RodentVR_NVIDIA" />
-			<ComponentRef Id="RodentVR_Oculus" />
+			<!--<ComponentRef Id="RodentVR_Oculus" />-->
 			<ComponentRef Id="RodentVR_Ogg" />
-			<ComponentRef Id="RodentVR_OpenVR" />
+			<!--<ComponentRef Id="RodentVR_OpenVR" />-->
 			<ComponentRef Id="RodentVR_Vorbis" />
 			<ComponentRef Id="RodentVR_PhysX3" />
 			<ComponentRef Id="RodentVR_Windows" />
@@ -50,8 +58,8 @@
 					<Directory Id="RodentVR_INSTALLDIR" Name="RodentVR">
 						<Component Id="RodentVREXEComponent" Guid="*">
 							<File Source="ApplicationFiles/RodentVR/rodent_vr.exe" KeyPath="yes">
-								<Shortcut Id="startMenuRodentVR" Name="RodentVR" Directory="RodentVRProgramMenu" WorkingDirectory="RodentVR_INSTALLDIR" Advertise="yes"/>
-								<Shortcut Id="desktopRodentVR" Name="RodentVR" Directory="DesktopFolder" WorkingDirectory="RodentVR_INSTALLDIR" Advertise="yes"/>
+								<Shortcut Id="startMenuRodentVR" Icon="RodentVR.exe" Name="RodentVR" Directory="RodentVRProgramMenu" WorkingDirectory="RodentVR_INSTALLDIR" Advertise="yes"/>
+								<Shortcut Id="desktopRodentVR" Icon="RodentVR.exe" Name="RodentVR" Directory="DesktopFolder" WorkingDirectory="RodentVR_INSTALLDIR" Advertise="yes"/>
 							</File>
 						</Component>
 						<Directory Id="RodentVR_Engine" Name="Engine">
@@ -66,7 +74,7 @@
 											</Directory>
 										</Directory>
 									</Directory>
-									<Directory Id="RodentVR_Oculus" Name="Oculus">
+									<!--<Directory Id="RodentVR_Oculus" Name="Oculus">
 										<Directory Id="RodentVR_OVRPlugin" Name="OVRPlugin">
 											<Directory Id="RodentVR_OVRPlugin2" Name="OVRPlugin">
 												<Directory Id="RodentVR_OVRPlugin_Win64" Name="Win64">
@@ -76,7 +84,7 @@
 												</Directory>
 											</Directory>
 										</Directory>
-									</Directory>
+									</Directory>-->
 									<Directory Id="RodentVR_Ogg" Name="Ogg">
 										<Directory Id="RodentVR_Ogg_Win64" Name="Win64">
 											<Directory Id="RodentVR_VS2015" Name="VS2015">
@@ -86,7 +94,7 @@
 											</Directory>
 										</Directory>
 									</Directory>
-									<Directory Id="RodentVR_OpenVR" Name="OpenVR">
+									<!--<Directory Id="RodentVR_OpenVR" Name="OpenVR">
 										<Directory Id="RodentVR_OpenVRv1_0_11" Name="OpenVRv1_0_11">
 											<Directory Id="RodentVR_OpenVR_Win64" Name="Win64">
 												<Component Id="RodentVR_OpenVR" Guid="*">
@@ -94,7 +102,7 @@
 												</Component>
 											</Directory>
 										</Directory>
-									</Directory>
+									</Directory>-->
 									<Directory Id="RodentVR_Vorbis" Name="Vorbis">
 										<Directory Id="RodentVR_Vorbis_Win64" Name="Win64">
 											<Directory Id="RodentVR_Vorbis_VS2015" Name="VS2015">
@@ -165,8 +173,8 @@
 					<Directory Id="RodentVRSettings_INSTALLDIR" Name="RodentVRSettings">
 						<Component Id="RodentVRSettingsEXEComponent" Guid="*">
 							<File Source="ApplicationFiles/RodentVRSettings/RodentVRSettings.exe" KeyPath="yes">
-								<Shortcut Id="startMenuRodentVRSettings" Name="RodentVR Settings" Directory="RodentVRProgramMenu" WorkingDirectory="RodentVRSettings_INSTALLDIR" Advertise="yes"/>
-								<Shortcut Id="desktopRodentVRSettings" Name="RodentVR Settings" Directory="DesktopFolder" WorkingDirectory="RodentVRSettings_INSTALLDIR" Advertise="yes"/>
+								<Shortcut Id="startMenuRodentVRSettings" Icon="RodentVRSettings.exe" Name="RodentVR Settings" Directory="RodentVRProgramMenu" WorkingDirectory="RodentVRSettings_INSTALLDIR" Advertise="yes"/>
+								<Shortcut Id="desktopRodentVRSettings" Icon="RodentVRSettings.exe" Name="RodentVR Settings" Directory="DesktopFolder" WorkingDirectory="RodentVRSettings_INSTALLDIR" Advertise="yes"/>
 							</File>
 						</Component>
 						<Component Id="RodentVRSettingsControlzExComponent" Guid="*">
@@ -186,8 +194,8 @@
 					<Directory Id="RodentVRBehavioralVisualizer_INSTALLDIR" Name="RodentVRBehaviorVisualizer">
 						<Component Id="BehaviorVisualizerEXEComponent" Guid="*">
 							<File Source="ApplicationFiles/BehaviorVisualizer/BehaviorVisualizer.exe" KeyPath="yes">
-								<Shortcut Id="startMenuBehaviorVisualizer" Name="RodentVR Behavior Visualizer" Directory="RodentVRProgramMenu" WorkingDirectory="RodentVRBehavioralVisualizer_INSTALLDIR" Advertise="yes"/>
-								<Shortcut Id="desktopBehaviorVisualizer" Name="RodentVR Behavior Visualizer" Directory="DesktopFolder" WorkingDirectory="RodentVRBehavioralVisualizer_INSTALLDIR" Advertise="yes"/>
+								<Shortcut Id="startMenuBehaviorVisualizer" Icon="RodentVRBehaviorVisualizer.exe" Name="RodentVR Behavior Visualizer" Directory="RodentVRProgramMenu" WorkingDirectory="RodentVRBehavioralVisualizer_INSTALLDIR" Advertise="yes"/>
+								<Shortcut Id="desktopBehaviorVisualizer" Icon="RodentVRBehaviorVisualizer.exe" Name="RodentVR Behavior Visualizer" Directory="DesktopFolder" WorkingDirectory="RodentVRBehavioralVisualizer_INSTALLDIR" Advertise="yes"/>
 							</File>
 						</Component>
 						<Component Id="BehaviorVisualizerColorPickerLibComponent" Guid="*">
@@ -236,23 +244,16 @@
 				<Control Id="Cancel" Type="PushButton" X="304" Y="243" Width="56" Height="17" Cancel="yes" Text="!(loc.WixUICancel)">
 					<Publish Event="SpawnDialog" Value="CancelDlg">1</Publish>
 				</Control>
-				<!--<Control Id="Bitmap" Type="Bitmap" X="0" Y="0" Width="370" Height="234" TabSkip="no" Text="!(loc.WelcomeDlgBitmap)" />-->
 				<Control Id="Back" Type="PushButton" X="180" Y="243" Width="56" Height="17" Text="!(loc.WixUIBack)" />
-				<!--<Control Id="BottomLine" Type="Line" X="0" Y="234" Width="370" Height="0" />-->
-				<!--<Control Id="Description" Type="Text" X="135" Y="80" Width="220" Height="60" Transparent="yes" NoPrefix="yes" Text="To run RodentVR, you must have NIDAQmx drivers installed. Visit the link to download and install the drivers." />-->
-				<!--<Control Id="Title" Type="Text" X="135" Y="20" Width="220" Height="60" Transparent="yes" NoPrefix="yes" Text="{\WixUI_Font_Title}Install NIDAQmx Drivers" />-->
-
-
-
-
 
 				<Control Id="Title" Type="Text" X="15" Y="15" Width="300" Height="15" Transparent="yes" NoPrefix="yes" Text="{\WixUI_Font_Title}Install NIDAQmx Drivers"/>
 				<Control Id="Description" Type="Text" X="25" Y="70" Width="320" Height="50" Text="To run RodentVR, you must have NIDAQmx drivers installed. Visit the link to download and install the drivers."/>
 				<Control Id="Link1" Type="Hyperlink"  X="25" Y="120" Width="220" Height="60" Transparent="no">
 					<Text><![CDATA[<a href="http://www.ni.com/en-us/support/downloads/drivers/download.ni-daqmx.html">Download and Install NIDAQmx Drivers</a>]]></Text>
 				</Control>
-                <Control Id="BannerLine" Type="Line" X="0" Y="44" Width="370" Height="0" />
-                <Control Id="BottomLine" Type="Line" X="0" Y="234" Width="370" Height="0" />
+				 <Control Id="BannerBitmap" Type="Bitmap" X="0" Y="0" Width="370" Height="44" TabSkip="no" Text="!(loc.VerifyReadyDlgBannerBitmap)" />
+				<Control Id="BannerLine" Type="Line" X="0" Y="44" Width="370" Height="0" />
+				<Control Id="BottomLine" Type="Line" X="0" Y="234" Width="370" Height="0" />
 			</Dialog>
 		</UI>
 	</Fragment>
@@ -287,12 +288,9 @@
 			<Publish Dialog="InstallNIDAQmxDlg" Control="Back" Event="NewDialog" Value="WelcomeDlg">1</Publish>
 			<Publish Dialog="InstallNIDAQmxDlg" Control="Next" Event="NewDialog" Value="VerifyReadyDlg">1</Publish>
 
-			<!--<Publish Dialog="WelcomeDlg" Control="Next" Event="NewDialog" Value="VerifyReadyDlg">1</Publish>
-			<Publish Dialog="VerifyReadyDlg" Control="Back" Event="NewDialog" Value="WelcomeDlg">1</Publish>-->
 			<Publish Dialog="WelcomeDlg" Control="Next" Event="NewDialog" Value="InstallNIDAQmxDlg">1</Publish>
 			<Publish Dialog="VerifyReadyDlg" Control="Back" Event="NewDialog" Value="InstallNIDAQmxDlg">1</Publish>
 
-			<Property Id="ARPNOMODIFY" Value="1" />
 		</UI>
 
 		<UIRef Id="WixUI_Common" />
