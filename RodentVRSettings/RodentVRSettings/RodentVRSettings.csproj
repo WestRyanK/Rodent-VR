@@ -34,6 +34,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>RodentVRSettings.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="ControlzEx, Version=3.0.2.4, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\ControlzEx.3.0.2.4\lib\net45\ControlzEx.dll</HintPath>
@@ -279,9 +282,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\rodent.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Resources\maze_01_level.png" />
   </ItemGroup>
   <ItemGroup>
@@ -304,6 +304,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\maze_01_level_selection_06.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="RodentVRSettings.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
