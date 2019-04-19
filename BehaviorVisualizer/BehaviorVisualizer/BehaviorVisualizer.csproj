@@ -37,7 +37,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>RodentVRBehaviorVisualizerIcon.ico</ApplicationIcon>
+    <ApplicationIcon>RodentVRBehaviorVisualizer.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="ColorPickerLib, Version=1.5.0.0, Culture=neutral, processorArchitecture=MSIL">
@@ -181,7 +181,7 @@
     <None Include="Resources\maze_01_perspective_textured.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="RodentVRBehaviorVisualizerIcon.ico" />
+    <Resource Include="RodentVRBehaviorVisualizer.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
