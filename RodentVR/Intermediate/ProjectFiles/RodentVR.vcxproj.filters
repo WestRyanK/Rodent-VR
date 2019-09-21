@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="..\..\RodentVR.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{7A6CD698-705C-46E6-BA37-80407F7C9EA7}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\RodentVR.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\RodentVREditor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <Filter Include="Config">
+      <UniqueIdentifier>{F03BA4F4-9A60-46F1-8C28-06539366A306}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultInput.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Config\Android">
+      <UniqueIdentifier>{3D7F967C-F575-42CA-8A21-4579551D5432}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\Android\AndroidEngine.ini">
+      <Filter>Config\Android</Filter>
+    </None>
+    <Filter Include="Config\IOS">
+      <UniqueIdentifier>{1F7D7857-7D66-483E-98FF-EDCEA76457BF}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\IOS\IOSEngine.ini">
+      <Filter>Config\IOS</Filter>
+    </None>
+    <Filter Include="Config\Linux">
+      <UniqueIdentifier>{A478E147-1B0D-43B8-84FD-3190AE85BFF3}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\Linux\LinuxEngine.ini">
+      <Filter>Config\Linux</Filter>
+    </None>
+    <Filter Include="Config\Mac">
+      <UniqueIdentifier>{5AFF7A74-2E46-40E4-9CA2-2B4F2D035665}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\Mac\MacEngine.ini">
+      <Filter>Config\Mac</Filter>
+    </None>
+    <Filter Include="Config\PS4">
+      <UniqueIdentifier>{ED669B46-C88E-42D2-8A7D-5B2DDE4657DD}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\PS4\PS4Engine.ini">
+      <Filter>Config\PS4</Filter>
+    </None>
+    <Filter Include="Config\Switch">
+      <UniqueIdentifier>{39BA767D-E02F-404F-9877-716E1AFB380E}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\Switch\SwitchEngine.ini">
+      <Filter>Config\Switch</Filter>
+    </None>
+    <Filter Include="Config\Windows">
+      <UniqueIdentifier>{B022B10D-5850-4A17-95C1-4CC733B7A062}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\Windows\WindowsEngine.ini">
+      <Filter>Config\Windows</Filter>
+    </None>
+    <Filter Include="Config\XboxOne">
+      <UniqueIdentifier>{95EC559D-FEDC-433A-A1C6-4FE50E5B357A}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\XboxOne\XboxOneEngine.ini">
+      <Filter>Config\XboxOne</Filter>
+    </None>
+    <Filter Include="Source\RodentVR">
+      <UniqueIdentifier>{8B651C3D-0223-4954-B083-1D2E9E31DADF}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\RodentVR\RodentVR.Build.cs">
+      <Filter>Source\RodentVR</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\RodentVR\RodentVR.cpp">
+      <Filter>Source\RodentVR</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\RodentVR\RodentVR.h">
+      <Filter>Source\RodentVR</Filter>
+    </ClInclude>
+    <Filter Include="Source\RodentVR\Hardware">
+      <UniqueIdentifier>{E2A95050-D496-4CA6-8737-83FE3C5477BD}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Source\RodentVR\Hardware\NIDAQ.cpp">
+      <Filter>Source\RodentVR\Hardware</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Source\RodentVR\Hardware\NIDAQ.h">
+      <Filter>Source\RodentVR\Hardware</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
