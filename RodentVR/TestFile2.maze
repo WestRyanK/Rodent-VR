@@ -1,0 +1,56 @@
+<Maze Name="Maze04">
+	<PlayerStart>
+		<Position X="0" Y="200" Z="0" />
+		<Rotation Angle="90" />
+	</PlayerStart>
+	<Materials>
+		<Material SlotName="WallYPosition" MaterialName="MaterialCheckerLarge" />
+		<Material SlotName="WallXPosition" MaterialName="MaterialCyan" />
+		<Material SlotName="Pillar1" MaterialName="MaterialCheckerLarge" />
+		<Material SlotName="Hallway1" MaterialName="MaterialDots1" /> 
+		<Material SlotName="Hallway2" MaterialName="MaterialGreen" /> 
+	</Materials> 
+	<Regions AreRegionsVisible="true">
+		<Region RegionId="0">
+			<Reward RewardDeviceId="" RewardDurationSec="" IsRewardDispensingEnabled="true" />
+			<Tone ToneDurationSec="0.5" TonePitchHz="200" ToneVolumeMultiplier="1.0" IsToneEnabled="true" />
+			<Position X="700" Y="-40" />
+			<Rotation Angle="45" />
+			<Scale X="32" Y="100"/>
+		</Region>
+		<Region RegionId="1" IsNosePoke="true">
+			<Reward RewardDeviceId="" RewardDurationSec="" IsRewardDispensingEnabled="true" />
+			<Tone ToneDurationSec="0.5" TonePitchHz="1000" ToneVolumeMultiplier="1.0" IsToneEnabled="true" />
+			<Position X="750" Y="100"/>
+			<Rotation Angle="90" />
+		</Region>
+	</Regions>
+	<Objects>
+		<Object Name="Cone" MaterialName="MaterialGreen">
+			<Position X="0" Y="0" />
+		</Object>
+		<Object Name="Sphere" MaterialName="MaterialWhite" CanCollide="false">
+			<Position X="50" Y="-75" Z="50"/>
+			<Rotation Angle="45" />
+		</Object>
+		<Object Name="Cylinder" MaterialName="MaterialBlue" CanCollide="false">
+			<Position X="20" Y="-150" Z="20"/>
+			<Rotation AngleX="45" AngleY="10" AngleZ="90" />
+		</Object>
+		<Object Name="Cube" MaterialName="MaterialCheckerLarge" CanCollide="false">
+			<Position X="20" Y="-225" Z="100"/>
+			<Rotation Angle="45" />
+		</Object>
+		<Object Name="Figurine" CanCollide="false">
+			<Position X="20" Y="-300" />
+			<Rotation Angle="45" />
+		</Object>
+	</Objects>
+	<StopConditions>
+		<Condition TimeLimitSec="10" />
+		<Condition EnterRegionDelaySec="0">
+			<Region RegionId="0" EnterRegionCount="4"/>
+			<Region RegionId="1" EnterRegionCount="1"/>
+		</Condition>
+	</StopConditions>
+</Maze>

@@ -11,18 +11,22 @@
 #endif
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeRodentVR_init() {}
+	RODENTVR_API UFunction* Z_Construct_UDelegateFunction_RodentVR_RewardRegionEnterDelegate__DelegateSignature();
 	UPackage* Z_Construct_UPackage__Script_RodentVR()
 	{
 		static UPackage* ReturnPackage = nullptr;
 		if (!ReturnPackage)
 		{
+			static UObject* (*const SingletonFuncArray[])() = {
+				(UObject* (*)())Z_Construct_UDelegateFunction_RodentVR_RewardRegionEnterDelegate__DelegateSignature,
+			};
 			static const UE4CodeGen_Private::FPackageParams PackageParams = {
 				"/Script/RodentVR",
-				nullptr,
-				0,
+				SingletonFuncArray,
+				ARRAY_COUNT(SingletonFuncArray),
 				PKG_CompiledIn | 0x00000000,
-				0x56B0E4B2,
-				0xC9A74125,
+				0xB6A1A2BA,
+				0x1C307499,
 				METADATA_PARAMS(nullptr, 0)
 			};
 			UE4CodeGen_Private::ConstructUPackage(ReturnPackage, PackageParams);
