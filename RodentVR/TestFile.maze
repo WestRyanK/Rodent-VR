@@ -1,0 +1,35 @@
+<Maze Name="Maze01">
+	<PlayerStart>
+		<Position X="0" Y="500" Z="0" />
+		<Rotation Angle="-90" />
+	</PlayerStart>
+	<Materials>
+		<Material SlotName="Floor" MaterialName="MaterialBlack" />
+		<Material SlotName="Pillar1" MaterialName="MaterialCheckerLarge" />
+		<Material SlotName="Hallway1" MaterialName="MaterialDots1" /> 
+		<Material SlotName="Hallway2" MaterialName="MaterialGreen" /> 
+	</Materials> 
+	<Regions AreRegionsVisible="true">
+		<Region RegionId="0">
+			<Reward RewardDeviceId="" RewardDurationSec="" IsRewardDispensingEnabled="true" />
+			<Tone ToneDurationSec="0.5" TonePitchHz="200" ToneVolumeMultiplier="1.0" IsToneEnabled="true" />
+			<Position X="45" Y="-40" />
+			<Rotation Angle="0" />
+			<Scale X="32" Y="32"/>
+		</Region>
+		<Region RegionId="0" IsNosePoke="true">
+			<Reward RewardDeviceId="" RewardDurationSec="" IsRewardDispensingEnabled="true" />
+			<Position X="75" Y="100"/>
+			<Rotation Angle="90" />
+		</Region>
+	</Regions>
+	<Objects>
+		<Object Name="Cone" MaterialName="MaterialGreen">
+			<Position X="20" Y="0" />
+		</Object>
+		<Object Name="Sphere" MaterialName="MaterialWhite" CanCollide="false">
+			<Position X="20" Y="-100" />
+			<Rotation Angle="45" />
+		</Object>
+	</Objects>
+</Maze>
