@@ -1,4 +1,5 @@
 <Maze Name="Maze04">
+	<BehaviorRecording Filename="C:\Users\Ryan\Downloads\Test2.behavior" />
 	<PlayerStart>
 		<Position X="0" Y="200" Z="0" />
 		<Rotation Angle="90" />

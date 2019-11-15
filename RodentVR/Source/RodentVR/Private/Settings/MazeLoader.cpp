@@ -164,6 +164,18 @@ void UMazeLoader::LoadRegions(UWorld* World, rapidxml::xml_node<>* MazeNode)
 	}
 }
 
+void UMazeLoader::LoadBehaviorRecordingFilename(ARodentGameMode* InRodentGameMode, rapidxml::xml_node<>* MazeNode)
+{
+	rapidxml::xml_node<>* BehaviorRecordingNode = MazeNode->first_node("BehaviorRecording");
+	FString BehaviorRecordingFilename;
+	if (BehaviorRecordingNode != nullptr)
+	{
+		BehaviorRecordingFilename = FString(UMazeLoader::GetStringFromAttribute(BehaviorRecordingNode, "Filename", "").c_str());
+	}
+	InRodentGameMode->BehaviorRecordingFilename = BehaviorRecordingFilename;
+}
+
+
 UStopConditionsChecker* UMazeLoader::LoadStopConditions(UWorld* World, rapidxml::xml_node<>* MazeNode)
 {
 	UStopConditionsChecker* StopConditions = NewObject<UStopConditionsChecker>();
@@ -218,6 +230,7 @@ void UMazeLoader::ClearWorld(UWorld* World)
 UStopConditionsChecker* UMazeLoader::LoadMaze(UObject* WorldContextObject, FString MazePath)
 {
 	UWorld* World = WorldContextObject->GetWorld();
+	ARodentGameMode* InRodentGameMode = (ARodentGameMode*)World->GetAuthGameMode();
 	UStopConditionsChecker* StopConditionsChecker = nullptr;
 
 	rapidxml::xml_document<>* File = nullptr;
@@ -244,6 +257,7 @@ UStopConditionsChecker* UMazeLoader::LoadMaze(UObject* WorldContextObject, FStri
 
 			UMazeLoader::LoadObjects(World, MazeNode);
 			UMazeLoader::LoadRegions(World, MazeNode);
+			UMazeLoader::LoadBehaviorRecordingFilename(InRodentGameMode, MazeNode);
 			StopConditionsChecker = UMazeLoader::LoadStopConditions(World, MazeNode);
 		}
 	}

@@ -26,7 +26,6 @@ void UBehaviorRecorderComponent::BeginPlay()
 	ARewardRegion::OnRewardRegionEnterDelegate.AddDynamic(this, &UBehaviorRecorderComponent::OnRewardRegionEnter);
 	ARodentGameMode::OnMazeLoadedDelegate.AddDynamic(this, &UBehaviorRecorderComponent::OnMazeLoaded);
 	ARodentGameMode::OnMazeFinishedDelegate.AddDynamic(this, &UBehaviorRecorderComponent::OnMazeFinished);
-	this->OnMazeLoaded();
 }
 
 void UBehaviorRecorderComponent::EndPlay(EEndPlayReason::Type EndPlayReason)

@@ -15,6 +15,14 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 #define RodentVR_Source_RodentVR_Private_BehaviorRecording_BehaviorRecorderComponent_h_14_RPC_WRAPPERS \
  \
+	DECLARE_FUNCTION(execOnMazeFinished) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->OnMazeFinished(); \
+		P_NATIVE_END; \
+	} \
+ \
 	DECLARE_FUNCTION(execOnMazeLoaded) \
 	{ \
 		P_FINISH; \
@@ -29,12 +37,29 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
 		P_THIS->OnRewardRegionEnter(Z_Param_RegionEnteredId); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execSave) \
+	{ \
+		P_GET_PROPERTY(UStrProperty,Z_Param_Filename); \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->Save(Z_Param_Filename); \
 		P_NATIVE_END; \
 	}
 
 
 #define RodentVR_Source_RodentVR_Private_BehaviorRecording_BehaviorRecorderComponent_h_14_RPC_WRAPPERS_NO_PURE_DECLS \
  \
+	DECLARE_FUNCTION(execOnMazeFinished) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->OnMazeFinished(); \
+		P_NATIVE_END; \
+	} \
+ \
 	DECLARE_FUNCTION(execOnMazeLoaded) \
 	{ \
 		P_FINISH; \
@@ -49,6 +74,15 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
 		P_THIS->OnRewardRegionEnter(Z_Param_RegionEnteredId); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execSave) \
+	{ \
+		P_GET_PROPERTY(UStrProperty,Z_Param_Filename); \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->Save(Z_Param_Filename); \
 		P_NATIVE_END; \
 	}
 
