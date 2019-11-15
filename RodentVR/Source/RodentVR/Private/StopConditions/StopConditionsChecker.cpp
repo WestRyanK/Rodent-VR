@@ -1,31 +1,26 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
+
 #include "StopConditionsChecker.h"
-#include "IStopCondition.h"
-#include "RodentGameMode.h"
 
-StopConditionsChecker::StopConditionsChecker()
+UStopConditionsChecker::~UStopConditionsChecker()
 {
+	this->StopConditions.Empty();
 }
 
-StopConditionsChecker::~StopConditionsChecker()
+bool UStopConditionsChecker::AreStopConditionsMet(ARodentGameMode* GameMode)
 {
-}
-
-bool StopConditionsChecker::AreStopConditionsMet(ARodentGameMode* GameMode)
-{
-	for (IStopCondition* StopCondition : this->StopConditions)
+	for (UStopCondition* StopCondition : this->StopConditions)
 	{
 		if (StopCondition->IsStopConditionMet(GameMode))
 		{
-
 			return true;
 		}
 	}
 	return false;
 }
 
-void StopConditionsChecker::AddStopCondition(IStopCondition* StopCondition)
+void UStopConditionsChecker::AddStopCondition(UStopCondition* StopCondition)
 {
 	this->StopConditions.Add(StopCondition);
 }

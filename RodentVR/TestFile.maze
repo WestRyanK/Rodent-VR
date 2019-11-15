@@ -32,4 +32,8 @@
 			<Rotation Angle="45" />
 		</Object>
 	</Objects>
+
+	<StopConditions>
+		<Condition TimeLimitSec="20" />
+	</StopConditions>
 </Maze>

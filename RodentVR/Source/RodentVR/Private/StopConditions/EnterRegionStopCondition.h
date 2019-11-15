@@ -3,7 +3,8 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "IStopCondition.h"
+#include "StopConditions/StopCondition.h"
+#include "RodentGameMode.h"
 #include "UObject/NoExportTypes.h"
 #include "EnterRegionStopCondition.generated.h"
 
@@ -11,7 +12,7 @@
  * 
  */
 UCLASS()
-class UEnterRegionStopCondition : public UObject, public IStopCondition
+class UEnterRegionStopCondition : public UStopCondition
 {
 	GENERATED_BODY()
 
@@ -24,10 +25,8 @@ private:
 	void OnRewardRegionEnter(int RegionEnteredId);
 
 public:
-	UEnterRegionStopCondition();
 	~UEnterRegionStopCondition();
 
-	UFUNCTION()
 	void Init(float EnterRegionDelaySec, TMap<int, int> EnterRegionStopCounts);
 
 	virtual bool IsStopConditionMet(ARodentGameMode* GameMode);

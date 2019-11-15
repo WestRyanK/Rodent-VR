@@ -2,7 +2,12 @@
 
 #include "RodentGameMode.h"
 #include "Settings/SettingsLoader.h"
+#include "Kismet/KismetSystemLibrary.h"
+#include "StopConditions/StopConditionsChecker.h"
 #include "Settings/MazeLoader.h"
+
+
+FMazeLoadedDelegate ARodentGameMode::OnMazeLoadedDelegate;
 
 ARodentGameMode::ARodentGameMode()
 {
@@ -20,7 +25,15 @@ void ARodentGameMode::LoadSettings()
 void ARodentGameMode::LoadNextMaze()
 {
 	this->CurrentMazeIndex++;
-	this->StopConditionsChecker = UMazeLoader::LoadMaze(this, this->PlaylistFiles[this->CurrentMazeIndex]);
+	if (this->CurrentMazeIndex < this->PlaylistFiles.Num())
+	{
+		this->StopConditionsChecker = UMazeLoader::LoadMaze(this, this->PlaylistFiles[this->CurrentMazeIndex]);
+		this->OnMazeLoaded();
+	}
+	else
+	{
+		FGenericPlatformMisc::RequestExit(false);
+	}
 }
 
 void ARodentGameMode::Tick(float DeltaSeconds)
@@ -31,10 +44,14 @@ void ARodentGameMode::Tick(float DeltaSeconds)
 	{
 		if (this->StopConditionsChecker->AreStopConditionsMet(this))
 		{
-			delete this->StopConditionsChecker;
 			this->StopConditionsChecker = nullptr;
 
 			this->LoadNextMaze();
 		}
 	}
+}
+
+void ARodentGameMode::OnMazeLoaded()
+{
+	ARodentGameMode::OnMazeLoadedDelegate.Broadcast();
 }

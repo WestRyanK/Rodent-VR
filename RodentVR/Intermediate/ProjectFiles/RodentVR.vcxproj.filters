@@ -169,6 +169,15 @@
     <ClInclude Include="..\..\Source\RodentVR\Private\Hardware\BallInput\BallInputComponent.h">
       <Filter>Source\RodentVR\Private\Hardware\BallInput</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\Source\RodentVR\Private\BehaviorRecording\BehaviorRecorderComponent.h">
+      <Filter>Source\RodentVR\Private\BehaviorRecording</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\RodentVR\Private\BehaviorRecording\BehaviorSnapshot.h">
+      <Filter>Source\RodentVR\Private\BehaviorRecording</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\RodentVR\Private\StopConditions\StopCondition.h">
+      <Filter>Source\RodentVR\Private\StopConditions</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\Source\RodentVR\Private\StopConditions\EnterRegionStopCondition.cpp">
@@ -216,6 +225,15 @@
     <ClCompile Include="..\..\Source\RodentVR\Private\Hardware\BallInput\BallInputComponent.cpp">
       <Filter>Source\RodentVR\Private\Hardware\BallInput</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\RodentVR\Private\BehaviorRecording\BehaviorRecorderComponent.cpp">
+      <Filter>Source\RodentVR\Private\BehaviorRecording</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\RodentVR\Private\BehaviorRecording\BehaviorSnapshot.cpp">
+      <Filter>Source\RodentVR\Private\BehaviorRecording</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\RodentVR\Private\StopConditions\StopCondition.cpp">
+      <Filter>Source\RodentVR\Private\StopConditions</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Source\RodentVR\Private\Hardware">
@@ -241,6 +259,9 @@
     </Filter>
     <Filter Include="SettingsFiles">
       <UniqueIdentifier>{f962e20a-45c6-435e-8fe3-82f439113733}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\RodentVR\Private\BehaviorRecording">
+      <UniqueIdentifier>{333911b4-2f27-4fce-9172-91b9c28d7ad9}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

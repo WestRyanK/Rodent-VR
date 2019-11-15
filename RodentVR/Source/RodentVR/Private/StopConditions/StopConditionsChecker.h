@@ -3,19 +3,25 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "UObject/NoExportTypes.h"
+#include "RodentGameMode.h"
+#include "StopConditions/StopCondition.h"
+#include "StopConditionsChecker.generated.h"
 
-class ARodentGameMode;
-class IStopCondition;
 /**
  * 
  */
-class StopConditionsChecker
+UCLASS()
+class UStopConditionsChecker : public UObject
 {
+	GENERATED_BODY()
+	
 private:
-	TArray<IStopCondition*> StopConditions;
+	UPROPERTY()
+	TArray<UStopCondition*> StopConditions;
 public:
-	StopConditionsChecker();
-	~StopConditionsChecker();
+	~UStopConditionsChecker();
+
 	bool AreStopConditionsMet(ARodentGameMode* GameMode);
-	void AddStopCondition(IStopCondition* StopCondition);
+	void AddStopCondition(UStopCondition* StopCondition);
 };

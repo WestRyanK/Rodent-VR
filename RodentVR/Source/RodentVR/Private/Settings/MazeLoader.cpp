@@ -164,9 +164,9 @@ void UMazeLoader::LoadRegions(UWorld* World, rapidxml::xml_node<>* MazeNode)
 	}
 }
 
-StopConditionsChecker* UMazeLoader::LoadStopConditions(UWorld* World, rapidxml::xml_node<>* MazeNode)
+UStopConditionsChecker* UMazeLoader::LoadStopConditions(UWorld* World, rapidxml::xml_node<>* MazeNode)
 {
-	StopConditionsChecker* StopConditions = new StopConditionsChecker();
+	UStopConditionsChecker* StopConditions = NewObject<UStopConditionsChecker>();
 	rapidxml::xml_node<>* StopConditionsNode = MazeNode->first_node("StopConditions");
 	if (StopConditionsNode != nullptr)
 	{
@@ -175,7 +175,10 @@ StopConditionsChecker* UMazeLoader::LoadStopConditions(UWorld* World, rapidxml::
 			if (ConditionNode->first_attribute("TimeLimitSec") != nullptr)
 			{
 				float TimeLimitSec = UMazeLoader::GetFloatFromAttribute(ConditionNode, "TimeLimitSec", 0.0f);
-				StopConditions->AddStopCondition(new TimeLimitStopCondition(TimeLimitSec, World->GetTimeSeconds()));
+
+				UTimeLimitStopCondition* StopCondition = NewObject<UTimeLimitStopCondition>();
+				StopCondition->Init(TimeLimitSec, World->GetTimeSeconds());
+				StopConditions->AddStopCondition(StopCondition);
 			}
 			else if (ConditionNode->first_attribute("EnterRegionDelaySec") != nullptr)
 			{
@@ -212,10 +215,10 @@ void UMazeLoader::ClearWorld(UWorld* World)
 	}
 }
 
-StopConditionsChecker* UMazeLoader::LoadMaze(UObject* WorldContextObject, FString MazePath)
+UStopConditionsChecker* UMazeLoader::LoadMaze(UObject* WorldContextObject, FString MazePath)
 {
 	UWorld* World = WorldContextObject->GetWorld();
-	StopConditionsChecker* StopConditionsChecker = nullptr;
+	UStopConditionsChecker* StopConditionsChecker = nullptr;
 
 	rapidxml::xml_document<>* File = nullptr;
 	

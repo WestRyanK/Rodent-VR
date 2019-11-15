@@ -6,10 +6,13 @@
 #include "Engine.h"
 #include "GameFramework/GameModeBase.h"
 #include "RapidXML/rapidxml.hpp"
-#include "StopConditions/StopConditionsChecker.h"
+//#include "StopConditions/StopConditionsChecker.h"
 #include <string>
 #include "RodentGameMode.generated.h"
 
+DECLARE_DYNAMIC_MULTICAST_DELEGATE(FMazeLoadedDelegate);
+
+class UStopConditionsChecker;
 /**
  * 
  */
@@ -19,7 +22,11 @@ class ARodentGameMode : public AGameModeBase
 	GENERATED_BODY()
 
 private:
-	StopConditionsChecker* StopConditionsChecker;
+	UPROPERTY()
+	UStopConditionsChecker* StopConditionsChecker;
+
+	UFUNCTION()
+	void OnMazeLoaded();
 	
 public:
 	ARodentGameMode();
@@ -58,4 +65,7 @@ public:
 	void LoadNextMaze();
 	
 	virtual void Tick(float DeltaSeconds) override;
+
+
+	static FMazeLoadedDelegate OnMazeLoadedDelegate;
 };

@@ -25,9 +25,10 @@ private:
 	static void LoadRegions(UWorld* World, rapidxml::xml_node<>* MazeNode);
 	static void SetMazeMaterials(AActor* MazeActor, rapidxml::xml_node<>* MazeNode);
 	static void LoadPlayerStart(UWorld* World, rapidxml::xml_node<>* MazeNode);
-	static StopConditionsChecker* LoadStopConditions(UWorld* World, rapidxml::xml_node<>* MazeNode);
+	static UStopConditionsChecker* LoadStopConditions(UWorld* World, rapidxml::xml_node<>* MazeNode);
 
 public:
 	//UFUNCTION(BlueprintCallable, Category="Loading", meta = (WorldContext = WorldContextObject))
-	static StopConditionsChecker* LoadMaze(UObject* WorldContextObject, FString MazePath);
+	UFUNCTION()
+	static UStopConditionsChecker* LoadMaze(UObject* WorldContextObject, FString MazePath);
 };
