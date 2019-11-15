@@ -1,8 +1,8 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 #include "RodentGameMode.h"
-#include "SettingsLoader.h"
-#include "MazeLoader.h"
+#include "Settings/SettingsLoader.h"
+#include "Settings/MazeLoader.h"
 
 ARodentGameMode::ARodentGameMode()
 {

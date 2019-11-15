@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "RodentVR/Hardware/NIDAQ.h"
+#include "RodentVR/Private/Hardware/NIDAQ/NIDAQ.h"
 #ifdef _MSC_VER
 #pragma warning (push)
 #pragma warning (disable : 4883)
@@ -58,7 +58,7 @@ void EmptyLinkFunctionForGeneratedCodeNIDAQ() {}
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UNIDAQ_control_NIDAQ_Statics::Function_MetaDataParams[] = {
 		{ "Category", "NIDAQ" },
-		{ "ModuleRelativePath", "Hardware/NIDAQ.h" },
+		{ "ModuleRelativePath", "Private/Hardware/NIDAQ/NIDAQ.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UNIDAQ_control_NIDAQ_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UNIDAQ, nullptr, "control_NIDAQ", nullptr, nullptr, sizeof(NIDAQ_eventcontrol_NIDAQ_Parms), Z_Construct_UFunction_UNIDAQ_control_NIDAQ_Statics::PropPointers, ARRAY_COUNT(Z_Construct_UFunction_UNIDAQ_control_NIDAQ_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04042401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UNIDAQ_control_NIDAQ_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_UNIDAQ_control_NIDAQ_Statics::Function_MetaDataParams)) };
@@ -81,7 +81,7 @@ void EmptyLinkFunctionForGeneratedCodeNIDAQ() {}
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UNIDAQ_init_NIDAQ_Statics::Function_MetaDataParams[] = {
 		{ "Category", "NIDAQ" },
-		{ "ModuleRelativePath", "Hardware/NIDAQ.h" },
+		{ "ModuleRelativePath", "Private/Hardware/NIDAQ/NIDAQ.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UNIDAQ_init_NIDAQ_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UNIDAQ, nullptr, "init_NIDAQ", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04042401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UNIDAQ_init_NIDAQ_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_UNIDAQ_init_NIDAQ_Statics::Function_MetaDataParams)) };
@@ -113,14 +113,14 @@ void EmptyLinkFunctionForGeneratedCodeNIDAQ() {}
 		(UObject* (*)())Z_Construct_UPackage__Script_RodentVR,
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_UNIDAQ_Statics::FuncInfo[] = {
-		{ &Z_Construct_UFunction_UNIDAQ_control_NIDAQ, "control_NIDAQ" }, // 2336713459
-		{ &Z_Construct_UFunction_UNIDAQ_init_NIDAQ, "init_NIDAQ" }, // 3110797265
+		{ &Z_Construct_UFunction_UNIDAQ_control_NIDAQ, "control_NIDAQ" }, // 30815848
+		{ &Z_Construct_UFunction_UNIDAQ_init_NIDAQ, "init_NIDAQ" }, // 3937649849
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UNIDAQ_Statics::Class_MetaDataParams[] = {
 		{ "Comment", "/**\n * \n */" },
-		{ "IncludePath", "Hardware/NIDAQ.h" },
-		{ "ModuleRelativePath", "Hardware/NIDAQ.h" },
+		{ "IncludePath", "Hardware/NIDAQ/NIDAQ.h" },
+		{ "ModuleRelativePath", "Private/Hardware/NIDAQ/NIDAQ.h" },
 	};
 #endif
 	const FCppClassTypeInfoStatic Z_Construct_UClass_UNIDAQ_Statics::StaticCppClassTypeInfo = {
@@ -150,7 +150,7 @@ void EmptyLinkFunctionForGeneratedCodeNIDAQ() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UNIDAQ, 3124771528);
+	IMPLEMENT_CLASS(UNIDAQ, 389889834);
 	template<> RODENTVR_API UClass* StaticClass<UNIDAQ>()
 	{
 		return UNIDAQ::StaticClass();

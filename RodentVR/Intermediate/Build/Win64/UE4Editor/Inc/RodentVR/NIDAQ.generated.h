@@ -13,7 +13,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define RODENTVR_NIDAQ_generated_h
 
-#define RodentVR_Source_RodentVR_Hardware_NIDAQ_h_17_RPC_WRAPPERS \
+#define RodentVR_Source_RodentVR_Private_Hardware_NIDAQ_NIDAQ_h_17_RPC_WRAPPERS \
  \
 	DECLARE_FUNCTION(execinit_NIDAQ) \
 	{ \
@@ -34,7 +34,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 	}
 
 
-#define RodentVR_Source_RodentVR_Hardware_NIDAQ_h_17_RPC_WRAPPERS_NO_PURE_DECLS \
+#define RodentVR_Source_RodentVR_Private_Hardware_NIDAQ_NIDAQ_h_17_RPC_WRAPPERS_NO_PURE_DECLS \
  \
 	DECLARE_FUNCTION(execinit_NIDAQ) \
 	{ \
@@ -55,7 +55,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 	}
 
 
-#define RodentVR_Source_RodentVR_Hardware_NIDAQ_h_17_INCLASS_NO_PURE_DECLS \
+#define RodentVR_Source_RodentVR_Private_Hardware_NIDAQ_NIDAQ_h_17_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUNIDAQ(); \
 	friend struct Z_Construct_UClass_UNIDAQ_Statics; \
@@ -64,7 +64,7 @@ public: \
 	DECLARE_SERIALIZER(UNIDAQ)
 
 
-#define RodentVR_Source_RodentVR_Hardware_NIDAQ_h_17_INCLASS \
+#define RodentVR_Source_RodentVR_Private_Hardware_NIDAQ_NIDAQ_h_17_INCLASS \
 private: \
 	static void StaticRegisterNativesUNIDAQ(); \
 	friend struct Z_Construct_UClass_UNIDAQ_Statics; \
@@ -73,7 +73,7 @@ public: \
 	DECLARE_SERIALIZER(UNIDAQ)
 
 
-#define RodentVR_Source_RodentVR_Hardware_NIDAQ_h_17_STANDARD_CONSTRUCTORS \
+#define RodentVR_Source_RodentVR_Private_Hardware_NIDAQ_NIDAQ_h_17_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API UNIDAQ(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(UNIDAQ) \
@@ -86,7 +86,7 @@ private: \
 public:
 
 
-#define RodentVR_Source_RodentVR_Hardware_NIDAQ_h_17_ENHANCED_CONSTRUCTORS \
+#define RodentVR_Source_RodentVR_Private_Hardware_NIDAQ_NIDAQ_h_17_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API UNIDAQ(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()) : Super(ObjectInitializer) { }; \
 private: \
@@ -99,26 +99,26 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UNIDAQ); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(UNIDAQ)
 
 
-#define RodentVR_Source_RodentVR_Hardware_NIDAQ_h_17_PRIVATE_PROPERTY_OFFSET
-#define RodentVR_Source_RodentVR_Hardware_NIDAQ_h_14_PROLOG
-#define RodentVR_Source_RodentVR_Hardware_NIDAQ_h_17_GENERATED_BODY_LEGACY \
+#define RodentVR_Source_RodentVR_Private_Hardware_NIDAQ_NIDAQ_h_17_PRIVATE_PROPERTY_OFFSET
+#define RodentVR_Source_RodentVR_Private_Hardware_NIDAQ_NIDAQ_h_14_PROLOG
+#define RodentVR_Source_RodentVR_Private_Hardware_NIDAQ_NIDAQ_h_17_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	RodentVR_Source_RodentVR_Hardware_NIDAQ_h_17_PRIVATE_PROPERTY_OFFSET \
-	RodentVR_Source_RodentVR_Hardware_NIDAQ_h_17_RPC_WRAPPERS \
-	RodentVR_Source_RodentVR_Hardware_NIDAQ_h_17_INCLASS \
-	RodentVR_Source_RodentVR_Hardware_NIDAQ_h_17_STANDARD_CONSTRUCTORS \
+	RodentVR_Source_RodentVR_Private_Hardware_NIDAQ_NIDAQ_h_17_PRIVATE_PROPERTY_OFFSET \
+	RodentVR_Source_RodentVR_Private_Hardware_NIDAQ_NIDAQ_h_17_RPC_WRAPPERS \
+	RodentVR_Source_RodentVR_Private_Hardware_NIDAQ_NIDAQ_h_17_INCLASS \
+	RodentVR_Source_RodentVR_Private_Hardware_NIDAQ_NIDAQ_h_17_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define RodentVR_Source_RodentVR_Hardware_NIDAQ_h_17_GENERATED_BODY \
+#define RodentVR_Source_RodentVR_Private_Hardware_NIDAQ_NIDAQ_h_17_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	RodentVR_Source_RodentVR_Hardware_NIDAQ_h_17_PRIVATE_PROPERTY_OFFSET \
-	RodentVR_Source_RodentVR_Hardware_NIDAQ_h_17_RPC_WRAPPERS_NO_PURE_DECLS \
-	RodentVR_Source_RodentVR_Hardware_NIDAQ_h_17_INCLASS_NO_PURE_DECLS \
-	RodentVR_Source_RodentVR_Hardware_NIDAQ_h_17_ENHANCED_CONSTRUCTORS \
+	RodentVR_Source_RodentVR_Private_Hardware_NIDAQ_NIDAQ_h_17_PRIVATE_PROPERTY_OFFSET \
+	RodentVR_Source_RodentVR_Private_Hardware_NIDAQ_NIDAQ_h_17_RPC_WRAPPERS_NO_PURE_DECLS \
+	RodentVR_Source_RodentVR_Private_Hardware_NIDAQ_NIDAQ_h_17_INCLASS_NO_PURE_DECLS \
+	RodentVR_Source_RodentVR_Private_Hardware_NIDAQ_NIDAQ_h_17_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -126,7 +126,7 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 template<> RODENTVR_API UClass* StaticClass<class UNIDAQ>();
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID RodentVR_Source_RodentVR_Hardware_NIDAQ_h
+#define CURRENT_FILE_ID RodentVR_Source_RodentVR_Private_Hardware_NIDAQ_NIDAQ_h
 
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "RodentVR/Private/MazeLoader.h"
+#include "RodentVR/Private/Settings/MazeLoader.h"
 #ifdef _MSC_VER
 #pragma warning (push)
 #pragma warning (disable : 4883)
@@ -40,8 +40,8 @@ void EmptyLinkFunctionForGeneratedCodeMazeLoader() {}
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UMazeLoader_Statics::Class_MetaDataParams[] = {
-		{ "IncludePath", "MazeLoader.h" },
-		{ "ModuleRelativePath", "Private/MazeLoader.h" },
+		{ "IncludePath", "Settings/MazeLoader.h" },
+		{ "ModuleRelativePath", "Private/Settings/MazeLoader.h" },
 	};
 #endif
 	const FCppClassTypeInfoStatic Z_Construct_UClass_UMazeLoader_Statics::StaticCppClassTypeInfo = {
@@ -71,7 +71,7 @@ void EmptyLinkFunctionForGeneratedCodeMazeLoader() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UMazeLoader, 2469974187);
+	IMPLEMENT_CLASS(UMazeLoader, 4017341582);
 	template<> RODENTVR_API UClass* StaticClass<UMazeLoader>()
 	{
 		return UMazeLoader::StaticClass();

@@ -6,7 +6,7 @@
 #include "Engine.h"
 #include "GameFramework/GameModeBase.h"
 #include "RapidXML/rapidxml.hpp"
-#include "StopConditionsChecker.h"
+#include "StopConditions/StopConditionsChecker.h"
 #include <string>
 #include "RodentGameMode.generated.h"
 
@@ -30,6 +30,16 @@ public:
 	FString AirPufferRightDeviceName;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	float AirPufferFrontAngle;
+
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FString MouseADeviceName;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FString MouseBDeviceName;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float MouseAMultiplier;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float MouseBMultiplier;
 
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)

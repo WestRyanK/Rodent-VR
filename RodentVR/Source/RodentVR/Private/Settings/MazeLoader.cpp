@@ -1,11 +1,11 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
-#include "MazeLoader.h"
+#include "Settings/MazeLoader.h"
 #include "RewardRegion.h"
 #include <stdexcept>
-#include "StopConditionsChecker.h"
-#include "TimeLimitStopCondition.h"
-#include "EnterRegionStopCondition.h"
+#include "StopConditions/StopConditionsChecker.h"
+#include "StopConditions/TimeLimitStopCondition.h"
+#include "StopConditions/EnterRegionStopCondition.h"
 
 FName UMazeLoader::MazeFolderPath = FName("Maze");
 

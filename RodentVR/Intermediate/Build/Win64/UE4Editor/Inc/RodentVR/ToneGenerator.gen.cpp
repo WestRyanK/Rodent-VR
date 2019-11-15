@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "RodentVR/Private/ToneGenerator.h"
+#include "RodentVR/Private/Hardware/ToneGenerator/ToneGenerator.h"
 #ifdef _MSC_VER
 #pragma warning (push)
 #pragma warning (disable : 4883)
@@ -40,7 +40,7 @@ void EmptyLinkFunctionForGeneratedCodeToneGenerator() {}
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UToneGenerator_EndTone_Statics::Function_MetaDataParams[] = {
-		{ "ModuleRelativePath", "Private/ToneGenerator.h" },
+		{ "ModuleRelativePath", "Private/Hardware/ToneGenerator/ToneGenerator.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UToneGenerator_EndTone_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UToneGenerator, nullptr, "EndTone", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00040401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UToneGenerator_EndTone_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_UToneGenerator_EndTone_Statics::Function_MetaDataParams)) };
@@ -83,7 +83,7 @@ void EmptyLinkFunctionForGeneratedCodeToneGenerator() {}
 		{ "Category", "Synth|Components|Audio" },
 		{ "Comment", "// Sets the oscillator's frequency\n" },
 		{ "CPP_Default_FrequencyHz", "440.000000" },
-		{ "ModuleRelativePath", "Private/ToneGenerator.h" },
+		{ "ModuleRelativePath", "Private/Hardware/ToneGenerator/ToneGenerator.h" },
 		{ "ToolTip", "Sets the oscillator's frequency" },
 	};
 #endif
@@ -125,7 +125,7 @@ void EmptyLinkFunctionForGeneratedCodeToneGenerator() {}
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UToneGenerator_StartTimedSynth_Statics::Function_MetaDataParams[] = {
 		{ "Category", "SynthComponents|Audio" },
-		{ "ModuleRelativePath", "Private/ToneGenerator.h" },
+		{ "ModuleRelativePath", "Private/Hardware/ToneGenerator/ToneGenerator.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UToneGenerator_StartTimedSynth_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UToneGenerator, nullptr, "StartTimedSynth", nullptr, nullptr, sizeof(ToneGenerator_eventStartTimedSynth_Parms), Z_Construct_UFunction_UToneGenerator_StartTimedSynth_Statics::PropPointers, ARRAY_COUNT(Z_Construct_UFunction_UToneGenerator_StartTimedSynth_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04040401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UToneGenerator_StartTimedSynth_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_UToneGenerator_StartTimedSynth_Statics::Function_MetaDataParams)) };
@@ -157,9 +157,9 @@ void EmptyLinkFunctionForGeneratedCodeToneGenerator() {}
 		(UObject* (*)())Z_Construct_UPackage__Script_RodentVR,
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_UToneGenerator_Statics::FuncInfo[] = {
-		{ &Z_Construct_UFunction_UToneGenerator_EndTone, "EndTone" }, // 3649599221
-		{ &Z_Construct_UFunction_UToneGenerator_SetFrequency, "SetFrequency" }, // 1889589090
-		{ &Z_Construct_UFunction_UToneGenerator_StartTimedSynth, "StartTimedSynth" }, // 1176831066
+		{ &Z_Construct_UFunction_UToneGenerator_EndTone, "EndTone" }, // 4151046674
+		{ &Z_Construct_UFunction_UToneGenerator_SetFrequency, "SetFrequency" }, // 2137417578
+		{ &Z_Construct_UFunction_UToneGenerator_StartTimedSynth, "StartTimedSynth" }, // 1759184738
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UToneGenerator_Statics::Class_MetaDataParams[] = {
@@ -167,8 +167,8 @@ void EmptyLinkFunctionForGeneratedCodeToneGenerator() {}
 		{ "ClassGroupNames", "Synth" },
 		{ "Comment", "// ========================================================================\n// UToneGenerator\n// Synth component class which implements USynthComponent\n// This is a simple hello-world type example which generates a sine-wave\n// tone using a DSP oscillator class and implements a single function to set\n// the frequency. \n// ========================================================================\n" },
 		{ "HideCategories", "Object ActorComponent Physics Rendering Mobility LOD Trigger PhysicsVolume" },
-		{ "IncludePath", "ToneGenerator.h" },
-		{ "ModuleRelativePath", "Private/ToneGenerator.h" },
+		{ "IncludePath", "Hardware/ToneGenerator/ToneGenerator.h" },
+		{ "ModuleRelativePath", "Private/Hardware/ToneGenerator/ToneGenerator.h" },
 		{ "ToolTip", "UToneGenerator\nSynth component class which implements USynthComponent\nThis is a simple hello-world type example which generates a sine-wave\ntone using a DSP oscillator class and implements a single function to set\nthe frequency." },
 	};
 #endif
@@ -199,7 +199,7 @@ void EmptyLinkFunctionForGeneratedCodeToneGenerator() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UToneGenerator, 4105414436);
+	IMPLEMENT_CLASS(UToneGenerator, 4190700999);
 	template<> RODENTVR_API UClass* StaticClass<UToneGenerator>()
 	{
 		return UToneGenerator::StaticClass();

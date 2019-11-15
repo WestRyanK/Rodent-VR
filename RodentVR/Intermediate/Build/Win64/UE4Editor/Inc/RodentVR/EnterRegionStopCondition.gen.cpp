@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "RodentVR/Private/EnterRegionStopCondition.h"
+#include "RodentVR/Private/StopConditions/EnterRegionStopCondition.h"
 #ifdef _MSC_VER
 #pragma warning (push)
 #pragma warning (disable : 4883)
@@ -58,7 +58,7 @@ void EmptyLinkFunctionForGeneratedCodeEnterRegionStopCondition() {}
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UEnterRegionStopCondition_Init_Statics::Function_MetaDataParams[] = {
-		{ "ModuleRelativePath", "Private/EnterRegionStopCondition.h" },
+		{ "ModuleRelativePath", "Private/StopConditions/EnterRegionStopCondition.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UEnterRegionStopCondition_Init_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UEnterRegionStopCondition, nullptr, "Init", nullptr, nullptr, sizeof(EnterRegionStopCondition_eventInit_Parms), Z_Construct_UFunction_UEnterRegionStopCondition_Init_Statics::PropPointers, ARRAY_COUNT(Z_Construct_UFunction_UEnterRegionStopCondition_Init_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UEnterRegionStopCondition_Init_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_UEnterRegionStopCondition_Init_Statics::Function_MetaDataParams)) };
@@ -90,7 +90,7 @@ void EmptyLinkFunctionForGeneratedCodeEnterRegionStopCondition() {}
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UEnterRegionStopCondition_OnRewardRegionEnter_Statics::Function_MetaDataParams[] = {
-		{ "ModuleRelativePath", "Private/EnterRegionStopCondition.h" },
+		{ "ModuleRelativePath", "Private/StopConditions/EnterRegionStopCondition.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UEnterRegionStopCondition_OnRewardRegionEnter_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UEnterRegionStopCondition, nullptr, "OnRewardRegionEnter", nullptr, nullptr, sizeof(EnterRegionStopCondition_eventOnRewardRegionEnter_Parms), Z_Construct_UFunction_UEnterRegionStopCondition_OnRewardRegionEnter_Statics::PropPointers, ARRAY_COUNT(Z_Construct_UFunction_UEnterRegionStopCondition_OnRewardRegionEnter_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00040401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UEnterRegionStopCondition_OnRewardRegionEnter_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_UEnterRegionStopCondition_OnRewardRegionEnter_Statics::Function_MetaDataParams)) };
@@ -122,14 +122,14 @@ void EmptyLinkFunctionForGeneratedCodeEnterRegionStopCondition() {}
 		(UObject* (*)())Z_Construct_UPackage__Script_RodentVR,
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_UEnterRegionStopCondition_Statics::FuncInfo[] = {
-		{ &Z_Construct_UFunction_UEnterRegionStopCondition_Init, "Init" }, // 2771648917
-		{ &Z_Construct_UFunction_UEnterRegionStopCondition_OnRewardRegionEnter, "OnRewardRegionEnter" }, // 3710899869
+		{ &Z_Construct_UFunction_UEnterRegionStopCondition_Init, "Init" }, // 4258255822
+		{ &Z_Construct_UFunction_UEnterRegionStopCondition_OnRewardRegionEnter, "OnRewardRegionEnter" }, // 1070730222
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UEnterRegionStopCondition_Statics::Class_MetaDataParams[] = {
 		{ "Comment", "/**\n * \n */" },
-		{ "IncludePath", "EnterRegionStopCondition.h" },
-		{ "ModuleRelativePath", "Private/EnterRegionStopCondition.h" },
+		{ "IncludePath", "StopConditions/EnterRegionStopCondition.h" },
+		{ "ModuleRelativePath", "Private/StopConditions/EnterRegionStopCondition.h" },
 	};
 #endif
 	const FCppClassTypeInfoStatic Z_Construct_UClass_UEnterRegionStopCondition_Statics::StaticCppClassTypeInfo = {
@@ -159,7 +159,7 @@ void EmptyLinkFunctionForGeneratedCodeEnterRegionStopCondition() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UEnterRegionStopCondition, 2046082021);
+	IMPLEMENT_CLASS(UEnterRegionStopCondition, 1671751096);
 	template<> RODENTVR_API UClass* StaticClass<UEnterRegionStopCondition>()
 	{
 		return UEnterRegionStopCondition::StaticClass();

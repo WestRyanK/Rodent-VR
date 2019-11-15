@@ -17,6 +17,7 @@ class USettingsLoader : public UXmlFileReader
 	GENERATED_BODY()
 	
 private:
+	static void LoadBallInputSettings(ARodentGameMode* InRodentGameMode, rapidxml::xml_node<>* SettingsNode);
 	static void LoadAirPufferSettings(ARodentGameMode* InRodentGameMode, rapidxml::xml_node<>* SettingsNode);
 	static void LoadRewardDevices(ARodentGameMode* InRodentGameMode, rapidxml::xml_node<>* SettingsNode);
 	static void LoadPlaylist(ARodentGameMode* InRodentGameMode, rapidxml::xml_node<>* SettingsNode);

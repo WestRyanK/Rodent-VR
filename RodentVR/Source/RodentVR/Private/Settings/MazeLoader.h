@@ -8,7 +8,7 @@
 #include "RapidXML/rapidxml.hpp"
 #include "Engine.h"
 #include <string>
-#include "StopConditionsChecker.h"
+#include "StopConditions/StopConditionsChecker.h"
 #include "MazeLoader.generated.h"
 
 
