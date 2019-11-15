@@ -1,20 +1,16 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
+
 #include "TimeLimitStopCondition.h"
-#include "RodentGameMode.h"
 
-TimeLimitStopCondition::TimeLimitStopCondition(float TimeLimitSec, float StartTime) : 
-	IStopCondition(),
-	TimeLimitSec(TimeLimitSec)
+void UTimeLimitStopCondition::Init(float timeLimitSec, float startTime)
 {
-	this->StartTime = StartTime;
+	this->TimeLimitSec = timeLimitSec;
+	this->StartTime = startTime;
 }
 
-TimeLimitStopCondition::~TimeLimitStopCondition()
-{
-}
 
-bool TimeLimitStopCondition::IsStopConditionMet(ARodentGameMode* GameMode)
+bool UTimeLimitStopCondition::IsStopConditionMet(ARodentGameMode* GameMode)
 {
 	return GameMode->GetWorld()->TimeSeconds > this->StartTime + this->TimeLimitSec;
 }

@@ -383,7 +383,11 @@
     <None Include="..\..\Config\Windows\WindowsEngine.ini" />
     <None Include="..\..\Config\XboxOne\XboxOneEngine.ini" />
     <None Include="..\..\Source\RodentVR\RodentVR.Build.cs" />
+    <ClInclude Include="..\..\Source\RodentVR\Private\BehaviorRecording\BehaviorRecorderComponent.h" />
+    <ClInclude Include="..\..\Source\RodentVR\Private\BehaviorRecording\BehaviorSnapshot.h" />
     <ClInclude Include="..\..\Source\RodentVR\Private\Hardware\BallInput\BallInput.h" />
+    <ClCompile Include="..\..\Source\RodentVR\Private\BehaviorRecording\BehaviorRecorderComponent.cpp" />
+    <ClCompile Include="..\..\Source\RodentVR\Private\BehaviorRecording\BehaviorSnapshot.cpp" />
     <ClCompile Include="..\..\Source\RodentVR\Private\Hardware\BallInput\BallInput.cpp" />
     <ClInclude Include="..\..\Source\RodentVR\Private\Hardware\BallInput\BallInputComponent.h" />
     <ClInclude Include="..\..\Source\RodentVR\Private\Hardware\BallInput\MouseMovementReader.h" />
@@ -396,8 +400,10 @@
     <ClInclude Include="..\..\Source\RodentVR\Private\Hardware\BallInput\Window.h" />
     <ClCompile Include="..\..\Source\RodentVR\Private\Hardware\BallInput\Window.cpp" />
     <ClCompile Include="..\..\Source\RodentVR\Private\StopConditions\EnterRegionStopCondition.cpp" />
+    <ClCompile Include="..\..\Source\RodentVR\Private\StopConditions\StopCondition.cpp" />
     <ClCompile Include="..\..\Source\RodentVR\RodentVR.cpp" />
     <ClInclude Include="..\..\Source\RodentVR\Private\StopConditions\EnterRegionStopCondition.h" />
+    <ClInclude Include="..\..\Source\RodentVR\Private\StopConditions\StopCondition.h" />
     <ClInclude Include="..\..\Source\RodentVR\RodentVR.h" />
     <ClCompile Include="..\..\Source\RodentVR\Private\Hardware\NIDAQ\NIDAQ.cpp" />
     <ClInclude Include="..\..\Source\RodentVR\Private\Hardware\NIDAQ\NIDAQ.h" />

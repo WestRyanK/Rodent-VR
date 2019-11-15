@@ -47,7 +47,7 @@
 		</Object>
 	</Objects>
 	<StopConditions>
-		<Condition TimeLimitSec="10" />
+		<Condition TimeLimitSec="40" />
 		<Condition EnterRegionDelaySec="0">
 			<Region RegionId="0" EnterRegionCount="4"/>
 			<Region RegionId="1" EnterRegionCount="1"/>

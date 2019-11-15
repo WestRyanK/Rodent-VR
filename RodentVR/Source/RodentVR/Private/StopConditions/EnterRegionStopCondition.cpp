@@ -3,18 +3,15 @@
 #include "EnterRegionStopCondition.h"
 #include "RewardRegion.h"
 
-UEnterRegionStopCondition::UEnterRegionStopCondition() 
-{
-}
-
 UEnterRegionStopCondition::~UEnterRegionStopCondition()
 {
+	ARewardRegion::OnRewardRegionEnterDelegate.Remove(this, FName("OnRewardRegionEnter"));
 }
 
-void UEnterRegionStopCondition::Init(float EnterRegionDelaySec, TMap<int, int> EnterRegionStopCounts)
+void UEnterRegionStopCondition::Init(float enterRegionDelaySec, TMap<int, int> enterRegionStopCounts)
 {
-	this->EnterRegionDelaySec = EnterRegionDelaySec;
-	this->EnterRegionStopCounts = EnterRegionStopCounts;
+	this->EnterRegionDelaySec = enterRegionDelaySec;
+	this->EnterRegionStopCounts = enterRegionStopCounts;
 	ARewardRegion::OnRewardRegionEnterDelegate.AddDynamic(this, &UEnterRegionStopCondition::OnRewardRegionEnter);
 }
 

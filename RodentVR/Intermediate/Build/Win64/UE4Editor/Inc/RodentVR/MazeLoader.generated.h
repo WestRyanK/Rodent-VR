@@ -8,13 +8,39 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+class UObject;
+class UStopConditionsChecker;
 #ifdef RODENTVR_MazeLoader_generated_h
 #error "MazeLoader.generated.h already included, missing '#pragma once' in MazeLoader.h"
 #endif
 #define RODENTVR_MazeLoader_generated_h
 
-#define RodentVR_Source_RodentVR_Private_Settings_MazeLoader_h_18_RPC_WRAPPERS
-#define RodentVR_Source_RodentVR_Private_Settings_MazeLoader_h_18_RPC_WRAPPERS_NO_PURE_DECLS
+#define RodentVR_Source_RodentVR_Private_Settings_MazeLoader_h_18_RPC_WRAPPERS \
+ \
+	DECLARE_FUNCTION(execLoadMaze) \
+	{ \
+		P_GET_OBJECT(UObject,Z_Param_WorldContextObject); \
+		P_GET_PROPERTY(UStrProperty,Z_Param_MazePath); \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		*(UStopConditionsChecker**)Z_Param__Result=UMazeLoader::LoadMaze(Z_Param_WorldContextObject,Z_Param_MazePath); \
+		P_NATIVE_END; \
+	}
+
+
+#define RodentVR_Source_RodentVR_Private_Settings_MazeLoader_h_18_RPC_WRAPPERS_NO_PURE_DECLS \
+ \
+	DECLARE_FUNCTION(execLoadMaze) \
+	{ \
+		P_GET_OBJECT(UObject,Z_Param_WorldContextObject); \
+		P_GET_PROPERTY(UStrProperty,Z_Param_MazePath); \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		*(UStopConditionsChecker**)Z_Param__Result=UMazeLoader::LoadMaze(Z_Param_WorldContextObject,Z_Param_MazePath); \
+		P_NATIVE_END; \
+	}
+
+
 #define RodentVR_Source_RodentVR_Private_Settings_MazeLoader_h_18_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUMazeLoader(); \
