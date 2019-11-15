@@ -1,6 +1,6 @@
 C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\UE4Editor\DebugGame\RodentVR\Definitions.RodentVR.h
-C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Source\RodentVR\Private\StopConditionsChecker.h
-C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Source\RodentVR\Private\IStopCondition.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Source\RodentVR\Private\StopConditions\StopConditionsChecker.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Source\RodentVR\Private\StopConditions\IStopCondition.h
 C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Source\RodentVR\Private\RodentGameMode.h
 C:\Program Files\Epic Games\UE_4.23\Engine\Source\Runtime\Engine\Public\Engine.h
 C:\Program Files\Epic Games\UE_4.23\Engine\Source\Runtime\Core\Public\Misc/MonolithicHeaderBoilerplate.h
@@ -668,7 +668,7 @@ C:\Program Files\Epic Games\UE_4.23\Engine\Source\Runtime\Slate\Public\Widgets/I
 C:\Program Files\Epic Games\UE_4.23\Engine\Source\Runtime\Slate\Public\Widgets/Input/SSlider.h
 C:\Program Files\Epic Games\UE_4.23\Engine\Source\Runtime\Slate\Public\Widgets/Input/SComboBox.h
 C:\Program Files\Epic Games\UE_4.23\Engine\Source\Runtime\Slate\Public\Framework/Docking/LayoutService.h
-C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Source\RodentVR\RapidXML/rapidxml.hpp
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Source\RodentVR\Private\RapidXML/rapidxml.hpp
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\cassert
 C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\assert.h
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\string

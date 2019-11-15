@@ -101,6 +101,22 @@ void EmptyLinkFunctionForGeneratedCodeRodentGameMode() {}
 		static const UE4CodeGen_Private::FArrayPropertyParams NewProp_RewardDeviceNames;
 		static const UE4CodeGen_Private::FStrPropertyParams NewProp_RewardDeviceNames_Inner;
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MouseBMultiplier_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_MouseBMultiplier;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MouseAMultiplier_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_MouseAMultiplier;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MouseBDeviceName_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStrPropertyParams NewProp_MouseBDeviceName;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MouseADeviceName_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStrPropertyParams NewProp_MouseADeviceName;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_AirPufferFrontAngle_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_AirPufferFrontAngle;
@@ -157,6 +173,34 @@ void EmptyLinkFunctionForGeneratedCodeRodentGameMode() {}
 	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UClass_ARodentGameMode_Statics::NewProp_RewardDeviceNames = { "RewardDeviceNames", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ARodentGameMode, RewardDeviceNames), METADATA_PARAMS(Z_Construct_UClass_ARodentGameMode_Statics::NewProp_RewardDeviceNames_MetaData, ARRAY_COUNT(Z_Construct_UClass_ARodentGameMode_Statics::NewProp_RewardDeviceNames_MetaData)) };
 	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UClass_ARodentGameMode_Statics::NewProp_RewardDeviceNames_Inner = { "RewardDeviceNames", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, METADATA_PARAMS(nullptr, 0) };
 #if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ARodentGameMode_Statics::NewProp_MouseBMultiplier_MetaData[] = {
+		{ "Category", "RodentGameMode" },
+		{ "ModuleRelativePath", "Private/RodentGameMode.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ARodentGameMode_Statics::NewProp_MouseBMultiplier = { "MouseBMultiplier", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ARodentGameMode, MouseBMultiplier), METADATA_PARAMS(Z_Construct_UClass_ARodentGameMode_Statics::NewProp_MouseBMultiplier_MetaData, ARRAY_COUNT(Z_Construct_UClass_ARodentGameMode_Statics::NewProp_MouseBMultiplier_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ARodentGameMode_Statics::NewProp_MouseAMultiplier_MetaData[] = {
+		{ "Category", "RodentGameMode" },
+		{ "ModuleRelativePath", "Private/RodentGameMode.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ARodentGameMode_Statics::NewProp_MouseAMultiplier = { "MouseAMultiplier", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ARodentGameMode, MouseAMultiplier), METADATA_PARAMS(Z_Construct_UClass_ARodentGameMode_Statics::NewProp_MouseAMultiplier_MetaData, ARRAY_COUNT(Z_Construct_UClass_ARodentGameMode_Statics::NewProp_MouseAMultiplier_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ARodentGameMode_Statics::NewProp_MouseBDeviceName_MetaData[] = {
+		{ "Category", "RodentGameMode" },
+		{ "ModuleRelativePath", "Private/RodentGameMode.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UClass_ARodentGameMode_Statics::NewProp_MouseBDeviceName = { "MouseBDeviceName", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ARodentGameMode, MouseBDeviceName), METADATA_PARAMS(Z_Construct_UClass_ARodentGameMode_Statics::NewProp_MouseBDeviceName_MetaData, ARRAY_COUNT(Z_Construct_UClass_ARodentGameMode_Statics::NewProp_MouseBDeviceName_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ARodentGameMode_Statics::NewProp_MouseADeviceName_MetaData[] = {
+		{ "Category", "RodentGameMode" },
+		{ "ModuleRelativePath", "Private/RodentGameMode.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UClass_ARodentGameMode_Statics::NewProp_MouseADeviceName = { "MouseADeviceName", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ARodentGameMode, MouseADeviceName), METADATA_PARAMS(Z_Construct_UClass_ARodentGameMode_Statics::NewProp_MouseADeviceName_MetaData, ARRAY_COUNT(Z_Construct_UClass_ARodentGameMode_Statics::NewProp_MouseADeviceName_MetaData)) };
+#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ARodentGameMode_Statics::NewProp_AirPufferFrontAngle_MetaData[] = {
 		{ "Category", "RodentGameMode" },
 		{ "ModuleRelativePath", "Private/RodentGameMode.h" },
@@ -183,6 +227,10 @@ void EmptyLinkFunctionForGeneratedCodeRodentGameMode() {}
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARodentGameMode_Statics::NewProp_PlaylistFiles_Inner,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARodentGameMode_Statics::NewProp_RewardDeviceNames,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARodentGameMode_Statics::NewProp_RewardDeviceNames_Inner,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARodentGameMode_Statics::NewProp_MouseBMultiplier,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARodentGameMode_Statics::NewProp_MouseAMultiplier,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARodentGameMode_Statics::NewProp_MouseBDeviceName,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARodentGameMode_Statics::NewProp_MouseADeviceName,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARodentGameMode_Statics::NewProp_AirPufferFrontAngle,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARodentGameMode_Statics::NewProp_AirPufferRightDeviceName,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARodentGameMode_Statics::NewProp_AirPufferLeftDeviceName,
@@ -214,7 +262,7 @@ void EmptyLinkFunctionForGeneratedCodeRodentGameMode() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ARodentGameMode, 3393666152);
+	IMPLEMENT_CLASS(ARodentGameMode, 2447458105);
 	template<> RODENTVR_API UClass* StaticClass<ARodentGameMode>()
 	{
 		return ARodentGameMode::StaticClass();

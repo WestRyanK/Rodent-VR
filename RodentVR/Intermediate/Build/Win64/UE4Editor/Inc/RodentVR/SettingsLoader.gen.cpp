@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "RodentVR/Private/SettingsLoader.h"
+#include "RodentVR/Private/Settings/SettingsLoader.h"
 #ifdef _MSC_VER
 #pragma warning (push)
 #pragma warning (disable : 4883)
@@ -53,7 +53,7 @@ void EmptyLinkFunctionForGeneratedCodeSettingsLoader() {}
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_USettingsLoader_LoadSettings_Statics::Function_MetaDataParams[] = {
 		{ "Category", "Loading" },
-		{ "ModuleRelativePath", "Private/SettingsLoader.h" },
+		{ "ModuleRelativePath", "Private/Settings/SettingsLoader.h" },
 		{ "WorldContext", "WorldContextObject" },
 	};
 #endif
@@ -86,13 +86,13 @@ void EmptyLinkFunctionForGeneratedCodeSettingsLoader() {}
 		(UObject* (*)())Z_Construct_UPackage__Script_RodentVR,
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_USettingsLoader_Statics::FuncInfo[] = {
-		{ &Z_Construct_UFunction_USettingsLoader_LoadSettings, "LoadSettings" }, // 1697490194
+		{ &Z_Construct_UFunction_USettingsLoader_LoadSettings, "LoadSettings" }, // 4292182398
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_USettingsLoader_Statics::Class_MetaDataParams[] = {
 		{ "Comment", "/**\n * \n */" },
-		{ "IncludePath", "SettingsLoader.h" },
-		{ "ModuleRelativePath", "Private/SettingsLoader.h" },
+		{ "IncludePath", "Settings/SettingsLoader.h" },
+		{ "ModuleRelativePath", "Private/Settings/SettingsLoader.h" },
 	};
 #endif
 	const FCppClassTypeInfoStatic Z_Construct_UClass_USettingsLoader_Statics::StaticCppClassTypeInfo = {
@@ -122,7 +122,7 @@ void EmptyLinkFunctionForGeneratedCodeSettingsLoader() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(USettingsLoader, 366292839);
+	IMPLEMENT_CLASS(USettingsLoader, 695780254);
 	template<> RODENTVR_API UClass* StaticClass<USettingsLoader>()
 	{
 		return USettingsLoader::StaticClass();

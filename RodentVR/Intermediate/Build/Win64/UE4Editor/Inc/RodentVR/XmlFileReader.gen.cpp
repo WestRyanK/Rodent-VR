@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "RodentVR/Private/XmlFileReader.h"
+#include "RodentVR/Private/Settings/XmlFileReader.h"
 #ifdef _MSC_VER
 #pragma warning (push)
 #pragma warning (disable : 4883)
@@ -41,8 +41,8 @@ void EmptyLinkFunctionForGeneratedCodeXmlFileReader() {}
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UXmlFileReader_Statics::Class_MetaDataParams[] = {
 		{ "Comment", "/**\n * \n */" },
-		{ "IncludePath", "XmlFileReader.h" },
-		{ "ModuleRelativePath", "Private/XmlFileReader.h" },
+		{ "IncludePath", "Settings/XmlFileReader.h" },
+		{ "ModuleRelativePath", "Private/Settings/XmlFileReader.h" },
 	};
 #endif
 	const FCppClassTypeInfoStatic Z_Construct_UClass_UXmlFileReader_Statics::StaticCppClassTypeInfo = {
@@ -72,7 +72,7 @@ void EmptyLinkFunctionForGeneratedCodeXmlFileReader() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UXmlFileReader, 1103032868);
+	IMPLEMENT_CLASS(UXmlFileReader, 2941378463);
 	template<> RODENTVR_API UClass* StaticClass<UXmlFileReader>()
 	{
 		return UXmlFileReader::StaticClass();

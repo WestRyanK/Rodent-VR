@@ -11,11 +11,6 @@
     <None Include="..\..\Source\RodentVREditor.Target.cs">
       <Filter>Source</Filter>
     </None>
-    <ClCompile Include="..\..\RodentVRGameMode.cpp" />
-    <ClInclude Include="..\..\RodentVRGameMode.h" />
-    <None Include="..\..\TestFile.maze" />
-    <None Include="..\..\TestFile2.maze" />
-    <None Include="..\..\TestSettings.vrsettings" />
     <Filter Include="Config">
       <UniqueIdentifier>{6FB31D20-DECD-4809-9065-ADB43444AF89}</UniqueIdentifier>
     </Filter>
@@ -91,30 +86,9 @@
     <ClInclude Include="..\..\Source\RodentVR\RodentVR.h">
       <Filter>Source\RodentVR</Filter>
     </ClInclude>
-    <Filter Include="Source\RodentVR\Hardware">
-      <UniqueIdentifier>{7374202B-B99D-4DF3-9469-EBBFCACF0C03}</UniqueIdentifier>
-    </Filter>
-    <ClCompile Include="..\..\Source\RodentVR\Hardware\NIDAQ.cpp">
-      <Filter>Source\RodentVR\Hardware</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\RodentVR\Hardware\NIDAQ.h">
-      <Filter>Source\RodentVR\Hardware</Filter>
-    </ClInclude>
     <Filter Include="Source\RodentVR\Private">
       <UniqueIdentifier>{D304B3BD-025B-4996-97BD-9F20B0CF0D57}</UniqueIdentifier>
     </Filter>
-    <ClCompile Include="..\..\Source\RodentVR\Private\IStopCondition.cpp">
-      <Filter>Source\RodentVR\Private</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\RodentVR\Private\IStopCondition.h">
-      <Filter>Source\RodentVR\Private</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Source\RodentVR\Private\MazeLoader.cpp">
-      <Filter>Source\RodentVR\Private</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\RodentVR\Private\MazeLoader.h">
-      <Filter>Source\RodentVR\Private</Filter>
-    </ClInclude>
     <ClCompile Include="..\..\Source\RodentVR\Private\RewardRegion.cpp">
       <Filter>Source\RodentVR\Private</Filter>
     </ClCompile>
@@ -127,60 +101,146 @@
     <ClInclude Include="..\..\Source\RodentVR\Private\RodentGameMode.h">
       <Filter>Source\RodentVR\Private</Filter>
     </ClInclude>
-    <ClCompile Include="..\..\Source\RodentVR\Private\SettingsLoader.cpp">
-      <Filter>Source\RodentVR\Private</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\RodentVR\Private\SettingsLoader.h">
-      <Filter>Source\RodentVR\Private</Filter>
+    <None Include="..\..\Source\RodentVR\Private\RapidXML\rapidxml.hpp">
+      <Filter>Source\RodentVR\Private\RapidXML</Filter>
+    </None>
+    <None Include="..\..\Source\RodentVR\Private\RapidXML\rapidxml_iterators.hpp">
+      <Filter>Source\RodentVR\Private\RapidXML</Filter>
+    </None>
+    <None Include="..\..\Source\RodentVR\Private\RapidXML\rapidxml_print.hpp">
+      <Filter>Source\RodentVR\Private\RapidXML</Filter>
+    </None>
+    <None Include="..\..\Source\RodentVR\Private\RapidXML\rapidxml_utils.hpp">
+      <Filter>Source\RodentVR\Private\RapidXML</Filter>
+    </None>
+    <None Include="..\..\TestFile.maze">
+      <Filter>SettingsFiles</Filter>
+    </None>
+    <None Include="..\..\TestFile2.maze">
+      <Filter>SettingsFiles</Filter>
+    </None>
+    <None Include="..\..\TestSettings.vrsettings">
+      <Filter>SettingsFiles</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Source\RodentVR\Private\StopConditions\EnterRegionStopCondition.h">
+      <Filter>Source\RodentVR\Private\StopConditions</Filter>
     </ClInclude>
-    <ClCompile Include="..\..\Source\RodentVR\Private\StopConditionsChecker.cpp">
-      <Filter>Source\RodentVR\Private</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\RodentVR\Private\StopConditionsChecker.h">
-      <Filter>Source\RodentVR\Private</Filter>
+    <ClInclude Include="..\..\Source\RodentVR\Private\StopConditions\IStopCondition.h">
+      <Filter>Source\RodentVR\Private\StopConditions</Filter>
     </ClInclude>
-    <ClCompile Include="..\..\Source\RodentVR\Private\TimeLimitStopCondition.cpp">
-      <Filter>Source\RodentVR\Private</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\RodentVR\Private\TimeLimitStopCondition.h">
-      <Filter>Source\RodentVR\Private</Filter>
+    <ClInclude Include="..\..\Source\RodentVR\Private\StopConditions\StopConditionsChecker.h">
+      <Filter>Source\RodentVR\Private\StopConditions</Filter>
     </ClInclude>
-    <ClCompile Include="..\..\Source\RodentVR\Private\ToneGenerator.cpp">
-      <Filter>Source\RodentVR\Private</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\RodentVR\Private\ToneGenerator.h">
-      <Filter>Source\RodentVR\Private</Filter>
+    <ClInclude Include="..\..\Source\RodentVR\Private\StopConditions\TimeLimitStopCondition.h">
+      <Filter>Source\RodentVR\Private\StopConditions</Filter>
     </ClInclude>
-    <ClCompile Include="..\..\Source\RodentVR\Private\XmlFileReader.cpp">
-      <Filter>Source\RodentVR\Private</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\RodentVR\Private\XmlFileReader.h">
-      <Filter>Source\RodentVR\Private</Filter>
+    <ClInclude Include="..\..\Source\RodentVR\Private\Settings\MazeLoader.h">
+      <Filter>Source\RodentVR\Private\Settings</Filter>
     </ClInclude>
-    <Filter Include="Source\RodentVR\RapidXML">
+    <ClInclude Include="..\..\Source\RodentVR\Private\Settings\SettingsLoader.h">
+      <Filter>Source\RodentVR\Private\Settings</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\RodentVR\Private\Settings\XmlFileReader.h">
+      <Filter>Source\RodentVR\Private\Settings</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\RodentVR\Private\Hardware\BallInput\BallInput.h">
+      <Filter>Source\RodentVR\Private\Hardware\BallInput</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\RodentVR\Private\Hardware\BallInput\MouseMovementReader.h">
+      <Filter>Source\RodentVR\Private\Hardware\BallInput</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\RodentVR\Private\Hardware\BallInput\MouseReader.h">
+      <Filter>Source\RodentVR\Private\Hardware\BallInput</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\RodentVR\Private\Hardware\BallInput\RawInputDevicesReader.h">
+      <Filter>Source\RodentVR\Private\Hardware\BallInput</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\RodentVR\Private\Hardware\BallInput\Window.h">
+      <Filter>Source\RodentVR\Private\Hardware\BallInput</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\RodentVR\Private\Hardware\NIDAQ\NIDAQ.h">
+      <Filter>Source\RodentVR\Private\Hardware\NIDAQ</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\RodentVR\Private\Hardware\ToneGenerator\ToneGenerator.h">
+      <Filter>Source\RodentVR\Private\Hardware\ToneGenerator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\RodentVR\Private\Hardware\BallInput\BallInputComponent.h">
+      <Filter>Source\RodentVR\Private\Hardware\BallInput</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Source\RodentVR\Private\StopConditions\EnterRegionStopCondition.cpp">
+      <Filter>Source\RodentVR\Private\StopConditions</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\RodentVR\Private\StopConditions\IStopCondition.cpp">
+      <Filter>Source\RodentVR\Private\StopConditions</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\RodentVR\Private\StopConditions\StopConditionsChecker.cpp">
+      <Filter>Source\RodentVR\Private\StopConditions</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\RodentVR\Private\StopConditions\TimeLimitStopCondition.cpp">
+      <Filter>Source\RodentVR\Private\StopConditions</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\RodentVR\Private\Settings\MazeLoader.cpp">
+      <Filter>Source\RodentVR\Private\Settings</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\RodentVR\Private\Settings\SettingsLoader.cpp">
+      <Filter>Source\RodentVR\Private\Settings</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\RodentVR\Private\Settings\XmlFileReader.cpp">
+      <Filter>Source\RodentVR\Private\Settings</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\RodentVR\Private\Hardware\BallInput\BallInput.cpp">
+      <Filter>Source\RodentVR\Private\Hardware\BallInput</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\RodentVR\Private\Hardware\BallInput\MouseMovementReader.cpp">
+      <Filter>Source\RodentVR\Private\Hardware\BallInput</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\RodentVR\Private\Hardware\BallInput\MouseReader.cpp">
+      <Filter>Source\RodentVR\Private\Hardware\BallInput</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\RodentVR\Private\Hardware\BallInput\RawInputDevicesReader.cpp">
+      <Filter>Source\RodentVR\Private\Hardware\BallInput</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\RodentVR\Private\Hardware\BallInput\Window.cpp">
+      <Filter>Source\RodentVR\Private\Hardware\BallInput</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\RodentVR\Private\Hardware\NIDAQ\NIDAQ.cpp">
+      <Filter>Source\RodentVR\Private\Hardware\NIDAQ</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\RodentVR\Private\Hardware\ToneGenerator\ToneGenerator.cpp">
+      <Filter>Source\RodentVR\Private\Hardware\ToneGenerator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\RodentVR\Private\Hardware\BallInput\BallInputComponent.cpp">
+      <Filter>Source\RodentVR\Private\Hardware\BallInput</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source\RodentVR\Private\Hardware">
+      <UniqueIdentifier>{7374202B-B99D-4DF3-9469-EBBFCACF0C03}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\RodentVR\Private\Hardware\NIDAQ">
+      <UniqueIdentifier>{2c7aa9e9-a617-48b6-b9c1-62cc0fbecb51}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\RodentVR\Private\RapidXML">
       <UniqueIdentifier>{82B20633-6F05-4BD4-A352-0CDA9796DE6B}</UniqueIdentifier>
     </Filter>
-    <None Include="..\..\Source\RodentVR\RapidXML\rapidxml.hpp">
-      <Filter>Source\RodentVR\RapidXML</Filter>
-    </None>
-    <None Include="..\..\Source\RodentVR\RapidXML\rapidxml_iterators.hpp">
-      <Filter>Source\RodentVR\RapidXML</Filter>
-    </None>
-    <None Include="..\..\Source\RodentVR\RapidXML\rapidxml_print.hpp">
-      <Filter>Source\RodentVR\RapidXML</Filter>
-    </None>
-    <None Include="..\..\Source\RodentVR\RapidXML\rapidxml_utils.hpp">
-      <Filter>Source\RodentVR\RapidXML</Filter>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="..\..\Source\RodentVR\Private\EnterRegionStopCondition.h">
-      <Filter>Source\RodentVR\Private</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="..\..\Source\RodentVR\Private\EnterRegionStopCondition.cpp">
-      <Filter>Source\RodentVR\Private</Filter>
-    </ClCompile>
+    <Filter Include="Source\RodentVR\Private\StopConditions">
+      <UniqueIdentifier>{4419aead-2055-4dc5-917e-65d30249a3b5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\RodentVR\Private\Hardware\BallInput">
+      <UniqueIdentifier>{1023900f-7275-4c7f-a7d2-dc302ae7fe36}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\RodentVR\Private\Settings">
+      <UniqueIdentifier>{f9ee1194-de78-48b1-8065-541143b15a55}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\RodentVR\Private\Hardware\ToneGenerator">
+      <UniqueIdentifier>{472d54c7-de3a-4267-93ea-2ce040fa3145}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SettingsFiles">
+      <UniqueIdentifier>{f962e20a-45c6-435e-8fe3-82f439113733}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
 </Project>
