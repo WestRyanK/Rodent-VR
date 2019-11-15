@@ -13,16 +13,40 @@
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeRodentGameMode() {}
 // Cross Module References
-	RODENTVR_API UFunction* Z_Construct_UDelegateFunction_RodentVR_MazeLoadedDelegate__DelegateSignature();
+	RODENTVR_API UFunction* Z_Construct_UDelegateFunction_RodentVR_MazeFinishedDelegate__DelegateSignature();
 	UPackage* Z_Construct_UPackage__Script_RodentVR();
+	RODENTVR_API UFunction* Z_Construct_UDelegateFunction_RodentVR_MazeLoadedDelegate__DelegateSignature();
 	RODENTVR_API UClass* Z_Construct_UClass_ARodentGameMode_NoRegister();
 	RODENTVR_API UClass* Z_Construct_UClass_ARodentGameMode();
 	ENGINE_API UClass* Z_Construct_UClass_AGameModeBase();
 	RODENTVR_API UFunction* Z_Construct_UFunction_ARodentGameMode_LoadNextMaze();
 	RODENTVR_API UFunction* Z_Construct_UFunction_ARodentGameMode_LoadSettings();
+	RODENTVR_API UFunction* Z_Construct_UFunction_ARodentGameMode_OnMazeFinished();
 	RODENTVR_API UFunction* Z_Construct_UFunction_ARodentGameMode_OnMazeLoaded();
 	RODENTVR_API UClass* Z_Construct_UClass_UStopConditionsChecker_NoRegister();
 // End Cross Module References
+	struct Z_Construct_UDelegateFunction_RodentVR_MazeFinishedDelegate__DelegateSignature_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UDelegateFunction_RodentVR_MazeFinishedDelegate__DelegateSignature_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Private/RodentGameMode.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UDelegateFunction_RodentVR_MazeFinishedDelegate__DelegateSignature_Statics::FuncParams = { (UObject*(*)())Z_Construct_UPackage__Script_RodentVR, nullptr, "MazeFinishedDelegate__DelegateSignature", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00130000, 0, 0, METADATA_PARAMS(Z_Construct_UDelegateFunction_RodentVR_MazeFinishedDelegate__DelegateSignature_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UDelegateFunction_RodentVR_MazeFinishedDelegate__DelegateSignature_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UDelegateFunction_RodentVR_MazeFinishedDelegate__DelegateSignature()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UDelegateFunction_RodentVR_MazeFinishedDelegate__DelegateSignature_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
 	struct Z_Construct_UDelegateFunction_RodentVR_MazeLoadedDelegate__DelegateSignature_Statics
 	{
 #if WITH_METADATA
@@ -51,6 +75,7 @@ void EmptyLinkFunctionForGeneratedCodeRodentGameMode() {}
 		static const FNameNativePtrPair Funcs[] = {
 			{ "LoadNextMaze", &ARodentGameMode::execLoadNextMaze },
 			{ "LoadSettings", &ARodentGameMode::execLoadSettings },
+			{ "OnMazeFinished", &ARodentGameMode::execOnMazeFinished },
 			{ "OnMazeLoaded", &ARodentGameMode::execOnMazeLoaded },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, ARRAY_COUNT(Funcs));
@@ -98,6 +123,28 @@ void EmptyLinkFunctionForGeneratedCodeRodentGameMode() {}
 		if (!ReturnFunction)
 		{
 			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_ARodentGameMode_LoadSettings_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_ARodentGameMode_OnMazeFinished_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ARodentGameMode_OnMazeFinished_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Private/RodentGameMode.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ARodentGameMode_OnMazeFinished_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ARodentGameMode, nullptr, "OnMazeFinished", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00040401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ARodentGameMode_OnMazeFinished_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_ARodentGameMode_OnMazeFinished_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_ARodentGameMode_OnMazeFinished()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_ARodentGameMode_OnMazeFinished_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
@@ -149,6 +196,10 @@ void EmptyLinkFunctionForGeneratedCodeRodentGameMode() {}
 		static const UE4CodeGen_Private::FArrayPropertyParams NewProp_RewardDeviceNames;
 		static const UE4CodeGen_Private::FStrPropertyParams NewProp_RewardDeviceNames_Inner;
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_BehaviorRecordingFilename_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStrPropertyParams NewProp_BehaviorRecordingFilename;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MouseBMultiplier_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_MouseBMultiplier;
@@ -191,6 +242,7 @@ void EmptyLinkFunctionForGeneratedCodeRodentGameMode() {}
 	const FClassFunctionLinkInfo Z_Construct_UClass_ARodentGameMode_Statics::FuncInfo[] = {
 		{ &Z_Construct_UFunction_ARodentGameMode_LoadNextMaze, "LoadNextMaze" }, // 230225646
 		{ &Z_Construct_UFunction_ARodentGameMode_LoadSettings, "LoadSettings" }, // 1094665667
+		{ &Z_Construct_UFunction_ARodentGameMode_OnMazeFinished, "OnMazeFinished" }, // 948292052
 		{ &Z_Construct_UFunction_ARodentGameMode_OnMazeLoaded, "OnMazeLoaded" }, // 2704759559
 	};
 #if WITH_METADATA
@@ -225,6 +277,13 @@ void EmptyLinkFunctionForGeneratedCodeRodentGameMode() {}
 #endif
 	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UClass_ARodentGameMode_Statics::NewProp_RewardDeviceNames = { "RewardDeviceNames", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ARodentGameMode, RewardDeviceNames), METADATA_PARAMS(Z_Construct_UClass_ARodentGameMode_Statics::NewProp_RewardDeviceNames_MetaData, ARRAY_COUNT(Z_Construct_UClass_ARodentGameMode_Statics::NewProp_RewardDeviceNames_MetaData)) };
 	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UClass_ARodentGameMode_Statics::NewProp_RewardDeviceNames_Inner = { "RewardDeviceNames", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, METADATA_PARAMS(nullptr, 0) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ARodentGameMode_Statics::NewProp_BehaviorRecordingFilename_MetaData[] = {
+		{ "Category", "RodentGameMode" },
+		{ "ModuleRelativePath", "Private/RodentGameMode.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UClass_ARodentGameMode_Statics::NewProp_BehaviorRecordingFilename = { "BehaviorRecordingFilename", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ARodentGameMode, BehaviorRecordingFilename), METADATA_PARAMS(Z_Construct_UClass_ARodentGameMode_Statics::NewProp_BehaviorRecordingFilename_MetaData, ARRAY_COUNT(Z_Construct_UClass_ARodentGameMode_Statics::NewProp_BehaviorRecordingFilename_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ARodentGameMode_Statics::NewProp_MouseBMultiplier_MetaData[] = {
 		{ "Category", "RodentGameMode" },
@@ -286,6 +345,7 @@ void EmptyLinkFunctionForGeneratedCodeRodentGameMode() {}
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARodentGameMode_Statics::NewProp_PlaylistFiles_Inner,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARodentGameMode_Statics::NewProp_RewardDeviceNames,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARodentGameMode_Statics::NewProp_RewardDeviceNames_Inner,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARodentGameMode_Statics::NewProp_BehaviorRecordingFilename,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARodentGameMode_Statics::NewProp_MouseBMultiplier,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARodentGameMode_Statics::NewProp_MouseAMultiplier,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARodentGameMode_Statics::NewProp_MouseBDeviceName,
@@ -322,7 +382,7 @@ void EmptyLinkFunctionForGeneratedCodeRodentGameMode() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ARodentGameMode, 1420513175);
+	IMPLEMENT_CLASS(ARodentGameMode, 2864941391);
 	template<> RODENTVR_API UClass* StaticClass<ARodentGameMode>()
 	{
 		return ARodentGameMode::StaticClass();

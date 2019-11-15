@@ -11,6 +11,7 @@
 #include "RodentGameMode.generated.h"
 
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FMazeLoadedDelegate);
+DECLARE_DYNAMIC_MULTICAST_DELEGATE(FMazeFinishedDelegate);
 
 class UStopConditionsChecker;
 /**
@@ -27,7 +28,9 @@ private:
 
 	UFUNCTION()
 	void OnMazeLoaded();
-	
+	UFUNCTION()
+	void OnMazeFinished();
+
 public:
 	ARodentGameMode();
 
@@ -47,6 +50,9 @@ public:
 	float MouseAMultiplier;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	float MouseBMultiplier;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FString BehaviorRecordingFilename;
 
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
@@ -68,4 +74,5 @@ public:
 
 
 	static FMazeLoadedDelegate OnMazeLoadedDelegate;
+	static FMazeFinishedDelegate OnMazeFinishedDelegate;
 };

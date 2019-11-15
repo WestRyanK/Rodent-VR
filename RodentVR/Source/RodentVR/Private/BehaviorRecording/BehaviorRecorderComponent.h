@@ -17,6 +17,11 @@ public:
 	// Sets default values for this component's properties
 	UBehaviorRecorderComponent();
 
+	UFUNCTION()
+	void Save(FString Filename);
+	
+	void Save();
+
 private:
 	TArray<BehaviorSnapshot> Snapshots;
 	float StartTimeSec;
@@ -25,6 +30,8 @@ private:
 	void OnRewardRegionEnter(int RegionEnteredId);
 	UFUNCTION()
 	void OnMazeLoaded();
+	UFUNCTION()
+	void OnMazeFinished();
 
 protected:
 	// Called when the game starts

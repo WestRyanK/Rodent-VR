@@ -13,6 +13,13 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define RODENTVR_RodentGameMode_generated_h
 
+#define RodentVR_Source_RodentVR_Private_RodentGameMode_h_14_DELEGATE \
+static inline void FMazeFinishedDelegate_DelegateWrapper(const FMulticastScriptDelegate& MazeFinishedDelegate) \
+{ \
+	MazeFinishedDelegate.ProcessMulticastDelegate<UObject>(NULL); \
+}
+
+
 #define RodentVR_Source_RodentVR_Private_RodentGameMode_h_13_DELEGATE \
 static inline void FMazeLoadedDelegate_DelegateWrapper(const FMulticastScriptDelegate& MazeLoadedDelegate) \
 { \
@@ -20,7 +27,7 @@ static inline void FMazeLoadedDelegate_DelegateWrapper(const FMulticastScriptDel
 }
 
 
-#define RodentVR_Source_RodentVR_Private_RodentGameMode_h_22_RPC_WRAPPERS \
+#define RodentVR_Source_RodentVR_Private_RodentGameMode_h_23_RPC_WRAPPERS \
  \
 	DECLARE_FUNCTION(execLoadNextMaze) \
 	{ \
@@ -38,6 +45,14 @@ static inline void FMazeLoadedDelegate_DelegateWrapper(const FMulticastScriptDel
 		P_NATIVE_END; \
 	} \
  \
+	DECLARE_FUNCTION(execOnMazeFinished) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->OnMazeFinished(); \
+		P_NATIVE_END; \
+	} \
+ \
 	DECLARE_FUNCTION(execOnMazeLoaded) \
 	{ \
 		P_FINISH; \
@@ -47,7 +62,7 @@ static inline void FMazeLoadedDelegate_DelegateWrapper(const FMulticastScriptDel
 	}
 
 
-#define RodentVR_Source_RodentVR_Private_RodentGameMode_h_22_RPC_WRAPPERS_NO_PURE_DECLS \
+#define RodentVR_Source_RodentVR_Private_RodentGameMode_h_23_RPC_WRAPPERS_NO_PURE_DECLS \
  \
 	DECLARE_FUNCTION(execLoadNextMaze) \
 	{ \
@@ -65,6 +80,14 @@ static inline void FMazeLoadedDelegate_DelegateWrapper(const FMulticastScriptDel
 		P_NATIVE_END; \
 	} \
  \
+	DECLARE_FUNCTION(execOnMazeFinished) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->OnMazeFinished(); \
+		P_NATIVE_END; \
+	} \
+ \
 	DECLARE_FUNCTION(execOnMazeLoaded) \
 	{ \
 		P_FINISH; \
@@ -74,7 +97,7 @@ static inline void FMazeLoadedDelegate_DelegateWrapper(const FMulticastScriptDel
 	}
 
 
-#define RodentVR_Source_RodentVR_Private_RodentGameMode_h_22_INCLASS_NO_PURE_DECLS \
+#define RodentVR_Source_RodentVR_Private_RodentGameMode_h_23_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesARodentGameMode(); \
 	friend struct Z_Construct_UClass_ARodentGameMode_Statics; \
@@ -83,7 +106,7 @@ public: \
 	DECLARE_SERIALIZER(ARodentGameMode)
 
 
-#define RodentVR_Source_RodentVR_Private_RodentGameMode_h_22_INCLASS \
+#define RodentVR_Source_RodentVR_Private_RodentGameMode_h_23_INCLASS \
 private: \
 	static void StaticRegisterNativesARodentGameMode(); \
 	friend struct Z_Construct_UClass_ARodentGameMode_Statics; \
@@ -92,7 +115,7 @@ public: \
 	DECLARE_SERIALIZER(ARodentGameMode)
 
 
-#define RodentVR_Source_RodentVR_Private_RodentGameMode_h_22_STANDARD_CONSTRUCTORS \
+#define RodentVR_Source_RodentVR_Private_RodentGameMode_h_23_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API ARodentGameMode(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(ARodentGameMode) \
@@ -105,7 +128,7 @@ private: \
 public:
 
 
-#define RodentVR_Source_RodentVR_Private_RodentGameMode_h_22_ENHANCED_CONSTRUCTORS \
+#define RodentVR_Source_RodentVR_Private_RodentGameMode_h_23_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API ARodentGameMode(ARodentGameMode&&); \
@@ -116,29 +139,29 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(ARodentGameMode); \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(ARodentGameMode)
 
 
-#define RodentVR_Source_RodentVR_Private_RodentGameMode_h_22_PRIVATE_PROPERTY_OFFSET \
+#define RodentVR_Source_RodentVR_Private_RodentGameMode_h_23_PRIVATE_PROPERTY_OFFSET \
 	FORCEINLINE static uint32 __PPO__StopConditionsChecker() { return STRUCT_OFFSET(ARodentGameMode, StopConditionsChecker); }
 
 
-#define RodentVR_Source_RodentVR_Private_RodentGameMode_h_19_PROLOG
-#define RodentVR_Source_RodentVR_Private_RodentGameMode_h_22_GENERATED_BODY_LEGACY \
+#define RodentVR_Source_RodentVR_Private_RodentGameMode_h_20_PROLOG
+#define RodentVR_Source_RodentVR_Private_RodentGameMode_h_23_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	RodentVR_Source_RodentVR_Private_RodentGameMode_h_22_PRIVATE_PROPERTY_OFFSET \
-	RodentVR_Source_RodentVR_Private_RodentGameMode_h_22_RPC_WRAPPERS \
-	RodentVR_Source_RodentVR_Private_RodentGameMode_h_22_INCLASS \
-	RodentVR_Source_RodentVR_Private_RodentGameMode_h_22_STANDARD_CONSTRUCTORS \
+	RodentVR_Source_RodentVR_Private_RodentGameMode_h_23_PRIVATE_PROPERTY_OFFSET \
+	RodentVR_Source_RodentVR_Private_RodentGameMode_h_23_RPC_WRAPPERS \
+	RodentVR_Source_RodentVR_Private_RodentGameMode_h_23_INCLASS \
+	RodentVR_Source_RodentVR_Private_RodentGameMode_h_23_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define RodentVR_Source_RodentVR_Private_RodentGameMode_h_22_GENERATED_BODY \
+#define RodentVR_Source_RodentVR_Private_RodentGameMode_h_23_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	RodentVR_Source_RodentVR_Private_RodentGameMode_h_22_PRIVATE_PROPERTY_OFFSET \
-	RodentVR_Source_RodentVR_Private_RodentGameMode_h_22_RPC_WRAPPERS_NO_PURE_DECLS \
-	RodentVR_Source_RodentVR_Private_RodentGameMode_h_22_INCLASS_NO_PURE_DECLS \
-	RodentVR_Source_RodentVR_Private_RodentGameMode_h_22_ENHANCED_CONSTRUCTORS \
+	RodentVR_Source_RodentVR_Private_RodentGameMode_h_23_PRIVATE_PROPERTY_OFFSET \
+	RodentVR_Source_RodentVR_Private_RodentGameMode_h_23_RPC_WRAPPERS_NO_PURE_DECLS \
+	RodentVR_Source_RodentVR_Private_RodentGameMode_h_23_INCLASS_NO_PURE_DECLS \
+	RodentVR_Source_RodentVR_Private_RodentGameMode_h_23_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

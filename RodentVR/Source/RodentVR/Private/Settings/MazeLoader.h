@@ -25,6 +25,7 @@ private:
 	static void LoadRegions(UWorld* World, rapidxml::xml_node<>* MazeNode);
 	static void SetMazeMaterials(AActor* MazeActor, rapidxml::xml_node<>* MazeNode);
 	static void LoadPlayerStart(UWorld* World, rapidxml::xml_node<>* MazeNode);
+	static void LoadBehaviorRecordingFilename(ARodentGameMode* InRodentGameMode, rapidxml::xml_node<>* MazeNode);
 	static UStopConditionsChecker* LoadStopConditions(UWorld* World, rapidxml::xml_node<>* MazeNode);
 
 public:

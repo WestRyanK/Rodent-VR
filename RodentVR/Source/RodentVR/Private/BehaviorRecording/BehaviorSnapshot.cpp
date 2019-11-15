@@ -2,12 +2,12 @@
 
 #include "BehaviorSnapshot.h"
 
-BehaviorSnapshot::BehaviorSnapshot(float Timestamp, FVector Position, FVector Forward, int CurrentRegion)
+BehaviorSnapshot::BehaviorSnapshot(float timestamp, FVector position, FVector forward, int currentRegion)
 {
-	this->Timestamp = Timestamp;
-	this->Position = Position;
-	this->Forward = Forward;
-	this->CurrentRegion = CurrentRegion;
+	this->Timestamp = timestamp;
+	this->Position = position;
+	this->Forward = forward;
+	this->CurrentRegion = currentRegion;
 }
 
 float BehaviorSnapshot::GetTimestamp()

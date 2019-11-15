@@ -8,6 +8,7 @@
 
 
 FMazeLoadedDelegate ARodentGameMode::OnMazeLoadedDelegate;
+FMazeFinishedDelegate ARodentGameMode::OnMazeFinishedDelegate;
 
 ARodentGameMode::ARodentGameMode()
 {
@@ -44,6 +45,7 @@ void ARodentGameMode::Tick(float DeltaSeconds)
 	{
 		if (this->StopConditionsChecker->AreStopConditionsMet(this))
 		{
+			this->OnMazeFinished();
 			this->StopConditionsChecker = nullptr;
 
 			this->LoadNextMaze();
@@ -54,4 +56,9 @@ void ARodentGameMode::Tick(float DeltaSeconds)
 void ARodentGameMode::OnMazeLoaded()
 {
 	ARodentGameMode::OnMazeLoadedDelegate.Broadcast();
+}
+
+void ARodentGameMode::OnMazeFinished()
+{
+	ARodentGameMode::OnMazeFinishedDelegate.Broadcast();
 }

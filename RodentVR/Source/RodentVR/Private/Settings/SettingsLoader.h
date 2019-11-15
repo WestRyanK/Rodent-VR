@@ -21,6 +21,7 @@ private:
 	static void LoadAirPufferSettings(ARodentGameMode* InRodentGameMode, rapidxml::xml_node<>* SettingsNode);
 	static void LoadRewardDevices(ARodentGameMode* InRodentGameMode, rapidxml::xml_node<>* SettingsNode);
 	static void LoadPlaylist(ARodentGameMode* InRodentGameMode, rapidxml::xml_node<>* SettingsNode);
+
 public:
 	UFUNCTION(BlueprintCallable, Category = "Loading", meta = (WorldContext = WorldContextObject))
 	static void LoadSettings(UObject* WorldContextObject, ARodentGameMode* InRodentGameMode);
