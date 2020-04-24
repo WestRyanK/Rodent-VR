@@ -30,7 +30,7 @@
 		<Object Name="Cone" MaterialName="MaterialGreen">
 			<Position X="0" Y="0" />
 		</Object>
-		<Object Name="Sphere" MaterialName="MaterialWhite" CanCollide="false">
+		<Object Name="Sphere" MaterialName="MaterialWhite" CanCollide="true">
 			<Position X="50" Y="-75" Z="50"/>
 			<Rotation Angle="45" />
 		</Object>

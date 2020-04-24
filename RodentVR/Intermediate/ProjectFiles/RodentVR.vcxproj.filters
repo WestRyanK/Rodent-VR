@@ -263,5 +263,8 @@
     <Filter Include="Source\RodentVR\Private\BehaviorRecording">
       <UniqueIdentifier>{333911b4-2f27-4fce-9172-91b9c28d7ad9}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source\RodentVR\Private\Editor">
+      <UniqueIdentifier>{c16ad37e-0091-4854-aa3e-7ef95ad5c854}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
 </Project>
