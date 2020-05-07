@@ -21,6 +21,9 @@ private:
 	float TimeLimitSec;
 
 public:
-	void Init(float TimeLimitSec, float StartTime);
 	virtual bool IsStopConditionMet(ARodentGameMode* GameMode);
+	float GetStartTime();
+	void SetStartTime(float StartTimeValue);
+	float GetTimeLimitSec();
+	void SetTimeLimitSec(float TimeLimitSecValue);
 };

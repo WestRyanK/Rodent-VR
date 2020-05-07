@@ -58,7 +58,7 @@ FVector UXmlFileReader::GetVectorFromNode(rapidxml::xml_node<>* Node)
 	return OutVector;
 }
 
-std::string UXmlFileReader::GetStringFromAttribute(rapidxml::xml_node<>* Node, std::string AttributeName, std::string DefaultValue)
+FText UXmlFileReader::GetTextFromAttribute(rapidxml::xml_node<>* Node, std::string AttributeName, std::string DefaultValue)
 {
 	std::string Value = DefaultValue;
 	if (Node != nullptr)
@@ -70,7 +70,7 @@ std::string UXmlFileReader::GetStringFromAttribute(rapidxml::xml_node<>* Node, s
 		}
 	}
 
-	return Value;
+	return FText::FromString(FString(Value.c_str()));
 }
 
 float UXmlFileReader::GetFloatFromAttribute(rapidxml::xml_node<>* Node, std::string AttributeName, float DefaultValue)

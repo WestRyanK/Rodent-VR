@@ -15,6 +15,50 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 #define RodentVR_Source_RodentVR_Private_StopConditions_EnterRegionStopCondition_h_17_RPC_WRAPPERS \
  \
+	DECLARE_FUNCTION(execSetEnterRegionDelaySec) \
+	{ \
+		P_GET_PROPERTY(UFloatProperty,Z_Param_EnterRegionDelaySecValue); \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->SetEnterRegionDelaySec(Z_Param_EnterRegionDelaySecValue); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execGetEnterRegionDelaySec) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		*(float*)Z_Param__Result=P_THIS->GetEnterRegionDelaySec(); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execAddRegionCount) \
+	{ \
+		P_GET_PROPERTY(UIntProperty,Z_Param_RegionId); \
+		P_GET_PROPERTY(UIntProperty,Z_Param_EnterRegionCount); \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->AddRegionCount(Z_Param_RegionId,Z_Param_EnterRegionCount); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execRemoveRegionCount) \
+	{ \
+		P_GET_PROPERTY(UIntProperty,Z_Param_RegionId); \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->RemoveRegionCount(Z_Param_RegionId); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execClearRegionCounts) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->ClearRegionCounts(); \
+		P_NATIVE_END; \
+	} \
+ \
 	DECLARE_FUNCTION(execOnRewardRegionEnter) \
 	{ \
 		P_GET_PROPERTY(UIntProperty,Z_Param_RegionEnteredId); \
@@ -26,6 +70,50 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 
 #define RodentVR_Source_RodentVR_Private_StopConditions_EnterRegionStopCondition_h_17_RPC_WRAPPERS_NO_PURE_DECLS \
+ \
+	DECLARE_FUNCTION(execSetEnterRegionDelaySec) \
+	{ \
+		P_GET_PROPERTY(UFloatProperty,Z_Param_EnterRegionDelaySecValue); \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->SetEnterRegionDelaySec(Z_Param_EnterRegionDelaySecValue); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execGetEnterRegionDelaySec) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		*(float*)Z_Param__Result=P_THIS->GetEnterRegionDelaySec(); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execAddRegionCount) \
+	{ \
+		P_GET_PROPERTY(UIntProperty,Z_Param_RegionId); \
+		P_GET_PROPERTY(UIntProperty,Z_Param_EnterRegionCount); \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->AddRegionCount(Z_Param_RegionId,Z_Param_EnterRegionCount); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execRemoveRegionCount) \
+	{ \
+		P_GET_PROPERTY(UIntProperty,Z_Param_RegionId); \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->RemoveRegionCount(Z_Param_RegionId); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execClearRegionCounts) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->ClearRegionCounts(); \
+		P_NATIVE_END; \
+	} \
  \
 	DECLARE_FUNCTION(execOnRewardRegionEnter) \
 	{ \

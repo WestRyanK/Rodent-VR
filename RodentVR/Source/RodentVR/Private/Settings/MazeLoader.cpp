@@ -170,7 +170,7 @@ void UMazeLoader::LoadBehaviorRecordingFilename(ARodentGameMode* InRodentGameMod
 	FString BehaviorRecordingFilename;
 	if (BehaviorRecordingNode != nullptr)
 	{
-		BehaviorRecordingFilename = FString(UMazeLoader::GetStringFromAttribute(BehaviorRecordingNode, "Filename", "").c_str());
+		//BehaviorRecordingFilename = FString(UMazeLoader::GetTextFromAttribute(BehaviorRecordingNode, "Filename", "").c_str());
 	}
 	InRodentGameMode->BehaviorRecordingFilename = BehaviorRecordingFilename;
 }
@@ -189,7 +189,7 @@ UStopConditionsChecker* UMazeLoader::LoadStopConditions(UWorld* World, rapidxml:
 				float TimeLimitSec = UMazeLoader::GetFloatFromAttribute(ConditionNode, "TimeLimitSec", 0.0f);
 
 				UTimeLimitStopCondition* StopCondition = NewObject<UTimeLimitStopCondition>();
-				StopCondition->Init(TimeLimitSec, World->GetTimeSeconds());
+				//StopCondition->Init(TimeLimitSec, World->GetTimeSeconds());
 				StopConditions->AddStopCondition(StopCondition);
 			}
 			else if (ConditionNode->first_attribute("EnterRegionDelaySec") != nullptr)
@@ -206,7 +206,7 @@ UStopConditionsChecker* UMazeLoader::LoadStopConditions(UWorld* World, rapidxml:
 					}
 				}
 				UEnterRegionStopCondition* StopCondition = NewObject<UEnterRegionStopCondition>();
-				StopCondition->Init(EnterRegionDelaySec, EnterRegionStopCounts);
+				//StopCondition->Init(EnterRegionDelaySec, EnterRegionStopCounts);
 				StopConditions->AddStopCondition(StopCondition);
 			}
 		}

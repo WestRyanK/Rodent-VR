@@ -9,7 +9,7 @@
 #include "EnterRegionStopCondition.generated.h"
 
 /**
- * 
+ *
  */
 UCLASS()
 class UEnterRegionStopCondition : public UStopCondition
@@ -19,15 +19,27 @@ class UEnterRegionStopCondition : public UStopCondition
 private:
 	float EnterRegionDelaySec;
 	TMap<int, int> EnterRegionCounts;
-	TMap<int, int> EnterRegionStopCounts;
+	TMap<int, int> EnterRegionStopConditionCounts;
 
 	UFUNCTION()
-	void OnRewardRegionEnter(int RegionEnteredId);
+		void OnRewardRegionEnter(int RegionEnteredId);
 
 public:
 	~UEnterRegionStopCondition();
 
-	void Init(float EnterRegionDelaySec, TMap<int, int> EnterRegionStopCounts);
+	void Init();
 
 	virtual bool IsStopConditionMet(ARodentGameMode* GameMode);
+
+	UFUNCTION()
+		void ClearRegionCounts();
+	UFUNCTION()
+		void RemoveRegionCount(int RegionId);
+	UFUNCTION()
+		void AddRegionCount(int RegionId, int EnterRegionCount);
+	UFUNCTION()
+		float GetEnterRegionDelaySec();
+	UFUNCTION()
+		void SetEnterRegionDelaySec(float EnterRegionDelaySecValue);
+
 };
