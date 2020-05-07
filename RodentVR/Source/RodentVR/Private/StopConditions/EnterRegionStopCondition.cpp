@@ -8,21 +8,19 @@ UEnterRegionStopCondition::~UEnterRegionStopCondition()
 	ARewardRegion::OnRewardRegionEnterDelegate.Remove(this, FName("OnRewardRegionEnter"));
 }
 
-void UEnterRegionStopCondition::Init(float enterRegionDelaySec, TMap<int, int> enterRegionStopCounts)
+void UEnterRegionStopCondition::Init()
 {
-	this->EnterRegionDelaySec = enterRegionDelaySec;
-	this->EnterRegionStopCounts = enterRegionStopCounts;
 	ARewardRegion::OnRewardRegionEnterDelegate.AddDynamic(this, &UEnterRegionStopCondition::OnRewardRegionEnter);
 }
 
 bool UEnterRegionStopCondition::IsStopConditionMet(ARodentGameMode* GameMode)
 {
 	TArray<int> keys;
-	this->EnterRegionStopCounts.GetKeys(keys);
+	this->EnterRegionStopConditionCounts.GetKeys(keys);
 
 	for (auto key : keys)
 	{
-		if (!this->EnterRegionCounts.Contains(key) || this->EnterRegionCounts[key] < this->EnterRegionStopCounts[key])
+		if (!this->EnterRegionCounts.Contains(key) || this->EnterRegionCounts[key] < this->EnterRegionStopConditionCounts[key])
 			return false;
 	}
 
@@ -37,4 +35,32 @@ void UEnterRegionStopCondition::OnRewardRegionEnter(int RegionEnteredId)
 	}
 
 	this->EnterRegionCounts[RegionEnteredId] += 1;
+}
+
+void UEnterRegionStopCondition::ClearRegionCounts()
+{
+	this->EnterRegionStopConditionCounts.Empty();
+	this->EnterRegionCounts.Empty();
+}
+
+void UEnterRegionStopCondition::RemoveRegionCount(int RegionId)
+{
+	this->EnterRegionStopConditionCounts.Remove(RegionId);
+	this->EnterRegionCounts.Empty();
+}
+
+void UEnterRegionStopCondition::AddRegionCount(int RegionId, int EnterRegionCount)
+{
+	this->EnterRegionStopConditionCounts.Add(RegionId, EnterRegionCount);
+	this->EnterRegionCounts.Empty();
+}
+
+void UEnterRegionStopCondition::SetEnterRegionDelaySec(float EnterRegionDelaySecValue)
+{
+	this->EnterRegionDelaySec = EnterRegionDelaySecValue;
+}
+
+float UEnterRegionStopCondition::GetEnterRegionDelaySec()
+{
+	return this->EnterRegionDelaySec;
 }

@@ -8,13 +8,13 @@ void USettingsLoader::LoadBallInputSettings(ARodentGameMode* InRodentGameMode, r
 	rapidxml::xml_node<>* BallInputNode = SettingsNode->first_node("BallInput");
 	if (BallInputNode != nullptr)
 	{
-		FString MouseADeviceName = FString(USettingsLoader::GetStringFromAttribute(BallInputNode->first_node("MouseADevice"), "DeviceName", "").c_str());
-		FString MouseBDeviceName = FString(USettingsLoader::GetStringFromAttribute(BallInputNode->first_node("MouseBDevice"), "DeviceName", "").c_str());
+		//FString MouseADeviceName = FString(USettingsLoader::GetStringFromAttribute(BallInputNode->first_node("MouseADevice"), "DeviceName", "").c_str());
+		//FString MouseBDeviceName = FString(USettingsLoader::GetStringFromAttribute(BallInputNode->first_node("MouseBDevice"), "DeviceName", "").c_str());
 		float MouseAMultiplier = USettingsLoader::GetFloatFromAttribute(BallInputNode->first_node("MouseADevice"), "Multiplier", 1.0f);
 		float MouseBMultiplier = USettingsLoader::GetFloatFromAttribute(BallInputNode->first_node("MouseBDevice"), "Multiplier", 1.0f);
 
-		InRodentGameMode->MouseADeviceName = MouseADeviceName;
-		InRodentGameMode->MouseBDeviceName = MouseBDeviceName;
+		//InRodentGameMode->MouseADeviceName = MouseADeviceName;
+		//InRodentGameMode->MouseBDeviceName = MouseBDeviceName;
 		InRodentGameMode->MouseAMultiplier = MouseAMultiplier;
 		InRodentGameMode->MouseBMultiplier = MouseBMultiplier;
 	}
@@ -29,8 +29,8 @@ void USettingsLoader::LoadPlaylist(ARodentGameMode* InRodentGameMode, rapidxml::
 	{
 		for (rapidxml::xml_node<>* MazeFileNode = PlaylistNode->first_node("MazeFile"); MazeFileNode; MazeFileNode = MazeFileNode->next_sibling())
 		{
-			FString MazeFilePath = FString(USettingsLoader::GetStringFromAttribute(MazeFileNode, "Path", "").c_str());
-			PlaylistFiles.Add(MazeFilePath);
+			//FString MazeFilePath = FString(USettingsLoader::GetStringFromAttribute(MazeFileNode, "Path", "").c_str());
+			//PlaylistFiles.Add(MazeFilePath);
 		}
 	}
 
@@ -46,8 +46,8 @@ void USettingsLoader::LoadRewardDevices(ARodentGameMode* InRodentGameMode, rapid
 	{
 		for (rapidxml::xml_node<>* RewardDeviceNode = RewardDevicesNode->first_node("RewardDevice"); RewardDeviceNode; RewardDeviceNode = RewardDeviceNode->next_sibling())
 		{
-			FString RewardDeviceName = FString(USettingsLoader::GetStringFromAttribute(RewardDeviceNode, "DeviceName", "").c_str());
-			RewardDeviceNames.Add(RewardDeviceName);
+			//FString RewardDeviceName = FString(USettingsLoader::GetStringFromAttribute(RewardDeviceNode, "DeviceName", "").c_str());
+			//RewardDeviceNames.Add(RewardDeviceName);
 		}
 	}
 
@@ -59,12 +59,12 @@ void USettingsLoader::LoadAirPufferSettings(ARodentGameMode* InRodentGameMode, r
 	rapidxml::xml_node<>* AirPufferNode = SettingsNode->first_node("AirPuffer");
 	if (AirPufferNode != nullptr)
 	{
-		FString LeftDeviceName = FString(USettingsLoader::GetStringFromAttribute(AirPufferNode->first_node("LeftDevice"), "DeviceName", "").c_str());
-		FString RightDeviceName = FString(USettingsLoader::GetStringFromAttribute(AirPufferNode->first_node("RightDevice"), "DeviceName", "").c_str());
+		//FString LeftDeviceName = FString(USettingsLoader::GetStringFromAttribute(AirPufferNode->first_node("LeftDevice"), "DeviceName", "").c_str());
+		//FString RightDeviceName = FString(USettingsLoader::GetStringFromAttribute(AirPufferNode->first_node("RightDevice"), "DeviceName", "").c_str());
 		float FrontToleranceAngle = USettingsLoader::GetFloatFromAttribute(AirPufferNode->first_node("FrontTolerance"), "Angle", 0.0f);
 
-		InRodentGameMode->AirPufferLeftDeviceName = LeftDeviceName;
-		InRodentGameMode->AirPufferLeftDeviceName = LeftDeviceName;
+		//InRodentGameMode->AirPufferLeftDeviceName = LeftDeviceName;
+		//InRodentGameMode->AirPufferLeftDeviceName = LeftDeviceName;
 		InRodentGameMode->AirPufferFrontAngle = FrontToleranceAngle;
 	}
 }
