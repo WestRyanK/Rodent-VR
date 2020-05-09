@@ -17,12 +17,9 @@ UMazeSettings* UMazeSettingsXmlReader::LoadMazeFromFile(FText MazeSettingsFileNa
 
 	try
 	{
-		File = UXmlFileReader::OpenFile(TCHAR_TO_UTF8(*MazeFileName.ToString()));
+		File = UXmlFileReader::OpenFile(TCHAR_TO_UTF8(*MazeSettingsFileName.ToString()));
 	}
 	catch (rapidxml::parse_error ex)
-	{
-	}
-	catch (std::runtime_error ex)
 	{
 	}
 

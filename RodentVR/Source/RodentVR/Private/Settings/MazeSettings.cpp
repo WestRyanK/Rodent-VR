@@ -93,12 +93,12 @@ void UMazeSettings::ClearMazeObjects()
 	this->MazeObjects.Empty();
 }
 
-void UMazeSettings::RemoveMazeObjects(int position)
+void UMazeSettings::RemoveMazeObject(int position)
 {
 	this->MazeObjects.RemoveAt(position);
 }
 
-void UMazeSettings::AddMazeObjects(AMazeObject* MazeObject)
+void UMazeSettings::AddMazeObject(AMazeObject* MazeObject)
 {
 	this->MazeObjects.Add(MazeObject);
 }

@@ -257,10 +257,11 @@ void EmptyLinkFunctionForGeneratedCodeMazeSettings() {}
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UMazeSettings_GetAreRegionsVisible_Statics::Function_MetaDataParams[] = {
+		{ "BlueprintGetter", "" },
 		{ "ModuleRelativePath", "Private/Settings/MazeSettings.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UMazeSettings_GetAreRegionsVisible_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UMazeSettings, nullptr, "GetAreRegionsVisible", nullptr, nullptr, sizeof(MazeSettings_eventGetAreRegionsVisible_Parms), Z_Construct_UFunction_UMazeSettings_GetAreRegionsVisible_Statics::PropPointers, ARRAY_COUNT(Z_Construct_UFunction_UMazeSettings_GetAreRegionsVisible_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UMazeSettings_GetAreRegionsVisible_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_UMazeSettings_GetAreRegionsVisible_Statics::Function_MetaDataParams)) };
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UMazeSettings_GetAreRegionsVisible_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UMazeSettings, nullptr, "GetAreRegionsVisible", nullptr, nullptr, sizeof(MazeSettings_eventGetAreRegionsVisible_Parms), Z_Construct_UFunction_UMazeSettings_GetAreRegionsVisible_Statics::PropPointers, ARRAY_COUNT(Z_Construct_UFunction_UMazeSettings_GetAreRegionsVisible_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x14020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UMazeSettings_GetAreRegionsVisible_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_UMazeSettings_GetAreRegionsVisible_Statics::Function_MetaDataParams)) };
 	UFunction* Z_Construct_UFunction_UMazeSettings_GetAreRegionsVisible()
 	{
 		static UFunction* ReturnFunction = nullptr;
@@ -289,10 +290,11 @@ void EmptyLinkFunctionForGeneratedCodeMazeSettings() {}
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UMazeSettings_GetBehaviorRecordingFileName_Statics::Function_MetaDataParams[] = {
+		{ "BlueprintGetter", "" },
 		{ "ModuleRelativePath", "Private/Settings/MazeSettings.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UMazeSettings_GetBehaviorRecordingFileName_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UMazeSettings, nullptr, "GetBehaviorRecordingFileName", nullptr, nullptr, sizeof(MazeSettings_eventGetBehaviorRecordingFileName_Parms), Z_Construct_UFunction_UMazeSettings_GetBehaviorRecordingFileName_Statics::PropPointers, ARRAY_COUNT(Z_Construct_UFunction_UMazeSettings_GetBehaviorRecordingFileName_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UMazeSettings_GetBehaviorRecordingFileName_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_UMazeSettings_GetBehaviorRecordingFileName_Statics::Function_MetaDataParams)) };
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UMazeSettings_GetBehaviorRecordingFileName_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UMazeSettings, nullptr, "GetBehaviorRecordingFileName", nullptr, nullptr, sizeof(MazeSettings_eventGetBehaviorRecordingFileName_Parms), Z_Construct_UFunction_UMazeSettings_GetBehaviorRecordingFileName_Statics::PropPointers, ARRAY_COUNT(Z_Construct_UFunction_UMazeSettings_GetBehaviorRecordingFileName_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x14020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UMazeSettings_GetBehaviorRecordingFileName_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_UMazeSettings_GetBehaviorRecordingFileName_Statics::Function_MetaDataParams)) };
 	UFunction* Z_Construct_UFunction_UMazeSettings_GetBehaviorRecordingFileName()
 	{
 		static UFunction* ReturnFunction = nullptr;
@@ -321,10 +323,11 @@ void EmptyLinkFunctionForGeneratedCodeMazeSettings() {}
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UMazeSettings_GetMazeName_Statics::Function_MetaDataParams[] = {
+		{ "BlueprintGetter", "" },
 		{ "ModuleRelativePath", "Private/Settings/MazeSettings.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UMazeSettings_GetMazeName_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UMazeSettings, nullptr, "GetMazeName", nullptr, nullptr, sizeof(MazeSettings_eventGetMazeName_Parms), Z_Construct_UFunction_UMazeSettings_GetMazeName_Statics::PropPointers, ARRAY_COUNT(Z_Construct_UFunction_UMazeSettings_GetMazeName_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UMazeSettings_GetMazeName_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_UMazeSettings_GetMazeName_Statics::Function_MetaDataParams)) };
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UMazeSettings_GetMazeName_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UMazeSettings, nullptr, "GetMazeName", nullptr, nullptr, sizeof(MazeSettings_eventGetMazeName_Parms), Z_Construct_UFunction_UMazeSettings_GetMazeName_Statics::PropPointers, ARRAY_COUNT(Z_Construct_UFunction_UMazeSettings_GetMazeName_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x14020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UMazeSettings_GetMazeName_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_UMazeSettings_GetMazeName_Statics::Function_MetaDataParams)) };
 	UFunction* Z_Construct_UFunction_UMazeSettings_GetMazeName()
 	{
 		static UFunction* ReturnFunction = nullptr;
@@ -353,10 +356,11 @@ void EmptyLinkFunctionForGeneratedCodeMazeSettings() {}
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UMazeSettings_GetMazeSettingsFileName_Statics::Function_MetaDataParams[] = {
+		{ "BlueprintGetter", "" },
 		{ "ModuleRelativePath", "Private/Settings/MazeSettings.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UMazeSettings_GetMazeSettingsFileName_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UMazeSettings, nullptr, "GetMazeSettingsFileName", nullptr, nullptr, sizeof(MazeSettings_eventGetMazeSettingsFileName_Parms), Z_Construct_UFunction_UMazeSettings_GetMazeSettingsFileName_Statics::PropPointers, ARRAY_COUNT(Z_Construct_UFunction_UMazeSettings_GetMazeSettingsFileName_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UMazeSettings_GetMazeSettingsFileName_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_UMazeSettings_GetMazeSettingsFileName_Statics::Function_MetaDataParams)) };
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UMazeSettings_GetMazeSettingsFileName_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UMazeSettings, nullptr, "GetMazeSettingsFileName", nullptr, nullptr, sizeof(MazeSettings_eventGetMazeSettingsFileName_Parms), Z_Construct_UFunction_UMazeSettings_GetMazeSettingsFileName_Statics::PropPointers, ARRAY_COUNT(Z_Construct_UFunction_UMazeSettings_GetMazeSettingsFileName_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x14020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UMazeSettings_GetMazeSettingsFileName_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_UMazeSettings_GetMazeSettingsFileName_Statics::Function_MetaDataParams)) };
 	UFunction* Z_Construct_UFunction_UMazeSettings_GetMazeSettingsFileName()
 	{
 		static UFunction* ReturnFunction = nullptr;
@@ -385,10 +389,11 @@ void EmptyLinkFunctionForGeneratedCodeMazeSettings() {}
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UMazeSettings_GetPlayerStart_Statics::Function_MetaDataParams[] = {
+		{ "BlueprintGetter", "" },
 		{ "ModuleRelativePath", "Private/Settings/MazeSettings.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UMazeSettings_GetPlayerStart_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UMazeSettings, nullptr, "GetPlayerStart", nullptr, nullptr, sizeof(MazeSettings_eventGetPlayerStart_Parms), Z_Construct_UFunction_UMazeSettings_GetPlayerStart_Statics::PropPointers, ARRAY_COUNT(Z_Construct_UFunction_UMazeSettings_GetPlayerStart_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00820401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UMazeSettings_GetPlayerStart_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_UMazeSettings_GetPlayerStart_Statics::Function_MetaDataParams)) };
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UMazeSettings_GetPlayerStart_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UMazeSettings, nullptr, "GetPlayerStart", nullptr, nullptr, sizeof(MazeSettings_eventGetPlayerStart_Parms), Z_Construct_UFunction_UMazeSettings_GetPlayerStart_Statics::PropPointers, ARRAY_COUNT(Z_Construct_UFunction_UMazeSettings_GetPlayerStart_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x14820401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UMazeSettings_GetPlayerStart_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_UMazeSettings_GetPlayerStart_Statics::Function_MetaDataParams)) };
 	UFunction* Z_Construct_UFunction_UMazeSettings_GetPlayerStart()
 	{
 		static UFunction* ReturnFunction = nullptr;
@@ -518,10 +523,11 @@ void EmptyLinkFunctionForGeneratedCodeMazeSettings() {}
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UMazeSettings_SetAreRegionsVisible_Statics::Function_MetaDataParams[] = {
+		{ "BlueprintSetter", "" },
 		{ "ModuleRelativePath", "Private/Settings/MazeSettings.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UMazeSettings_SetAreRegionsVisible_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UMazeSettings, nullptr, "SetAreRegionsVisible", nullptr, nullptr, sizeof(MazeSettings_eventSetAreRegionsVisible_Parms), Z_Construct_UFunction_UMazeSettings_SetAreRegionsVisible_Statics::PropPointers, ARRAY_COUNT(Z_Construct_UFunction_UMazeSettings_SetAreRegionsVisible_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UMazeSettings_SetAreRegionsVisible_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_UMazeSettings_SetAreRegionsVisible_Statics::Function_MetaDataParams)) };
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UMazeSettings_SetAreRegionsVisible_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UMazeSettings, nullptr, "SetAreRegionsVisible", nullptr, nullptr, sizeof(MazeSettings_eventSetAreRegionsVisible_Parms), Z_Construct_UFunction_UMazeSettings_SetAreRegionsVisible_Statics::PropPointers, ARRAY_COUNT(Z_Construct_UFunction_UMazeSettings_SetAreRegionsVisible_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UMazeSettings_SetAreRegionsVisible_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_UMazeSettings_SetAreRegionsVisible_Statics::Function_MetaDataParams)) };
 	UFunction* Z_Construct_UFunction_UMazeSettings_SetAreRegionsVisible()
 	{
 		static UFunction* ReturnFunction = nullptr;
@@ -550,10 +556,11 @@ void EmptyLinkFunctionForGeneratedCodeMazeSettings() {}
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UMazeSettings_SetBehaviorRecordingFileName_Statics::Function_MetaDataParams[] = {
+		{ "BlueprintSetter", "" },
 		{ "ModuleRelativePath", "Private/Settings/MazeSettings.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UMazeSettings_SetBehaviorRecordingFileName_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UMazeSettings, nullptr, "SetBehaviorRecordingFileName", nullptr, nullptr, sizeof(MazeSettings_eventSetBehaviorRecordingFileName_Parms), Z_Construct_UFunction_UMazeSettings_SetBehaviorRecordingFileName_Statics::PropPointers, ARRAY_COUNT(Z_Construct_UFunction_UMazeSettings_SetBehaviorRecordingFileName_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UMazeSettings_SetBehaviorRecordingFileName_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_UMazeSettings_SetBehaviorRecordingFileName_Statics::Function_MetaDataParams)) };
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UMazeSettings_SetBehaviorRecordingFileName_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UMazeSettings, nullptr, "SetBehaviorRecordingFileName", nullptr, nullptr, sizeof(MazeSettings_eventSetBehaviorRecordingFileName_Parms), Z_Construct_UFunction_UMazeSettings_SetBehaviorRecordingFileName_Statics::PropPointers, ARRAY_COUNT(Z_Construct_UFunction_UMazeSettings_SetBehaviorRecordingFileName_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UMazeSettings_SetBehaviorRecordingFileName_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_UMazeSettings_SetBehaviorRecordingFileName_Statics::Function_MetaDataParams)) };
 	UFunction* Z_Construct_UFunction_UMazeSettings_SetBehaviorRecordingFileName()
 	{
 		static UFunction* ReturnFunction = nullptr;
@@ -582,10 +589,11 @@ void EmptyLinkFunctionForGeneratedCodeMazeSettings() {}
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UMazeSettings_SetMazeName_Statics::Function_MetaDataParams[] = {
+		{ "BlueprintSetter", "" },
 		{ "ModuleRelativePath", "Private/Settings/MazeSettings.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UMazeSettings_SetMazeName_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UMazeSettings, nullptr, "SetMazeName", nullptr, nullptr, sizeof(MazeSettings_eventSetMazeName_Parms), Z_Construct_UFunction_UMazeSettings_SetMazeName_Statics::PropPointers, ARRAY_COUNT(Z_Construct_UFunction_UMazeSettings_SetMazeName_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UMazeSettings_SetMazeName_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_UMazeSettings_SetMazeName_Statics::Function_MetaDataParams)) };
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UMazeSettings_SetMazeName_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UMazeSettings, nullptr, "SetMazeName", nullptr, nullptr, sizeof(MazeSettings_eventSetMazeName_Parms), Z_Construct_UFunction_UMazeSettings_SetMazeName_Statics::PropPointers, ARRAY_COUNT(Z_Construct_UFunction_UMazeSettings_SetMazeName_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UMazeSettings_SetMazeName_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_UMazeSettings_SetMazeName_Statics::Function_MetaDataParams)) };
 	UFunction* Z_Construct_UFunction_UMazeSettings_SetMazeName()
 	{
 		static UFunction* ReturnFunction = nullptr;
@@ -614,10 +622,11 @@ void EmptyLinkFunctionForGeneratedCodeMazeSettings() {}
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UMazeSettings_SetMazeSettingsFileName_Statics::Function_MetaDataParams[] = {
+		{ "BlueprintSetter", "" },
 		{ "ModuleRelativePath", "Private/Settings/MazeSettings.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UMazeSettings_SetMazeSettingsFileName_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UMazeSettings, nullptr, "SetMazeSettingsFileName", nullptr, nullptr, sizeof(MazeSettings_eventSetMazeSettingsFileName_Parms), Z_Construct_UFunction_UMazeSettings_SetMazeSettingsFileName_Statics::PropPointers, ARRAY_COUNT(Z_Construct_UFunction_UMazeSettings_SetMazeSettingsFileName_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UMazeSettings_SetMazeSettingsFileName_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_UMazeSettings_SetMazeSettingsFileName_Statics::Function_MetaDataParams)) };
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UMazeSettings_SetMazeSettingsFileName_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UMazeSettings, nullptr, "SetMazeSettingsFileName", nullptr, nullptr, sizeof(MazeSettings_eventSetMazeSettingsFileName_Parms), Z_Construct_UFunction_UMazeSettings_SetMazeSettingsFileName_Statics::PropPointers, ARRAY_COUNT(Z_Construct_UFunction_UMazeSettings_SetMazeSettingsFileName_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UMazeSettings_SetMazeSettingsFileName_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_UMazeSettings_SetMazeSettingsFileName_Statics::Function_MetaDataParams)) };
 	UFunction* Z_Construct_UFunction_UMazeSettings_SetMazeSettingsFileName()
 	{
 		static UFunction* ReturnFunction = nullptr;
@@ -646,10 +655,11 @@ void EmptyLinkFunctionForGeneratedCodeMazeSettings() {}
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UMazeSettings_SetPlayerStart_Statics::Function_MetaDataParams[] = {
+		{ "BlueprintSetter", "" },
 		{ "ModuleRelativePath", "Private/Settings/MazeSettings.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UMazeSettings_SetPlayerStart_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UMazeSettings, nullptr, "SetPlayerStart", nullptr, nullptr, sizeof(MazeSettings_eventSetPlayerStart_Parms), Z_Construct_UFunction_UMazeSettings_SetPlayerStart_Statics::PropPointers, ARRAY_COUNT(Z_Construct_UFunction_UMazeSettings_SetPlayerStart_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00820401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UMazeSettings_SetPlayerStart_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_UMazeSettings_SetPlayerStart_Statics::Function_MetaDataParams)) };
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UMazeSettings_SetPlayerStart_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UMazeSettings, nullptr, "SetPlayerStart", nullptr, nullptr, sizeof(MazeSettings_eventSetPlayerStart_Parms), Z_Construct_UFunction_UMazeSettings_SetPlayerStart_Statics::PropPointers, ARRAY_COUNT(Z_Construct_UFunction_UMazeSettings_SetPlayerStart_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04820401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UMazeSettings_SetPlayerStart_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_UMazeSettings_SetPlayerStart_Statics::Function_MetaDataParams)) };
 	UFunction* Z_Construct_UFunction_UMazeSettings_SetPlayerStart()
 	{
 		static UFunction* ReturnFunction = nullptr;
@@ -722,24 +732,26 @@ void EmptyLinkFunctionForGeneratedCodeMazeSettings() {}
 		{ &Z_Construct_UFunction_UMazeSettings_ClearMazeObjects, "ClearMazeObjects" }, // 3158433166
 		{ &Z_Construct_UFunction_UMazeSettings_ClearStopConditions, "ClearStopConditions" }, // 2350259342
 		{ &Z_Construct_UFunction_UMazeSettings_ClearTextures, "ClearTextures" }, // 261844562
-		{ &Z_Construct_UFunction_UMazeSettings_GetAreRegionsVisible, "GetAreRegionsVisible" }, // 712063478
-		{ &Z_Construct_UFunction_UMazeSettings_GetBehaviorRecordingFileName, "GetBehaviorRecordingFileName" }, // 181509970
-		{ &Z_Construct_UFunction_UMazeSettings_GetMazeName, "GetMazeName" }, // 1533521199
-		{ &Z_Construct_UFunction_UMazeSettings_GetMazeSettingsFileName, "GetMazeSettingsFileName" }, // 2508934581
-		{ &Z_Construct_UFunction_UMazeSettings_GetPlayerStart, "GetPlayerStart" }, // 2174144035
+		{ &Z_Construct_UFunction_UMazeSettings_GetAreRegionsVisible, "GetAreRegionsVisible" }, // 538140969
+		{ &Z_Construct_UFunction_UMazeSettings_GetBehaviorRecordingFileName, "GetBehaviorRecordingFileName" }, // 3747524507
+		{ &Z_Construct_UFunction_UMazeSettings_GetMazeName, "GetMazeName" }, // 712796925
+		{ &Z_Construct_UFunction_UMazeSettings_GetMazeSettingsFileName, "GetMazeSettingsFileName" }, // 3819091194
+		{ &Z_Construct_UFunction_UMazeSettings_GetPlayerStart, "GetPlayerStart" }, // 2570566145
 		{ &Z_Construct_UFunction_UMazeSettings_RemoveMazeObject, "RemoveMazeObject" }, // 2090218455
 		{ &Z_Construct_UFunction_UMazeSettings_RemoveStopCondition, "RemoveStopCondition" }, // 3970227289
 		{ &Z_Construct_UFunction_UMazeSettings_RemoveTexture, "RemoveTexture" }, // 2953403180
-		{ &Z_Construct_UFunction_UMazeSettings_SetAreRegionsVisible, "SetAreRegionsVisible" }, // 3700685515
-		{ &Z_Construct_UFunction_UMazeSettings_SetBehaviorRecordingFileName, "SetBehaviorRecordingFileName" }, // 3222898614
-		{ &Z_Construct_UFunction_UMazeSettings_SetMazeName, "SetMazeName" }, // 115867785
-		{ &Z_Construct_UFunction_UMazeSettings_SetMazeSettingsFileName, "SetMazeSettingsFileName" }, // 647246240
-		{ &Z_Construct_UFunction_UMazeSettings_SetPlayerStart, "SetPlayerStart" }, // 3424899133
+		{ &Z_Construct_UFunction_UMazeSettings_SetAreRegionsVisible, "SetAreRegionsVisible" }, // 3171939268
+		{ &Z_Construct_UFunction_UMazeSettings_SetBehaviorRecordingFileName, "SetBehaviorRecordingFileName" }, // 3245658787
+		{ &Z_Construct_UFunction_UMazeSettings_SetMazeName, "SetMazeName" }, // 3088310699
+		{ &Z_Construct_UFunction_UMazeSettings_SetMazeSettingsFileName, "SetMazeSettingsFileName" }, // 2522194683
+		{ &Z_Construct_UFunction_UMazeSettings_SetPlayerStart, "SetPlayerStart" }, // 3159996685
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UMazeSettings_Statics::Class_MetaDataParams[] = {
+		{ "BlueprintType", "true" },
 		{ "Comment", "/**\n *\n */" },
 		{ "IncludePath", "Settings/MazeSettings.h" },
+		{ "IsBlueprintBase", "true" },
 		{ "ModuleRelativePath", "Private/Settings/MazeSettings.h" },
 	};
 #endif
@@ -769,6 +781,9 @@ void EmptyLinkFunctionForGeneratedCodeMazeSettings() {}
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UMazeSettings_Statics::NewProp_MazeObjects_Inner = { "MazeObjects", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, Z_Construct_UClass_AMazeObject_NoRegister, METADATA_PARAMS(nullptr, 0) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UMazeSettings_Statics::NewProp_AreRegionsVisible_MetaData[] = {
+		{ "BlueprintGetter", "GetAreRegionsVisible" },
+		{ "BlueprintSetter", "SetAreRegionsVisible" },
+		{ "Category", "MazeSettings" },
 		{ "ModuleRelativePath", "Private/Settings/MazeSettings.h" },
 	};
 #endif
@@ -776,31 +791,43 @@ void EmptyLinkFunctionForGeneratedCodeMazeSettings() {}
 	{
 		((UMazeSettings*)Obj)->AreRegionsVisible = 1;
 	}
-	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UClass_UMazeSettings_Statics::NewProp_AreRegionsVisible = { "AreRegionsVisible", nullptr, (EPropertyFlags)0x0040000000000000, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(UMazeSettings), &Z_Construct_UClass_UMazeSettings_Statics::NewProp_AreRegionsVisible_SetBit, METADATA_PARAMS(Z_Construct_UClass_UMazeSettings_Statics::NewProp_AreRegionsVisible_MetaData, ARRAY_COUNT(Z_Construct_UClass_UMazeSettings_Statics::NewProp_AreRegionsVisible_MetaData)) };
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UClass_UMazeSettings_Statics::NewProp_AreRegionsVisible = { "AreRegionsVisible", nullptr, (EPropertyFlags)0x0040000000000004, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(UMazeSettings), &Z_Construct_UClass_UMazeSettings_Statics::NewProp_AreRegionsVisible_SetBit, METADATA_PARAMS(Z_Construct_UClass_UMazeSettings_Statics::NewProp_AreRegionsVisible_MetaData, ARRAY_COUNT(Z_Construct_UClass_UMazeSettings_Statics::NewProp_AreRegionsVisible_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UMazeSettings_Statics::NewProp_PlayerStart_MetaData[] = {
+		{ "BlueprintGetter", "GetPlayerStart" },
+		{ "BlueprintSetter", "SetPlayerStart" },
+		{ "Category", "MazeSettings" },
 		{ "ModuleRelativePath", "Private/Settings/MazeSettings.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_UMazeSettings_Statics::NewProp_PlayerStart = { "PlayerStart", nullptr, (EPropertyFlags)0x0040000000000000, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UMazeSettings, PlayerStart), Z_Construct_UScriptStruct_FTransform, METADATA_PARAMS(Z_Construct_UClass_UMazeSettings_Statics::NewProp_PlayerStart_MetaData, ARRAY_COUNT(Z_Construct_UClass_UMazeSettings_Statics::NewProp_PlayerStart_MetaData)) };
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_UMazeSettings_Statics::NewProp_PlayerStart = { "PlayerStart", nullptr, (EPropertyFlags)0x0040000000000004, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UMazeSettings, PlayerStart), Z_Construct_UScriptStruct_FTransform, METADATA_PARAMS(Z_Construct_UClass_UMazeSettings_Statics::NewProp_PlayerStart_MetaData, ARRAY_COUNT(Z_Construct_UClass_UMazeSettings_Statics::NewProp_PlayerStart_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UMazeSettings_Statics::NewProp_BehaviorRecordingFileName_MetaData[] = {
+		{ "BlueprintGetter", "GetBehaviorRecordingFileName" },
+		{ "BlueprintSetter", "SetBehaviorRecordingFileName" },
+		{ "Category", "MazeSettings" },
 		{ "ModuleRelativePath", "Private/Settings/MazeSettings.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FTextPropertyParams Z_Construct_UClass_UMazeSettings_Statics::NewProp_BehaviorRecordingFileName = { "BehaviorRecordingFileName", nullptr, (EPropertyFlags)0x0040000000000000, UE4CodeGen_Private::EPropertyGenFlags::Text, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UMazeSettings, BehaviorRecordingFileName), METADATA_PARAMS(Z_Construct_UClass_UMazeSettings_Statics::NewProp_BehaviorRecordingFileName_MetaData, ARRAY_COUNT(Z_Construct_UClass_UMazeSettings_Statics::NewProp_BehaviorRecordingFileName_MetaData)) };
+	const UE4CodeGen_Private::FTextPropertyParams Z_Construct_UClass_UMazeSettings_Statics::NewProp_BehaviorRecordingFileName = { "BehaviorRecordingFileName", nullptr, (EPropertyFlags)0x0040000000000004, UE4CodeGen_Private::EPropertyGenFlags::Text, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UMazeSettings, BehaviorRecordingFileName), METADATA_PARAMS(Z_Construct_UClass_UMazeSettings_Statics::NewProp_BehaviorRecordingFileName_MetaData, ARRAY_COUNT(Z_Construct_UClass_UMazeSettings_Statics::NewProp_BehaviorRecordingFileName_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UMazeSettings_Statics::NewProp_MazeSettingsFileName_MetaData[] = {
+		{ "BlueprintGetter", "GetMazeSettingsFileName" },
+		{ "BlueprintSetter", "SetMazeSettingsFileName" },
+		{ "Category", "MazeSettings" },
 		{ "ModuleRelativePath", "Private/Settings/MazeSettings.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FTextPropertyParams Z_Construct_UClass_UMazeSettings_Statics::NewProp_MazeSettingsFileName = { "MazeSettingsFileName", nullptr, (EPropertyFlags)0x0040000000000000, UE4CodeGen_Private::EPropertyGenFlags::Text, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UMazeSettings, MazeSettingsFileName), METADATA_PARAMS(Z_Construct_UClass_UMazeSettings_Statics::NewProp_MazeSettingsFileName_MetaData, ARRAY_COUNT(Z_Construct_UClass_UMazeSettings_Statics::NewProp_MazeSettingsFileName_MetaData)) };
+	const UE4CodeGen_Private::FTextPropertyParams Z_Construct_UClass_UMazeSettings_Statics::NewProp_MazeSettingsFileName = { "MazeSettingsFileName", nullptr, (EPropertyFlags)0x0040000000000004, UE4CodeGen_Private::EPropertyGenFlags::Text, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UMazeSettings, MazeSettingsFileName), METADATA_PARAMS(Z_Construct_UClass_UMazeSettings_Statics::NewProp_MazeSettingsFileName_MetaData, ARRAY_COUNT(Z_Construct_UClass_UMazeSettings_Statics::NewProp_MazeSettingsFileName_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UMazeSettings_Statics::NewProp_MazeName_MetaData[] = {
+		{ "BlueprintGetter", "GetMazeName" },
+		{ "BlueprintSetter", "SetMazeName" },
+		{ "Category", "MazeSettings" },
 		{ "ModuleRelativePath", "Private/Settings/MazeSettings.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FTextPropertyParams Z_Construct_UClass_UMazeSettings_Statics::NewProp_MazeName = { "MazeName", nullptr, (EPropertyFlags)0x0040000000000000, UE4CodeGen_Private::EPropertyGenFlags::Text, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UMazeSettings, MazeName), METADATA_PARAMS(Z_Construct_UClass_UMazeSettings_Statics::NewProp_MazeName_MetaData, ARRAY_COUNT(Z_Construct_UClass_UMazeSettings_Statics::NewProp_MazeName_MetaData)) };
+	const UE4CodeGen_Private::FTextPropertyParams Z_Construct_UClass_UMazeSettings_Statics::NewProp_MazeName = { "MazeName", nullptr, (EPropertyFlags)0x0040000000000004, UE4CodeGen_Private::EPropertyGenFlags::Text, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UMazeSettings, MazeName), METADATA_PARAMS(Z_Construct_UClass_UMazeSettings_Statics::NewProp_MazeName_MetaData, ARRAY_COUNT(Z_Construct_UClass_UMazeSettings_Statics::NewProp_MazeName_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UMazeSettings_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UMazeSettings_Statics::NewProp_StopConditions,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UMazeSettings_Statics::NewProp_StopConditions_Inner,
@@ -842,7 +869,7 @@ void EmptyLinkFunctionForGeneratedCodeMazeSettings() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UMazeSettings, 921271613);
+	IMPLEMENT_CLASS(UMazeSettings, 904916198);
 	template<> RODENTVR_API UClass* StaticClass<UMazeSettings>()
 	{
 		return UMazeSettings::StaticClass();

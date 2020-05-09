@@ -5,78 +5,87 @@
 #include "CoreMinimal.h"
 #include "UObject/NoExportTypes.h"
 #include "MazeSettings.h"
+#include "Device.h"
 #include "RodentVRSettings.generated.h"
 
 /**
  * 
  */
-UCLASS()
+UCLASS(Blueprintable)
 class URodentVRSettings : public UObject
 {
 	GENERATED_BODY()
 	
 private:
-	UPROPERTY()
+	UPROPERTY(BlueprintGetter=GetSettingsFileName, BlueprintSetter=SetSettingsFileName)
 		FText SettingsFileName;
-	UPROPERTY()
+	UPROPERTY(BlueprintGetter=GetBallInputMouseADevice, BlueprintSetter=SetBallInputMouseADevice)
 		FText BallInputMouseADevice;
-	UPROPERTY()
+	UPROPERTY(BlueprintGetter=GetBallInputMouseBDevice, BlueprintSetter=SetBallInputMouseBDevice)
 		FText BallInputMouseBDevice;
-	UPROPERTY()
+	UPROPERTY(BlueprintGetter=GetBallInputMouseAMultiplier, BlueprintSetter=SetBallInputMouseAMultiplier)
 		float BallInputMouseAMultiplier;
-	UPROPERTY()
+	UPROPERTY(BlueprintGetter=GetBallInputMouseBMultiplier, BlueprintSetter=SetBallInputMouseBMultiplier)
 		float BallInputMouseBMultiplier;
-	UPROPERTY()
+	UPROPERTY(BlueprintGetter=GetAirPufferLeftDevice, BlueprintSetter=SetAirPufferLeftDevice)
 		UDevice* AirPufferLeftDevice;
-	UPROPERTY()
+	UPROPERTY(BlueprintGetter=GetAirPufferRightDevice, BlueprintSetter=SetAirPufferRightDevice)
 		UDevice* AirPufferRightDevice;
-	UPROPERTY()
+	UPROPERTY(BlueprintGetter=GetAirPufferFrontAngle, BlueprintSetter=SetAirPufferFrontAngle)
 		float AirPufferFrontAngle;
-	UPROPERTY()
+	UPROPERTY(BlueprintGetter=GetRewardDevices)
 		TArray<UDevice*> RewardDevices;
-	UPROPERTY()
+	UPROPERTY(BlueprintGetter=GetMazePlaylist, BlueprintSetter=SetMazePlaylist)
 		TArray<UMazeSettings*> MazePlaylist;
 
 public:
+	URodentVRSettings();
 
-	UFUNCTION()
+	//UPROPERTY(BlueprintReadWrite)
+	//	TArray<UDevice*> RewardDevices;
+
+	UFUNCTION(BlueprintGetter)
 		FText GetSettingsFileName();
-	UFUNCTION()
+	UFUNCTION(BlueprintSetter)
 		void SetSettingsFileName(FText SettingsFileNameValue);
-	UFUNCTION()
+	UFUNCTION(BlueprintGetter)
 		FText GetBallInputMouseADevice();
-	UFUNCTION()
+	UFUNCTION(BlueprintSetter)
 		void SetBallInputMouseADevice(FText BallInputMouseADeviceValue);
-	UFUNCTION()
+	UFUNCTION(BlueprintGetter)
 		FText GetBallInputMouseBDevice();
-	UFUNCTION()
+	UFUNCTION(BlueprintSetter)
 		void SetBallInputMouseBDevice(FText BallInputMouseBDeviceValue);
-	UFUNCTION()
+	UFUNCTION(BlueprintGetter)
 		float GetBallInputMouseAMultiplier();
-	UFUNCTION()
+	UFUNCTION(BlueprintSetter)
 		void SetBallInputMouseAMultiplier(float BallInputMouseAMultiplierValue);
-	UFUNCTION()
+	UFUNCTION(BlueprintGetter)
 		float GetBallInputMouseBMultiplier();
-	UFUNCTION()
+	UFUNCTION(BlueprintSetter)
 		void SetBallInputMouseBMultiplier(float BallInputMouseBMultiplierValue);
-	UFUNCTION()
+	UFUNCTION(BlueprintGetter)
 		UDevice* GetAirPufferLeftDevice();
-	UFUNCTION()
+	UFUNCTION(BlueprintSetter)
 		void SetAirPufferLeftDevice(UDevice* AirPufferLeftDeviceValue);
-	UFUNCTION()
+	UFUNCTION(BlueprintGetter)
 		UDevice* GetAirPufferRightDevice();
-	UFUNCTION()
-		void GetAirPufferRightDevice(UDevice* AirPufferRightDeviceValue);
-	UFUNCTION()
+	UFUNCTION(BlueprintSetter)
+		void SetAirPufferRightDevice(UDevice* AirPufferRightDeviceValue);
+	UFUNCTION(BlueprintGetter)
 		float GetAirPufferFrontAngle();
-	UFUNCTION()
+	UFUNCTION(BlueprintSetter)
 		void SetAirPufferFrontAngle(float AirPufferFrontAngleValue);
-	UFUNCTION()
+	UFUNCTION(BlueprintGetter)
 		TArray<UDevice*> GetRewardDevices();
-	UFUNCTION()
-		void GetRewardDevices(TArray<UDevice*> RewardDevicesValue);
-	UFUNCTION()
+	UFUNCTION(BlueprintCallable)
+		void AddRewardDevice(UDevice* RewardDeviceValue);
+	UFUNCTION(BlueprintCallable)
+		void RemoveRewardDevice(UDevice* RewardDeviceValue);
+	UFUNCTION(BlueprintCallable)
+		void ClearRewardDevices();
+	UFUNCTION(BlueprintGetter)
 		TArray<UMazeSettings*> GetMazePlaylist();
-	UFUNCTION()
+	UFUNCTION(BlueprintSetter)
 		void SetMazePlaylist(TArray<UMazeSettings*> MazePlaylistValue);
 };

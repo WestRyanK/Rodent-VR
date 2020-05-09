@@ -395,11 +395,13 @@
     <ClInclude Include="..\..\Plugins\TinyFileDialogs\Source\ThirdParty\TinyFileDialogsLibrary\TinyFileDialogs\inc\tinyfiledialogs.h" />
     <None Include="..\..\Plugins\TinyFileDialogs\Source\ThirdParty\TinyFileDialogsLibrary\TinyFileDialogs\lib\tinyfiledialogs.x64.lib" />
     <None Include="..\..\Source\RodentVR\RodentVR.Build.cs" />
+    <ClCompile Include="..\..\Source\RodentVR\Private\Settings\Device.cpp" />
     <ClCompile Include="..\..\Source\RodentVR\Private\Settings\MazeObject.cpp" />
     <ClCompile Include="..\..\Source\RodentVR\Private\Settings\RodentVRSettings.cpp" />
     <ClCompile Include="..\..\Source\RodentVR\Private\Settings\RodentVRSettingsXmlReader.cpp" />
     <ClCompile Include="..\..\Source\RodentVR\Private\Settings\TextureLoader.cpp" />
     <ClCompile Include="..\..\Source\RodentVR\RodentVR.cpp" />
+    <ClInclude Include="..\..\Source\RodentVR\Private\Settings\Device.h" />
     <ClInclude Include="..\..\Source\RodentVR\Private\Settings\MazeObject.h" />
     <ClInclude Include="..\..\Source\RodentVR\Private\Settings\RodentVRSettings.h" />
     <ClInclude Include="..\..\Source\RodentVR\Private\Settings\RodentVRSettingsXmlReader.h" />
