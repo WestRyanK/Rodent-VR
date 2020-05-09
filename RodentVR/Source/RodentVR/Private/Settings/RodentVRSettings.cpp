@@ -3,6 +3,12 @@
 
 #include "RodentVRSettings.h"
 
+URodentVRSettings::URodentVRSettings()
+{
+	this->SetAirPufferLeftDevice(NewObject<UDevice>());
+	this->SetAirPufferRightDevice(NewObject<UDevice>());
+}
+
 FText URodentVRSettings::GetSettingsFileName()
 {
 	return this->SettingsFileName;
@@ -48,7 +54,7 @@ float URodentVRSettings::GetBallInputMouseBMultiplier()
 	return this->BallInputMouseBMultiplier;
 }
 
-void URodentVRSettings::GetBallInputMouseBMultiplier(float BallInputMouseBMultiplierValue)
+void URodentVRSettings::SetBallInputMouseBMultiplier(float BallInputMouseBMultiplierValue)
 {
 	this->BallInputMouseBMultiplier = BallInputMouseBMultiplierValue;
 }
@@ -68,7 +74,7 @@ UDevice* URodentVRSettings::GetAirPufferRightDevice()
 	return this->AirPufferRightDevice;
 }
 
-void URodentVRSettings::GetAirPufferRightDevice(UDevice* AirPufferRightDeviceValue)
+void URodentVRSettings::SetAirPufferRightDevice(UDevice* AirPufferRightDeviceValue)
 {
 	this->AirPufferRightDevice = AirPufferRightDeviceValue;
 }
@@ -88,9 +94,19 @@ TArray<UDevice*> URodentVRSettings::GetRewardDevices()
 	return this->RewardDevices;
 }
 
-void URodentVRSettings::GetRewardDevices(TArray<UDevice*> RewardDevicesValue)
+void URodentVRSettings::AddRewardDevice(UDevice* RewardDeviceValue)
 {
-	this->RewardDevices = RewardDevicesValue;
+	this->RewardDevices.Add(RewardDeviceValue);
+}
+
+void URodentVRSettings::RemoveRewardDevice(UDevice* RewardDeviceValue)
+{
+	this->RewardDevices.Remove(RewardDeviceValue);
+}
+
+void URodentVRSettings::ClearRewardDevices()
+{
+	this->RewardDevices.Empty();
 }
 
 TArray<UMazeSettings*> URodentVRSettings::GetMazePlaylist()

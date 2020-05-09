@@ -22,5 +22,5 @@ public:
 		static URodentVRSettings* LoadRodentVRSettingsFromFile(FText RodentVRSettingsFileName);
 
 private:
-	void SetBallInput(URodentVRSettings* Settings, rapidxml::xml_node<>* SettingsNode);
+	static void SetBallInput(URodentVRSettings* Settings, rapidxml::xml_node<>* SettingsNode);
 };

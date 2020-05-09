@@ -15,9 +15,6 @@ URodentVRSettings* URodentVRSettingsXmlReader::LoadRodentVRSettingsFromFile(FTex
 	catch (rapidxml::parse_error ex)
 	{
 	}
-	catch (std::runtime_error ex)
-	{
-	}
 
 	URodentVRSettings* Settings = NewObject<URodentVRSettings>();
 
@@ -27,7 +24,7 @@ URodentVRSettings* URodentVRSettingsXmlReader::LoadRodentVRSettingsFromFile(FTex
 		if (SettingsNode != nullptr)
 		{
 			Settings->SetSettingsFileName(RodentVRSettingsFileName);
-			Settings->SetBallInput(Settings, SettingsNode);
+			URodentVRSettingsXmlReader::SetBallInput(Settings, SettingsNode);
 		}
 	}
 

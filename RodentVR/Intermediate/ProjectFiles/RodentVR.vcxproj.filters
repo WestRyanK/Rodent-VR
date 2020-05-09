@@ -347,6 +347,9 @@
     <ClInclude Include="..\..\Source\RodentVR\Private\Settings\RodentVRSettingsXmlReader.h">
       <Filter>Source\RodentVR\Private\Settings</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\Source\RodentVR\Private\Settings\Device.h">
+      <Filter>Source\RodentVR\Private\Settings</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\Source\RodentVR\Private\Settings\TextureLoader.cpp">
@@ -359,6 +362,9 @@
       <Filter>Source\RodentVR\Private\Settings</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\RodentVR\Private\Settings\RodentVRSettingsXmlReader.cpp">
+      <Filter>Source\RodentVR\Private\Settings</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\RodentVR\Private\Settings\Device.cpp">
       <Filter>Source\RodentVR\Private\Settings</Filter>
     </ClCompile>
   </ItemGroup>

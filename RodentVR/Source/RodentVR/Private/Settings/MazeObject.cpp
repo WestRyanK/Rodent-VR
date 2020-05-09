@@ -13,7 +13,8 @@ void AMazeObject::BeginPlay()
 {
 	Super::BeginPlay();
 	this->StaticMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Static Mesh"));
-	this->StaticMesh->AttachToComponent(this->RootComponent, FAttachmentTransformRules::KeepRelativeTransform);
+	this->StaticMesh->SetupAttachment(this->RootComponent);
+	//this->StaticMesh->AttachToComponent(this->RootComponent, FAttachmentTransformRules::KeepRelativeTransform);
 }
 
 MazeObjectType AMazeObject::GetTypeFromString(FString TypeString)
