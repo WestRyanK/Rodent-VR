@@ -9,32 +9,32 @@ URodentVRSettings::URodentVRSettings()
 	this->SetAirPufferRightDevice(NewObject<UDevice>());
 }
 
-FText URodentVRSettings::GetSettingsFileName()
+FString URodentVRSettings::GetSettingsFileName()
 {
 	return this->SettingsFileName;
 }
 
-void URodentVRSettings::SetSettingsFileName(FText SettingsFileNameValue)
+void URodentVRSettings::SetSettingsFileName(FString SettingsFileNameValue)
 {
 	this->SettingsFileName = SettingsFileNameValue;
 }
 
-FText URodentVRSettings::GetBallInputMouseADevice()
+FString URodentVRSettings::GetBallInputMouseADevice()
 {
 	return this->BallInputMouseADevice;
 }
 
-void URodentVRSettings::SetBallInputMouseADevice(FText BallInputMouseADeviceValue)
+void URodentVRSettings::SetBallInputMouseADevice(FString BallInputMouseADeviceValue)
 {
 	this->BallInputMouseADevice = BallInputMouseADeviceValue;
 }
 
-FText URodentVRSettings::GetBallInputMouseBDevice()
+FString URodentVRSettings::GetBallInputMouseBDevice()
 {
 	return this->BallInputMouseBDevice;
 }
 
-void URodentVRSettings::SetBallInputMouseBDevice(FText BallInputMouseBDeviceValue)
+void URodentVRSettings::SetBallInputMouseBDevice(FString BallInputMouseBDeviceValue)
 {
 	this->BallInputMouseBDevice = BallInputMouseBDeviceValue;
 }
@@ -114,8 +114,17 @@ TArray<UMazeSettings*> URodentVRSettings::GetMazePlaylist()
 	return this->MazePlaylist;
 }
 
-void URodentVRSettings::SetMazePlaylist(TArray<UMazeSettings*> MazePlaylistValue)
+void URodentVRSettings::AddMaze(UMazeSettings* MazeValue)
 {
-	this->MazePlaylist = MazePlaylistValue;
+	this->MazePlaylist.Add(MazeValue);
 }
 
+void URodentVRSettings::RemoveMaze(UMazeSettings* MazeValue)
+{
+	this->MazePlaylist.Remove(MazeValue);
+}
+
+void URodentVRSettings::ClearMazes()
+{
+	this->MazePlaylist.Empty();
+}

@@ -47,6 +47,25 @@ UMaterial* UXmlFileReader::GetMaterialFromNode(rapidxml::xml_node<>* MaterialNod
 	return Material;
 }
 
+UDevice* UXmlFileReader::GetDeviceFromNode(rapidxml::xml_node<>* Node)
+{
+	if (Node != nullptr)
+	{
+		FString DeviceId = UXmlFileReader::GetStringFromAttribute(Node, "DeviceId", "");
+		FString DeviceName = UXmlFileReader::GetStringFromAttribute(Node, "DeviceName", "");
+		FString DevicePort = UXmlFileReader::GetStringFromAttribute(Node, "DevicePort", "");
+		FString DeviceLine = UXmlFileReader::GetStringFromAttribute(Node, "DeviceLine", "");
+		UDevice* Device = NewObject<UDevice>();
+		Device->SetDeviceId(DeviceId);
+		Device->SetDeviceName(DeviceName);
+		Device->SetDevicePort(DevicePort);
+		Device->SetDeviceLine(DeviceLine);
+		return Device;
+	}
+
+	return nullptr;
+}
+
 FVector UXmlFileReader::GetVectorFromNode(rapidxml::xml_node<>* Node)
 {
 	float X = UXmlFileReader::GetFloatFromAttribute(Node, "X", 1.0f);
@@ -58,7 +77,7 @@ FVector UXmlFileReader::GetVectorFromNode(rapidxml::xml_node<>* Node)
 	return OutVector;
 }
 
-FText UXmlFileReader::GetTextFromAttribute(rapidxml::xml_node<>* Node, std::string AttributeName, std::string DefaultValue)
+FString UXmlFileReader::GetStringFromAttribute(rapidxml::xml_node<>* Node, std::string AttributeName, std::string DefaultValue)
 {
 	std::string Value = DefaultValue;
 	if (Node != nullptr)
@@ -70,7 +89,7 @@ FText UXmlFileReader::GetTextFromAttribute(rapidxml::xml_node<>* Node, std::stri
 		}
 	}
 
-	return FText::FromString(FString(Value.c_str()));
+	return FString(Value.c_str());
 }
 
 float UXmlFileReader::GetFloatFromAttribute(rapidxml::xml_node<>* Node, std::string AttributeName, float DefaultValue)

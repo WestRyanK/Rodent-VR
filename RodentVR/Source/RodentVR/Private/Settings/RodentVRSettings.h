@@ -8,6 +8,8 @@
 #include "Device.h"
 #include "RodentVRSettings.generated.h"
 
+
+
 /**
  * 
  */
@@ -18,11 +20,11 @@ class URodentVRSettings : public UObject
 	
 private:
 	UPROPERTY(BlueprintGetter=GetSettingsFileName, BlueprintSetter=SetSettingsFileName)
-		FText SettingsFileName;
+		FString SettingsFileName;
 	UPROPERTY(BlueprintGetter=GetBallInputMouseADevice, BlueprintSetter=SetBallInputMouseADevice)
-		FText BallInputMouseADevice;
+		FString BallInputMouseADevice;
 	UPROPERTY(BlueprintGetter=GetBallInputMouseBDevice, BlueprintSetter=SetBallInputMouseBDevice)
-		FText BallInputMouseBDevice;
+		FString BallInputMouseBDevice;
 	UPROPERTY(BlueprintGetter=GetBallInputMouseAMultiplier, BlueprintSetter=SetBallInputMouseAMultiplier)
 		float BallInputMouseAMultiplier;
 	UPROPERTY(BlueprintGetter=GetBallInputMouseBMultiplier, BlueprintSetter=SetBallInputMouseBMultiplier)
@@ -35,7 +37,7 @@ private:
 		float AirPufferFrontAngle;
 	UPROPERTY(BlueprintGetter=GetRewardDevices)
 		TArray<UDevice*> RewardDevices;
-	UPROPERTY(BlueprintGetter=GetMazePlaylist, BlueprintSetter=SetMazePlaylist)
+	UPROPERTY(BlueprintGetter=GetMazePlaylist)
 		TArray<UMazeSettings*> MazePlaylist;
 
 public:
@@ -45,17 +47,17 @@ public:
 	//	TArray<UDevice*> RewardDevices;
 
 	UFUNCTION(BlueprintGetter)
-		FText GetSettingsFileName();
+		FString GetSettingsFileName();
 	UFUNCTION(BlueprintSetter)
-		void SetSettingsFileName(FText SettingsFileNameValue);
+		void SetSettingsFileName(FString SettingsFileNameValue);
 	UFUNCTION(BlueprintGetter)
-		FText GetBallInputMouseADevice();
+		FString GetBallInputMouseADevice();
 	UFUNCTION(BlueprintSetter)
-		void SetBallInputMouseADevice(FText BallInputMouseADeviceValue);
+		void SetBallInputMouseADevice(FString BallInputMouseADeviceValue);
 	UFUNCTION(BlueprintGetter)
-		FText GetBallInputMouseBDevice();
+		FString GetBallInputMouseBDevice();
 	UFUNCTION(BlueprintSetter)
-		void SetBallInputMouseBDevice(FText BallInputMouseBDeviceValue);
+		void SetBallInputMouseBDevice(FString BallInputMouseBDeviceValue);
 	UFUNCTION(BlueprintGetter)
 		float GetBallInputMouseAMultiplier();
 	UFUNCTION(BlueprintSetter)
@@ -86,6 +88,10 @@ public:
 		void ClearRewardDevices();
 	UFUNCTION(BlueprintGetter)
 		TArray<UMazeSettings*> GetMazePlaylist();
-	UFUNCTION(BlueprintSetter)
-		void SetMazePlaylist(TArray<UMazeSettings*> MazePlaylistValue);
+	UFUNCTION(BlueprintCallable)
+		void AddMaze(UMazeSettings* MazeValue);
+	UFUNCTION(BlueprintCallable)
+		void RemoveMaze(UMazeSettings* MazeValue);
+	UFUNCTION(BlueprintCallable)
+		void ClearMazes();
 };

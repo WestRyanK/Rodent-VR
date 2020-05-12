@@ -18,7 +18,7 @@ class UMazeSettingsXmlReader : public UObject
 
 public:
 	UFUNCTION()
-		static UMazeSettings* LoadMazeFromFile(FText MazeFileName);
+		static UMazeSettings* LoadMazeFromFile(FString MazeFileName);
 
 private:
 	static void LoadMazeName(UMazeSettings* MazeSettings, rapidxml::xml_node<>* MazeNode);

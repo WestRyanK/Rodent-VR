@@ -34,9 +34,9 @@ public:
 	UFUNCTION()
 		MazeObjectType GetObjectType();
 	UFUNCTION()
-		void SetTextureFileName(FText TextureFileNameValue);
+		void SetTextureFileName(FString TextureFileNameValue);
 	UFUNCTION()
-		FText GetTextureFileName();
+		FString GetTextureFileName();
 
 
 protected:
@@ -47,7 +47,7 @@ private:
 	UPROPERTY()
 		MazeObjectType ObjectType;
 	UPROPERTY()
-		FText TextureFileName;
+		FString TextureFileName;
 	UPROPERTY()
 		class UStaticMeshComponent* StaticMesh;
 };

@@ -12,15 +12,18 @@
 /**
  *
  */
-UCLASS()
+UCLASS(Blueprintable)
 class URodentVRSettingsXmlReader : public UObject
 {
 	GENERATED_BODY()
 
 public:
-	UFUNCTION()
-		static URodentVRSettings* LoadRodentVRSettingsFromFile(FText RodentVRSettingsFileName);
+	UFUNCTION(BlueprintCallable)
+		static URodentVRSettings* LoadRodentVRSettingsFromFile(FString RodentVRSettingsFileName);
 
 private:
-	static void SetBallInput(URodentVRSettings* Settings, rapidxml::xml_node<>* SettingsNode);
+	static void LoadBallInput(URodentVRSettings* Settings, rapidxml::xml_node<>* SettingsNode);
+	static void LoadAirPuffers(URodentVRSettings* Settings, rapidxml::xml_node<>* SettingsNode);
+	static void LoadRewardDevices(URodentVRSettings* Settings, rapidxml::xml_node<>* SettingsNode);
+	static void LoadPlaylist(URodentVRSettings* Settings, rapidxml::xml_node<>* SettingsNode);
 };

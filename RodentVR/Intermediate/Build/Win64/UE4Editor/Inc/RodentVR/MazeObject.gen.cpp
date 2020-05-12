@@ -140,16 +140,16 @@ void EmptyLinkFunctionForGeneratedCodeMazeObject() {}
 	{
 		struct MazeObject_eventGetTextureFileName_Parms
 		{
-			FText ReturnValue;
+			FString ReturnValue;
 		};
-		static const UE4CodeGen_Private::FTextPropertyParams NewProp_ReturnValue;
+		static const UE4CodeGen_Private::FStrPropertyParams NewProp_ReturnValue;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
 #endif
 		static const UE4CodeGen_Private::FFunctionParams FuncParams;
 	};
-	const UE4CodeGen_Private::FTextPropertyParams Z_Construct_UFunction_AMazeObject_GetTextureFileName_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UE4CodeGen_Private::EPropertyGenFlags::Text, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(MazeObject_eventGetTextureFileName_Parms, ReturnValue), METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UFunction_AMazeObject_GetTextureFileName_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(MazeObject_eventGetTextureFileName_Parms, ReturnValue), METADATA_PARAMS(nullptr, 0) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AMazeObject_GetTextureFileName_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AMazeObject_GetTextureFileName_Statics::NewProp_ReturnValue,
 	};
@@ -207,16 +207,16 @@ void EmptyLinkFunctionForGeneratedCodeMazeObject() {}
 	{
 		struct MazeObject_eventSetTextureFileName_Parms
 		{
-			FText TextureFileNameValue;
+			FString TextureFileNameValue;
 		};
-		static const UE4CodeGen_Private::FTextPropertyParams NewProp_TextureFileNameValue;
+		static const UE4CodeGen_Private::FStrPropertyParams NewProp_TextureFileNameValue;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
 #endif
 		static const UE4CodeGen_Private::FFunctionParams FuncParams;
 	};
-	const UE4CodeGen_Private::FTextPropertyParams Z_Construct_UFunction_AMazeObject_SetTextureFileName_Statics::NewProp_TextureFileNameValue = { "TextureFileNameValue", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Text, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(MazeObject_eventSetTextureFileName_Parms, TextureFileNameValue), METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UFunction_AMazeObject_SetTextureFileName_Statics::NewProp_TextureFileNameValue = { "TextureFileNameValue", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(MazeObject_eventSetTextureFileName_Parms, TextureFileNameValue), METADATA_PARAMS(nullptr, 0) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AMazeObject_SetTextureFileName_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AMazeObject_SetTextureFileName_Statics::NewProp_TextureFileNameValue,
 	};
@@ -253,7 +253,7 @@ void EmptyLinkFunctionForGeneratedCodeMazeObject() {}
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_TextureFileName_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FTextPropertyParams NewProp_TextureFileName;
+		static const UE4CodeGen_Private::FStrPropertyParams NewProp_TextureFileName;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ObjectType_MetaData[];
 #endif
@@ -269,9 +269,9 @@ void EmptyLinkFunctionForGeneratedCodeMazeObject() {}
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_AMazeObject_Statics::FuncInfo[] = {
 		{ &Z_Construct_UFunction_AMazeObject_GetObjectType, "GetObjectType" }, // 407520814
-		{ &Z_Construct_UFunction_AMazeObject_GetTextureFileName, "GetTextureFileName" }, // 2350310791
+		{ &Z_Construct_UFunction_AMazeObject_GetTextureFileName, "GetTextureFileName" }, // 3590927459
 		{ &Z_Construct_UFunction_AMazeObject_SetObjectType, "SetObjectType" }, // 947351457
-		{ &Z_Construct_UFunction_AMazeObject_SetTextureFileName, "SetTextureFileName" }, // 3565631241
+		{ &Z_Construct_UFunction_AMazeObject_SetTextureFileName, "SetTextureFileName" }, // 896733387
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AMazeObject_Statics::Class_MetaDataParams[] = {
@@ -291,7 +291,7 @@ void EmptyLinkFunctionForGeneratedCodeMazeObject() {}
 		{ "ModuleRelativePath", "Private/Settings/MazeObject.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FTextPropertyParams Z_Construct_UClass_AMazeObject_Statics::NewProp_TextureFileName = { "TextureFileName", nullptr, (EPropertyFlags)0x0040000000000000, UE4CodeGen_Private::EPropertyGenFlags::Text, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AMazeObject, TextureFileName), METADATA_PARAMS(Z_Construct_UClass_AMazeObject_Statics::NewProp_TextureFileName_MetaData, ARRAY_COUNT(Z_Construct_UClass_AMazeObject_Statics::NewProp_TextureFileName_MetaData)) };
+	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UClass_AMazeObject_Statics::NewProp_TextureFileName = { "TextureFileName", nullptr, (EPropertyFlags)0x0040000000000000, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AMazeObject, TextureFileName), METADATA_PARAMS(Z_Construct_UClass_AMazeObject_Statics::NewProp_TextureFileName_MetaData, ARRAY_COUNT(Z_Construct_UClass_AMazeObject_Statics::NewProp_TextureFileName_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AMazeObject_Statics::NewProp_ObjectType_MetaData[] = {
 		{ "ModuleRelativePath", "Private/Settings/MazeObject.h" },
@@ -332,7 +332,7 @@ void EmptyLinkFunctionForGeneratedCodeMazeObject() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AMazeObject, 3099658277);
+	IMPLEMENT_CLASS(AMazeObject, 2059601049);
 	template<> RODENTVR_API UClass* StaticClass<AMazeObject>()
 	{
 		return AMazeObject::StaticClass();

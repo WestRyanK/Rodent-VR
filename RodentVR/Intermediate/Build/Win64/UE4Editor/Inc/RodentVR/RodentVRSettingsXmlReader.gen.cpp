@@ -32,11 +32,11 @@ void EmptyLinkFunctionForGeneratedCodeRodentVRSettingsXmlReader() {}
 	{
 		struct RodentVRSettingsXmlReader_eventLoadRodentVRSettingsFromFile_Parms
 		{
-			FText RodentVRSettingsFileName;
+			FString RodentVRSettingsFileName;
 			URodentVRSettings* ReturnValue;
 		};
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_ReturnValue;
-		static const UE4CodeGen_Private::FTextPropertyParams NewProp_RodentVRSettingsFileName;
+		static const UE4CodeGen_Private::FStrPropertyParams NewProp_RodentVRSettingsFileName;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
@@ -44,7 +44,7 @@ void EmptyLinkFunctionForGeneratedCodeRodentVRSettingsXmlReader() {}
 		static const UE4CodeGen_Private::FFunctionParams FuncParams;
 	};
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_URodentVRSettingsXmlReader_LoadRodentVRSettingsFromFile_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(RodentVRSettingsXmlReader_eventLoadRodentVRSettingsFromFile_Parms, ReturnValue), Z_Construct_UClass_URodentVRSettings_NoRegister, METADATA_PARAMS(nullptr, 0) };
-	const UE4CodeGen_Private::FTextPropertyParams Z_Construct_UFunction_URodentVRSettingsXmlReader_LoadRodentVRSettingsFromFile_Statics::NewProp_RodentVRSettingsFileName = { "RodentVRSettingsFileName", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Text, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(RodentVRSettingsXmlReader_eventLoadRodentVRSettingsFromFile_Parms, RodentVRSettingsFileName), METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UFunction_URodentVRSettingsXmlReader_LoadRodentVRSettingsFromFile_Statics::NewProp_RodentVRSettingsFileName = { "RodentVRSettingsFileName", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(RodentVRSettingsXmlReader_eventLoadRodentVRSettingsFromFile_Parms, RodentVRSettingsFileName), METADATA_PARAMS(nullptr, 0) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_URodentVRSettingsXmlReader_LoadRodentVRSettingsFromFile_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_URodentVRSettingsXmlReader_LoadRodentVRSettingsFromFile_Statics::NewProp_ReturnValue,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_URodentVRSettingsXmlReader_LoadRodentVRSettingsFromFile_Statics::NewProp_RodentVRSettingsFileName,
@@ -54,7 +54,7 @@ void EmptyLinkFunctionForGeneratedCodeRodentVRSettingsXmlReader() {}
 		{ "ModuleRelativePath", "Private/Settings/RodentVRSettingsXmlReader.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_URodentVRSettingsXmlReader_LoadRodentVRSettingsFromFile_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_URodentVRSettingsXmlReader, nullptr, "LoadRodentVRSettingsFromFile", nullptr, nullptr, sizeof(RodentVRSettingsXmlReader_eventLoadRodentVRSettingsFromFile_Parms), Z_Construct_UFunction_URodentVRSettingsXmlReader_LoadRodentVRSettingsFromFile_Statics::PropPointers, ARRAY_COUNT(Z_Construct_UFunction_URodentVRSettingsXmlReader_LoadRodentVRSettingsFromFile_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00022401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_URodentVRSettingsXmlReader_LoadRodentVRSettingsFromFile_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_URodentVRSettingsXmlReader_LoadRodentVRSettingsFromFile_Statics::Function_MetaDataParams)) };
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_URodentVRSettingsXmlReader_LoadRodentVRSettingsFromFile_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_URodentVRSettingsXmlReader, nullptr, "LoadRodentVRSettingsFromFile", nullptr, nullptr, sizeof(RodentVRSettingsXmlReader_eventLoadRodentVRSettingsFromFile_Parms), Z_Construct_UFunction_URodentVRSettingsXmlReader_LoadRodentVRSettingsFromFile_Statics::PropPointers, ARRAY_COUNT(Z_Construct_UFunction_URodentVRSettingsXmlReader_LoadRodentVRSettingsFromFile_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04022401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_URodentVRSettingsXmlReader_LoadRodentVRSettingsFromFile_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_URodentVRSettingsXmlReader_LoadRodentVRSettingsFromFile_Statics::Function_MetaDataParams)) };
 	UFunction* Z_Construct_UFunction_URodentVRSettingsXmlReader_LoadRodentVRSettingsFromFile()
 	{
 		static UFunction* ReturnFunction = nullptr;
@@ -83,12 +83,14 @@ void EmptyLinkFunctionForGeneratedCodeRodentVRSettingsXmlReader() {}
 		(UObject* (*)())Z_Construct_UPackage__Script_RodentVR,
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_URodentVRSettingsXmlReader_Statics::FuncInfo[] = {
-		{ &Z_Construct_UFunction_URodentVRSettingsXmlReader_LoadRodentVRSettingsFromFile, "LoadRodentVRSettingsFromFile" }, // 2376658282
+		{ &Z_Construct_UFunction_URodentVRSettingsXmlReader_LoadRodentVRSettingsFromFile, "LoadRodentVRSettingsFromFile" }, // 1235926956
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_URodentVRSettingsXmlReader_Statics::Class_MetaDataParams[] = {
+		{ "BlueprintType", "true" },
 		{ "Comment", "/**\n *\n */" },
 		{ "IncludePath", "Settings/RodentVRSettingsXmlReader.h" },
+		{ "IsBlueprintBase", "true" },
 		{ "ModuleRelativePath", "Private/Settings/RodentVRSettingsXmlReader.h" },
 	};
 #endif
@@ -119,7 +121,7 @@ void EmptyLinkFunctionForGeneratedCodeRodentVRSettingsXmlReader() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(URodentVRSettingsXmlReader, 1311239796);
+	IMPLEMENT_CLASS(URodentVRSettingsXmlReader, 1993623636);
 	template<> RODENTVR_API UClass* StaticClass<URodentVRSettingsXmlReader>()
 	{
 		return URodentVRSettingsXmlReader::StaticClass();

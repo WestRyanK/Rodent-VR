@@ -1,0 +1,21 @@
+<Settings>
+	<BallInput>
+		<MouseADevice DeviceName="HID\VID_0461&PID_4D22\6&22A5180F&0&0000" Multiplier="-0.5"/>
+		<MouseBDevice DeviceName="HID\VID_0461&PID_4D22\6&22A5180F&0&0000" Multiplier="0.25"/>
+	</BallInput>
+	<AirPuffers FrontToleranceAngle="30.0">
+		<LeftDevice DeviceName="leftdevicename" />
+		<RightDevice DeviceName="rightdevicename" />
+		<FrontTolerance Angle="30.0" />
+	</AirPuffers>
+	<RewardDevices>
+		<RewardDevice DeviceName="rewarddevice0" />
+		<RewardDevice DeviceName="rewarddevice1" />
+		<RewardDevice DeviceName="rewarddevice2" />
+	</RewardDevices>
+	<Playlist>
+		<MazeFile Path="C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\TestFile2.maze"/>
+		<MazeFile Path="C:\\Users\\Ryan\\Drive\\BYU\\2018_Fall\\cs_497r\\Rodent-VR\\RodentVR\\TestFile.maze"/>
+	</Playlist>
+</Settings>
+

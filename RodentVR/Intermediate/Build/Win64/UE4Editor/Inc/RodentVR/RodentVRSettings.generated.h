@@ -17,12 +17,29 @@ class UDevice;
 
 #define RodentVR_Source_RodentVR_Private_Settings_RodentVRSettings_h_17_RPC_WRAPPERS \
  \
-	DECLARE_FUNCTION(execSetMazePlaylist) \
+	DECLARE_FUNCTION(execClearMazes) \
 	{ \
-		P_GET_TARRAY(UMazeSettings*,Z_Param_MazePlaylistValue); \
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
-		P_THIS->SetMazePlaylist(Z_Param_MazePlaylistValue); \
+		P_THIS->ClearMazes(); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execRemoveMaze) \
+	{ \
+		P_GET_OBJECT(UMazeSettings,Z_Param_MazeValue); \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->RemoveMaze(Z_Param_MazeValue); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execAddMaze) \
+	{ \
+		P_GET_OBJECT(UMazeSettings,Z_Param_MazeValue); \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->AddMaze(Z_Param_MazeValue); \
 		P_NATIVE_END; \
 	} \
  \
@@ -155,7 +172,7 @@ class UDevice;
  \
 	DECLARE_FUNCTION(execSetBallInputMouseBDevice) \
 	{ \
-		P_GET_PROPERTY(UTextProperty,Z_Param_BallInputMouseBDeviceValue); \
+		P_GET_PROPERTY(UStrProperty,Z_Param_BallInputMouseBDeviceValue); \
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
 		P_THIS->SetBallInputMouseBDevice(Z_Param_BallInputMouseBDeviceValue); \
@@ -166,13 +183,13 @@ class UDevice;
 	{ \
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
-		*(FText*)Z_Param__Result=P_THIS->GetBallInputMouseBDevice(); \
+		*(FString*)Z_Param__Result=P_THIS->GetBallInputMouseBDevice(); \
 		P_NATIVE_END; \
 	} \
  \
 	DECLARE_FUNCTION(execSetBallInputMouseADevice) \
 	{ \
-		P_GET_PROPERTY(UTextProperty,Z_Param_BallInputMouseADeviceValue); \
+		P_GET_PROPERTY(UStrProperty,Z_Param_BallInputMouseADeviceValue); \
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
 		P_THIS->SetBallInputMouseADevice(Z_Param_BallInputMouseADeviceValue); \
@@ -183,13 +200,13 @@ class UDevice;
 	{ \
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
-		*(FText*)Z_Param__Result=P_THIS->GetBallInputMouseADevice(); \
+		*(FString*)Z_Param__Result=P_THIS->GetBallInputMouseADevice(); \
 		P_NATIVE_END; \
 	} \
  \
 	DECLARE_FUNCTION(execSetSettingsFileName) \
 	{ \
-		P_GET_PROPERTY(UTextProperty,Z_Param_SettingsFileNameValue); \
+		P_GET_PROPERTY(UStrProperty,Z_Param_SettingsFileNameValue); \
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
 		P_THIS->SetSettingsFileName(Z_Param_SettingsFileNameValue); \
@@ -200,19 +217,36 @@ class UDevice;
 	{ \
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
-		*(FText*)Z_Param__Result=P_THIS->GetSettingsFileName(); \
+		*(FString*)Z_Param__Result=P_THIS->GetSettingsFileName(); \
 		P_NATIVE_END; \
 	}
 
 
 #define RodentVR_Source_RodentVR_Private_Settings_RodentVRSettings_h_17_RPC_WRAPPERS_NO_PURE_DECLS \
  \
-	DECLARE_FUNCTION(execSetMazePlaylist) \
+	DECLARE_FUNCTION(execClearMazes) \
 	{ \
-		P_GET_TARRAY(UMazeSettings*,Z_Param_MazePlaylistValue); \
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
-		P_THIS->SetMazePlaylist(Z_Param_MazePlaylistValue); \
+		P_THIS->ClearMazes(); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execRemoveMaze) \
+	{ \
+		P_GET_OBJECT(UMazeSettings,Z_Param_MazeValue); \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->RemoveMaze(Z_Param_MazeValue); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execAddMaze) \
+	{ \
+		P_GET_OBJECT(UMazeSettings,Z_Param_MazeValue); \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->AddMaze(Z_Param_MazeValue); \
 		P_NATIVE_END; \
 	} \
  \
@@ -345,7 +379,7 @@ class UDevice;
  \
 	DECLARE_FUNCTION(execSetBallInputMouseBDevice) \
 	{ \
-		P_GET_PROPERTY(UTextProperty,Z_Param_BallInputMouseBDeviceValue); \
+		P_GET_PROPERTY(UStrProperty,Z_Param_BallInputMouseBDeviceValue); \
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
 		P_THIS->SetBallInputMouseBDevice(Z_Param_BallInputMouseBDeviceValue); \
@@ -356,13 +390,13 @@ class UDevice;
 	{ \
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
-		*(FText*)Z_Param__Result=P_THIS->GetBallInputMouseBDevice(); \
+		*(FString*)Z_Param__Result=P_THIS->GetBallInputMouseBDevice(); \
 		P_NATIVE_END; \
 	} \
  \
 	DECLARE_FUNCTION(execSetBallInputMouseADevice) \
 	{ \
-		P_GET_PROPERTY(UTextProperty,Z_Param_BallInputMouseADeviceValue); \
+		P_GET_PROPERTY(UStrProperty,Z_Param_BallInputMouseADeviceValue); \
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
 		P_THIS->SetBallInputMouseADevice(Z_Param_BallInputMouseADeviceValue); \
@@ -373,13 +407,13 @@ class UDevice;
 	{ \
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
-		*(FText*)Z_Param__Result=P_THIS->GetBallInputMouseADevice(); \
+		*(FString*)Z_Param__Result=P_THIS->GetBallInputMouseADevice(); \
 		P_NATIVE_END; \
 	} \
  \
 	DECLARE_FUNCTION(execSetSettingsFileName) \
 	{ \
-		P_GET_PROPERTY(UTextProperty,Z_Param_SettingsFileNameValue); \
+		P_GET_PROPERTY(UStrProperty,Z_Param_SettingsFileNameValue); \
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
 		P_THIS->SetSettingsFileName(Z_Param_SettingsFileNameValue); \
@@ -390,7 +424,7 @@ class UDevice;
 	{ \
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
-		*(FText*)Z_Param__Result=P_THIS->GetSettingsFileName(); \
+		*(FString*)Z_Param__Result=P_THIS->GetSettingsFileName(); \
 		P_NATIVE_END; \
 	}
 

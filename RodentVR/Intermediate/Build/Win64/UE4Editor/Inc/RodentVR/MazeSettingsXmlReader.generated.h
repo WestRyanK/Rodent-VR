@@ -18,7 +18,7 @@ class UMazeSettings;
  \
 	DECLARE_FUNCTION(execLoadMazeFromFile) \
 	{ \
-		P_GET_PROPERTY(UTextProperty,Z_Param_MazeFileName); \
+		P_GET_PROPERTY(UStrProperty,Z_Param_MazeFileName); \
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
 		*(UMazeSettings**)Z_Param__Result=UMazeSettingsXmlReader::LoadMazeFromFile(Z_Param_MazeFileName); \
@@ -30,7 +30,7 @@ class UMazeSettings;
  \
 	DECLARE_FUNCTION(execLoadMazeFromFile) \
 	{ \
-		P_GET_PROPERTY(UTextProperty,Z_Param_MazeFileName); \
+		P_GET_PROPERTY(UStrProperty,Z_Param_MazeFileName); \
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
 		*(UMazeSettings**)Z_Param__Result=UMazeSettingsXmlReader::LoadMazeFromFile(Z_Param_MazeFileName); \
