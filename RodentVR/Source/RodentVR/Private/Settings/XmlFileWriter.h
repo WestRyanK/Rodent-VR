@@ -24,5 +24,8 @@ public:
 	static void AddFloatAttribute(rapidxml::xml_document<>* Document, rapidxml::xml_node<>* Node, std::string AttributeName, float AttributeValue);
 	static void AddStringAttribute(rapidxml::xml_document<>* Document, rapidxml::xml_node<>* Node, std::string AttributeName, FString AttributeValue);
 	static void AddDeviceNode(rapidxml::xml_document<>* Document, rapidxml::xml_node<>* ParentNode, std::string NodeName, UDevice* Device);
+	static void AddVectorNode(rapidxml::xml_document<>* Document, rapidxml::xml_node<>* ParentNode, std::string NodeName, FVector Vector, bool IncludeZ);
+	static void AddRotatorNode(rapidxml::xml_document<>* Document, rapidxml::xml_node<>* ParentNode, std::string NodeName, FRotator Rotator, bool OnlyIncludeZ);
+	static void AddBoolAttribute(rapidxml::xml_document<>* Document, rapidxml::xml_node<>* Node, std::string AttributeName, bool AttributeValue);
 	static void SaveFile(rapidxml::xml_document<>* Document, std::string FilePath);
 };

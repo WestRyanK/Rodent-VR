@@ -30,10 +30,10 @@ private:
 		bool AreRegionsVisible;
 	//UPROPERTY()
 	//TArray<Region> 
-	UPROPERTY()
+	UPROPERTY(BlueprintGetter=GetMazeObjects)
 	TArray<AMazeObject*> MazeObjects;
-	UPROPERTY()
-		TMap<FString, UTexture2D*> Textures;
+	UPROPERTY(BlueprintGetter=GetTextures)
+		TMap<FString, FString> Textures;
 	UPROPERTY()
 	TArray<UStopCondition*> StopConditions;
 
@@ -58,6 +58,8 @@ public:
 		bool GetAreRegionsVisible();
 	UFUNCTION(BlueprintSetter)
 		void SetAreRegionsVisible(bool AreRegionsVisibleValue);
+	UFUNCTION(BlueprintGetter)
+		TMap<FString, FString> GetTextures();
 	UFUNCTION()
 		void ClearTextures();
 	UFUNCTION()
@@ -76,4 +78,6 @@ public:
 		void RemoveMazeObject(int position);
 	UFUNCTION()
 		void AddMazeObject(AMazeObject* MazeObject);
+	UFUNCTION(BlueprintGetter)
+		TArray<AMazeObject*> GetMazeObjects();
 };

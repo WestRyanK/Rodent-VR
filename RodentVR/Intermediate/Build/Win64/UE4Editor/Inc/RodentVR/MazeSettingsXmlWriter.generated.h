@@ -8,14 +8,37 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+class UMazeSettings;
 #ifdef RODENTVR_MazeSettingsXmlWriter_generated_h
 #error "MazeSettingsXmlWriter.generated.h already included, missing '#pragma once' in MazeSettingsXmlWriter.h"
 #endif
 #define RODENTVR_MazeSettingsXmlWriter_generated_h
 
-#define RodentVR_Source_RodentVR_Private_Settings_MazeSettingsXmlWriter_h_15_RPC_WRAPPERS
-#define RodentVR_Source_RodentVR_Private_Settings_MazeSettingsXmlWriter_h_15_RPC_WRAPPERS_NO_PURE_DECLS
-#define RodentVR_Source_RodentVR_Private_Settings_MazeSettingsXmlWriter_h_15_INCLASS_NO_PURE_DECLS \
+#define RodentVR_Source_RodentVR_Private_Settings_MazeSettingsXmlWriter_h_18_RPC_WRAPPERS \
+ \
+	DECLARE_FUNCTION(execSaveMazeSettings) \
+	{ \
+		P_GET_OBJECT(UMazeSettings,Z_Param_MazeSettings); \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		UMazeSettingsXmlWriter::SaveMazeSettings(Z_Param_MazeSettings); \
+		P_NATIVE_END; \
+	}
+
+
+#define RodentVR_Source_RodentVR_Private_Settings_MazeSettingsXmlWriter_h_18_RPC_WRAPPERS_NO_PURE_DECLS \
+ \
+	DECLARE_FUNCTION(execSaveMazeSettings) \
+	{ \
+		P_GET_OBJECT(UMazeSettings,Z_Param_MazeSettings); \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		UMazeSettingsXmlWriter::SaveMazeSettings(Z_Param_MazeSettings); \
+		P_NATIVE_END; \
+	}
+
+
+#define RodentVR_Source_RodentVR_Private_Settings_MazeSettingsXmlWriter_h_18_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUMazeSettingsXmlWriter(); \
 	friend struct Z_Construct_UClass_UMazeSettingsXmlWriter_Statics; \
@@ -24,7 +47,7 @@ public: \
 	DECLARE_SERIALIZER(UMazeSettingsXmlWriter)
 
 
-#define RodentVR_Source_RodentVR_Private_Settings_MazeSettingsXmlWriter_h_15_INCLASS \
+#define RodentVR_Source_RodentVR_Private_Settings_MazeSettingsXmlWriter_h_18_INCLASS \
 private: \
 	static void StaticRegisterNativesUMazeSettingsXmlWriter(); \
 	friend struct Z_Construct_UClass_UMazeSettingsXmlWriter_Statics; \
@@ -33,7 +56,7 @@ public: \
 	DECLARE_SERIALIZER(UMazeSettingsXmlWriter)
 
 
-#define RodentVR_Source_RodentVR_Private_Settings_MazeSettingsXmlWriter_h_15_STANDARD_CONSTRUCTORS \
+#define RodentVR_Source_RodentVR_Private_Settings_MazeSettingsXmlWriter_h_18_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API UMazeSettingsXmlWriter(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(UMazeSettingsXmlWriter) \
@@ -46,7 +69,7 @@ private: \
 public:
 
 
-#define RodentVR_Source_RodentVR_Private_Settings_MazeSettingsXmlWriter_h_15_ENHANCED_CONSTRUCTORS \
+#define RodentVR_Source_RodentVR_Private_Settings_MazeSettingsXmlWriter_h_18_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API UMazeSettingsXmlWriter(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()) : Super(ObjectInitializer) { }; \
 private: \
@@ -59,26 +82,26 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UMazeSettingsXmlWriter); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(UMazeSettingsXmlWriter)
 
 
-#define RodentVR_Source_RodentVR_Private_Settings_MazeSettingsXmlWriter_h_15_PRIVATE_PROPERTY_OFFSET
-#define RodentVR_Source_RodentVR_Private_Settings_MazeSettingsXmlWriter_h_12_PROLOG
-#define RodentVR_Source_RodentVR_Private_Settings_MazeSettingsXmlWriter_h_15_GENERATED_BODY_LEGACY \
+#define RodentVR_Source_RodentVR_Private_Settings_MazeSettingsXmlWriter_h_18_PRIVATE_PROPERTY_OFFSET
+#define RodentVR_Source_RodentVR_Private_Settings_MazeSettingsXmlWriter_h_15_PROLOG
+#define RodentVR_Source_RodentVR_Private_Settings_MazeSettingsXmlWriter_h_18_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	RodentVR_Source_RodentVR_Private_Settings_MazeSettingsXmlWriter_h_15_PRIVATE_PROPERTY_OFFSET \
-	RodentVR_Source_RodentVR_Private_Settings_MazeSettingsXmlWriter_h_15_RPC_WRAPPERS \
-	RodentVR_Source_RodentVR_Private_Settings_MazeSettingsXmlWriter_h_15_INCLASS \
-	RodentVR_Source_RodentVR_Private_Settings_MazeSettingsXmlWriter_h_15_STANDARD_CONSTRUCTORS \
+	RodentVR_Source_RodentVR_Private_Settings_MazeSettingsXmlWriter_h_18_PRIVATE_PROPERTY_OFFSET \
+	RodentVR_Source_RodentVR_Private_Settings_MazeSettingsXmlWriter_h_18_RPC_WRAPPERS \
+	RodentVR_Source_RodentVR_Private_Settings_MazeSettingsXmlWriter_h_18_INCLASS \
+	RodentVR_Source_RodentVR_Private_Settings_MazeSettingsXmlWriter_h_18_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define RodentVR_Source_RodentVR_Private_Settings_MazeSettingsXmlWriter_h_15_GENERATED_BODY \
+#define RodentVR_Source_RodentVR_Private_Settings_MazeSettingsXmlWriter_h_18_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	RodentVR_Source_RodentVR_Private_Settings_MazeSettingsXmlWriter_h_15_PRIVATE_PROPERTY_OFFSET \
-	RodentVR_Source_RodentVR_Private_Settings_MazeSettingsXmlWriter_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
-	RodentVR_Source_RodentVR_Private_Settings_MazeSettingsXmlWriter_h_15_INCLASS_NO_PURE_DECLS \
-	RodentVR_Source_RodentVR_Private_Settings_MazeSettingsXmlWriter_h_15_ENHANCED_CONSTRUCTORS \
+	RodentVR_Source_RodentVR_Private_Settings_MazeSettingsXmlWriter_h_18_PRIVATE_PROPERTY_OFFSET \
+	RodentVR_Source_RodentVR_Private_Settings_MazeSettingsXmlWriter_h_18_RPC_WRAPPERS_NO_PURE_DECLS \
+	RodentVR_Source_RodentVR_Private_Settings_MazeSettingsXmlWriter_h_18_INCLASS_NO_PURE_DECLS \
+	RodentVR_Source_RodentVR_Private_Settings_MazeSettingsXmlWriter_h_18_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

@@ -29,13 +29,19 @@ public:
 	AMazeObject();
 	static MazeObjectType GetTypeFromString(FString TypeString);
 
-	UFUNCTION()
+	UFUNCTION(BlueprintSetter)
+		void SetCanCollide(bool CanCollideValue);
+	UFUNCTION(BlueprintGetter)
+		bool GetCanCollide();
+	UFUNCTION(BlueprintSetter)
 		void SetObjectType(MazeObjectType ObjectTypeValue);
-	UFUNCTION()
+	UFUNCTION(BlueprintGetter)
 		MazeObjectType GetObjectType();
 	UFUNCTION()
+		FString GetObjectTypeString();
+	UFUNCTION(BlueprintSetter)
 		void SetTextureFileName(FString TextureFileNameValue);
-	UFUNCTION()
+	UFUNCTION(BlueprintGetter)
 		FString GetTextureFileName();
 
 
@@ -44,9 +50,11 @@ protected:
 	virtual void BeginPlay() override;
 
 private:
-	UPROPERTY()
+	UPROPERTY(BlueprintGetter=GetCanCollide, BlueprintSetter=SetCanCollide)
+		bool CanCollide;
+	UPROPERTY(BlueprintGetter=GetObjectType, BlueprintSetter=SetObjectType)
 		MazeObjectType ObjectType;
-	UPROPERTY()
+	UPROPERTY(BlueprintGetter=GetTextureFileName, BlueprintSetter=SetTextureFileName)
 		FString TextureFileName;
 	UPROPERTY()
 		class UStaticMeshComponent* StaticMesh;

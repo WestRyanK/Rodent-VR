@@ -19,28 +19,46 @@ void AMazeObject::BeginPlay()
 
 MazeObjectType AMazeObject::GetTypeFromString(FString TypeString)
 {
-	if (TypeString == "CUBE")
+	if (TypeString == "Cube")
 	{
 		return MazeObjectType::CUBE;
 	}
-	else if(TypeString == "Cylinder")
+	else if (TypeString == "Cylinder")
 	{
-		return MazeObjectType::SPHERE;
-	} 
+		return MazeObjectType::CYLINDER;
+	}
 	else if (TypeString == "Sphere")
 	{
-
 		return MazeObjectType::SPHERE;
 	}
 	else if (TypeString == "Cone")
 	{
-		return MazeObjectType::FIGURINE;
+		return MazeObjectType::CONE;
 	}
 	else if (TypeString == "Figurine")
 	{
 		return MazeObjectType::FIGURINE;
 	}
 	return MazeObjectType::INVALID;
+}
+
+FString AMazeObject::GetObjectTypeString()
+{
+	switch (this->ObjectType)
+	{
+		case MazeObjectType::CUBE:
+			return "Cube";
+		case MazeObjectType::CYLINDER:
+			return "Cylinder";
+		case MazeObjectType::SPHERE:
+			return "Sphere";
+		case MazeObjectType::CONE:
+			return "Cone";
+		case MazeObjectType::FIGURINE:
+			return "Figurine";
+		case MazeObjectType::INVALID:
+			return "";
+	}
 }
 
 void AMazeObject::SetObjectType(MazeObjectType ObjectTypeValue)
@@ -61,5 +79,17 @@ void AMazeObject::SetTextureFileName(FString TextureFileNameValue)
 FString AMazeObject::GetTextureFileName()
 {
 	return this->TextureFileName;
+}
+
+
+void AMazeObject::SetCanCollide(bool CanCollideValue)
+{
+	this->CanCollide = CanCollideValue;
+	this->SetActorEnableCollision(CanCollide);
+}
+
+bool AMazeObject::GetCanCollide()
+{
+	return this->CanCollide;
 }
 

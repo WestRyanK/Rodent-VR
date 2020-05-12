@@ -155,7 +155,7 @@ FRotator UXmlFileReader::GetRotatorFromNode(rapidxml::xml_node<>* Node)
 		AngleZ = GetFloatFromAttribute(Node, "Angle", 0.0f);
 	}
 
-	FRotator Rotation(AngleY, AngleZ, AngleX);
+	FRotator Rotation(AngleY, AngleZ, AngleX); // Pitch, Yaw, Roll
 	return Rotation;
 }
 

@@ -54,7 +54,7 @@ void EmptyLinkFunctionForGeneratedCodeMazeSettingsXmlReader() {}
 		{ "ModuleRelativePath", "Private/Settings/MazeSettingsXmlReader.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UMazeSettingsXmlReader_LoadMazeFromFile_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UMazeSettingsXmlReader, nullptr, "LoadMazeFromFile", nullptr, nullptr, sizeof(MazeSettingsXmlReader_eventLoadMazeFromFile_Parms), Z_Construct_UFunction_UMazeSettingsXmlReader_LoadMazeFromFile_Statics::PropPointers, ARRAY_COUNT(Z_Construct_UFunction_UMazeSettingsXmlReader_LoadMazeFromFile_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00022401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UMazeSettingsXmlReader_LoadMazeFromFile_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_UMazeSettingsXmlReader_LoadMazeFromFile_Statics::Function_MetaDataParams)) };
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UMazeSettingsXmlReader_LoadMazeFromFile_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UMazeSettingsXmlReader, nullptr, "LoadMazeFromFile", nullptr, nullptr, sizeof(MazeSettingsXmlReader_eventLoadMazeFromFile_Parms), Z_Construct_UFunction_UMazeSettingsXmlReader_LoadMazeFromFile_Statics::PropPointers, ARRAY_COUNT(Z_Construct_UFunction_UMazeSettingsXmlReader_LoadMazeFromFile_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04022401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UMazeSettingsXmlReader_LoadMazeFromFile_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_UMazeSettingsXmlReader_LoadMazeFromFile_Statics::Function_MetaDataParams)) };
 	UFunction* Z_Construct_UFunction_UMazeSettingsXmlReader_LoadMazeFromFile()
 	{
 		static UFunction* ReturnFunction = nullptr;
@@ -83,12 +83,14 @@ void EmptyLinkFunctionForGeneratedCodeMazeSettingsXmlReader() {}
 		(UObject* (*)())Z_Construct_UPackage__Script_RodentVR,
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_UMazeSettingsXmlReader_Statics::FuncInfo[] = {
-		{ &Z_Construct_UFunction_UMazeSettingsXmlReader_LoadMazeFromFile, "LoadMazeFromFile" }, // 1098242062
+		{ &Z_Construct_UFunction_UMazeSettingsXmlReader_LoadMazeFromFile, "LoadMazeFromFile" }, // 2227133115
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UMazeSettingsXmlReader_Statics::Class_MetaDataParams[] = {
+		{ "BlueprintType", "true" },
 		{ "Comment", "/**\n *\n */" },
 		{ "IncludePath", "Settings/MazeSettingsXmlReader.h" },
+		{ "IsBlueprintBase", "true" },
 		{ "ModuleRelativePath", "Private/Settings/MazeSettingsXmlReader.h" },
 	};
 #endif
@@ -119,7 +121,7 @@ void EmptyLinkFunctionForGeneratedCodeMazeSettingsXmlReader() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UMazeSettingsXmlReader, 3349764093);
+	IMPLEMENT_CLASS(UMazeSettingsXmlReader, 4136001998);
 	template<> RODENTVR_API UClass* StaticClass<UMazeSettingsXmlReader>()
 	{
 		return UMazeSettingsXmlReader::StaticClass();

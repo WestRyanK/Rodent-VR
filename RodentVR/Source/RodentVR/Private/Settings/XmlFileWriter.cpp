@@ -40,6 +40,16 @@ void UXmlFileWriter::AddFloatAttribute(rapidxml::xml_document<>* Document, rapid
 	UXmlFileWriter::AddAttribute(Document, Node, AttributeName, std::to_string(AttributeValue));
 }
 
+void UXmlFileWriter::AddBoolAttribute(rapidxml::xml_document<>* Document, rapidxml::xml_node<>* Node, std::string AttributeName, bool AttributeValue)
+{
+	std::string BoolString = "false";
+	if (AttributeValue)
+	{
+		BoolString = "true";
+	}
+	UXmlFileWriter::AddAttribute(Document, Node, AttributeName, BoolString);
+}
+
 void UXmlFileWriter::AddStringAttribute(rapidxml::xml_document<>* Document, rapidxml::xml_node<>* Node, std::string AttributeName, FString AttributeValue)
 {
 	UXmlFileWriter::AddAttribute(Document, Node, AttributeName, std::string(TCHAR_TO_UTF8(*AttributeValue)));
@@ -54,11 +64,39 @@ void UXmlFileWriter::AddDeviceNode(rapidxml::xml_document<>* Document, rapidxml:
 	UXmlFileWriter::AddStringAttribute(Document, Node, "DeviceLine", Device->GetDeviceLine());
 }
 
+void UXmlFileWriter::AddVectorNode(rapidxml::xml_document<>* Document, rapidxml::xml_node<>* ParentNode, std::string NodeName, FVector Vector, bool IncludeZ)
+{
+	rapidxml::xml_node<>* Node = UXmlFileWriter::AddNode(Document, ParentNode, NodeName);
+	UXmlFileWriter::AddFloatAttribute(Document, Node, "X", Vector.X);
+	UXmlFileWriter::AddFloatAttribute(Document, Node, "Y", Vector.Y);
+	if (IncludeZ)
+	{
+		UXmlFileWriter::AddFloatAttribute(Document, Node, "Z", Vector.Z);
+	}
+}
+
+void UXmlFileWriter::AddRotatorNode(rapidxml::xml_document<>* Document, rapidxml::xml_node<>* ParentNode, std::string NodeName, FRotator Rotator, bool OnlyIncludeZ)
+{
+	rapidxml::xml_node<>* Node = UXmlFileWriter::AddNode(Document, ParentNode, NodeName);
+
+	//FRotator Rotation(AngleY, AngleZ, AngleX); // Pitch, Yaw, Roll
+	if (OnlyIncludeZ)
+	{
+		UXmlFileWriter::AddFloatAttribute(Document, Node, "Angle", Rotator.Yaw);
+	}
+	else
+	{
+		UXmlFileWriter::AddFloatAttribute(Document, Node, "AngleY", Rotator.Pitch);
+		UXmlFileWriter::AddFloatAttribute(Document, Node, "AngleZ", Rotator.Yaw);
+		UXmlFileWriter::AddFloatAttribute(Document, Node, "AngleX", Rotator.Roll);
+	}
+}
+
 void UXmlFileWriter::SaveFile(rapidxml::xml_document<>* Document, std::string FilePath)
 {
 	std::ofstream File(FilePath);
 	std::string XmlString;
-    rapidxml::print(std::back_inserter(XmlString), *Document, 0);
+	rapidxml::print(std::back_inserter(XmlString), *Document, 0);
 	File << XmlString;
 
 	//rapidxml::print(File, *Document);

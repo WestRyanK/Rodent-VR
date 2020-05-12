@@ -55,6 +55,11 @@ void UMazeSettings::SetAreRegionsVisible(bool AreRegionsVisibleValue)
 	this->AreRegionsVisible = AreRegionsVisibleValue;
 }
 
+TMap<FString, FString> UMazeSettings::GetTextures()
+{
+	return this->Textures;
+}
+
 void UMazeSettings::ClearTextures()
 {
 	this->Textures.Empty();
@@ -62,10 +67,11 @@ void UMazeSettings::ClearTextures()
 
 void UMazeSettings::AddTexture(FString SlotName, FString TextureFileNameValue)
 {
-	bool IsValid;
-	int32 Width, Height;
-	UTexture2D* Texture = UTextureLoader::LoadTextureFromFile(TextureFileNameValue, IsValid, Width, Height);
-	this->Textures.Add(SlotName, Texture);
+	//bool IsValid;
+	//int32 Width, Height;
+	//UTexture2D* Texture = UTextureLoader::LoadTextureFromFile(TextureFileNameValue, IsValid, Width, Height);
+	//this->Textures.Add(SlotName, Texture);
+	this->Textures.Add(SlotName, TextureFileNameValue);
 }
 
 void UMazeSettings::RemoveTexture(FString SlotName)
@@ -101,4 +107,9 @@ void UMazeSettings::RemoveMazeObject(int position)
 void UMazeSettings::AddMazeObject(AMazeObject* MazeObject)
 {
 	this->MazeObjects.Add(MazeObject);
+}
+
+TArray<AMazeObject*> UMazeSettings::GetMazeObjects()
+{
+	return this->MazeObjects;
 }
