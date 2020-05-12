@@ -133,7 +133,7 @@ struct FTransform;
  \
 	DECLARE_FUNCTION(execSetBehaviorRecordingFileName) \
 	{ \
-		P_GET_PROPERTY(UTextProperty,Z_Param_BehaviorRecordingFileNameValue); \
+		P_GET_PROPERTY(UStrProperty,Z_Param_BehaviorRecordingFileNameValue); \
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
 		P_THIS->SetBehaviorRecordingFileName(Z_Param_BehaviorRecordingFileNameValue); \
@@ -144,13 +144,13 @@ struct FTransform;
 	{ \
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
-		*(FText*)Z_Param__Result=P_THIS->GetBehaviorRecordingFileName(); \
+		*(FString*)Z_Param__Result=P_THIS->GetBehaviorRecordingFileName(); \
 		P_NATIVE_END; \
 	} \
  \
 	DECLARE_FUNCTION(execSetMazeSettingsFileName) \
 	{ \
-		P_GET_PROPERTY(UTextProperty,Z_Param_MazeSettingsFileNameValue); \
+		P_GET_PROPERTY(UStrProperty,Z_Param_MazeSettingsFileNameValue); \
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
 		P_THIS->SetMazeSettingsFileName(Z_Param_MazeSettingsFileNameValue); \
@@ -161,13 +161,13 @@ struct FTransform;
 	{ \
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
-		*(FText*)Z_Param__Result=P_THIS->GetMazeSettingsFileName(); \
+		*(FString*)Z_Param__Result=P_THIS->GetMazeSettingsFileName(); \
 		P_NATIVE_END; \
 	} \
  \
 	DECLARE_FUNCTION(execSetMazeName) \
 	{ \
-		P_GET_PROPERTY(UTextProperty,Z_Param_MazeNameValue); \
+		P_GET_PROPERTY(UStrProperty,Z_Param_MazeNameValue); \
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
 		P_THIS->SetMazeName(Z_Param_MazeNameValue); \
@@ -178,7 +178,7 @@ struct FTransform;
 	{ \
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
-		*(FText*)Z_Param__Result=P_THIS->GetMazeName(); \
+		*(FString*)Z_Param__Result=P_THIS->GetMazeName(); \
 		P_NATIVE_END; \
 	}
 
@@ -300,7 +300,7 @@ struct FTransform;
  \
 	DECLARE_FUNCTION(execSetBehaviorRecordingFileName) \
 	{ \
-		P_GET_PROPERTY(UTextProperty,Z_Param_BehaviorRecordingFileNameValue); \
+		P_GET_PROPERTY(UStrProperty,Z_Param_BehaviorRecordingFileNameValue); \
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
 		P_THIS->SetBehaviorRecordingFileName(Z_Param_BehaviorRecordingFileNameValue); \
@@ -311,13 +311,13 @@ struct FTransform;
 	{ \
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
-		*(FText*)Z_Param__Result=P_THIS->GetBehaviorRecordingFileName(); \
+		*(FString*)Z_Param__Result=P_THIS->GetBehaviorRecordingFileName(); \
 		P_NATIVE_END; \
 	} \
  \
 	DECLARE_FUNCTION(execSetMazeSettingsFileName) \
 	{ \
-		P_GET_PROPERTY(UTextProperty,Z_Param_MazeSettingsFileNameValue); \
+		P_GET_PROPERTY(UStrProperty,Z_Param_MazeSettingsFileNameValue); \
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
 		P_THIS->SetMazeSettingsFileName(Z_Param_MazeSettingsFileNameValue); \
@@ -328,13 +328,13 @@ struct FTransform;
 	{ \
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
-		*(FText*)Z_Param__Result=P_THIS->GetMazeSettingsFileName(); \
+		*(FString*)Z_Param__Result=P_THIS->GetMazeSettingsFileName(); \
 		P_NATIVE_END; \
 	} \
  \
 	DECLARE_FUNCTION(execSetMazeName) \
 	{ \
-		P_GET_PROPERTY(UTextProperty,Z_Param_MazeNameValue); \
+		P_GET_PROPERTY(UStrProperty,Z_Param_MazeNameValue); \
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
 		P_THIS->SetMazeName(Z_Param_MazeNameValue); \
@@ -345,7 +345,7 @@ struct FTransform;
 	{ \
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
-		*(FText*)Z_Param__Result=P_THIS->GetMazeName(); \
+		*(FString*)Z_Param__Result=P_THIS->GetMazeName(); \
 		P_NATIVE_END; \
 	}
 

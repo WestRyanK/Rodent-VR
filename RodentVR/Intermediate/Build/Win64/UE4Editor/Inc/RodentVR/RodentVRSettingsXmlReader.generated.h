@@ -18,7 +18,7 @@ class URodentVRSettings;
  \
 	DECLARE_FUNCTION(execLoadRodentVRSettingsFromFile) \
 	{ \
-		P_GET_PROPERTY(UTextProperty,Z_Param_RodentVRSettingsFileName); \
+		P_GET_PROPERTY(UStrProperty,Z_Param_RodentVRSettingsFileName); \
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
 		*(URodentVRSettings**)Z_Param__Result=URodentVRSettingsXmlReader::LoadRodentVRSettingsFromFile(Z_Param_RodentVRSettingsFileName); \
@@ -30,7 +30,7 @@ class URodentVRSettings;
  \
 	DECLARE_FUNCTION(execLoadRodentVRSettingsFromFile) \
 	{ \
-		P_GET_PROPERTY(UTextProperty,Z_Param_RodentVRSettingsFileName); \
+		P_GET_PROPERTY(UStrProperty,Z_Param_RodentVRSettingsFileName); \
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
 		*(URodentVRSettings**)Z_Param__Result=URodentVRSettingsXmlReader::LoadRodentVRSettingsFromFile(Z_Param_RodentVRSettingsFileName); \

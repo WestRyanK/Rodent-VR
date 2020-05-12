@@ -11,16 +11,17 @@
 
 
 
-UMazeSettings* UMazeSettingsXmlReader::LoadMazeFromFile(FText MazeSettingsFileName)
+UMazeSettings* UMazeSettingsXmlReader::LoadMazeFromFile(FString MazeSettingsFileName)
 {
 	rapidxml::xml_document<>* File = nullptr;
 
 	try
 	{
-		File = UXmlFileReader::OpenFile(TCHAR_TO_UTF8(*MazeSettingsFileName.ToString()));
+		File = UXmlFileReader::OpenFile(TCHAR_TO_UTF8(*MazeSettingsFileName));
 	}
-	catch (rapidxml::parse_error ex)
+	catch (...)
 	{
+		return nullptr;
 	}
 
 	UMazeSettings* MazeSettings = NewObject<UMazeSettings>();
@@ -45,7 +46,7 @@ UMazeSettings* UMazeSettingsXmlReader::LoadMazeFromFile(FText MazeSettingsFileNa
 
 void UMazeSettingsXmlReader::LoadMazeName(UMazeSettings* MazeSettings, rapidxml::xml_node<>* MazeNode)
 {
-	FText MazeName = UXmlFileReader::GetTextFromAttribute(MazeNode, "Name", "");
+	FString MazeName = UXmlFileReader::GetStringFromAttribute(MazeNode, "Name", "");
 	MazeSettings->SetMazeName(MazeName);
 }
 
@@ -72,7 +73,7 @@ void UMazeSettingsXmlReader::LoadBehaviorRecordingFileName(UMazeSettings* MazeSe
 
 	if (BehaviorRecordingNode != nullptr)
 	{
-		FText FileName = UXmlFileReader::GetTextFromAttribute(BehaviorRecordingNode, "FileName", "");
+		FString FileName = UXmlFileReader::GetStringFromAttribute(BehaviorRecordingNode, "FileName", "");
 		MazeSettings->SetBehaviorRecordingFileName(FileName);
 	}
 	
@@ -85,8 +86,8 @@ void UMazeSettingsXmlReader::LoadTextures(UMazeSettings* MazeSettings, rapidxml:
 	{
 		for (rapidxml::xml_node<>* TextureNode = TexturesNode->first_node(); TextureNode; TextureNode = TextureNode->next_sibling())
 		{
-			FString SlotName = UXmlFileReader::GetTextFromAttribute(TextureNode, "SlotName", "").ToString();
-			FString TextureName = UXmlFileReader::GetTextFromAttribute(TextureNode, "TextureName", "").ToString();
+			FString SlotName = UXmlFileReader::GetStringFromAttribute(TextureNode, "SlotName", "");
+			FString TextureName = UXmlFileReader::GetStringFromAttribute(TextureNode, "TextureName", "");
 			MazeSettings->AddTexture(SlotName, TextureName);
 		}
 	}
@@ -99,11 +100,11 @@ void UMazeSettingsXmlReader::LoadMazeObjects(UMazeSettings* MazeSettings, rapidx
 	{
 		for (rapidxml::xml_node<>* MazeObjectNode = MazeObjectsNode->first_node(); MazeObjectNode; MazeObjectNode = MazeObjectNode->next_sibling())
 		{
-			FText MazeObjectTypeText = UXmlFileReader::GetTextFromAttribute(MazeObjectNode, "MazeObjectType", "");
-			MazeObjectType MazeObjectType = AMazeObject::GetTypeFromString(MazeObjectTypeText.ToString());
+			FString MazeObjectTypeString = UXmlFileReader::GetStringFromAttribute(MazeObjectNode, "MazeObjectType", "");
+			MazeObjectType MazeObjectType = AMazeObject::GetTypeFromString(MazeObjectTypeString);
 			FVector MazeObjectLocation = UXmlFileReader::GetVectorFromNode(MazeObjectNode->first_node("Position"));
 			FRotator MazeObjectRotation = UXmlFileReader::GetRotatorFromNode(MazeObjectNode->first_node("Rotation"));
-			FText TextureFileName = UXmlFileReader::GetTextFromAttribute(MazeObjectNode, "TextureName", "");
+			FString TextureFileName = UXmlFileReader::GetStringFromAttribute(MazeObjectNode, "TextureName", "");
 			bool CanCollide = UXmlFileReader::GetBoolFromAttribute(MazeObjectNode, "CanCollide", false);
 
 			AMazeObject* MazeObject = NewObject<AMazeObject>();

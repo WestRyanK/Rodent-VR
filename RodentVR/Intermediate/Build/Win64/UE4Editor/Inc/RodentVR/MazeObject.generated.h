@@ -20,13 +20,13 @@ enum class MazeObjectType : int32;
 	{ \
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
-		*(FText*)Z_Param__Result=P_THIS->GetTextureFileName(); \
+		*(FString*)Z_Param__Result=P_THIS->GetTextureFileName(); \
 		P_NATIVE_END; \
 	} \
  \
 	DECLARE_FUNCTION(execSetTextureFileName) \
 	{ \
-		P_GET_PROPERTY(UTextProperty,Z_Param_TextureFileNameValue); \
+		P_GET_PROPERTY(UStrProperty,Z_Param_TextureFileNameValue); \
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
 		P_THIS->SetTextureFileName(Z_Param_TextureFileNameValue); \
@@ -57,13 +57,13 @@ enum class MazeObjectType : int32;
 	{ \
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
-		*(FText*)Z_Param__Result=P_THIS->GetTextureFileName(); \
+		*(FString*)Z_Param__Result=P_THIS->GetTextureFileName(); \
 		P_NATIVE_END; \
 	} \
  \
 	DECLARE_FUNCTION(execSetTextureFileName) \
 	{ \
-		P_GET_PROPERTY(UTextProperty,Z_Param_TextureFileNameValue); \
+		P_GET_PROPERTY(UStrProperty,Z_Param_TextureFileNameValue); \
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
 		P_THIS->SetTextureFileName(Z_Param_TextureFileNameValue); \

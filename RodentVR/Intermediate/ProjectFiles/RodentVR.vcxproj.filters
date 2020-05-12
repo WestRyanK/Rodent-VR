@@ -350,6 +350,15 @@
     <ClInclude Include="..\..\Source\RodentVR\Private\Settings\Device.h">
       <Filter>Source\RodentVR\Private\Settings</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\Source\RodentVR\Private\Settings\XmlFileWriter.h">
+      <Filter>Source\RodentVR\Private\Settings</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\RodentVR\Private\Settings\RodentVRSettingsXmlWriter.h">
+      <Filter>Source\RodentVR\Private\Settings</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\RodentVR\Private\Settings\MazeSettingsXmlWriter.h">
+      <Filter>Source\RodentVR\Private\Settings</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\Source\RodentVR\Private\Settings\TextureLoader.cpp">
@@ -365,6 +374,15 @@
       <Filter>Source\RodentVR\Private\Settings</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\RodentVR\Private\Settings\Device.cpp">
+      <Filter>Source\RodentVR\Private\Settings</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\RodentVR\Private\Settings\XmlFileWriter.cpp">
+      <Filter>Source\RodentVR\Private\Settings</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\RodentVR\Private\Settings\RodentVRSettingsXmlWriter.cpp">
+      <Filter>Source\RodentVR\Private\Settings</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\RodentVR\Private\Settings\MazeSettingsXmlWriter.cpp">
       <Filter>Source\RodentVR\Private\Settings</Filter>
     </ClCompile>
   </ItemGroup>

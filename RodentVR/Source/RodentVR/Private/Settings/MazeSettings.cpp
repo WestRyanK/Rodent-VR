@@ -5,32 +5,32 @@
 #include "TextureLoader.h"
 #include "StopConditions/StopCondition.h"
 
-FText UMazeSettings::GetMazeName()
+FString UMazeSettings::GetMazeName()
 {
 	return this->MazeName;
 }
 
-void UMazeSettings::SetMazeName(FText MazeNameValue)
+void UMazeSettings::SetMazeName(FString MazeNameValue)
 {
 	this->MazeName = MazeNameValue;
 }
 
-FText UMazeSettings::GetMazeSettingsFileName()
+FString UMazeSettings::GetMazeSettingsFileName()
 {
 	return this->MazeSettingsFileName;
 }
 
-void UMazeSettings::SetMazeSettingsFileName(FText MazeSettingsFileNameValue)
+void UMazeSettings::SetMazeSettingsFileName(FString MazeSettingsFileNameValue)
 {
 	this->MazeSettingsFileName = MazeSettingsFileNameValue;
 }
 
-FText UMazeSettings::GetBehaviorRecordingFileName()
+FString UMazeSettings::GetBehaviorRecordingFileName()
 {
 	return this->BehaviorRecordingFileName;
 }
 
-void UMazeSettings::SetBehaviorRecordingFileName(FText BehaviorRecordingFileNameValue)
+void UMazeSettings::SetBehaviorRecordingFileName(FString BehaviorRecordingFileNameValue)
 {
 	this->BehaviorRecordingFileName = BehaviorRecordingFileNameValue;
 }

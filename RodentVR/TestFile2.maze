@@ -4,12 +4,12 @@
 		<Position X="0" Y="200" Z="0" />
 		<Rotation Angle="90" />
 	</PlayerStart>
-	<Materials>
-		<Material SlotName="WallYPosition" MaterialName="MaterialCheckerLarge" />
-		<Material SlotName="WallXPosition" MaterialName="MaterialCyan" />
-		<Material SlotName="Pillar1" MaterialName="MaterialCheckerLarge" />
-		<Material SlotName="Hallway1" MaterialName="MaterialDots1" /> 
-		<Material SlotName="Hallway2" MaterialName="MaterialGreen" /> 
+	<Textures>
+		<Texture SlotName="WallYPosition" TextureName="MaterialCheckerLarge" />
+		<Texture SlotName="WallXPosition" TextureName="MaterialCyan" />
+		<Texture SlotName="Pillar1" TextureName="MaterialCheckerLarge" />
+		<Texture SlotName="Hallway1" TextureName="MaterialDots1" /> 
+		<Texture SlotName="Hallway2" TextureName="MaterialGreen" /> 
 	</Materials> 
 	<Regions AreRegionsVisible="true">
 		<Region RegionId="0">
@@ -26,30 +26,30 @@
 			<Rotation Angle="90" />
 		</Region>
 	</Regions>
-	<Objects>
-		<Object Name="Cone" MaterialName="MaterialGreen">
+	<MazeObjects>
+		<Object MazeObjectType="Cone" TextureName="MaterialGreen">
 			<Position X="0" Y="0" />
 		</Object>
-		<Object Name="Sphere" MaterialName="MaterialWhite" CanCollide="true">
+		<Object MazeObjectType="Sphere" TextureName="MaterialWhite" CanCollide="true">
 			<Position X="50" Y="-75" Z="50"/>
 			<Rotation Angle="45" />
 		</Object>
-		<Object Name="Cylinder" MaterialName="MaterialBlue" CanCollide="false">
+		<Object MazeObjectType="Cylinder" TextureName="MaterialBlue" CanCollide="false">
 			<Position X="20" Y="-150" Z="20"/>
 			<Rotation AngleX="45" AngleY="10" AngleZ="90" />
 		</Object>
-		<Object Name="Cube" MaterialName="MaterialCheckerLarge" CanCollide="false">
+		<Object MazeObjectType="Cube" TextureName="MaterialCheckerLarge" CanCollide="false">
 			<Position X="20" Y="-225" Z="100"/>
 			<Rotation Angle="45" />
 		</Object>
-		<Object Name="Figurine" CanCollide="false">
+		<Object MazeObjectType="Figurine" CanCollide="false">
 			<Position X="20" Y="-300" />
 			<Rotation Angle="45" />
 		</Object>
-	</Objects>
+	</MazeObjects>
 	<StopConditions>
-		<Condition TimeLimitSec="40" />
-		<Condition EnterRegionDelaySec="0">
+		<Condition ConditionType="TimeLimit" TimeLimitSec="40" />
+		<Condition ConditionType="EnterRegion" EnterRegionDelaySec="0">
 			<Region RegionId="0" EnterRegionCount="4"/>
 			<Region RegionId="1" EnterRegionCount="1"/>
 		</Condition>

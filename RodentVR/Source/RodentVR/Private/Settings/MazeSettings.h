@@ -19,11 +19,11 @@ class UMazeSettings : public UObject
 
 private:
 	UPROPERTY(BlueprintGetter=GetMazeName, BlueprintSetter=SetMazeName)
-		FText MazeName;
+		FString MazeName;
 	UPROPERTY(BlueprintGetter=GetMazeSettingsFileName, BlueprintSetter=SetMazeSettingsFileName)
-		FText MazeSettingsFileName;
+		FString MazeSettingsFileName;
 	UPROPERTY(BlueprintGetter=GetBehaviorRecordingFileName, BlueprintSetter=SetBehaviorRecordingFileName)
-		FText BehaviorRecordingFileName;
+		FString BehaviorRecordingFileName;
 	UPROPERTY(BlueprintGetter=GetPlayerStart, BlueprintSetter=SetPlayerStart)
 		FTransform PlayerStart;
 	UPROPERTY(BlueprintGetter=GetAreRegionsVisible, BlueprintSetter=SetAreRegionsVisible)
@@ -39,17 +39,17 @@ private:
 
 public:
 	UFUNCTION(BlueprintGetter)
-		FText GetMazeName();
+		FString GetMazeName();
 	UFUNCTION(BlueprintSetter)
-		void SetMazeName(FText MazeNameValue);
+		void SetMazeName(FString MazeNameValue);
 	UFUNCTION(BlueprintGetter)
-		FText GetMazeSettingsFileName();
+		FString GetMazeSettingsFileName();
 	UFUNCTION(BlueprintSetter)
-		void SetMazeSettingsFileName(FText MazeSettingsFileNameValue);
+		void SetMazeSettingsFileName(FString MazeSettingsFileNameValue);
 	UFUNCTION(BlueprintGetter)
-		FText GetBehaviorRecordingFileName();
+		FString GetBehaviorRecordingFileName();
 	UFUNCTION(BlueprintSetter)
-		void SetBehaviorRecordingFileName(FText BehaviorRecordingFileNameValue);
+		void SetBehaviorRecordingFileName(FString BehaviorRecordingFileNameValue);
 	UFUNCTION(BlueprintGetter)
 		FTransform GetPlayerStart();
 	UFUNCTION(BlueprintSetter)

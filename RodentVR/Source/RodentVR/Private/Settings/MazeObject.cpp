@@ -53,12 +53,12 @@ MazeObjectType AMazeObject::GetObjectType()
 	return this->ObjectType;
 }
 
-void AMazeObject::SetTextureFileName(FText TextureFileNameValue)
+void AMazeObject::SetTextureFileName(FString TextureFileNameValue)
 {
 	this->TextureFileName = TextureFileNameValue;
 }
 
-FText AMazeObject::GetTextureFileName()
+FString AMazeObject::GetTextureFileName()
 {
 	return this->TextureFileName;
 }
