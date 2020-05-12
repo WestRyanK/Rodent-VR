@@ -12,7 +12,7 @@
 /**
  * 
  */
-UCLASS()
+UCLASS(Blueprintable)
 class URodentVRSettingsXmlWriter : public UObject
 {
 	GENERATED_BODY()

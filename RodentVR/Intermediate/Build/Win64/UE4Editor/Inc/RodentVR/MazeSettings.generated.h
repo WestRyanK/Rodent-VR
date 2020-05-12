@@ -10,6 +10,7 @@
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 class AMazeObject;
 class UStopCondition;
+ 
 struct FTransform;
 #ifdef RODENTVR_MazeSettings_generated_h
 #error "MazeSettings.generated.h already included, missing '#pragma once' in MazeSettings.h"
@@ -94,6 +95,14 @@ struct FTransform;
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
 		P_THIS->ClearTextures(); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execGetTextures) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		*(TMap<FString,FString>*)Z_Param__Result=P_THIS->GetTextures(); \
 		P_NATIVE_END; \
 	} \
  \
@@ -261,6 +270,14 @@ struct FTransform;
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
 		P_THIS->ClearTextures(); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execGetTextures) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		*(TMap<FString,FString>*)Z_Param__Result=P_THIS->GetTextures(); \
 		P_NATIVE_END; \
 	} \
  \

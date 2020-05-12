@@ -83,8 +83,10 @@ void EmptyLinkFunctionForGeneratedCodeRodentVRSettingsXmlWriter() {}
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_URodentVRSettingsXmlWriter_Statics::Class_MetaDataParams[] = {
+		{ "BlueprintType", "true" },
 		{ "Comment", "/**\n * \n */" },
 		{ "IncludePath", "Settings/RodentVRSettingsXmlWriter.h" },
+		{ "IsBlueprintBase", "true" },
 		{ "ModuleRelativePath", "Private/Settings/RodentVRSettingsXmlWriter.h" },
 	};
 #endif
@@ -115,7 +117,7 @@ void EmptyLinkFunctionForGeneratedCodeRodentVRSettingsXmlWriter() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(URodentVRSettingsXmlWriter, 2853021785);
+	IMPLEMENT_CLASS(URodentVRSettingsXmlWriter, 1755309501);
 	template<> RODENTVR_API UClass* StaticClass<URodentVRSettingsXmlWriter>()
 	{
 		return URodentVRSettingsXmlWriter::StaticClass();

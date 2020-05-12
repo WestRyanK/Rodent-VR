@@ -11,13 +11,13 @@
 /**
  *
  */
-UCLASS()
+UCLASS(Blueprintable)
 class UMazeSettingsXmlReader : public UObject
 {
 	GENERATED_BODY()
 
 public:
-	UFUNCTION()
+	UFUNCTION(BlueprintCallable)
 		static UMazeSettings* LoadMazeFromFile(FString MazeFileName);
 
 private:

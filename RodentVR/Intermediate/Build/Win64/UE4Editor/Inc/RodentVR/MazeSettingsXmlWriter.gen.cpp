@@ -17,9 +17,48 @@ void EmptyLinkFunctionForGeneratedCodeMazeSettingsXmlWriter() {}
 	RODENTVR_API UClass* Z_Construct_UClass_UMazeSettingsXmlWriter();
 	COREUOBJECT_API UClass* Z_Construct_UClass_UObject();
 	UPackage* Z_Construct_UPackage__Script_RodentVR();
+	RODENTVR_API UFunction* Z_Construct_UFunction_UMazeSettingsXmlWriter_SaveMazeSettings();
+	RODENTVR_API UClass* Z_Construct_UClass_UMazeSettings_NoRegister();
 // End Cross Module References
 	void UMazeSettingsXmlWriter::StaticRegisterNativesUMazeSettingsXmlWriter()
 	{
+		UClass* Class = UMazeSettingsXmlWriter::StaticClass();
+		static const FNameNativePtrPair Funcs[] = {
+			{ "SaveMazeSettings", &UMazeSettingsXmlWriter::execSaveMazeSettings },
+		};
+		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, ARRAY_COUNT(Funcs));
+	}
+	struct Z_Construct_UFunction_UMazeSettingsXmlWriter_SaveMazeSettings_Statics
+	{
+		struct MazeSettingsXmlWriter_eventSaveMazeSettings_Parms
+		{
+			UMazeSettings* MazeSettings;
+		};
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_MazeSettings;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UMazeSettingsXmlWriter_SaveMazeSettings_Statics::NewProp_MazeSettings = { "MazeSettings", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(MazeSettingsXmlWriter_eventSaveMazeSettings_Parms, MazeSettings), Z_Construct_UClass_UMazeSettings_NoRegister, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UMazeSettingsXmlWriter_SaveMazeSettings_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UMazeSettingsXmlWriter_SaveMazeSettings_Statics::NewProp_MazeSettings,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UMazeSettingsXmlWriter_SaveMazeSettings_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Private/Settings/MazeSettingsXmlWriter.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UMazeSettingsXmlWriter_SaveMazeSettings_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UMazeSettingsXmlWriter, nullptr, "SaveMazeSettings", nullptr, nullptr, sizeof(MazeSettingsXmlWriter_eventSaveMazeSettings_Parms), Z_Construct_UFunction_UMazeSettingsXmlWriter_SaveMazeSettings_Statics::PropPointers, ARRAY_COUNT(Z_Construct_UFunction_UMazeSettingsXmlWriter_SaveMazeSettings_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04022401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UMazeSettingsXmlWriter_SaveMazeSettings_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_UMazeSettingsXmlWriter_SaveMazeSettings_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_UMazeSettingsXmlWriter_SaveMazeSettings()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UMazeSettingsXmlWriter_SaveMazeSettings_Statics::FuncParams);
+		}
+		return ReturnFunction;
 	}
 	UClass* Z_Construct_UClass_UMazeSettingsXmlWriter_NoRegister()
 	{
@@ -28,6 +67,7 @@ void EmptyLinkFunctionForGeneratedCodeMazeSettingsXmlWriter() {}
 	struct Z_Construct_UClass_UMazeSettingsXmlWriter_Statics
 	{
 		static UObject* (*const DependentSingletons[])();
+		static const FClassFunctionLinkInfo FuncInfo[];
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
@@ -38,10 +78,15 @@ void EmptyLinkFunctionForGeneratedCodeMazeSettingsXmlWriter() {}
 		(UObject* (*)())Z_Construct_UClass_UObject,
 		(UObject* (*)())Z_Construct_UPackage__Script_RodentVR,
 	};
+	const FClassFunctionLinkInfo Z_Construct_UClass_UMazeSettingsXmlWriter_Statics::FuncInfo[] = {
+		{ &Z_Construct_UFunction_UMazeSettingsXmlWriter_SaveMazeSettings, "SaveMazeSettings" }, // 3108469148
+	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UMazeSettingsXmlWriter_Statics::Class_MetaDataParams[] = {
+		{ "BlueprintType", "true" },
 		{ "Comment", "/**\n * \n */" },
 		{ "IncludePath", "Settings/MazeSettingsXmlWriter.h" },
+		{ "IsBlueprintBase", "true" },
 		{ "ModuleRelativePath", "Private/Settings/MazeSettingsXmlWriter.h" },
 	};
 #endif
@@ -53,11 +98,11 @@ void EmptyLinkFunctionForGeneratedCodeMazeSettingsXmlWriter() {}
 		nullptr,
 		&StaticCppClassTypeInfo,
 		DependentSingletons,
-		nullptr,
+		FuncInfo,
 		nullptr,
 		nullptr,
 		ARRAY_COUNT(DependentSingletons),
-		0,
+		ARRAY_COUNT(FuncInfo),
 		0,
 		0,
 		0x000000A0u,
@@ -72,7 +117,7 @@ void EmptyLinkFunctionForGeneratedCodeMazeSettingsXmlWriter() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UMazeSettingsXmlWriter, 799198797);
+	IMPLEMENT_CLASS(UMazeSettingsXmlWriter, 2611342147);
 	template<> RODENTVR_API UClass* StaticClass<UMazeSettingsXmlWriter>()
 	{
 		return UMazeSettingsXmlWriter::StaticClass();
