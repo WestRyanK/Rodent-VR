@@ -94,6 +94,11 @@ void UMazeSettings::AddStopCondition(UStopCondition* StopCondition)
 	this->StopConditions.Add(StopCondition);
 }
 
+TArray<UStopCondition*> UMazeSettings::GetStopConditions()
+{
+	return this->StopConditions;
+}
+
 void UMazeSettings::ClearMazeObjects()
 {
 	this->MazeObjects.Empty();

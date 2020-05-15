@@ -19,7 +19,7 @@ wchar_t* RawInputDevicesReader::GetDeviceName(HANDLE DeviceHandle)
 	std::replace(DeviceNameString.begin(), DeviceNameString.end(), '#', '\\');
 	
 	wchar_t* DeviceName = new wchar_t[256];
-	wcscpy(DeviceName, DeviceNameString.c_str());
+	wcscpy_s(DeviceName, 256, DeviceNameString.c_str());
 	return DeviceName;
 }
 

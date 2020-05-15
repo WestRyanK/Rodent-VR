@@ -40,6 +40,11 @@ void UXmlFileWriter::AddFloatAttribute(rapidxml::xml_document<>* Document, rapid
 	UXmlFileWriter::AddAttribute(Document, Node, AttributeName, std::to_string(AttributeValue));
 }
 
+void UXmlFileWriter::AddIntAttribute(rapidxml::xml_document<>* Document, rapidxml::xml_node<>* Node, std::string AttributeName, int AttributeValue)
+{
+	UXmlFileWriter::AddAttribute(Document, Node, AttributeName, std::to_string(AttributeValue));
+}
+
 void UXmlFileWriter::AddBoolAttribute(rapidxml::xml_document<>* Document, rapidxml::xml_node<>* Node, std::string AttributeName, bool AttributeValue)
 {
 	std::string BoolString = "false";

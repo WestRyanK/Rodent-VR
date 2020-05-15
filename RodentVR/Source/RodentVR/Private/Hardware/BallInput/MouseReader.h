@@ -5,6 +5,7 @@
 #include "CoreMinimal.h"
 #include <mutex>
 #define WIN32_LEAN_AND_MEAN
+#include "MinWindows.h"
 #include <windows.h>
 #include "Window.h"
 #include "Windows/WindowsApplication.h"

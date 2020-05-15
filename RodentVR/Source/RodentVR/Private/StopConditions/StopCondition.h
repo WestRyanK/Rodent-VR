@@ -10,11 +10,17 @@
 /**
  * 
  */
-UCLASS()
+UCLASS(Blueprintable)
 class UStopCondition : public UObject
 {
 	GENERATED_BODY()
+
+private:
+	UPROPERTY(BlueprintGetter=GetConditionType)
+	FString ConditionType;
 	
 public: 
 	virtual bool IsStopConditionMet(ARodentGameMode* GameMode);
+	UFUNCTION(BlueprintGetter)
+		virtual FString GetConditionType();
 };

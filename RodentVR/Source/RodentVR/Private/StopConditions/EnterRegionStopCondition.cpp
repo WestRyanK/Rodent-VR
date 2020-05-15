@@ -55,6 +55,11 @@ void UEnterRegionStopCondition::AddRegionCount(int RegionId, int EnterRegionCoun
 	this->EnterRegionCounts.Empty();
 }
 
+TMap<int, int> UEnterRegionStopCondition::GetEnterRegionCounts()
+{
+	return this->EnterRegionCounts;
+}
+
 void UEnterRegionStopCondition::SetEnterRegionDelaySec(float EnterRegionDelaySecValue)
 {
 	this->EnterRegionDelaySec = EnterRegionDelaySecValue;
@@ -63,4 +68,9 @@ void UEnterRegionStopCondition::SetEnterRegionDelaySec(float EnterRegionDelaySec
 float UEnterRegionStopCondition::GetEnterRegionDelaySec()
 {
 	return this->EnterRegionDelaySec;
+}
+
+FString UEnterRegionStopCondition::GetConditionType()
+{
+	return TEXT("EnterRegion");
 }

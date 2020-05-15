@@ -7,3 +7,8 @@ bool UStopCondition::IsStopConditionMet(ARodentGameMode* GameMode)
 {
 	return false;
 }
+
+FString UStopCondition::GetConditionType()
+{
+	return TEXT("");
+}

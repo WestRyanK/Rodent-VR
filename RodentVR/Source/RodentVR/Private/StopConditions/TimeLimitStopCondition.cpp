@@ -1,6 +1,7 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 
+
 #include "TimeLimitStopCondition.h"
 
 bool UTimeLimitStopCondition::IsStopConditionMet(ARodentGameMode* GameMode)
@@ -26,4 +27,9 @@ float UTimeLimitStopCondition::GetTimeLimitSec()
 void UTimeLimitStopCondition::SetTimeLimitSec(float TimeLimitSecValue)
 {
 	this->TimeLimitSec = TimeLimitSecValue;
+}
+
+FString UTimeLimitStopCondition::GetConditionType()
+{
+	return TEXT("TimeLimit");
 }

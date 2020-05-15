@@ -17,7 +17,8 @@ class UEnterRegionStopCondition : public UStopCondition
 	GENERATED_BODY()
 
 private:
-	float EnterRegionDelaySec;
+	UPROPERTY(BlueprintGetter = GetEnterRegionDelaySec, BlueprintSetter = SetEnterRegionDelaySec)
+		float EnterRegionDelaySec;
 	TMap<int, int> EnterRegionCounts;
 	TMap<int, int> EnterRegionStopConditionCounts;
 
@@ -31,15 +32,19 @@ public:
 
 	virtual bool IsStopConditionMet(ARodentGameMode* GameMode);
 
-	UFUNCTION()
+	UFUNCTION(BlueprintCallable)
 		void ClearRegionCounts();
-	UFUNCTION()
+	UFUNCTION(BlueprintCallable)
 		void RemoveRegionCount(int RegionId);
-	UFUNCTION()
+	UFUNCTION(BlueprintCallable)
 		void AddRegionCount(int RegionId, int EnterRegionCount);
-	UFUNCTION()
+	UFUNCTION(BlueprintGetter)
+		TMap<int, int> GetEnterRegionCounts();
+	UFUNCTION(BlueprintGetter)
 		float GetEnterRegionDelaySec();
-	UFUNCTION()
+	UFUNCTION(BlueprintSetter)
 		void SetEnterRegionDelaySec(float EnterRegionDelaySecValue);
+
+	virtual FString GetConditionType();
 
 };

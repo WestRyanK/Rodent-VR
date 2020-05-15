@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #define WIN32_LEAN_AND_MEAN
+#include "MinWindows.h"
 #include <windows.h>
 #include <thread>
 #include <functional>
