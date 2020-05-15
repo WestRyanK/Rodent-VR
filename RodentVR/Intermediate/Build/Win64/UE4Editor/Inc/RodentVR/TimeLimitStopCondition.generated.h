@@ -13,8 +13,46 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define RODENTVR_TimeLimitStopCondition_generated_h
 
-#define RodentVR_Source_RodentVR_Private_StopConditions_TimeLimitStopCondition_h_17_RPC_WRAPPERS
-#define RodentVR_Source_RodentVR_Private_StopConditions_TimeLimitStopCondition_h_17_RPC_WRAPPERS_NO_PURE_DECLS
+#define RodentVR_Source_RodentVR_Private_StopConditions_TimeLimitStopCondition_h_17_RPC_WRAPPERS \
+ \
+	DECLARE_FUNCTION(execSetTimeLimitSec) \
+	{ \
+		P_GET_PROPERTY(UFloatProperty,Z_Param_TimeLimitSecValue); \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->SetTimeLimitSec(Z_Param_TimeLimitSecValue); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execGetTimeLimitSec) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		*(float*)Z_Param__Result=P_THIS->GetTimeLimitSec(); \
+		P_NATIVE_END; \
+	}
+
+
+#define RodentVR_Source_RodentVR_Private_StopConditions_TimeLimitStopCondition_h_17_RPC_WRAPPERS_NO_PURE_DECLS \
+ \
+	DECLARE_FUNCTION(execSetTimeLimitSec) \
+	{ \
+		P_GET_PROPERTY(UFloatProperty,Z_Param_TimeLimitSecValue); \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->SetTimeLimitSec(Z_Param_TimeLimitSecValue); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execGetTimeLimitSec) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		*(float*)Z_Param__Result=P_THIS->GetTimeLimitSec(); \
+		P_NATIVE_END; \
+	}
+
+
 #define RodentVR_Source_RodentVR_Private_StopConditions_TimeLimitStopCondition_h_17_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUTimeLimitStopCondition(); \
@@ -59,7 +97,10 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UTimeLimitStopCondition); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(UTimeLimitStopCondition)
 
 
-#define RodentVR_Source_RodentVR_Private_StopConditions_TimeLimitStopCondition_h_17_PRIVATE_PROPERTY_OFFSET
+#define RodentVR_Source_RodentVR_Private_StopConditions_TimeLimitStopCondition_h_17_PRIVATE_PROPERTY_OFFSET \
+	FORCEINLINE static uint32 __PPO__TimeLimitSec() { return STRUCT_OFFSET(UTimeLimitStopCondition, TimeLimitSec); }
+
+
 #define RodentVR_Source_RodentVR_Private_StopConditions_TimeLimitStopCondition_h_14_PROLOG
 #define RodentVR_Source_RodentVR_Private_StopConditions_TimeLimitStopCondition_h_17_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \

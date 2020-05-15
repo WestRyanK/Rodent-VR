@@ -88,8 +88,8 @@ void Window::StopMessagePump()
 
 void Window::PumpMessages()
 {
-	if (this->Hwnd != NULL)
-		SendMessage(this->Hwnd, WM_DESTROY, NULL, NULL);
+	//if (this->Hwnd != NULL)
+	//	SendMessage(this->Hwnd, WM_DESTROY, NULL, NULL);
 
 	this->Init();
 	if (this->PostInitFunc != NULL)

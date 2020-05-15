@@ -7,8 +7,8 @@
 #include "Classes/Components/StaticMeshComponent.h"
 #include "MazeObject.generated.h"
 
-UENUM()
-enum class MazeObjectType
+UENUM(BlueprintType)
+enum class MazeObjectType : uint8
 {
 	CUBE UMETA(DisplayName = "Cube"),
 	CYLINDER UMETA(DisplayName = "Cylinder"),

@@ -19,6 +19,14 @@ struct FTransform;
 
 #define RodentVR_Source_RodentVR_Private_Settings_MazeSettings_h_18_RPC_WRAPPERS \
  \
+	DECLARE_FUNCTION(execGetMazeObjects) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		*(TArray<AMazeObject*>*)Z_Param__Result=P_THIS->GetMazeObjects(); \
+		P_NATIVE_END; \
+	} \
+ \
 	DECLARE_FUNCTION(execAddMazeObject) \
 	{ \
 		P_GET_OBJECT(AMazeObject,Z_Param_MazeObject); \
@@ -42,6 +50,14 @@ struct FTransform;
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
 		P_THIS->ClearMazeObjects(); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execGetStopConditions) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		*(TArray<UStopCondition*>*)Z_Param__Result=P_THIS->GetStopConditions(); \
 		P_NATIVE_END; \
 	} \
  \
@@ -194,6 +210,14 @@ struct FTransform;
 
 #define RodentVR_Source_RodentVR_Private_Settings_MazeSettings_h_18_RPC_WRAPPERS_NO_PURE_DECLS \
  \
+	DECLARE_FUNCTION(execGetMazeObjects) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		*(TArray<AMazeObject*>*)Z_Param__Result=P_THIS->GetMazeObjects(); \
+		P_NATIVE_END; \
+	} \
+ \
 	DECLARE_FUNCTION(execAddMazeObject) \
 	{ \
 		P_GET_OBJECT(AMazeObject,Z_Param_MazeObject); \
@@ -217,6 +241,14 @@ struct FTransform;
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
 		P_THIS->ClearMazeObjects(); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execGetStopConditions) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		*(TArray<UStopCondition*>*)Z_Param__Result=P_THIS->GetStopConditions(); \
 		P_NATIVE_END; \
 	} \
  \

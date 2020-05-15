@@ -56,7 +56,7 @@ FString AMazeObject::GetObjectTypeString()
 			return "Cone";
 		case MazeObjectType::FIGURINE:
 			return "Figurine";
-		case MazeObjectType::INVALID:
+		default:
 			return "";
 	}
 }

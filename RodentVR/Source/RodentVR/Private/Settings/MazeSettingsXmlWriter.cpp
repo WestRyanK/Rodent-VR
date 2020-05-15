@@ -3,6 +3,8 @@
 
 #include "MazeSettingsXmlWriter.h"
 #include "MazeObject.h"
+#include "StopConditions/EnterRegionStopCondition.h"
+#include "StopConditions/TimeLimitStopCondition.h"
 
 void UMazeSettingsXmlWriter::SaveMazeSettings(UMazeSettings* MazeSettings)
 {
@@ -72,5 +74,29 @@ void UMazeSettingsXmlWriter::SaveMazeObjects(rapidxml::xml_document<>* Document,
 
 void UMazeSettingsXmlWriter::SaveStopConditions(rapidxml::xml_document<>* Document, rapidxml::xml_node<>* Root, UMazeSettings* MazeSettings)
 {
+	rapidxml::xml_node<>* StopConditionsNode = UXmlFileWriter::AddNode(Document, Root, "MazeObjects");
+	for (UStopCondition* StopCondition : MazeSettings->GetStopConditions())
+	{
+		rapidxml::xml_node<>* StopConditionNode = UXmlFileWriter::AddNode(Document, StopConditionsNode, "Condition");
+		FString ConditionType = StopCondition->GetConditionType();
+		UXmlFileWriter::AddStringAttribute(Document, StopConditionNode, "ConditionType", ConditionType);
 
+		if (ConditionType == TEXT("TimeLimit"))
+		{
+			UTimeLimitStopCondition* TimeLimitStopCondition = (UTimeLimitStopCondition*)StopCondition;
+			UXmlFileWriter::AddFloatAttribute(Document, StopConditionNode, "TimeLimitSec", TimeLimitStopCondition->GetTimeLimitSec());
+		}
+		else if (ConditionType == TEXT("EnterRegion"))
+		{
+			UEnterRegionStopCondition* EnterRegionStopCondition = (UEnterRegionStopCondition*)StopCondition;
+			UXmlFileWriter::AddFloatAttribute(Document, StopConditionNode, "EnterRegionDelaySec", EnterRegionStopCondition->GetEnterRegionDelaySec());
+
+			for (auto Pair : EnterRegionStopCondition->GetEnterRegionCounts())
+			{
+				rapidxml::xml_node<>* RegionNode = UXmlFileWriter::AddNode(Document, StopConditionNode, "Region");
+				UXmlFileWriter::AddIntAttribute(Document, RegionNode, "RegionId", Pair.Key);
+				UXmlFileWriter::AddIntAttribute(Document, RegionNode, "EnterRegionCount", Pair.Value);
+			}
+		}
+	}
 }

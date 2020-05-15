@@ -8,7 +8,7 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
-enum class MazeObjectType : int32;
+enum class MazeObjectType : uint8;
 #ifdef RODENTVR_MazeObject_generated_h
 #error "MazeObject.generated.h already included, missing '#pragma once' in MazeObject.h"
 #endif
@@ -33,6 +33,14 @@ enum class MazeObjectType : int32;
 		P_NATIVE_END; \
 	} \
  \
+	DECLARE_FUNCTION(execGetObjectTypeString) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		*(FString*)Z_Param__Result=P_THIS->GetObjectTypeString(); \
+		P_NATIVE_END; \
+	} \
+ \
 	DECLARE_FUNCTION(execGetObjectType) \
 	{ \
 		P_FINISH; \
@@ -47,6 +55,23 @@ enum class MazeObjectType : int32;
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
 		P_THIS->SetObjectType(MazeObjectType(Z_Param_ObjectTypeValue)); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execGetCanCollide) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		*(bool*)Z_Param__Result=P_THIS->GetCanCollide(); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execSetCanCollide) \
+	{ \
+		P_GET_UBOOL(Z_Param_CanCollideValue); \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->SetCanCollide(Z_Param_CanCollideValue); \
 		P_NATIVE_END; \
 	}
 
@@ -70,6 +95,14 @@ enum class MazeObjectType : int32;
 		P_NATIVE_END; \
 	} \
  \
+	DECLARE_FUNCTION(execGetObjectTypeString) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		*(FString*)Z_Param__Result=P_THIS->GetObjectTypeString(); \
+		P_NATIVE_END; \
+	} \
+ \
 	DECLARE_FUNCTION(execGetObjectType) \
 	{ \
 		P_FINISH; \
@@ -84,6 +117,23 @@ enum class MazeObjectType : int32;
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
 		P_THIS->SetObjectType(MazeObjectType(Z_Param_ObjectTypeValue)); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execGetCanCollide) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		*(bool*)Z_Param__Result=P_THIS->GetCanCollide(); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execSetCanCollide) \
+	{ \
+		P_GET_UBOOL(Z_Param_CanCollideValue); \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->SetCanCollide(Z_Param_CanCollideValue); \
 		P_NATIVE_END; \
 	}
 
@@ -131,6 +181,7 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AMazeObject); \
 
 
 #define RodentVR_Source_RodentVR_Private_Settings_MazeObject_h_25_PRIVATE_PROPERTY_OFFSET \
+	FORCEINLINE static uint32 __PPO__CanCollide() { return STRUCT_OFFSET(AMazeObject, CanCollide); } \
 	FORCEINLINE static uint32 __PPO__ObjectType() { return STRUCT_OFFSET(AMazeObject, ObjectType); } \
 	FORCEINLINE static uint32 __PPO__TextureFileName() { return STRUCT_OFFSET(AMazeObject, TextureFileName); } \
 	FORCEINLINE static uint32 __PPO__StaticMesh() { return STRUCT_OFFSET(AMazeObject, StaticMesh); }
@@ -173,7 +224,7 @@ template<> RODENTVR_API UClass* StaticClass<class AMazeObject>();
 	op(MazeObjectType::FIGURINE) \
 	op(MazeObjectType::INVALID) 
 
-enum class MazeObjectType;
+enum class MazeObjectType : uint8;
 template<> RODENTVR_API UEnum* StaticEnum<MazeObjectType>();
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

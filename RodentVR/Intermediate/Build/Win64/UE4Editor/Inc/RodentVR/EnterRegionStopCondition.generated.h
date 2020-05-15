@@ -8,6 +8,7 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+ 
 #ifdef RODENTVR_EnterRegionStopCondition_generated_h
 #error "EnterRegionStopCondition.generated.h already included, missing '#pragma once' in EnterRegionStopCondition.h"
 #endif
@@ -29,6 +30,14 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
 		*(float*)Z_Param__Result=P_THIS->GetEnterRegionDelaySec(); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execGetEnterRegionCounts) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		*(TMap<int32,int32>*)Z_Param__Result=P_THIS->GetEnterRegionCounts(); \
 		P_NATIVE_END; \
 	} \
  \
@@ -85,6 +94,14 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
 		*(float*)Z_Param__Result=P_THIS->GetEnterRegionDelaySec(); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execGetEnterRegionCounts) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		*(TMap<int32,int32>*)Z_Param__Result=P_THIS->GetEnterRegionCounts(); \
 		P_NATIVE_END; \
 	} \
  \
@@ -169,7 +186,10 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UEnterRegionStopCondition); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(UEnterRegionStopCondition)
 
 
-#define RodentVR_Source_RodentVR_Private_StopConditions_EnterRegionStopCondition_h_17_PRIVATE_PROPERTY_OFFSET
+#define RodentVR_Source_RodentVR_Private_StopConditions_EnterRegionStopCondition_h_17_PRIVATE_PROPERTY_OFFSET \
+	FORCEINLINE static uint32 __PPO__EnterRegionDelaySec() { return STRUCT_OFFSET(UEnterRegionStopCondition, EnterRegionDelaySec); }
+
+
 #define RodentVR_Source_RodentVR_Private_StopConditions_EnterRegionStopCondition_h_14_PROLOG
 #define RodentVR_Source_RodentVR_Private_StopConditions_EnterRegionStopCondition_h_17_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \

@@ -34,7 +34,7 @@ private:
 	TArray<AMazeObject*> MazeObjects;
 	UPROPERTY(BlueprintGetter=GetTextures)
 		TMap<FString, FString> Textures;
-	UPROPERTY()
+	UPROPERTY(BlueprintGetter=GetStopConditions)
 	TArray<UStopCondition*> StopConditions;
 
 public:
@@ -72,6 +72,8 @@ public:
 		void RemoveStopCondition(int position);
 	UFUNCTION()
 		void AddStopCondition(UStopCondition* StopCondition);
+	UFUNCTION(BlueprintGetter)
+		TArray<UStopCondition*> GetStopConditions();
 	UFUNCTION()
 		void ClearMazeObjects();
 	UFUNCTION()

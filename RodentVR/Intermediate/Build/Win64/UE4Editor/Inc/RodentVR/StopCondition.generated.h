@@ -13,8 +13,28 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define RODENTVR_StopCondition_generated_h
 
-#define RodentVR_Source_RodentVR_Private_StopConditions_StopCondition_h_16_RPC_WRAPPERS
-#define RodentVR_Source_RodentVR_Private_StopConditions_StopCondition_h_16_RPC_WRAPPERS_NO_PURE_DECLS
+#define RodentVR_Source_RodentVR_Private_StopConditions_StopCondition_h_16_RPC_WRAPPERS \
+ \
+	DECLARE_FUNCTION(execGetConditionType) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		*(FString*)Z_Param__Result=P_THIS->GetConditionType(); \
+		P_NATIVE_END; \
+	}
+
+
+#define RodentVR_Source_RodentVR_Private_StopConditions_StopCondition_h_16_RPC_WRAPPERS_NO_PURE_DECLS \
+ \
+	DECLARE_FUNCTION(execGetConditionType) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		*(FString*)Z_Param__Result=P_THIS->GetConditionType(); \
+		P_NATIVE_END; \
+	}
+
+
 #define RodentVR_Source_RodentVR_Private_StopConditions_StopCondition_h_16_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUStopCondition(); \
@@ -59,7 +79,10 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UStopCondition); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(UStopCondition)
 
 
-#define RodentVR_Source_RodentVR_Private_StopConditions_StopCondition_h_16_PRIVATE_PROPERTY_OFFSET
+#define RodentVR_Source_RodentVR_Private_StopConditions_StopCondition_h_16_PRIVATE_PROPERTY_OFFSET \
+	FORCEINLINE static uint32 __PPO__ConditionType() { return STRUCT_OFFSET(UStopCondition, ConditionType); }
+
+
 #define RodentVR_Source_RodentVR_Private_StopConditions_StopCondition_h_13_PROLOG
 #define RodentVR_Source_RodentVR_Private_StopConditions_StopCondition_h_16_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \

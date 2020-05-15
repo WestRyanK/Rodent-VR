@@ -28,9 +28,11 @@ void EmptyLinkFunctionForGeneratedCodeMazeSettings() {}
 	RODENTVR_API UFunction* Z_Construct_UFunction_UMazeSettings_GetAreRegionsVisible();
 	RODENTVR_API UFunction* Z_Construct_UFunction_UMazeSettings_GetBehaviorRecordingFileName();
 	RODENTVR_API UFunction* Z_Construct_UFunction_UMazeSettings_GetMazeName();
+	RODENTVR_API UFunction* Z_Construct_UFunction_UMazeSettings_GetMazeObjects();
 	RODENTVR_API UFunction* Z_Construct_UFunction_UMazeSettings_GetMazeSettingsFileName();
 	RODENTVR_API UFunction* Z_Construct_UFunction_UMazeSettings_GetPlayerStart();
 	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FTransform();
+	RODENTVR_API UFunction* Z_Construct_UFunction_UMazeSettings_GetStopConditions();
 	RODENTVR_API UFunction* Z_Construct_UFunction_UMazeSettings_GetTextures();
 	RODENTVR_API UFunction* Z_Construct_UFunction_UMazeSettings_RemoveMazeObject();
 	RODENTVR_API UFunction* Z_Construct_UFunction_UMazeSettings_RemoveStopCondition();
@@ -54,8 +56,10 @@ void EmptyLinkFunctionForGeneratedCodeMazeSettings() {}
 			{ "GetAreRegionsVisible", &UMazeSettings::execGetAreRegionsVisible },
 			{ "GetBehaviorRecordingFileName", &UMazeSettings::execGetBehaviorRecordingFileName },
 			{ "GetMazeName", &UMazeSettings::execGetMazeName },
+			{ "GetMazeObjects", &UMazeSettings::execGetMazeObjects },
 			{ "GetMazeSettingsFileName", &UMazeSettings::execGetMazeSettingsFileName },
 			{ "GetPlayerStart", &UMazeSettings::execGetPlayerStart },
+			{ "GetStopConditions", &UMazeSettings::execGetStopConditions },
 			{ "GetTextures", &UMazeSettings::execGetTextures },
 			{ "RemoveMazeObject", &UMazeSettings::execRemoveMazeObject },
 			{ "RemoveStopCondition", &UMazeSettings::execRemoveStopCondition },
@@ -338,6 +342,42 @@ void EmptyLinkFunctionForGeneratedCodeMazeSettings() {}
 		}
 		return ReturnFunction;
 	}
+	struct Z_Construct_UFunction_UMazeSettings_GetMazeObjects_Statics
+	{
+		struct MazeSettings_eventGetMazeObjects_Parms
+		{
+			TArray<AMazeObject*> ReturnValue;
+		};
+		static const UE4CodeGen_Private::FArrayPropertyParams NewProp_ReturnValue;
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_ReturnValue_Inner;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_UMazeSettings_GetMazeObjects_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(MazeSettings_eventGetMazeObjects_Parms, ReturnValue), METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UMazeSettings_GetMazeObjects_Statics::NewProp_ReturnValue_Inner = { "ReturnValue", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, Z_Construct_UClass_AMazeObject_NoRegister, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UMazeSettings_GetMazeObjects_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UMazeSettings_GetMazeObjects_Statics::NewProp_ReturnValue,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UMazeSettings_GetMazeObjects_Statics::NewProp_ReturnValue_Inner,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UMazeSettings_GetMazeObjects_Statics::Function_MetaDataParams[] = {
+		{ "BlueprintGetter", "" },
+		{ "ModuleRelativePath", "Private/Settings/MazeSettings.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UMazeSettings_GetMazeObjects_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UMazeSettings, nullptr, "GetMazeObjects", nullptr, nullptr, sizeof(MazeSettings_eventGetMazeObjects_Parms), Z_Construct_UFunction_UMazeSettings_GetMazeObjects_Statics::PropPointers, ARRAY_COUNT(Z_Construct_UFunction_UMazeSettings_GetMazeObjects_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x14020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UMazeSettings_GetMazeObjects_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_UMazeSettings_GetMazeObjects_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_UMazeSettings_GetMazeObjects()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UMazeSettings_GetMazeObjects_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
 	struct Z_Construct_UFunction_UMazeSettings_GetMazeSettingsFileName_Statics
 	{
 		struct MazeSettings_eventGetMazeSettingsFileName_Parms
@@ -401,6 +441,42 @@ void EmptyLinkFunctionForGeneratedCodeMazeSettings() {}
 		if (!ReturnFunction)
 		{
 			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UMazeSettings_GetPlayerStart_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_UMazeSettings_GetStopConditions_Statics
+	{
+		struct MazeSettings_eventGetStopConditions_Parms
+		{
+			TArray<UStopCondition*> ReturnValue;
+		};
+		static const UE4CodeGen_Private::FArrayPropertyParams NewProp_ReturnValue;
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_ReturnValue_Inner;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_UMazeSettings_GetStopConditions_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(MazeSettings_eventGetStopConditions_Parms, ReturnValue), METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UMazeSettings_GetStopConditions_Statics::NewProp_ReturnValue_Inner = { "ReturnValue", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, Z_Construct_UClass_UStopCondition_NoRegister, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UMazeSettings_GetStopConditions_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UMazeSettings_GetStopConditions_Statics::NewProp_ReturnValue,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UMazeSettings_GetStopConditions_Statics::NewProp_ReturnValue_Inner,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UMazeSettings_GetStopConditions_Statics::Function_MetaDataParams[] = {
+		{ "BlueprintGetter", "" },
+		{ "ModuleRelativePath", "Private/Settings/MazeSettings.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UMazeSettings_GetStopConditions_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UMazeSettings, nullptr, "GetStopConditions", nullptr, nullptr, sizeof(MazeSettings_eventGetStopConditions_Parms), Z_Construct_UFunction_UMazeSettings_GetStopConditions_Statics::PropPointers, ARRAY_COUNT(Z_Construct_UFunction_UMazeSettings_GetStopConditions_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x14020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UMazeSettings_GetStopConditions_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_UMazeSettings_GetStopConditions_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_UMazeSettings_GetStopConditions()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UMazeSettings_GetStopConditions_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
@@ -775,8 +851,10 @@ void EmptyLinkFunctionForGeneratedCodeMazeSettings() {}
 		{ &Z_Construct_UFunction_UMazeSettings_GetAreRegionsVisible, "GetAreRegionsVisible" }, // 538140969
 		{ &Z_Construct_UFunction_UMazeSettings_GetBehaviorRecordingFileName, "GetBehaviorRecordingFileName" }, // 1420846906
 		{ &Z_Construct_UFunction_UMazeSettings_GetMazeName, "GetMazeName" }, // 1535611574
+		{ &Z_Construct_UFunction_UMazeSettings_GetMazeObjects, "GetMazeObjects" }, // 372088259
 		{ &Z_Construct_UFunction_UMazeSettings_GetMazeSettingsFileName, "GetMazeSettingsFileName" }, // 1606895659
 		{ &Z_Construct_UFunction_UMazeSettings_GetPlayerStart, "GetPlayerStart" }, // 2570566145
+		{ &Z_Construct_UFunction_UMazeSettings_GetStopConditions, "GetStopConditions" }, // 820365173
 		{ &Z_Construct_UFunction_UMazeSettings_GetTextures, "GetTextures" }, // 3863781314
 		{ &Z_Construct_UFunction_UMazeSettings_RemoveMazeObject, "RemoveMazeObject" }, // 2090218455
 		{ &Z_Construct_UFunction_UMazeSettings_RemoveStopCondition, "RemoveStopCondition" }, // 3970227289
@@ -798,10 +876,12 @@ void EmptyLinkFunctionForGeneratedCodeMazeSettings() {}
 #endif
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UMazeSettings_Statics::NewProp_StopConditions_MetaData[] = {
+		{ "BlueprintGetter", "GetStopConditions" },
+		{ "Category", "MazeSettings" },
 		{ "ModuleRelativePath", "Private/Settings/MazeSettings.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UClass_UMazeSettings_Statics::NewProp_StopConditions = { "StopConditions", nullptr, (EPropertyFlags)0x0040000000000000, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UMazeSettings, StopConditions), METADATA_PARAMS(Z_Construct_UClass_UMazeSettings_Statics::NewProp_StopConditions_MetaData, ARRAY_COUNT(Z_Construct_UClass_UMazeSettings_Statics::NewProp_StopConditions_MetaData)) };
+	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UClass_UMazeSettings_Statics::NewProp_StopConditions = { "StopConditions", nullptr, (EPropertyFlags)0x0040000000000014, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UMazeSettings, StopConditions), METADATA_PARAMS(Z_Construct_UClass_UMazeSettings_Statics::NewProp_StopConditions_MetaData, ARRAY_COUNT(Z_Construct_UClass_UMazeSettings_Statics::NewProp_StopConditions_MetaData)) };
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UMazeSettings_Statics::NewProp_StopConditions_Inner = { "StopConditions", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, Z_Construct_UClass_UStopCondition_NoRegister, METADATA_PARAMS(nullptr, 0) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UMazeSettings_Statics::NewProp_Textures_MetaData[] = {
@@ -815,12 +895,14 @@ void EmptyLinkFunctionForGeneratedCodeMazeSettings() {}
 	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UClass_UMazeSettings_Statics::NewProp_Textures_ValueProp = { "Textures", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, 1, METADATA_PARAMS(nullptr, 0) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UMazeSettings_Statics::NewProp_MazeObjects_MetaData[] = {
+		{ "BlueprintGetter", "GetMazeObjects" },
+		{ "Category", "MazeSettings" },
 		{ "Comment", "//UPROPERTY()\n//TArray<Region> \n" },
 		{ "ModuleRelativePath", "Private/Settings/MazeSettings.h" },
 		{ "ToolTip", "UPROPERTY()\nTArray<Region>" },
 	};
 #endif
-	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UClass_UMazeSettings_Statics::NewProp_MazeObjects = { "MazeObjects", nullptr, (EPropertyFlags)0x0040000000000000, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UMazeSettings, MazeObjects), METADATA_PARAMS(Z_Construct_UClass_UMazeSettings_Statics::NewProp_MazeObjects_MetaData, ARRAY_COUNT(Z_Construct_UClass_UMazeSettings_Statics::NewProp_MazeObjects_MetaData)) };
+	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UClass_UMazeSettings_Statics::NewProp_MazeObjects = { "MazeObjects", nullptr, (EPropertyFlags)0x0040000000000014, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UMazeSettings, MazeObjects), METADATA_PARAMS(Z_Construct_UClass_UMazeSettings_Statics::NewProp_MazeObjects_MetaData, ARRAY_COUNT(Z_Construct_UClass_UMazeSettings_Statics::NewProp_MazeObjects_MetaData)) };
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UMazeSettings_Statics::NewProp_MazeObjects_Inner = { "MazeObjects", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, Z_Construct_UClass_AMazeObject_NoRegister, METADATA_PARAMS(nullptr, 0) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UMazeSettings_Statics::NewProp_AreRegionsVisible_MetaData[] = {
@@ -912,7 +994,7 @@ void EmptyLinkFunctionForGeneratedCodeMazeSettings() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UMazeSettings, 3692468726);
+	IMPLEMENT_CLASS(UMazeSettings, 4241773854);
 	template<> RODENTVR_API UClass* StaticClass<UMazeSettings>()
 	{
 		return UMazeSettings::StaticClass();
