@@ -38,7 +38,8 @@ C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\corecrt_startup
 C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\math.h
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\vcruntime_startup.h
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\thr/xthreads.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\windows.h
+C:\Program Files\Epic Games\UE_4.23\Engine\Source\Runtime\Core\Public\Windows\MinWindows.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\Windows.h
 C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\sdkddkver.h
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\excpt.h
 C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\windef.h
@@ -108,8 +109,6 @@ C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\pshpack1.h
 C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\poppack.h
 C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\pshpack2.h
 C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\poppack.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\pshpack2.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\poppack.h
 C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\pshpack4.h
 C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\poppack.h
 C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\pshpack4.h
@@ -134,8 +133,6 @@ C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\reason.h
 C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\winnetwk.h
 C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\wnnc.h
 C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\stralign.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\winsvc.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\mcx.h
 C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\imm.h
 C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\ime_cmodes.h
 C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Source\RodentVR\Private\Hardware\BallInput\Window.h
@@ -143,7 +140,6 @@ C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.2
 C:\Program Files\Epic Games\UE_4.23\Engine\Source\Runtime\ApplicationCore\Public\Windows/WindowsApplication.h
 C:\Program Files\Epic Games\UE_4.23\Engine\Source\Runtime\Core\Public\Windows/WindowsHWrapper.h
 C:\Program Files\Epic Games\UE_4.23\Engine\Source\Runtime\Core\Public\Windows/PreWindowsApi.h
-C:\Program Files\Epic Games\UE_4.23\Engine\Source\Runtime\Core\Public\Windows/MinWindows.h
 C:\Program Files\Epic Games\UE_4.23\Engine\Source\Runtime\Core\Public\Windows/PostWindowsApi.h
 C:\Program Files\Epic Games\UE_4.23\Engine\Source\Runtime\Core\Public\Windows/AllowWindowsPlatformTypes.h
 C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\Ole2.h
