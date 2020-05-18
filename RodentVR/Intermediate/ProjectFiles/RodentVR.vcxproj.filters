@@ -11,7 +11,7 @@
     <None Include="..\..\Source\RodentVREditor.Target.cs">
       <Filter>Source</Filter>
     </None>
-    <None Include="..\..\&apos;" />
+    <None Include="..\..\'" />
     <None Include="..\..\.gitignore" />
     <None Include="..\..\NewMaze" />
     <None Include="..\..\Newmaze.maze" />
@@ -167,9 +167,6 @@
     <Filter Include="Source\RodentVR\Private">
       <UniqueIdentifier>{5B773920-84CA-4FA9-8378-0DFA4DD1D28E}</UniqueIdentifier>
     </Filter>
-    <ClCompile Include="..\..\Source\RodentVR\Private\CircularProgressBar.cpp">
-      <Filter>Source\RodentVR\Private</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\Source\RodentVR\Private\RewardRegion.cpp">
       <Filter>Source\RodentVR\Private</Filter>
     </ClCompile>
@@ -182,9 +179,6 @@
     <ClInclude Include="..\..\Source\RodentVR\Private\RodentGameMode.h">
       <Filter>Source\RodentVR\Private</Filter>
     </ClInclude>
-    <ClCompile Include="..\..\Source\RodentVR\Private\SCircularProgressBar.cpp">
-      <Filter>Source\RodentVR\Private</Filter>
-    </ClCompile>
     <Filter Include="Source\RodentVR\Private\BehaviorRecording">
       <UniqueIdentifier>{32AF5A73-1824-4997-83CF-A86FB5BA6CCE}</UniqueIdentifier>
     </Filter>
@@ -391,15 +385,6 @@
     </ClCompile>
     <ClInclude Include="..\..\Source\RodentVR\Private\StopConditions\TimeLimitStopCondition.h">
       <Filter>Source\RodentVR\Private\StopConditions</Filter>
-    </ClInclude>
-    <Filter Include="Source\RodentVR\Public">
-      <UniqueIdentifier>{DDD9A296-14A9-4B71-94E2-B13FD87B6A32}</UniqueIdentifier>
-    </Filter>
-    <ClInclude Include="..\..\Source\RodentVR\Public\CircularProgressBar.h">
-      <Filter>Source\RodentVR\Public</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\RodentVR\Public\SCircularProgressBar.h">
-      <Filter>Source\RodentVR\Public</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
