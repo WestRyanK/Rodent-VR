@@ -35,16 +35,15 @@ void MouseReader::StartReader()
 	}
 }
 
-void MouseReader::AcceptRawMouseInput(HWND Hwnd)
+void MouseReader::RegisterForRawInput()
 {
 	RAWINPUTDEVICE Devices[1];
 	Devices[0].usUsagePage = 1;
 	Devices[0].usUsage = 2;
-	Devices[0].dwFlags = RIDEV_INPUTSINK;
-	Devices[0].hwndTarget = Hwnd;
+	Devices[0].dwFlags = 0;
+	Devices[0].hwndTarget = 0;
 
 	RegisterRawInputDevices(Devices, 1, sizeof(Devices[0]));
-
 }
 
 FWindowsApplication* MouseReader::GetApplication()

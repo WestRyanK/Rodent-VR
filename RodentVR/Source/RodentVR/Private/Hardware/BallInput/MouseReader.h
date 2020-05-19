@@ -18,12 +18,12 @@ class RODENTVR_API MouseReader : public IWindowsMessageHandler
 private:
 	std::mutex ReaderMutex;
 	bool IsReading = false;
-	void AcceptRawMouseInput(HWND Hwnd);
 	FWindowsApplication* GetApplication();
 
 protected:
 	RAWINPUT* GetRawInput(LPARAM Lparam);
 	virtual bool ProcessMessage(HWND Hwnd, uint32 Message, WPARAM WParam, LPARAM LParam, int32& OutResult) = 0;
+	void RegisterForRawInput();
 
 public:
 	MouseReader();

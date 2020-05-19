@@ -40,11 +40,11 @@ void UBallInputComponent::BeginPlay()
 			MouseANameWstr.assign(MouseANameStr.begin(), MouseANameStr.end());
 			MouseBNameWstr.assign(MouseBNameStr.begin(), MouseBNameStr.end());
 
-			BallInput::Initialize(MouseANameWstr, MouseBNameWstr);
+			UBallInput::Initialize(MouseANameWstr, MouseBNameWstr);
 		}
 	}
 
-	BallInput::Start();
+	UBallInput::Start();
 }
 
 
@@ -53,7 +53,7 @@ void UBallInputComponent::EndPlay(EEndPlayReason::Type EndPlayReason)
 {
 	Super::EndPlay(EndPlayReason);
 
-	BallInput::Stop();
+	UBallInput::Stop();
 }
 
 
@@ -64,7 +64,7 @@ void UBallInputComponent::TickComponent(float DeltaTime, ELevelTick TickType, FA
 
 	float x = 0;
 	float y = 0;
-	BallInput::GetMovementDelta(&x, &y);
+	UBallInput::GetMovementDelta(&x, &y);
 
 	APawn* OwnerPawn = (APawn*) this->GetOwner();
 	OwnerPawn->AddMovementInput(OwnerPawn->GetActorForwardVector(), x * this->MouseAMultiplier);

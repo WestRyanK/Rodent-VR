@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\RodentVR.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{B12E1460-0529-43D4-8625-1585DCB8D655}</UniqueIdentifier>
+      <UniqueIdentifier>{F591BAD8-5838-4338-9DCB-916943A5ECC3}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\RodentVR.Target.cs">
       <Filter>Source</Filter>
@@ -11,7 +11,7 @@
     <None Include="..\..\Source\RodentVREditor.Target.cs">
       <Filter>Source</Filter>
     </None>
-    <None Include="..\..\'" />
+    <None Include="..\..\&apos;" />
     <None Include="..\..\.gitignore" />
     <None Include="..\..\NewMaze" />
     <None Include="..\..\Newmaze.maze" />
@@ -21,7 +21,7 @@
     <None Include="..\..\TestSettings - Copy.vrsettings" />
     <None Include="..\..\TestSettings.vrsettings" />
     <Filter Include="Config">
-      <UniqueIdentifier>{7D6A3724-D19B-473B-8C7D-D724393BDC95}</UniqueIdentifier>
+      <UniqueIdentifier>{0B587A75-CBE4-4B72-96CC-45D2AA8D9866}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -36,70 +36,70 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Config\Android">
-      <UniqueIdentifier>{C6B7F36D-B573-4E96-B9E6-B0F6FB6CB360}</UniqueIdentifier>
+      <UniqueIdentifier>{582240D6-F0D0-4F3B-ACD1-68B3D5E7BA8B}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\Android\AndroidEngine.ini">
       <Filter>Config\Android</Filter>
     </None>
     <Filter Include="Config\IOS">
-      <UniqueIdentifier>{E14A39F5-9983-4A27-B9EE-AB75AABF7B9F}</UniqueIdentifier>
+      <UniqueIdentifier>{0B25ABBA-5BA2-443E-A9A5-006A123D3920}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\IOS\IOSEngine.ini">
       <Filter>Config\IOS</Filter>
     </None>
     <Filter Include="Config\Linux">
-      <UniqueIdentifier>{FD5461EB-9D9F-4543-8C53-E0449128F2DE}</UniqueIdentifier>
+      <UniqueIdentifier>{35264528-7496-4AF1-8FB2-3D94151B311A}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\Linux\LinuxEngine.ini">
       <Filter>Config\Linux</Filter>
     </None>
     <Filter Include="Config\Mac">
-      <UniqueIdentifier>{384E18FE-6CAC-47D8-90D9-0F2E1970720D}</UniqueIdentifier>
+      <UniqueIdentifier>{ED75424D-3383-482B-A587-A31777499802}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\Mac\MacEngine.ini">
       <Filter>Config\Mac</Filter>
     </None>
     <Filter Include="Config\PS4">
-      <UniqueIdentifier>{7041E763-9EF3-4666-BA17-3B6ACB4E0C34}</UniqueIdentifier>
+      <UniqueIdentifier>{E51BD83C-16DE-4A1B-B65E-5F24E14C826E}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\PS4\PS4Engine.ini">
       <Filter>Config\PS4</Filter>
     </None>
     <Filter Include="Config\Switch">
-      <UniqueIdentifier>{E05F6E9B-1404-4C41-8179-97D9333EA05D}</UniqueIdentifier>
+      <UniqueIdentifier>{0F74B969-6646-4ED3-AB2B-83FDC0070ED8}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\Switch\SwitchEngine.ini">
       <Filter>Config\Switch</Filter>
     </None>
     <Filter Include="Config\Windows">
-      <UniqueIdentifier>{814D1BD5-3CC2-4C93-9F24-1F28D28DCCF4}</UniqueIdentifier>
+      <UniqueIdentifier>{2CD75300-5ACC-47FD-AE4E-104156BABE03}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\Windows\WindowsEngine.ini">
       <Filter>Config\Windows</Filter>
     </None>
     <Filter Include="Config\XboxOne">
-      <UniqueIdentifier>{65C76C02-E466-4E0F-94C7-7035D65BCF92}</UniqueIdentifier>
+      <UniqueIdentifier>{BEE2C1D7-90D0-45CA-8B38-3465F315DB74}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\XboxOne\XboxOneEngine.ini">
       <Filter>Config\XboxOne</Filter>
     </None>
     <Filter Include="Plugins">
-      <UniqueIdentifier>{107259B6-D00B-424E-B225-C10E08871349}</UniqueIdentifier>
+      <UniqueIdentifier>{7D2537AB-7E26-4891-B64B-7A4A82C0F59D}</UniqueIdentifier>
     </Filter>
     <Filter Include="Plugins\TinyFileDialogs">
-      <UniqueIdentifier>{F85F2459-044D-4C24-8794-A8053971BEBA}</UniqueIdentifier>
+      <UniqueIdentifier>{810CC6D9-304C-45BD-9B2A-A785684B2713}</UniqueIdentifier>
     </Filter>
     <Filter Include="Plugins\TinyFileDialogs\Source">
-      <UniqueIdentifier>{23A0B0DB-CB2A-4DF8-B0C9-D9A91A1D7515}</UniqueIdentifier>
+      <UniqueIdentifier>{65ECFD6C-31E4-41A3-850C-74ED00399AEE}</UniqueIdentifier>
     </Filter>
     <Filter Include="Plugins\TinyFileDialogs\Source\TinyFileDialogs">
-      <UniqueIdentifier>{C500845C-B7E9-4355-8839-DA5065322D6D}</UniqueIdentifier>
+      <UniqueIdentifier>{C74D29E3-F00A-4C13-9D70-5D584DE51D6D}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Plugins\TinyFileDialogs\Source\TinyFileDialogs\TinyFileDialogs.Build.cs">
       <Filter>Plugins\TinyFileDialogs\Source\TinyFileDialogs</Filter>
     </None>
     <Filter Include="Plugins\TinyFileDialogs\Source\TinyFileDialogs\Private">
-      <UniqueIdentifier>{5CD5973D-D78F-423D-8FDB-08C84CAC7BE9}</UniqueIdentifier>
+      <UniqueIdentifier>{0AA6D399-7847-4363-A9EE-89A76CA6921B}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Plugins\TinyFileDialogs\Source\TinyFileDialogs\Private\TinyFileDialogs.cpp">
       <Filter>Plugins\TinyFileDialogs\Source\TinyFileDialogs\Private</Filter>
@@ -108,7 +108,7 @@
       <Filter>Plugins\TinyFileDialogs\Source\TinyFileDialogs\Private</Filter>
     </ClCompile>
     <Filter Include="Plugins\TinyFileDialogs\Source\TinyFileDialogs\Public">
-      <UniqueIdentifier>{44CEAAD6-A09F-4F0E-BD35-18330DCCC94E}</UniqueIdentifier>
+      <UniqueIdentifier>{3271942A-2F1F-4951-AAA7-AE484CB5F2B4}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Plugins\TinyFileDialogs\Source\TinyFileDialogs\Public\TinyFileDialogs.h">
       <Filter>Plugins\TinyFileDialogs\Source\TinyFileDialogs\Public</Filter>
@@ -120,16 +120,16 @@
       <Filter>Plugins\TinyFileDialogs</Filter>
     </None>
     <Filter Include="Plugins\TinyFileDialogs\Resources">
-      <UniqueIdentifier>{072F3041-0474-4BBD-94B2-C924BED0C992}</UniqueIdentifier>
+      <UniqueIdentifier>{5F886427-BAC9-43F1-99C6-60E5F172D268}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Plugins\TinyFileDialogs\Resources\Icon128.png">
       <Filter>Plugins\TinyFileDialogs\Resources</Filter>
     </None>
     <Filter Include="Plugins\TinyFileDialogs\Source\ThirdParty">
-      <UniqueIdentifier>{991267AD-FF08-41A4-B76B-715E9C2E2E65}</UniqueIdentifier>
+      <UniqueIdentifier>{60F769A6-28FF-4882-9FD9-A9D9477A5261}</UniqueIdentifier>
     </Filter>
     <Filter Include="Plugins\TinyFileDialogs\Source\ThirdParty\TinyFileDialogsLibrary">
-      <UniqueIdentifier>{232AB878-EEC4-4C42-8641-9C01C7659D17}</UniqueIdentifier>
+      <UniqueIdentifier>{0498CAB1-11BD-410C-B2F1-4A966290A51E}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Plugins\TinyFileDialogs\Source\ThirdParty\TinyFileDialogsLibrary\TinyFileDialogsLibrary.Build.cs">
       <Filter>Plugins\TinyFileDialogs\Source\ThirdParty\TinyFileDialogsLibrary</Filter>
@@ -138,22 +138,22 @@
       <Filter>Plugins\TinyFileDialogs\Source\ThirdParty\TinyFileDialogsLibrary</Filter>
     </None>
     <Filter Include="Plugins\TinyFileDialogs\Source\ThirdParty\TinyFileDialogsLibrary\TinyFileDialogs">
-      <UniqueIdentifier>{A3B31284-53A1-4C6D-ADEF-5782855031DD}</UniqueIdentifier>
+      <UniqueIdentifier>{6F0AB8B2-8AB5-4052-BBAB-06A061EE5540}</UniqueIdentifier>
     </Filter>
     <Filter Include="Plugins\TinyFileDialogs\Source\ThirdParty\TinyFileDialogsLibrary\TinyFileDialogs\inc">
-      <UniqueIdentifier>{DD9DB30F-D124-4574-991C-0DD65ED9C616}</UniqueIdentifier>
+      <UniqueIdentifier>{9BE12FD1-68F3-4F51-8F26-99C15CC78A01}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Plugins\TinyFileDialogs\Source\ThirdParty\TinyFileDialogsLibrary\TinyFileDialogs\inc\tinyfiledialogs.h">
       <Filter>Plugins\TinyFileDialogs\Source\ThirdParty\TinyFileDialogsLibrary\TinyFileDialogs\inc</Filter>
     </ClInclude>
     <Filter Include="Plugins\TinyFileDialogs\Source\ThirdParty\TinyFileDialogsLibrary\TinyFileDialogs\lib">
-      <UniqueIdentifier>{7351A557-5AE2-443A-B0FB-34BFCE5F2F4F}</UniqueIdentifier>
+      <UniqueIdentifier>{115F6FF0-4EC4-4B0B-9B7E-F12B3BC8EDCD}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Plugins\TinyFileDialogs\Source\ThirdParty\TinyFileDialogsLibrary\TinyFileDialogs\lib\tinyfiledialogs.x64.lib">
       <Filter>Plugins\TinyFileDialogs\Source\ThirdParty\TinyFileDialogsLibrary\TinyFileDialogs\lib</Filter>
     </None>
     <Filter Include="Source\RodentVR">
-      <UniqueIdentifier>{9BF766DE-B6E9-466B-B9B8-5F38A6C7CD53}</UniqueIdentifier>
+      <UniqueIdentifier>{0FDF459F-AAAB-472C-8F86-9B14A98B664A}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\RodentVR\RodentVR.Build.cs">
       <Filter>Source\RodentVR</Filter>
@@ -165,7 +165,7 @@
       <Filter>Source\RodentVR</Filter>
     </ClInclude>
     <Filter Include="Source\RodentVR\Private">
-      <UniqueIdentifier>{5B773920-84CA-4FA9-8378-0DFA4DD1D28E}</UniqueIdentifier>
+      <UniqueIdentifier>{A9F09570-9CFA-4706-A9CC-073030ADC647}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\RodentVR\Private\RewardRegion.cpp">
       <Filter>Source\RodentVR\Private</Filter>
@@ -180,7 +180,7 @@
       <Filter>Source\RodentVR\Private</Filter>
     </ClInclude>
     <Filter Include="Source\RodentVR\Private\BehaviorRecording">
-      <UniqueIdentifier>{32AF5A73-1824-4997-83CF-A86FB5BA6CCE}</UniqueIdentifier>
+      <UniqueIdentifier>{57AE37BC-FC94-41D7-B42C-0A9C3E3BCB14}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\RodentVR\Private\BehaviorRecording\BehaviorRecorderComponent.cpp">
       <Filter>Source\RodentVR\Private\BehaviorRecording</Filter>
@@ -195,7 +195,7 @@
       <Filter>Source\RodentVR\Private\BehaviorRecording</Filter>
     </ClInclude>
     <Filter Include="Source\RodentVR\Private\Editor">
-      <UniqueIdentifier>{E4ACA496-2E80-462F-8EC3-8AA66D3CE04B}</UniqueIdentifier>
+      <UniqueIdentifier>{A4185322-E8B6-4C87-BB1D-98DF8C7971DC}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\RodentVR\Private\Editor\EditorHUD.cpp">
       <Filter>Source\RodentVR\Private\Editor</Filter>
@@ -204,10 +204,10 @@
       <Filter>Source\RodentVR\Private\Editor</Filter>
     </ClInclude>
     <Filter Include="Source\RodentVR\Private\Hardware">
-      <UniqueIdentifier>{276B7A95-6DDD-49AE-9DA5-9D32B3F1BE63}</UniqueIdentifier>
+      <UniqueIdentifier>{48926149-3DA1-47BF-8B20-A6CF60254C4F}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source\RodentVR\Private\Hardware\BallInput">
-      <UniqueIdentifier>{86D12F43-9210-43BB-8259-2D0F930240EB}</UniqueIdentifier>
+      <UniqueIdentifier>{5AABBF74-9726-484F-9DB1-A0484503B3B3}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\RodentVR\Private\Hardware\BallInput\BallInput.cpp">
       <Filter>Source\RodentVR\Private\Hardware\BallInput</Filter>
@@ -246,7 +246,7 @@
       <Filter>Source\RodentVR\Private\Hardware\BallInput</Filter>
     </ClInclude>
     <Filter Include="Source\RodentVR\Private\Hardware\NIDAQ">
-      <UniqueIdentifier>{40FE661B-C4CA-4307-8013-1F19E5509635}</UniqueIdentifier>
+      <UniqueIdentifier>{BF2D19D0-DB8B-4411-B45A-B975C2004049}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\RodentVR\Private\Hardware\NIDAQ\NIDAQ.cpp">
       <Filter>Source\RodentVR\Private\Hardware\NIDAQ</Filter>
@@ -255,7 +255,7 @@
       <Filter>Source\RodentVR\Private\Hardware\NIDAQ</Filter>
     </ClInclude>
     <Filter Include="Source\RodentVR\Private\Hardware\ToneGenerator">
-      <UniqueIdentifier>{9F4A6B64-A4D4-45B1-9377-941739BB1CB1}</UniqueIdentifier>
+      <UniqueIdentifier>{72BC754A-1CCF-4395-90EF-B57BB97961A8}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\RodentVR\Private\Hardware\ToneGenerator\ToneGenerator.cpp">
       <Filter>Source\RodentVR\Private\Hardware\ToneGenerator</Filter>
@@ -264,7 +264,7 @@
       <Filter>Source\RodentVR\Private\Hardware\ToneGenerator</Filter>
     </ClInclude>
     <Filter Include="Source\RodentVR\Private\RapidXML">
-      <UniqueIdentifier>{D7F2795D-7652-4A84-A22E-21AE128FD0DA}</UniqueIdentifier>
+      <UniqueIdentifier>{712B1CA2-EB72-4DF8-81D8-6E97A8117BFD}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\RodentVR\Private\RapidXML\rapidxml.hpp">
       <Filter>Source\RodentVR\Private\RapidXML</Filter>
@@ -279,7 +279,7 @@
       <Filter>Source\RodentVR\Private\RapidXML</Filter>
     </None>
     <Filter Include="Source\RodentVR\Private\Settings">
-      <UniqueIdentifier>{0AA4C71A-66AD-48C1-9ECC-F84B9DE2033A}</UniqueIdentifier>
+      <UniqueIdentifier>{ED710863-3CCE-48A7-8AD1-91C8D97B315A}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\RodentVR\Private\Settings\Device.cpp">
       <Filter>Source\RodentVR\Private\Settings</Filter>
@@ -360,7 +360,7 @@
       <Filter>Source\RodentVR\Private\Settings</Filter>
     </ClInclude>
     <Filter Include="Source\RodentVR\Private\StopConditions">
-      <UniqueIdentifier>{C3B48E41-B85F-4E16-8B7B-4ABAFB405C8F}</UniqueIdentifier>
+      <UniqueIdentifier>{7C4C6EF5-1DA8-407C-BA14-2D3F14CA0CB4}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\RodentVR\Private\StopConditions\EnterRegionStopCondition.cpp">
       <Filter>Source\RodentVR\Private\StopConditions</Filter>

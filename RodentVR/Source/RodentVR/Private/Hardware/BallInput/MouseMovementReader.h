@@ -16,6 +16,7 @@ private:
 	HANDLE MouseAId = {};
 	HANDLE MouseBId = {};
 	float Delta[2];
+	bool IsIdentifyMouseMode;
 	void SetCursorHandles(const wchar_t* MouseAName, const wchar_t* MouseBName);
 
 protected:
@@ -24,9 +25,11 @@ protected:
 
 public:
 	MouseMovementReader(std::wstring MouseAName, std::wstring MouseBName);
+	MouseMovementReader();
 	~MouseMovementReader();
 	static const unsigned int AXIS_X = 0;
 	static const unsigned int AXIS_Y = 1;
 
 	float read_delta(unsigned int Axis);
+	const wchar_t* GetCurrentMouseName();
 };
