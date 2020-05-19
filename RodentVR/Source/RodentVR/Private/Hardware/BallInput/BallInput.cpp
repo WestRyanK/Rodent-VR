@@ -13,7 +13,7 @@ MouseMovementReader* MovementReader = NULL;
 const std::wstring CONFIG_MOUSE_A_KEY = L"mouse_a_name";
 const std::wstring CONFIG_MOUSE_B_KEY = L"mouse_b_name";
 
-void BallInput::GetMovementDelta(float* OutX, float* OutY)
+void UBallInput::GetMovementDelta(float* OutX, float* OutY)
 {
 	if (MovementReader == NULL)
 	{
@@ -31,7 +31,15 @@ void BallInput::GetMovementDelta(float* OutX, float* OutY)
 	}
 }
 
-void BallInput::Initialize(std::wstring MouseAName, std::wstring MouseBName)
+FString UBallInput::GetCurrentDeviceName()
+{
+	const wchar_t* CurrentDeviceName = MovementReader->GetCurrentMouseName();
+	FString CurrentDevice = FString(CurrentDeviceName);
+	
+	return CurrentDevice;
+}
+
+void UBallInput::Initialize(std::wstring MouseAName, std::wstring MouseBName)
 {
 	if (MovementReader != nullptr)
 	{
@@ -42,20 +50,23 @@ void BallInput::Initialize(std::wstring MouseAName, std::wstring MouseBName)
 	MovementReader = new MouseMovementReader(MouseAName, MouseBName);
 }
 
-void BallInput::Start()
+void UBallInput::Initialize()
+{
+	if (MovementReader != nullptr)
+	{
+		delete MovementReader;
+		MovementReader = nullptr;
+	}
+
+	MovementReader = new MouseMovementReader();
+}
+
+void UBallInput::Start()
 {
 	MovementReader->StartReader();
 }
 
-void BallInput::Stop()
+void UBallInput::Stop()
 {
 	MovementReader->StopReader();
-}
-
-BallInput::BallInput()
-{
-}
-
-BallInput::~BallInput()
-{
 }

@@ -10,15 +10,25 @@
 
 MouseMovementReader::MouseMovementReader(std::wstring MouseAName, std::wstring MouseBName)
 {
+	this->IsIdentifyMouseMode = false;
 	this->Delta[AXIS_X] = 0;
 	this->Delta[AXIS_Y] = 0;
+	this->RegisterForRawInput();
 
 	this->SetCursorHandles(MouseAName.c_str(), MouseBName.c_str());
 }
 
+MouseMovementReader::MouseMovementReader()
+{
+	this->IsIdentifyMouseMode = true;
+	this->Delta[AXIS_X] = 0;
+	this->Delta[AXIS_Y] = 0;
+	this->RegisterForRawInput();
+}
+
 MouseMovementReader::~MouseMovementReader()
 {
-	
+
 }
 
 bool MouseMovementReader::ProcessMessage(HWND Hwnd, uint32 Message, WPARAM WParam, LPARAM LParam, int32& OutResult)
@@ -31,17 +41,25 @@ bool MouseMovementReader::ProcessMessage(HWND Hwnd, uint32 Message, WPARAM WPara
 		{
 			this->LockMouseReader();
 
-			// TODO: I could imagine that some devices have a faster 
-			// refresh rate than other devices. Could that make it 
-			// appear that some devices are moving faster than others?
-
-			if (Raw->header.hDevice == this->MouseAId)
+			if (this->IsIdentifyMouseMode)
 			{
-				this->Delta[AXIS_X] += Raw->data.mouse.lLastY;
+				this->MouseAId = Raw->header.hDevice;
+				this->MouseBId = Raw->header.hDevice;
 			}
-			else if (Raw->header.hDevice == this->MouseBId)
+			else
 			{
-				this->Delta[AXIS_Y] += Raw->data.mouse.lLastY;
+				// TODO: I could imagine that some devices have a faster 
+				// refresh rate than other devices. Could that make it 
+				// appear that some devices are moving faster than others?
+
+				if (Raw->header.hDevice == this->MouseAId)
+				{
+					this->Delta[AXIS_X] += Raw->data.mouse.lLastY;
+				}
+				else if (Raw->header.hDevice == this->MouseBId)
+				{
+					this->Delta[AXIS_Y] += Raw->data.mouse.lLastY;
+				}
 			}
 
 			this->UnlockMouseReader();
@@ -84,5 +102,25 @@ void MouseMovementReader::SetCursorHandles(const wchar_t* MouseAName, const wcha
 
 void MouseMovementReader::HandleMessage(unsigned int Msg, WPARAM Wparam, LPARAM Lparam)
 {
+}
+
+const wchar_t* MouseMovementReader::GetCurrentMouseName()
+{
+	const wchar_t* CurrentDeviceName = nullptr;
+	PRAWINPUTDEVICELIST RawInputDeviceList;
+	unsigned int DeviceCount = RawInputDevicesReader::GetDeviceList(&RawInputDeviceList);
+
+	for (size_t i = 0; i < DeviceCount; i++)
+	{
+		const wchar_t* DeviceName = RawInputDevicesReader::GetDeviceName(RawInputDeviceList[i].hDevice);
+
+		if (this->MouseAId == RawInputDeviceList[i].hDevice)
+		{
+			CurrentDeviceName = DeviceName;
+		}
+	}
+
+	free(RawInputDeviceList);
+	return CurrentDeviceName;
 }
 

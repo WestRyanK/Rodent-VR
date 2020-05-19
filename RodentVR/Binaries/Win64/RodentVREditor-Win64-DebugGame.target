@@ -33,6 +33,14 @@
 			"Type": "DynamicLibrary"
 		},
 		{
+			"Path": "$(ProjectDir)/Plugins/TinyFileDialogs/Binaries/Win64/UE4Editor-TinyFileDialogs-Win64-DebugGame.dll",
+			"Type": "DynamicLibrary"
+		},
+		{
+			"Path": "$(ProjectDir)/Plugins/TinyFileDialogs/Binaries/Win64/UE4Editor-TinyFileDialogs-Win64-DebugGame.pdb",
+			"Type": "SymbolFile"
+		},
+		{
 			"Path": "$(EngineDir)/Plugins/2D/Paper2D/Binaries/Win64/UE4Editor-Paper2D.dll",
 			"Type": "DynamicLibrary"
 		},
@@ -1941,6 +1949,10 @@
 			"Type": "RequiredResource"
 		},
 		{
+			"Path": "$(ProjectDir)/Plugins/TinyFileDialogs/Binaries/Win64/UE4Editor-Win64-DebugGame.modules",
+			"Type": "RequiredResource"
+		},
+		{
 			"Path": "$(EngineDir)/Plugins/2D/Paper2D/Binaries/Win64/UE4Editor.modules",
 			"Type": "RequiredResource"
 		},
@@ -2264,6 +2276,10 @@
 		},
 		{
 			"Path": "$(EngineDir)/Plugins/Editor/EditorScriptingUtilities/EditorScriptingUtilities.uplugin",
+			"Type": "UFS"
+		},
+		{
+			"Path": "$(ProjectDir)/Plugins/TinyFileDialogs/TinyFileDialogs.uplugin",
 			"Type": "UFS"
 		},
 		{
