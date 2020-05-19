@@ -3,7 +3,7 @@
 		<MouseADevice DeviceName="HID\&amp;111111" Multiplier="6.244000"/>
 		<MouseBDevice DeviceName="HID\VID&amp;222222222" Multiplier="-3.462000"/>
 	</BallInput>
-	<AirPuffers FrontToleranceAngle="38.000000">
+	<AirPuffers FrontToleranceAngle="27.000000">
 		<LeftDevice DeviceId="2" DeviceName="AAAA" DevicePort="BBB" DeviceLine="CCCCC"/>
 		<RightDevice DeviceId="3" DeviceName="DDDD" DevicePort="EEEE" DeviceLine="FFFF"/>
 	</AirPuffers>
