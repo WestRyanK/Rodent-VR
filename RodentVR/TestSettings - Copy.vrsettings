@@ -1,20 +1,13 @@
 <Settings>
 	<BallInput>
-		<MouseADevice DeviceName="HID\&amp;111111" Multiplier="6.244000"/>
-		<MouseBDevice DeviceName="HID\VID&amp;222222222" Multiplier="-3.462000"/>
+		<MouseADevice DeviceName="" Multiplier="0.000000"/>
+		<MouseBDevice DeviceName="" Multiplier="0.000000"/>
 	</BallInput>
-	<AirPuffers FrontToleranceAngle="38.000000">
-		<LeftDevice DeviceId="2" DeviceName="AAAA" DevicePort="BBB" DeviceLine="CCCCC"/>
-		<RightDevice DeviceId="3" DeviceName="DDDD" DevicePort="EEEE" DeviceLine="FFFF"/>
+	<AirPuffers FrontToleranceAngle="0.000000">
+		<LeftDevice DeviceId="" DeviceName="" DevicePort="" DeviceLine=""/>
+		<RightDevice DeviceId="" DeviceName="" DevicePort="" DeviceLine=""/>
 	</AirPuffers>
-	<RewardDevices>
-		<RewardDevice DeviceId="000" DeviceName="00000000" DevicePort="111111111" DeviceLine="222222"/>
-		<RewardDevice DeviceId="2" DeviceName="dev2AAACC" DevicePort="port2CCCC" DeviceLine="lineCDDDD"/>
-		<RewardDevice DeviceId="3333" DeviceName="100000" DevicePort="011111" DeviceLine="1222222"/>
-	</RewardDevices>
-	<Playlist>
-		<MazeFile Path="C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\TestFile2.maze"/>
-		<MazeFile Path="C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\TestFile.maze"/>
-	</Playlist>
+	<RewardDevices/>
+	<Playlist/>
 </Settings>
 

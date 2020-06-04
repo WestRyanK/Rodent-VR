@@ -2,7 +2,7 @@
 
 
 #include "MazeSettingsXmlWriter.h"
-#include "MazeObject.h"
+#include "MazeObjectSettings.h"
 #include "StopConditions/EnterRegionStopCondition.h"
 #include "StopConditions/TimeLimitStopCondition.h"
 
@@ -10,6 +10,7 @@ void UMazeSettingsXmlWriter::SaveMazeSettings(UMazeSettings* MazeSettings)
 {
 	rapidxml::xml_document<>* Document = UXmlFileWriter::CreateDocument("Maze");
 	rapidxml::xml_node<>* Root = Document->first_node();
+	UXmlFileWriter::AddStringAttribute(Document, Root, "Name", MazeSettings->GetMazeName());
 
 	UMazeSettingsXmlWriter::SaveBehaviorRecording(Document, Root, MazeSettings);
 	UMazeSettingsXmlWriter::SavePlayerStart(Document, Root, MazeSettings);
@@ -58,7 +59,7 @@ void UMazeSettingsXmlWriter::SaveRegions(rapidxml::xml_document<>* Document, rap
 void UMazeSettingsXmlWriter::SaveMazeObjects(rapidxml::xml_document<>* Document, rapidxml::xml_node<>* Root, UMazeSettings* MazeSettings)
 {
 	rapidxml::xml_node<>* MazeObjectsNode = UXmlFileWriter::AddNode(Document, Root, "MazeObjects");
-	for (AMazeObject* MazeObject : MazeSettings->GetMazeObjects())
+	for (UMazeObjectSettings* MazeObject : MazeSettings->GetMazeObjects())
 	{
 		rapidxml::xml_node<>* MazeObjectNode = UXmlFileWriter::AddNode(Document, MazeObjectsNode, "MazeObject");
 		UXmlFileWriter::AddStringAttribute(Document, MazeObjectNode, "MazeObjectType", MazeObject->GetObjectTypeString());
@@ -67,8 +68,9 @@ void UMazeSettingsXmlWriter::SaveMazeObjects(rapidxml::xml_document<>* Document,
 			UXmlFileWriter::AddStringAttribute(Document, MazeObjectNode, "TextureName", MazeObject->GetTextureFileName());
 		}
 		UXmlFileWriter::AddBoolAttribute(Document, MazeObjectNode, "CanCollide", MazeObject->GetCanCollide());
-		UXmlFileWriter::AddVectorNode(Document, MazeObjectNode, "Position", MazeObject->GetActorLocation(), false);
-		UXmlFileWriter::AddRotatorNode(Document, MazeObjectNode, "Rotation", MazeObject->GetActorRotation(), true);
+		UXmlFileWriter::AddVectorNode(Document, MazeObjectNode, "Position", MazeObject->GetPosition(), true);
+		UXmlFileWriter::AddRotatorNode(Document, MazeObjectNode, "Rotation", MazeObject->GetRotation(), false);
+		UXmlFileWriter::AddVectorNode(Document, MazeObjectNode, "Scale", MazeObject->GetScale(), true);
 	}
 }
 

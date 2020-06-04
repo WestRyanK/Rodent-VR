@@ -2,8 +2,18 @@
 
 
 #include "MazeSettings.h"
-#include "TextureLoader.h"
+#include "Simulator/AssetLoader.h"
 #include "StopConditions/StopCondition.h"
+
+
+bool UMazeSettings::DoesMazeHaveSettings() const
+{
+	bool HasStopConditions = (this->StopConditions.Num() > 0);
+	bool HasTextures = (this->Textures.Num() > 0);
+	bool HasMazeObjects = (this->MazeObjects.Num() > 0);
+	//bool HasRegions = (this->Regions.Num() > 0);
+	return HasStopConditions || HasTextures || HasMazeObjects;// || HasRegions;
+}
 
 FString UMazeSettings::GetMazeName()
 {
@@ -13,6 +23,10 @@ FString UMazeSettings::GetMazeName()
 void UMazeSettings::SetMazeName(FString MazeNameValue)
 {
 	this->MazeName = MazeNameValue;
+	
+	this->MazeObjects.Empty();
+	this->Textures.Empty();
+	this->StopConditions.Empty();
 }
 
 FString UMazeSettings::GetMazeSettingsFileName()
@@ -104,17 +118,17 @@ void UMazeSettings::ClearMazeObjects()
 	this->MazeObjects.Empty();
 }
 
-void UMazeSettings::RemoveMazeObject(int position)
+void UMazeSettings::RemoveMazeObject(UMazeObjectSettings* MazeObject)
 {
-	this->MazeObjects.RemoveAt(position);
+	this->MazeObjects.Remove(MazeObject);
 }
 
-void UMazeSettings::AddMazeObject(AMazeObject* MazeObject)
+void UMazeSettings::AddMazeObject(UMazeObjectSettings* MazeObject)
 {
 	this->MazeObjects.Add(MazeObject);
 }
 
-TArray<AMazeObject*> UMazeSettings::GetMazeObjects()
+TArray<UMazeObjectSettings*> UMazeSettings::GetMazeObjects()
 {
 	return this->MazeObjects;
 }

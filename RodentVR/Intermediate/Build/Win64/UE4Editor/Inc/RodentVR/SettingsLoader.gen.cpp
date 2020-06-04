@@ -1,4 +1,4 @@
-// Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
+// Copyright Epic Games, Inc. All Rights Reserved.
 /*===========================================================================
 	Generated code exported from UnrealHeaderTool.
 	DO NOT modify this manually! Edit the corresponding .h files instead!
@@ -17,17 +17,25 @@ void EmptyLinkFunctionForGeneratedCodeSettingsLoader() {}
 	RODENTVR_API UClass* Z_Construct_UClass_USettingsLoader();
 	RODENTVR_API UClass* Z_Construct_UClass_UXmlFileReader();
 	UPackage* Z_Construct_UPackage__Script_RodentVR();
-	RODENTVR_API UFunction* Z_Construct_UFunction_USettingsLoader_LoadSettings();
 	RODENTVR_API UClass* Z_Construct_UClass_ARodentGameMode_NoRegister();
 	COREUOBJECT_API UClass* Z_Construct_UClass_UObject_NoRegister();
 // End Cross Module References
+	DEFINE_FUNCTION(USettingsLoader::execLoadSettings)
+	{
+		P_GET_OBJECT(UObject,Z_Param_WorldContextObject);
+		P_GET_OBJECT(ARodentGameMode,Z_Param_InRodentGameMode);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		USettingsLoader::LoadSettings(Z_Param_WorldContextObject,Z_Param_InRodentGameMode);
+		P_NATIVE_END;
+	}
 	void USettingsLoader::StaticRegisterNativesUSettingsLoader()
 	{
 		UClass* Class = USettingsLoader::StaticClass();
 		static const FNameNativePtrPair Funcs[] = {
 			{ "LoadSettings", &USettingsLoader::execLoadSettings },
 		};
-		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, ARRAY_COUNT(Funcs));
+		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 	}
 	struct Z_Construct_UFunction_USettingsLoader_LoadSettings_Statics
 	{
@@ -57,7 +65,7 @@ void EmptyLinkFunctionForGeneratedCodeSettingsLoader() {}
 		{ "WorldContext", "WorldContextObject" },
 	};
 #endif
-	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_USettingsLoader_LoadSettings_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_USettingsLoader, nullptr, "LoadSettings", nullptr, nullptr, sizeof(SettingsLoader_eventLoadSettings_Parms), Z_Construct_UFunction_USettingsLoader_LoadSettings_Statics::PropPointers, ARRAY_COUNT(Z_Construct_UFunction_USettingsLoader_LoadSettings_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04022401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_USettingsLoader_LoadSettings_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_USettingsLoader_LoadSettings_Statics::Function_MetaDataParams)) };
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_USettingsLoader_LoadSettings_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_USettingsLoader, nullptr, "LoadSettings", nullptr, nullptr, sizeof(SettingsLoader_eventLoadSettings_Parms), Z_Construct_UFunction_USettingsLoader_LoadSettings_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_USettingsLoader_LoadSettings_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04022401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_USettingsLoader_LoadSettings_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_USettingsLoader_LoadSettings_Statics::Function_MetaDataParams)) };
 	UFunction* Z_Construct_UFunction_USettingsLoader_LoadSettings()
 	{
 		static UFunction* ReturnFunction = nullptr;
@@ -86,7 +94,7 @@ void EmptyLinkFunctionForGeneratedCodeSettingsLoader() {}
 		(UObject* (*)())Z_Construct_UPackage__Script_RodentVR,
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_USettingsLoader_Statics::FuncInfo[] = {
-		{ &Z_Construct_UFunction_USettingsLoader_LoadSettings, "LoadSettings" }, // 4292182398
+		{ &Z_Construct_UFunction_USettingsLoader_LoadSettings, "LoadSettings" }, // 582320131
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_USettingsLoader_Statics::Class_MetaDataParams[] = {
@@ -106,12 +114,12 @@ void EmptyLinkFunctionForGeneratedCodeSettingsLoader() {}
 		FuncInfo,
 		nullptr,
 		nullptr,
-		ARRAY_COUNT(DependentSingletons),
-		ARRAY_COUNT(FuncInfo),
+		UE_ARRAY_COUNT(DependentSingletons),
+		UE_ARRAY_COUNT(FuncInfo),
 		0,
 		0,
 		0x000000A0u,
-		METADATA_PARAMS(Z_Construct_UClass_USettingsLoader_Statics::Class_MetaDataParams, ARRAY_COUNT(Z_Construct_UClass_USettingsLoader_Statics::Class_MetaDataParams))
+		METADATA_PARAMS(Z_Construct_UClass_USettingsLoader_Statics::Class_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UClass_USettingsLoader_Statics::Class_MetaDataParams))
 	};
 	UClass* Z_Construct_UClass_USettingsLoader()
 	{
@@ -122,7 +130,7 @@ void EmptyLinkFunctionForGeneratedCodeSettingsLoader() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(USettingsLoader, 695780254);
+	IMPLEMENT_CLASS(USettingsLoader, 3117652526);
 	template<> RODENTVR_API UClass* StaticClass<USettingsLoader>()
 	{
 		return USettingsLoader::StaticClass();

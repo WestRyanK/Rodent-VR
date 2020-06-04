@@ -1,4 +1,4 @@
-// Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
+// Copyright Epic Games, Inc. All Rights Reserved.
 /*===========================================================================
 	Generated code exported from UnrealHeaderTool.
 	DO NOT modify this manually! Edit the corresponding .h files instead!
@@ -56,12 +56,12 @@ void EmptyLinkFunctionForGeneratedCodeXmlFileReader() {}
 		nullptr,
 		nullptr,
 		nullptr,
-		ARRAY_COUNT(DependentSingletons),
+		UE_ARRAY_COUNT(DependentSingletons),
 		0,
 		0,
 		0,
 		0x000000A0u,
-		METADATA_PARAMS(Z_Construct_UClass_UXmlFileReader_Statics::Class_MetaDataParams, ARRAY_COUNT(Z_Construct_UClass_UXmlFileReader_Statics::Class_MetaDataParams))
+		METADATA_PARAMS(Z_Construct_UClass_UXmlFileReader_Statics::Class_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UClass_UXmlFileReader_Statics::Class_MetaDataParams))
 	};
 	UClass* Z_Construct_UClass_UXmlFileReader()
 	{
@@ -72,7 +72,7 @@ void EmptyLinkFunctionForGeneratedCodeXmlFileReader() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UXmlFileReader, 2941378463);
+	IMPLEMENT_CLASS(UXmlFileReader, 3315353625);
 	template<> RODENTVR_API UClass* StaticClass<UXmlFileReader>()
 	{
 		return UXmlFileReader::StaticClass();

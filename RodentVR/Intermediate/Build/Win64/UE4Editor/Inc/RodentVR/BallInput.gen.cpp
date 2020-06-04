@@ -1,4 +1,4 @@
-// Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
+// Copyright Epic Games, Inc. All Rights Reserved.
 /*===========================================================================
 	Generated code exported from UnrealHeaderTool.
 	DO NOT modify this manually! Edit the corresponding .h files instead!
@@ -17,11 +17,35 @@ void EmptyLinkFunctionForGeneratedCodeBallInput() {}
 	RODENTVR_API UClass* Z_Construct_UClass_UBallInput();
 	COREUOBJECT_API UClass* Z_Construct_UClass_UObject();
 	UPackage* Z_Construct_UPackage__Script_RodentVR();
-	RODENTVR_API UFunction* Z_Construct_UFunction_UBallInput_GetCurrentDeviceName();
-	RODENTVR_API UFunction* Z_Construct_UFunction_UBallInput_Initialize();
-	RODENTVR_API UFunction* Z_Construct_UFunction_UBallInput_Start();
-	RODENTVR_API UFunction* Z_Construct_UFunction_UBallInput_Stop();
 // End Cross Module References
+	DEFINE_FUNCTION(UBallInput::execStop)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		UBallInput::Stop();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UBallInput::execStart)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		UBallInput::Start();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UBallInput::execInitialize)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		UBallInput::Initialize();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UBallInput::execGetCurrentDeviceName)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(FString*)Z_Param__Result=UBallInput::GetCurrentDeviceName();
+		P_NATIVE_END;
+	}
 	void UBallInput::StaticRegisterNativesUBallInput()
 	{
 		UClass* Class = UBallInput::StaticClass();
@@ -31,7 +55,7 @@ void EmptyLinkFunctionForGeneratedCodeBallInput() {}
 			{ "Start", &UBallInput::execStart },
 			{ "Stop", &UBallInput::execStop },
 		};
-		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, ARRAY_COUNT(Funcs));
+		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 	}
 	struct Z_Construct_UFunction_UBallInput_GetCurrentDeviceName_Statics
 	{
@@ -55,7 +79,7 @@ void EmptyLinkFunctionForGeneratedCodeBallInput() {}
 		{ "ModuleRelativePath", "Private/Hardware/BallInput/BallInput.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UBallInput_GetCurrentDeviceName_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UBallInput, nullptr, "GetCurrentDeviceName", nullptr, nullptr, sizeof(BallInput_eventGetCurrentDeviceName_Parms), Z_Construct_UFunction_UBallInput_GetCurrentDeviceName_Statics::PropPointers, ARRAY_COUNT(Z_Construct_UFunction_UBallInput_GetCurrentDeviceName_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04022401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UBallInput_GetCurrentDeviceName_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_UBallInput_GetCurrentDeviceName_Statics::Function_MetaDataParams)) };
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UBallInput_GetCurrentDeviceName_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UBallInput, nullptr, "GetCurrentDeviceName", nullptr, nullptr, sizeof(BallInput_eventGetCurrentDeviceName_Parms), Z_Construct_UFunction_UBallInput_GetCurrentDeviceName_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UBallInput_GetCurrentDeviceName_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04022401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UBallInput_GetCurrentDeviceName_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UBallInput_GetCurrentDeviceName_Statics::Function_MetaDataParams)) };
 	UFunction* Z_Construct_UFunction_UBallInput_GetCurrentDeviceName()
 	{
 		static UFunction* ReturnFunction = nullptr;
@@ -77,7 +101,7 @@ void EmptyLinkFunctionForGeneratedCodeBallInput() {}
 		{ "ModuleRelativePath", "Private/Hardware/BallInput/BallInput.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UBallInput_Initialize_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UBallInput, nullptr, "Initialize", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04022401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UBallInput_Initialize_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_UBallInput_Initialize_Statics::Function_MetaDataParams)) };
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UBallInput_Initialize_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UBallInput, nullptr, "Initialize", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04022401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UBallInput_Initialize_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UBallInput_Initialize_Statics::Function_MetaDataParams)) };
 	UFunction* Z_Construct_UFunction_UBallInput_Initialize()
 	{
 		static UFunction* ReturnFunction = nullptr;
@@ -101,7 +125,7 @@ void EmptyLinkFunctionForGeneratedCodeBallInput() {}
 		{ "ToolTip", "Starts reading from input devices to determine movement.\nInput devices are read on a separate thread and accumulated.\nCall get_movement_delta() to determine how much movement\nhas occurred since the last call." },
 	};
 #endif
-	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UBallInput_Start_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UBallInput, nullptr, "Start", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04022401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UBallInput_Start_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_UBallInput_Start_Statics::Function_MetaDataParams)) };
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UBallInput_Start_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UBallInput, nullptr, "Start", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04022401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UBallInput_Start_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UBallInput_Start_Statics::Function_MetaDataParams)) };
 	UFunction* Z_Construct_UFunction_UBallInput_Start()
 	{
 		static UFunction* ReturnFunction = nullptr;
@@ -125,7 +149,7 @@ void EmptyLinkFunctionForGeneratedCodeBallInput() {}
 		{ "ToolTip", "Stops reading from input devices and terminates reading thread." },
 	};
 #endif
-	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UBallInput_Stop_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UBallInput, nullptr, "Stop", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04022401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UBallInput_Stop_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_UBallInput_Stop_Statics::Function_MetaDataParams)) };
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UBallInput_Stop_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UBallInput, nullptr, "Stop", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04022401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UBallInput_Stop_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UBallInput_Stop_Statics::Function_MetaDataParams)) };
 	UFunction* Z_Construct_UFunction_UBallInput_Stop()
 	{
 		static UFunction* ReturnFunction = nullptr;
@@ -154,10 +178,10 @@ void EmptyLinkFunctionForGeneratedCodeBallInput() {}
 		(UObject* (*)())Z_Construct_UPackage__Script_RodentVR,
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_UBallInput_Statics::FuncInfo[] = {
-		{ &Z_Construct_UFunction_UBallInput_GetCurrentDeviceName, "GetCurrentDeviceName" }, // 4041708386
-		{ &Z_Construct_UFunction_UBallInput_Initialize, "Initialize" }, // 3471541731
-		{ &Z_Construct_UFunction_UBallInput_Start, "Start" }, // 995733279
-		{ &Z_Construct_UFunction_UBallInput_Stop, "Stop" }, // 286862376
+		{ &Z_Construct_UFunction_UBallInput_GetCurrentDeviceName, "GetCurrentDeviceName" }, // 3396007211
+		{ &Z_Construct_UFunction_UBallInput_Initialize, "Initialize" }, // 448558302
+		{ &Z_Construct_UFunction_UBallInput_Start, "Start" }, // 2159151602
+		{ &Z_Construct_UFunction_UBallInput_Stop, "Stop" }, // 2009495493
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UBallInput_Statics::Class_MetaDataParams[] = {
@@ -179,12 +203,12 @@ void EmptyLinkFunctionForGeneratedCodeBallInput() {}
 		FuncInfo,
 		nullptr,
 		nullptr,
-		ARRAY_COUNT(DependentSingletons),
-		ARRAY_COUNT(FuncInfo),
+		UE_ARRAY_COUNT(DependentSingletons),
+		UE_ARRAY_COUNT(FuncInfo),
 		0,
 		0,
 		0x001000A0u,
-		METADATA_PARAMS(Z_Construct_UClass_UBallInput_Statics::Class_MetaDataParams, ARRAY_COUNT(Z_Construct_UClass_UBallInput_Statics::Class_MetaDataParams))
+		METADATA_PARAMS(Z_Construct_UClass_UBallInput_Statics::Class_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UClass_UBallInput_Statics::Class_MetaDataParams))
 	};
 	UClass* Z_Construct_UClass_UBallInput()
 	{
@@ -195,7 +219,7 @@ void EmptyLinkFunctionForGeneratedCodeBallInput() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UBallInput, 4257629825);
+	IMPLEMENT_CLASS(UBallInput, 35205433);
 	template<> RODENTVR_API UClass* StaticClass<UBallInput>()
 	{
 		return UBallInput::StaticClass();

@@ -1,4 +1,4 @@
-// Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
+// Copyright Epic Games, Inc. All Rights Reserved.
 /*===========================================================================
 	Generated code exported from UnrealHeaderTool.
 	DO NOT modify this manually! Edit the corresponding .h files instead!
@@ -57,7 +57,7 @@ void EmptyLinkFunctionForGeneratedCodeStopConditionsChecker() {}
 		{ "ModuleRelativePath", "Private/StopConditions/StopConditionsChecker.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UClass_UStopConditionsChecker_Statics::NewProp_StopConditions = { "StopConditions", nullptr, (EPropertyFlags)0x0040000000000000, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UStopConditionsChecker, StopConditions), METADATA_PARAMS(Z_Construct_UClass_UStopConditionsChecker_Statics::NewProp_StopConditions_MetaData, ARRAY_COUNT(Z_Construct_UClass_UStopConditionsChecker_Statics::NewProp_StopConditions_MetaData)) };
+	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UClass_UStopConditionsChecker_Statics::NewProp_StopConditions = { "StopConditions", nullptr, (EPropertyFlags)0x0040000000000000, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UStopConditionsChecker, StopConditions), EArrayPropertyFlags::None, METADATA_PARAMS(Z_Construct_UClass_UStopConditionsChecker_Statics::NewProp_StopConditions_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UStopConditionsChecker_Statics::NewProp_StopConditions_MetaData)) };
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UStopConditionsChecker_Statics::NewProp_StopConditions_Inner = { "StopConditions", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, Z_Construct_UClass_UStopCondition_NoRegister, METADATA_PARAMS(nullptr, 0) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UStopConditionsChecker_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UStopConditionsChecker_Statics::NewProp_StopConditions,
@@ -74,12 +74,12 @@ void EmptyLinkFunctionForGeneratedCodeStopConditionsChecker() {}
 		nullptr,
 		Z_Construct_UClass_UStopConditionsChecker_Statics::PropPointers,
 		nullptr,
-		ARRAY_COUNT(DependentSingletons),
+		UE_ARRAY_COUNT(DependentSingletons),
 		0,
-		ARRAY_COUNT(Z_Construct_UClass_UStopConditionsChecker_Statics::PropPointers),
+		UE_ARRAY_COUNT(Z_Construct_UClass_UStopConditionsChecker_Statics::PropPointers),
 		0,
 		0x000000A0u,
-		METADATA_PARAMS(Z_Construct_UClass_UStopConditionsChecker_Statics::Class_MetaDataParams, ARRAY_COUNT(Z_Construct_UClass_UStopConditionsChecker_Statics::Class_MetaDataParams))
+		METADATA_PARAMS(Z_Construct_UClass_UStopConditionsChecker_Statics::Class_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UClass_UStopConditionsChecker_Statics::Class_MetaDataParams))
 	};
 	UClass* Z_Construct_UClass_UStopConditionsChecker()
 	{
@@ -90,7 +90,7 @@ void EmptyLinkFunctionForGeneratedCodeStopConditionsChecker() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UStopConditionsChecker, 3675675983);
+	IMPLEMENT_CLASS(UStopConditionsChecker, 1687031869);
 	template<> RODENTVR_API UClass* StaticClass<UStopConditionsChecker>()
 	{
 		return UStopConditionsChecker::StaticClass();

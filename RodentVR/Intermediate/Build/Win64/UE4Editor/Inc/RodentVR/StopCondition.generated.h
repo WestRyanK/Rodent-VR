@@ -1,4 +1,4 @@
-// Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
+// Copyright Epic Games, Inc. All Rights Reserved.
 /*===========================================================================
 	Generated code exported from UnrealHeaderTool.
 	DO NOT modify this manually! Edit the corresponding .h files instead!
@@ -13,26 +13,15 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define RODENTVR_StopCondition_generated_h
 
+#define RodentVR_Source_RodentVR_Private_StopConditions_StopCondition_h_16_SPARSE_DATA
 #define RodentVR_Source_RodentVR_Private_StopConditions_StopCondition_h_16_RPC_WRAPPERS \
  \
-	DECLARE_FUNCTION(execGetConditionType) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(FString*)Z_Param__Result=P_THIS->GetConditionType(); \
-		P_NATIVE_END; \
-	}
+	DECLARE_FUNCTION(execGetConditionType);
 
 
 #define RodentVR_Source_RodentVR_Private_StopConditions_StopCondition_h_16_RPC_WRAPPERS_NO_PURE_DECLS \
  \
-	DECLARE_FUNCTION(execGetConditionType) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(FString*)Z_Param__Result=P_THIS->GetConditionType(); \
-		P_NATIVE_END; \
-	}
+	DECLARE_FUNCTION(execGetConditionType);
 
 
 #define RodentVR_Source_RodentVR_Private_StopConditions_StopCondition_h_16_INCLASS_NO_PURE_DECLS \
@@ -88,6 +77,7 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UStopCondition); \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
 	RodentVR_Source_RodentVR_Private_StopConditions_StopCondition_h_16_PRIVATE_PROPERTY_OFFSET \
+	RodentVR_Source_RodentVR_Private_StopConditions_StopCondition_h_16_SPARSE_DATA \
 	RodentVR_Source_RodentVR_Private_StopConditions_StopCondition_h_16_RPC_WRAPPERS \
 	RodentVR_Source_RodentVR_Private_StopConditions_StopCondition_h_16_INCLASS \
 	RodentVR_Source_RodentVR_Private_StopConditions_StopCondition_h_16_STANDARD_CONSTRUCTORS \
@@ -99,6 +89,7 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
 	RodentVR_Source_RodentVR_Private_StopConditions_StopCondition_h_16_PRIVATE_PROPERTY_OFFSET \
+	RodentVR_Source_RodentVR_Private_StopConditions_StopCondition_h_16_SPARSE_DATA \
 	RodentVR_Source_RodentVR_Private_StopConditions_StopCondition_h_16_RPC_WRAPPERS_NO_PURE_DECLS \
 	RodentVR_Source_RodentVR_Private_StopConditions_StopCondition_h_16_INCLASS_NO_PURE_DECLS \
 	RodentVR_Source_RodentVR_Private_StopConditions_StopCondition_h_16_ENHANCED_CONSTRUCTORS \

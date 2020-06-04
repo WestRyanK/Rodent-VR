@@ -1,4 +1,4 @@
-// Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
+// Copyright Epic Games, Inc. All Rights Reserved.
 /*===========================================================================
 	Generated code exported from UnrealHeaderTool.
 	DO NOT modify this manually! Edit the corresponding .h files instead!
@@ -13,162 +13,31 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define RODENTVR_Device_generated_h
 
+#define RodentVR_Source_RodentVR_Private_Settings_Device_h_15_SPARSE_DATA
 #define RodentVR_Source_RodentVR_Private_Settings_Device_h_15_RPC_WRAPPERS \
  \
-	DECLARE_FUNCTION(execGetDevicePath) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(FString*)Z_Param__Result=P_THIS->GetDevicePath(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execSetDeviceLine) \
-	{ \
-		P_GET_PROPERTY(UStrProperty,Z_Param_DeviceLineValue); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->SetDeviceLine(Z_Param_DeviceLineValue); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execGetDeviceLine) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(FString*)Z_Param__Result=P_THIS->GetDeviceLine(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execSetDevicePort) \
-	{ \
-		P_GET_PROPERTY(UStrProperty,Z_Param_DevicePortValue); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->SetDevicePort(Z_Param_DevicePortValue); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execGetDevicePort) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(FString*)Z_Param__Result=P_THIS->GetDevicePort(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execSetDeviceName) \
-	{ \
-		P_GET_PROPERTY(UStrProperty,Z_Param_DeviceNameValue); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->SetDeviceName(Z_Param_DeviceNameValue); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execGetDeviceName) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(FString*)Z_Param__Result=P_THIS->GetDeviceName(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execSetDeviceId) \
-	{ \
-		P_GET_PROPERTY(UStrProperty,Z_Param_DeviceIdValue); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->SetDeviceId(Z_Param_DeviceIdValue); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execGetDeviceId) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(FString*)Z_Param__Result=P_THIS->GetDeviceId(); \
-		P_NATIVE_END; \
-	}
+	DECLARE_FUNCTION(execGetDevicePath); \
+	DECLARE_FUNCTION(execSetDeviceLine); \
+	DECLARE_FUNCTION(execGetDeviceLine); \
+	DECLARE_FUNCTION(execSetDevicePort); \
+	DECLARE_FUNCTION(execGetDevicePort); \
+	DECLARE_FUNCTION(execSetDeviceName); \
+	DECLARE_FUNCTION(execGetDeviceName); \
+	DECLARE_FUNCTION(execSetDeviceId); \
+	DECLARE_FUNCTION(execGetDeviceId);
 
 
 #define RodentVR_Source_RodentVR_Private_Settings_Device_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
  \
-	DECLARE_FUNCTION(execGetDevicePath) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(FString*)Z_Param__Result=P_THIS->GetDevicePath(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execSetDeviceLine) \
-	{ \
-		P_GET_PROPERTY(UStrProperty,Z_Param_DeviceLineValue); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->SetDeviceLine(Z_Param_DeviceLineValue); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execGetDeviceLine) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(FString*)Z_Param__Result=P_THIS->GetDeviceLine(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execSetDevicePort) \
-	{ \
-		P_GET_PROPERTY(UStrProperty,Z_Param_DevicePortValue); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->SetDevicePort(Z_Param_DevicePortValue); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execGetDevicePort) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(FString*)Z_Param__Result=P_THIS->GetDevicePort(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execSetDeviceName) \
-	{ \
-		P_GET_PROPERTY(UStrProperty,Z_Param_DeviceNameValue); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->SetDeviceName(Z_Param_DeviceNameValue); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execGetDeviceName) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(FString*)Z_Param__Result=P_THIS->GetDeviceName(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execSetDeviceId) \
-	{ \
-		P_GET_PROPERTY(UStrProperty,Z_Param_DeviceIdValue); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->SetDeviceId(Z_Param_DeviceIdValue); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execGetDeviceId) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(FString*)Z_Param__Result=P_THIS->GetDeviceId(); \
-		P_NATIVE_END; \
-	}
+	DECLARE_FUNCTION(execGetDevicePath); \
+	DECLARE_FUNCTION(execSetDeviceLine); \
+	DECLARE_FUNCTION(execGetDeviceLine); \
+	DECLARE_FUNCTION(execSetDevicePort); \
+	DECLARE_FUNCTION(execGetDevicePort); \
+	DECLARE_FUNCTION(execSetDeviceName); \
+	DECLARE_FUNCTION(execGetDeviceName); \
+	DECLARE_FUNCTION(execSetDeviceId); \
+	DECLARE_FUNCTION(execGetDeviceId);
 
 
 #define RodentVR_Source_RodentVR_Private_Settings_Device_h_15_INCLASS_NO_PURE_DECLS \
@@ -228,6 +97,7 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UDevice); \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
 	RodentVR_Source_RodentVR_Private_Settings_Device_h_15_PRIVATE_PROPERTY_OFFSET \
+	RodentVR_Source_RodentVR_Private_Settings_Device_h_15_SPARSE_DATA \
 	RodentVR_Source_RodentVR_Private_Settings_Device_h_15_RPC_WRAPPERS \
 	RodentVR_Source_RodentVR_Private_Settings_Device_h_15_INCLASS \
 	RodentVR_Source_RodentVR_Private_Settings_Device_h_15_STANDARD_CONSTRUCTORS \
@@ -239,6 +109,7 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
 	RodentVR_Source_RodentVR_Private_Settings_Device_h_15_PRIVATE_PROPERTY_OFFSET \
+	RodentVR_Source_RodentVR_Private_Settings_Device_h_15_SPARSE_DATA \
 	RodentVR_Source_RodentVR_Private_Settings_Device_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
 	RodentVR_Source_RodentVR_Private_Settings_Device_h_15_INCLASS_NO_PURE_DECLS \
 	RodentVR_Source_RodentVR_Private_Settings_Device_h_15_ENHANCED_CONSTRUCTORS \

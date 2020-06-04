@@ -86,7 +86,7 @@ public:
 		void RemoveRewardDevice(UDevice* RewardDeviceValue);
 	UFUNCTION(BlueprintCallable)
 		void ClearRewardDevices();
-	UFUNCTION(BlueprintGetter)
+	UFUNCTION(BlueprintGetter, BlueprintPure)
 		TArray<UMazeSettings*> GetMazePlaylist();
 	UFUNCTION(BlueprintCallable)
 		void AddMaze(UMazeSettings* MazeValue);
@@ -94,4 +94,6 @@ public:
 		void RemoveMaze(UMazeSettings* MazeValue);
 	UFUNCTION(BlueprintCallable)
 		void ClearMazes();
+	UFUNCTION(BlueprintCallable, BlueprintPure)
+		UMazeSettings* GetMazeFromPlaylistByFileName(FString MazeSettingsFileName);
 };

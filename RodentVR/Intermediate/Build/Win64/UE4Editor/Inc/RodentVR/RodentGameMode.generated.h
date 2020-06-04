@@ -1,4 +1,4 @@
-// Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
+// Copyright Epic Games, Inc. All Rights Reserved.
 /*===========================================================================
 	Generated code exported from UnrealHeaderTool.
 	DO NOT modify this manually! Edit the corresponding .h files instead!
@@ -27,74 +27,21 @@ static inline void FMazeLoadedDelegate_DelegateWrapper(const FMulticastScriptDel
 }
 
 
+#define RodentVR_Source_RodentVR_Private_RodentGameMode_h_23_SPARSE_DATA
 #define RodentVR_Source_RodentVR_Private_RodentGameMode_h_23_RPC_WRAPPERS \
  \
-	DECLARE_FUNCTION(execLoadNextMaze) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->LoadNextMaze(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execLoadSettings) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->LoadSettings(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execOnMazeFinished) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->OnMazeFinished(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execOnMazeLoaded) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->OnMazeLoaded(); \
-		P_NATIVE_END; \
-	}
+	DECLARE_FUNCTION(execLoadNextMaze); \
+	DECLARE_FUNCTION(execLoadSettings); \
+	DECLARE_FUNCTION(execOnMazeFinished); \
+	DECLARE_FUNCTION(execOnMazeLoaded);
 
 
 #define RodentVR_Source_RodentVR_Private_RodentGameMode_h_23_RPC_WRAPPERS_NO_PURE_DECLS \
  \
-	DECLARE_FUNCTION(execLoadNextMaze) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->LoadNextMaze(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execLoadSettings) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->LoadSettings(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execOnMazeFinished) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->OnMazeFinished(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execOnMazeLoaded) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->OnMazeLoaded(); \
-		P_NATIVE_END; \
-	}
+	DECLARE_FUNCTION(execLoadNextMaze); \
+	DECLARE_FUNCTION(execLoadSettings); \
+	DECLARE_FUNCTION(execOnMazeFinished); \
+	DECLARE_FUNCTION(execOnMazeLoaded);
 
 
 #define RodentVR_Source_RodentVR_Private_RodentGameMode_h_23_INCLASS_NO_PURE_DECLS \
@@ -102,7 +49,7 @@ private: \
 	static void StaticRegisterNativesARodentGameMode(); \
 	friend struct Z_Construct_UClass_ARodentGameMode_Statics; \
 public: \
-	DECLARE_CLASS(ARodentGameMode, AGameModeBase, COMPILED_IN_FLAGS(0 | CLASS_Transient), CASTCLASS_None, TEXT("/Script/RodentVR"), NO_API) \
+	DECLARE_CLASS(ARodentGameMode, AGameModeBase, COMPILED_IN_FLAGS(0 | CLASS_Transient | CLASS_Config), CASTCLASS_None, TEXT("/Script/RodentVR"), NO_API) \
 	DECLARE_SERIALIZER(ARodentGameMode)
 
 
@@ -111,7 +58,7 @@ private: \
 	static void StaticRegisterNativesARodentGameMode(); \
 	friend struct Z_Construct_UClass_ARodentGameMode_Statics; \
 public: \
-	DECLARE_CLASS(ARodentGameMode, AGameModeBase, COMPILED_IN_FLAGS(0 | CLASS_Transient), CASTCLASS_None, TEXT("/Script/RodentVR"), NO_API) \
+	DECLARE_CLASS(ARodentGameMode, AGameModeBase, COMPILED_IN_FLAGS(0 | CLASS_Transient | CLASS_Config), CASTCLASS_None, TEXT("/Script/RodentVR"), NO_API) \
 	DECLARE_SERIALIZER(ARodentGameMode)
 
 
@@ -148,6 +95,7 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(ARodentGameMode); \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
 	RodentVR_Source_RodentVR_Private_RodentGameMode_h_23_PRIVATE_PROPERTY_OFFSET \
+	RodentVR_Source_RodentVR_Private_RodentGameMode_h_23_SPARSE_DATA \
 	RodentVR_Source_RodentVR_Private_RodentGameMode_h_23_RPC_WRAPPERS \
 	RodentVR_Source_RodentVR_Private_RodentGameMode_h_23_INCLASS \
 	RodentVR_Source_RodentVR_Private_RodentGameMode_h_23_STANDARD_CONSTRUCTORS \
@@ -159,6 +107,7 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
 	RodentVR_Source_RodentVR_Private_RodentGameMode_h_23_PRIVATE_PROPERTY_OFFSET \
+	RodentVR_Source_RodentVR_Private_RodentGameMode_h_23_SPARSE_DATA \
 	RodentVR_Source_RodentVR_Private_RodentGameMode_h_23_RPC_WRAPPERS_NO_PURE_DECLS \
 	RodentVR_Source_RodentVR_Private_RodentGameMode_h_23_INCLASS_NO_PURE_DECLS \
 	RodentVR_Source_RodentVR_Private_RodentGameMode_h_23_ENHANCED_CONSTRUCTORS \

@@ -1,4 +1,4 @@
-// Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
+// Copyright Epic Games, Inc. All Rights Reserved.
 /*===========================================================================
 	Generated code exported from UnrealHeaderTool.
 	DO NOT modify this manually! Edit the corresponding .h files instead!
@@ -17,16 +17,23 @@ void EmptyLinkFunctionForGeneratedCodeMazeSettingsXmlWriter() {}
 	RODENTVR_API UClass* Z_Construct_UClass_UMazeSettingsXmlWriter();
 	COREUOBJECT_API UClass* Z_Construct_UClass_UObject();
 	UPackage* Z_Construct_UPackage__Script_RodentVR();
-	RODENTVR_API UFunction* Z_Construct_UFunction_UMazeSettingsXmlWriter_SaveMazeSettings();
 	RODENTVR_API UClass* Z_Construct_UClass_UMazeSettings_NoRegister();
 // End Cross Module References
+	DEFINE_FUNCTION(UMazeSettingsXmlWriter::execSaveMazeSettings)
+	{
+		P_GET_OBJECT(UMazeSettings,Z_Param_MazeSettings);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		UMazeSettingsXmlWriter::SaveMazeSettings(Z_Param_MazeSettings);
+		P_NATIVE_END;
+	}
 	void UMazeSettingsXmlWriter::StaticRegisterNativesUMazeSettingsXmlWriter()
 	{
 		UClass* Class = UMazeSettingsXmlWriter::StaticClass();
 		static const FNameNativePtrPair Funcs[] = {
 			{ "SaveMazeSettings", &UMazeSettingsXmlWriter::execSaveMazeSettings },
 		};
-		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, ARRAY_COUNT(Funcs));
+		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 	}
 	struct Z_Construct_UFunction_UMazeSettingsXmlWriter_SaveMazeSettings_Statics
 	{
@@ -50,7 +57,7 @@ void EmptyLinkFunctionForGeneratedCodeMazeSettingsXmlWriter() {}
 		{ "ModuleRelativePath", "Private/Settings/MazeSettingsXmlWriter.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UMazeSettingsXmlWriter_SaveMazeSettings_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UMazeSettingsXmlWriter, nullptr, "SaveMazeSettings", nullptr, nullptr, sizeof(MazeSettingsXmlWriter_eventSaveMazeSettings_Parms), Z_Construct_UFunction_UMazeSettingsXmlWriter_SaveMazeSettings_Statics::PropPointers, ARRAY_COUNT(Z_Construct_UFunction_UMazeSettingsXmlWriter_SaveMazeSettings_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04022401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UMazeSettingsXmlWriter_SaveMazeSettings_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_UMazeSettingsXmlWriter_SaveMazeSettings_Statics::Function_MetaDataParams)) };
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UMazeSettingsXmlWriter_SaveMazeSettings_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UMazeSettingsXmlWriter, nullptr, "SaveMazeSettings", nullptr, nullptr, sizeof(MazeSettingsXmlWriter_eventSaveMazeSettings_Parms), Z_Construct_UFunction_UMazeSettingsXmlWriter_SaveMazeSettings_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UMazeSettingsXmlWriter_SaveMazeSettings_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04022401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UMazeSettingsXmlWriter_SaveMazeSettings_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UMazeSettingsXmlWriter_SaveMazeSettings_Statics::Function_MetaDataParams)) };
 	UFunction* Z_Construct_UFunction_UMazeSettingsXmlWriter_SaveMazeSettings()
 	{
 		static UFunction* ReturnFunction = nullptr;
@@ -79,7 +86,7 @@ void EmptyLinkFunctionForGeneratedCodeMazeSettingsXmlWriter() {}
 		(UObject* (*)())Z_Construct_UPackage__Script_RodentVR,
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_UMazeSettingsXmlWriter_Statics::FuncInfo[] = {
-		{ &Z_Construct_UFunction_UMazeSettingsXmlWriter_SaveMazeSettings, "SaveMazeSettings" }, // 3108469148
+		{ &Z_Construct_UFunction_UMazeSettingsXmlWriter_SaveMazeSettings, "SaveMazeSettings" }, // 3510597225
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UMazeSettingsXmlWriter_Statics::Class_MetaDataParams[] = {
@@ -101,12 +108,12 @@ void EmptyLinkFunctionForGeneratedCodeMazeSettingsXmlWriter() {}
 		FuncInfo,
 		nullptr,
 		nullptr,
-		ARRAY_COUNT(DependentSingletons),
-		ARRAY_COUNT(FuncInfo),
+		UE_ARRAY_COUNT(DependentSingletons),
+		UE_ARRAY_COUNT(FuncInfo),
 		0,
 		0,
 		0x000000A0u,
-		METADATA_PARAMS(Z_Construct_UClass_UMazeSettingsXmlWriter_Statics::Class_MetaDataParams, ARRAY_COUNT(Z_Construct_UClass_UMazeSettingsXmlWriter_Statics::Class_MetaDataParams))
+		METADATA_PARAMS(Z_Construct_UClass_UMazeSettingsXmlWriter_Statics::Class_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UClass_UMazeSettingsXmlWriter_Statics::Class_MetaDataParams))
 	};
 	UClass* Z_Construct_UClass_UMazeSettingsXmlWriter()
 	{
@@ -117,7 +124,7 @@ void EmptyLinkFunctionForGeneratedCodeMazeSettingsXmlWriter() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UMazeSettingsXmlWriter, 2611342147);
+	IMPLEMENT_CLASS(UMazeSettingsXmlWriter, 4155906172);
 	template<> RODENTVR_API UClass* StaticClass<UMazeSettingsXmlWriter>()
 	{
 		return UMazeSettingsXmlWriter::StaticClass();

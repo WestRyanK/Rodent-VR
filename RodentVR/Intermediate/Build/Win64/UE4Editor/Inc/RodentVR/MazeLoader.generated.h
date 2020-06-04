@@ -1,4 +1,4 @@
-// Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
+// Copyright Epic Games, Inc. All Rights Reserved.
 /*===========================================================================
 	Generated code exported from UnrealHeaderTool.
 	DO NOT modify this manually! Edit the corresponding .h files instead!
@@ -15,30 +15,15 @@ class UStopConditionsChecker;
 #endif
 #define RODENTVR_MazeLoader_generated_h
 
+#define RodentVR_Source_RodentVR_Private_Settings_MazeLoader_h_18_SPARSE_DATA
 #define RodentVR_Source_RodentVR_Private_Settings_MazeLoader_h_18_RPC_WRAPPERS \
  \
-	DECLARE_FUNCTION(execLoadMaze) \
-	{ \
-		P_GET_OBJECT(UObject,Z_Param_WorldContextObject); \
-		P_GET_PROPERTY(UStrProperty,Z_Param_MazePath); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(UStopConditionsChecker**)Z_Param__Result=UMazeLoader::LoadMaze(Z_Param_WorldContextObject,Z_Param_MazePath); \
-		P_NATIVE_END; \
-	}
+	DECLARE_FUNCTION(execLoadMaze);
 
 
 #define RodentVR_Source_RodentVR_Private_Settings_MazeLoader_h_18_RPC_WRAPPERS_NO_PURE_DECLS \
  \
-	DECLARE_FUNCTION(execLoadMaze) \
-	{ \
-		P_GET_OBJECT(UObject,Z_Param_WorldContextObject); \
-		P_GET_PROPERTY(UStrProperty,Z_Param_MazePath); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(UStopConditionsChecker**)Z_Param__Result=UMazeLoader::LoadMaze(Z_Param_WorldContextObject,Z_Param_MazePath); \
-		P_NATIVE_END; \
-	}
+	DECLARE_FUNCTION(execLoadMaze);
 
 
 #define RodentVR_Source_RodentVR_Private_Settings_MazeLoader_h_18_INCLASS_NO_PURE_DECLS \
@@ -91,6 +76,7 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UMazeLoader); \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
 	RodentVR_Source_RodentVR_Private_Settings_MazeLoader_h_18_PRIVATE_PROPERTY_OFFSET \
+	RodentVR_Source_RodentVR_Private_Settings_MazeLoader_h_18_SPARSE_DATA \
 	RodentVR_Source_RodentVR_Private_Settings_MazeLoader_h_18_RPC_WRAPPERS \
 	RodentVR_Source_RodentVR_Private_Settings_MazeLoader_h_18_INCLASS \
 	RodentVR_Source_RodentVR_Private_Settings_MazeLoader_h_18_STANDARD_CONSTRUCTORS \
@@ -102,6 +88,7 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
 	RodentVR_Source_RodentVR_Private_Settings_MazeLoader_h_18_PRIVATE_PROPERTY_OFFSET \
+	RodentVR_Source_RodentVR_Private_Settings_MazeLoader_h_18_SPARSE_DATA \
 	RodentVR_Source_RodentVR_Private_Settings_MazeLoader_h_18_RPC_WRAPPERS_NO_PURE_DECLS \
 	RodentVR_Source_RodentVR_Private_Settings_MazeLoader_h_18_INCLASS_NO_PURE_DECLS \
 	RodentVR_Source_RodentVR_Private_Settings_MazeLoader_h_18_ENHANCED_CONSTRUCTORS \

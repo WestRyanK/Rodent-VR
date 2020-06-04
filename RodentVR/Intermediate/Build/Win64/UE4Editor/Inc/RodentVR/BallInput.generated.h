@@ -1,4 +1,4 @@
-// Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
+// Copyright Epic Games, Inc. All Rights Reserved.
 /*===========================================================================
 	Generated code exported from UnrealHeaderTool.
 	DO NOT modify this manually! Edit the corresponding .h files instead!
@@ -13,74 +13,21 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define RODENTVR_BallInput_generated_h
 
+#define RodentVR_Source_RodentVR_Private_Hardware_BallInput_BallInput_h_16_SPARSE_DATA
 #define RodentVR_Source_RodentVR_Private_Hardware_BallInput_BallInput_h_16_RPC_WRAPPERS \
  \
-	DECLARE_FUNCTION(execStop) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		UBallInput::Stop(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execStart) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		UBallInput::Start(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execInitialize) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		UBallInput::Initialize(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execGetCurrentDeviceName) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(FString*)Z_Param__Result=UBallInput::GetCurrentDeviceName(); \
-		P_NATIVE_END; \
-	}
+	DECLARE_FUNCTION(execStop); \
+	DECLARE_FUNCTION(execStart); \
+	DECLARE_FUNCTION(execInitialize); \
+	DECLARE_FUNCTION(execGetCurrentDeviceName);
 
 
 #define RodentVR_Source_RodentVR_Private_Hardware_BallInput_BallInput_h_16_RPC_WRAPPERS_NO_PURE_DECLS \
  \
-	DECLARE_FUNCTION(execStop) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		UBallInput::Stop(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execStart) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		UBallInput::Start(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execInitialize) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		UBallInput::Initialize(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execGetCurrentDeviceName) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(FString*)Z_Param__Result=UBallInput::GetCurrentDeviceName(); \
-		P_NATIVE_END; \
-	}
+	DECLARE_FUNCTION(execStop); \
+	DECLARE_FUNCTION(execStart); \
+	DECLARE_FUNCTION(execInitialize); \
+	DECLARE_FUNCTION(execGetCurrentDeviceName);
 
 
 #define RodentVR_Source_RodentVR_Private_Hardware_BallInput_BallInput_h_16_INCLASS_NO_PURE_DECLS \
@@ -133,6 +80,7 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UBallInput); \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
 	RodentVR_Source_RodentVR_Private_Hardware_BallInput_BallInput_h_16_PRIVATE_PROPERTY_OFFSET \
+	RodentVR_Source_RodentVR_Private_Hardware_BallInput_BallInput_h_16_SPARSE_DATA \
 	RodentVR_Source_RodentVR_Private_Hardware_BallInput_BallInput_h_16_RPC_WRAPPERS \
 	RodentVR_Source_RodentVR_Private_Hardware_BallInput_BallInput_h_16_INCLASS \
 	RodentVR_Source_RodentVR_Private_Hardware_BallInput_BallInput_h_16_STANDARD_CONSTRUCTORS \
@@ -144,6 +92,7 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
 	RodentVR_Source_RodentVR_Private_Hardware_BallInput_BallInput_h_16_PRIVATE_PROPERTY_OFFSET \
+	RodentVR_Source_RodentVR_Private_Hardware_BallInput_BallInput_h_16_SPARSE_DATA \
 	RodentVR_Source_RodentVR_Private_Hardware_BallInput_BallInput_h_16_RPC_WRAPPERS_NO_PURE_DECLS \
 	RodentVR_Source_RodentVR_Private_Hardware_BallInput_BallInput_h_16_INCLASS_NO_PURE_DECLS \
 	RodentVR_Source_RodentVR_Private_Hardware_BallInput_BallInput_h_16_ENHANCED_CONSTRUCTORS \

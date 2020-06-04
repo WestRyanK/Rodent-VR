@@ -1,0 +1,14 @@
+{
+	"Targets": [
+		{
+			"Name": "RodentVR",
+			"Path": "C:\\Users\\Ryan\\Drive\\BYU\\2018_Fall\\cs_497r\\Rodent-VR\\RodentVR\\Source\\RodentVR.Target.cs",
+			"Type": "Game"
+		},
+		{
+			"Name": "RodentVREditor",
+			"Path": "C:\\Users\\Ryan\\Drive\\BYU\\2018_Fall\\cs_497r\\Rodent-VR\\RodentVR\\Source\\RodentVREditor.Target.cs",
+			"Type": "Editor"
+		}
+	]
+}

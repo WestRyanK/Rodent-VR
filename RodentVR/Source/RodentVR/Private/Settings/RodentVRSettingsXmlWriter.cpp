@@ -2,8 +2,9 @@
 
 
 #include "RodentVRSettingsXmlWriter.h"
+#include "MazeSettingsXmlWriter.h"
 
-void URodentVRSettingsXmlWriter::SaveRodentVRSettings(URodentVRSettings* Settings)
+void URodentVRSettingsXmlWriter::SaveRodentVRSettings(URodentVRSettings* Settings, bool SaveMazesInPlaylist)
 {
 	rapidxml::xml_document<>* Document = UXmlFileWriter::CreateDocument("Settings");
 	rapidxml::xml_node<>* Root = Document->first_node();
@@ -15,6 +16,14 @@ void URodentVRSettingsXmlWriter::SaveRodentVRSettings(URodentVRSettings* Setting
 
 
 	UXmlFileWriter::SaveFile(Document, TCHAR_TO_UTF8(*Settings->GetSettingsFileName()));
+
+	if (SaveMazesInPlaylist)
+	{
+		for (UMazeSettings* MazeSettings : Settings->GetMazePlaylist())
+		{
+			UMazeSettingsXmlWriter::SaveMazeSettings(MazeSettings);
+		}
+	}
 }
 
 void URodentVRSettingsXmlWriter::SaveBallInput(rapidxml::xml_document<>* Document, rapidxml::xml_node<>* Root, URodentVRSettings* Settings)

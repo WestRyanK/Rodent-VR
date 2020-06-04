@@ -1,4 +1,4 @@
-// Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
+// Copyright Epic Games, Inc. All Rights Reserved.
 /*===========================================================================
 	Generated code exported from UnrealHeaderTool.
 	DO NOT modify this manually! Edit the corresponding .h files instead!
@@ -14,132 +14,27 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define RODENTVR_EnterRegionStopCondition_generated_h
 
+#define RodentVR_Source_RodentVR_Private_StopConditions_EnterRegionStopCondition_h_17_SPARSE_DATA
 #define RodentVR_Source_RodentVR_Private_StopConditions_EnterRegionStopCondition_h_17_RPC_WRAPPERS \
  \
-	DECLARE_FUNCTION(execSetEnterRegionDelaySec) \
-	{ \
-		P_GET_PROPERTY(UFloatProperty,Z_Param_EnterRegionDelaySecValue); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->SetEnterRegionDelaySec(Z_Param_EnterRegionDelaySecValue); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execGetEnterRegionDelaySec) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(float*)Z_Param__Result=P_THIS->GetEnterRegionDelaySec(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execGetEnterRegionCounts) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(TMap<int32,int32>*)Z_Param__Result=P_THIS->GetEnterRegionCounts(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execAddRegionCount) \
-	{ \
-		P_GET_PROPERTY(UIntProperty,Z_Param_RegionId); \
-		P_GET_PROPERTY(UIntProperty,Z_Param_EnterRegionCount); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->AddRegionCount(Z_Param_RegionId,Z_Param_EnterRegionCount); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execRemoveRegionCount) \
-	{ \
-		P_GET_PROPERTY(UIntProperty,Z_Param_RegionId); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->RemoveRegionCount(Z_Param_RegionId); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execClearRegionCounts) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->ClearRegionCounts(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execOnRewardRegionEnter) \
-	{ \
-		P_GET_PROPERTY(UIntProperty,Z_Param_RegionEnteredId); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->OnRewardRegionEnter(Z_Param_RegionEnteredId); \
-		P_NATIVE_END; \
-	}
+	DECLARE_FUNCTION(execSetEnterRegionDelaySec); \
+	DECLARE_FUNCTION(execGetEnterRegionDelaySec); \
+	DECLARE_FUNCTION(execGetEnterRegionCounts); \
+	DECLARE_FUNCTION(execAddRegionCount); \
+	DECLARE_FUNCTION(execRemoveRegionCount); \
+	DECLARE_FUNCTION(execClearRegionCounts); \
+	DECLARE_FUNCTION(execOnRewardRegionEnter);
 
 
 #define RodentVR_Source_RodentVR_Private_StopConditions_EnterRegionStopCondition_h_17_RPC_WRAPPERS_NO_PURE_DECLS \
  \
-	DECLARE_FUNCTION(execSetEnterRegionDelaySec) \
-	{ \
-		P_GET_PROPERTY(UFloatProperty,Z_Param_EnterRegionDelaySecValue); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->SetEnterRegionDelaySec(Z_Param_EnterRegionDelaySecValue); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execGetEnterRegionDelaySec) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(float*)Z_Param__Result=P_THIS->GetEnterRegionDelaySec(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execGetEnterRegionCounts) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(TMap<int32,int32>*)Z_Param__Result=P_THIS->GetEnterRegionCounts(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execAddRegionCount) \
-	{ \
-		P_GET_PROPERTY(UIntProperty,Z_Param_RegionId); \
-		P_GET_PROPERTY(UIntProperty,Z_Param_EnterRegionCount); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->AddRegionCount(Z_Param_RegionId,Z_Param_EnterRegionCount); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execRemoveRegionCount) \
-	{ \
-		P_GET_PROPERTY(UIntProperty,Z_Param_RegionId); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->RemoveRegionCount(Z_Param_RegionId); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execClearRegionCounts) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->ClearRegionCounts(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execOnRewardRegionEnter) \
-	{ \
-		P_GET_PROPERTY(UIntProperty,Z_Param_RegionEnteredId); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->OnRewardRegionEnter(Z_Param_RegionEnteredId); \
-		P_NATIVE_END; \
-	}
+	DECLARE_FUNCTION(execSetEnterRegionDelaySec); \
+	DECLARE_FUNCTION(execGetEnterRegionDelaySec); \
+	DECLARE_FUNCTION(execGetEnterRegionCounts); \
+	DECLARE_FUNCTION(execAddRegionCount); \
+	DECLARE_FUNCTION(execRemoveRegionCount); \
+	DECLARE_FUNCTION(execClearRegionCounts); \
+	DECLARE_FUNCTION(execOnRewardRegionEnter);
 
 
 #define RodentVR_Source_RodentVR_Private_StopConditions_EnterRegionStopCondition_h_17_INCLASS_NO_PURE_DECLS \
@@ -195,6 +90,7 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UEnterRegionStopCondition); \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
 	RodentVR_Source_RodentVR_Private_StopConditions_EnterRegionStopCondition_h_17_PRIVATE_PROPERTY_OFFSET \
+	RodentVR_Source_RodentVR_Private_StopConditions_EnterRegionStopCondition_h_17_SPARSE_DATA \
 	RodentVR_Source_RodentVR_Private_StopConditions_EnterRegionStopCondition_h_17_RPC_WRAPPERS \
 	RodentVR_Source_RodentVR_Private_StopConditions_EnterRegionStopCondition_h_17_INCLASS \
 	RodentVR_Source_RodentVR_Private_StopConditions_EnterRegionStopCondition_h_17_STANDARD_CONSTRUCTORS \
@@ -206,6 +102,7 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
 	RodentVR_Source_RodentVR_Private_StopConditions_EnterRegionStopCondition_h_17_PRIVATE_PROPERTY_OFFSET \
+	RodentVR_Source_RodentVR_Private_StopConditions_EnterRegionStopCondition_h_17_SPARSE_DATA \
 	RodentVR_Source_RodentVR_Private_StopConditions_EnterRegionStopCondition_h_17_RPC_WRAPPERS_NO_PURE_DECLS \
 	RodentVR_Source_RodentVR_Private_StopConditions_EnterRegionStopCondition_h_17_INCLASS_NO_PURE_DECLS \
 	RodentVR_Source_RodentVR_Private_StopConditions_EnterRegionStopCondition_h_17_ENHANCED_CONSTRUCTORS \

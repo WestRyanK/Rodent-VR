@@ -6,7 +6,7 @@
 #include "XmlFileReader.h"
 #include "StopConditions/TimeLimitStopCondition.h"
 #include "StopConditions/EnterRegionStopCondition.h"
-#include "MazeObject.h"
+#include "MazeObjectSettings.h"
 #include <stdexcept>
 
 
@@ -101,17 +101,20 @@ void UMazeSettingsXmlReader::LoadMazeObjects(UMazeSettings* MazeSettings, rapidx
 		for (rapidxml::xml_node<>* MazeObjectNode = MazeObjectsNode->first_node(); MazeObjectNode; MazeObjectNode = MazeObjectNode->next_sibling())
 		{
 			FString MazeObjectTypeString = UXmlFileReader::GetStringFromAttribute(MazeObjectNode, "MazeObjectType", "");
-			MazeObjectType MazeObjectType = AMazeObject::GetTypeFromString(MazeObjectTypeString);
+			MazeObjectType MazeObjectType = UMazeObjectSettings::GetTypeFromString(MazeObjectTypeString);
 			FVector MazeObjectLocation = UXmlFileReader::GetVectorFromNode(MazeObjectNode->first_node("Position"));
 			FRotator MazeObjectRotation = UXmlFileReader::GetRotatorFromNode(MazeObjectNode->first_node("Rotation"));
+			FVector MazeObjectScale = UXmlFileReader::GetVectorFromNode(MazeObjectNode->first_node("Scale"));
 			FString TextureFileName = UXmlFileReader::GetStringFromAttribute(MazeObjectNode, "TextureName", "");
 			bool CanCollide = UXmlFileReader::GetBoolFromAttribute(MazeObjectNode, "CanCollide", false);
 
-			AMazeObject* MazeObject = NewObject<AMazeObject>();
+			UMazeObjectSettings* MazeObject = NewObject<UMazeObjectSettings>();
 			MazeObject->SetObjectType(MazeObjectType);
-			MazeObject->SetActorLocationAndRotation(MazeObjectLocation, MazeObjectRotation);
+			MazeObject->SetPosition(MazeObjectLocation);
+			MazeObject->SetRotation(MazeObjectRotation);
+			MazeObject->SetScale(MazeObjectScale);
 			MazeObject->SetTextureFileName(TextureFileName);
-			MazeObject->SetActorEnableCollision(CanCollide);
+			MazeObject->SetCanCollide(CanCollide);
 
 			MazeSettings->AddMazeObject(MazeObject);
 		}

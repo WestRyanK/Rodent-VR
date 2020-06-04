@@ -1,4 +1,4 @@
-// Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
+// Copyright Epic Games, Inc. All Rights Reserved.
 /*===========================================================================
 	Generated code exported from UnrealHeaderTool.
 	DO NOT modify this manually! Edit the corresponding .h files instead!
@@ -26,28 +26,15 @@ static inline void FRewardRegionEnterDelegate_DelegateWrapper(const FMulticastSc
 }
 
 
+#define RodentVR_Source_RodentVR_Private_RewardRegion_h_15_SPARSE_DATA
 #define RodentVR_Source_RodentVR_Private_RewardRegion_h_15_RPC_WRAPPERS \
  \
-	DECLARE_FUNCTION(execOnRewardRegionEnter) \
-	{ \
-		P_GET_PROPERTY(UIntProperty,Z_Param_RegionEnteredId); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->OnRewardRegionEnter(Z_Param_RegionEnteredId); \
-		P_NATIVE_END; \
-	}
+	DECLARE_FUNCTION(execOnRewardRegionEnter);
 
 
 #define RodentVR_Source_RodentVR_Private_RewardRegion_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
  \
-	DECLARE_FUNCTION(execOnRewardRegionEnter) \
-	{ \
-		P_GET_PROPERTY(UIntProperty,Z_Param_RegionEnteredId); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->OnRewardRegionEnter(Z_Param_RegionEnteredId); \
-		P_NATIVE_END; \
-	}
+	DECLARE_FUNCTION(execOnRewardRegionEnter);
 
 
 #define RodentVR_Source_RodentVR_Private_RewardRegion_h_15_INCLASS_NO_PURE_DECLS \
@@ -55,7 +42,7 @@ private: \
 	static void StaticRegisterNativesARewardRegion(); \
 	friend struct Z_Construct_UClass_ARewardRegion_Statics; \
 public: \
-	DECLARE_CLASS(ARewardRegion, AActor, COMPILED_IN_FLAGS(0), CASTCLASS_None, TEXT("/Script/RodentVR"), NO_API) \
+	DECLARE_CLASS(ARewardRegion, AActor, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/RodentVR"), NO_API) \
 	DECLARE_SERIALIZER(ARewardRegion)
 
 
@@ -64,7 +51,7 @@ private: \
 	static void StaticRegisterNativesARewardRegion(); \
 	friend struct Z_Construct_UClass_ARewardRegion_Statics; \
 public: \
-	DECLARE_CLASS(ARewardRegion, AActor, COMPILED_IN_FLAGS(0), CASTCLASS_None, TEXT("/Script/RodentVR"), NO_API) \
+	DECLARE_CLASS(ARewardRegion, AActor, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/RodentVR"), NO_API) \
 	DECLARE_SERIALIZER(ARewardRegion)
 
 
@@ -98,6 +85,7 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(ARewardRegion); \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
 	RodentVR_Source_RodentVR_Private_RewardRegion_h_15_PRIVATE_PROPERTY_OFFSET \
+	RodentVR_Source_RodentVR_Private_RewardRegion_h_15_SPARSE_DATA \
 	RodentVR_Source_RodentVR_Private_RewardRegion_h_15_RPC_WRAPPERS \
 	RodentVR_Source_RodentVR_Private_RewardRegion_h_15_INCLASS \
 	RodentVR_Source_RodentVR_Private_RewardRegion_h_15_STANDARD_CONSTRUCTORS \
@@ -109,6 +97,7 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
 	RodentVR_Source_RodentVR_Private_RewardRegion_h_15_PRIVATE_PROPERTY_OFFSET \
+	RodentVR_Source_RodentVR_Private_RewardRegion_h_15_SPARSE_DATA \
 	RodentVR_Source_RodentVR_Private_RewardRegion_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
 	RodentVR_Source_RodentVR_Private_RewardRegion_h_15_INCLASS_NO_PURE_DECLS \
 	RodentVR_Source_RodentVR_Private_RewardRegion_h_15_ENHANCED_CONSTRUCTORS \

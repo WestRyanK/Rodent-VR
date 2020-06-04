@@ -1,4 +1,4 @@
-// Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
+// Copyright Epic Games, Inc. All Rights Reserved.
 /*===========================================================================
 	Generated code exported from UnrealHeaderTool.
 	DO NOT modify this manually! Edit the corresponding .h files instead!
@@ -15,30 +15,15 @@ class ARodentGameMode;
 #endif
 #define RODENTVR_SettingsLoader_generated_h
 
+#define RodentVR_Source_RodentVR_Private_Settings_SettingsLoader_h_17_SPARSE_DATA
 #define RodentVR_Source_RodentVR_Private_Settings_SettingsLoader_h_17_RPC_WRAPPERS \
  \
-	DECLARE_FUNCTION(execLoadSettings) \
-	{ \
-		P_GET_OBJECT(UObject,Z_Param_WorldContextObject); \
-		P_GET_OBJECT(ARodentGameMode,Z_Param_InRodentGameMode); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		USettingsLoader::LoadSettings(Z_Param_WorldContextObject,Z_Param_InRodentGameMode); \
-		P_NATIVE_END; \
-	}
+	DECLARE_FUNCTION(execLoadSettings);
 
 
 #define RodentVR_Source_RodentVR_Private_Settings_SettingsLoader_h_17_RPC_WRAPPERS_NO_PURE_DECLS \
  \
-	DECLARE_FUNCTION(execLoadSettings) \
-	{ \
-		P_GET_OBJECT(UObject,Z_Param_WorldContextObject); \
-		P_GET_OBJECT(ARodentGameMode,Z_Param_InRodentGameMode); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		USettingsLoader::LoadSettings(Z_Param_WorldContextObject,Z_Param_InRodentGameMode); \
-		P_NATIVE_END; \
-	}
+	DECLARE_FUNCTION(execLoadSettings);
 
 
 #define RodentVR_Source_RodentVR_Private_Settings_SettingsLoader_h_17_INCLASS_NO_PURE_DECLS \
@@ -91,6 +76,7 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(USettingsLoader); \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
 	RodentVR_Source_RodentVR_Private_Settings_SettingsLoader_h_17_PRIVATE_PROPERTY_OFFSET \
+	RodentVR_Source_RodentVR_Private_Settings_SettingsLoader_h_17_SPARSE_DATA \
 	RodentVR_Source_RodentVR_Private_Settings_SettingsLoader_h_17_RPC_WRAPPERS \
 	RodentVR_Source_RodentVR_Private_Settings_SettingsLoader_h_17_INCLASS \
 	RodentVR_Source_RodentVR_Private_Settings_SettingsLoader_h_17_STANDARD_CONSTRUCTORS \
@@ -102,6 +88,7 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
 	RodentVR_Source_RodentVR_Private_Settings_SettingsLoader_h_17_PRIVATE_PROPERTY_OFFSET \
+	RodentVR_Source_RodentVR_Private_Settings_SettingsLoader_h_17_SPARSE_DATA \
 	RodentVR_Source_RodentVR_Private_Settings_SettingsLoader_h_17_RPC_WRAPPERS_NO_PURE_DECLS \
 	RodentVR_Source_RodentVR_Private_Settings_SettingsLoader_h_17_INCLASS_NO_PURE_DECLS \
 	RodentVR_Source_RodentVR_Private_Settings_SettingsLoader_h_17_ENHANCED_CONSTRUCTORS \

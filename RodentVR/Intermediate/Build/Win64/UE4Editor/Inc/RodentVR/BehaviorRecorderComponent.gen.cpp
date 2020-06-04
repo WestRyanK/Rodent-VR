@@ -1,4 +1,4 @@
-// Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
+// Copyright Epic Games, Inc. All Rights Reserved.
 /*===========================================================================
 	Generated code exported from UnrealHeaderTool.
 	DO NOT modify this manually! Edit the corresponding .h files instead!
@@ -17,11 +17,37 @@ void EmptyLinkFunctionForGeneratedCodeBehaviorRecorderComponent() {}
 	RODENTVR_API UClass* Z_Construct_UClass_UBehaviorRecorderComponent();
 	ENGINE_API UClass* Z_Construct_UClass_UActorComponent();
 	UPackage* Z_Construct_UPackage__Script_RodentVR();
-	RODENTVR_API UFunction* Z_Construct_UFunction_UBehaviorRecorderComponent_OnMazeFinished();
-	RODENTVR_API UFunction* Z_Construct_UFunction_UBehaviorRecorderComponent_OnMazeLoaded();
-	RODENTVR_API UFunction* Z_Construct_UFunction_UBehaviorRecorderComponent_OnRewardRegionEnter();
-	RODENTVR_API UFunction* Z_Construct_UFunction_UBehaviorRecorderComponent_Save();
 // End Cross Module References
+	DEFINE_FUNCTION(UBehaviorRecorderComponent::execOnMazeFinished)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->OnMazeFinished();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UBehaviorRecorderComponent::execOnMazeLoaded)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->OnMazeLoaded();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UBehaviorRecorderComponent::execOnRewardRegionEnter)
+	{
+		P_GET_PROPERTY(FIntProperty,Z_Param_RegionEnteredId);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->OnRewardRegionEnter(Z_Param_RegionEnteredId);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UBehaviorRecorderComponent::execSave)
+	{
+		P_GET_PROPERTY(FStrProperty,Z_Param_Filename);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->Save(Z_Param_Filename);
+		P_NATIVE_END;
+	}
 	void UBehaviorRecorderComponent::StaticRegisterNativesUBehaviorRecorderComponent()
 	{
 		UClass* Class = UBehaviorRecorderComponent::StaticClass();
@@ -31,7 +57,7 @@ void EmptyLinkFunctionForGeneratedCodeBehaviorRecorderComponent() {}
 			{ "OnRewardRegionEnter", &UBehaviorRecorderComponent::execOnRewardRegionEnter },
 			{ "Save", &UBehaviorRecorderComponent::execSave },
 		};
-		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, ARRAY_COUNT(Funcs));
+		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 	}
 	struct Z_Construct_UFunction_UBehaviorRecorderComponent_OnMazeFinished_Statics
 	{
@@ -45,7 +71,7 @@ void EmptyLinkFunctionForGeneratedCodeBehaviorRecorderComponent() {}
 		{ "ModuleRelativePath", "Private/BehaviorRecording/BehaviorRecorderComponent.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UBehaviorRecorderComponent_OnMazeFinished_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UBehaviorRecorderComponent, nullptr, "OnMazeFinished", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00040401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UBehaviorRecorderComponent_OnMazeFinished_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_UBehaviorRecorderComponent_OnMazeFinished_Statics::Function_MetaDataParams)) };
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UBehaviorRecorderComponent_OnMazeFinished_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UBehaviorRecorderComponent, nullptr, "OnMazeFinished", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00040401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UBehaviorRecorderComponent_OnMazeFinished_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UBehaviorRecorderComponent_OnMazeFinished_Statics::Function_MetaDataParams)) };
 	UFunction* Z_Construct_UFunction_UBehaviorRecorderComponent_OnMazeFinished()
 	{
 		static UFunction* ReturnFunction = nullptr;
@@ -67,7 +93,7 @@ void EmptyLinkFunctionForGeneratedCodeBehaviorRecorderComponent() {}
 		{ "ModuleRelativePath", "Private/BehaviorRecording/BehaviorRecorderComponent.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UBehaviorRecorderComponent_OnMazeLoaded_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UBehaviorRecorderComponent, nullptr, "OnMazeLoaded", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00040401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UBehaviorRecorderComponent_OnMazeLoaded_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_UBehaviorRecorderComponent_OnMazeLoaded_Statics::Function_MetaDataParams)) };
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UBehaviorRecorderComponent_OnMazeLoaded_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UBehaviorRecorderComponent, nullptr, "OnMazeLoaded", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00040401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UBehaviorRecorderComponent_OnMazeLoaded_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UBehaviorRecorderComponent_OnMazeLoaded_Statics::Function_MetaDataParams)) };
 	UFunction* Z_Construct_UFunction_UBehaviorRecorderComponent_OnMazeLoaded()
 	{
 		static UFunction* ReturnFunction = nullptr;
@@ -99,7 +125,7 @@ void EmptyLinkFunctionForGeneratedCodeBehaviorRecorderComponent() {}
 		{ "ModuleRelativePath", "Private/BehaviorRecording/BehaviorRecorderComponent.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UBehaviorRecorderComponent_OnRewardRegionEnter_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UBehaviorRecorderComponent, nullptr, "OnRewardRegionEnter", nullptr, nullptr, sizeof(BehaviorRecorderComponent_eventOnRewardRegionEnter_Parms), Z_Construct_UFunction_UBehaviorRecorderComponent_OnRewardRegionEnter_Statics::PropPointers, ARRAY_COUNT(Z_Construct_UFunction_UBehaviorRecorderComponent_OnRewardRegionEnter_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00040401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UBehaviorRecorderComponent_OnRewardRegionEnter_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_UBehaviorRecorderComponent_OnRewardRegionEnter_Statics::Function_MetaDataParams)) };
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UBehaviorRecorderComponent_OnRewardRegionEnter_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UBehaviorRecorderComponent, nullptr, "OnRewardRegionEnter", nullptr, nullptr, sizeof(BehaviorRecorderComponent_eventOnRewardRegionEnter_Parms), Z_Construct_UFunction_UBehaviorRecorderComponent_OnRewardRegionEnter_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UBehaviorRecorderComponent_OnRewardRegionEnter_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00040401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UBehaviorRecorderComponent_OnRewardRegionEnter_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UBehaviorRecorderComponent_OnRewardRegionEnter_Statics::Function_MetaDataParams)) };
 	UFunction* Z_Construct_UFunction_UBehaviorRecorderComponent_OnRewardRegionEnter()
 	{
 		static UFunction* ReturnFunction = nullptr;
@@ -131,7 +157,7 @@ void EmptyLinkFunctionForGeneratedCodeBehaviorRecorderComponent() {}
 		{ "ModuleRelativePath", "Private/BehaviorRecording/BehaviorRecorderComponent.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UBehaviorRecorderComponent_Save_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UBehaviorRecorderComponent, nullptr, "Save", nullptr, nullptr, sizeof(BehaviorRecorderComponent_eventSave_Parms), Z_Construct_UFunction_UBehaviorRecorderComponent_Save_Statics::PropPointers, ARRAY_COUNT(Z_Construct_UFunction_UBehaviorRecorderComponent_Save_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UBehaviorRecorderComponent_Save_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_UBehaviorRecorderComponent_Save_Statics::Function_MetaDataParams)) };
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UBehaviorRecorderComponent_Save_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UBehaviorRecorderComponent, nullptr, "Save", nullptr, nullptr, sizeof(BehaviorRecorderComponent_eventSave_Parms), Z_Construct_UFunction_UBehaviorRecorderComponent_Save_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UBehaviorRecorderComponent_Save_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UBehaviorRecorderComponent_Save_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UBehaviorRecorderComponent_Save_Statics::Function_MetaDataParams)) };
 	UFunction* Z_Construct_UFunction_UBehaviorRecorderComponent_Save()
 	{
 		static UFunction* ReturnFunction = nullptr;
@@ -160,10 +186,10 @@ void EmptyLinkFunctionForGeneratedCodeBehaviorRecorderComponent() {}
 		(UObject* (*)())Z_Construct_UPackage__Script_RodentVR,
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_UBehaviorRecorderComponent_Statics::FuncInfo[] = {
-		{ &Z_Construct_UFunction_UBehaviorRecorderComponent_OnMazeFinished, "OnMazeFinished" }, // 3199429141
-		{ &Z_Construct_UFunction_UBehaviorRecorderComponent_OnMazeLoaded, "OnMazeLoaded" }, // 991673537
-		{ &Z_Construct_UFunction_UBehaviorRecorderComponent_OnRewardRegionEnter, "OnRewardRegionEnter" }, // 1450809448
-		{ &Z_Construct_UFunction_UBehaviorRecorderComponent_Save, "Save" }, // 317798542
+		{ &Z_Construct_UFunction_UBehaviorRecorderComponent_OnMazeFinished, "OnMazeFinished" }, // 330781596
+		{ &Z_Construct_UFunction_UBehaviorRecorderComponent_OnMazeLoaded, "OnMazeLoaded" }, // 4205082645
+		{ &Z_Construct_UFunction_UBehaviorRecorderComponent_OnRewardRegionEnter, "OnRewardRegionEnter" }, // 3525210742
+		{ &Z_Construct_UFunction_UBehaviorRecorderComponent_Save, "Save" }, // 131145810
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UBehaviorRecorderComponent_Statics::Class_MetaDataParams[] = {
@@ -184,12 +210,12 @@ void EmptyLinkFunctionForGeneratedCodeBehaviorRecorderComponent() {}
 		FuncInfo,
 		nullptr,
 		nullptr,
-		ARRAY_COUNT(DependentSingletons),
-		ARRAY_COUNT(FuncInfo),
+		UE_ARRAY_COUNT(DependentSingletons),
+		UE_ARRAY_COUNT(FuncInfo),
 		0,
 		0,
 		0x00A000A4u,
-		METADATA_PARAMS(Z_Construct_UClass_UBehaviorRecorderComponent_Statics::Class_MetaDataParams, ARRAY_COUNT(Z_Construct_UClass_UBehaviorRecorderComponent_Statics::Class_MetaDataParams))
+		METADATA_PARAMS(Z_Construct_UClass_UBehaviorRecorderComponent_Statics::Class_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UClass_UBehaviorRecorderComponent_Statics::Class_MetaDataParams))
 	};
 	UClass* Z_Construct_UClass_UBehaviorRecorderComponent()
 	{
@@ -200,7 +226,7 @@ void EmptyLinkFunctionForGeneratedCodeBehaviorRecorderComponent() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UBehaviorRecorderComponent, 795056203);
+	IMPLEMENT_CLASS(UBehaviorRecorderComponent, 4078504732);
 	template<> RODENTVR_API UClass* StaticClass<UBehaviorRecorderComponent>()
 	{
 		return UBehaviorRecorderComponent::StaticClass();

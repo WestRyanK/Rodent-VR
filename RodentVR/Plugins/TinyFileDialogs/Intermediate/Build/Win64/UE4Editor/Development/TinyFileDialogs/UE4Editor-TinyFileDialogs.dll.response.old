@@ -6,7 +6,7 @@
 /SUBSYSTEM:WINDOWS
 /FIXED:No
 /NXCOMPAT
-/STACK:12000000
+/STACK:5000000
 /DELAY:UNLOAD
 /DLL
 /PDBALTPATH:%_PDB%
@@ -17,10 +17,9 @@
 /ignore:4099
 /DELAYLOAD:"d3d12.dll"
 /DELAYLOAD:"DBGHELP.DLL"
-/LIBPATH:"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\lib\x64"
-/LIBPATH:"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.2\lib\um\x64"
-/LIBPATH:"C:\Program Files (x86)\Windows Kits\10\lib\10.0.16299.0\ucrt\x64"
-/LIBPATH:"C:\Program Files (x86)\Windows Kits\10\lib\10.0.16299.0\um\x64"
+/LIBPATH:"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\lib\x64"
+/LIBPATH:"C:\Program Files (x86)\Windows Kits\10\lib\10.0.18362.0\ucrt\x64"
+/LIBPATH:"C:\Program Files (x86)\Windows Kits\10\lib\10.0.18362.0\um\x64"
 /NODEFAULTLIB:"LIBCMT"
 /NODEFAULTLIB:"LIBCPMT"
 /NODEFAULTLIB:"LIBCMTD"
@@ -32,10 +31,10 @@
 /NODEFAULTLIB:"LIBCD"
 /NODEFAULTLIB:"LIBCPD"
 /FUNCTIONPADMIN
-"Z:\Unreal Engine Repository\4.24\Engine\Intermediate\Build\Win64\UE4Editor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.obj"
-"U:\UnrealProjects\Blank424\Plugins\TinyFileDialogs\Intermediate\Build\Win64\UE4Editor\Development\TinyFileDialogs\Module.TinyFileDialogs.cpp.obj"
-"U:\UnrealProjects\Blank424\Plugins\TinyFileDialogs\Intermediate\Build\Win64\UE4Editor\Development\TinyFileDialogs\Module.TinyFileDialogs.gen.cpp.obj"
-"Z:\Unreal Engine Repository\4.24\Engine\Intermediate\Build\Win64\UE4Editor\Development\Default.rc2.res"
+"C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVREditor\Development\Engine\SharedPCH.Engine.h.obj"
+"C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Plugins\TinyFileDialogs\Intermediate\Build\Win64\UE4Editor\Development\TinyFileDialogs\Module.TinyFileDialogs.cpp.obj"
+"C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Plugins\TinyFileDialogs\Intermediate\Build\Win64\UE4Editor\Development\TinyFileDialogs\Module.TinyFileDialogs.gen.cpp.obj"
+"C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Plugins\TinyFileDialogs\Intermediate\Build\Win64\UE4Editor\Development\TinyFileDialogs\Default.rc2.res"
 "delayimp.lib"
 "wininet.lib"
 "rpcrt4.lib"
@@ -60,13 +59,13 @@
 "setupapi.lib"
 "dwmapi.lib"
 "imm32.lib"
-"U:\UnrealProjects\Blank424\Plugins\TinyFileDialogs\Source\ThirdParty\TinyFileDialogsLibrary\TinyFileDialogs\lib\tinyfiledialogs.x64.lib"
-"Z:\Unreal Engine Repository\4.24\Engine\Intermediate\Build\Win64\UE4Editor\Development\Core\UE4Editor-Core.lib"
-"Z:\Unreal Engine Repository\4.24\Engine\Intermediate\Build\Win64\UE4Editor\Development\CoreUObject\UE4Editor-CoreUObject.lib"
-"Z:\Unreal Engine Repository\4.24\Engine\Intermediate\Build\Win64\UE4Editor\Development\Engine\UE4Editor-Engine.lib"
-"Z:\Unreal Engine Repository\4.24\Engine\Intermediate\Build\Win64\UE4Editor\Development\Projects\UE4Editor-Projects.lib"
-/OUT:"U:\UnrealProjects\Blank424\Plugins\TinyFileDialogs\Binaries\Win64\UE4Editor-TinyFileDialogs.dll"
-/IMPLIB:"U:\UnrealProjects\Blank424\Plugins\TinyFileDialogs\Intermediate\Build\Win64\UE4Editor\Development\TinyFileDialogs\UE4Editor-TinyFileDialogs.suppressed.lib"
-/PDB:"U:\UnrealProjects\Blank424\Plugins\TinyFileDialogs\Binaries\Win64\UE4Editor-TinyFileDialogs.pdb"
+"C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Plugins\TinyFileDialogs\Source\ThirdParty\TinyFileDialogsLibrary\TinyFileDialogs\lib\tinyfiledialogs.x64.lib"
+"C:\Program Files\Epic Games\UE_4.23\Engine\Intermediate\Build\Win64\UE4Editor\Development\Core\UE4Editor-Core.lib"
+"C:\Program Files\Epic Games\UE_4.23\Engine\Intermediate\Build\Win64\UE4Editor\Development\CoreUObject\UE4Editor-CoreUObject.lib"
+"C:\Program Files\Epic Games\UE_4.23\Engine\Intermediate\Build\Win64\UE4Editor\Development\Engine\UE4Editor-Engine.lib"
+"C:\Program Files\Epic Games\UE_4.23\Engine\Intermediate\Build\Win64\UE4Editor\Development\Projects\UE4Editor-Projects.lib"
+/OUT:"C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Plugins\TinyFileDialogs\Binaries\Win64\UE4Editor-TinyFileDialogs.dll"
+/IMPLIB:"C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Plugins\TinyFileDialogs\Intermediate\Build\Win64\UE4Editor\Development\TinyFileDialogs\UE4Editor-TinyFileDialogs.suppressed.lib"
+/PDB:"C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Plugins\TinyFileDialogs\Binaries\Win64\UE4Editor-TinyFileDialogs.pdb"
 /ignore:4078
 /INCLUDE:IMPLEMENT_MODULE_TinyFileDialogs

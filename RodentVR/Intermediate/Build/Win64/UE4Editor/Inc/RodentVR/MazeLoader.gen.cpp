@@ -1,4 +1,4 @@
-// Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
+// Copyright Epic Games, Inc. All Rights Reserved.
 /*===========================================================================
 	Generated code exported from UnrealHeaderTool.
 	DO NOT modify this manually! Edit the corresponding .h files instead!
@@ -17,17 +17,25 @@ void EmptyLinkFunctionForGeneratedCodeMazeLoader() {}
 	RODENTVR_API UClass* Z_Construct_UClass_UMazeLoader();
 	RODENTVR_API UClass* Z_Construct_UClass_UXmlFileReader();
 	UPackage* Z_Construct_UPackage__Script_RodentVR();
-	RODENTVR_API UFunction* Z_Construct_UFunction_UMazeLoader_LoadMaze();
 	RODENTVR_API UClass* Z_Construct_UClass_UStopConditionsChecker_NoRegister();
 	COREUOBJECT_API UClass* Z_Construct_UClass_UObject_NoRegister();
 // End Cross Module References
+	DEFINE_FUNCTION(UMazeLoader::execLoadMaze)
+	{
+		P_GET_OBJECT(UObject,Z_Param_WorldContextObject);
+		P_GET_PROPERTY(FStrProperty,Z_Param_MazePath);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(UStopConditionsChecker**)Z_Param__Result=UMazeLoader::LoadMaze(Z_Param_WorldContextObject,Z_Param_MazePath);
+		P_NATIVE_END;
+	}
 	void UMazeLoader::StaticRegisterNativesUMazeLoader()
 	{
 		UClass* Class = UMazeLoader::StaticClass();
 		static const FNameNativePtrPair Funcs[] = {
 			{ "LoadMaze", &UMazeLoader::execLoadMaze },
 		};
-		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, ARRAY_COUNT(Funcs));
+		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 	}
 	struct Z_Construct_UFunction_UMazeLoader_LoadMaze_Statics
 	{
@@ -61,7 +69,7 @@ void EmptyLinkFunctionForGeneratedCodeMazeLoader() {}
 		{ "ToolTip", "UFUNCTION(BlueprintCallable, Category=\"Loading\", meta = (WorldContext = WorldContextObject))" },
 	};
 #endif
-	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UMazeLoader_LoadMaze_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UMazeLoader, nullptr, "LoadMaze", nullptr, nullptr, sizeof(MazeLoader_eventLoadMaze_Parms), Z_Construct_UFunction_UMazeLoader_LoadMaze_Statics::PropPointers, ARRAY_COUNT(Z_Construct_UFunction_UMazeLoader_LoadMaze_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00022401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UMazeLoader_LoadMaze_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_UMazeLoader_LoadMaze_Statics::Function_MetaDataParams)) };
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UMazeLoader_LoadMaze_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UMazeLoader, nullptr, "LoadMaze", nullptr, nullptr, sizeof(MazeLoader_eventLoadMaze_Parms), Z_Construct_UFunction_UMazeLoader_LoadMaze_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UMazeLoader_LoadMaze_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00022401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UMazeLoader_LoadMaze_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UMazeLoader_LoadMaze_Statics::Function_MetaDataParams)) };
 	UFunction* Z_Construct_UFunction_UMazeLoader_LoadMaze()
 	{
 		static UFunction* ReturnFunction = nullptr;
@@ -90,7 +98,7 @@ void EmptyLinkFunctionForGeneratedCodeMazeLoader() {}
 		(UObject* (*)())Z_Construct_UPackage__Script_RodentVR,
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_UMazeLoader_Statics::FuncInfo[] = {
-		{ &Z_Construct_UFunction_UMazeLoader_LoadMaze, "LoadMaze" }, // 383314872
+		{ &Z_Construct_UFunction_UMazeLoader_LoadMaze, "LoadMaze" }, // 384016971
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UMazeLoader_Statics::Class_MetaDataParams[] = {
@@ -109,12 +117,12 @@ void EmptyLinkFunctionForGeneratedCodeMazeLoader() {}
 		FuncInfo,
 		nullptr,
 		nullptr,
-		ARRAY_COUNT(DependentSingletons),
-		ARRAY_COUNT(FuncInfo),
+		UE_ARRAY_COUNT(DependentSingletons),
+		UE_ARRAY_COUNT(FuncInfo),
 		0,
 		0,
 		0x000000A0u,
-		METADATA_PARAMS(Z_Construct_UClass_UMazeLoader_Statics::Class_MetaDataParams, ARRAY_COUNT(Z_Construct_UClass_UMazeLoader_Statics::Class_MetaDataParams))
+		METADATA_PARAMS(Z_Construct_UClass_UMazeLoader_Statics::Class_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UClass_UMazeLoader_Statics::Class_MetaDataParams))
 	};
 	UClass* Z_Construct_UClass_UMazeLoader()
 	{
@@ -125,7 +133,7 @@ void EmptyLinkFunctionForGeneratedCodeMazeLoader() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UMazeLoader, 3424137662);
+	IMPLEMENT_CLASS(UMazeLoader, 57608979);
 	template<> RODENTVR_API UClass* StaticClass<UMazeLoader>()
 	{
 		return UMazeLoader::StaticClass();
