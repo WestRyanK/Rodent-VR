@@ -1,57 +1,23 @@
-<Maze Name="Maze04">
-	<BehaviorRecording Filename="C:\Users\Ryan\Downloads\Test2.behavior" />
+<Maze Name="YMaze">
+	<BehaviorRecording Filename=""/>
 	<PlayerStart>
-		<Position X="0" Y="200" Z="0" />
-		<Rotation Angle="90" />
+		<Position X="0.000000" Y="200.000000" Z="0.000000"/>
+		<Rotation Angle="89.999954"/>
 	</PlayerStart>
-	<Textures>
-		<Texture SlotName="WallYPosition" TextureName="MaterialCheckerLarge" />
-		<Texture SlotName="WallXPosition" TextureName="MaterialCyan" />
-		<Texture SlotName="Pillar1" TextureName="MaterialCheckerLarge" />
-		<Texture SlotName="Hallway1" TextureName="MaterialDots1" /> 
-		<Texture SlotName="Hallway2" TextureName="MaterialGreen" /> 
-	</Materials> 
-	<Regions AreRegionsVisible="true">
-		<Region RegionId="0">
-			<Reward RewardDeviceId="" RewardDurationSec="" IsRewardDispensingEnabled="true" />
-			<Tone ToneDurationSec="0.5" TonePitchHz="200" ToneVolumeMultiplier="1.0" IsToneEnabled="true" />
-			<Position X="700" Y="-40" />
-			<Rotation Angle="45" />
-			<Scale X="32" Y="100"/>
-		</Region>
-		<Region RegionId="1" IsNosePoke="true">
-			<Reward RewardDeviceId="" RewardDurationSec="" IsRewardDispensingEnabled="true" />
-			<Tone ToneDurationSec="0.5" TonePitchHz="1000" ToneVolumeMultiplier="1.0" IsToneEnabled="true" />
-			<Position X="750" Y="100"/>
-			<Rotation Angle="90" />
-		</Region>
-	</Regions>
+	<Textures/>
+	<Regions AreRegionsVisible="false"/>
 	<MazeObjects>
-		<Object MazeObjectType="Cone" TextureName="MaterialGreen">
-			<Position X="0" Y="0" />
-		</Object>
-		<Object MazeObjectType="Sphere" TextureName="MaterialWhite" CanCollide="true">
-			<Position X="50" Y="-75" Z="50"/>
-			<Rotation Angle="45" />
-		</Object>
-		<Object MazeObjectType="Cylinder" TextureName="MaterialBlue" CanCollide="false">
-			<Position X="20" Y="-150" Z="20"/>
-			<Rotation AngleX="45" AngleY="10" AngleZ="90" />
-		</Object>
-		<Object MazeObjectType="Cube" TextureName="MaterialCheckerLarge" CanCollide="false">
-			<Position X="20" Y="-225" Z="100"/>
-			<Rotation Angle="45" />
-		</Object>
-		<Object MazeObjectType="Figurine" CanCollide="false">
-			<Position X="20" Y="-300" />
-			<Rotation Angle="45" />
-		</Object>
+		<MazeObject MazeObjectType="Cube" CanCollide="true">
+			<Position X="-324.373047" Y="-513.703125" Z="0.815765"/>
+			<Rotation AngleY="0.000000" AngleZ="0.000000" AngleX="0.000000"/>
+			<Scale X="1.000000" Y="1.000000" Z="1.000000"/>
+		</MazeObject>
+		<MazeObject MazeObjectType="Sphere" CanCollide="true">
+			<Position X="388.410187" Y="-84.728394" Z="-41.678329"/>
+			<Rotation AngleY="0.000000" AngleZ="0.000000" AngleX="0.000000"/>
+			<Scale X="1.000000" Y="1.000000" Z="1.000000"/>
+		</MazeObject>
 	</MazeObjects>
-	<StopConditions>
-		<Condition ConditionType="TimeLimit" TimeLimitSec="40" />
-		<Condition ConditionType="EnterRegion" EnterRegionDelaySec="0">
-			<Region RegionId="0" EnterRegionCount="4"/>
-			<Region RegionId="1" EnterRegionCount="1"/>
-		</Condition>
-	</StopConditions>
+	<MazeObjects/>
 </Maze>
+

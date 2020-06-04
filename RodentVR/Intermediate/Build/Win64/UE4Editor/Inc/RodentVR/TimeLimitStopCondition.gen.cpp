@@ -1,4 +1,4 @@
-// Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
+// Copyright Epic Games, Inc. All Rights Reserved.
 /*===========================================================================
 	Generated code exported from UnrealHeaderTool.
 	DO NOT modify this manually! Edit the corresponding .h files instead!
@@ -17,9 +17,22 @@ void EmptyLinkFunctionForGeneratedCodeTimeLimitStopCondition() {}
 	RODENTVR_API UClass* Z_Construct_UClass_UTimeLimitStopCondition();
 	RODENTVR_API UClass* Z_Construct_UClass_UStopCondition();
 	UPackage* Z_Construct_UPackage__Script_RodentVR();
-	RODENTVR_API UFunction* Z_Construct_UFunction_UTimeLimitStopCondition_GetTimeLimitSec();
-	RODENTVR_API UFunction* Z_Construct_UFunction_UTimeLimitStopCondition_SetTimeLimitSec();
 // End Cross Module References
+	DEFINE_FUNCTION(UTimeLimitStopCondition::execSetTimeLimitSec)
+	{
+		P_GET_PROPERTY(FFloatProperty,Z_Param_TimeLimitSecValue);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->SetTimeLimitSec(Z_Param_TimeLimitSecValue);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UTimeLimitStopCondition::execGetTimeLimitSec)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(float*)Z_Param__Result=P_THIS->GetTimeLimitSec();
+		P_NATIVE_END;
+	}
 	void UTimeLimitStopCondition::StaticRegisterNativesUTimeLimitStopCondition()
 	{
 		UClass* Class = UTimeLimitStopCondition::StaticClass();
@@ -27,7 +40,7 @@ void EmptyLinkFunctionForGeneratedCodeTimeLimitStopCondition() {}
 			{ "GetTimeLimitSec", &UTimeLimitStopCondition::execGetTimeLimitSec },
 			{ "SetTimeLimitSec", &UTimeLimitStopCondition::execSetTimeLimitSec },
 		};
-		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, ARRAY_COUNT(Funcs));
+		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 	}
 	struct Z_Construct_UFunction_UTimeLimitStopCondition_GetTimeLimitSec_Statics
 	{
@@ -52,7 +65,7 @@ void EmptyLinkFunctionForGeneratedCodeTimeLimitStopCondition() {}
 		{ "ModuleRelativePath", "Private/StopConditions/TimeLimitStopCondition.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UTimeLimitStopCondition_GetTimeLimitSec_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UTimeLimitStopCondition, nullptr, "GetTimeLimitSec", nullptr, nullptr, sizeof(TimeLimitStopCondition_eventGetTimeLimitSec_Parms), Z_Construct_UFunction_UTimeLimitStopCondition_GetTimeLimitSec_Statics::PropPointers, ARRAY_COUNT(Z_Construct_UFunction_UTimeLimitStopCondition_GetTimeLimitSec_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x14020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UTimeLimitStopCondition_GetTimeLimitSec_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_UTimeLimitStopCondition_GetTimeLimitSec_Statics::Function_MetaDataParams)) };
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UTimeLimitStopCondition_GetTimeLimitSec_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UTimeLimitStopCondition, nullptr, "GetTimeLimitSec", nullptr, nullptr, sizeof(TimeLimitStopCondition_eventGetTimeLimitSec_Parms), Z_Construct_UFunction_UTimeLimitStopCondition_GetTimeLimitSec_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UTimeLimitStopCondition_GetTimeLimitSec_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x14020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UTimeLimitStopCondition_GetTimeLimitSec_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UTimeLimitStopCondition_GetTimeLimitSec_Statics::Function_MetaDataParams)) };
 	UFunction* Z_Construct_UFunction_UTimeLimitStopCondition_GetTimeLimitSec()
 	{
 		static UFunction* ReturnFunction = nullptr;
@@ -85,7 +98,7 @@ void EmptyLinkFunctionForGeneratedCodeTimeLimitStopCondition() {}
 		{ "ModuleRelativePath", "Private/StopConditions/TimeLimitStopCondition.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UTimeLimitStopCondition_SetTimeLimitSec_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UTimeLimitStopCondition, nullptr, "SetTimeLimitSec", nullptr, nullptr, sizeof(TimeLimitStopCondition_eventSetTimeLimitSec_Parms), Z_Construct_UFunction_UTimeLimitStopCondition_SetTimeLimitSec_Statics::PropPointers, ARRAY_COUNT(Z_Construct_UFunction_UTimeLimitStopCondition_SetTimeLimitSec_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UTimeLimitStopCondition_SetTimeLimitSec_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_UTimeLimitStopCondition_SetTimeLimitSec_Statics::Function_MetaDataParams)) };
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UTimeLimitStopCondition_SetTimeLimitSec_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UTimeLimitStopCondition, nullptr, "SetTimeLimitSec", nullptr, nullptr, sizeof(TimeLimitStopCondition_eventSetTimeLimitSec_Parms), Z_Construct_UFunction_UTimeLimitStopCondition_SetTimeLimitSec_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UTimeLimitStopCondition_SetTimeLimitSec_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UTimeLimitStopCondition_SetTimeLimitSec_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UTimeLimitStopCondition_SetTimeLimitSec_Statics::Function_MetaDataParams)) };
 	UFunction* Z_Construct_UFunction_UTimeLimitStopCondition_SetTimeLimitSec()
 	{
 		static UFunction* ReturnFunction = nullptr;
@@ -119,8 +132,8 @@ void EmptyLinkFunctionForGeneratedCodeTimeLimitStopCondition() {}
 		(UObject* (*)())Z_Construct_UPackage__Script_RodentVR,
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_UTimeLimitStopCondition_Statics::FuncInfo[] = {
-		{ &Z_Construct_UFunction_UTimeLimitStopCondition_GetTimeLimitSec, "GetTimeLimitSec" }, // 3403083667
-		{ &Z_Construct_UFunction_UTimeLimitStopCondition_SetTimeLimitSec, "SetTimeLimitSec" }, // 2520429171
+		{ &Z_Construct_UFunction_UTimeLimitStopCondition_GetTimeLimitSec, "GetTimeLimitSec" }, // 3502570420
+		{ &Z_Construct_UFunction_UTimeLimitStopCondition_SetTimeLimitSec, "SetTimeLimitSec" }, // 241379044
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UTimeLimitStopCondition_Statics::Class_MetaDataParams[] = {
@@ -139,7 +152,7 @@ void EmptyLinkFunctionForGeneratedCodeTimeLimitStopCondition() {}
 		{ "ModuleRelativePath", "Private/StopConditions/TimeLimitStopCondition.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UTimeLimitStopCondition_Statics::NewProp_TimeLimitSec = { "TimeLimitSec", nullptr, (EPropertyFlags)0x0040000000000004, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UTimeLimitStopCondition, TimeLimitSec), METADATA_PARAMS(Z_Construct_UClass_UTimeLimitStopCondition_Statics::NewProp_TimeLimitSec_MetaData, ARRAY_COUNT(Z_Construct_UClass_UTimeLimitStopCondition_Statics::NewProp_TimeLimitSec_MetaData)) };
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UTimeLimitStopCondition_Statics::NewProp_TimeLimitSec = { "TimeLimitSec", nullptr, (EPropertyFlags)0x0040000000000004, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UTimeLimitStopCondition, TimeLimitSec), METADATA_PARAMS(Z_Construct_UClass_UTimeLimitStopCondition_Statics::NewProp_TimeLimitSec_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UTimeLimitStopCondition_Statics::NewProp_TimeLimitSec_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UTimeLimitStopCondition_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UTimeLimitStopCondition_Statics::NewProp_TimeLimitSec,
 	};
@@ -154,12 +167,12 @@ void EmptyLinkFunctionForGeneratedCodeTimeLimitStopCondition() {}
 		FuncInfo,
 		Z_Construct_UClass_UTimeLimitStopCondition_Statics::PropPointers,
 		nullptr,
-		ARRAY_COUNT(DependentSingletons),
-		ARRAY_COUNT(FuncInfo),
-		ARRAY_COUNT(Z_Construct_UClass_UTimeLimitStopCondition_Statics::PropPointers),
+		UE_ARRAY_COUNT(DependentSingletons),
+		UE_ARRAY_COUNT(FuncInfo),
+		UE_ARRAY_COUNT(Z_Construct_UClass_UTimeLimitStopCondition_Statics::PropPointers),
 		0,
 		0x000000A0u,
-		METADATA_PARAMS(Z_Construct_UClass_UTimeLimitStopCondition_Statics::Class_MetaDataParams, ARRAY_COUNT(Z_Construct_UClass_UTimeLimitStopCondition_Statics::Class_MetaDataParams))
+		METADATA_PARAMS(Z_Construct_UClass_UTimeLimitStopCondition_Statics::Class_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UClass_UTimeLimitStopCondition_Statics::Class_MetaDataParams))
 	};
 	UClass* Z_Construct_UClass_UTimeLimitStopCondition()
 	{
@@ -170,7 +183,7 @@ void EmptyLinkFunctionForGeneratedCodeTimeLimitStopCondition() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UTimeLimitStopCondition, 2454743537);
+	IMPLEMENT_CLASS(UTimeLimitStopCondition, 1835441130);
 	template<> RODENTVR_API UClass* StaticClass<UTimeLimitStopCondition>()
 	{
 		return UTimeLimitStopCondition::StaticClass();

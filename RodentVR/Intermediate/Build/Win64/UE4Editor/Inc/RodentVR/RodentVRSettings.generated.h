@@ -1,4 +1,4 @@
-// Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
+// Copyright Epic Games, Inc. All Rights Reserved.
 /*===========================================================================
 	Generated code exported from UnrealHeaderTool.
 	DO NOT modify this manually! Edit the corresponding .h files instead!
@@ -15,418 +15,63 @@ class UDevice;
 #endif
 #define RODENTVR_RodentVRSettings_generated_h
 
+#define RodentVR_Source_RodentVR_Private_Settings_RodentVRSettings_h_19_SPARSE_DATA
 #define RodentVR_Source_RodentVR_Private_Settings_RodentVRSettings_h_19_RPC_WRAPPERS \
  \
-	DECLARE_FUNCTION(execClearMazes) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->ClearMazes(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execRemoveMaze) \
-	{ \
-		P_GET_OBJECT(UMazeSettings,Z_Param_MazeValue); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->RemoveMaze(Z_Param_MazeValue); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execAddMaze) \
-	{ \
-		P_GET_OBJECT(UMazeSettings,Z_Param_MazeValue); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->AddMaze(Z_Param_MazeValue); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execGetMazePlaylist) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(TArray<UMazeSettings*>*)Z_Param__Result=P_THIS->GetMazePlaylist(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execClearRewardDevices) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->ClearRewardDevices(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execRemoveRewardDevice) \
-	{ \
-		P_GET_OBJECT(UDevice,Z_Param_RewardDeviceValue); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->RemoveRewardDevice(Z_Param_RewardDeviceValue); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execAddRewardDevice) \
-	{ \
-		P_GET_OBJECT(UDevice,Z_Param_RewardDeviceValue); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->AddRewardDevice(Z_Param_RewardDeviceValue); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execGetRewardDevices) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(TArray<UDevice*>*)Z_Param__Result=P_THIS->GetRewardDevices(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execSetAirPufferFrontAngle) \
-	{ \
-		P_GET_PROPERTY(UFloatProperty,Z_Param_AirPufferFrontAngleValue); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->SetAirPufferFrontAngle(Z_Param_AirPufferFrontAngleValue); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execGetAirPufferFrontAngle) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(float*)Z_Param__Result=P_THIS->GetAirPufferFrontAngle(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execSetAirPufferRightDevice) \
-	{ \
-		P_GET_OBJECT(UDevice,Z_Param_AirPufferRightDeviceValue); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->SetAirPufferRightDevice(Z_Param_AirPufferRightDeviceValue); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execGetAirPufferRightDevice) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(UDevice**)Z_Param__Result=P_THIS->GetAirPufferRightDevice(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execSetAirPufferLeftDevice) \
-	{ \
-		P_GET_OBJECT(UDevice,Z_Param_AirPufferLeftDeviceValue); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->SetAirPufferLeftDevice(Z_Param_AirPufferLeftDeviceValue); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execGetAirPufferLeftDevice) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(UDevice**)Z_Param__Result=P_THIS->GetAirPufferLeftDevice(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execSetBallInputMouseBMultiplier) \
-	{ \
-		P_GET_PROPERTY(UFloatProperty,Z_Param_BallInputMouseBMultiplierValue); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->SetBallInputMouseBMultiplier(Z_Param_BallInputMouseBMultiplierValue); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execGetBallInputMouseBMultiplier) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(float*)Z_Param__Result=P_THIS->GetBallInputMouseBMultiplier(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execSetBallInputMouseAMultiplier) \
-	{ \
-		P_GET_PROPERTY(UFloatProperty,Z_Param_BallInputMouseAMultiplierValue); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->SetBallInputMouseAMultiplier(Z_Param_BallInputMouseAMultiplierValue); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execGetBallInputMouseAMultiplier) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(float*)Z_Param__Result=P_THIS->GetBallInputMouseAMultiplier(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execSetBallInputMouseBDevice) \
-	{ \
-		P_GET_PROPERTY(UStrProperty,Z_Param_BallInputMouseBDeviceValue); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->SetBallInputMouseBDevice(Z_Param_BallInputMouseBDeviceValue); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execGetBallInputMouseBDevice) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(FString*)Z_Param__Result=P_THIS->GetBallInputMouseBDevice(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execSetBallInputMouseADevice) \
-	{ \
-		P_GET_PROPERTY(UStrProperty,Z_Param_BallInputMouseADeviceValue); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->SetBallInputMouseADevice(Z_Param_BallInputMouseADeviceValue); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execGetBallInputMouseADevice) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(FString*)Z_Param__Result=P_THIS->GetBallInputMouseADevice(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execSetSettingsFileName) \
-	{ \
-		P_GET_PROPERTY(UStrProperty,Z_Param_SettingsFileNameValue); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->SetSettingsFileName(Z_Param_SettingsFileNameValue); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execGetSettingsFileName) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(FString*)Z_Param__Result=P_THIS->GetSettingsFileName(); \
-		P_NATIVE_END; \
-	}
+	DECLARE_FUNCTION(execGetMazeFromPlaylistByFileName); \
+	DECLARE_FUNCTION(execClearMazes); \
+	DECLARE_FUNCTION(execRemoveMaze); \
+	DECLARE_FUNCTION(execAddMaze); \
+	DECLARE_FUNCTION(execGetMazePlaylist); \
+	DECLARE_FUNCTION(execClearRewardDevices); \
+	DECLARE_FUNCTION(execRemoveRewardDevice); \
+	DECLARE_FUNCTION(execAddRewardDevice); \
+	DECLARE_FUNCTION(execGetRewardDevices); \
+	DECLARE_FUNCTION(execSetAirPufferFrontAngle); \
+	DECLARE_FUNCTION(execGetAirPufferFrontAngle); \
+	DECLARE_FUNCTION(execSetAirPufferRightDevice); \
+	DECLARE_FUNCTION(execGetAirPufferRightDevice); \
+	DECLARE_FUNCTION(execSetAirPufferLeftDevice); \
+	DECLARE_FUNCTION(execGetAirPufferLeftDevice); \
+	DECLARE_FUNCTION(execSetBallInputMouseBMultiplier); \
+	DECLARE_FUNCTION(execGetBallInputMouseBMultiplier); \
+	DECLARE_FUNCTION(execSetBallInputMouseAMultiplier); \
+	DECLARE_FUNCTION(execGetBallInputMouseAMultiplier); \
+	DECLARE_FUNCTION(execSetBallInputMouseBDevice); \
+	DECLARE_FUNCTION(execGetBallInputMouseBDevice); \
+	DECLARE_FUNCTION(execSetBallInputMouseADevice); \
+	DECLARE_FUNCTION(execGetBallInputMouseADevice); \
+	DECLARE_FUNCTION(execSetSettingsFileName); \
+	DECLARE_FUNCTION(execGetSettingsFileName);
 
 
 #define RodentVR_Source_RodentVR_Private_Settings_RodentVRSettings_h_19_RPC_WRAPPERS_NO_PURE_DECLS \
  \
-	DECLARE_FUNCTION(execClearMazes) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->ClearMazes(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execRemoveMaze) \
-	{ \
-		P_GET_OBJECT(UMazeSettings,Z_Param_MazeValue); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->RemoveMaze(Z_Param_MazeValue); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execAddMaze) \
-	{ \
-		P_GET_OBJECT(UMazeSettings,Z_Param_MazeValue); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->AddMaze(Z_Param_MazeValue); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execGetMazePlaylist) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(TArray<UMazeSettings*>*)Z_Param__Result=P_THIS->GetMazePlaylist(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execClearRewardDevices) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->ClearRewardDevices(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execRemoveRewardDevice) \
-	{ \
-		P_GET_OBJECT(UDevice,Z_Param_RewardDeviceValue); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->RemoveRewardDevice(Z_Param_RewardDeviceValue); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execAddRewardDevice) \
-	{ \
-		P_GET_OBJECT(UDevice,Z_Param_RewardDeviceValue); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->AddRewardDevice(Z_Param_RewardDeviceValue); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execGetRewardDevices) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(TArray<UDevice*>*)Z_Param__Result=P_THIS->GetRewardDevices(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execSetAirPufferFrontAngle) \
-	{ \
-		P_GET_PROPERTY(UFloatProperty,Z_Param_AirPufferFrontAngleValue); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->SetAirPufferFrontAngle(Z_Param_AirPufferFrontAngleValue); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execGetAirPufferFrontAngle) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(float*)Z_Param__Result=P_THIS->GetAirPufferFrontAngle(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execSetAirPufferRightDevice) \
-	{ \
-		P_GET_OBJECT(UDevice,Z_Param_AirPufferRightDeviceValue); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->SetAirPufferRightDevice(Z_Param_AirPufferRightDeviceValue); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execGetAirPufferRightDevice) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(UDevice**)Z_Param__Result=P_THIS->GetAirPufferRightDevice(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execSetAirPufferLeftDevice) \
-	{ \
-		P_GET_OBJECT(UDevice,Z_Param_AirPufferLeftDeviceValue); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->SetAirPufferLeftDevice(Z_Param_AirPufferLeftDeviceValue); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execGetAirPufferLeftDevice) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(UDevice**)Z_Param__Result=P_THIS->GetAirPufferLeftDevice(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execSetBallInputMouseBMultiplier) \
-	{ \
-		P_GET_PROPERTY(UFloatProperty,Z_Param_BallInputMouseBMultiplierValue); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->SetBallInputMouseBMultiplier(Z_Param_BallInputMouseBMultiplierValue); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execGetBallInputMouseBMultiplier) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(float*)Z_Param__Result=P_THIS->GetBallInputMouseBMultiplier(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execSetBallInputMouseAMultiplier) \
-	{ \
-		P_GET_PROPERTY(UFloatProperty,Z_Param_BallInputMouseAMultiplierValue); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->SetBallInputMouseAMultiplier(Z_Param_BallInputMouseAMultiplierValue); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execGetBallInputMouseAMultiplier) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(float*)Z_Param__Result=P_THIS->GetBallInputMouseAMultiplier(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execSetBallInputMouseBDevice) \
-	{ \
-		P_GET_PROPERTY(UStrProperty,Z_Param_BallInputMouseBDeviceValue); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->SetBallInputMouseBDevice(Z_Param_BallInputMouseBDeviceValue); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execGetBallInputMouseBDevice) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(FString*)Z_Param__Result=P_THIS->GetBallInputMouseBDevice(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execSetBallInputMouseADevice) \
-	{ \
-		P_GET_PROPERTY(UStrProperty,Z_Param_BallInputMouseADeviceValue); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->SetBallInputMouseADevice(Z_Param_BallInputMouseADeviceValue); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execGetBallInputMouseADevice) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(FString*)Z_Param__Result=P_THIS->GetBallInputMouseADevice(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execSetSettingsFileName) \
-	{ \
-		P_GET_PROPERTY(UStrProperty,Z_Param_SettingsFileNameValue); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->SetSettingsFileName(Z_Param_SettingsFileNameValue); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execGetSettingsFileName) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(FString*)Z_Param__Result=P_THIS->GetSettingsFileName(); \
-		P_NATIVE_END; \
-	}
+	DECLARE_FUNCTION(execGetMazeFromPlaylistByFileName); \
+	DECLARE_FUNCTION(execClearMazes); \
+	DECLARE_FUNCTION(execRemoveMaze); \
+	DECLARE_FUNCTION(execAddMaze); \
+	DECLARE_FUNCTION(execGetMazePlaylist); \
+	DECLARE_FUNCTION(execClearRewardDevices); \
+	DECLARE_FUNCTION(execRemoveRewardDevice); \
+	DECLARE_FUNCTION(execAddRewardDevice); \
+	DECLARE_FUNCTION(execGetRewardDevices); \
+	DECLARE_FUNCTION(execSetAirPufferFrontAngle); \
+	DECLARE_FUNCTION(execGetAirPufferFrontAngle); \
+	DECLARE_FUNCTION(execSetAirPufferRightDevice); \
+	DECLARE_FUNCTION(execGetAirPufferRightDevice); \
+	DECLARE_FUNCTION(execSetAirPufferLeftDevice); \
+	DECLARE_FUNCTION(execGetAirPufferLeftDevice); \
+	DECLARE_FUNCTION(execSetBallInputMouseBMultiplier); \
+	DECLARE_FUNCTION(execGetBallInputMouseBMultiplier); \
+	DECLARE_FUNCTION(execSetBallInputMouseAMultiplier); \
+	DECLARE_FUNCTION(execGetBallInputMouseAMultiplier); \
+	DECLARE_FUNCTION(execSetBallInputMouseBDevice); \
+	DECLARE_FUNCTION(execGetBallInputMouseBDevice); \
+	DECLARE_FUNCTION(execSetBallInputMouseADevice); \
+	DECLARE_FUNCTION(execGetBallInputMouseADevice); \
+	DECLARE_FUNCTION(execSetSettingsFileName); \
+	DECLARE_FUNCTION(execGetSettingsFileName);
 
 
 #define RodentVR_Source_RodentVR_Private_Settings_RodentVRSettings_h_19_INCLASS_NO_PURE_DECLS \
@@ -489,6 +134,7 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(URodentVRSettings); \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
 	RodentVR_Source_RodentVR_Private_Settings_RodentVRSettings_h_19_PRIVATE_PROPERTY_OFFSET \
+	RodentVR_Source_RodentVR_Private_Settings_RodentVRSettings_h_19_SPARSE_DATA \
 	RodentVR_Source_RodentVR_Private_Settings_RodentVRSettings_h_19_RPC_WRAPPERS \
 	RodentVR_Source_RodentVR_Private_Settings_RodentVRSettings_h_19_INCLASS \
 	RodentVR_Source_RodentVR_Private_Settings_RodentVRSettings_h_19_STANDARD_CONSTRUCTORS \
@@ -500,6 +146,7 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
 	RodentVR_Source_RodentVR_Private_Settings_RodentVRSettings_h_19_PRIVATE_PROPERTY_OFFSET \
+	RodentVR_Source_RodentVR_Private_Settings_RodentVRSettings_h_19_SPARSE_DATA \
 	RodentVR_Source_RodentVR_Private_Settings_RodentVRSettings_h_19_RPC_WRAPPERS_NO_PURE_DECLS \
 	RodentVR_Source_RodentVR_Private_Settings_RodentVRSettings_h_19_INCLASS_NO_PURE_DECLS \
 	RodentVR_Source_RodentVR_Private_Settings_RodentVRSettings_h_19_ENHANCED_CONSTRUCTORS \

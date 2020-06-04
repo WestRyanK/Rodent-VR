@@ -1,0 +1,10 @@
+{
+	"SourceFiles": [
+		"C:\\Users\\Ryan\\Drive\\BYU\\2018_Fall\\cs_497r\\Rodent-VR\\RodentVR\\Source\\RodentVR\\RodentVR.Build.cs",
+		"C:\\Users\\Ryan\\Drive\\BYU\\2018_Fall\\cs_497r\\Rodent-VR\\RodentVR\\Plugins\\TinyFileDialogs\\Source\\TinyFileDialogs\\TinyFileDialogs.Build.cs",
+		"C:\\Users\\Ryan\\Drive\\BYU\\2018_Fall\\cs_497r\\Rodent-VR\\RodentVR\\Plugins\\TinyFileDialogs\\Source\\ThirdParty\\TinyFileDialogsLibrary\\TinyFileDialogsLibrary.Build.cs",
+		"C:\\Users\\Ryan\\Drive\\BYU\\2018_Fall\\cs_497r\\Rodent-VR\\RodentVR\\Source\\RodentVR.Target.cs",
+		"C:\\Users\\Ryan\\Drive\\BYU\\2018_Fall\\cs_497r\\Rodent-VR\\RodentVR\\Source\\RodentVREditor.Target.cs"
+	],
+	"EngineVersion": "4.25.0"
+}

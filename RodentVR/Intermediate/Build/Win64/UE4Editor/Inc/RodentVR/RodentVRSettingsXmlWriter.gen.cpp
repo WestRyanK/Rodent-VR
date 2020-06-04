@@ -1,4 +1,4 @@
-// Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
+// Copyright Epic Games, Inc. All Rights Reserved.
 /*===========================================================================
 	Generated code exported from UnrealHeaderTool.
 	DO NOT modify this manually! Edit the corresponding .h files instead!
@@ -17,23 +17,34 @@ void EmptyLinkFunctionForGeneratedCodeRodentVRSettingsXmlWriter() {}
 	RODENTVR_API UClass* Z_Construct_UClass_URodentVRSettingsXmlWriter();
 	COREUOBJECT_API UClass* Z_Construct_UClass_UObject();
 	UPackage* Z_Construct_UPackage__Script_RodentVR();
-	RODENTVR_API UFunction* Z_Construct_UFunction_URodentVRSettingsXmlWriter_SaveRodentVRSettings();
 	RODENTVR_API UClass* Z_Construct_UClass_URodentVRSettings_NoRegister();
 // End Cross Module References
+	DEFINE_FUNCTION(URodentVRSettingsXmlWriter::execSaveRodentVRSettings)
+	{
+		P_GET_OBJECT(URodentVRSettings,Z_Param_Settings);
+		P_GET_UBOOL(Z_Param_SaveMazesInPlaylist);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		URodentVRSettingsXmlWriter::SaveRodentVRSettings(Z_Param_Settings,Z_Param_SaveMazesInPlaylist);
+		P_NATIVE_END;
+	}
 	void URodentVRSettingsXmlWriter::StaticRegisterNativesURodentVRSettingsXmlWriter()
 	{
 		UClass* Class = URodentVRSettingsXmlWriter::StaticClass();
 		static const FNameNativePtrPair Funcs[] = {
 			{ "SaveRodentVRSettings", &URodentVRSettingsXmlWriter::execSaveRodentVRSettings },
 		};
-		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, ARRAY_COUNT(Funcs));
+		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 	}
 	struct Z_Construct_UFunction_URodentVRSettingsXmlWriter_SaveRodentVRSettings_Statics
 	{
 		struct RodentVRSettingsXmlWriter_eventSaveRodentVRSettings_Parms
 		{
 			URodentVRSettings* Settings;
+			bool SaveMazesInPlaylist;
 		};
+		static void NewProp_SaveMazesInPlaylist_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_SaveMazesInPlaylist;
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_Settings;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 #if WITH_METADATA
@@ -41,8 +52,14 @@ void EmptyLinkFunctionForGeneratedCodeRodentVRSettingsXmlWriter() {}
 #endif
 		static const UE4CodeGen_Private::FFunctionParams FuncParams;
 	};
+	void Z_Construct_UFunction_URodentVRSettingsXmlWriter_SaveRodentVRSettings_Statics::NewProp_SaveMazesInPlaylist_SetBit(void* Obj)
+	{
+		((RodentVRSettingsXmlWriter_eventSaveRodentVRSettings_Parms*)Obj)->SaveMazesInPlaylist = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_URodentVRSettingsXmlWriter_SaveRodentVRSettings_Statics::NewProp_SaveMazesInPlaylist = { "SaveMazesInPlaylist", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(RodentVRSettingsXmlWriter_eventSaveRodentVRSettings_Parms), &Z_Construct_UFunction_URodentVRSettingsXmlWriter_SaveRodentVRSettings_Statics::NewProp_SaveMazesInPlaylist_SetBit, METADATA_PARAMS(nullptr, 0) };
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_URodentVRSettingsXmlWriter_SaveRodentVRSettings_Statics::NewProp_Settings = { "Settings", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(RodentVRSettingsXmlWriter_eventSaveRodentVRSettings_Parms, Settings), Z_Construct_UClass_URodentVRSettings_NoRegister, METADATA_PARAMS(nullptr, 0) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_URodentVRSettingsXmlWriter_SaveRodentVRSettings_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_URodentVRSettingsXmlWriter_SaveRodentVRSettings_Statics::NewProp_SaveMazesInPlaylist,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_URodentVRSettingsXmlWriter_SaveRodentVRSettings_Statics::NewProp_Settings,
 	};
 #if WITH_METADATA
@@ -50,7 +67,7 @@ void EmptyLinkFunctionForGeneratedCodeRodentVRSettingsXmlWriter() {}
 		{ "ModuleRelativePath", "Private/Settings/RodentVRSettingsXmlWriter.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_URodentVRSettingsXmlWriter_SaveRodentVRSettings_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_URodentVRSettingsXmlWriter, nullptr, "SaveRodentVRSettings", nullptr, nullptr, sizeof(RodentVRSettingsXmlWriter_eventSaveRodentVRSettings_Parms), Z_Construct_UFunction_URodentVRSettingsXmlWriter_SaveRodentVRSettings_Statics::PropPointers, ARRAY_COUNT(Z_Construct_UFunction_URodentVRSettingsXmlWriter_SaveRodentVRSettings_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04022401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_URodentVRSettingsXmlWriter_SaveRodentVRSettings_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_URodentVRSettingsXmlWriter_SaveRodentVRSettings_Statics::Function_MetaDataParams)) };
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_URodentVRSettingsXmlWriter_SaveRodentVRSettings_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_URodentVRSettingsXmlWriter, nullptr, "SaveRodentVRSettings", nullptr, nullptr, sizeof(RodentVRSettingsXmlWriter_eventSaveRodentVRSettings_Parms), Z_Construct_UFunction_URodentVRSettingsXmlWriter_SaveRodentVRSettings_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_URodentVRSettingsXmlWriter_SaveRodentVRSettings_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04022401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_URodentVRSettingsXmlWriter_SaveRodentVRSettings_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_URodentVRSettingsXmlWriter_SaveRodentVRSettings_Statics::Function_MetaDataParams)) };
 	UFunction* Z_Construct_UFunction_URodentVRSettingsXmlWriter_SaveRodentVRSettings()
 	{
 		static UFunction* ReturnFunction = nullptr;
@@ -79,7 +96,7 @@ void EmptyLinkFunctionForGeneratedCodeRodentVRSettingsXmlWriter() {}
 		(UObject* (*)())Z_Construct_UPackage__Script_RodentVR,
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_URodentVRSettingsXmlWriter_Statics::FuncInfo[] = {
-		{ &Z_Construct_UFunction_URodentVRSettingsXmlWriter_SaveRodentVRSettings, "SaveRodentVRSettings" }, // 3025009867
+		{ &Z_Construct_UFunction_URodentVRSettingsXmlWriter_SaveRodentVRSettings, "SaveRodentVRSettings" }, // 3767398998
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_URodentVRSettingsXmlWriter_Statics::Class_MetaDataParams[] = {
@@ -101,12 +118,12 @@ void EmptyLinkFunctionForGeneratedCodeRodentVRSettingsXmlWriter() {}
 		FuncInfo,
 		nullptr,
 		nullptr,
-		ARRAY_COUNT(DependentSingletons),
-		ARRAY_COUNT(FuncInfo),
+		UE_ARRAY_COUNT(DependentSingletons),
+		UE_ARRAY_COUNT(FuncInfo),
 		0,
 		0,
 		0x000000A0u,
-		METADATA_PARAMS(Z_Construct_UClass_URodentVRSettingsXmlWriter_Statics::Class_MetaDataParams, ARRAY_COUNT(Z_Construct_UClass_URodentVRSettingsXmlWriter_Statics::Class_MetaDataParams))
+		METADATA_PARAMS(Z_Construct_UClass_URodentVRSettingsXmlWriter_Statics::Class_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UClass_URodentVRSettingsXmlWriter_Statics::Class_MetaDataParams))
 	};
 	UClass* Z_Construct_UClass_URodentVRSettingsXmlWriter()
 	{
@@ -117,7 +134,7 @@ void EmptyLinkFunctionForGeneratedCodeRodentVRSettingsXmlWriter() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(URodentVRSettingsXmlWriter, 1755309501);
+	IMPLEMENT_CLASS(URodentVRSettingsXmlWriter, 1399676364);
 	template<> RODENTVR_API UClass* StaticClass<URodentVRSettingsXmlWriter>()
 	{
 		return URodentVRSettingsXmlWriter::StaticClass();

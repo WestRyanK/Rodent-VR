@@ -1,4 +1,4 @@
-// Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
+// Copyright Epic Games, Inc. All Rights Reserved.
 /*===========================================================================
 	Generated code exported from UnrealHeaderTool.
 	DO NOT modify this manually! Edit the corresponding .h files instead!
@@ -13,46 +13,17 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define RODENTVR_NIDAQ_generated_h
 
+#define RodentVR_Source_RodentVR_Private_Hardware_NIDAQ_NIDAQ_h_17_SPARSE_DATA
 #define RodentVR_Source_RodentVR_Private_Hardware_NIDAQ_NIDAQ_h_17_RPC_WRAPPERS \
  \
-	DECLARE_FUNCTION(execinit_NIDAQ) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		UNIDAQ::init_NIDAQ(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execcontrol_NIDAQ) \
-	{ \
-		P_GET_UBOOL(Z_Param_isOn); \
-		P_GET_PROPERTY(UStrProperty,Z_Param_deviceName); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		UNIDAQ::control_NIDAQ(Z_Param_isOn,Z_Param_deviceName); \
-		P_NATIVE_END; \
-	}
+	DECLARE_FUNCTION(execinit_NIDAQ); \
+	DECLARE_FUNCTION(execcontrol_NIDAQ);
 
 
 #define RodentVR_Source_RodentVR_Private_Hardware_NIDAQ_NIDAQ_h_17_RPC_WRAPPERS_NO_PURE_DECLS \
  \
-	DECLARE_FUNCTION(execinit_NIDAQ) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		UNIDAQ::init_NIDAQ(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execcontrol_NIDAQ) \
-	{ \
-		P_GET_UBOOL(Z_Param_isOn); \
-		P_GET_PROPERTY(UStrProperty,Z_Param_deviceName); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		UNIDAQ::control_NIDAQ(Z_Param_isOn,Z_Param_deviceName); \
-		P_NATIVE_END; \
-	}
+	DECLARE_FUNCTION(execinit_NIDAQ); \
+	DECLARE_FUNCTION(execcontrol_NIDAQ);
 
 
 #define RodentVR_Source_RodentVR_Private_Hardware_NIDAQ_NIDAQ_h_17_INCLASS_NO_PURE_DECLS \
@@ -105,6 +76,7 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UNIDAQ); \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
 	RodentVR_Source_RodentVR_Private_Hardware_NIDAQ_NIDAQ_h_17_PRIVATE_PROPERTY_OFFSET \
+	RodentVR_Source_RodentVR_Private_Hardware_NIDAQ_NIDAQ_h_17_SPARSE_DATA \
 	RodentVR_Source_RodentVR_Private_Hardware_NIDAQ_NIDAQ_h_17_RPC_WRAPPERS \
 	RodentVR_Source_RodentVR_Private_Hardware_NIDAQ_NIDAQ_h_17_INCLASS \
 	RodentVR_Source_RodentVR_Private_Hardware_NIDAQ_NIDAQ_h_17_STANDARD_CONSTRUCTORS \
@@ -116,6 +88,7 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
 	RodentVR_Source_RodentVR_Private_Hardware_NIDAQ_NIDAQ_h_17_PRIVATE_PROPERTY_OFFSET \
+	RodentVR_Source_RodentVR_Private_Hardware_NIDAQ_NIDAQ_h_17_SPARSE_DATA \
 	RodentVR_Source_RodentVR_Private_Hardware_NIDAQ_NIDAQ_h_17_RPC_WRAPPERS_NO_PURE_DECLS \
 	RodentVR_Source_RodentVR_Private_Hardware_NIDAQ_NIDAQ_h_17_INCLASS_NO_PURE_DECLS \
 	RodentVR_Source_RodentVR_Private_Hardware_NIDAQ_NIDAQ_h_17_ENHANCED_CONSTRUCTORS \

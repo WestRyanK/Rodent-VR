@@ -1,4 +1,4 @@
-// Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
+// Copyright Epic Games, Inc. All Rights Reserved.
 /*===========================================================================
 	Generated code exported from UnrealHeaderTool.
 	DO NOT modify this manually! Edit the corresponding .h files instead!
@@ -13,6 +13,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define RODENTVR_XmlFileReader_generated_h
 
+#define RodentVR_Source_RodentVR_Private_Settings_XmlFileReader_h_19_SPARSE_DATA
 #define RodentVR_Source_RodentVR_Private_Settings_XmlFileReader_h_19_RPC_WRAPPERS
 #define RodentVR_Source_RodentVR_Private_Settings_XmlFileReader_h_19_RPC_WRAPPERS_NO_PURE_DECLS
 #define RodentVR_Source_RodentVR_Private_Settings_XmlFileReader_h_19_INCLASS_NO_PURE_DECLS \
@@ -65,6 +66,7 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UXmlFileReader); \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
 	RodentVR_Source_RodentVR_Private_Settings_XmlFileReader_h_19_PRIVATE_PROPERTY_OFFSET \
+	RodentVR_Source_RodentVR_Private_Settings_XmlFileReader_h_19_SPARSE_DATA \
 	RodentVR_Source_RodentVR_Private_Settings_XmlFileReader_h_19_RPC_WRAPPERS \
 	RodentVR_Source_RodentVR_Private_Settings_XmlFileReader_h_19_INCLASS \
 	RodentVR_Source_RodentVR_Private_Settings_XmlFileReader_h_19_STANDARD_CONSTRUCTORS \
@@ -76,6 +78,7 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
 	RodentVR_Source_RodentVR_Private_Settings_XmlFileReader_h_19_PRIVATE_PROPERTY_OFFSET \
+	RodentVR_Source_RodentVR_Private_Settings_XmlFileReader_h_19_SPARSE_DATA \
 	RodentVR_Source_RodentVR_Private_Settings_XmlFileReader_h_19_RPC_WRAPPERS_NO_PURE_DECLS \
 	RodentVR_Source_RodentVR_Private_Settings_XmlFileReader_h_19_INCLASS_NO_PURE_DECLS \
 	RodentVR_Source_RodentVR_Private_Settings_XmlFileReader_h_19_ENHANCED_CONSTRUCTORS \

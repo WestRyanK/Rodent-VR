@@ -1,4 +1,4 @@
-// Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
+// Copyright Epic Games, Inc. All Rights Reserved.
 /*===========================================================================
 	Generated code exported from UnrealHeaderTool.
 	DO NOT modify this manually! Edit the corresponding .h files instead!
@@ -27,10 +27,10 @@ void EmptyLinkFunctionForGeneratedCodeRodentVR_init() {}
 			static const UE4CodeGen_Private::FPackageParams PackageParams = {
 				"/Script/RodentVR",
 				SingletonFuncArray,
-				ARRAY_COUNT(SingletonFuncArray),
+				UE_ARRAY_COUNT(SingletonFuncArray),
 				PKG_CompiledIn | 0x00000000,
-				0x6ABFEAB7,
-				0xF8264335,
+				0x202A8A6D,
+				0x0958C4DB,
 				METADATA_PARAMS(nullptr, 0)
 			};
 			UE4CodeGen_Private::ConstructUPackage(ReturnPackage, PackageParams);

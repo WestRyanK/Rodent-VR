@@ -1,4 +1,4 @@
-// Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
+// Copyright Epic Games, Inc. All Rights Reserved.
 /*===========================================================================
 	Generated code exported from UnrealHeaderTool.
 	DO NOT modify this manually! Edit the corresponding .h files instead!
@@ -17,16 +17,23 @@ void EmptyLinkFunctionForGeneratedCodeMazeSettingsXmlReader() {}
 	RODENTVR_API UClass* Z_Construct_UClass_UMazeSettingsXmlReader();
 	COREUOBJECT_API UClass* Z_Construct_UClass_UObject();
 	UPackage* Z_Construct_UPackage__Script_RodentVR();
-	RODENTVR_API UFunction* Z_Construct_UFunction_UMazeSettingsXmlReader_LoadMazeFromFile();
 	RODENTVR_API UClass* Z_Construct_UClass_UMazeSettings_NoRegister();
 // End Cross Module References
+	DEFINE_FUNCTION(UMazeSettingsXmlReader::execLoadMazeFromFile)
+	{
+		P_GET_PROPERTY(FStrProperty,Z_Param_MazeFileName);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(UMazeSettings**)Z_Param__Result=UMazeSettingsXmlReader::LoadMazeFromFile(Z_Param_MazeFileName);
+		P_NATIVE_END;
+	}
 	void UMazeSettingsXmlReader::StaticRegisterNativesUMazeSettingsXmlReader()
 	{
 		UClass* Class = UMazeSettingsXmlReader::StaticClass();
 		static const FNameNativePtrPair Funcs[] = {
 			{ "LoadMazeFromFile", &UMazeSettingsXmlReader::execLoadMazeFromFile },
 		};
-		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, ARRAY_COUNT(Funcs));
+		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 	}
 	struct Z_Construct_UFunction_UMazeSettingsXmlReader_LoadMazeFromFile_Statics
 	{
@@ -54,7 +61,7 @@ void EmptyLinkFunctionForGeneratedCodeMazeSettingsXmlReader() {}
 		{ "ModuleRelativePath", "Private/Settings/MazeSettingsXmlReader.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UMazeSettingsXmlReader_LoadMazeFromFile_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UMazeSettingsXmlReader, nullptr, "LoadMazeFromFile", nullptr, nullptr, sizeof(MazeSettingsXmlReader_eventLoadMazeFromFile_Parms), Z_Construct_UFunction_UMazeSettingsXmlReader_LoadMazeFromFile_Statics::PropPointers, ARRAY_COUNT(Z_Construct_UFunction_UMazeSettingsXmlReader_LoadMazeFromFile_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04022401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UMazeSettingsXmlReader_LoadMazeFromFile_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_UMazeSettingsXmlReader_LoadMazeFromFile_Statics::Function_MetaDataParams)) };
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UMazeSettingsXmlReader_LoadMazeFromFile_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UMazeSettingsXmlReader, nullptr, "LoadMazeFromFile", nullptr, nullptr, sizeof(MazeSettingsXmlReader_eventLoadMazeFromFile_Parms), Z_Construct_UFunction_UMazeSettingsXmlReader_LoadMazeFromFile_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UMazeSettingsXmlReader_LoadMazeFromFile_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04022401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UMazeSettingsXmlReader_LoadMazeFromFile_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UMazeSettingsXmlReader_LoadMazeFromFile_Statics::Function_MetaDataParams)) };
 	UFunction* Z_Construct_UFunction_UMazeSettingsXmlReader_LoadMazeFromFile()
 	{
 		static UFunction* ReturnFunction = nullptr;
@@ -83,7 +90,7 @@ void EmptyLinkFunctionForGeneratedCodeMazeSettingsXmlReader() {}
 		(UObject* (*)())Z_Construct_UPackage__Script_RodentVR,
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_UMazeSettingsXmlReader_Statics::FuncInfo[] = {
-		{ &Z_Construct_UFunction_UMazeSettingsXmlReader_LoadMazeFromFile, "LoadMazeFromFile" }, // 2227133115
+		{ &Z_Construct_UFunction_UMazeSettingsXmlReader_LoadMazeFromFile, "LoadMazeFromFile" }, // 3757593675
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UMazeSettingsXmlReader_Statics::Class_MetaDataParams[] = {
@@ -105,12 +112,12 @@ void EmptyLinkFunctionForGeneratedCodeMazeSettingsXmlReader() {}
 		FuncInfo,
 		nullptr,
 		nullptr,
-		ARRAY_COUNT(DependentSingletons),
-		ARRAY_COUNT(FuncInfo),
+		UE_ARRAY_COUNT(DependentSingletons),
+		UE_ARRAY_COUNT(FuncInfo),
 		0,
 		0,
 		0x000000A0u,
-		METADATA_PARAMS(Z_Construct_UClass_UMazeSettingsXmlReader_Statics::Class_MetaDataParams, ARRAY_COUNT(Z_Construct_UClass_UMazeSettingsXmlReader_Statics::Class_MetaDataParams))
+		METADATA_PARAMS(Z_Construct_UClass_UMazeSettingsXmlReader_Statics::Class_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UClass_UMazeSettingsXmlReader_Statics::Class_MetaDataParams))
 	};
 	UClass* Z_Construct_UClass_UMazeSettingsXmlReader()
 	{
@@ -121,7 +128,7 @@ void EmptyLinkFunctionForGeneratedCodeMazeSettingsXmlReader() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UMazeSettingsXmlReader, 4136001998);
+	IMPLEMENT_CLASS(UMazeSettingsXmlReader, 1930853878);
 	template<> RODENTVR_API UClass* StaticClass<UMazeSettingsXmlReader>()
 	{
 		return UMazeSettingsXmlReader::StaticClass();

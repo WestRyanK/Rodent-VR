@@ -19,7 +19,7 @@ class URodentVRSettingsXmlWriter : public UObject
 	
 public:
 	UFUNCTION(BlueprintCallable)
-	static void SaveRodentVRSettings(URodentVRSettings* Settings);
+	static void SaveRodentVRSettings(URodentVRSettings* Settings, bool SaveMazesInPlaylist);
 
 private:
 	static void SaveBallInput(rapidxml::xml_document<>* Document, rapidxml::xml_node<>* Root, URodentVRSettings* Settings);

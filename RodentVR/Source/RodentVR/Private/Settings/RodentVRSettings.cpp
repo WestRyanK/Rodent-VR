@@ -128,3 +128,15 @@ void URodentVRSettings::ClearMazes()
 {
 	this->MazePlaylist.Empty();
 }
+
+UMazeSettings* URodentVRSettings::GetMazeFromPlaylistByFileName(FString MazeSettingsFileName)
+{
+	for (UMazeSettings* MazeSettings : this->GetMazePlaylist())
+	{
+		if (MazeSettings->GetMazeSettingsFileName() == MazeSettingsFileName)
+		{
+			return MazeSettings;
+		}
+	}
+	return nullptr;
+}

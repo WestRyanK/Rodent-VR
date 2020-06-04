@@ -1,4 +1,4 @@
-// Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
+// Copyright Epic Games, Inc. All Rights Reserved.
 /*===========================================================================
 	Generated code exported from UnrealHeaderTool.
 	DO NOT modify this manually! Edit the corresponding .h files instead!
@@ -17,15 +17,21 @@ void EmptyLinkFunctionForGeneratedCodeStopCondition() {}
 	RODENTVR_API UClass* Z_Construct_UClass_UStopCondition();
 	COREUOBJECT_API UClass* Z_Construct_UClass_UObject();
 	UPackage* Z_Construct_UPackage__Script_RodentVR();
-	RODENTVR_API UFunction* Z_Construct_UFunction_UStopCondition_GetConditionType();
 // End Cross Module References
+	DEFINE_FUNCTION(UStopCondition::execGetConditionType)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(FString*)Z_Param__Result=P_THIS->GetConditionType();
+		P_NATIVE_END;
+	}
 	void UStopCondition::StaticRegisterNativesUStopCondition()
 	{
 		UClass* Class = UStopCondition::StaticClass();
 		static const FNameNativePtrPair Funcs[] = {
 			{ "GetConditionType", &UStopCondition::execGetConditionType },
 		};
-		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, ARRAY_COUNT(Funcs));
+		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 	}
 	struct Z_Construct_UFunction_UStopCondition_GetConditionType_Statics
 	{
@@ -50,7 +56,7 @@ void EmptyLinkFunctionForGeneratedCodeStopCondition() {}
 		{ "ModuleRelativePath", "Private/StopConditions/StopCondition.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UStopCondition_GetConditionType_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UStopCondition, nullptr, "GetConditionType", nullptr, nullptr, sizeof(StopCondition_eventGetConditionType_Parms), Z_Construct_UFunction_UStopCondition_GetConditionType_Statics::PropPointers, ARRAY_COUNT(Z_Construct_UFunction_UStopCondition_GetConditionType_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x14020400, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UStopCondition_GetConditionType_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_UStopCondition_GetConditionType_Statics::Function_MetaDataParams)) };
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UStopCondition_GetConditionType_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UStopCondition, nullptr, "GetConditionType", nullptr, nullptr, sizeof(StopCondition_eventGetConditionType_Parms), Z_Construct_UFunction_UStopCondition_GetConditionType_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UStopCondition_GetConditionType_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x14020400, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UStopCondition_GetConditionType_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UStopCondition_GetConditionType_Statics::Function_MetaDataParams)) };
 	UFunction* Z_Construct_UFunction_UStopCondition_GetConditionType()
 	{
 		static UFunction* ReturnFunction = nullptr;
@@ -84,7 +90,7 @@ void EmptyLinkFunctionForGeneratedCodeStopCondition() {}
 		(UObject* (*)())Z_Construct_UPackage__Script_RodentVR,
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_UStopCondition_Statics::FuncInfo[] = {
-		{ &Z_Construct_UFunction_UStopCondition_GetConditionType, "GetConditionType" }, // 3689387819
+		{ &Z_Construct_UFunction_UStopCondition_GetConditionType, "GetConditionType" }, // 304612202
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UStopCondition_Statics::Class_MetaDataParams[] = {
@@ -102,7 +108,7 @@ void EmptyLinkFunctionForGeneratedCodeStopCondition() {}
 		{ "ModuleRelativePath", "Private/StopConditions/StopCondition.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UClass_UStopCondition_Statics::NewProp_ConditionType = { "ConditionType", nullptr, (EPropertyFlags)0x0040000000000014, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UStopCondition, ConditionType), METADATA_PARAMS(Z_Construct_UClass_UStopCondition_Statics::NewProp_ConditionType_MetaData, ARRAY_COUNT(Z_Construct_UClass_UStopCondition_Statics::NewProp_ConditionType_MetaData)) };
+	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UClass_UStopCondition_Statics::NewProp_ConditionType = { "ConditionType", nullptr, (EPropertyFlags)0x0040000000000014, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UStopCondition, ConditionType), METADATA_PARAMS(Z_Construct_UClass_UStopCondition_Statics::NewProp_ConditionType_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UStopCondition_Statics::NewProp_ConditionType_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UStopCondition_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UStopCondition_Statics::NewProp_ConditionType,
 	};
@@ -117,12 +123,12 @@ void EmptyLinkFunctionForGeneratedCodeStopCondition() {}
 		FuncInfo,
 		Z_Construct_UClass_UStopCondition_Statics::PropPointers,
 		nullptr,
-		ARRAY_COUNT(DependentSingletons),
-		ARRAY_COUNT(FuncInfo),
-		ARRAY_COUNT(Z_Construct_UClass_UStopCondition_Statics::PropPointers),
+		UE_ARRAY_COUNT(DependentSingletons),
+		UE_ARRAY_COUNT(FuncInfo),
+		UE_ARRAY_COUNT(Z_Construct_UClass_UStopCondition_Statics::PropPointers),
 		0,
 		0x000000A0u,
-		METADATA_PARAMS(Z_Construct_UClass_UStopCondition_Statics::Class_MetaDataParams, ARRAY_COUNT(Z_Construct_UClass_UStopCondition_Statics::Class_MetaDataParams))
+		METADATA_PARAMS(Z_Construct_UClass_UStopCondition_Statics::Class_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UClass_UStopCondition_Statics::Class_MetaDataParams))
 	};
 	UClass* Z_Construct_UClass_UStopCondition()
 	{
@@ -133,7 +139,7 @@ void EmptyLinkFunctionForGeneratedCodeStopCondition() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UStopCondition, 4215663032);
+	IMPLEMENT_CLASS(UStopCondition, 603777148);
 	template<> RODENTVR_API UClass* StaticClass<UStopCondition>()
 	{
 		return UStopCondition::StaticClass();

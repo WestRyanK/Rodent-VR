@@ -1,40 +1,30 @@
 <Maze Name="Maze01">
-	<BehaviorRecording Filename="C:\Users\Ryan\Downloads\Test1.behavior" />
+	<BehaviorRecording Filename=""/>
 	<PlayerStart>
-		<Position X="0" Y="500" Z="0" />
-		<Rotation Angle="-90" />
+		<Position X="0.000000" Y="500.000000" Z="0.000000"/>
+		<Rotation Angle="-89.999992"/>
 	</PlayerStart>
 	<Textures>
-		<Texture SlotName="Floor" TextureName="MaterialBlack" />
-		<Texture SlotName="Pillar1" TextureName="MaterialCheckerLarge" />
-		<Texture SlotName="Hallway1" TextureName="MaterialDots1" /> 
-		<Texture SlotName="Hallway2" TextureName="MaterialGreen" /> 
-	</Textures> 
-	<Regions AreRegionsVisible="true">
-		<Region RegionId="0">
-			<Reward RewardDeviceId="" RewardDurationSec="" IsRewardDispensingEnabled="true" />
-			<Tone ToneDurationSec="0.5" TonePitchHz="200" ToneVolumeMultiplier="1.0" IsToneEnabled="true" />
-			<Position X="45" Y="-40" />
-			<Rotation Angle="0" />
-			<Scale X="32" Y="32"/>
-		</Region>
-		<Region RegionId="0" IsNosePoke="true">
-			<Reward RewardDeviceId="" RewardDurationSec="" IsRewardDispensingEnabled="true" />
-			<Position X="75" Y="100"/>
-			<Rotation Angle="90" />
-		</Region>
-	</Regions>
+		<Texture SlotName="Floor" TextureName="MaterialBlack"/>
+		<Texture SlotName="Pillar1" TextureName="MaterialCheckerLarge"/>
+		<Texture SlotName="Hallway1" TextureName="MaterialDots1"/>
+		<Texture SlotName="Hallway2" TextureName="MaterialGreen"/>
+	</Textures>
+	<Regions AreRegionsVisible="false"/>
 	<MazeObjects>
-		<Object MazeObjectType="Cone" TextureName="MaterialGreen">
-			<Position X="20" Y="0" />
-		</Object>
-		<Object MazeObjectType="Sphere" TextureName="MaterialWhite" CanCollide="false">
-			<Position X="20" Y="-100" />
-			<Rotation Angle="45" />
-		</Object>
+		<MazeObject MazeObjectType="Cone" TextureName="MaterialGreen" CanCollide="false">
+			<Position X="20.000000" Y="0.000000" Z="1.000000"/>
+			<Rotation AngleY="0.000000" AngleZ="0.000000" AngleX="0.000000"/>
+			<Scale X="1.000000" Y="1.000000" Z="1.000000"/>
+		</MazeObject>
+		<MazeObject MazeObjectType="Sphere" TextureName="MaterialWhite" CanCollide="false">
+			<Position X="20.000000" Y="-100.000000" Z="1.000000"/>
+			<Rotation AngleY="0.000000" AngleZ="45.000000" AngleX="0.000000"/>
+			<Scale X="1.000000" Y="1.000000" Z="1.000000"/>
+		</MazeObject>
 	</MazeObjects>
-
-	<StopConditions>
-		<Condition ConditionType="TimeLimit" TimeLimitSec="20" />
-	</StopConditions>
+	<MazeObjects>
+		<Condition ConditionType="TimeLimit" TimeLimitSec="20.000000"/>
+	</MazeObjects>
 </Maze>
+

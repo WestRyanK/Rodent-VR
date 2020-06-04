@@ -1,4 +1,4 @@
-// Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
+// Copyright Epic Games, Inc. All Rights Reserved.
 /*===========================================================================
 	Generated code exported from UnrealHeaderTool.
 	DO NOT modify this manually! Edit the corresponding .h files instead!
@@ -17,16 +17,74 @@ void EmptyLinkFunctionForGeneratedCodeDevice() {}
 	RODENTVR_API UClass* Z_Construct_UClass_UDevice();
 	COREUOBJECT_API UClass* Z_Construct_UClass_UObject();
 	UPackage* Z_Construct_UPackage__Script_RodentVR();
-	RODENTVR_API UFunction* Z_Construct_UFunction_UDevice_GetDeviceId();
-	RODENTVR_API UFunction* Z_Construct_UFunction_UDevice_GetDeviceLine();
-	RODENTVR_API UFunction* Z_Construct_UFunction_UDevice_GetDeviceName();
-	RODENTVR_API UFunction* Z_Construct_UFunction_UDevice_GetDevicePath();
-	RODENTVR_API UFunction* Z_Construct_UFunction_UDevice_GetDevicePort();
-	RODENTVR_API UFunction* Z_Construct_UFunction_UDevice_SetDeviceId();
-	RODENTVR_API UFunction* Z_Construct_UFunction_UDevice_SetDeviceLine();
-	RODENTVR_API UFunction* Z_Construct_UFunction_UDevice_SetDeviceName();
-	RODENTVR_API UFunction* Z_Construct_UFunction_UDevice_SetDevicePort();
 // End Cross Module References
+	DEFINE_FUNCTION(UDevice::execGetDevicePath)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(FString*)Z_Param__Result=P_THIS->GetDevicePath();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UDevice::execSetDeviceLine)
+	{
+		P_GET_PROPERTY(FStrProperty,Z_Param_DeviceLineValue);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->SetDeviceLine(Z_Param_DeviceLineValue);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UDevice::execGetDeviceLine)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(FString*)Z_Param__Result=P_THIS->GetDeviceLine();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UDevice::execSetDevicePort)
+	{
+		P_GET_PROPERTY(FStrProperty,Z_Param_DevicePortValue);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->SetDevicePort(Z_Param_DevicePortValue);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UDevice::execGetDevicePort)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(FString*)Z_Param__Result=P_THIS->GetDevicePort();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UDevice::execSetDeviceName)
+	{
+		P_GET_PROPERTY(FStrProperty,Z_Param_DeviceNameValue);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->SetDeviceName(Z_Param_DeviceNameValue);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UDevice::execGetDeviceName)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(FString*)Z_Param__Result=P_THIS->GetDeviceName();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UDevice::execSetDeviceId)
+	{
+		P_GET_PROPERTY(FStrProperty,Z_Param_DeviceIdValue);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->SetDeviceId(Z_Param_DeviceIdValue);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UDevice::execGetDeviceId)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(FString*)Z_Param__Result=P_THIS->GetDeviceId();
+		P_NATIVE_END;
+	}
 	void UDevice::StaticRegisterNativesUDevice()
 	{
 		UClass* Class = UDevice::StaticClass();
@@ -41,7 +99,7 @@ void EmptyLinkFunctionForGeneratedCodeDevice() {}
 			{ "SetDeviceName", &UDevice::execSetDeviceName },
 			{ "SetDevicePort", &UDevice::execSetDevicePort },
 		};
-		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, ARRAY_COUNT(Funcs));
+		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 	}
 	struct Z_Construct_UFunction_UDevice_GetDeviceId_Statics
 	{
@@ -66,7 +124,7 @@ void EmptyLinkFunctionForGeneratedCodeDevice() {}
 		{ "ModuleRelativePath", "Private/Settings/Device.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UDevice_GetDeviceId_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UDevice, nullptr, "GetDeviceId", nullptr, nullptr, sizeof(Device_eventGetDeviceId_Parms), Z_Construct_UFunction_UDevice_GetDeviceId_Statics::PropPointers, ARRAY_COUNT(Z_Construct_UFunction_UDevice_GetDeviceId_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x14020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UDevice_GetDeviceId_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_UDevice_GetDeviceId_Statics::Function_MetaDataParams)) };
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UDevice_GetDeviceId_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UDevice, nullptr, "GetDeviceId", nullptr, nullptr, sizeof(Device_eventGetDeviceId_Parms), Z_Construct_UFunction_UDevice_GetDeviceId_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UDevice_GetDeviceId_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x14020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UDevice_GetDeviceId_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UDevice_GetDeviceId_Statics::Function_MetaDataParams)) };
 	UFunction* Z_Construct_UFunction_UDevice_GetDeviceId()
 	{
 		static UFunction* ReturnFunction = nullptr;
@@ -99,7 +157,7 @@ void EmptyLinkFunctionForGeneratedCodeDevice() {}
 		{ "ModuleRelativePath", "Private/Settings/Device.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UDevice_GetDeviceLine_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UDevice, nullptr, "GetDeviceLine", nullptr, nullptr, sizeof(Device_eventGetDeviceLine_Parms), Z_Construct_UFunction_UDevice_GetDeviceLine_Statics::PropPointers, ARRAY_COUNT(Z_Construct_UFunction_UDevice_GetDeviceLine_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x14020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UDevice_GetDeviceLine_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_UDevice_GetDeviceLine_Statics::Function_MetaDataParams)) };
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UDevice_GetDeviceLine_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UDevice, nullptr, "GetDeviceLine", nullptr, nullptr, sizeof(Device_eventGetDeviceLine_Parms), Z_Construct_UFunction_UDevice_GetDeviceLine_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UDevice_GetDeviceLine_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x14020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UDevice_GetDeviceLine_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UDevice_GetDeviceLine_Statics::Function_MetaDataParams)) };
 	UFunction* Z_Construct_UFunction_UDevice_GetDeviceLine()
 	{
 		static UFunction* ReturnFunction = nullptr;
@@ -132,7 +190,7 @@ void EmptyLinkFunctionForGeneratedCodeDevice() {}
 		{ "ModuleRelativePath", "Private/Settings/Device.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UDevice_GetDeviceName_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UDevice, nullptr, "GetDeviceName", nullptr, nullptr, sizeof(Device_eventGetDeviceName_Parms), Z_Construct_UFunction_UDevice_GetDeviceName_Statics::PropPointers, ARRAY_COUNT(Z_Construct_UFunction_UDevice_GetDeviceName_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x14020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UDevice_GetDeviceName_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_UDevice_GetDeviceName_Statics::Function_MetaDataParams)) };
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UDevice_GetDeviceName_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UDevice, nullptr, "GetDeviceName", nullptr, nullptr, sizeof(Device_eventGetDeviceName_Parms), Z_Construct_UFunction_UDevice_GetDeviceName_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UDevice_GetDeviceName_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x14020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UDevice_GetDeviceName_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UDevice_GetDeviceName_Statics::Function_MetaDataParams)) };
 	UFunction* Z_Construct_UFunction_UDevice_GetDeviceName()
 	{
 		static UFunction* ReturnFunction = nullptr;
@@ -165,7 +223,7 @@ void EmptyLinkFunctionForGeneratedCodeDevice() {}
 		{ "ModuleRelativePath", "Private/Settings/Device.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UDevice_GetDevicePath_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UDevice, nullptr, "GetDevicePath", nullptr, nullptr, sizeof(Device_eventGetDevicePath_Parms), Z_Construct_UFunction_UDevice_GetDevicePath_Statics::PropPointers, ARRAY_COUNT(Z_Construct_UFunction_UDevice_GetDevicePath_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x14020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UDevice_GetDevicePath_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_UDevice_GetDevicePath_Statics::Function_MetaDataParams)) };
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UDevice_GetDevicePath_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UDevice, nullptr, "GetDevicePath", nullptr, nullptr, sizeof(Device_eventGetDevicePath_Parms), Z_Construct_UFunction_UDevice_GetDevicePath_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UDevice_GetDevicePath_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x14020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UDevice_GetDevicePath_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UDevice_GetDevicePath_Statics::Function_MetaDataParams)) };
 	UFunction* Z_Construct_UFunction_UDevice_GetDevicePath()
 	{
 		static UFunction* ReturnFunction = nullptr;
@@ -198,7 +256,7 @@ void EmptyLinkFunctionForGeneratedCodeDevice() {}
 		{ "ModuleRelativePath", "Private/Settings/Device.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UDevice_GetDevicePort_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UDevice, nullptr, "GetDevicePort", nullptr, nullptr, sizeof(Device_eventGetDevicePort_Parms), Z_Construct_UFunction_UDevice_GetDevicePort_Statics::PropPointers, ARRAY_COUNT(Z_Construct_UFunction_UDevice_GetDevicePort_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x14020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UDevice_GetDevicePort_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_UDevice_GetDevicePort_Statics::Function_MetaDataParams)) };
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UDevice_GetDevicePort_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UDevice, nullptr, "GetDevicePort", nullptr, nullptr, sizeof(Device_eventGetDevicePort_Parms), Z_Construct_UFunction_UDevice_GetDevicePort_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UDevice_GetDevicePort_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x14020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UDevice_GetDevicePort_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UDevice_GetDevicePort_Statics::Function_MetaDataParams)) };
 	UFunction* Z_Construct_UFunction_UDevice_GetDevicePort()
 	{
 		static UFunction* ReturnFunction = nullptr;
@@ -231,7 +289,7 @@ void EmptyLinkFunctionForGeneratedCodeDevice() {}
 		{ "ModuleRelativePath", "Private/Settings/Device.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UDevice_SetDeviceId_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UDevice, nullptr, "SetDeviceId", nullptr, nullptr, sizeof(Device_eventSetDeviceId_Parms), Z_Construct_UFunction_UDevice_SetDeviceId_Statics::PropPointers, ARRAY_COUNT(Z_Construct_UFunction_UDevice_SetDeviceId_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UDevice_SetDeviceId_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_UDevice_SetDeviceId_Statics::Function_MetaDataParams)) };
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UDevice_SetDeviceId_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UDevice, nullptr, "SetDeviceId", nullptr, nullptr, sizeof(Device_eventSetDeviceId_Parms), Z_Construct_UFunction_UDevice_SetDeviceId_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UDevice_SetDeviceId_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UDevice_SetDeviceId_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UDevice_SetDeviceId_Statics::Function_MetaDataParams)) };
 	UFunction* Z_Construct_UFunction_UDevice_SetDeviceId()
 	{
 		static UFunction* ReturnFunction = nullptr;
@@ -264,7 +322,7 @@ void EmptyLinkFunctionForGeneratedCodeDevice() {}
 		{ "ModuleRelativePath", "Private/Settings/Device.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UDevice_SetDeviceLine_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UDevice, nullptr, "SetDeviceLine", nullptr, nullptr, sizeof(Device_eventSetDeviceLine_Parms), Z_Construct_UFunction_UDevice_SetDeviceLine_Statics::PropPointers, ARRAY_COUNT(Z_Construct_UFunction_UDevice_SetDeviceLine_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UDevice_SetDeviceLine_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_UDevice_SetDeviceLine_Statics::Function_MetaDataParams)) };
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UDevice_SetDeviceLine_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UDevice, nullptr, "SetDeviceLine", nullptr, nullptr, sizeof(Device_eventSetDeviceLine_Parms), Z_Construct_UFunction_UDevice_SetDeviceLine_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UDevice_SetDeviceLine_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UDevice_SetDeviceLine_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UDevice_SetDeviceLine_Statics::Function_MetaDataParams)) };
 	UFunction* Z_Construct_UFunction_UDevice_SetDeviceLine()
 	{
 		static UFunction* ReturnFunction = nullptr;
@@ -297,7 +355,7 @@ void EmptyLinkFunctionForGeneratedCodeDevice() {}
 		{ "ModuleRelativePath", "Private/Settings/Device.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UDevice_SetDeviceName_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UDevice, nullptr, "SetDeviceName", nullptr, nullptr, sizeof(Device_eventSetDeviceName_Parms), Z_Construct_UFunction_UDevice_SetDeviceName_Statics::PropPointers, ARRAY_COUNT(Z_Construct_UFunction_UDevice_SetDeviceName_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UDevice_SetDeviceName_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_UDevice_SetDeviceName_Statics::Function_MetaDataParams)) };
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UDevice_SetDeviceName_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UDevice, nullptr, "SetDeviceName", nullptr, nullptr, sizeof(Device_eventSetDeviceName_Parms), Z_Construct_UFunction_UDevice_SetDeviceName_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UDevice_SetDeviceName_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UDevice_SetDeviceName_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UDevice_SetDeviceName_Statics::Function_MetaDataParams)) };
 	UFunction* Z_Construct_UFunction_UDevice_SetDeviceName()
 	{
 		static UFunction* ReturnFunction = nullptr;
@@ -330,7 +388,7 @@ void EmptyLinkFunctionForGeneratedCodeDevice() {}
 		{ "ModuleRelativePath", "Private/Settings/Device.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UDevice_SetDevicePort_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UDevice, nullptr, "SetDevicePort", nullptr, nullptr, sizeof(Device_eventSetDevicePort_Parms), Z_Construct_UFunction_UDevice_SetDevicePort_Statics::PropPointers, ARRAY_COUNT(Z_Construct_UFunction_UDevice_SetDevicePort_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UDevice_SetDevicePort_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_UDevice_SetDevicePort_Statics::Function_MetaDataParams)) };
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UDevice_SetDevicePort_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UDevice, nullptr, "SetDevicePort", nullptr, nullptr, sizeof(Device_eventSetDevicePort_Parms), Z_Construct_UFunction_UDevice_SetDevicePort_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UDevice_SetDevicePort_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UDevice_SetDevicePort_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UDevice_SetDevicePort_Statics::Function_MetaDataParams)) };
 	UFunction* Z_Construct_UFunction_UDevice_SetDevicePort()
 	{
 		static UFunction* ReturnFunction = nullptr;
@@ -380,15 +438,15 @@ void EmptyLinkFunctionForGeneratedCodeDevice() {}
 		(UObject* (*)())Z_Construct_UPackage__Script_RodentVR,
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_UDevice_Statics::FuncInfo[] = {
-		{ &Z_Construct_UFunction_UDevice_GetDeviceId, "GetDeviceId" }, // 3808934465
-		{ &Z_Construct_UFunction_UDevice_GetDeviceLine, "GetDeviceLine" }, // 1912904908
-		{ &Z_Construct_UFunction_UDevice_GetDeviceName, "GetDeviceName" }, // 643727199
-		{ &Z_Construct_UFunction_UDevice_GetDevicePath, "GetDevicePath" }, // 2938469330
-		{ &Z_Construct_UFunction_UDevice_GetDevicePort, "GetDevicePort" }, // 3433718213
-		{ &Z_Construct_UFunction_UDevice_SetDeviceId, "SetDeviceId" }, // 40774067
-		{ &Z_Construct_UFunction_UDevice_SetDeviceLine, "SetDeviceLine" }, // 3891964387
-		{ &Z_Construct_UFunction_UDevice_SetDeviceName, "SetDeviceName" }, // 1268897086
-		{ &Z_Construct_UFunction_UDevice_SetDevicePort, "SetDevicePort" }, // 1213629689
+		{ &Z_Construct_UFunction_UDevice_GetDeviceId, "GetDeviceId" }, // 56753336
+		{ &Z_Construct_UFunction_UDevice_GetDeviceLine, "GetDeviceLine" }, // 1896551400
+		{ &Z_Construct_UFunction_UDevice_GetDeviceName, "GetDeviceName" }, // 2071355862
+		{ &Z_Construct_UFunction_UDevice_GetDevicePath, "GetDevicePath" }, // 556952650
+		{ &Z_Construct_UFunction_UDevice_GetDevicePort, "GetDevicePort" }, // 1306872194
+		{ &Z_Construct_UFunction_UDevice_SetDeviceId, "SetDeviceId" }, // 2928806824
+		{ &Z_Construct_UFunction_UDevice_SetDeviceLine, "SetDeviceLine" }, // 3351934670
+		{ &Z_Construct_UFunction_UDevice_SetDeviceName, "SetDeviceName" }, // 1898340720
+		{ &Z_Construct_UFunction_UDevice_SetDevicePort, "SetDevicePort" }, // 2934619031
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UDevice_Statics::Class_MetaDataParams[] = {
@@ -406,7 +464,7 @@ void EmptyLinkFunctionForGeneratedCodeDevice() {}
 		{ "ModuleRelativePath", "Private/Settings/Device.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UClass_UDevice_Statics::NewProp_DevicePath = { "DevicePath", nullptr, (EPropertyFlags)0x0040000000002014, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UDevice, DevicePath), METADATA_PARAMS(Z_Construct_UClass_UDevice_Statics::NewProp_DevicePath_MetaData, ARRAY_COUNT(Z_Construct_UClass_UDevice_Statics::NewProp_DevicePath_MetaData)) };
+	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UClass_UDevice_Statics::NewProp_DevicePath = { "DevicePath", nullptr, (EPropertyFlags)0x0040000000002014, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UDevice, DevicePath), METADATA_PARAMS(Z_Construct_UClass_UDevice_Statics::NewProp_DevicePath_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UDevice_Statics::NewProp_DevicePath_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UDevice_Statics::NewProp_DeviceLine_MetaData[] = {
 		{ "BlueprintGetter", "GetDeviceLine" },
@@ -415,7 +473,7 @@ void EmptyLinkFunctionForGeneratedCodeDevice() {}
 		{ "ModuleRelativePath", "Private/Settings/Device.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UClass_UDevice_Statics::NewProp_DeviceLine = { "DeviceLine", nullptr, (EPropertyFlags)0x0040000000000004, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UDevice, DeviceLine), METADATA_PARAMS(Z_Construct_UClass_UDevice_Statics::NewProp_DeviceLine_MetaData, ARRAY_COUNT(Z_Construct_UClass_UDevice_Statics::NewProp_DeviceLine_MetaData)) };
+	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UClass_UDevice_Statics::NewProp_DeviceLine = { "DeviceLine", nullptr, (EPropertyFlags)0x0040000000000004, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UDevice, DeviceLine), METADATA_PARAMS(Z_Construct_UClass_UDevice_Statics::NewProp_DeviceLine_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UDevice_Statics::NewProp_DeviceLine_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UDevice_Statics::NewProp_DevicePort_MetaData[] = {
 		{ "BlueprintGetter", "GetDevicePort" },
@@ -424,7 +482,7 @@ void EmptyLinkFunctionForGeneratedCodeDevice() {}
 		{ "ModuleRelativePath", "Private/Settings/Device.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UClass_UDevice_Statics::NewProp_DevicePort = { "DevicePort", nullptr, (EPropertyFlags)0x0040000000000004, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UDevice, DevicePort), METADATA_PARAMS(Z_Construct_UClass_UDevice_Statics::NewProp_DevicePort_MetaData, ARRAY_COUNT(Z_Construct_UClass_UDevice_Statics::NewProp_DevicePort_MetaData)) };
+	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UClass_UDevice_Statics::NewProp_DevicePort = { "DevicePort", nullptr, (EPropertyFlags)0x0040000000000004, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UDevice, DevicePort), METADATA_PARAMS(Z_Construct_UClass_UDevice_Statics::NewProp_DevicePort_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UDevice_Statics::NewProp_DevicePort_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UDevice_Statics::NewProp_DeviceName_MetaData[] = {
 		{ "BlueprintGetter", "GetDeviceName" },
@@ -433,7 +491,7 @@ void EmptyLinkFunctionForGeneratedCodeDevice() {}
 		{ "ModuleRelativePath", "Private/Settings/Device.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UClass_UDevice_Statics::NewProp_DeviceName = { "DeviceName", nullptr, (EPropertyFlags)0x0040000000000004, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UDevice, DeviceName), METADATA_PARAMS(Z_Construct_UClass_UDevice_Statics::NewProp_DeviceName_MetaData, ARRAY_COUNT(Z_Construct_UClass_UDevice_Statics::NewProp_DeviceName_MetaData)) };
+	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UClass_UDevice_Statics::NewProp_DeviceName = { "DeviceName", nullptr, (EPropertyFlags)0x0040000000000004, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UDevice, DeviceName), METADATA_PARAMS(Z_Construct_UClass_UDevice_Statics::NewProp_DeviceName_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UDevice_Statics::NewProp_DeviceName_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UDevice_Statics::NewProp_DeviceId_MetaData[] = {
 		{ "BlueprintGetter", "GetDeviceId" },
@@ -442,7 +500,7 @@ void EmptyLinkFunctionForGeneratedCodeDevice() {}
 		{ "ModuleRelativePath", "Private/Settings/Device.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UClass_UDevice_Statics::NewProp_DeviceId = { "DeviceId", nullptr, (EPropertyFlags)0x0040000000000004, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UDevice, DeviceId), METADATA_PARAMS(Z_Construct_UClass_UDevice_Statics::NewProp_DeviceId_MetaData, ARRAY_COUNT(Z_Construct_UClass_UDevice_Statics::NewProp_DeviceId_MetaData)) };
+	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UClass_UDevice_Statics::NewProp_DeviceId = { "DeviceId", nullptr, (EPropertyFlags)0x0040000000000004, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UDevice, DeviceId), METADATA_PARAMS(Z_Construct_UClass_UDevice_Statics::NewProp_DeviceId_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UDevice_Statics::NewProp_DeviceId_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UDevice_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UDevice_Statics::NewProp_DevicePath,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UDevice_Statics::NewProp_DeviceLine,
@@ -461,12 +519,12 @@ void EmptyLinkFunctionForGeneratedCodeDevice() {}
 		FuncInfo,
 		Z_Construct_UClass_UDevice_Statics::PropPointers,
 		nullptr,
-		ARRAY_COUNT(DependentSingletons),
-		ARRAY_COUNT(FuncInfo),
-		ARRAY_COUNT(Z_Construct_UClass_UDevice_Statics::PropPointers),
+		UE_ARRAY_COUNT(DependentSingletons),
+		UE_ARRAY_COUNT(FuncInfo),
+		UE_ARRAY_COUNT(Z_Construct_UClass_UDevice_Statics::PropPointers),
 		0,
 		0x000000A0u,
-		METADATA_PARAMS(Z_Construct_UClass_UDevice_Statics::Class_MetaDataParams, ARRAY_COUNT(Z_Construct_UClass_UDevice_Statics::Class_MetaDataParams))
+		METADATA_PARAMS(Z_Construct_UClass_UDevice_Statics::Class_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UClass_UDevice_Statics::Class_MetaDataParams))
 	};
 	UClass* Z_Construct_UClass_UDevice()
 	{
@@ -477,7 +535,7 @@ void EmptyLinkFunctionForGeneratedCodeDevice() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UDevice, 368512163);
+	IMPLEMENT_CLASS(UDevice, 780268884);
 	template<> RODENTVR_API UClass* StaticClass<UDevice>()
 	{
 		return UDevice::StaticClass();

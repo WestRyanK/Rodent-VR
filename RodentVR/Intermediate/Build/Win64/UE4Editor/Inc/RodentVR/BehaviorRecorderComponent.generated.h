@@ -1,4 +1,4 @@
-// Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
+// Copyright Epic Games, Inc. All Rights Reserved.
 /*===========================================================================
 	Generated code exported from UnrealHeaderTool.
 	DO NOT modify this manually! Edit the corresponding .h files instead!
@@ -13,78 +13,21 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define RODENTVR_BehaviorRecorderComponent_generated_h
 
+#define RodentVR_Source_RodentVR_Private_BehaviorRecording_BehaviorRecorderComponent_h_14_SPARSE_DATA
 #define RodentVR_Source_RodentVR_Private_BehaviorRecording_BehaviorRecorderComponent_h_14_RPC_WRAPPERS \
  \
-	DECLARE_FUNCTION(execOnMazeFinished) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->OnMazeFinished(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execOnMazeLoaded) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->OnMazeLoaded(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execOnRewardRegionEnter) \
-	{ \
-		P_GET_PROPERTY(UIntProperty,Z_Param_RegionEnteredId); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->OnRewardRegionEnter(Z_Param_RegionEnteredId); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execSave) \
-	{ \
-		P_GET_PROPERTY(UStrProperty,Z_Param_Filename); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->Save(Z_Param_Filename); \
-		P_NATIVE_END; \
-	}
+	DECLARE_FUNCTION(execOnMazeFinished); \
+	DECLARE_FUNCTION(execOnMazeLoaded); \
+	DECLARE_FUNCTION(execOnRewardRegionEnter); \
+	DECLARE_FUNCTION(execSave);
 
 
 #define RodentVR_Source_RodentVR_Private_BehaviorRecording_BehaviorRecorderComponent_h_14_RPC_WRAPPERS_NO_PURE_DECLS \
  \
-	DECLARE_FUNCTION(execOnMazeFinished) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->OnMazeFinished(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execOnMazeLoaded) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->OnMazeLoaded(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execOnRewardRegionEnter) \
-	{ \
-		P_GET_PROPERTY(UIntProperty,Z_Param_RegionEnteredId); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->OnRewardRegionEnter(Z_Param_RegionEnteredId); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execSave) \
-	{ \
-		P_GET_PROPERTY(UStrProperty,Z_Param_Filename); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->Save(Z_Param_Filename); \
-		P_NATIVE_END; \
-	}
+	DECLARE_FUNCTION(execOnMazeFinished); \
+	DECLARE_FUNCTION(execOnMazeLoaded); \
+	DECLARE_FUNCTION(execOnRewardRegionEnter); \
+	DECLARE_FUNCTION(execSave);
 
 
 #define RodentVR_Source_RodentVR_Private_BehaviorRecording_BehaviorRecorderComponent_h_14_INCLASS_NO_PURE_DECLS \
@@ -135,6 +78,7 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UBehaviorRecorderComponent); \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
 	RodentVR_Source_RodentVR_Private_BehaviorRecording_BehaviorRecorderComponent_h_14_PRIVATE_PROPERTY_OFFSET \
+	RodentVR_Source_RodentVR_Private_BehaviorRecording_BehaviorRecorderComponent_h_14_SPARSE_DATA \
 	RodentVR_Source_RodentVR_Private_BehaviorRecording_BehaviorRecorderComponent_h_14_RPC_WRAPPERS \
 	RodentVR_Source_RodentVR_Private_BehaviorRecording_BehaviorRecorderComponent_h_14_INCLASS \
 	RodentVR_Source_RodentVR_Private_BehaviorRecording_BehaviorRecorderComponent_h_14_STANDARD_CONSTRUCTORS \
@@ -146,6 +90,7 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
 	RodentVR_Source_RodentVR_Private_BehaviorRecording_BehaviorRecorderComponent_h_14_PRIVATE_PROPERTY_OFFSET \
+	RodentVR_Source_RodentVR_Private_BehaviorRecording_BehaviorRecorderComponent_h_14_SPARSE_DATA \
 	RodentVR_Source_RodentVR_Private_BehaviorRecording_BehaviorRecorderComponent_h_14_RPC_WRAPPERS_NO_PURE_DECLS \
 	RodentVR_Source_RodentVR_Private_BehaviorRecording_BehaviorRecorderComponent_h_14_INCLASS_NO_PURE_DECLS \
 	RodentVR_Source_RodentVR_Private_BehaviorRecording_BehaviorRecorderComponent_h_14_ENHANCED_CONSTRUCTORS \

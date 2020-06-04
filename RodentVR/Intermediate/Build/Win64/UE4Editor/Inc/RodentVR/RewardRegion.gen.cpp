@@ -1,4 +1,4 @@
-// Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
+// Copyright Epic Games, Inc. All Rights Reserved.
 /*===========================================================================
 	Generated code exported from UnrealHeaderTool.
 	DO NOT modify this manually! Edit the corresponding .h files instead!
@@ -18,7 +18,6 @@ void EmptyLinkFunctionForGeneratedCodeRewardRegion() {}
 	RODENTVR_API UClass* Z_Construct_UClass_ARewardRegion_NoRegister();
 	RODENTVR_API UClass* Z_Construct_UClass_ARewardRegion();
 	ENGINE_API UClass* Z_Construct_UClass_AActor();
-	RODENTVR_API UFunction* Z_Construct_UFunction_ARewardRegion_OnRewardRegionEnter();
 // End Cross Module References
 	struct Z_Construct_UDelegateFunction_RodentVR_RewardRegionEnterDelegate__DelegateSignature_Statics
 	{
@@ -42,7 +41,7 @@ void EmptyLinkFunctionForGeneratedCodeRewardRegion() {}
 		{ "ModuleRelativePath", "Private/RewardRegion.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FFunctionParams Z_Construct_UDelegateFunction_RodentVR_RewardRegionEnterDelegate__DelegateSignature_Statics::FuncParams = { (UObject*(*)())Z_Construct_UPackage__Script_RodentVR, nullptr, "RewardRegionEnterDelegate__DelegateSignature", nullptr, nullptr, sizeof(_Script_RodentVR_eventRewardRegionEnterDelegate_Parms), Z_Construct_UDelegateFunction_RodentVR_RewardRegionEnterDelegate__DelegateSignature_Statics::PropPointers, ARRAY_COUNT(Z_Construct_UDelegateFunction_RodentVR_RewardRegionEnterDelegate__DelegateSignature_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00130000, 0, 0, METADATA_PARAMS(Z_Construct_UDelegateFunction_RodentVR_RewardRegionEnterDelegate__DelegateSignature_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UDelegateFunction_RodentVR_RewardRegionEnterDelegate__DelegateSignature_Statics::Function_MetaDataParams)) };
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UDelegateFunction_RodentVR_RewardRegionEnterDelegate__DelegateSignature_Statics::FuncParams = { (UObject*(*)())Z_Construct_UPackage__Script_RodentVR, nullptr, "RewardRegionEnterDelegate__DelegateSignature", nullptr, nullptr, sizeof(_Script_RodentVR_eventRewardRegionEnterDelegate_Parms), Z_Construct_UDelegateFunction_RodentVR_RewardRegionEnterDelegate__DelegateSignature_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_RodentVR_RewardRegionEnterDelegate__DelegateSignature_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00130000, 0, 0, METADATA_PARAMS(Z_Construct_UDelegateFunction_RodentVR_RewardRegionEnterDelegate__DelegateSignature_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_RodentVR_RewardRegionEnterDelegate__DelegateSignature_Statics::Function_MetaDataParams)) };
 	UFunction* Z_Construct_UDelegateFunction_RodentVR_RewardRegionEnterDelegate__DelegateSignature()
 	{
 		static UFunction* ReturnFunction = nullptr;
@@ -52,13 +51,21 @@ void EmptyLinkFunctionForGeneratedCodeRewardRegion() {}
 		}
 		return ReturnFunction;
 	}
+	DEFINE_FUNCTION(ARewardRegion::execOnRewardRegionEnter)
+	{
+		P_GET_PROPERTY(FIntProperty,Z_Param_RegionEnteredId);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->OnRewardRegionEnter(Z_Param_RegionEnteredId);
+		P_NATIVE_END;
+	}
 	void ARewardRegion::StaticRegisterNativesARewardRegion()
 	{
 		UClass* Class = ARewardRegion::StaticClass();
 		static const FNameNativePtrPair Funcs[] = {
 			{ "OnRewardRegionEnter", &ARewardRegion::execOnRewardRegionEnter },
 		};
-		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, ARRAY_COUNT(Funcs));
+		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 	}
 	struct Z_Construct_UFunction_ARewardRegion_OnRewardRegionEnter_Statics
 	{
@@ -83,7 +90,7 @@ void EmptyLinkFunctionForGeneratedCodeRewardRegion() {}
 		{ "ModuleRelativePath", "Private/RewardRegion.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ARewardRegion_OnRewardRegionEnter_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ARewardRegion, nullptr, "OnRewardRegionEnter", nullptr, nullptr, sizeof(RewardRegion_eventOnRewardRegionEnter_Parms), Z_Construct_UFunction_ARewardRegion_OnRewardRegionEnter_Statics::PropPointers, ARRAY_COUNT(Z_Construct_UFunction_ARewardRegion_OnRewardRegionEnter_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ARewardRegion_OnRewardRegionEnter_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_ARewardRegion_OnRewardRegionEnter_Statics::Function_MetaDataParams)) };
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ARewardRegion_OnRewardRegionEnter_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ARewardRegion, nullptr, "OnRewardRegionEnter", nullptr, nullptr, sizeof(RewardRegion_eventOnRewardRegionEnter_Parms), Z_Construct_UFunction_ARewardRegion_OnRewardRegionEnter_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ARewardRegion_OnRewardRegionEnter_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ARewardRegion_OnRewardRegionEnter_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ARewardRegion_OnRewardRegionEnter_Statics::Function_MetaDataParams)) };
 	UFunction* Z_Construct_UFunction_ARewardRegion_OnRewardRegionEnter()
 	{
 		static UFunction* ReturnFunction = nullptr;
@@ -147,7 +154,7 @@ void EmptyLinkFunctionForGeneratedCodeRewardRegion() {}
 		(UObject* (*)())Z_Construct_UPackage__Script_RodentVR,
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_ARewardRegion_Statics::FuncInfo[] = {
-		{ &Z_Construct_UFunction_ARewardRegion_OnRewardRegionEnter, "OnRewardRegionEnter" }, // 586584350
+		{ &Z_Construct_UFunction_ARewardRegion_OnRewardRegionEnter, "OnRewardRegionEnter" }, // 2556420245
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ARewardRegion_Statics::Class_MetaDataParams[] = {
@@ -165,42 +172,42 @@ void EmptyLinkFunctionForGeneratedCodeRewardRegion() {}
 	{
 		((ARewardRegion*)Obj)->IsToneEnabled = 1;
 	}
-	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UClass_ARewardRegion_Statics::NewProp_IsToneEnabled = { "IsToneEnabled", nullptr, (EPropertyFlags)0x0010000000020005, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(ARewardRegion), &Z_Construct_UClass_ARewardRegion_Statics::NewProp_IsToneEnabled_SetBit, METADATA_PARAMS(Z_Construct_UClass_ARewardRegion_Statics::NewProp_IsToneEnabled_MetaData, ARRAY_COUNT(Z_Construct_UClass_ARewardRegion_Statics::NewProp_IsToneEnabled_MetaData)) };
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UClass_ARewardRegion_Statics::NewProp_IsToneEnabled = { "IsToneEnabled", nullptr, (EPropertyFlags)0x0010000000020005, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(ARewardRegion), &Z_Construct_UClass_ARewardRegion_Statics::NewProp_IsToneEnabled_SetBit, METADATA_PARAMS(Z_Construct_UClass_ARewardRegion_Statics::NewProp_IsToneEnabled_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ARewardRegion_Statics::NewProp_IsToneEnabled_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ARewardRegion_Statics::NewProp_ToneVolumeMultiplier_MetaData[] = {
 		{ "Category", "RewardRegion" },
 		{ "ModuleRelativePath", "Private/RewardRegion.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ARewardRegion_Statics::NewProp_ToneVolumeMultiplier = { "ToneVolumeMultiplier", nullptr, (EPropertyFlags)0x0010000000020005, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ARewardRegion, ToneVolumeMultiplier), METADATA_PARAMS(Z_Construct_UClass_ARewardRegion_Statics::NewProp_ToneVolumeMultiplier_MetaData, ARRAY_COUNT(Z_Construct_UClass_ARewardRegion_Statics::NewProp_ToneVolumeMultiplier_MetaData)) };
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ARewardRegion_Statics::NewProp_ToneVolumeMultiplier = { "ToneVolumeMultiplier", nullptr, (EPropertyFlags)0x0010000000020005, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ARewardRegion, ToneVolumeMultiplier), METADATA_PARAMS(Z_Construct_UClass_ARewardRegion_Statics::NewProp_ToneVolumeMultiplier_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ARewardRegion_Statics::NewProp_ToneVolumeMultiplier_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ARewardRegion_Statics::NewProp_TonePitchHz_MetaData[] = {
 		{ "Category", "RewardRegion" },
 		{ "ModuleRelativePath", "Private/RewardRegion.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ARewardRegion_Statics::NewProp_TonePitchHz = { "TonePitchHz", nullptr, (EPropertyFlags)0x0010000000020005, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ARewardRegion, TonePitchHz), METADATA_PARAMS(Z_Construct_UClass_ARewardRegion_Statics::NewProp_TonePitchHz_MetaData, ARRAY_COUNT(Z_Construct_UClass_ARewardRegion_Statics::NewProp_TonePitchHz_MetaData)) };
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ARewardRegion_Statics::NewProp_TonePitchHz = { "TonePitchHz", nullptr, (EPropertyFlags)0x0010000000020005, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ARewardRegion, TonePitchHz), METADATA_PARAMS(Z_Construct_UClass_ARewardRegion_Statics::NewProp_TonePitchHz_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ARewardRegion_Statics::NewProp_TonePitchHz_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ARewardRegion_Statics::NewProp_ToneDurationSec_MetaData[] = {
 		{ "Category", "RewardRegion" },
 		{ "ModuleRelativePath", "Private/RewardRegion.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ARewardRegion_Statics::NewProp_ToneDurationSec = { "ToneDurationSec", nullptr, (EPropertyFlags)0x0010000000020005, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ARewardRegion, ToneDurationSec), METADATA_PARAMS(Z_Construct_UClass_ARewardRegion_Statics::NewProp_ToneDurationSec_MetaData, ARRAY_COUNT(Z_Construct_UClass_ARewardRegion_Statics::NewProp_ToneDurationSec_MetaData)) };
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ARewardRegion_Statics::NewProp_ToneDurationSec = { "ToneDurationSec", nullptr, (EPropertyFlags)0x0010000000020005, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ARewardRegion, ToneDurationSec), METADATA_PARAMS(Z_Construct_UClass_ARewardRegion_Statics::NewProp_ToneDurationSec_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ARewardRegion_Statics::NewProp_ToneDurationSec_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ARewardRegion_Statics::NewProp_RewardDurationSec_MetaData[] = {
 		{ "Category", "RewardRegion" },
 		{ "ModuleRelativePath", "Private/RewardRegion.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ARewardRegion_Statics::NewProp_RewardDurationSec = { "RewardDurationSec", nullptr, (EPropertyFlags)0x0010000000020005, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ARewardRegion, RewardDurationSec), METADATA_PARAMS(Z_Construct_UClass_ARewardRegion_Statics::NewProp_RewardDurationSec_MetaData, ARRAY_COUNT(Z_Construct_UClass_ARewardRegion_Statics::NewProp_RewardDurationSec_MetaData)) };
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ARewardRegion_Statics::NewProp_RewardDurationSec = { "RewardDurationSec", nullptr, (EPropertyFlags)0x0010000000020005, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ARewardRegion, RewardDurationSec), METADATA_PARAMS(Z_Construct_UClass_ARewardRegion_Statics::NewProp_RewardDurationSec_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ARewardRegion_Statics::NewProp_RewardDurationSec_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ARewardRegion_Statics::NewProp_RewardDeviceId_MetaData[] = {
 		{ "Category", "RewardRegion" },
 		{ "ModuleRelativePath", "Private/RewardRegion.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FIntPropertyParams Z_Construct_UClass_ARewardRegion_Statics::NewProp_RewardDeviceId = { "RewardDeviceId", nullptr, (EPropertyFlags)0x0010000000020005, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ARewardRegion, RewardDeviceId), METADATA_PARAMS(Z_Construct_UClass_ARewardRegion_Statics::NewProp_RewardDeviceId_MetaData, ARRAY_COUNT(Z_Construct_UClass_ARewardRegion_Statics::NewProp_RewardDeviceId_MetaData)) };
+	const UE4CodeGen_Private::FIntPropertyParams Z_Construct_UClass_ARewardRegion_Statics::NewProp_RewardDeviceId = { "RewardDeviceId", nullptr, (EPropertyFlags)0x0010000000020005, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ARewardRegion, RewardDeviceId), METADATA_PARAMS(Z_Construct_UClass_ARewardRegion_Statics::NewProp_RewardDeviceId_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ARewardRegion_Statics::NewProp_RewardDeviceId_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ARewardRegion_Statics::NewProp_IsRewardDispensingEnabled_MetaData[] = {
 		{ "Category", "RewardRegion" },
@@ -211,14 +218,14 @@ void EmptyLinkFunctionForGeneratedCodeRewardRegion() {}
 	{
 		((ARewardRegion*)Obj)->IsRewardDispensingEnabled = 1;
 	}
-	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UClass_ARewardRegion_Statics::NewProp_IsRewardDispensingEnabled = { "IsRewardDispensingEnabled", nullptr, (EPropertyFlags)0x0010000000020005, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(ARewardRegion), &Z_Construct_UClass_ARewardRegion_Statics::NewProp_IsRewardDispensingEnabled_SetBit, METADATA_PARAMS(Z_Construct_UClass_ARewardRegion_Statics::NewProp_IsRewardDispensingEnabled_MetaData, ARRAY_COUNT(Z_Construct_UClass_ARewardRegion_Statics::NewProp_IsRewardDispensingEnabled_MetaData)) };
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UClass_ARewardRegion_Statics::NewProp_IsRewardDispensingEnabled = { "IsRewardDispensingEnabled", nullptr, (EPropertyFlags)0x0010000000020005, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(ARewardRegion), &Z_Construct_UClass_ARewardRegion_Statics::NewProp_IsRewardDispensingEnabled_SetBit, METADATA_PARAMS(Z_Construct_UClass_ARewardRegion_Statics::NewProp_IsRewardDispensingEnabled_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ARewardRegion_Statics::NewProp_IsRewardDispensingEnabled_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ARewardRegion_Statics::NewProp_RegionId_MetaData[] = {
 		{ "Category", "RewardRegion" },
 		{ "ModuleRelativePath", "Private/RewardRegion.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FIntPropertyParams Z_Construct_UClass_ARewardRegion_Statics::NewProp_RegionId = { "RegionId", nullptr, (EPropertyFlags)0x0010000000020005, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ARewardRegion, RegionId), METADATA_PARAMS(Z_Construct_UClass_ARewardRegion_Statics::NewProp_RegionId_MetaData, ARRAY_COUNT(Z_Construct_UClass_ARewardRegion_Statics::NewProp_RegionId_MetaData)) };
+	const UE4CodeGen_Private::FIntPropertyParams Z_Construct_UClass_ARewardRegion_Statics::NewProp_RegionId = { "RegionId", nullptr, (EPropertyFlags)0x0010000000020005, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ARewardRegion, RegionId), METADATA_PARAMS(Z_Construct_UClass_ARewardRegion_Statics::NewProp_RegionId_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ARewardRegion_Statics::NewProp_RegionId_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ARewardRegion_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARewardRegion_Statics::NewProp_IsToneEnabled,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARewardRegion_Statics::NewProp_ToneVolumeMultiplier,
@@ -234,18 +241,18 @@ void EmptyLinkFunctionForGeneratedCodeRewardRegion() {}
 	};
 	const UE4CodeGen_Private::FClassParams Z_Construct_UClass_ARewardRegion_Statics::ClassParams = {
 		&ARewardRegion::StaticClass,
-		nullptr,
+		"Engine",
 		&StaticCppClassTypeInfo,
 		DependentSingletons,
 		FuncInfo,
 		Z_Construct_UClass_ARewardRegion_Statics::PropPointers,
 		nullptr,
-		ARRAY_COUNT(DependentSingletons),
-		ARRAY_COUNT(FuncInfo),
-		ARRAY_COUNT(Z_Construct_UClass_ARewardRegion_Statics::PropPointers),
+		UE_ARRAY_COUNT(DependentSingletons),
+		UE_ARRAY_COUNT(FuncInfo),
+		UE_ARRAY_COUNT(Z_Construct_UClass_ARewardRegion_Statics::PropPointers),
 		0,
-		0x008000A0u,
-		METADATA_PARAMS(Z_Construct_UClass_ARewardRegion_Statics::Class_MetaDataParams, ARRAY_COUNT(Z_Construct_UClass_ARewardRegion_Statics::Class_MetaDataParams))
+		0x008000A4u,
+		METADATA_PARAMS(Z_Construct_UClass_ARewardRegion_Statics::Class_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UClass_ARewardRegion_Statics::Class_MetaDataParams))
 	};
 	UClass* Z_Construct_UClass_ARewardRegion()
 	{
@@ -256,7 +263,7 @@ void EmptyLinkFunctionForGeneratedCodeRewardRegion() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ARewardRegion, 3394923583);
+	IMPLEMENT_CLASS(ARewardRegion, 3603126253);
 	template<> RODENTVR_API UClass* StaticClass<ARewardRegion>()
 	{
 		return ARewardRegion::StaticClass();

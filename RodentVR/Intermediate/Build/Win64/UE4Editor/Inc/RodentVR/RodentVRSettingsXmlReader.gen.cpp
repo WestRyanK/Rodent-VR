@@ -1,4 +1,4 @@
-// Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
+// Copyright Epic Games, Inc. All Rights Reserved.
 /*===========================================================================
 	Generated code exported from UnrealHeaderTool.
 	DO NOT modify this manually! Edit the corresponding .h files instead!
@@ -17,16 +17,23 @@ void EmptyLinkFunctionForGeneratedCodeRodentVRSettingsXmlReader() {}
 	RODENTVR_API UClass* Z_Construct_UClass_URodentVRSettingsXmlReader();
 	COREUOBJECT_API UClass* Z_Construct_UClass_UObject();
 	UPackage* Z_Construct_UPackage__Script_RodentVR();
-	RODENTVR_API UFunction* Z_Construct_UFunction_URodentVRSettingsXmlReader_LoadRodentVRSettingsFromFile();
 	RODENTVR_API UClass* Z_Construct_UClass_URodentVRSettings_NoRegister();
 // End Cross Module References
+	DEFINE_FUNCTION(URodentVRSettingsXmlReader::execLoadRodentVRSettingsFromFile)
+	{
+		P_GET_PROPERTY(FStrProperty,Z_Param_RodentVRSettingsFileName);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(URodentVRSettings**)Z_Param__Result=URodentVRSettingsXmlReader::LoadRodentVRSettingsFromFile(Z_Param_RodentVRSettingsFileName);
+		P_NATIVE_END;
+	}
 	void URodentVRSettingsXmlReader::StaticRegisterNativesURodentVRSettingsXmlReader()
 	{
 		UClass* Class = URodentVRSettingsXmlReader::StaticClass();
 		static const FNameNativePtrPair Funcs[] = {
 			{ "LoadRodentVRSettingsFromFile", &URodentVRSettingsXmlReader::execLoadRodentVRSettingsFromFile },
 		};
-		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, ARRAY_COUNT(Funcs));
+		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 	}
 	struct Z_Construct_UFunction_URodentVRSettingsXmlReader_LoadRodentVRSettingsFromFile_Statics
 	{
@@ -54,7 +61,7 @@ void EmptyLinkFunctionForGeneratedCodeRodentVRSettingsXmlReader() {}
 		{ "ModuleRelativePath", "Private/Settings/RodentVRSettingsXmlReader.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_URodentVRSettingsXmlReader_LoadRodentVRSettingsFromFile_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_URodentVRSettingsXmlReader, nullptr, "LoadRodentVRSettingsFromFile", nullptr, nullptr, sizeof(RodentVRSettingsXmlReader_eventLoadRodentVRSettingsFromFile_Parms), Z_Construct_UFunction_URodentVRSettingsXmlReader_LoadRodentVRSettingsFromFile_Statics::PropPointers, ARRAY_COUNT(Z_Construct_UFunction_URodentVRSettingsXmlReader_LoadRodentVRSettingsFromFile_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04022401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_URodentVRSettingsXmlReader_LoadRodentVRSettingsFromFile_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_URodentVRSettingsXmlReader_LoadRodentVRSettingsFromFile_Statics::Function_MetaDataParams)) };
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_URodentVRSettingsXmlReader_LoadRodentVRSettingsFromFile_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_URodentVRSettingsXmlReader, nullptr, "LoadRodentVRSettingsFromFile", nullptr, nullptr, sizeof(RodentVRSettingsXmlReader_eventLoadRodentVRSettingsFromFile_Parms), Z_Construct_UFunction_URodentVRSettingsXmlReader_LoadRodentVRSettingsFromFile_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_URodentVRSettingsXmlReader_LoadRodentVRSettingsFromFile_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04022401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_URodentVRSettingsXmlReader_LoadRodentVRSettingsFromFile_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_URodentVRSettingsXmlReader_LoadRodentVRSettingsFromFile_Statics::Function_MetaDataParams)) };
 	UFunction* Z_Construct_UFunction_URodentVRSettingsXmlReader_LoadRodentVRSettingsFromFile()
 	{
 		static UFunction* ReturnFunction = nullptr;
@@ -83,7 +90,7 @@ void EmptyLinkFunctionForGeneratedCodeRodentVRSettingsXmlReader() {}
 		(UObject* (*)())Z_Construct_UPackage__Script_RodentVR,
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_URodentVRSettingsXmlReader_Statics::FuncInfo[] = {
-		{ &Z_Construct_UFunction_URodentVRSettingsXmlReader_LoadRodentVRSettingsFromFile, "LoadRodentVRSettingsFromFile" }, // 1235926956
+		{ &Z_Construct_UFunction_URodentVRSettingsXmlReader_LoadRodentVRSettingsFromFile, "LoadRodentVRSettingsFromFile" }, // 3464855418
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_URodentVRSettingsXmlReader_Statics::Class_MetaDataParams[] = {
@@ -105,12 +112,12 @@ void EmptyLinkFunctionForGeneratedCodeRodentVRSettingsXmlReader() {}
 		FuncInfo,
 		nullptr,
 		nullptr,
-		ARRAY_COUNT(DependentSingletons),
-		ARRAY_COUNT(FuncInfo),
+		UE_ARRAY_COUNT(DependentSingletons),
+		UE_ARRAY_COUNT(FuncInfo),
 		0,
 		0,
 		0x000000A0u,
-		METADATA_PARAMS(Z_Construct_UClass_URodentVRSettingsXmlReader_Statics::Class_MetaDataParams, ARRAY_COUNT(Z_Construct_UClass_URodentVRSettingsXmlReader_Statics::Class_MetaDataParams))
+		METADATA_PARAMS(Z_Construct_UClass_URodentVRSettingsXmlReader_Statics::Class_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UClass_URodentVRSettingsXmlReader_Statics::Class_MetaDataParams))
 	};
 	UClass* Z_Construct_UClass_URodentVRSettingsXmlReader()
 	{
@@ -121,7 +128,7 @@ void EmptyLinkFunctionForGeneratedCodeRodentVRSettingsXmlReader() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(URodentVRSettingsXmlReader, 1993623636);
+	IMPLEMENT_CLASS(URodentVRSettingsXmlReader, 2930414020);
 	template<> RODENTVR_API UClass* StaticClass<URodentVRSettingsXmlReader>()
 	{
 		return URodentVRSettingsXmlReader::StaticClass();
