@@ -5,8 +5,8 @@
 
 UActorSettings::UActorSettings()
 {
-	this->SetPosition(FVector());
-	this->SetRotation(FRotator());
+	this->SetPosition(FVector(0.0f, 0.0f, 0.0f));
+	this->SetRotation(FRotator(0.0f, 0.0f, 0.0f));
 	this->SetScale(FVector(1.0f, 1.0f, 1.0f));
 }
 
