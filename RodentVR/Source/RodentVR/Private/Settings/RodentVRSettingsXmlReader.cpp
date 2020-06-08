@@ -93,6 +93,7 @@ void URodentVRSettingsXmlReader::LoadPlaylist(URodentVRSettings* Settings, rapid
 		for (rapidxml::xml_node<>* MazeNode = PlaylistNode->first_node("MazeFile"); MazeNode; MazeNode = MazeNode->next_sibling())
 		{
 			FString MazeFileName = UXmlFileReader::GetStringFromAttribute(MazeNode, "Path", "");
+
 			UMazeSettings* MazeSettings = Settings->GetMazeFromPlaylistByFileName(MazeFileName);
 			if (MazeSettings == nullptr)
 			{

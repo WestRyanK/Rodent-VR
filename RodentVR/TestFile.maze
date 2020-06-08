@@ -2,7 +2,7 @@
 	<BehaviorRecording Filename=""/>
 	<PlayerStart>
 		<Position X="0.000000" Y="500.000000" Z="0.000000"/>
-		<Rotation Angle="-89.999992"/>
+		<Rotation Angle="-89.999977"/>
 	</PlayerStart>
 	<Textures>
 		<Texture SlotName="Floor" TextureName="MaterialBlack"/>
@@ -23,8 +23,6 @@
 			<Scale X="1.000000" Y="1.000000" Z="1.000000"/>
 		</MazeObject>
 	</MazeObjects>
-	<MazeObjects>
-		<Condition ConditionType="TimeLimit" TimeLimitSec="20.000000"/>
-	</MazeObjects>
+	<MazeObjects/>
 </Maze>
 

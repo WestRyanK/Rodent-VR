@@ -950,6 +950,35 @@ C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Source\RodentVR\Pri
 C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\UE4Editor\Inc\RodentVR\TimeLimitStopCondition.generated.h
 C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Source\RodentVR\Private\StopConditions/EnterRegionStopCondition.h
 C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\UE4Editor\Inc\RodentVR\EnterRegionStopCondition.generated.h
+C:/Users/Ryan/Drive/BYU/2018_Fall/cs_497r/Rodent-VR/RodentVR/Source/RodentVR/Private/Settings/MazeObjectSettings.cpp
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Source\RodentVR\Private\Settings\MazeObjectSettings.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Source\RodentVR\Private\Settings/ActorSettings.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\UE4Editor\Inc\RodentVR\ActorSettings.generated.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\UE4Editor\Inc\RodentVR\MazeObjectSettings.generated.h
+C:/Users/Ryan/Drive/BYU/2018_Fall/cs_497r/Rodent-VR/RodentVR/Source/RodentVR/Private/Settings/MazeSettings.cpp
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Source\RodentVR\Private\Settings\MazeSettings.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\UE4Editor\Inc\RodentVR\MazeSettings.generated.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Source\RodentVR\Private\Simulator/AssetLoader.h
+C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\ImageWrapper\Public\IImageWrapper.h
+C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\ImageWrapper\Public\IImageWrapperModule.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\UE4Editor\Inc\RodentVR\AssetLoader.generated.h
+C:/Users/Ryan/Drive/BYU/2018_Fall/cs_497r/Rodent-VR/RodentVR/Source/RodentVR/Private/Settings/MazeSettingsXmlReader.cpp
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Source\RodentVR\Private\Settings\MazeSettingsXmlReader.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\UE4Editor\Inc\RodentVR\MazeSettingsXmlReader.generated.h
+C:/Users/Ryan/Drive/BYU/2018_Fall/cs_497r/Rodent-VR/RodentVR/Source/RodentVR/Private/Settings/MazeSettingsXmlWriter.cpp
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Source\RodentVR\Private\Settings\MazeSettingsXmlWriter.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Source\RodentVR\Private\Settings\XmlFileWriter.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\UE4Editor\Inc\RodentVR\XmlFileWriter.generated.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\UE4Editor\Inc\RodentVR\MazeSettingsXmlWriter.generated.h
+C:/Users/Ryan/Drive/BYU/2018_Fall/cs_497r/Rodent-VR/RodentVR/Source/RodentVR/Private/Settings/RodentVRSettings.cpp
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Source\RodentVR\Private\Settings\RodentVRSettings.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\UE4Editor\Inc\RodentVR\RodentVRSettings.generated.h
+C:/Users/Ryan/Drive/BYU/2018_Fall/cs_497r/Rodent-VR/RodentVR/Source/RodentVR/Private/Settings/RodentVRSettingsXmlReader.cpp
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Source\RodentVR\Private\Settings\RodentVRSettingsXmlReader.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\UE4Editor\Inc\RodentVR\RodentVRSettingsXmlReader.generated.h
+C:/Users/Ryan/Drive/BYU/2018_Fall/cs_497r/Rodent-VR/RodentVR/Source/RodentVR/Private/Settings/RodentVRSettingsXmlWriter.cpp
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Source\RodentVR\Private\Settings\RodentVRSettingsXmlWriter.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\UE4Editor\Inc\RodentVR\RodentVRSettingsXmlWriter.generated.h
 C:/Users/Ryan/Drive/BYU/2018_Fall/cs_497r/Rodent-VR/RodentVR/Source/RodentVR/Private/Settings/SettingsLoader.cpp
 C:/Users/Ryan/Drive/BYU/2018_Fall/cs_497r/Rodent-VR/RodentVR/Source/RodentVR/Private/Settings/XmlFileReader.cpp
 C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Engine\Classes\Kismet/KismetMathLibrary.h
@@ -957,10 +986,18 @@ C:\Program Files\Epic Games\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\In
 C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Engine\Classes\Kismet\KismetMathLibrary.inl
 C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Source\RodentVR\Private\RapidXML/rapidxml_utils.hpp
 C:/Users/Ryan/Drive/BYU/2018_Fall/cs_497r/Rodent-VR/RodentVR/Source/RodentVR/Private/Settings/XmlFileWriter.cpp
-C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Source\RodentVR\Private\Settings\XmlFileWriter.h
-C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\UE4Editor\Inc\RodentVR\XmlFileWriter.generated.h
 C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Source\RodentVR\Private\RapidXML/rapidxml_print.hpp
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\iterator
+C:/Users/Ryan/Drive/BYU/2018_Fall/cs_497r/Rodent-VR/RodentVR/Source/RodentVR/Private/Simulator/AssetLoader.cpp
+C:/Users/Ryan/Drive/BYU/2018_Fall/cs_497r/Rodent-VR/RodentVR/Source/RodentVR/Private/Simulator/Maze.cpp
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Source\RodentVR\Private\Simulator\Maze.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\UE4Editor\Inc\RodentVR\Maze.generated.h
+C:/Users/Ryan/Drive/BYU/2018_Fall/cs_497r/Rodent-VR/RodentVR/Source/RodentVR/Private/Simulator/MazeObject.cpp
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Source\RodentVR\Private\Simulator\MazeObject.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\UE4Editor\Inc\RodentVR\MazeObject.generated.h
+C:/Users/Ryan/Drive/BYU/2018_Fall/cs_497r/Rodent-VR/RodentVR/Source/RodentVR/Private/Simulator/MazeSpawner.cpp
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Source\RodentVR\Private\Simulator\MazeSpawner.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\UE4Editor\Inc\RodentVR\MazeSpawner.generated.h
 C:/Users/Ryan/Drive/BYU/2018_Fall/cs_497r/Rodent-VR/RodentVR/Source/RodentVR/Private/StopConditions/EnterRegionStopCondition.cpp
 C:/Users/Ryan/Drive/BYU/2018_Fall/cs_497r/Rodent-VR/RodentVR/Source/RodentVR/Private/StopConditions/StopCondition.cpp
 C:/Users/Ryan/Drive/BYU/2018_Fall/cs_497r/Rodent-VR/RodentVR/Source/RodentVR/Private/StopConditions/StopConditionsChecker.cpp
