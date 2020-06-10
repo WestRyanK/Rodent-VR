@@ -3,8 +3,9 @@
 
 
 #include "TimeLimitStopCondition.h"
+#include "GameFramework/GameMode.h"
 
-bool UTimeLimitStopCondition::IsStopConditionMet(ARodentGameMode* GameMode)
+bool UTimeLimitStopCondition::IsStopConditionMet(AGameMode* GameMode)
 {
 	return GameMode->GetWorld()->TimeSeconds > this->StartTime + this->TimeLimitSec;
 }

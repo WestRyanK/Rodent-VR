@@ -3,7 +3,8 @@
 
 #include "BehaviorRecorderComponent.h"
 #include "RewardRegion.h"
-#include "RodentGameMode.h"
+#include "Simulator/SimulatorGameMode.h"
+#include "Kismet/GameplayStatics.h"
 #include "CoreMinimal.h"
 #include <iostream>
 #include <fstream>
@@ -24,8 +25,8 @@ void UBehaviorRecorderComponent::BeginPlay()
 	Super::BeginPlay();
 
 	ARewardRegion::OnRewardRegionEnterDelegate.AddDynamic(this, &UBehaviorRecorderComponent::OnRewardRegionEnter);
-	ARodentGameMode::OnMazeLoadedDelegate.AddDynamic(this, &UBehaviorRecorderComponent::OnMazeLoaded);
-	ARodentGameMode::OnMazeFinishedDelegate.AddDynamic(this, &UBehaviorRecorderComponent::OnMazeFinished);
+	ASimulatorGameMode::OnMazeLoadedDelegate.AddDynamic(this, &UBehaviorRecorderComponent::OnMazeLoaded);
+	ASimulatorGameMode::OnMazeFinishedDelegate.AddDynamic(this, &UBehaviorRecorderComponent::OnMazeFinished);
 	this->OnMazeLoaded();
 }
 
@@ -35,7 +36,7 @@ void UBehaviorRecorderComponent::EndPlay(EEndPlayReason::Type EndPlayReason)
 
 	this->Save();
 	ARewardRegion::OnRewardRegionEnterDelegate.Remove(this, FName("OnRewardRegionEnter"));
-	ARodentGameMode::OnMazeLoadedDelegate.Remove(this, FName("OnMazeLoaded"));
+	ASimulatorGameMode::OnMazeLoadedDelegate.Remove(this, FName("OnMazeLoaded"));
 }
 
 void UBehaviorRecorderComponent::OnMazeLoaded()
@@ -47,8 +48,12 @@ void UBehaviorRecorderComponent::OnMazeLoaded()
 
 void UBehaviorRecorderComponent::Save()
 {
-	ARodentGameMode* GameMode = (ARodentGameMode*)GetWorld()->GetAuthGameMode();
-	this->Save(GameMode->BehaviorRecordingFilename);
+	//RodentVRGameInstance* GameInstance = (RodentVRGameInstance*)UGameplayStatics::GetGameInstance();
+	//RodentVRSettings* RodentVRSettings;
+	//this->Save(RodentVRSettings->GetMazePlaylist()[this->CurrentMazeIndex]->GetBehaviorRecordingFileName());
+
+	//ARodentGameMode* GameMode = (ARodentGameMode*)GetWorld()->GetAuthGameMode();
+	//this->Save(GameMode->BehaviorRecordingFilename);
 }
 
 void UBehaviorRecorderComponent::OnMazeFinished()

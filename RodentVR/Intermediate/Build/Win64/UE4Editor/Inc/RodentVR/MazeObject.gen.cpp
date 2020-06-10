@@ -27,6 +27,13 @@ void EmptyLinkFunctionForGeneratedCodeMazeObject() {}
 		*(FName*)Z_Param__Result=AMazeObject::GetMazeObjectTag();
 		P_NATIVE_END;
 	}
+	DEFINE_FUNCTION(AMazeObject::execUpdateFromSettings)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->UpdateFromSettings();
+		P_NATIVE_END;
+	}
 	DEFINE_FUNCTION(AMazeObject::execSetSettings)
 	{
 		P_GET_OBJECT(UMazeObjectSettings,Z_Param_SettingsValue);
@@ -49,6 +56,7 @@ void EmptyLinkFunctionForGeneratedCodeMazeObject() {}
 			{ "GetMazeObjectTag", &AMazeObject::execGetMazeObjectTag },
 			{ "GetSettings", &AMazeObject::execGetSettings },
 			{ "SetSettings", &AMazeObject::execSetSettings },
+			{ "UpdateFromSettings", &AMazeObject::execUpdateFromSettings },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 	}
@@ -150,6 +158,28 @@ void EmptyLinkFunctionForGeneratedCodeMazeObject() {}
 		}
 		return ReturnFunction;
 	}
+	struct Z_Construct_UFunction_AMazeObject_UpdateFromSettings_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AMazeObject_UpdateFromSettings_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Private/Simulator/MazeObject.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AMazeObject_UpdateFromSettings_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AMazeObject, nullptr, "UpdateFromSettings", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AMazeObject_UpdateFromSettings_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AMazeObject_UpdateFromSettings_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_AMazeObject_UpdateFromSettings()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AMazeObject_UpdateFromSettings_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
 	UClass* Z_Construct_UClass_AMazeObject_NoRegister()
 	{
 		return AMazeObject::StaticClass();
@@ -181,10 +211,13 @@ void EmptyLinkFunctionForGeneratedCodeMazeObject() {}
 		{ &Z_Construct_UFunction_AMazeObject_GetMazeObjectTag, "GetMazeObjectTag" }, // 1251226271
 		{ &Z_Construct_UFunction_AMazeObject_GetSettings, "GetSettings" }, // 3553136087
 		{ &Z_Construct_UFunction_AMazeObject_SetSettings, "SetSettings" }, // 1998082762
+		{ &Z_Construct_UFunction_AMazeObject_UpdateFromSettings, "UpdateFromSettings" }, // 4171207200
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AMazeObject_Statics::Class_MetaDataParams[] = {
+		{ "BlueprintType", "true" },
 		{ "IncludePath", "Simulator/MazeObject.h" },
+		{ "IsBlueprintBase", "true" },
 		{ "ModuleRelativePath", "Private/Simulator/MazeObject.h" },
 	};
 #endif
@@ -235,7 +268,7 @@ void EmptyLinkFunctionForGeneratedCodeMazeObject() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AMazeObject, 3031405884);
+	IMPLEMENT_CLASS(AMazeObject, 934375757);
 	template<> RODENTVR_API UClass* StaticClass<AMazeObject>()
 	{
 		return AMazeObject::StaticClass();

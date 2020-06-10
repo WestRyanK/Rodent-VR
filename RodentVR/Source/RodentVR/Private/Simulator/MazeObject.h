@@ -7,7 +7,7 @@
 #include "Settings/MazeObjectSettings.h"
 #include "MazeObject.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class AMazeObject : public AActor
 {
 	GENERATED_BODY()
@@ -28,7 +28,8 @@ public:
 	UFUNCTION(BlueprintSetter)
 		void SetSettings(UMazeObjectSettings* SettingsValue);
 
-	void UpdateMazeObject();
+	UFUNCTION(BlueprintCallable)
+	void UpdateFromSettings();
 	
 	UFUNCTION(BlueprintPure)
 		static FName GetMazeObjectTag();

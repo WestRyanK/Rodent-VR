@@ -17,6 +17,7 @@ void EmptyLinkFunctionForGeneratedCodeMazeSpawner() {}
 	RODENTVR_API UClass* Z_Construct_UClass_UMazeSpawner();
 	COREUOBJECT_API UClass* Z_Construct_UClass_UObject();
 	UPackage* Z_Construct_UPackage__Script_RodentVR();
+	RODENTVR_API UClass* Z_Construct_UClass_UStopCondition_NoRegister();
 	COREUOBJECT_API UClass* Z_Construct_UClass_UObject_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_AActor_NoRegister();
 	RODENTVR_API UClass* Z_Construct_UClass_UMazeSettings_NoRegister();
@@ -25,12 +26,13 @@ void EmptyLinkFunctionForGeneratedCodeMazeSpawner() {}
 	{
 		P_GET_OBJECT(UObject,Z_Param_WorldContextObject);
 		P_GET_OBJECT(UMazeSettings,Z_Param_MazeSettings);
-		P_GET_UBOOL(Z_Param_AreAllObjectsSelectable);
+		P_GET_UBOOL(Z_Param_IsSpawnForEditor);
 		P_GET_TMAP_REF(AActor*,UObject*,Z_Param_Out_ActorToSetting);
 		P_GET_TMAP_REF(UObject*,AActor*,Z_Param_Out_SettingToActor);
+		P_GET_TARRAY_REF(UStopCondition*,Z_Param_Out_StopConditions);
 		P_FINISH;
 		P_NATIVE_BEGIN;
-		UMazeSpawner::SpawnMaze(Z_Param_WorldContextObject,Z_Param_MazeSettings,Z_Param_AreAllObjectsSelectable,Z_Param_Out_ActorToSetting,Z_Param_Out_SettingToActor);
+		UMazeSpawner::SpawnMaze(Z_Param_WorldContextObject,Z_Param_MazeSettings,Z_Param_IsSpawnForEditor,Z_Param_Out_ActorToSetting,Z_Param_Out_SettingToActor,Z_Param_Out_StopConditions);
 		P_NATIVE_END;
 	}
 	void UMazeSpawner::StaticRegisterNativesUMazeSpawner()
@@ -47,18 +49,21 @@ void EmptyLinkFunctionForGeneratedCodeMazeSpawner() {}
 		{
 			UObject* WorldContextObject;
 			UMazeSettings* MazeSettings;
-			bool AreAllObjectsSelectable;
+			bool IsSpawnForEditor;
 			TMap<AActor*,UObject*> ActorToSetting;
 			TMap<UObject*,AActor*> SettingToActor;
+			TArray<UStopCondition*> StopConditions;
 		};
+		static const UE4CodeGen_Private::FArrayPropertyParams NewProp_StopConditions;
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_StopConditions_Inner;
 		static const UE4CodeGen_Private::FMapPropertyParams NewProp_SettingToActor;
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_SettingToActor_Key_KeyProp;
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_SettingToActor_ValueProp;
 		static const UE4CodeGen_Private::FMapPropertyParams NewProp_ActorToSetting;
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_ActorToSetting_Key_KeyProp;
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_ActorToSetting_ValueProp;
-		static void NewProp_AreAllObjectsSelectable_SetBit(void* Obj);
-		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_AreAllObjectsSelectable;
+		static void NewProp_IsSpawnForEditor_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_IsSpawnForEditor;
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_MazeSettings;
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_WorldContextObject;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
@@ -67,27 +72,31 @@ void EmptyLinkFunctionForGeneratedCodeMazeSpawner() {}
 #endif
 		static const UE4CodeGen_Private::FFunctionParams FuncParams;
 	};
+	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_UMazeSpawner_SpawnMaze_Statics::NewProp_StopConditions = { "StopConditions", nullptr, (EPropertyFlags)0x0010000000000180, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(MazeSpawner_eventSpawnMaze_Parms, StopConditions), EArrayPropertyFlags::None, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UMazeSpawner_SpawnMaze_Statics::NewProp_StopConditions_Inner = { "StopConditions", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, Z_Construct_UClass_UStopCondition_NoRegister, METADATA_PARAMS(nullptr, 0) };
 	const UE4CodeGen_Private::FMapPropertyParams Z_Construct_UFunction_UMazeSpawner_SpawnMaze_Statics::NewProp_SettingToActor = { "SettingToActor", nullptr, (EPropertyFlags)0x0010000000000180, UE4CodeGen_Private::EPropertyGenFlags::Map, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(MazeSpawner_eventSpawnMaze_Parms, SettingToActor), EMapPropertyFlags::None, METADATA_PARAMS(nullptr, 0) };
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UMazeSpawner_SpawnMaze_Statics::NewProp_SettingToActor_Key_KeyProp = { "SettingToActor_Key", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, Z_Construct_UClass_UObject_NoRegister, METADATA_PARAMS(nullptr, 0) };
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UMazeSpawner_SpawnMaze_Statics::NewProp_SettingToActor_ValueProp = { "SettingToActor", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, 1, Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(nullptr, 0) };
 	const UE4CodeGen_Private::FMapPropertyParams Z_Construct_UFunction_UMazeSpawner_SpawnMaze_Statics::NewProp_ActorToSetting = { "ActorToSetting", nullptr, (EPropertyFlags)0x0010000000000180, UE4CodeGen_Private::EPropertyGenFlags::Map, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(MazeSpawner_eventSpawnMaze_Parms, ActorToSetting), EMapPropertyFlags::None, METADATA_PARAMS(nullptr, 0) };
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UMazeSpawner_SpawnMaze_Statics::NewProp_ActorToSetting_Key_KeyProp = { "ActorToSetting_Key", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(nullptr, 0) };
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UMazeSpawner_SpawnMaze_Statics::NewProp_ActorToSetting_ValueProp = { "ActorToSetting", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, 1, Z_Construct_UClass_UObject_NoRegister, METADATA_PARAMS(nullptr, 0) };
-	void Z_Construct_UFunction_UMazeSpawner_SpawnMaze_Statics::NewProp_AreAllObjectsSelectable_SetBit(void* Obj)
+	void Z_Construct_UFunction_UMazeSpawner_SpawnMaze_Statics::NewProp_IsSpawnForEditor_SetBit(void* Obj)
 	{
-		((MazeSpawner_eventSpawnMaze_Parms*)Obj)->AreAllObjectsSelectable = 1;
+		((MazeSpawner_eventSpawnMaze_Parms*)Obj)->IsSpawnForEditor = 1;
 	}
-	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_UMazeSpawner_SpawnMaze_Statics::NewProp_AreAllObjectsSelectable = { "AreAllObjectsSelectable", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(MazeSpawner_eventSpawnMaze_Parms), &Z_Construct_UFunction_UMazeSpawner_SpawnMaze_Statics::NewProp_AreAllObjectsSelectable_SetBit, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_UMazeSpawner_SpawnMaze_Statics::NewProp_IsSpawnForEditor = { "IsSpawnForEditor", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(MazeSpawner_eventSpawnMaze_Parms), &Z_Construct_UFunction_UMazeSpawner_SpawnMaze_Statics::NewProp_IsSpawnForEditor_SetBit, METADATA_PARAMS(nullptr, 0) };
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UMazeSpawner_SpawnMaze_Statics::NewProp_MazeSettings = { "MazeSettings", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(MazeSpawner_eventSpawnMaze_Parms, MazeSettings), Z_Construct_UClass_UMazeSettings_NoRegister, METADATA_PARAMS(nullptr, 0) };
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UMazeSpawner_SpawnMaze_Statics::NewProp_WorldContextObject = { "WorldContextObject", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(MazeSpawner_eventSpawnMaze_Parms, WorldContextObject), Z_Construct_UClass_UObject_NoRegister, METADATA_PARAMS(nullptr, 0) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UMazeSpawner_SpawnMaze_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UMazeSpawner_SpawnMaze_Statics::NewProp_StopConditions,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UMazeSpawner_SpawnMaze_Statics::NewProp_StopConditions_Inner,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UMazeSpawner_SpawnMaze_Statics::NewProp_SettingToActor,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UMazeSpawner_SpawnMaze_Statics::NewProp_SettingToActor_Key_KeyProp,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UMazeSpawner_SpawnMaze_Statics::NewProp_SettingToActor_ValueProp,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UMazeSpawner_SpawnMaze_Statics::NewProp_ActorToSetting,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UMazeSpawner_SpawnMaze_Statics::NewProp_ActorToSetting_Key_KeyProp,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UMazeSpawner_SpawnMaze_Statics::NewProp_ActorToSetting_ValueProp,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UMazeSpawner_SpawnMaze_Statics::NewProp_AreAllObjectsSelectable,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UMazeSpawner_SpawnMaze_Statics::NewProp_IsSpawnForEditor,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UMazeSpawner_SpawnMaze_Statics::NewProp_MazeSettings,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UMazeSpawner_SpawnMaze_Statics::NewProp_WorldContextObject,
 	};
@@ -125,7 +134,7 @@ void EmptyLinkFunctionForGeneratedCodeMazeSpawner() {}
 		(UObject* (*)())Z_Construct_UPackage__Script_RodentVR,
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_UMazeSpawner_Statics::FuncInfo[] = {
-		{ &Z_Construct_UFunction_UMazeSpawner_SpawnMaze, "SpawnMaze" }, // 3290038685
+		{ &Z_Construct_UFunction_UMazeSpawner_SpawnMaze, "SpawnMaze" }, // 3581617095
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UMazeSpawner_Statics::Class_MetaDataParams[] = {
@@ -163,7 +172,7 @@ void EmptyLinkFunctionForGeneratedCodeMazeSpawner() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UMazeSpawner, 3513838380);
+	IMPLEMENT_CLASS(UMazeSpawner, 919964774);
 	template<> RODENTVR_API UClass* StaticClass<UMazeSpawner>()
 	{
 		return UMazeSpawner::StaticClass();

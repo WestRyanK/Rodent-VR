@@ -4,7 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "UObject/NoExportTypes.h"
-#include "RodentGameMode.h"
+#include "GameFramework/GameMode.h"
 #include "StopCondition.generated.h"
 
 /**
@@ -20,7 +20,7 @@ private:
 	FString ConditionType;
 	
 public: 
-	virtual bool IsStopConditionMet(ARodentGameMode* GameMode);
+	virtual bool IsStopConditionMet(AGameMode* GameMode);
 	UFUNCTION(BlueprintGetter)
 		virtual FString GetConditionType();
 };

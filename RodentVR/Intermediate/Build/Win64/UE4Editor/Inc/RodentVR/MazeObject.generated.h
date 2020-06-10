@@ -18,6 +18,7 @@ class UMazeObjectSettings;
 #define RodentVR_Source_RodentVR_Private_Simulator_MazeObject_h_13_RPC_WRAPPERS \
  \
 	DECLARE_FUNCTION(execGetMazeObjectTag); \
+	DECLARE_FUNCTION(execUpdateFromSettings); \
 	DECLARE_FUNCTION(execSetSettings); \
 	DECLARE_FUNCTION(execGetSettings);
 
@@ -25,6 +26,7 @@ class UMazeObjectSettings;
 #define RodentVR_Source_RodentVR_Private_Simulator_MazeObject_h_13_RPC_WRAPPERS_NO_PURE_DECLS \
  \
 	DECLARE_FUNCTION(execGetMazeObjectTag); \
+	DECLARE_FUNCTION(execUpdateFromSettings); \
 	DECLARE_FUNCTION(execSetSettings); \
 	DECLARE_FUNCTION(execGetSettings);
 

@@ -13,7 +13,7 @@ void UNIDAQ::NIDAQ_write_digital(const char* deviceName, unsigned long data)
 	TaskHandle	taskHandle=0;
 	char        errBuff[2048]={'\0'};
 	int32		written;
-
+	
 	//*********************************************
 	// DAQmx Configure Code
 	//*********************************************
@@ -53,11 +53,17 @@ Error:
 */
 void UNIDAQ::init_NIDAQ()
 {
-	TaskHandle	taskHandle=0;
-	DAQmxCreateTask("",&taskHandle);
-	DAQmxStartTask(taskHandle);
-	DAQmxStopTask(taskHandle);
-	DAQmxClearTask(taskHandle);
+	try
+	{
+		TaskHandle	taskHandle = 0;
+		DAQmxCreateTask("", &taskHandle);
+		DAQmxStartTask(taskHandle);
+		DAQmxStopTask(taskHandle);
+		DAQmxClearTask(taskHandle);
+	}
+	catch (std::exception e)
+	{
+	}
 }
 
 void UNIDAQ::control_NIDAQ(bool isOn, FString deviceName)

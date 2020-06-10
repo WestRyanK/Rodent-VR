@@ -8,7 +8,7 @@ UStopConditionsChecker::~UStopConditionsChecker()
 	this->StopConditions.Empty();
 }
 
-bool UStopConditionsChecker::AreStopConditionsMet(ARodentGameMode* GameMode)
+bool UStopConditionsChecker::AreStopConditionsMet(AGameMode* GameMode)
 {
 	for (UStopCondition* StopCondition : this->StopConditions)
 	{
@@ -23,4 +23,10 @@ bool UStopConditionsChecker::AreStopConditionsMet(ARodentGameMode* GameMode)
 void UStopConditionsChecker::AddStopCondition(UStopCondition* StopCondition)
 {
 	this->StopConditions.Add(StopCondition);
+}
+
+void UStopConditionsChecker::SetStopConditions(TArray<UStopCondition*> StopConditionsValue)
+{
+	this->StopConditions.Empty();
+	this->StopConditions.Append(StopConditionsValue);
 }

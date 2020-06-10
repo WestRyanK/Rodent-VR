@@ -4,9 +4,10 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
+#include "Settings/MazeSettings.h"
 #include "Maze.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class AMaze : public AActor
 {
 	GENERATED_BODY()
@@ -16,24 +17,20 @@ public:
 	AMaze();
 
 private:
-	UPROPERTY(BlueprintGetter = GetMazeName, BlueprintSetter = SetMazeName)
-		FString MazeName;
+	UPROPERTY(BlueprintGetter = GetSettings, BlueprintSetter = SetSettings)
+		UMazeSettings* Settings;
 	UPROPERTY()
-		class UStaticMeshComponent* StaticMesh;
-	UPROPERTY(BlueprintGetter = GetTextures, BlueprintSetter = SetTextures)
-		TMap<FString, FString> Textures;
+		TMap<FName, UStaticMeshComponent*> MeshComponents;
 
 public:
 	UFUNCTION(BlueprintGetter)
-		FString GetMazeName();
+		UMazeSettings* GetSettings();
 	UFUNCTION(BlueprintSetter)
-		void SetMazeName(FString MazeNameValue);
-	UFUNCTION(BlueprintGetter)
-		TMap<FString, FString> GetTextures();
-	UFUNCTION(BlueprintSetter)
-		void SetTextures(TMap<FString, FString> TexturesValue);
+		void SetSettings(UMazeSettings* SettingsValue);
 
-	void UpdateMaze();
+	UFUNCTION(BlueprintCallable)
+	void UpdateFromSettings();
+
 
 	UFUNCTION(BlueprintPure)
 		static FName GetMazeTag();

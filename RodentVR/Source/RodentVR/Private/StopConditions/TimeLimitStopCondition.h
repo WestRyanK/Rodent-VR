@@ -5,7 +5,6 @@
 #include "CoreMinimal.h"
 #include "UObject/NoExportTypes.h"
 #include "StopConditions/StopCondition.h"
-#include "RodentGameMode.h"
 #include "TimeLimitStopCondition.generated.h"
 
 /**
@@ -22,7 +21,7 @@ private:
 		float TimeLimitSec;
 
 public:
-	virtual bool IsStopConditionMet(ARodentGameMode* GameMode);
+	virtual bool IsStopConditionMet(AGameMode* GameMode);
 	float GetStartTime();
 	void SetStartTime(float StartTimeValue);
 	UFUNCTION(BlueprintGetter)

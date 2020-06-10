@@ -4,11 +4,11 @@
 #include "Settings/SettingsLoader.h"
 #include "Kismet/KismetSystemLibrary.h"
 #include "StopConditions/StopConditionsChecker.h"
-#include "Settings/MazeLoader.h"
+//#include "Settings/MazeLoader.h"
 
 
-FMazeLoadedDelegate ARodentGameMode::OnMazeLoadedDelegate;
-FMazeFinishedDelegate ARodentGameMode::OnMazeFinishedDelegate;
+//FMazeLoadedDelegate ARodentGameMode::OnMazeLoadedDelegate;
+//FMazeFinishedDelegate ARodentGameMode::OnMazeFinishedDelegate;
 
 ARodentGameMode::ARodentGameMode()
 {
@@ -25,40 +25,40 @@ void ARodentGameMode::LoadSettings()
 
 void ARodentGameMode::LoadNextMaze()
 {
-	this->CurrentMazeIndex++;
-	if (this->CurrentMazeIndex < this->PlaylistFiles.Num())
-	{
-		this->StopConditionsChecker = UMazeLoader::LoadMaze(this, this->PlaylistFiles[this->CurrentMazeIndex]);
-		this->OnMazeLoaded();
-	}
-	else
-	{
-		FGenericPlatformMisc::RequestExit(false);
-	}
+	//this->CurrentMazeIndex++;
+	//if (this->CurrentMazeIndex < this->PlaylistFiles.Num())
+	//{
+	//	this->StopConditionsChecker = UMazeLoader::LoadMaze(this, this->PlaylistFiles[this->CurrentMazeIndex]);
+	//	this->OnMazeLoaded();
+	//}
+	//else
+	//{
+	//	FGenericPlatformMisc::RequestExit(false);
+	//}
 }
 
 void ARodentGameMode::Tick(float DeltaSeconds)
 {
-	Super::Tick(DeltaSeconds);
+	//Super::Tick(DeltaSeconds);
 
-	if (this->StopConditionsChecker != nullptr)
-	{
-		if (this->StopConditionsChecker->AreStopConditionsMet(this))
-		{
-			this->OnMazeFinished();
-			this->StopConditionsChecker = nullptr;
+	//if (this->StopConditionsChecker != nullptr)
+	//{
+	//	if (this->StopConditionsChecker->AreStopConditionsMet(this))
+	//	{
+	//		this->OnMazeFinished();
+	//		this->StopConditionsChecker = nullptr;
 
-			this->LoadNextMaze();
-		}
-	}
+	//		this->LoadNextMaze();
+	//	}
+	//}
 }
 
 void ARodentGameMode::OnMazeLoaded()
 {
-	ARodentGameMode::OnMazeLoadedDelegate.Broadcast();
+	//ARodentGameMode::OnMazeLoadedDelegate.Broadcast();
 }
 
 void ARodentGameMode::OnMazeFinished()
 {
-	ARodentGameMode::OnMazeFinishedDelegate.Broadcast();
+	//ARodentGameMode::OnMazeFinishedDelegate.Broadcast();
 }
