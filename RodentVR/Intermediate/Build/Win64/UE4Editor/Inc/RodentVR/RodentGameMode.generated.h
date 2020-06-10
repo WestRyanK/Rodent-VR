@@ -13,20 +13,6 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define RODENTVR_RodentGameMode_generated_h
 
-#define RodentVR_Source_RodentVR_Private_RodentGameMode_h_14_DELEGATE \
-static inline void FMazeFinishedDelegate_DelegateWrapper(const FMulticastScriptDelegate& MazeFinishedDelegate) \
-{ \
-	MazeFinishedDelegate.ProcessMulticastDelegate<UObject>(NULL); \
-}
-
-
-#define RodentVR_Source_RodentVR_Private_RodentGameMode_h_13_DELEGATE \
-static inline void FMazeLoadedDelegate_DelegateWrapper(const FMulticastScriptDelegate& MazeLoadedDelegate) \
-{ \
-	MazeLoadedDelegate.ProcessMulticastDelegate<UObject>(NULL); \
-}
-
-
 #define RodentVR_Source_RodentVR_Private_RodentGameMode_h_23_SPARSE_DATA
 #define RodentVR_Source_RodentVR_Private_RodentGameMode_h_23_RPC_WRAPPERS \
  \

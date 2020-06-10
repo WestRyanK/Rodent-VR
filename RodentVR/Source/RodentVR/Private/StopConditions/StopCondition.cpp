@@ -3,7 +3,7 @@
 
 #include "StopCondition.h"
 
-bool UStopCondition::IsStopConditionMet(ARodentGameMode* GameMode)
+bool UStopCondition::IsStopConditionMet(AGameMode* GameMode)
 {
 	return false;
 }

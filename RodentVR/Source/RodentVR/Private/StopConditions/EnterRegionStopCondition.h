@@ -4,7 +4,6 @@
 
 #include "CoreMinimal.h"
 #include "StopConditions/StopCondition.h"
-#include "RodentGameMode.h"
 #include "UObject/NoExportTypes.h"
 #include "EnterRegionStopCondition.generated.h"
 
@@ -30,7 +29,7 @@ public:
 
 	void Init();
 
-	virtual bool IsStopConditionMet(ARodentGameMode* GameMode);
+	virtual bool IsStopConditionMet(AGameMode* GameMode);
 
 	UFUNCTION(BlueprintCallable)
 		void ClearRegionCounts();

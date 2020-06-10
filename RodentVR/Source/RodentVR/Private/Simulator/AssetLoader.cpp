@@ -2,6 +2,9 @@
 
 
 #include "AssetLoader.h"
+#include "AssetRegistryModule.h"
+
+FAssetRegistryModule& UAssetLoader::AssetRegistryModule = FModuleManager::LoadModuleChecked<FAssetRegistryModule>("AssetRegistry");
 
 EImageFormat UAssetLoader::GetImageFormatFromFileName(const FString& FileName)
 {
@@ -83,3 +86,11 @@ UMaterialInstanceDynamic* UAssetLoader::LoadMaterialInstanceFromTextureFile(cons
 	return DynamicMaterial;
 }
 
+
+TArray<FAssetData> UAssetLoader::GetAssetsInPath(FString AssetPath)
+{
+	TArray<FAssetData> AssetsInPath;
+	TArray<FString> AssetPathsInPath;
+	UAssetLoader::AssetRegistryModule.Get().GetAssetsByPath(FName(*AssetPath), AssetsInPath);
+	return AssetsInPath;
+}

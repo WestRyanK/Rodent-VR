@@ -279,12 +279,6 @@
     <ClInclude Include="..\..\Source\RodentVR\Private\Settings\Device.h">
       <Filter>Source\RodentVR\Private\Settings</Filter>
     </ClInclude>
-    <ClCompile Include="..\..\Source\RodentVR\Private\Settings\MazeLoader.cpp">
-      <Filter>Source\RodentVR\Private\Settings</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\RodentVR\Private\Settings\MazeLoader.h">
-      <Filter>Source\RodentVR\Private\Settings</Filter>
-    </ClInclude>
     <ClCompile Include="..\..\Source\RodentVR\Private\Settings\MazeObjectSettings.cpp">
       <Filter>Source\RodentVR\Private\Settings</Filter>
     </ClCompile>
@@ -404,10 +398,16 @@
     <ClInclude Include="..\..\Source\RodentVR\Private\Settings\ActorSettings.h">
       <Filter>Source\RodentVR\Private\Settings</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\Source\RodentVR\Private\Simulator\SimulatorGameMode.h">
+      <Filter>Source\RodentVR\Private\Simulator</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\Source\RodentVR\Private\Settings\ActorSettings.cpp">
       <Filter>Source\RodentVR\Private\Settings</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\RodentVR\Private\Simulator\SimulatorGameMode.cpp">
+      <Filter>Source\RodentVR\Private\Simulator</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

@@ -17,6 +17,7 @@ void EmptyLinkFunctionForGeneratedCodeMaze() {}
 	RODENTVR_API UClass* Z_Construct_UClass_AMaze();
 	ENGINE_API UClass* Z_Construct_UClass_AActor();
 	UPackage* Z_Construct_UPackage__Script_RodentVR();
+	RODENTVR_API UClass* Z_Construct_UClass_UMazeSettings_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_UStaticMeshComponent_NoRegister();
 // End Cross Module References
 	DEFINE_FUNCTION(AMaze::execGetMazeTag)
@@ -26,80 +27,38 @@ void EmptyLinkFunctionForGeneratedCodeMaze() {}
 		*(FName*)Z_Param__Result=AMaze::GetMazeTag();
 		P_NATIVE_END;
 	}
-	DEFINE_FUNCTION(AMaze::execSetTextures)
+	DEFINE_FUNCTION(AMaze::execUpdateFromSettings)
 	{
-		P_GET_TMAP(FString,FString,Z_Param_TexturesValue);
 		P_FINISH;
 		P_NATIVE_BEGIN;
-		P_THIS->SetTextures(Z_Param_TexturesValue);
+		P_THIS->UpdateFromSettings();
 		P_NATIVE_END;
 	}
-	DEFINE_FUNCTION(AMaze::execGetTextures)
+	DEFINE_FUNCTION(AMaze::execSetSettings)
 	{
+		P_GET_OBJECT(UMazeSettings,Z_Param_SettingsValue);
 		P_FINISH;
 		P_NATIVE_BEGIN;
-		*(TMap<FString,FString>*)Z_Param__Result=P_THIS->GetTextures();
+		P_THIS->SetSettings(Z_Param_SettingsValue);
 		P_NATIVE_END;
 	}
-	DEFINE_FUNCTION(AMaze::execSetMazeName)
-	{
-		P_GET_PROPERTY(FStrProperty,Z_Param_MazeNameValue);
-		P_FINISH;
-		P_NATIVE_BEGIN;
-		P_THIS->SetMazeName(Z_Param_MazeNameValue);
-		P_NATIVE_END;
-	}
-	DEFINE_FUNCTION(AMaze::execGetMazeName)
+	DEFINE_FUNCTION(AMaze::execGetSettings)
 	{
 		P_FINISH;
 		P_NATIVE_BEGIN;
-		*(FString*)Z_Param__Result=P_THIS->GetMazeName();
+		*(UMazeSettings**)Z_Param__Result=P_THIS->GetSettings();
 		P_NATIVE_END;
 	}
 	void AMaze::StaticRegisterNativesAMaze()
 	{
 		UClass* Class = AMaze::StaticClass();
 		static const FNameNativePtrPair Funcs[] = {
-			{ "GetMazeName", &AMaze::execGetMazeName },
 			{ "GetMazeTag", &AMaze::execGetMazeTag },
-			{ "GetTextures", &AMaze::execGetTextures },
-			{ "SetMazeName", &AMaze::execSetMazeName },
-			{ "SetTextures", &AMaze::execSetTextures },
+			{ "GetSettings", &AMaze::execGetSettings },
+			{ "SetSettings", &AMaze::execSetSettings },
+			{ "UpdateFromSettings", &AMaze::execUpdateFromSettings },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
-	}
-	struct Z_Construct_UFunction_AMaze_GetMazeName_Statics
-	{
-		struct Maze_eventGetMazeName_Parms
-		{
-			FString ReturnValue;
-		};
-		static const UE4CodeGen_Private::FStrPropertyParams NewProp_ReturnValue;
-		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
-#endif
-		static const UE4CodeGen_Private::FFunctionParams FuncParams;
-	};
-	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UFunction_AMaze_GetMazeName_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(Maze_eventGetMazeName_Parms, ReturnValue), METADATA_PARAMS(nullptr, 0) };
-	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AMaze_GetMazeName_Statics::PropPointers[] = {
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AMaze_GetMazeName_Statics::NewProp_ReturnValue,
-	};
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AMaze_GetMazeName_Statics::Function_MetaDataParams[] = {
-		{ "BlueprintGetter", "" },
-		{ "ModuleRelativePath", "Private/Simulator/Maze.h" },
-	};
-#endif
-	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AMaze_GetMazeName_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AMaze, nullptr, "GetMazeName", nullptr, nullptr, sizeof(Maze_eventGetMazeName_Parms), Z_Construct_UFunction_AMaze_GetMazeName_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AMaze_GetMazeName_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x14020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AMaze_GetMazeName_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AMaze_GetMazeName_Statics::Function_MetaDataParams)) };
-	UFunction* Z_Construct_UFunction_AMaze_GetMazeName()
-	{
-		static UFunction* ReturnFunction = nullptr;
-		if (!ReturnFunction)
-		{
-			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AMaze_GetMazeName_Statics::FuncParams);
-		}
-		return ReturnFunction;
 	}
 	struct Z_Construct_UFunction_AMaze_GetMazeTag_Statics
 	{
@@ -133,114 +92,91 @@ void EmptyLinkFunctionForGeneratedCodeMaze() {}
 		}
 		return ReturnFunction;
 	}
-	struct Z_Construct_UFunction_AMaze_GetTextures_Statics
+	struct Z_Construct_UFunction_AMaze_GetSettings_Statics
 	{
-		struct Maze_eventGetTextures_Parms
+		struct Maze_eventGetSettings_Parms
 		{
-			TMap<FString,FString> ReturnValue;
+			UMazeSettings* ReturnValue;
 		};
-		static const UE4CodeGen_Private::FMapPropertyParams NewProp_ReturnValue;
-		static const UE4CodeGen_Private::FStrPropertyParams NewProp_ReturnValue_Key_KeyProp;
-		static const UE4CodeGen_Private::FStrPropertyParams NewProp_ReturnValue_ValueProp;
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_ReturnValue;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
 #endif
 		static const UE4CodeGen_Private::FFunctionParams FuncParams;
 	};
-	const UE4CodeGen_Private::FMapPropertyParams Z_Construct_UFunction_AMaze_GetTextures_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UE4CodeGen_Private::EPropertyGenFlags::Map, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(Maze_eventGetTextures_Parms, ReturnValue), EMapPropertyFlags::None, METADATA_PARAMS(nullptr, 0) };
-	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UFunction_AMaze_GetTextures_Statics::NewProp_ReturnValue_Key_KeyProp = { "ReturnValue_Key", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, METADATA_PARAMS(nullptr, 0) };
-	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UFunction_AMaze_GetTextures_Statics::NewProp_ReturnValue_ValueProp = { "ReturnValue", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, 1, METADATA_PARAMS(nullptr, 0) };
-	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AMaze_GetTextures_Statics::PropPointers[] = {
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AMaze_GetTextures_Statics::NewProp_ReturnValue,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AMaze_GetTextures_Statics::NewProp_ReturnValue_Key_KeyProp,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AMaze_GetTextures_Statics::NewProp_ReturnValue_ValueProp,
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_AMaze_GetSettings_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(Maze_eventGetSettings_Parms, ReturnValue), Z_Construct_UClass_UMazeSettings_NoRegister, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AMaze_GetSettings_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AMaze_GetSettings_Statics::NewProp_ReturnValue,
 	};
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AMaze_GetTextures_Statics::Function_MetaDataParams[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AMaze_GetSettings_Statics::Function_MetaDataParams[] = {
 		{ "BlueprintGetter", "" },
 		{ "ModuleRelativePath", "Private/Simulator/Maze.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AMaze_GetTextures_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AMaze, nullptr, "GetTextures", nullptr, nullptr, sizeof(Maze_eventGetTextures_Parms), Z_Construct_UFunction_AMaze_GetTextures_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AMaze_GetTextures_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x14020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AMaze_GetTextures_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AMaze_GetTextures_Statics::Function_MetaDataParams)) };
-	UFunction* Z_Construct_UFunction_AMaze_GetTextures()
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AMaze_GetSettings_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AMaze, nullptr, "GetSettings", nullptr, nullptr, sizeof(Maze_eventGetSettings_Parms), Z_Construct_UFunction_AMaze_GetSettings_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AMaze_GetSettings_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x14020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AMaze_GetSettings_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AMaze_GetSettings_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_AMaze_GetSettings()
 	{
 		static UFunction* ReturnFunction = nullptr;
 		if (!ReturnFunction)
 		{
-			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AMaze_GetTextures_Statics::FuncParams);
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AMaze_GetSettings_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
-	struct Z_Construct_UFunction_AMaze_SetMazeName_Statics
+	struct Z_Construct_UFunction_AMaze_SetSettings_Statics
 	{
-		struct Maze_eventSetMazeName_Parms
+		struct Maze_eventSetSettings_Parms
 		{
-			FString MazeNameValue;
+			UMazeSettings* SettingsValue;
 		};
-		static const UE4CodeGen_Private::FStrPropertyParams NewProp_MazeNameValue;
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_SettingsValue;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
 #endif
 		static const UE4CodeGen_Private::FFunctionParams FuncParams;
 	};
-	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UFunction_AMaze_SetMazeName_Statics::NewProp_MazeNameValue = { "MazeNameValue", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(Maze_eventSetMazeName_Parms, MazeNameValue), METADATA_PARAMS(nullptr, 0) };
-	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AMaze_SetMazeName_Statics::PropPointers[] = {
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AMaze_SetMazeName_Statics::NewProp_MazeNameValue,
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_AMaze_SetSettings_Statics::NewProp_SettingsValue = { "SettingsValue", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(Maze_eventSetSettings_Parms, SettingsValue), Z_Construct_UClass_UMazeSettings_NoRegister, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AMaze_SetSettings_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AMaze_SetSettings_Statics::NewProp_SettingsValue,
 	};
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AMaze_SetMazeName_Statics::Function_MetaDataParams[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AMaze_SetSettings_Statics::Function_MetaDataParams[] = {
 		{ "BlueprintSetter", "" },
 		{ "ModuleRelativePath", "Private/Simulator/Maze.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AMaze_SetMazeName_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AMaze, nullptr, "SetMazeName", nullptr, nullptr, sizeof(Maze_eventSetMazeName_Parms), Z_Construct_UFunction_AMaze_SetMazeName_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AMaze_SetMazeName_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AMaze_SetMazeName_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AMaze_SetMazeName_Statics::Function_MetaDataParams)) };
-	UFunction* Z_Construct_UFunction_AMaze_SetMazeName()
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AMaze_SetSettings_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AMaze, nullptr, "SetSettings", nullptr, nullptr, sizeof(Maze_eventSetSettings_Parms), Z_Construct_UFunction_AMaze_SetSettings_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AMaze_SetSettings_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AMaze_SetSettings_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AMaze_SetSettings_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_AMaze_SetSettings()
 	{
 		static UFunction* ReturnFunction = nullptr;
 		if (!ReturnFunction)
 		{
-			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AMaze_SetMazeName_Statics::FuncParams);
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AMaze_SetSettings_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
-	struct Z_Construct_UFunction_AMaze_SetTextures_Statics
+	struct Z_Construct_UFunction_AMaze_UpdateFromSettings_Statics
 	{
-		struct Maze_eventSetTextures_Parms
-		{
-			TMap<FString,FString> TexturesValue;
-		};
-		static const UE4CodeGen_Private::FMapPropertyParams NewProp_TexturesValue;
-		static const UE4CodeGen_Private::FStrPropertyParams NewProp_TexturesValue_Key_KeyProp;
-		static const UE4CodeGen_Private::FStrPropertyParams NewProp_TexturesValue_ValueProp;
-		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
 #endif
 		static const UE4CodeGen_Private::FFunctionParams FuncParams;
 	};
-	const UE4CodeGen_Private::FMapPropertyParams Z_Construct_UFunction_AMaze_SetTextures_Statics::NewProp_TexturesValue = { "TexturesValue", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Map, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(Maze_eventSetTextures_Parms, TexturesValue), EMapPropertyFlags::None, METADATA_PARAMS(nullptr, 0) };
-	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UFunction_AMaze_SetTextures_Statics::NewProp_TexturesValue_Key_KeyProp = { "TexturesValue_Key", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, METADATA_PARAMS(nullptr, 0) };
-	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UFunction_AMaze_SetTextures_Statics::NewProp_TexturesValue_ValueProp = { "TexturesValue", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, 1, METADATA_PARAMS(nullptr, 0) };
-	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AMaze_SetTextures_Statics::PropPointers[] = {
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AMaze_SetTextures_Statics::NewProp_TexturesValue,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AMaze_SetTextures_Statics::NewProp_TexturesValue_Key_KeyProp,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AMaze_SetTextures_Statics::NewProp_TexturesValue_ValueProp,
-	};
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AMaze_SetTextures_Statics::Function_MetaDataParams[] = {
-		{ "BlueprintSetter", "" },
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AMaze_UpdateFromSettings_Statics::Function_MetaDataParams[] = {
 		{ "ModuleRelativePath", "Private/Simulator/Maze.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AMaze_SetTextures_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AMaze, nullptr, "SetTextures", nullptr, nullptr, sizeof(Maze_eventSetTextures_Parms), Z_Construct_UFunction_AMaze_SetTextures_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AMaze_SetTextures_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AMaze_SetTextures_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AMaze_SetTextures_Statics::Function_MetaDataParams)) };
-	UFunction* Z_Construct_UFunction_AMaze_SetTextures()
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AMaze_UpdateFromSettings_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AMaze, nullptr, "UpdateFromSettings", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AMaze_UpdateFromSettings_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AMaze_UpdateFromSettings_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_AMaze_UpdateFromSettings()
 	{
 		static UFunction* ReturnFunction = nullptr;
 		if (!ReturnFunction)
 		{
-			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AMaze_SetTextures_Statics::FuncParams);
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AMaze_UpdateFromSettings_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
@@ -256,19 +192,15 @@ void EmptyLinkFunctionForGeneratedCodeMaze() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Textures_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MeshComponents_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FMapPropertyParams NewProp_Textures;
-		static const UE4CodeGen_Private::FStrPropertyParams NewProp_Textures_Key_KeyProp;
-		static const UE4CodeGen_Private::FStrPropertyParams NewProp_Textures_ValueProp;
+		static const UE4CodeGen_Private::FMapPropertyParams NewProp_MeshComponents;
+		static const UE4CodeGen_Private::FNamePropertyParams NewProp_MeshComponents_Key_KeyProp;
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_MeshComponents_ValueProp;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_StaticMesh_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Settings_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_StaticMesh;
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MazeName_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FStrPropertyParams NewProp_MazeName;
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_Settings;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
@@ -278,51 +210,42 @@ void EmptyLinkFunctionForGeneratedCodeMaze() {}
 		(UObject* (*)())Z_Construct_UPackage__Script_RodentVR,
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_AMaze_Statics::FuncInfo[] = {
-		{ &Z_Construct_UFunction_AMaze_GetMazeName, "GetMazeName" }, // 2219952338
 		{ &Z_Construct_UFunction_AMaze_GetMazeTag, "GetMazeTag" }, // 2137745922
-		{ &Z_Construct_UFunction_AMaze_GetTextures, "GetTextures" }, // 4131344711
-		{ &Z_Construct_UFunction_AMaze_SetMazeName, "SetMazeName" }, // 488361507
-		{ &Z_Construct_UFunction_AMaze_SetTextures, "SetTextures" }, // 348134886
+		{ &Z_Construct_UFunction_AMaze_GetSettings, "GetSettings" }, // 2473189625
+		{ &Z_Construct_UFunction_AMaze_SetSettings, "SetSettings" }, // 2056318248
+		{ &Z_Construct_UFunction_AMaze_UpdateFromSettings, "UpdateFromSettings" }, // 1469721882
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AMaze_Statics::Class_MetaDataParams[] = {
+		{ "BlueprintType", "true" },
 		{ "IncludePath", "Simulator/Maze.h" },
+		{ "IsBlueprintBase", "true" },
 		{ "ModuleRelativePath", "Private/Simulator/Maze.h" },
 	};
 #endif
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AMaze_Statics::NewProp_Textures_MetaData[] = {
-		{ "BlueprintGetter", "GetTextures" },
-		{ "BlueprintSetter", "SetTextures" },
-		{ "Category", "Maze" },
-		{ "ModuleRelativePath", "Private/Simulator/Maze.h" },
-	};
-#endif
-	const UE4CodeGen_Private::FMapPropertyParams Z_Construct_UClass_AMaze_Statics::NewProp_Textures = { "Textures", nullptr, (EPropertyFlags)0x0040000000000004, UE4CodeGen_Private::EPropertyGenFlags::Map, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AMaze, Textures), EMapPropertyFlags::None, METADATA_PARAMS(Z_Construct_UClass_AMaze_Statics::NewProp_Textures_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AMaze_Statics::NewProp_Textures_MetaData)) };
-	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UClass_AMaze_Statics::NewProp_Textures_Key_KeyProp = { "Textures_Key", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, METADATA_PARAMS(nullptr, 0) };
-	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UClass_AMaze_Statics::NewProp_Textures_ValueProp = { "Textures", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, 1, METADATA_PARAMS(nullptr, 0) };
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AMaze_Statics::NewProp_StaticMesh_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AMaze_Statics::NewProp_MeshComponents_MetaData[] = {
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "Private/Simulator/Maze.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AMaze_Statics::NewProp_StaticMesh = { "StaticMesh", nullptr, (EPropertyFlags)0x0040000000080008, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AMaze, StaticMesh), Z_Construct_UClass_UStaticMeshComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AMaze_Statics::NewProp_StaticMesh_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AMaze_Statics::NewProp_StaticMesh_MetaData)) };
+	const UE4CodeGen_Private::FMapPropertyParams Z_Construct_UClass_AMaze_Statics::NewProp_MeshComponents = { "MeshComponents", nullptr, (EPropertyFlags)0x0040008000000008, UE4CodeGen_Private::EPropertyGenFlags::Map, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AMaze, MeshComponents), EMapPropertyFlags::None, METADATA_PARAMS(Z_Construct_UClass_AMaze_Statics::NewProp_MeshComponents_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AMaze_Statics::NewProp_MeshComponents_MetaData)) };
+	const UE4CodeGen_Private::FNamePropertyParams Z_Construct_UClass_AMaze_Statics::NewProp_MeshComponents_Key_KeyProp = { "MeshComponents_Key", nullptr, (EPropertyFlags)0x0000000000080008, UE4CodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AMaze_Statics::NewProp_MeshComponents_ValueProp = { "MeshComponents", nullptr, (EPropertyFlags)0x0000000000080008, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, 1, Z_Construct_UClass_UStaticMeshComponent_NoRegister, METADATA_PARAMS(nullptr, 0) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AMaze_Statics::NewProp_MazeName_MetaData[] = {
-		{ "BlueprintGetter", "GetMazeName" },
-		{ "BlueprintSetter", "SetMazeName" },
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AMaze_Statics::NewProp_Settings_MetaData[] = {
+		{ "BlueprintGetter", "GetSettings" },
+		{ "BlueprintSetter", "SetSettings" },
 		{ "Category", "Maze" },
 		{ "ModuleRelativePath", "Private/Simulator/Maze.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UClass_AMaze_Statics::NewProp_MazeName = { "MazeName", nullptr, (EPropertyFlags)0x0040000000000004, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AMaze, MazeName), METADATA_PARAMS(Z_Construct_UClass_AMaze_Statics::NewProp_MazeName_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AMaze_Statics::NewProp_MazeName_MetaData)) };
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AMaze_Statics::NewProp_Settings = { "Settings", nullptr, (EPropertyFlags)0x0040000000000004, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AMaze, Settings), Z_Construct_UClass_UMazeSettings_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AMaze_Statics::NewProp_Settings_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AMaze_Statics::NewProp_Settings_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AMaze_Statics::PropPointers[] = {
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMaze_Statics::NewProp_Textures,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMaze_Statics::NewProp_Textures_Key_KeyProp,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMaze_Statics::NewProp_Textures_ValueProp,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMaze_Statics::NewProp_StaticMesh,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMaze_Statics::NewProp_MazeName,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMaze_Statics::NewProp_MeshComponents,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMaze_Statics::NewProp_MeshComponents_Key_KeyProp,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMaze_Statics::NewProp_MeshComponents_ValueProp,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMaze_Statics::NewProp_Settings,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_AMaze_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<AMaze>::IsAbstract,
@@ -351,7 +274,7 @@ void EmptyLinkFunctionForGeneratedCodeMaze() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AMaze, 102781185);
+	IMPLEMENT_CLASS(AMaze, 2027464079);
 	template<> RODENTVR_API UClass* StaticClass<AMaze>()
 	{
 		return AMaze::StaticClass();

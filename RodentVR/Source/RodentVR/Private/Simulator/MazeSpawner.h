@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "Settings/MazeSettings.h"
+#include "StopConditions/StopCondition.h"
 #include "UObject/NoExportTypes.h"
 #include "MazeSpawner.generated.h"
 
@@ -17,7 +18,8 @@ class UMazeSpawner : public UObject
 
 public:
 	UFUNCTION(BlueprintCallable)
-		static void SpawnMaze(UObject* WorldContextObject, UMazeSettings* MazeSettings, bool AreAllObjectsSelectable, TMap<AActor*, UObject*>& ActorToSetting, TMap<UObject*, AActor*>& SettingToActor);
+		static void SpawnMaze(UObject* WorldContextObject, UMazeSettings* MazeSettings, bool IsSpawnForEditor, TMap<AActor*, UObject*>& ActorToSetting, TMap<UObject*, AActor*>& SettingToActor, TArray<UStopCondition*>& StopConditions);
+
 
 private:
 	static FName SpawnedActorTag;
@@ -26,7 +28,7 @@ private:
 	static void LoadPlayerStart(UWorld* World, UMazeSettings* MazeSettings, TMap<AActor*, UObject*>& ActorToSetting);
 	static void LoadMazeObjects(UWorld* World, UMazeSettings* MazeSettings, bool AreAllObjectsSelectable, TMap<AActor*, UObject*>& ActorToSetting);
 	static void LoadRegions(UWorld* World, UMazeSettings* MazeSettings, bool AreAllObjectsSelectable, TMap<AActor*, UObject*>& ActorToSetting);
-	static void LoadStopConditions(UWorld* World, UMazeSettings* MazeSettings, TMap<AActor*, UObject*>& ActorToSetting);
+	static void LoadStopConditions(UWorld* World, UMazeSettings* MazeSettings, TMap<AActor*, UObject*>& ActorToSetting, TArray<UStopCondition*> StopConditions);
 	static void ReverseActorToSettingMap(TMap<AActor*, UObject*>& ActorToSetting, TMap<UObject*, AActor*>& SettingToActor);
 
 };

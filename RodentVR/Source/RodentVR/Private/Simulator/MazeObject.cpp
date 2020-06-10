@@ -31,10 +31,10 @@ UMazeObjectSettings* AMazeObject::GetSettings()
 void AMazeObject::SetSettings(UMazeObjectSettings* SettingsValue)
 {
 	this->Settings = SettingsValue;
-	this->UpdateMazeObject();
+	this->UpdateFromSettings();
 }
 
-void AMazeObject::UpdateMazeObject()
+void AMazeObject::UpdateFromSettings()
 {
 	this->SetActorLocation(this->Settings->GetPosition());
 	this->SetActorRotation(this->Settings->GetRotation());

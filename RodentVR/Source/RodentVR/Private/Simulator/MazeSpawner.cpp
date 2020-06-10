@@ -9,7 +9,7 @@
 
 FName UMazeSpawner::SpawnedActorTag = FName("SpawnedActor");
 
-void UMazeSpawner::SpawnMaze(UObject* WorldContextObject, UMazeSettings* MazeSettings, bool AreAllObjectsSelectable, TMap<AActor*, UObject*>& ActorToSetting, TMap<UObject*, AActor*>& SettingToActor)
+void UMazeSpawner::SpawnMaze(UObject* WorldContextObject, UMazeSettings* MazeSettings, bool IsSpawnForEditor, TMap<AActor*, UObject*>& ActorToSetting, TMap<UObject*, AActor*>& SettingToActor, TArray<UStopCondition*>& StopConditions)
 {
 	UWorld* World = WorldContextObject->GetWorld();
 	UMazeSpawner::ClearWorld(World);
@@ -17,9 +17,9 @@ void UMazeSpawner::SpawnMaze(UObject* WorldContextObject, UMazeSettings* MazeSet
 	{
 		UMazeSpawner::LoadMaze(World, MazeSettings, ActorToSetting);
 		UMazeSpawner::LoadPlayerStart(World, MazeSettings, ActorToSetting);
-		UMazeSpawner::LoadMazeObjects(World, MazeSettings, AreAllObjectsSelectable, ActorToSetting);
-		UMazeSpawner::LoadRegions(World, MazeSettings, AreAllObjectsSelectable, ActorToSetting);
-		UMazeSpawner::LoadStopConditions(World, MazeSettings, ActorToSetting);
+		UMazeSpawner::LoadMazeObjects(World, MazeSettings, IsSpawnForEditor, ActorToSetting);
+		UMazeSpawner::LoadRegions(World, MazeSettings, IsSpawnForEditor, ActorToSetting);
+		UMazeSpawner::LoadStopConditions(World, MazeSettings, ActorToSetting, StopConditions);
 	}
 
 	UMazeSpawner::ReverseActorToSettingMap(ActorToSetting, SettingToActor);
@@ -43,8 +43,7 @@ void UMazeSpawner::LoadMaze(UWorld* World, UMazeSettings* MazeSettings, TMap<AAc
 {
 	AMaze* Maze = World->SpawnActor<AMaze>(AMaze::StaticClass());
 	Maze->Tags.Add(UMazeSpawner::SpawnedActorTag);
-	Maze->SetMazeName(MazeSettings->GetMazeName());
-	Maze->SetTextures(MazeSettings->GetTextures());
+	Maze->SetSettings(MazeSettings);
 	ActorToSetting.Add(Maze, MazeSettings);
 }
 
@@ -53,7 +52,7 @@ void UMazeSpawner::LoadPlayerStart(UWorld* World, UMazeSettings* MazeSettings, T
 
 }
 
-void UMazeSpawner::LoadMazeObjects(UWorld* World, UMazeSettings* MazeSettings, bool AreAllObjectsSelectable, TMap<AActor*, UObject*>& ActorToSetting)
+void UMazeSpawner::LoadMazeObjects(UWorld* World, UMazeSettings* MazeSettings, bool IsSpawnForEditor, TMap<AActor*, UObject*>& ActorToSetting)
 {
 	for (UMazeObjectSettings* MazeObjectSettings : MazeSettings->GetMazeObjects())
 	{
@@ -64,7 +63,7 @@ void UMazeSpawner::LoadMazeObjects(UWorld* World, UMazeSettings* MazeSettings, b
 			MazeObject->SetSettings(MazeObjectSettings);
 			ActorToSetting.Add(MazeObject, MazeObjectSettings);
 
-			if (AreAllObjectsSelectable)
+			if (IsSpawnForEditor)
 			{
 				MazeObject->SetActorEnableCollision(true);
 			}
@@ -72,20 +71,21 @@ void UMazeSpawner::LoadMazeObjects(UWorld* World, UMazeSettings* MazeSettings, b
 	}
 }
 
-void UMazeSpawner::LoadRegions(UWorld* World, UMazeSettings* MazeSettings, bool AreAllObjectsSelectable, TMap<AActor*, UObject*>& ActorToSetting)
+void UMazeSpawner::LoadRegions(UWorld* World, UMazeSettings* MazeSettings, bool IsSpawnForEditor, TMap<AActor*, UObject*>& ActorToSetting)
 {
 
-			//SettingsToActor.Add(MazeObjectSettings, MazeObject);
-			//if (AreAllObjectsSelectable)
-			//{
-			//	Region->SetEnableCollision(true);
-			//}
+	//SettingsToActor.Add(MazeObjectSettings, MazeObject);
+	//if (IsSpawnForEditor)
+	//{
+	//	Region->SetEnableCollision(true);
+	//}
 }
 
-void UMazeSpawner::LoadStopConditions(UWorld* World, UMazeSettings* MazeSettings, TMap<AActor*, UObject*>& ActorToSetting)
+void UMazeSpawner::LoadStopConditions(UWorld* World, UMazeSettings* MazeSettings, TMap<AActor*, UObject*>& ActorToSetting, TArray<UStopCondition*> StopConditions)
 {
 
-			//SettingsToActor.Add(MazeObjectSettings, MazeObject);
+	//SettingsToActor.Add(MazeObjectSettings, MazeObject);
+	//StopConditions.Add(StopCondition);
 
 }
 

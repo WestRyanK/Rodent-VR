@@ -4,7 +4,6 @@
 
 #include "CoreMinimal.h"
 #include "UObject/NoExportTypes.h"
-#include "RodentGameMode.h"
 #include "StopConditions/StopCondition.h"
 #include "StopConditionsChecker.generated.h"
 
@@ -22,6 +21,7 @@ private:
 public:
 	~UStopConditionsChecker();
 
-	bool AreStopConditionsMet(ARodentGameMode* GameMode);
+	bool AreStopConditionsMet(AGameMode* GameMode);
 	void AddStopCondition(UStopCondition* StopCondition);
+	void SetStopConditions(TArray<UStopCondition*> StopConditionsValue);
 };

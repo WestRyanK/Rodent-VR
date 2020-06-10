@@ -4,6 +4,8 @@
 #include "BallInputComponent.h"
 #include "Engine.h"
 #include "BallInput.h"
+#include "Settings/RodentVRSettings.h"
+#include "Simulator/SimulatorGameMode.h"
 #include "RodentGameMode.h"
 
 // Sets default values for this component's properties
@@ -24,16 +26,16 @@ void UBallInputComponent::BeginPlay()
 	UWorld* World = GetWorld();
 	if (World != nullptr) 
 	{
-		AGameModeBase* GameMode = World->GetAuthGameMode();
+		ASimulatorGameMode* GameMode = (ASimulatorGameMode*)World->GetAuthGameMode();
 		if (GameMode != nullptr)
 		{
-			ARodentGameMode* RodentGameMode = (ARodentGameMode*)GameMode;
+			URodentVRSettings* RodentVRSettings = GameMode->GetRodentVRSettings();
 
-			this->MouseAMultiplier = RodentGameMode->MouseAMultiplier;
-			this->MouseBMultiplier = RodentGameMode->MouseBMultiplier;
+			this->MouseAMultiplier = RodentVRSettings->GetBallInputMouseAMultiplier();
+			this->MouseBMultiplier = RodentVRSettings->GetBallInputMouseBMultiplier();
 
-			std::string MouseANameStr = std::string(TCHAR_TO_UTF8(*(RodentGameMode->MouseADeviceName)));
-			std::string MouseBNameStr = std::string(TCHAR_TO_UTF8(*(RodentGameMode->MouseBDeviceName)));
+			std::string MouseANameStr = std::string(TCHAR_TO_UTF8(*(RodentVRSettings->GetBallInputMouseADevice())));
+			std::string MouseBNameStr = std::string(TCHAR_TO_UTF8(*(RodentVRSettings->GetBallInputMouseBDevice())));
 
 			std::wstring MouseANameWstr;
 			std::wstring MouseBNameWstr;

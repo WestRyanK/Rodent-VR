@@ -10,8 +10,8 @@
 #include <string>
 #include "RodentGameMode.generated.h"
 
-DECLARE_DYNAMIC_MULTICAST_DELEGATE(FMazeLoadedDelegate);
-DECLARE_DYNAMIC_MULTICAST_DELEGATE(FMazeFinishedDelegate);
+//DECLARE_DYNAMIC_MULTICAST_DELEGATE(FMazeLoadedDelegate);
+//DECLARE_DYNAMIC_MULTICAST_DELEGATE(FMazeFinishedDelegate);
 
 class UStopConditionsChecker;
 /**
@@ -34,32 +34,6 @@ private:
 public:
 	ARodentGameMode();
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	FString AirPufferLeftDeviceName;
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	FString AirPufferRightDeviceName;
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	float AirPufferFrontAngle;
-
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	FString MouseADeviceName;
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	FString MouseBDeviceName;
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	float MouseAMultiplier;
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	float MouseBMultiplier;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	FString BehaviorRecordingFilename;
-
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	TArray<FString> RewardDeviceNames;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	TArray<FString> PlaylistFiles;
 	UPROPERTY(EditAnywhere, BlueprintReadOnly)
 	int CurrentMazeIndex;
 
@@ -73,6 +47,6 @@ public:
 	virtual void Tick(float DeltaSeconds) override;
 
 
-	static FMazeLoadedDelegate OnMazeLoadedDelegate;
-	static FMazeFinishedDelegate OnMazeFinishedDelegate;
+	//static FMazeLoadedDelegate OnMazeLoadedDelegate;
+	//static FMazeFinishedDelegate OnMazeFinishedDelegate;
 };

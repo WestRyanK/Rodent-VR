@@ -13,7 +13,7 @@ void UEnterRegionStopCondition::Init()
 	ARewardRegion::OnRewardRegionEnterDelegate.AddDynamic(this, &UEnterRegionStopCondition::OnRewardRegionEnter);
 }
 
-bool UEnterRegionStopCondition::IsStopConditionMet(ARodentGameMode* GameMode)
+bool UEnterRegionStopCondition::IsStopConditionMet(AGameMode* GameMode)
 {
 	TArray<int> keys;
 	this->EnterRegionStopConditionCounts.GetKeys(keys);
