@@ -7,7 +7,6 @@
 #include "C:/Users/Ryan/Drive/BYU/2018_Fall/cs_497r/Rodent-VR/RodentVR/Intermediate/Build/Win64/UE4Editor/Inc/RodentVR/Device.gen.cpp"
 #include "C:/Users/Ryan/Drive/BYU/2018_Fall/cs_497r/Rodent-VR/RodentVR/Intermediate/Build/Win64/UE4Editor/Inc/RodentVR/EditorHUD.gen.cpp"
 #include "C:/Users/Ryan/Drive/BYU/2018_Fall/cs_497r/Rodent-VR/RodentVR/Intermediate/Build/Win64/UE4Editor/Inc/RodentVR/EnterRegionStopCondition.gen.cpp"
-#include "C:/Users/Ryan/Drive/BYU/2018_Fall/cs_497r/Rodent-VR/RodentVR/Intermediate/Build/Win64/UE4Editor/Inc/RodentVR/MazeObject.gen.cpp"
 #include "C:/Users/Ryan/Drive/BYU/2018_Fall/cs_497r/Rodent-VR/RodentVR/Intermediate/Build/Win64/UE4Editor/Inc/RodentVR/MazeObjectSettings.gen.cpp"
 #include "C:/Users/Ryan/Drive/BYU/2018_Fall/cs_497r/Rodent-VR/RodentVR/Intermediate/Build/Win64/UE4Editor/Inc/RodentVR/MazeSettings.gen.cpp"
 #include "C:/Users/Ryan/Drive/BYU/2018_Fall/cs_497r/Rodent-VR/RodentVR/Intermediate/Build/Win64/UE4Editor/Inc/RodentVR/MazeSettingsXmlReader.gen.cpp"
