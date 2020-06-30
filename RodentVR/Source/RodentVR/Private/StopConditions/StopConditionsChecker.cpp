@@ -30,3 +30,11 @@ void UStopConditionsChecker::SetStopConditions(TArray<UStopCondition*> StopCondi
 	this->StopConditions.Empty();
 	this->StopConditions.Append(StopConditionsValue);
 }
+
+void UStopConditionsChecker::InitStopConditions(AGameMode* GameMode)
+{
+	for (UStopCondition* StopCondition : this->StopConditions)
+	{
+		StopCondition->Init(GameMode);
+	}
+}

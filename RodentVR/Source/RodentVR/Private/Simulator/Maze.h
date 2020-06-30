@@ -22,6 +22,8 @@ private:
 	UPROPERTY()
 		TMap<FName, UStaticMeshComponent*> MeshComponents;
 
+	bool DoComponentsNeedUpdating(TArray<FAssetData> MazeMeshAssets);
+
 public:
 	UFUNCTION(BlueprintGetter)
 		UMazeSettings* GetSettings();

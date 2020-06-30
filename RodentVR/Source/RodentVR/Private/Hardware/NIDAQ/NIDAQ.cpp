@@ -9,31 +9,31 @@
 
 void UNIDAQ::NIDAQ_write_digital(const char* deviceName, unsigned long data)
 {
-	int         error=0;
-	TaskHandle	taskHandle=0;
-	char        errBuff[2048]={'\0'};
+	int         error = 0;
+	TaskHandle	taskHandle = 0;
+	char        errBuff[2048] = { '\0' };
 	int32		written;
-	
+
 	//*********************************************
 	// DAQmx Configure Code
 	//*********************************************
-	DAQmxErrChk (DAQmxCreateTask("",&taskHandle));
-	DAQmxErrChk (DAQmxCreateDOChan(taskHandle, deviceName,"",DAQmx_Val_ChanForAllLines));
+	DAQmxErrChk(DAQmxCreateTask("", &taskHandle));
+	DAQmxErrChk(DAQmxCreateDOChan(taskHandle, deviceName, "", DAQmx_Val_ChanForAllLines));
 
 	//*********************************************
 	// DAQmx Start Code
 	//*********************************************
-	DAQmxErrChk (DAQmxStartTask(taskHandle));
+	DAQmxErrChk(DAQmxStartTask(taskHandle));
 
 	//*********************************************
 	// DAQmx Write Code
 	//*********************************************
-	DAQmxErrChk (DAQmxWriteDigitalU32(taskHandle,1,1,10.0,DAQmx_Val_GroupByChannel,&data,&written,NULL));
-	
+	DAQmxErrChk(DAQmxWriteDigitalU32(taskHandle, 1, 1, 10.0, DAQmx_Val_GroupByChannel, &data, &written, NULL));
+
 Error:
-	if( DAQmxFailed(error) )
-		DAQmxGetExtendedErrorInfo(errBuff,2048);
-	if( taskHandle!=0 ) {
+	if (DAQmxFailed(error))
+		DAQmxGetExtendedErrorInfo(errBuff, 2048);
+	if (taskHandle != 0) {
 		/*********************************************/
 		// DAQmx Stop Code
 		/*********************************************/
@@ -53,17 +53,11 @@ Error:
 */
 void UNIDAQ::init_NIDAQ()
 {
-	try
-	{
-		TaskHandle	taskHandle = 0;
-		DAQmxCreateTask("", &taskHandle);
-		DAQmxStartTask(taskHandle);
-		DAQmxStopTask(taskHandle);
-		DAQmxClearTask(taskHandle);
-	}
-	catch (std::exception e)
-	{
-	}
+	TaskHandle	taskHandle = 0;
+	DAQmxCreateTask("", &taskHandle);
+	DAQmxStartTask(taskHandle);
+	DAQmxStopTask(taskHandle);
+	DAQmxClearTask(taskHandle);
 }
 
 void UNIDAQ::control_NIDAQ(bool isOn, FString deviceName)

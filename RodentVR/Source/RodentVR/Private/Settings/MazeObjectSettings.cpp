@@ -8,7 +8,7 @@ UMazeObjectSettings::UMazeObjectSettings()
 {
 	this->SetCanCollide(true);
 	this->SetObjectType(MazeObjectType::INVALID);
-	this->SetTextureFileName(TEXT(""));
+	this->SetTexture(NewObject<UTextureSettings>());
 }
 
 MazeObjectType UMazeObjectSettings::GetTypeFromString(FString TypeString)
@@ -65,14 +65,14 @@ MazeObjectType UMazeObjectSettings::GetObjectType()
 	return this->ObjectType;
 }
 
-void UMazeObjectSettings::SetTextureFileName(FString TextureFileNameValue)
+void UMazeObjectSettings::SetTexture(UTextureSettings* TextureValue)
 {
-	this->TextureFileName = TextureFileNameValue;
+	this->Texture = TextureValue;
 }
 
-FString UMazeObjectSettings::GetTextureFileName()
+UTextureSettings* UMazeObjectSettings::GetTexture()
 {
-	return this->TextureFileName;
+	return this->Texture;
 }
 
 

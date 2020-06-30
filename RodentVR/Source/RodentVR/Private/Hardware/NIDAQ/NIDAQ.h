@@ -16,11 +16,13 @@ class RODENTVR_API UNIDAQ : public UBlueprintFunctionLibrary
 {
 	GENERATED_BODY()
 
+public:
 	UFUNCTION(BlueprintCallable, Category="NIDAQ")
 	static void control_NIDAQ(bool isOn, FString deviceName);
 	
 	UFUNCTION(BlueprintCallable, Category="NIDAQ")
 	static void init_NIDAQ();
 
+private:
 	static void NIDAQ_write_digital(const char* deviceName, unsigned long data);
 };

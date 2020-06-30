@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "StopConditions/StopCondition.h"
+#include "Settings/RegionSettings.h"
 #include "UObject/NoExportTypes.h"
 #include "EnterRegionStopCondition.generated.h"
 
@@ -18,31 +19,38 @@ class UEnterRegionStopCondition : public UStopCondition
 private:
 	UPROPERTY(BlueprintGetter = GetEnterRegionDelaySec, BlueprintSetter = SetEnterRegionDelaySec)
 		float EnterRegionDelaySec;
-	TMap<int, int> EnterRegionCounts;
-	TMap<int, int> EnterRegionStopConditionCounts;
+		TMap<URegionSettings*, int> EnterRegionCounts;
+	UPROPERTY(BlueprintGetter = GetEnterRegionStopConditionCounts)
+	TMap<URegionSettings*, int> EnterRegionStopConditionCounts;
+	UPROPERTY(BlueprintGetter = GetRequireAllConditions, BlueprintSetter = SetRequireAllConditions)
+		bool RequireAllConditions;
 
 	UFUNCTION()
-		void OnRewardRegionEnter(int RegionEnteredId);
+		void OnRegionEnter(URegionSettings* RegionEntered);
 
 public:
 	~UEnterRegionStopCondition();
 
-	void Init();
+	virtual void Init(AGameMode* GameMode);
 
 	virtual bool IsStopConditionMet(AGameMode* GameMode);
 
 	UFUNCTION(BlueprintCallable)
-		void ClearRegionCounts();
+		void ClearRegionStopConditionCounts();
 	UFUNCTION(BlueprintCallable)
-		void RemoveRegionCount(int RegionId);
+		void RemoveRegionStopConditionCount(URegionSettings* Region);
 	UFUNCTION(BlueprintCallable)
-		void AddRegionCount(int RegionId, int EnterRegionCount);
+		void AddRegionStopConditionCount(URegionSettings* Region, int EnterRegionCount);
 	UFUNCTION(BlueprintGetter)
-		TMap<int, int> GetEnterRegionCounts();
+		TMap<URegionSettings*, int> GetEnterRegionStopConditionCounts();
 	UFUNCTION(BlueprintGetter)
 		float GetEnterRegionDelaySec();
 	UFUNCTION(BlueprintSetter)
 		void SetEnterRegionDelaySec(float EnterRegionDelaySecValue);
+	UFUNCTION(BlueprintGetter)
+		bool GetRequireAllConditions();
+	UFUNCTION(BlueprintSetter)
+		void SetRequireAllConditions(bool RequireAllConditionsValue);
 
 	virtual FString GetConditionType();
 

@@ -543,6 +543,11 @@
 /I C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Source
 /I C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\ThirdParty\NIDAQmx\Includes
 /I C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Source\RodentVR
+/I ..\Plugins\Marketplace\RuntimeTransformer\Intermediate\Build\Win64\UE4Editor\Inc\RuntimeTransformer
+/I ..\Plugins\Marketplace\RuntimeTransformer\Source
+/I ..\Plugins\Marketplace\RuntimeTransformer\Source\RuntimeTransformer\Public
+/I ..\Plugins\Marketplace\RuntimeTransformer\Source\RuntimeTransformer
+/I ..\Plugins\Marketplace\RuntimeTransformer\Source\RuntimeTransformer\Public\Gizmos
 /I ThirdParty\PhysX3\PxShared\include
 /I ThirdParty\PhysX3\PxShared\include\cudamanager
 /I ThirdParty\PhysX3\PxShared\include\filebuf
@@ -572,10 +577,11 @@
 /I "C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared"
 /I "C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um"
 /I "C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\winrt"
-/FI"C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\UE4Editor\DebugGame\RodentVR\PCH.RodentVR.h"
-/Yu"C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\UE4Editor\DebugGame\RodentVR\PCH.RodentVR.h"
-/Fp"C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\UE4Editor\DebugGame\RodentVR\PCH.RodentVR.h.pch"
+/FI"C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVREditor\DebugGame\Engine\SharedPCH.Engine.NonOptimized.h"
+/Yu"C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVREditor\DebugGame\Engine\SharedPCH.Engine.NonOptimized.h"
+/Fp"C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVREditor\DebugGame\Engine\SharedPCH.Engine.NonOptimized.h.pch"
 "C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Source\RodentVR\Private\Simulator\AssetLoader.cpp"
+/FI"C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\UE4Editor\DebugGame\RodentVR\Definitions.RodentVR.h"
 /Fo"C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\UE4Editor\DebugGame\RodentVR\AssetLoader.cpp.obj"
 /TP
 /GR-

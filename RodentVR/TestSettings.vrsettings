@@ -1,9 +1,9 @@
 <Settings>
 	<BallInput>
-		<MouseADevice DeviceName="HID\&amp;111111" Multiplier="6.244000"/>
+		<MouseADevice DeviceName="HID\&amp;111111s" Multiplier="6.244000"/>
 		<MouseBDevice DeviceName="HID\VID&amp;222222222" Multiplier="-3.462000"/>
 	</BallInput>
-	<AirPuffers FrontToleranceAngle="27.000000">
+	<AirPuffers FrontToleranceAngle="34.000000">
 		<LeftDevice DeviceId="2" DeviceName="AAAA" DevicePort="BBB" DeviceLine="CCCCC"/>
 		<RightDevice DeviceId="3" DeviceName="DDDD" DevicePort="EEEE" DeviceLine="FFFF"/>
 	</AirPuffers>
@@ -13,11 +13,8 @@
 		<RewardDevice DeviceId="3333" DeviceName="100000" DevicePort="011111" DeviceLine="1222222"/>
 	</RewardDevices>
 	<Playlist>
-		<MazeFile Path="C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\TestFile2.maze"/>
-		<MazeFile Path="C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\TestFile - Copy.maze"/>
-		<MazeFile Path="C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\TestFile2.maze"/>
-		<MazeFile Path="C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\TestFile.maze"/>
-		<MazeFile Path="C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\TestFile - Copy.maze"/>
+		<MazeFile Path="C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\MyMaze2.maze"/>
+		<MazeFile Path="C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\MyMaze.maze"/>
 	</Playlist>
 </Settings>
 

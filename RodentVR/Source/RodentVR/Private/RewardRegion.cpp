@@ -4,9 +4,6 @@
 #include "RewardRegion.h"
 
 
-FRewardRegionEnterDelegate ARewardRegion::OnRewardRegionEnterDelegate;
-
-
 // Sets default values
 ARewardRegion::ARewardRegion()
 {
@@ -27,9 +24,4 @@ void ARewardRegion::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
-}
-
-void ARewardRegion::OnRewardRegionEnter(int RegionEnteredId)
-{
-	ARewardRegion::OnRewardRegionEnterDelegate.Broadcast(RegionEnteredId);
 }

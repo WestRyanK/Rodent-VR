@@ -1,33 +1,43 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 #include "EnterRegionStopCondition.h"
-#include "RewardRegion.h"
+#include "Simulator/Region.h"
 
 UEnterRegionStopCondition::~UEnterRegionStopCondition()
 {
-	ARewardRegion::OnRewardRegionEnterDelegate.Remove(this, FName("OnRewardRegionEnter"));
+	ARegion::OnRegionEnterDelegate.Remove(this, FName("OnRegionEnter"));
 }
 
-void UEnterRegionStopCondition::Init()
+void UEnterRegionStopCondition::Init(AGameMode* GameMode)
 {
-	ARewardRegion::OnRewardRegionEnterDelegate.AddDynamic(this, &UEnterRegionStopCondition::OnRewardRegionEnter);
+	ARegion::OnRegionEnterDelegate.Remove(this, FName("OnRegionEnter"));
+	ARegion::OnRegionEnterDelegate.AddDynamic(this, &UEnterRegionStopCondition::OnRegionEnter);
+
+	this->EnterRegionCounts.Empty();
 }
 
 bool UEnterRegionStopCondition::IsStopConditionMet(AGameMode* GameMode)
 {
-	TArray<int> keys;
-	this->EnterRegionStopConditionCounts.GetKeys(keys);
+	TArray<URegionSettings*> Keys;
+	this->EnterRegionStopConditionCounts.GetKeys(Keys);
 
-	for (auto key : keys)
+	for (auto Key : Keys)
 	{
-		if (!this->EnterRegionCounts.Contains(key) || this->EnterRegionCounts[key] < this->EnterRegionStopConditionCounts[key])
+		bool WasRegionEnteredEnough = (this->EnterRegionCounts.Contains(Key) && this->EnterRegionCounts[Key] >= this->EnterRegionStopConditionCounts[Key]);
+		if (this->RequireAllConditions && !WasRegionEnteredEnough)
+		{
 			return false;
+		}
+		if (!this->RequireAllConditions && WasRegionEnteredEnough)
+		{
+			return true;
+		}
 	}
 
-	return true;
+	return this->RequireAllConditions;
 }
 
-void UEnterRegionStopCondition::OnRewardRegionEnter(int RegionEnteredId)
+void UEnterRegionStopCondition::OnRegionEnter(URegionSettings* RegionEnteredId)
 {
 	if (!this->EnterRegionCounts.Contains(RegionEnteredId))
 	{
@@ -37,27 +47,27 @@ void UEnterRegionStopCondition::OnRewardRegionEnter(int RegionEnteredId)
 	this->EnterRegionCounts[RegionEnteredId] += 1;
 }
 
-void UEnterRegionStopCondition::ClearRegionCounts()
+void UEnterRegionStopCondition::ClearRegionStopConditionCounts()
 {
 	this->EnterRegionStopConditionCounts.Empty();
 	this->EnterRegionCounts.Empty();
 }
 
-void UEnterRegionStopCondition::RemoveRegionCount(int RegionId)
+void UEnterRegionStopCondition::RemoveRegionStopConditionCount(URegionSettings* Region)
 {
-	this->EnterRegionStopConditionCounts.Remove(RegionId);
+	this->EnterRegionStopConditionCounts.Remove(Region);
 	this->EnterRegionCounts.Empty();
 }
 
-void UEnterRegionStopCondition::AddRegionCount(int RegionId, int EnterRegionCount)
+void UEnterRegionStopCondition::AddRegionStopConditionCount(URegionSettings* Region, int EnterRegionCount)
 {
-	this->EnterRegionStopConditionCounts.Add(RegionId, EnterRegionCount);
+	this->EnterRegionStopConditionCounts.Add(Region, EnterRegionCount);
 	this->EnterRegionCounts.Empty();
 }
 
-TMap<int, int> UEnterRegionStopCondition::GetEnterRegionCounts()
+TMap<URegionSettings*, int> UEnterRegionStopCondition::GetEnterRegionStopConditionCounts()
 {
-	return this->EnterRegionCounts;
+	return this->EnterRegionStopConditionCounts;
 }
 
 void UEnterRegionStopCondition::SetEnterRegionDelaySec(float EnterRegionDelaySecValue)
@@ -73,4 +83,14 @@ float UEnterRegionStopCondition::GetEnterRegionDelaySec()
 FString UEnterRegionStopCondition::GetConditionType()
 {
 	return TEXT("EnterRegion");
+}
+
+bool UEnterRegionStopCondition::GetRequireAllConditions()
+{
+	return this->RequireAllConditions;
+}
+
+void UEnterRegionStopCondition::SetRequireAllConditions(bool RequireAllConditionsValue)
+{
+	this->RequireAllConditions = RequireAllConditionsValue;
 }

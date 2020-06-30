@@ -13,11 +13,11 @@ private:
 	float Timestamp;
 	FVector Position;
 	FVector Forward;
-	int CurrentRegion;
+	FString CurrentRegion;
 public:
-	BehaviorSnapshot(float Timestamp, FVector Position, FVector Forward, int CurrentRegion);
+	BehaviorSnapshot(float Timestamp, FVector Position, FVector Forward, FString CurrentRegion);
 	float GetTimestamp();
 	FVector GetPosition();
 	FVector GetForward();
-	int GetCurrentRegion();
+	FString GetCurrentRegion();
 };

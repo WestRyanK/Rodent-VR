@@ -1,28 +1,82 @@
 <Maze Name="YMaze">
 	<BehaviorRecording Filename=""/>
 	<PlayerStart>
-		<Position X="0.000000" Y="200.000000" Z="0.000000"/>
-		<Rotation Angle="89.999954"/>
+		<Position X="0.000171" Y="438.581360" Z="0.000000"/>
+		<Rotation AngleY="0.000000" AngleZ="-89.999992" AngleX="0.000000"/>
+		<Scale X="1.000000" Y="1.000000" Z="1.000000"/>
 	</PlayerStart>
 	<Textures>
-		<SlotName SlotName="WingStart" TextureName="C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\OriginalAssets\Materials\wallpaper_08.png" />
-		<SlotName SlotName="WingLeft" TextureName="C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\OriginalAssets\Materials\wallpaper_09.png" />
-		<SlotName SlotName="WingRight" TextureName="C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\OriginalAssets\Materials\wallpaper_02.png" />
-		<SlotName SlotName="Center" TextureName="C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\OriginalAssets\Materials\wallpaper_05.png" />
+		<Texture Texture="White" CustomTexturePath="" SlotName="WingStart"/>
+		<Texture Texture="Checkers Medium" CustomTexturePath="" SlotName="WingLeft"/>
+		<Texture Texture="Dots 1" CustomTexturePath="" SlotName="WingRight"/>
+		<Texture Texture="Checkers Medium" CustomTexturePath="" SlotName="Center"/>
 	</Textures>
-	<Regions AreRegionsVisible="false"/>
-	<MazeObjects>
-		<MazeObject MazeObjectType="Figurine" CanCollide="true" TextureName="C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\OriginalAssets\Materials\wallpaper_08.png">
-			<Position X="0.000000" Y="0.000000" Z="268.145935"/>
+	<Regions>
+		<Region RegionId="Right" IsRewardDispensingEnabled="true" RewardDeviceDispensingDurationSec="1.000000" IsNosePoke="false" DeviceId="">
+			<Position X="149.983902" Y="-191.762115" Z="1.000000"/>
+			<Rotation AngleY="0.000000" AngleZ="-24.761515" AngleX="0.000000"/>
+			<Scale X="2.463493" Y="2.463493" Z="1.000000"/>
+			<ToneGeneration IsToneGenerationEnabled="false" ToneDurationSec="0.000000" TonePitchHz="0.000000" ToneVolumePercent="0.000000"/>
+		</Region>
+		<Region RegionId="Left" IsRewardDispensingEnabled="true" RewardDeviceDispensingDurationSec="1.000000" IsNosePoke="false" DeviceId="">
+			<Position X="-288.111176" Y="-218.980713" Z="1.000000"/>
+			<Rotation AngleY="-19.766724" AngleZ="-13.230824" AngleX="34.807373"/>
+			<Scale X="2.343139" Y="2.343139" Z="1.000000"/>
+			<ToneGeneration IsToneGenerationEnabled="false" ToneDurationSec="0.000000" TonePitchHz="0.000000" ToneVolumePercent="0.000000"/>
+		</Region>
+		<Region RegionId="Start" IsRewardDispensingEnabled="true" RewardDeviceDispensingDurationSec="1.000000" IsNosePoke="false" DeviceId="">
+			<Position X="1.000000" Y="262.610687" Z="1.000000"/>
 			<Rotation AngleY="0.000000" AngleZ="0.000000" AngleX="0.000000"/>
-			<Scale X="2.000000" Y="2.000000" Z="0.500000"/>
+			<Scale X="3.417340" Y="6.427209" Z="1.130247"/>
+			<ToneGeneration IsToneGenerationEnabled="true" ToneDurationSec="1.250000" TonePitchHz="610.000000" ToneVolumePercent="0.200000"/>
+		</Region>
+		<Region RegionId="NosePokeA" IsRewardDispensingEnabled="true" RewardDeviceDispensingDurationSec="1.000000" IsNosePoke="true" DeviceId="">
+			<Position X="-191.898758" Y="-19.571857" Z="20.000000"/>
+			<Rotation AngleY="0.000000" AngleZ="-59.999992" AngleX="0.000000"/>
+			<Scale X="0.250000" Y="0.500000" Z="0.500000"/>
+			<ToneGeneration IsToneGenerationEnabled="true" ToneDurationSec="5.000000" TonePitchHz="1100.000000" ToneVolumePercent="0.420000"/>
+		</Region>
+	</Regions>
+	<MazeObjects>
+		<MazeObject MazeObjectType="Figurine" CanCollide="true">
+			<Texture Texture="Gray" CustomTexturePath=""/>
+			<Position X="-352.542603" Y="-283.193848" Z="0.000000"/>
+			<Rotation AngleY="0.000000" AngleZ="0.000000" AngleX="0.000000"/>
+			<Scale X="1.000000" Y="1.000000" Z="1.000000"/>
 		</MazeObject>
 		<MazeObject MazeObjectType="Cube" CanCollide="true">
-			<Position X="100.000000" Y="237.490997" Z="50.000000"/>
+			<Texture Texture="Gray" CustomTexturePath=""/>
+			<Position X="-184.473892" Y="-200.455688" Z="0.000000"/>
 			<Rotation AngleY="0.000000" AngleZ="0.000000" AngleX="0.000000"/>
-			<Scale X="2.500000" Y="4.500000" Z="1.000000"/>
+			<Scale X="1.000000" Y="1.000000" Z="1.000000"/>
+		</MazeObject>
+		<MazeObject MazeObjectType="Cylinder" CanCollide="true">
+			<Texture Texture="Gray" CustomTexturePath=""/>
+			<Position X="247.636215" Y="-261.850525" Z="0.000000"/>
+			<Rotation AngleY="0.000000" AngleZ="0.000000" AngleX="0.000000"/>
+			<Scale X="1.000000" Y="1.000000" Z="1.000000"/>
+		</MazeObject>
+		<MazeObject MazeObjectType="Cone" CanCollide="true">
+			<Texture Texture="Gray" CustomTexturePath=""/>
+			<Position X="150.706284" Y="-101.114990" Z="0.000000"/>
+			<Rotation AngleY="0.000000" AngleZ="0.000000" AngleX="0.000000"/>
+			<Scale X="1.000000" Y="1.000000" Z="1.000000"/>
+		</MazeObject>
+		<MazeObject MazeObjectType="Sphere" CanCollide="true">
+			<Texture Texture="Gray" CustomTexturePath=""/>
+			<Position X="-26.786163" Y="84.289536" Z="-0.000092"/>
+			<Rotation AngleY="0.000000" AngleZ="0.000000" AngleX="0.000000"/>
+			<Scale X="1.000000" Y="1.000000" Z="1.000000"/>
+		</MazeObject>
+		<MazeObject MazeObjectType="Figurine" CanCollide="true">
+			<Texture Texture="Gray" CustomTexturePath=""/>
+			<Position X="34.721931" Y="-168.211731" Z="0.000031"/>
+			<Rotation AngleY="0.000000" AngleZ="0.000000" AngleX="0.000000"/>
+			<Scale X="1.000000" Y="1.000000" Z="1.000000"/>
 		</MazeObject>
 	</MazeObjects>
-	<MazeObjects/>
+	<StopConditions>
+		<Condition ConditionType="TimeLimit" TimeLimitSec="5.000000"/>
+	</StopConditions>
 </Maze>
 

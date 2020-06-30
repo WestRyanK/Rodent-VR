@@ -12,3 +12,7 @@ FString UStopCondition::GetConditionType()
 {
 	return TEXT("");
 }
+
+void UStopCondition::Init(AGameMode* GameMode)
+{
+}

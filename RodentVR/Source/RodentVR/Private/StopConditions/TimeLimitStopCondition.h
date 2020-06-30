@@ -30,4 +30,6 @@ public:
 		void SetTimeLimitSec(float TimeLimitSecValue);
 
 	virtual FString GetConditionType();
+
+	virtual void Init(AGameMode* GameMode);
 };

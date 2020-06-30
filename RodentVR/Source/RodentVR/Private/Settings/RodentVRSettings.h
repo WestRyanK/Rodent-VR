@@ -9,6 +9,7 @@
 #include "RodentVRSettings.generated.h"
 
 
+DECLARE_DYNAMIC_MULTICAST_DELEGATE(FRodentVRSettingsChangedDelegate);
 
 /**
  * 
@@ -42,9 +43,6 @@ private:
 
 public:
 	URodentVRSettings();
-
-	//UPROPERTY(BlueprintReadWrite)
-	//	TArray<UDevice*> RewardDevices;
 
 	UFUNCTION(BlueprintGetter)
 		FString GetSettingsFileName();
@@ -80,6 +78,8 @@ public:
 		void SetAirPufferFrontAngle(float AirPufferFrontAngleValue);
 	UFUNCTION(BlueprintGetter)
 		TArray<UDevice*> GetRewardDevices();
+	UFUNCTION(BlueprintCallable, BlueprintPure)
+		UDevice* GetRewardDeviceById(FString DeviceIdValue);
 	UFUNCTION(BlueprintCallable)
 		void AddRewardDevice(UDevice* RewardDeviceValue);
 	UFUNCTION(BlueprintCallable)
@@ -93,7 +93,14 @@ public:
 	UFUNCTION(BlueprintCallable)
 		void RemoveMaze(UMazeSettings* MazeValue);
 	UFUNCTION(BlueprintCallable)
+		void RemoveMazeAtIndex(int MazeIndexValue);
+	UFUNCTION(BlueprintCallable)
 		void ClearMazes();
 	UFUNCTION(BlueprintCallable, BlueprintPure)
 		UMazeSettings* GetMazeFromPlaylistByFileName(FString MazeSettingsFileName);
+
+	UFUNCTION(BlueprintCallable)
+		void OnRodentVRSettingsChanged();
+
+	static FRodentVRSettingsChangedDelegate OnRodentVRSettingsChangedDelegate;
 };
