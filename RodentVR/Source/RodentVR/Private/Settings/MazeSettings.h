@@ -7,6 +7,9 @@
 #include "Engine.h"
 #include "StopConditions/StopCondition.h"
 #include "MazeObjectSettings.h"
+#include "Settings/TextureSettings.h"
+#include "Settings/StartPositionSettings.h"
+#include "Settings/RegionSettings.h"
 #include "UObject/NoExportTypes.h"
 #include "MazeSettings.generated.h"
 
@@ -26,19 +29,19 @@ private:
 	UPROPERTY(BlueprintGetter = GetBehaviorRecordingFileName, BlueprintSetter = SetBehaviorRecordingFileName)
 		FString BehaviorRecordingFileName;
 	UPROPERTY(BlueprintGetter = GetPlayerStart, BlueprintSetter = SetPlayerStart)
-		FTransform PlayerStart;
-	UPROPERTY(BlueprintGetter = GetAreRegionsVisible, BlueprintSetter = SetAreRegionsVisible)
-		bool AreRegionsVisible;
-	//UPROPERTY()
-	//TArray<Region> 
+		UStartPositionSettings* PlayerStart;
+	UPROPERTY(BlueprintGetter = GetRegionSettings)
+		TArray<URegionSettings*> RegionSettings;
 	UPROPERTY(BlueprintGetter = GetMazeObjects)
 		TArray<UMazeObjectSettings*> MazeObjects;
 	UPROPERTY(BlueprintGetter = GetTextures)
-		TMap<FString, FString> Textures;
+		TMap<FString, UTextureSettings*> Textures;
 	UPROPERTY(BlueprintGetter = GetStopConditions)
 		TArray<UStopCondition*> StopConditions;
 
 public:
+	UMazeSettings();
+
 	UFUNCTION(BlueprintCallable, BlueprintPure)
 		bool DoesMazeHaveSettings() const;
 	UFUNCTION(BlueprintGetter)
@@ -54,25 +57,21 @@ public:
 	UFUNCTION(BlueprintSetter)
 		void SetBehaviorRecordingFileName(FString BehaviorRecordingFileNameValue);
 	UFUNCTION(BlueprintGetter)
-		FTransform GetPlayerStart();
+		UStartPositionSettings* GetPlayerStart();
 	UFUNCTION(BlueprintSetter)
-		void SetPlayerStart(FTransform PlayerStartValue);
+		void SetPlayerStart(UStartPositionSettings* PlayerStartValue);
 	UFUNCTION(BlueprintGetter)
-		bool GetAreRegionsVisible();
-	UFUNCTION(BlueprintSetter)
-		void SetAreRegionsVisible(bool AreRegionsVisibleValue);
-	UFUNCTION(BlueprintGetter)
-		TMap<FString, FString> GetTextures();
+		TMap<FString, UTextureSettings*> GetTextures();
 	UFUNCTION(BlueprintCallable)
 		void ClearTextures();
 	UFUNCTION(BlueprintCallable)
 		void RemoveTexture(FString SlotName);
 	UFUNCTION(BlueprintCallable)
-		void AddTexture(FString SlotName, FString TextureFileNameValue);
+		void AddTexture(FString SlotName, UTextureSettings* TextureValue);
 	UFUNCTION(BlueprintCallable)
 		void ClearStopConditions();
 	UFUNCTION(BlueprintCallable)
-		void RemoveStopCondition(int position);
+		void RemoveStopCondition(UStopCondition* StopCondition);
 	UFUNCTION(BlueprintCallable)
 		void AddStopCondition(UStopCondition* StopCondition);
 	UFUNCTION(BlueprintGetter)
@@ -80,9 +79,20 @@ public:
 	UFUNCTION(BlueprintCallable)
 		void ClearMazeObjects();
 	UFUNCTION(BlueprintCallable)
-		void RemoveMazeObject(UMazeObjectSettings* MazeObject);
+		void RemoveMazeObject(UMazeObjectSettings* MazeObjectValue);
 	UFUNCTION(BlueprintCallable)
-		void AddMazeObject(UMazeObjectSettings* MazeObject);
+		void AddMazeObject(UMazeObjectSettings* MazeObjectValue);
 	UFUNCTION(BlueprintGetter)
 		TArray<UMazeObjectSettings*> GetMazeObjects();
+
+	UFUNCTION(BlueprintCallable)
+		void ClearRegionSettings();
+	UFUNCTION(BlueprintCallable)
+		void RemoveRegionSettings(URegionSettings* RegionSettingsValue);
+	UFUNCTION(BlueprintCallable)
+		void AddRegionSettings(URegionSettings* RegionSettingsValue);
+	UFUNCTION(BlueprintGetter)
+		TArray<URegionSettings*> GetRegionSettings();
+	UFUNCTION(BlueprintCallable, BlueprintPure)
+		URegionSettings* GetRegionById(FString RegionIdValue);
 };

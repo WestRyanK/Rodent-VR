@@ -18,7 +18,7 @@ AMazeObject::AMazeObject()
 	PrimaryActorTick.bCanEverTick = false;
 
 	this->StaticMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Static Mesh"));
-	this->StaticMesh->SetupAttachment(this->RootComponent);
+	this->RootComponent = this->StaticMesh;
 
 	this->Tags.Add(AMazeObject::MazeObjectTag);
 }
@@ -49,7 +49,7 @@ void AMazeObject::UpdateFromSettings()
 		UStaticMesh* Mesh = UAssetLoader::LoadAssetFromPath<UStaticMesh>(MeshPath);
 		this->StaticMesh->SetStaticMesh(Mesh);
 
-		UMaterialInstanceDynamic* Material = UAssetLoader::LoadMaterialInstanceFromTextureFile(this->Settings->GetTextureFileName(), this);
+		UMaterialInstanceDynamic* Material = UAssetLoader::LoadMaterial(this->Settings->GetTexture(), this);
 		this->StaticMesh->SetMaterial(0, Material);
 	}
 }

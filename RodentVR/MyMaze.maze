@@ -1,0 +1,28 @@
+<Maze Name="CorridorMaze">
+	<BehaviorRecording Filename=""/>
+	<PlayerStart>
+		<Position X="0.000000" Y="0.000000" Z="0.000000"/>
+		<Rotation AngleY="0.000000" AngleZ="-90.000000" AngleX="0.000000"/>
+		<Scale X="1.000000" Y="1.000000" Z="1.000000"/>
+	</PlayerStart>
+	<Textures/>
+	<Regions>
+		<Region RegionId="Region A" IsRewardDispensingEnabled="true" RewardDeviceDispensingDurationSec="1.000000" IsNosePoke="false" DeviceId="">
+			<Position X="0.000000" Y="-291.825592" Z="0.000000"/>
+			<Rotation AngleY="0.000000" AngleZ="0.000000" AngleX="0.000000"/>
+			<Scale X="1.943940" Y="4.005098" Z="1.176747"/>
+			<ToneGeneration IsToneGenerationEnabled="false" ToneDurationSec="0.000000" TonePitchHz="0.000000" ToneVolumePercent="0.000000"/>
+		</Region>
+		<Region RegionId="Region B" IsRewardDispensingEnabled="true" RewardDeviceDispensingDurationSec="1.000000" IsNosePoke="false" DeviceId="">
+			<Position X="0.000000" Y="-890.307556" Z="0.000000"/>
+			<Rotation AngleY="0.000000" AngleZ="0.000000" AngleX="0.000000"/>
+			<Scale X="1.961926" Y="4.644892" Z="1.216420"/>
+			<ToneGeneration IsToneGenerationEnabled="false" ToneDurationSec="0.000000" TonePitchHz="0.000000" ToneVolumePercent="0.000000"/>
+		</Region>
+	</Regions>
+	<MazeObjects/>
+	<StopConditions>
+		<Condition ConditionType="TimeLimit" TimeLimitSec="15.000000"/>
+	</StopConditions>
+</Maze>
+

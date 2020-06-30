@@ -673,8 +673,10 @@ C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\AssetRegistry\Public\I
 C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\AssetRegistry\Public\ARFilter.h
 C:\Program Files\Epic Games\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\AssetRegistry\ARFilter.generated.h
 C:\Program Files\Epic Games\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\AssetRegistry\IAssetRegistry.generated.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Source\RodentVR\Private\Settings/TextureSettings.h
 C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\CoreUObject\Public\UObject/NoExportTypes.h
 C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Core\Public\Math/UnitConversion.h
 C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Core\Public\Math/UnitConversion.inl
 C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Core\Public\Internationalization/PolyglotTextData.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\UE4Editor\Inc\RodentVR\TextureSettings.generated.h
 C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\UE4Editor\Inc\RodentVR\AssetLoader.generated.h

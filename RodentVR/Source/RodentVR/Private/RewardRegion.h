@@ -7,7 +7,6 @@
 #include "RewardRegion.generated.h"
 
 
-DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FRewardRegionEnterDelegate, int, RegionEnteredId);
 
 UCLASS()
 class ARewardRegion : public AActor
@@ -38,12 +37,7 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
-	
-	static FRewardRegionEnterDelegate OnRewardRegionEnterDelegate;
 
-
-	UFUNCTION(BlueprintCallable, Category="Reward Region")
-	void OnRewardRegionEnter(int RegionEnteredId);
 
 protected:
 	// Called when the game starts or when spawned

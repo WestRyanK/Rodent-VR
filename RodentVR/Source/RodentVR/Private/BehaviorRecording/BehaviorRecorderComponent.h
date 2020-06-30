@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
+#include "Settings/RegionSettings.h"
 #include "BehaviorRecording/BehaviorSnapshot.h"
 #include "BehaviorRecorderComponent.generated.h"
 
@@ -25,13 +26,18 @@ public:
 private:
 	TArray<BehaviorSnapshot> Snapshots;
 	float StartTimeSec;
-	int CurrentRegion;
+	FString CurrentRegion;
 	UFUNCTION()
-	void OnRewardRegionEnter(int RegionEnteredId);
+	void OnRegionEnter(URegionSettings* RegionEntered);
 	UFUNCTION()
 	void OnMazeLoaded();
 	UFUNCTION()
 	void OnMazeFinished();
+
+	UFUNCTION()
+		void RemoveDelegates();
+	UFUNCTION()
+		void AddDelegates();
 
 protected:
 	// Called when the game starts

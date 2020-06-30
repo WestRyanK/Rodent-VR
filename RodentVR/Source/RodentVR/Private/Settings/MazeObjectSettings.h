@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
+#include "Settings/TextureSettings.h"
 #include "Classes/Components/StaticMeshComponent.h"
 #include "Settings/ActorSettings.h"
 #include "MazeObjectSettings.generated.h"
@@ -41,16 +42,16 @@ public:
 	UFUNCTION()
 		FString GetObjectTypeString();
 	UFUNCTION(BlueprintSetter)
-		void SetTextureFileName(FString TextureFileNameValue);
+		void SetTexture(UTextureSettings* TextureValue);
 	UFUNCTION(BlueprintGetter)
-		FString GetTextureFileName();
+		UTextureSettings* GetTexture();
 
 private:
 	UPROPERTY(BlueprintGetter = GetCanCollide, BlueprintSetter = SetCanCollide)
 		bool CanCollide;
 	UPROPERTY(BlueprintGetter = GetObjectType, BlueprintSetter = SetObjectType)
 		MazeObjectType ObjectType;
-	UPROPERTY(BlueprintGetter = GetTextureFileName, BlueprintSetter = SetTextureFileName)
-		FString TextureFileName;
+	UPROPERTY(BlueprintGetter = GetTexture, BlueprintSetter = SetTexture)
+		UTextureSettings* Texture;
 };
 

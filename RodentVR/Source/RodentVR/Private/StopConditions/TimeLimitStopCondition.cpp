@@ -7,7 +7,14 @@
 
 bool UTimeLimitStopCondition::IsStopConditionMet(AGameMode* GameMode)
 {
-	return GameMode->GetWorld()->TimeSeconds > this->StartTime + this->TimeLimitSec;
+	UWorld* World = GameMode->GetWorld();
+	if (IsValid(World))
+	{
+		float CurrentTime = World->TimeSeconds;
+		bool IsMet = (CurrentTime > this->StartTime + this->TimeLimitSec);
+		return IsMet;
+	}
+	return false;
 }
 
 float UTimeLimitStopCondition::GetStartTime()
@@ -17,7 +24,7 @@ float UTimeLimitStopCondition::GetStartTime()
 
 void UTimeLimitStopCondition::SetStartTime(float StartTimeValue)
 {
-	this->TimeLimitSec = StartTimeValue;
+	this->StartTime = StartTimeValue;
 }
 
 float UTimeLimitStopCondition::GetTimeLimitSec()
@@ -33,4 +40,18 @@ void UTimeLimitStopCondition::SetTimeLimitSec(float TimeLimitSecValue)
 FString UTimeLimitStopCondition::GetConditionType()
 {
 	return TEXT("TimeLimit");
+}
+
+void UTimeLimitStopCondition::Init(AGameMode* GameMode)
+{
+	UWorld* World = GameMode->GetWorld();
+	if (IsValid(World))
+	{
+		float CurrentTime = World->TimeSeconds;
+		this->SetStartTime(CurrentTime);
+	}
+	else
+	{
+		this->SetStartTime(0.0f);
+	}
 }

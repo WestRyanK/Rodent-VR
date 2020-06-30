@@ -2,6 +2,8 @@
 
 
 #include "SimulatorGameMode.h"
+#include "Kismet/GameplayStatics.h"
+#include "Core/RodentVRGameInstance.h"
 #include "StopConditions/StopConditionsChecker.h"
 #include "MazeSpawner.h"
 
@@ -27,7 +29,7 @@ void ASimulatorGameMode::Tick(float DeltaSeconds)
 {
 	Super::Tick(DeltaSeconds);
 
-	if (this->StopConditionsChecker != nullptr)
+	if (IsValid(this->StopConditionsChecker))
 	{
 		if (this->StopConditionsChecker->AreStopConditionsMet(this))
 		{
@@ -41,23 +43,26 @@ void ASimulatorGameMode::Tick(float DeltaSeconds)
 
 void ASimulatorGameMode::LoadNextMaze()
 {
-	this->CurrentMazeIndex++;
-	if (this->RodentVRSettings != nullptr)
+	URodentVRGameInstance* GameInstance = Cast<URodentVRGameInstance>(UGameplayStatics::GetGameInstance(this));
+	if (IsValid(GameInstance))
 	{
-		if (this->CurrentMazeIndex < this->RodentVRSettings->GetMazePlaylist().Num())
+		this->CurrentMazeIndex++;
+		if (IsValid(this->RodentVRSettings))
 		{
-			UMazeSettings* MazeSettings = this->RodentVRSettings->GetMazePlaylist()[this->CurrentMazeIndex];
-			TMap<AActor*, UObject*> ActorToSetting;
-			TMap<UObject*, AActor*> SettingToActor;
-			TArray<UStopCondition*> StopConditions;
-			UMazeSpawner::SpawnMaze(this, MazeSettings, false, ActorToSetting, SettingToActor, StopConditions);
-			this->StopConditionsChecker = NewObject<UStopConditionsChecker>();
-			this->StopConditionsChecker->SetStopConditions(StopConditions);
-			this->OnMazeLoaded();
-		}
-		else
-		{
-			FGenericPlatformMisc::RequestExit(false);
+			if (this->CurrentMazeIndex < this->RodentVRSettings->GetMazePlaylist().Num())
+			{
+				UMazeSettings* MazeSettings = this->RodentVRSettings->GetMazePlaylist()[this->CurrentMazeIndex];
+				GameInstance->SetCurrentMaze(MazeSettings);
+				UMazeSpawner::SpawnMaze(this, MazeSettings, false, false);
+				this->StopConditionsChecker = NewObject<UStopConditionsChecker>();
+				this->StopConditionsChecker->SetStopConditions(MazeSettings->GetStopConditions());
+				this->StopConditionsChecker->InitStopConditions(this);
+				this->OnMazeLoaded();
+			}
+			else
+			{
+				GameInstance->GoToPage(PageEnum::MAINMENU);
+			}
 		}
 	}
 }

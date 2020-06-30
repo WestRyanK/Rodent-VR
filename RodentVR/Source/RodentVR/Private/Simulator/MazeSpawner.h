@@ -18,17 +18,23 @@ class UMazeSpawner : public UObject
 
 public:
 	UFUNCTION(BlueprintCallable)
-		static void SpawnMaze(UObject* WorldContextObject, UMazeSettings* MazeSettings, bool IsSpawnForEditor, TMap<AActor*, UObject*>& ActorToSetting, TMap<UObject*, AActor*>& SettingToActor, TArray<UStopCondition*>& StopConditions);
+		static void SpawnMaze(UObject* WorldContextObject, UMazeSettings* MazeSettings, bool IsSpawnForEditor, bool ShowRegions);
+
+	UFUNCTION(BlueprintCallable, BlueprintPure)
+		static UObject* GetSettingFromActor(AActor* ActorValue);
+	UFUNCTION(BlueprintCallable, BlueprintPure)
+		static AActor* GetActorFromSetting(UObject* SettingValue);
 
 
 private:
 	static FName SpawnedActorTag;
 	static void ClearWorld(UWorld* World);
-	static void LoadMaze(UWorld* World, UMazeSettings* MazeSettings, TMap<AActor*, UObject*>& ActorToSetting);
-	static void LoadPlayerStart(UWorld* World, UMazeSettings* MazeSettings, TMap<AActor*, UObject*>& ActorToSetting);
-	static void LoadMazeObjects(UWorld* World, UMazeSettings* MazeSettings, bool AreAllObjectsSelectable, TMap<AActor*, UObject*>& ActorToSetting);
-	static void LoadRegions(UWorld* World, UMazeSettings* MazeSettings, bool AreAllObjectsSelectable, TMap<AActor*, UObject*>& ActorToSetting);
-	static void LoadStopConditions(UWorld* World, UMazeSettings* MazeSettings, TMap<AActor*, UObject*>& ActorToSetting, TArray<UStopCondition*> StopConditions);
-	static void ReverseActorToSettingMap(TMap<AActor*, UObject*>& ActorToSetting, TMap<UObject*, AActor*>& SettingToActor);
+	static void LoadMaze(UWorld* World, UMazeSettings* MazeSettings);
+	static void LoadPlayerStart(UWorld* World, UMazeSettings* MazeSettings, bool IsSpawnForEditor);
+	static void LoadMazeObjects(UWorld* World, UMazeSettings* MazeSettings, bool IsSpawnForEditor);
+	static void LoadRegions(UWorld* World, UMazeSettings* MazeSettings, bool IsSpawnForEditor, bool ShowRegions);
+	static void ReverseActorToSettingMap();
+	static TMap<AActor*, UObject*> ActorToSetting;
+	static TMap<UObject*, AActor*> SettingToActor;
 
 };

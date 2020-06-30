@@ -5,6 +5,7 @@
 #include "AssetRegistryModule.h"
 
 FAssetRegistryModule& UAssetLoader::AssetRegistryModule = FModuleManager::LoadModuleChecked<FAssetRegistryModule>("AssetRegistry");
+TMap<TextureEnum, FString> UAssetLoader::TextureToTexturePath = TMap<TextureEnum, FString>();
 
 EImageFormat UAssetLoader::GetImageFormatFromFileName(const FString& FileName)
 {
@@ -23,6 +24,43 @@ EImageFormat UAssetLoader::GetImageFormatFromFileName(const FString& FileName)
 		}
 	}
 	return EImageFormat::Invalid;
+}
+
+UTexture2D* UAssetLoader::LoadTexture(TextureEnum Texture)
+{
+	UAssetLoader::LoadTextureToTexturePathMap();
+	FString* TexturePathName = UAssetLoader::TextureToTexturePath.Find(Texture);
+	if (TexturePathName != nullptr)
+	{
+		UTexture2D* Texture2D = UAssetLoader::LoadAssetFromPath<UTexture2D>(TEXT("Texture2D'/Game/Materials/Textures/" + *TexturePathName + "." + *TexturePathName));
+		return Texture2D;
+	}
+	else
+	{
+		return nullptr;
+	}
+}
+
+UTexture2D* UAssetLoader::LoadTextureFromSettings(UTextureSettings* TextureSettings)
+{
+	if (IsValid(TextureSettings))
+	{
+		TextureEnum Texture = TextureSettings->GetTexture();
+		if (Texture == TextureEnum::CUSTOM)
+		{
+			bool IsValid;
+			int Width, Height;
+			return UAssetLoader::LoadTextureFromFile(TextureSettings->GetCustomTexturePath(), IsValid, Width, Height);
+		}
+		else
+		{
+			return UAssetLoader::LoadTexture(Texture);
+		}
+	}
+	else
+	{
+		return UAssetLoader::LoadTexture(TextureEnum::GRAY);
+	}
 }
 
 UTexture2D* UAssetLoader::LoadTextureFromFile(const FString& FileName, bool& IsValid, int32& Width, int32& Height)
@@ -69,12 +107,9 @@ UTexture2D* UAssetLoader::LoadTextureFromFile(const FString& FileName, bool& IsV
 	return LoadedT2D;
 }
 
-UMaterialInstanceDynamic* UAssetLoader::LoadMaterialInstanceFromTextureFile(const FString& FileName, UObject* OuterObject)
+UMaterialInstanceDynamic* UAssetLoader::LoadMaterialFromTexture(UTexture2D* Texture, UObject* OuterObject)
 {
-	bool IsValid;
-	int Width, Height;
-	UTexture2D* Texture = UAssetLoader::LoadTextureFromFile(FileName, IsValid, Width, Height);
-	if (!IsValid)
+	if (!IsValid(Texture))
 	{
 		Texture = UAssetLoader::LoadAssetFromPath<UTexture2D>(TEXT("Texture2D'/Game/Materials/Textures/TextureGray.TextureGray"));
 	}
@@ -86,6 +121,20 @@ UMaterialInstanceDynamic* UAssetLoader::LoadMaterialInstanceFromTextureFile(cons
 	return DynamicMaterial;
 }
 
+UMaterialInstanceDynamic* UAssetLoader::LoadMaterial(UTextureSettings* TextureSettings, UObject* OuterObject)
+{
+	UTexture2D* Texture = UAssetLoader::LoadTextureFromSettings(TextureSettings);
+	return UAssetLoader::LoadMaterialFromTexture(Texture, OuterObject);
+}
+
+TArray<TextureEnum> UAssetLoader::GetBuiltInTextures()
+{
+	UAssetLoader::LoadTextureToTexturePathMap();
+	TArray<TextureEnum> TextureNames;
+	UAssetLoader::TextureToTexturePath.GetKeys(TextureNames);
+
+	return TextureNames;
+}
 
 TArray<FAssetData> UAssetLoader::GetAssetsInPath(FString AssetPath)
 {
@@ -94,3 +143,25 @@ TArray<FAssetData> UAssetLoader::GetAssetsInPath(FString AssetPath)
 	UAssetLoader::AssetRegistryModule.Get().GetAssetsByPath(FName(*AssetPath), AssetsInPath);
 	return AssetsInPath;
 }
+
+void UAssetLoader::LoadTextureToTexturePathMap()
+{
+	if (UAssetLoader::TextureToTexturePath.Num() == 0)
+	{
+		UAssetLoader::TextureToTexturePath.Add(TextureEnum::CHECKERS_LARGE, TEXT("TextureCheckerLarge"));
+		UAssetLoader::TextureToTexturePath.Add(TextureEnum::CHECKERS_MEDIUM, TEXT("TextureCheckerMedium"));
+		UAssetLoader::TextureToTexturePath.Add(TextureEnum::CHECKERS_SMALL, TEXT("TextureCheckerSmall"));
+		UAssetLoader::TextureToTexturePath.Add(TextureEnum::STRIPES_LARGE, TEXT("TextureStripesLarge"));
+		UAssetLoader::TextureToTexturePath.Add(TextureEnum::STRIPES_SMALL, TEXT("TextureStripesSmall"));
+		UAssetLoader::TextureToTexturePath.Add(TextureEnum::DOTS_1, TEXT("TextureDots1"));
+		UAssetLoader::TextureToTexturePath.Add(TextureEnum::DOTS_2, TEXT("TextureDots2"));
+		UAssetLoader::TextureToTexturePath.Add(TextureEnum::BLACK, TEXT("TextureBlack"));
+		UAssetLoader::TextureToTexturePath.Add(TextureEnum::WHITE, TEXT("TextureWhite"));
+		UAssetLoader::TextureToTexturePath.Add(TextureEnum::GRAY, TEXT("TextureGray"));
+		UAssetLoader::TextureToTexturePath.Add(TextureEnum::GREEN, TEXT("TextureGreen"));
+		UAssetLoader::TextureToTexturePath.Add(TextureEnum::BLUE, TEXT("TextureBlue"));
+		UAssetLoader::TextureToTexturePath.Add(TextureEnum::CYAN, TEXT("TextureCyan"));
+		UAssetLoader::TextureToTexturePath.Add(TextureEnum::CUSTOM, TEXT("TextureCustom"));
+	}
+}
+

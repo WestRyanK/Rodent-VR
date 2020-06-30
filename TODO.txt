@@ -1,0 +1,2 @@
+* Simulator Crashing on start #### If this happens, make sure you have NI services running!
+* Enter/Leave Region should use stack

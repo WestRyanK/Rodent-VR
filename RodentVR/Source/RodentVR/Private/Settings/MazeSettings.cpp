@@ -3,7 +3,13 @@
 
 #include "MazeSettings.h"
 #include "Simulator/AssetLoader.h"
+#include "StopConditions/EnterRegionStopCondition.h"
 #include "StopConditions/StopCondition.h"
+
+UMazeSettings::UMazeSettings()
+{
+	this->PlayerStart = NewObject<UStartPositionSettings>(this, TEXT("PlayerStart"));
+}
 
 
 bool UMazeSettings::DoesMazeHaveSettings() const
@@ -11,8 +17,8 @@ bool UMazeSettings::DoesMazeHaveSettings() const
 	bool HasStopConditions = (this->StopConditions.Num() > 0);
 	bool HasTextures = (this->Textures.Num() > 0);
 	bool HasMazeObjects = (this->MazeObjects.Num() > 0);
-	//bool HasRegions = (this->Regions.Num() > 0);
-	return HasStopConditions || HasTextures || HasMazeObjects;// || HasRegions;
+	bool HasRegions = (this->RegionSettings.Num() > 0);
+	return HasStopConditions || HasTextures || HasMazeObjects || HasRegions;
 }
 
 FString UMazeSettings::GetMazeName()
@@ -23,10 +29,12 @@ FString UMazeSettings::GetMazeName()
 void UMazeSettings::SetMazeName(FString MazeNameValue)
 {
 	this->MazeName = MazeNameValue;
-	
+
 	this->MazeObjects.Empty();
 	this->Textures.Empty();
+	this->RegionSettings.Empty();
 	this->StopConditions.Empty();
+	this->PlayerStart = NewObject<UStartPositionSettings>();
 }
 
 FString UMazeSettings::GetMazeSettingsFileName()
@@ -49,27 +57,17 @@ void UMazeSettings::SetBehaviorRecordingFileName(FString BehaviorRecordingFileNa
 	this->BehaviorRecordingFileName = BehaviorRecordingFileNameValue;
 }
 
-FTransform UMazeSettings::GetPlayerStart()
+UStartPositionSettings* UMazeSettings::GetPlayerStart()
 {
 	return this->PlayerStart;
 }
 
-void UMazeSettings::SetPlayerStart(FTransform PlayerStartValue)
+void UMazeSettings::SetPlayerStart(UStartPositionSettings* PlayerStartValue)
 {
 	this->PlayerStart = PlayerStartValue;
 }
 
-bool UMazeSettings::GetAreRegionsVisible()
-{
-	return this->AreRegionsVisible;
-}
-
-void UMazeSettings::SetAreRegionsVisible(bool AreRegionsVisibleValue)
-{
-	this->AreRegionsVisible = AreRegionsVisibleValue;
-}
-
-TMap<FString, FString> UMazeSettings::GetTextures()
+TMap<FString, UTextureSettings*> UMazeSettings::GetTextures()
 {
 	return this->Textures;
 }
@@ -79,13 +77,9 @@ void UMazeSettings::ClearTextures()
 	this->Textures.Empty();
 }
 
-void UMazeSettings::AddTexture(FString SlotName, FString TextureFileNameValue)
+void UMazeSettings::AddTexture(FString SlotName, UTextureSettings* TextureValue)
 {
-	//bool IsValid;
-	//int32 Width, Height;
-	//UTexture2D* Texture = UTextureLoader::LoadTextureFromFile(TextureFileNameValue, IsValid, Width, Height);
-	//this->Textures.Add(SlotName, Texture);
-	this->Textures.Add(SlotName, TextureFileNameValue);
+	this->Textures.Add(SlotName, TextureValue);
 }
 
 void UMazeSettings::RemoveTexture(FString SlotName)
@@ -98,9 +92,9 @@ void UMazeSettings::ClearStopConditions()
 	this->StopConditions.Empty();
 }
 
-void UMazeSettings::RemoveStopCondition(int position)
+void UMazeSettings::RemoveStopCondition(UStopCondition* StopCondition)
 {
-	this->StopConditions.RemoveAt(position);
+	this->StopConditions.Remove(StopCondition);
 }
 
 void UMazeSettings::AddStopCondition(UStopCondition* StopCondition)
@@ -118,17 +112,59 @@ void UMazeSettings::ClearMazeObjects()
 	this->MazeObjects.Empty();
 }
 
-void UMazeSettings::RemoveMazeObject(UMazeObjectSettings* MazeObject)
+void UMazeSettings::RemoveMazeObject(UMazeObjectSettings* MazeObjectValue)
 {
-	this->MazeObjects.Remove(MazeObject);
+	this->MazeObjects.Remove(MazeObjectValue);
 }
 
-void UMazeSettings::AddMazeObject(UMazeObjectSettings* MazeObject)
+void UMazeSettings::AddMazeObject(UMazeObjectSettings* MazeObjectValue)
 {
-	this->MazeObjects.Add(MazeObject);
+	this->MazeObjects.Add(MazeObjectValue);
 }
 
 TArray<UMazeObjectSettings*> UMazeSettings::GetMazeObjects()
 {
 	return this->MazeObjects;
+}
+
+void UMazeSettings::ClearRegionSettings()
+{
+	this->RegionSettings.Empty();
+}
+
+void UMazeSettings::RemoveRegionSettings(URegionSettings* RegionSettingsValue)
+{
+	this->RegionSettings.Remove(RegionSettingsValue);
+
+	for (UStopCondition* StopCondition : this->GetStopConditions())
+	{
+		UEnterRegionStopCondition* EnterRegionStopCondition = Cast<UEnterRegionStopCondition>(StopCondition);
+		if (IsValid(EnterRegionStopCondition))
+		{
+			EnterRegionStopCondition->RemoveRegionStopConditionCount(RegionSettingsValue);
+		}
+	}
+}
+
+void UMazeSettings::AddRegionSettings(URegionSettings* RegionSettingsValue)
+{
+	this->RegionSettings.Add(RegionSettingsValue);
+}
+
+TArray<URegionSettings*> UMazeSettings::GetRegionSettings()
+{
+	return this->RegionSettings;
+}
+
+
+URegionSettings* UMazeSettings::GetRegionById(FString RegionIdValue)
+{
+	for (URegionSettings* Region : this->GetRegionSettings())
+	{
+		if (Region->GetRegionId() == RegionIdValue)
+		{
+			return Region;
+		}
+	}
+	return nullptr;
 }

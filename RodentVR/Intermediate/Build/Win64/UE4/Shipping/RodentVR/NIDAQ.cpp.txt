@@ -1,0 +1,9 @@
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\UE4\Shipping\RodentVR\Definitions.RodentVR.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Source\RodentVR\Private\Hardware\NIDAQ\NIDAQ.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\UE4\Inc\RodentVR\NIDAQ.generated.h
+C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Engine\Classes\Engine/GameEngine.h
+C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Slate\Public\Widgets/SViewport.h
+C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\SlateCore\Public\Input/HittestGrid.h
+C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime/MovieSceneCapture/Public/MovieSceneCaptureHandle.h
+C:\Program Files\Epic Games\UE_4.25\Engine\Intermediate\Build\Win64\UE4\Inc\Engine\GameEngine.generated.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\ThirdParty\NIDAQmx\Includes\NIDAQmx.h

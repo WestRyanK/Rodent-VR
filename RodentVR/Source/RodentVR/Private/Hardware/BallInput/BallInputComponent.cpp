@@ -6,7 +6,6 @@
 #include "BallInput.h"
 #include "Settings/RodentVRSettings.h"
 #include "Simulator/SimulatorGameMode.h"
-#include "RodentGameMode.h"
 
 // Sets default values for this component's properties
 UBallInputComponent::UBallInputComponent()
@@ -24,10 +23,10 @@ void UBallInputComponent::BeginPlay()
 	Super::BeginPlay();
 
 	UWorld* World = GetWorld();
-	if (World != nullptr) 
+	if (IsValid(World))
 	{
 		ASimulatorGameMode* GameMode = (ASimulatorGameMode*)World->GetAuthGameMode();
-		if (GameMode != nullptr)
+		if (IsValid(GameMode))
 		{
 			URodentVRSettings* RodentVRSettings = GameMode->GetRodentVRSettings();
 

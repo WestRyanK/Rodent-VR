@@ -23,4 +23,6 @@ public:
 	virtual bool IsStopConditionMet(AGameMode* GameMode);
 	UFUNCTION(BlueprintGetter)
 		virtual FString GetConditionType();
+
+	virtual void Init(AGameMode* GameMode);
 };

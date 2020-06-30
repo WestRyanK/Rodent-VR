@@ -24,4 +24,5 @@ public:
 	bool AreStopConditionsMet(AGameMode* GameMode);
 	void AddStopCondition(UStopCondition* StopCondition);
 	void SetStopConditions(TArray<UStopCondition*> StopConditionsValue);
+	void InitStopConditions(AGameMode* GameMode);
 };

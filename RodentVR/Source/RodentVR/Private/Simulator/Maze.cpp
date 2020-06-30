@@ -21,27 +21,49 @@ AMaze::AMaze()
 	this->Tags.Add(AMaze::MazeTag);
 }
 
-void AMaze::UpdateFromSettings()
+bool AMaze::DoComponentsNeedUpdating(TArray<FAssetData> MazeMeshAssets)
 {
-	for (auto Pair : this->MeshComponents)
+	if (MazeMeshAssets.Num() != this->MeshComponents.Num())
 	{
-		Pair.Value->DestroyComponent();
+		return true;
 	}
-	this->MeshComponents.Empty();
 
-
-	TArray<FAssetData> MazeMeshAssets = UAssetLoader::GetAssetsInPath(TEXT("/Game/Mazes/" + this->Settings->GetMazeName()));
 	for (FAssetData MazeMeshAsset : MazeMeshAssets)
 	{
-
-		UStaticMeshComponent* MeshComponent = NewObject<UStaticMeshComponent>(this, MazeMeshAsset.AssetName);
-		UStaticMesh* Mesh = UAssetLoader::LoadAssetFromPath<UStaticMesh>(MazeMeshAsset.ObjectPath.ToString());
-		MeshComponent->SetStaticMesh(Mesh);
-		MeshComponent->SetupAttachment(this->RootComponent);
-		MeshComponent->RegisterComponent();
-
-		this->MeshComponents.Add(MazeMeshAsset.AssetName, MeshComponent);
+		if (!this->MeshComponents.Contains(MazeMeshAsset.AssetName))
+		{
+			return true;
+		}
 	}
+
+	return false;
+}
+
+void AMaze::UpdateFromSettings()
+{
+	TArray<FAssetData> MazeMeshAssets = UAssetLoader::GetAssetsInPath(TEXT("/Game/Mazes/" + this->Settings->GetMazeName()));
+	if (this->DoComponentsNeedUpdating(MazeMeshAssets))
+	{
+		for (auto Pair : this->MeshComponents)
+		{
+			Pair.Value->DestroyComponent();
+		}
+		this->MeshComponents.Empty();
+
+
+		for (FAssetData MazeMeshAsset : MazeMeshAssets)
+		{
+
+			UStaticMeshComponent* MeshComponent = NewObject<UStaticMeshComponent>(this, MazeMeshAsset.AssetName);
+			UStaticMesh* Mesh = UAssetLoader::LoadAssetFromPath<UStaticMesh>(MazeMeshAsset.ObjectPath.ToString());
+			MeshComponent->SetStaticMesh(Mesh);
+			MeshComponent->SetupAttachment(this->RootComponent);
+			MeshComponent->RegisterComponent();
+
+			this->MeshComponents.Add(MazeMeshAsset.AssetName, MeshComponent);
+		}
+	}
+
 
 	TArray<FName> UnusedComponentNames;
 	this->MeshComponents.GetKeys(UnusedComponentNames);
@@ -49,11 +71,11 @@ void AMaze::UpdateFromSettings()
 	for (auto Pair : this->Settings->GetTextures())
 	{
 		FName SlotName = FName(*Pair.Key);
-		FString TextureFileName = Pair.Value;
+		UTextureSettings* Texture = Pair.Value;
 		UStaticMeshComponent** MeshComponent = this->MeshComponents.Find(SlotName);
 		if (MeshComponent != nullptr)
 		{
-			UMaterialInstanceDynamic* Material = UAssetLoader::LoadMaterialInstanceFromTextureFile(TextureFileName, this);
+			UMaterialInstanceDynamic* Material = UAssetLoader::LoadMaterial(Texture, this);
 			(*MeshComponent)->SetMaterial(0, Material);
 			UnusedComponentNames.Remove(SlotName);
 		}
@@ -64,7 +86,7 @@ void AMaze::UpdateFromSettings()
 		UStaticMeshComponent** MeshComponent = this->MeshComponents.Find(UnusedComponentName);
 		if (MeshComponent != nullptr)
 		{
-			UMaterialInstanceDynamic* Material = UAssetLoader::LoadMaterialInstanceFromTextureFile(TEXT(""), this);
+			UMaterialInstanceDynamic* Material = UAssetLoader::LoadMaterial(nullptr, this);
 			(*MeshComponent)->SetMaterial(0, Material);
 		}
 	}
