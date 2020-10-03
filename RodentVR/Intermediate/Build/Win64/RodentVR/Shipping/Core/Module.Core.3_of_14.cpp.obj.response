@@ -1,0 +1,70 @@
+/Zc:inline
+/nologo
+/Oi
+/c
+/Gw
+/Gy
+/Zm1000
+/wd4819
+/D_CRT_STDIO_LEGACY_WIDE_SPECIFIERS=1
+/D_SILENCE_STDEXT_HASH_DEPRECATION_WARNINGS=1
+/D_DISABLE_EXTENDED_ALIGNED_STORAGE
+/source-charset:utf-8
+/execution-charset:utf-8
+/Ox
+/Ot
+/GF
+/Ob2
+/errorReport:prompt
+/Z7
+/MD
+/bigobj
+/fp:fast
+/Zo
+/Zp8
+/we4456
+/we4458
+/we4459
+/wd4463
+/we4668
+/w44244
+/w44838
+/I .
+/I Developer\DerivedDataCache\Public
+/I Runtime\SynthBenchmark\Public
+/I Runtime\Core\Private
+/I Runtime\Core\Private\Misc
+/I Runtime\Core\Private\Internationalization
+/I Runtime\Core\Private\Internationalization\Cultures
+/I Runtime\Engine\Public
+/I Runtime
+/I Runtime\BuildSettings\Public
+/I ThirdParty
+/I ThirdParty\zlib\v1.2.8\include\Win64\VS2015
+/I Developer
+/I Developer\TargetPlatform\Public
+/I Runtime\InputDevice\Public
+/I Runtime\Analytics
+/I Runtime\Analytics\Analytics\Public
+/I Runtime\RHI\Public
+/I Runtime\TraceLog\Public
+/I Runtime\Core\Public
+/I ThirdParty\IntelTBB\IntelTBB-2019u8\Include
+/I ThirdParty\IntelVTune\VTune-2019\include
+/I ThirdParty\mimalloc\include
+/I ThirdParty\ICU\icu4c-64_1\include
+/I "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE"
+/I "C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.2\include\um"
+/I "C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt"
+/I "C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared"
+/I "C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um"
+/I "C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\winrt"
+/D_HAS_EXCEPTIONS=0
+/FI"C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Shipping\Core\PCH.Core.h"
+/Yu"C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Shipping\Core\PCH.Core.h"
+/Fp"C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Shipping\Core\PCH.Core.h.pch"
+"C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Shipping\Core\Module.Core.3_of_14.cpp"
+/Fo"C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Shipping\Core\Module.Core.3_of_14.cpp.obj"
+/TP
+/GR-
+/W4

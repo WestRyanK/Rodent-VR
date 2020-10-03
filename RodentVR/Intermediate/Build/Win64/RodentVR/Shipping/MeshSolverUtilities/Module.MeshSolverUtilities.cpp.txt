@@ -1,0 +1,362 @@
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Shipping\MeshSolverUtilities\Definitions.MeshSolverUtilities.h
+C:/Users/Ryan/Documents/UnrealEngine/Engine/Plugins/Experimental/GeometryProcessing/Source/MeshSolverUtilities/Private/LaplacianMeshSmoother.cpp
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Plugins\Experimental\GeometryProcessing\Source\MeshSolverUtilities\Private\LaplacianMeshSmoother.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Plugins\Experimental\GeometryProcessing\Source\DynamicMesh\Public\DynamicMesh3.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Plugins\Experimental\GeometryProcessing\Source\GeometricObjects\Public\BoxTypes.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Plugins\Experimental\GeometryProcessing\Source\GeometricObjects\Public\VectorTypes.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Plugins\Experimental\GeometryProcessing\Source\GeometricObjects\Public\MathUtil.h
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\cmath
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\xtgmath.h
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\cfloat
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Plugins\Experimental\GeometryProcessing\Source\DynamicMesh\Public\InfoTypes.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Plugins\Experimental\GeometryProcessing\Source\GeometricObjects\Public\IndexTypes.h
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\limits
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\climits
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\cwchar
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\cstdio
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Plugins\Experimental\GeometryProcessing\Source\GeometricObjects\Public\FrameTypes.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Plugins\Experimental\GeometryProcessing\Source\GeometricObjects\Public\VectorUtil.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Plugins\Experimental\GeometryProcessing\Source\GeometricObjects\Public\RayTypes.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Plugins\Experimental\GeometryProcessing\Source\GeometricObjects\Public\Quaternion.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Plugins\Experimental\GeometryProcessing\Source\GeometricObjects\Public\MatrixTypes.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Plugins\Experimental\GeometryProcessing\Source\GeometricObjects\Public\TransformTypes.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Plugins\Experimental\GeometryProcessing\Source\GeometricObjects\Public\GeometryTypes.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Plugins\Experimental\GeometryProcessing\Source\GeometricObjects\Public\Util/DynamicVector.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Plugins\Experimental\GeometryProcessing\Source\GeometricObjects\Public\Util/IndexUtil.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Plugins\Experimental\GeometryProcessing\Source\GeometricObjects\Public\Util/IteratorUtil.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Plugins\Experimental\GeometryProcessing\Source\GeometricObjects\Public\Util/RefCountVector.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Plugins\Experimental\GeometryProcessing\Source\GeometricObjects\Public\Util/SmallListSet.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Plugins\Experimental\GeometryProcessing\Source\GeometricObjects\Public\Util/CompactMaps.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Plugins\Experimental\GeometryProcessing\Source\MeshSolverUtilities\Private\ConstrainedPoissonSolver.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Plugins\Experimental\GeometryProcessing\Source\MeshSolverUtilities\Private\FSOAPositions.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen/Core
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Core/util/DisableStupidWarnings.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Core/util/Macros.h
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\complex
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\sstream
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\istream
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\ostream
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\ios
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\xlocnum
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\streambuf
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\xiosbase
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\share.h
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\system_error
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\cerrno
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\stdexcept
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\xstring
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\iosfwd
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\cstring
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\xmemory
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\cstdint
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\xatomic.h
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\xutility
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\utility
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\xcall_once.h
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\xerrc.h
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\xlocale
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\memory
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\typeinfo
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\vcruntime_typeinfo.h
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\vcruntime_exception.h
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\eh.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\corecrt_terminate.h
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\xfacet
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\xlocinfo
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\xlocinfo.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\locale.h
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\string
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\cctype
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\ymath.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Core/util/MKL_support.h
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\cassert
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\assert.h
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\functional
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\tuple
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\algorithm
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Core/util/Constants.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Core/util/Meta.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Core/util/ForwardDeclarations.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Core/util/StaticAssert.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Core/util/XprHelper.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Core/util/Memory.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Core/NumTraits.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Core/MathFunctions.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Core/GenericPacketMath.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Core/MathFunctionsImpl.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Core/arch/Default/ConjHelper.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Core/arch/SSE/PacketMath.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Core/arch/SSE/MathFunctions.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Core/arch/SSE/Complex.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Core/arch/SSE/TypeCasting.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Core/arch/CUDA/Half.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Core/arch/CUDA/PacketMathHalf.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Core/arch/CUDA/TypeCasting.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Core/arch/Default/Settings.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Core/functors/TernaryFunctors.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Core/functors/BinaryFunctors.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Core/functors/UnaryFunctors.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Core/functors/NullaryFunctors.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Core/functors/StlFunctors.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Core/functors/AssignmentFunctors.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Core/arch/CUDA/Complex.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Core/IO.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Core/DenseCoeffsBase.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Core/DenseBase.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src\Core\../plugins/BlockMethods.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Core/MatrixBase.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src\Core\../plugins/CommonCwiseUnaryOps.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src\Core\../plugins/CommonCwiseBinaryOps.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src\Core\../plugins/MatrixCwiseUnaryOps.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src\Core\../plugins/MatrixCwiseBinaryOps.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Core/EigenBase.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Core/Product.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Core/CoreEvaluators.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Core/AssignEvaluator.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Core/Assign.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Core/ArrayBase.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src\Core\../plugins/CommonCwiseUnaryOps.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src\Core\../plugins/MatrixCwiseUnaryOps.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src\Core\../plugins/ArrayCwiseUnaryOps.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src\Core\../plugins/CommonCwiseBinaryOps.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src\Core\../plugins/MatrixCwiseBinaryOps.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src\Core\../plugins/ArrayCwiseBinaryOps.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Core/util/BlasUtil.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Core/DenseStorage.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Core/NestByValue.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Core/ReturnByValue.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Core/NoAlias.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Core/PlainObjectBase.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Core/Matrix.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Core/Array.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Core/CwiseTernaryOp.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Core/CwiseBinaryOp.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Core/CwiseUnaryOp.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Core/CwiseNullaryOp.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Core/CwiseUnaryView.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Core/SelfCwiseBinaryOp.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Core/Dot.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Core/StableNorm.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Core/Stride.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Core/MapBase.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Core/Map.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Core/Ref.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Core/Block.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Core/VectorBlock.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Core/Transpose.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Core/DiagonalMatrix.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Core/Diagonal.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Core/DiagonalProduct.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Core/Redux.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Core/Visitor.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Core/Fuzzy.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Core/Swap.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Core/CommaInitializer.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Core/GeneralProduct.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Core/Solve.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Core/Inverse.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Core/SolverBase.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Core/PermutationMatrix.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Core/Transpositions.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Core/TriangularMatrix.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Core/SelfAdjointView.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Core/products/GeneralBlockPanelKernel.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Core/products/Parallelizer.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Core/ProductEvaluators.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Core/products/GeneralMatrixVector.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Core/products/GeneralMatrixMatrix.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Core/SolveTriangular.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Core/products/GeneralMatrixMatrixTriangular.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Core/products/SelfadjointMatrixVector.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Core/products/SelfadjointMatrixMatrix.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Core/products/SelfadjointProduct.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Core/products/SelfadjointRank2Update.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Core/products/TriangularMatrixVector.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Core/products/TriangularMatrixMatrix.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Core/products/TriangularSolverMatrix.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Core/products/TriangularSolverVector.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Core/BandMatrix.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Core/CoreIterators.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Core/ConditionEstimator.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Core/BooleanRedux.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Core/Select.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Core/VectorwiseOp.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Core/Random.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Core/Replicate.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Core/Reverse.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Core/ArrayWrapper.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Core/GlobalFunctions.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Core/util/ReenableStupidWarnings.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Plugins\Experimental\GeometryProcessing\Source\MeshSolverUtilities\Private\FSparseMatrixD.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen/Sparse
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\SparseCore
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Core/util/DisableStupidWarnings.h
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\vector
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\map
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\xtree
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/SparseCore/SparseUtil.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/SparseCore/SparseMatrixBase.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src\SparseCore\../plugins/CommonCwiseUnaryOps.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src\SparseCore\../plugins/CommonCwiseBinaryOps.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src\SparseCore\../plugins/MatrixCwiseUnaryOps.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src\SparseCore\../plugins/MatrixCwiseBinaryOps.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src\SparseCore\../plugins/BlockMethods.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/SparseCore/SparseAssign.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/SparseCore/CompressedStorage.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/SparseCore/AmbiVector.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/SparseCore/SparseCompressedBase.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/SparseCore/SparseMatrix.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/SparseCore/SparseMap.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/SparseCore/MappedSparseMatrix.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/SparseCore/SparseVector.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/SparseCore/SparseRef.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/SparseCore/SparseCwiseUnaryOp.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/SparseCore/SparseCwiseBinaryOp.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/SparseCore/SparseTranspose.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/SparseCore/SparseBlock.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/SparseCore/SparseDot.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/SparseCore/SparseRedux.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/SparseCore/SparseView.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/SparseCore/SparseDiagonalProduct.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/SparseCore/ConservativeSparseSparseProduct.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/SparseCore/SparseSparseProductWithPruning.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/SparseCore/SparseProduct.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/SparseCore/SparseDenseProduct.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/SparseCore/SparseSelfAdjointView.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/SparseCore/SparseTriangularView.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/SparseCore/TriangularSolver.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/SparseCore/SparsePermutation.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/SparseCore/SparseFuzzy.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/SparseCore/SparseSolverBase.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Core/util/ReenableStupidWarnings.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\OrderingMethods
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Core/util/DisableStupidWarnings.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/OrderingMethods/Ordering.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src\OrderingMethods\Eigen_Colamd.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Core/util/ReenableStupidWarnings.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\SparseLU
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/SparseLU/SparseLU_gemm_kernel.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/SparseLU/SparseLU_Structs.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/SparseLU/SparseLU_SupernodalMatrix.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/SparseLU/SparseLUImpl.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/SparseCore/SparseColEtree.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/SparseLU/SparseLU_Memory.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/SparseLU/SparseLU_heap_relax_snode.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/SparseLU/SparseLU_relax_snode.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/SparseLU/SparseLU_pivotL.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/SparseLU/SparseLU_panel_dfs.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/SparseLU/SparseLU_kernel_bmod.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/SparseLU/SparseLU_panel_bmod.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/SparseLU/SparseLU_column_dfs.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/SparseLU/SparseLU_column_bmod.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/SparseLU/SparseLU_copy_to_ucol.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/SparseLU/SparseLU_pruneL.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/SparseLU/SparseLU_Utils.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/SparseLU/SparseLU.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\SparseQR
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Core/util/DisableStupidWarnings.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/SparseQR/SparseQR.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Core/util/ReenableStupidWarnings.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\IterativeLinearSolvers
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Core/util/DisableStupidWarnings.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/IterativeLinearSolvers/SolveWithGuess.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/IterativeLinearSolvers/IterativeSolverBase.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/IterativeLinearSolvers/BasicPreconditioners.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/IterativeLinearSolvers/ConjugateGradient.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/IterativeLinearSolvers/LeastSquareConjugateGradient.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/IterativeLinearSolvers/BiCGSTAB.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/IterativeLinearSolvers/IncompleteLUT.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/IterativeLinearSolvers/IncompleteCholesky.h
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\list
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Core/util/ReenableStupidWarnings.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Plugins\Experimental\GeometryProcessing\Source\MeshSolverUtilities\Private\MatrixSolver.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\Async/ParallelFor.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\Misc/App.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\Misc/QualifiedFrameTime.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\Misc/FrameRate.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\Misc/FrameTime.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\Misc/ExpressionParserTypes.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\Templates/ValueOrError.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\Misc/ExpressionParserTypes.inl
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\Misc/Timecode.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen/Dense
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\LU
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Core/util/DisableStupidWarnings.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/misc/Kernel.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/misc/Image.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/LU/FullPivLU.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/LU/PartialPivLU.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/LU/Determinant.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/LU/InverseImpl.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/LU/arch/Inverse_SSE.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Core/util/ReenableStupidWarnings.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\Cholesky
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\Jacobi
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Core/util/DisableStupidWarnings.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Jacobi/Jacobi.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Core/util/ReenableStupidWarnings.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Core/util/DisableStupidWarnings.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Cholesky/LLT.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Cholesky/LDLT.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Core/util/ReenableStupidWarnings.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\QR
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Core/util/DisableStupidWarnings.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\Householder
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Householder/Householder.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Householder/HouseholderSequence.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Householder/BlockHouseholder.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Core/util/ReenableStupidWarnings.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/QR/HouseholderQR.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/QR/FullPivHouseholderQR.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/QR/ColPivHouseholderQR.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/QR/CompleteOrthogonalDecomposition.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Core/util/ReenableStupidWarnings.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\SVD
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Core/util/DisableStupidWarnings.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/misc/RealSvd2x2.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/SVD/UpperBidiagonalization.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/SVD/SVDBase.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/SVD/JacobiSVD.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/SVD/BDCSVD.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Core/util/ReenableStupidWarnings.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\Geometry
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Core/util/DisableStupidWarnings.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Geometry/OrthoMethods.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Geometry/EulerAngles.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Geometry/Homogeneous.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Geometry/RotationBase.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Geometry/Rotation2D.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Geometry/Quaternion.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Geometry/AngleAxis.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Geometry/Transform.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Geometry/Translation.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Geometry/Scaling.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Geometry/Hyperplane.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Geometry/ParametrizedLine.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Geometry/AlignedBox.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Geometry/Umeyama.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Geometry/arch/Geometry_SSE.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Core/util/ReenableStupidWarnings.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\Eigenvalues
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Core/util/DisableStupidWarnings.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Eigenvalues/Tridiagonalization.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Eigenvalues/RealSchur.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src\Eigenvalues\./HessenbergDecomposition.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Eigenvalues/EigenSolver.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Eigenvalues/SelfAdjointEigenSolver.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Eigenvalues/GeneralizedSelfAdjointEigenSolver.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Eigenvalues/ComplexSchur.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Eigenvalues/ComplexEigenSolver.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Eigenvalues/RealQZ.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Eigenvalues/GeneralizedEigenSolver.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Eigenvalues/MatrixBaseEigenvalues.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen\src/Core/util/ReenableStupidWarnings.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\ProfilingDebugging/ScopedTimers.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Plugins\Experimental\GeometryProcessing\Source\MeshSolverUtilities\Public\MeshSmoothingUtilities.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Plugins\Experimental\GeometryProcessing\Source\MeshSolverUtilities\Private\MeshElementLinearizations.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Plugins\Experimental\GeometryProcessing\Source\MeshSolverUtilities\Private\LaplacianOperators.h
+C:/Users/Ryan/Documents/UnrealEngine/Engine/Plugins/Experimental/GeometryProcessing/Source/MeshSolverUtilities/Private/LaplacianOperators.cpp
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Eigen\Eigen/Dense
+C:/Users/Ryan/Documents/UnrealEngine/Engine/Plugins/Experimental/GeometryProcessing/Source/MeshSolverUtilities/Private/MatrixSolver.cpp
+C:/Users/Ryan/Documents/UnrealEngine/Engine/Plugins/Experimental/GeometryProcessing/Source/MeshSolverUtilities/Private/MeshSolverUtilitiesModule.cpp
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Plugins\Experimental\GeometryProcessing\Source\MeshSolverUtilities\Public\MeshSolverUtilitiesModule.h

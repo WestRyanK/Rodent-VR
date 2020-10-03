@@ -1,0 +1,13 @@
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Shipping\AISupportModule\Definitions.AISupportModule.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Plugins\AI\AISupport\Source\AISupportModule\Public\AISupportModule.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\AIModule\Classes\AITypes.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\NavigationSystem\Public\NavFilters/NavigationQueryFilter.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\NavigationSystem\Public\NavAreas/NavArea.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Classes\AI/Navigation/NavAreaBase.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Inc\Engine\NavAreaBase.generated.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Inc\NavigationSystem\NavArea.generated.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Inc\NavigationSystem\NavigationQueryFilter.generated.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\NavigationSystem\Public\NavigationSystemTypes.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Classes\AI/NavigationSystemConfig.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Inc\Engine\NavigationSystemConfig.generated.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Inc\AIModule\AITypes.generated.h

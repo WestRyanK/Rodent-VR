@@ -1,0 +1,7 @@
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Shipping\LPVRuntime\Definitions.LightPropagationVolumeRuntime.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\CoreUObject\Public\UObject/GeneratedCppIncludes.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\CoreUObject\Public\UObject/MetaData.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Plugins\Blendables\LightPropagationVolume\Source\LightPropagationVolumeRuntime/Public/LightPropagationVolumeBlendable.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Renderer\Public\LightPropagationVolumeSettings.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Inc\Renderer\LightPropagationVolumeSettings.generated.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Inc\LightPropagationVolumeRuntime\LightPropagationVolumeBlendable.generated.h

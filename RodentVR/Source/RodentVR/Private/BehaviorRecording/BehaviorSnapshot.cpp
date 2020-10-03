@@ -1,31 +1,35 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
+
 #include "BehaviorSnapshot.h"
 
-BehaviorSnapshot::BehaviorSnapshot(float timestamp, FVector position, FVector forward, FString currentRegion)
+
+UBehaviorSnapshot* UBehaviorSnapshot::CreateBehaviorSnapshot(float TimestampVal, FVector PositionVal, FVector ForwardVal, FString CurrentRegionVal)
 {
-	this->Timestamp = timestamp;
-	this->Position = position;
-	this->Forward = forward;
-	this->CurrentRegion = currentRegion;
+	UBehaviorSnapshot* Snapshot = NewObject<UBehaviorSnapshot>();
+	Snapshot->Timestamp = TimestampVal;
+	Snapshot->Position = PositionVal;
+	Snapshot->Forward = ForwardVal;
+	Snapshot->CurrentRegion = CurrentRegionVal;
+	return Snapshot;
 }
 
-float BehaviorSnapshot::GetTimestamp()
+float UBehaviorSnapshot::GetTimestamp()
 {
 	return this->Timestamp;
 }
 
-FVector BehaviorSnapshot::GetPosition()
+FVector UBehaviorSnapshot::GetPosition()
 {
 	return this->Position;
 }
 
-FVector BehaviorSnapshot::GetForward()
+FVector UBehaviorSnapshot::GetForward()
 {
 	return this->Forward;
 }
 
-FString BehaviorSnapshot::GetCurrentRegion()
+FString UBehaviorSnapshot::GetCurrentRegion()
 {
 	return this->CurrentRegion;
 }

@@ -68,9 +68,22 @@ void UBehaviorRecorderComponent::Save()
 		if (IsValid(MazeSettings))
 		{
 			FString BehaviorRecordingFileName = MazeSettings->GetBehaviorRecordingFileName();
-			this->Save(BehaviorRecordingFileName);
+			BehaviorRecordingFileName = this->AppendDateTimeToFileName(BehaviorRecordingFileName, FDateTime::Now());
+			FString MazeFileName = MazeSettings->GetMazeSettingsFileName();
+			FString SettingsFileName = GameInstance->GetRodentVRSettings()->GetSettingsFileName();
+			this->Save(BehaviorRecordingFileName, SettingsFileName, MazeFileName);
 		}
 	}
+}
+
+FString UBehaviorRecorderComponent::AppendDateTimeToFileName(FString FileName, FDateTime DateTime)
+{
+	FString FileNameWithoutExtension;
+	FString FileExtension;
+	FileName.Split(TEXT("."), &FileNameWithoutExtension, &FileExtension, ESearchCase::CaseSensitive, ESearchDir::FromEnd);
+	FString DateTimeString = FString::Printf(TEXT("%04d_%02d_%02d_%02d_%02d_%02d"), DateTime.GetYear(), DateTime.GetMonth(), DateTime.GetDay(), DateTime.GetHour(), DateTime.GetMinute(), DateTime.GetSecond());
+	FString AppendedFileName = FileNameWithoutExtension + TEXT("_") + DateTimeString + TEXT(".") + FileExtension;
+	return AppendedFileName;
 }
 
 void UBehaviorRecorderComponent::OnMazeFinished()
@@ -78,24 +91,26 @@ void UBehaviorRecorderComponent::OnMazeFinished()
 	this->Save();
 }
 
-void UBehaviorRecorderComponent::Save(FString Filename)
+void UBehaviorRecorderComponent::Save(FString FileName, FString SettingsFileName, FString MazeFileName)
 {
-	bool IsValidPath = FPaths::ValidatePath(Filename);
-	if (IsValidPath && !Filename.IsEmpty())
+	bool IsValidPath = FPaths::ValidatePath(FileName);
+	if (IsValidPath && !FileName.IsEmpty())
 	{
 		std::ofstream Output;
-		Output.open(*Filename);
+		Output.open(*FileName);
 		char Tab = '\t';
 
+		Output << std::string(TCHAR_TO_UTF8(*SettingsFileName)) << std::endl;
+		Output << std::string(TCHAR_TO_UTF8(*MazeFileName)) << std::endl;
 		Output << "#Snapshot Timestamp\tTrigger Region Identifier\tPosition.X\tPosition.Y\tPosition.Z\tForward.X\tForward.Y\tForward.Z" << std::endl;
 		for (int i = 0; i < this->Snapshots.Num(); i++)
 		{
-			BehaviorSnapshot Snapshot = this->Snapshots[i];
+			UBehaviorSnapshot* Snapshot = this->Snapshots[i];
 			Output
-				<< Snapshot.GetTimestamp() << Tab
-				<< TCHAR_TO_UTF8(*(Snapshot.GetCurrentRegion())) << Tab
-				<< Snapshot.GetPosition().X << Tab << Snapshot.GetPosition().Y << Tab << Snapshot.GetPosition().Z << Tab
-				<< Snapshot.GetForward().X << Tab << Snapshot.GetForward().Y << Tab << Snapshot.GetForward().Z
+				<< Snapshot->GetTimestamp() << Tab
+				<< TCHAR_TO_UTF8(*(Snapshot->GetCurrentRegion())) << Tab
+				<< Snapshot->GetPosition().X << Tab << Snapshot->GetPosition().Y << Tab << Snapshot->GetPosition().Z << Tab
+				<< Snapshot->GetForward().X << Tab << Snapshot->GetForward().Y << Tab << Snapshot->GetForward().Z
 				<< std::endl;
 		}
 		Output.close();
@@ -127,7 +142,7 @@ void UBehaviorRecorderComponent::TickComponent(float DeltaTime, ELevelTick TickT
 	FVector Forward = OwnerActor->GetActorForwardVector();
     FString RegionId = this->CurrentRegion;
 
-	BehaviorSnapshot Snapshot = BehaviorSnapshot(Time, Position, Forward, RegionId);
+	UBehaviorSnapshot* Snapshot = UBehaviorSnapshot::CreateBehaviorSnapshot(Time, Position, Forward, RegionId);
 	this->Snapshots.Add(Snapshot);
 }
 

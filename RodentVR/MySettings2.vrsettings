@@ -13,8 +13,7 @@
 	</RewardDevices>
 	<Playlist>
 		<MazeFile Path="C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\MyMaze2.maze"/>
-		<MazeFile Path="C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\MyMaze2.maze"/>
-		<MazeFile Path="C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\MyMaze2.maze"/>
+		<MazeFile Path="C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\MyMaze.maze"/>
 	</Playlist>
 </Settings>
 

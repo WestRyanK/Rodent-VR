@@ -1,0 +1,28 @@
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Shipping\SteamVRInput\Definitions.SteamVRInput.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Plugins\Runtime\Steam\SteamVR\Source\SteamVRInput\Public\SteamVRInput.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\OpenVR\OpenVRv1_5_17\headers\openvr.h
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\string
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\xstring
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\iosfwd
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\cstdio
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\cstring
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\cwchar
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\xmemory
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\cstdint
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\limits
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\cfloat
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\climits
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\xatomic.h
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\xutility
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\utility
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\cctype
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Projects\Public\Interfaces/IPluginManager.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Projects\Public\PluginDescriptor.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Projects\Public\ModuleDescriptor.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Json\Public\Serialization/JsonWriter.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Json\Public\Serialization/JsonTypes.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Json\Public\Policies/PrettyJsonPrintPolicy.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Json\Public\Policies/JsonPrintPolicy.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Projects\Public\CustomBuildSteps.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Projects\Public\LocalizationDescriptor.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Projects\Public\PluginReferenceDescriptor.h

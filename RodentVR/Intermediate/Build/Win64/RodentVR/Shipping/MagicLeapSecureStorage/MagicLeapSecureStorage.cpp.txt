@@ -1,0 +1,16 @@
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Shipping\MagicLeapSecureStorage\Definitions.MagicLeapSecureStorage.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Plugins\Lumin\MagicLeap\Source\MagicLeapSecureStorage\Public\MagicLeapSecureStorage.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Inc\MagicLeapSecureStorage\MagicLeapSecureStorage.generated.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Plugins\Lumin\MagicLeap\Source\MagicLeapSecureStorage\Public\IMagicLeapSecureStoragePlugin.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Classes\Kismet/GameplayStatics.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Classes\Kismet/KismetSystemLibrary.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\CoreUObject\Public\UObject/PropertyAccessUtil.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Classes\Engine/CollisionProfile.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Inc\Engine\CollisionProfile.generated.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Inc\Engine\KismetSystemLibrary.generated.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Classes\Sound/DialogueTypes.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Inc\Engine\DialogueTypes.generated.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Classes\Kismet\GameplayStaticsTypes.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Inc\Engine\GameplayStaticsTypes.generated.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Inc\Engine\GameplayStatics.generated.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Plugins\Lumin\MLSDK\Source\MLSDK\Public\Lumin/CAPIShims/LuminAPISecureStorage.h

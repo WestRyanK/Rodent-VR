@@ -1,0 +1,9 @@
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Shipping\StreamingPauseRendering\Definitions.StreamingPauseRendering.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\StreamingPauseRendering\Public\StreamingPauseRendering.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Slate\Public\Widgets/SViewport.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\SlateCore\Public\Input/HittestGrid.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Public\Slate/SceneViewport.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Public\Slate/SlateTextures.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\SlateCore\Public\Textures/SlateUpdatableTexture.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\MoviePlayer\Public\MoviePlayer.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Slate\Public\Widgets/Images/SThrobber.h

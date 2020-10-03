@@ -1,0 +1,7 @@
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Shipping\PlatformCrypto\Definitions.PlatformCrypto.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Plugins\Experimental\PlatformCrypto\Source\PlatformCrypto\Public\IPlatformCrypto.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Plugins\Experimental\PlatformCrypto\Source\PlatformCrypto\Public\PlatformCryptoIncludes.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Plugins\Experimental\PlatformCrypto\Source\PlatformCryptoOpenSSL\Public\EncryptionContextOpenSSL.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Plugins\Experimental\PlatformCrypto\Source\PlatformCryptoTypes\Public\PlatformCryptoTypes.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\Misc/IEngineCrypto.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\Features/IModularFeatures.h

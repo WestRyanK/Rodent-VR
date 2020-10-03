@@ -1,0 +1,513 @@
+C:/Users/Ryan/Documents/UnrealEngine/Engine/Source/Runtime/Engine/Private/VisualLogger/VisualLogger.cpp
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Public\VisualLogger/VisualLogger.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Public\VisualLogger/VisualLoggerTypes.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Public\AI/NavDataGenerator.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Slate\Public\Framework/Docking/TabManager.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\SlateCore\Public\Textures/SlateIcon.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Slate\Public\Framework/Docking/WorkspaceItem.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Classes\VisualLogger/VisualLoggerBinaryFileDevice.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Public\VisualLogger/VisualLoggerDebugSnapshotInterface.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Inc\Engine\VisualLoggerDebugSnapshotInterface.generated.h
+C:/Users/Ryan/Documents/UnrealEngine/Engine/Source/Runtime/Engine/Private/VisualLogger/VisualLoggerAutomationTests.cpp
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Classes\VisualLogger/VisualLoggerAutomationTests.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Inc\Engine\VisualLoggerAutomationTests.generated.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\Misc/AutomationTest.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\HAL/PlatformStackWalk.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\Windows/WindowsPlatformStackWalk.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\GenericPlatform/GenericPlatformStackWalk.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\Misc/FeedbackContext.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\Misc/SlowTask.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\Misc/SlowTaskStack.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\Async/Async.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\Internationalization/Regex.h
+C:/Users/Ryan/Documents/UnrealEngine/Engine/Source/Runtime/Engine/Private/VisualLogger/VisualLoggerBinaryFileDevice.cpp
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\HAL/FileManager.h
+C:/Users/Ryan/Documents/UnrealEngine/Engine/Source/Runtime/Engine/Private/VisualLogger/VisualLoggerKismetLibrary.cpp
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Classes\VisualLogger/VisualLoggerKismetLibrary.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Inc\Engine\VisualLoggerKismetLibrary.generated.h
+C:/Users/Ryan/Documents/UnrealEngine/Engine/Source/Runtime/Engine/Private/VisualLogger/VisualLoggerTypes.cpp
+C:/Users/Ryan/Documents/UnrealEngine/Engine/Source/Runtime/Engine/Private/VoiceChannel.cpp
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Classes\Engine/VoiceChannel.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Classes\Engine/Channel.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Inc\Engine\Channel.generated.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Public\Net/VoiceDataCommon.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Public\Net/VoiceConfig.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\SignalProcessing\Public\DSP/EnvelopeFollower.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Classes\Sound/AudioSettings.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Inc\Engine\AudioSettings.generated.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Classes\GameFramework/PlayerState.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Inc\Engine\PlayerState.generated.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\AudioMixer\Public\Components/SynthComponent.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Classes\Sound/SoundWaveProcedural.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Inc\Engine\SoundWaveProcedural.generated.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Inc\AudioMixer\SynthComponent.generated.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Inc\Engine\VoiceConfig.generated.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Inc\Engine\VoiceChannel.generated.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Public\Net/DataBunch.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Net\Core\Public\Net/Core/Trace/Config.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Classes\Engine/NetConnection.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Classes\Engine/NetDriver.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\PacketHandlers\PacketHandler\Public\PacketHandler.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Net\Core\Public\Net/Core/Misc/PacketTraits.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Sockets\Public\IPAddress.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Sockets\Public\SocketTypes.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Net\Core\Public\Net/Core/Misc/DDoSDetection.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Public\Net/NetAnalyticsTypes.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Public\Net/NetConnectionIdHandler.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Inc\Engine\NetDriver.generated.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Public\Net/NetPacketNotify.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Net\Core\Public\Net/Core/Misc/ResizableCircularQueue.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Public\Net\Util/SequenceNumber.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Public\Net\Util/SequenceHistory.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\ProfilingDebugging/Histogram.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\Containers/CircularBuffer.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Classes\Engine\ReplicationDriver.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Inc\Engine\ReplicationDriver.generated.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Public\Analytics/EngineNetAnalytics.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Net\Core\Public\Net/Core/Analytics/NetAnalytics.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Inc\Engine\NetConnection.generated.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Public\Net/OnlineEngineInterface.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Inc\Engine\OnlineEngineInterface.generated.h
+C:/Users/Ryan/Documents/UnrealEngine/Engine/Source/Runtime/Engine/Private/VoiceConfig.cpp
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Classes\GameFramework/GameStateBase.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Classes\GameFramework/GameModeBase.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Classes\Engine/ServerStatReplicator.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Inc\Engine\ServerStatReplicator.generated.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Inc\Engine\GameModeBase.generated.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Inc\Engine\GameStateBase.generated.h
+C:/Users/Ryan/Documents/UnrealEngine/Engine/Source/Runtime/Engine/Private/Volume.cpp
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Classes\Components/BrushComponent.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Inc\Engine\BrushComponent.generated.h
+C:/Users/Ryan/Documents/UnrealEngine/Engine/Source/Runtime/Engine/Private/VolumeRendering.cpp
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Renderer\Public\VolumeRendering.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\RenderCore\Public\GlobalShader.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\RenderCore\Public\ShaderParameterUtils.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Public\ScreenRendering.h
+C:/Users/Ryan/Documents/UnrealEngine/Engine/Source/Runtime/Engine/Private/VolumeTexture.cpp
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Classes\Engine/VolumeTexture.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Inc\Engine\VolumeTexture.generated.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Classes\DeviceProfiles/DeviceProfile.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Classes\Engine/TextureLODSettings.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Inc\Engine\TextureLODSettings.generated.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Inc\Engine\DeviceProfile.generated.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Classes\DeviceProfiles/DeviceProfileManager.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Inc\Engine\DeviceProfileManager.generated.h
+C:/Users/Ryan/Documents/UnrealEngine/Engine/Source/Runtime/Engine/Private/VolumetricLightmapDensityVolume.cpp
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Classes\Lightmass/VolumetricLightmapDensityVolume.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Inc\Engine\VolumetricLightmapDensityVolume.generated.h
+C:/Users/Ryan/Documents/UnrealEngine/Engine/Source/Runtime/Engine/Private/VorbisAudioInfo.cpp
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Public\VorbisAudioInfo.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Public\AudioDecompress.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Developer\TargetPlatform\Public\Interfaces/IAudioFormat.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\Windows/WindowsHWrapper.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\Windows/PreWindowsApi.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\Windows/MinWindows.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\Windows.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\sdkddkver.h
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\excpt.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\windef.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\minwindef.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\winnt.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\kernelspecs.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\basetsd.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\guiddef.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\pshpack4.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\poppack.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\pshpack4.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\poppack.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\pshpack4.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\pshpack2.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\poppack.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\pshpack2.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\pshpack2.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\poppack.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\poppack.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\pshpack8.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\poppack.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\pshpack1.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\poppack.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\pshpack1.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\poppack.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\poppack.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\apiset.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\ktmtypes.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\winbase.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\apisetcconv.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\minwinbase.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\apiquery2.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\processenv.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\fileapifromapp.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\fileapi.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\debugapi.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\utilapiset.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\handleapi.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\errhandlingapi.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\fibersapi.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\namedpipeapi.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\profileapi.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\heapapi.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\ioapiset.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\synchapi.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\interlockedapi.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\processthreadsapi.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\sysinfoapi.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\memoryapi.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\enclaveapi.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\threadpoollegacyapiset.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\threadpoolapiset.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\jobapi.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\jobapi2.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\wow64apiset.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\libloaderapi.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\securitybaseapi.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\namespaceapi.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\systemtopologyapi.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\processtopologyapi.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\securityappcontainer.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\realtimeapiset.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\winerror.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\timezoneapi.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\wingdi.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\pshpack1.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\poppack.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\pshpack2.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\poppack.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\pshpack4.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\poppack.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\pshpack4.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\poppack.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\winuser.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\pshpack2.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\poppack.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\tvout.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\winnls.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\datetimeapi.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\stringapiset.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\winnls.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\wincon.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\wincontypes.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\consoleapi.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\consoleapi2.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\consoleapi3.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\winver.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\verrsrc.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\winreg.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\reason.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\winnetwk.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\wnnc.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\stralign.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\imm.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\ime_cmodes.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\Windows/PostWindowsApi.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Ogg\libogg-1.2.2\include\ogg/ogg.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Ogg\libogg-1.2.2\include\ogg/os_types.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Vorbis\libvorbis-1.3.2\include\vorbis/vorbisenc.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Vorbis\libvorbis-1.3.2\include\vorbis\codec.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\Vorbis\libvorbis-1.3.2\include\vorbis/vorbisfile.h
+C:/Users/Ryan/Documents/UnrealEngine/Engine/Source/Runtime/Engine/Private/VT/BlockCodingHelpers.cpp
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Private\VT\BlockCodingHelpers.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Private\VT\VirtualTextureUploadCache.h
+C:/Users/Ryan/Documents/UnrealEngine/Engine/Source/Runtime/Engine/Private/VT/RuntimeVirtualTexture.cpp
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Classes\VT/RuntimeVirtualTexture.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Inc\Engine\RuntimeVirtualTexture.generated.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Public\EngineModule.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Classes\VT/VirtualTextureBuildSettings.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Inc\Engine\VirtualTextureBuildSettings.generated.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Private\VT/RuntimeVirtualTextureNotify.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Classes\VT/RuntimeVirtualTextureStreamingProxy.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Inc\Engine\RuntimeVirtualTextureStreamingProxy.generated.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Private\VT/VirtualTextureLevelRedirector.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Public\VT/VirtualTextureScalability.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Private\VT/UploadingVirtualTexture.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Private\VT\VirtualTextureBuiltData.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\Misc/MemoryReadStream.h
+C:/Users/Ryan/Documents/UnrealEngine/Engine/Source/Runtime/Engine/Private/VT/RuntimeVirtualTextureNotify.cpp
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Classes\Components/RuntimeVirtualTextureComponent.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Inc\Engine\RuntimeVirtualTextureComponent.generated.h
+C:/Users/Ryan/Documents/UnrealEngine/Engine/Source/Runtime/Engine/Private/VT/RuntimeVirtualTextureVolume.cpp
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Classes\VT/RuntimeVirtualTextureVolume.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Inc\Engine\RuntimeVirtualTextureVolume.generated.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Classes\Components/BoxComponent.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Classes\Components/ShapeComponent.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Inc\Engine\ShapeComponent.generated.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Inc\Engine\BoxComponent.generated.h
+C:/Users/Ryan/Documents/UnrealEngine/Engine/Source/Runtime/Engine/Private/VT/UploadingVirtualTexture.cpp
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Private\VT\VirtualTextureChunkManager.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Private\VT\VirtualTextureTranscodeCache.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\FileCache/FileCache.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\CrunchCompression\Public\CrunchCompression.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Private\VT\VirtualTextureChunkDDCCache.h
+C:/Users/Ryan/Documents/UnrealEngine/Engine/Source/Runtime/Engine/Private/VT/VirtualTexture.cpp
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Classes\VT/VirtualTexture.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Inc\Engine\VirtualTexture.generated.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Public\LightMap.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Classes\Engine/LightMapTexture2D.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Inc\Engine\LightMapTexture2D.generated.h
+C:/Users/Ryan/Documents/UnrealEngine/Engine/Source/Runtime/Engine/Private/VT/VirtualTextureBuildSettings.cpp
+C:/Users/Ryan/Documents/UnrealEngine/Engine/Source/Runtime/Engine/Private/VT/VirtualTextureBuiltData.cpp
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Developer\DerivedDataCache\Public\DerivedDataCacheInterface.h
+C:/Users/Ryan/Documents/UnrealEngine/Engine/Source/Runtime/Engine/Private/VT/VirtualTextureChunkDDCCache.cpp
+C:/Users/Ryan/Documents/UnrealEngine/Engine/Source/Runtime/Engine/Private/VT/VirtualTextureChunkManager.cpp
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\Containers/LruCache.h
+C:/Users/Ryan/Documents/UnrealEngine/Engine/Source/Runtime/Engine/Private/VT/VirtualTextureDataBuilder.cpp
+C:/Users/Ryan/Documents/UnrealEngine/Engine/Source/Runtime/Engine/Private/VT/VirtualTextureLevelRedirector.cpp
+C:/Users/Ryan/Documents/UnrealEngine/Engine/Source/Runtime/Engine/Private/VT/VirtualTexturePoolConfig.cpp
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Classes\VT/VirtualTexturePoolConfig.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Inc\Engine\VirtualTexturePoolConfig.generated.h
+C:/Users/Ryan/Documents/UnrealEngine/Engine/Source/Runtime/Engine/Private/VT/VirtualTextureScalability.cpp
+C:/Users/Ryan/Documents/UnrealEngine/Engine/Source/Runtime/Engine/Private/VT/VirtualTextureTranscodeCache.cpp
+C:/Users/Ryan/Documents/UnrealEngine/Engine/Source/Runtime/Engine/Private/VT/VirtualTextureUploadCache.cpp
+C:/Users/Ryan/Documents/UnrealEngine/Engine/Source/Runtime/Engine/Private/WeightedRandomSampler.cpp
+C:/Users/Ryan/Documents/UnrealEngine/Engine/Source/Runtime/Engine/Private/WindDirectionalSource.cpp
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Classes\Engine/WindDirectionalSource.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Inc\Engine\WindDirectionalSource.generated.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Classes\Components/ArrowComponent.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Inc\Engine\ArrowComponent.generated.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Classes\Components/WindDirectionalSourceComponent.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Inc\Engine\WindDirectionalSourceComponent.generated.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Classes\Components/BillboardComponent.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Inc\Engine\BillboardComponent.generated.h
+C:/Users/Ryan/Documents/UnrealEngine/Engine/Source/Runtime/Engine/Private/World.cpp
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\Logging/LogScopedVerbosityOverride.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\Stats/StatsMisc.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\Misc/ScopedSlowTask.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\CoreUObject\Public\UObject/ReferenceChainSearch.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\HAL/ThreadHeartBeat.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\EngineSettings\Classes\GameMapsSettings.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Inc\EngineSettings\GameMapsSettings.generated.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Classes\Engine/MapBuildDataRegistry.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Inc\Engine\MapBuildDataRegistry.generated.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\CoreUObject\Public\UObject/MetaData.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\CoreUObject\Public\Serialization/ArchiveReplaceObjectRef.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Classes\Engine/Canvas.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Inc\Engine\Canvas.generated.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Classes\GameFramework/PhysicsVolume.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Inc\Engine\PhysicsVolume.generated.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Classes\GameFramework/DefaultPhysicsVolume.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Inc\Engine\DefaultPhysicsVolume.generated.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Classes\Engine/LevelStreaming.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Public\LatentActions.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Inc\Engine\LevelStreaming.generated.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Classes\Materials/MaterialInstance.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Classes\Materials/MaterialInstanceBasePropertyOverrides.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Inc\Engine\MaterialInstanceBasePropertyOverrides.generated.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Inc\Engine\MaterialInstance.generated.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Classes\Engine/LocalPlayer.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Public\Subsystems/LocalPlayerSubsystem.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Inc\Engine\LocalPlayerSubsystem.generated.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Inc\Engine\LocalPlayer.generated.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Slate\Public\Framework/Application/SlateApplication.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Slate\Public\Framework/Application/IMenu.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\SlateCore\Public\Application/SlateWindowHelper.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\SlateCore\Public\Rendering/SlateRenderer.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\SlateCore\Public\Brushes/SlateDynamicImageBrush.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\SlateCore\Public\Application/SlateApplicationBase.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\SlateCore\Public\Application/ThrottleManager.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\SlateCore\Public\Widgets/IToolTip.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\SlateCore\Public\Layout/WidgetPath.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\SlateCore\Public\Layout/WidgetPath.inl
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Slate\Public\Framework/Application/MenuStack.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Slate\Public\Framework/SlateDelegates.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Slate\Public\Framework/Application/GestureDetector.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Classes\Engine/LevelScriptActor.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Inc\Engine\LevelScriptActor.generated.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Classes\Engine/CullDistanceVolume.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Inc\Engine\CullDistanceVolume.generated.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Classes\Engine/Console.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\EngineSettings\Classes\ConsoleSettings.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Inc\EngineSettings\ConsoleSettings.generated.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Inc\Engine\Console.generated.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Classes\Engine/WorldComposition.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Inc\Engine\WorldComposition.generated.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Classes\Matinee/MatineeActor.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Inc\Engine\MatineeActor.generated.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\Misc/NetworkVersion.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Classes\GameFramework/GameNetworkManager.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Inc\Engine\GameNetworkManager.generated.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Classes\GameFramework/CharacterMovementComponent.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Classes\Animation/AnimMontage.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Classes\Animation/TimeStretchCurve.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Inc\Engine\TimeStretchCurve.generated.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Inc\Engine\AnimMontage.generated.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Classes\GameFramework/RootMotionSource.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Inc\Engine\RootMotionSource.generated.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Classes\AI/Navigation/NavigationAvoidanceTypes.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Inc\Engine\NavigationAvoidanceTypes.generated.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Public\AI/RVOAvoidanceInterface.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Inc\Engine\RVOAvoidanceInterface.generated.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Classes\GameFramework/PawnMovementComponent.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Classes\GameFramework/NavMovementComponent.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Classes\AI/Navigation/PathFollowingAgentInterface.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Inc\Engine\PathFollowingAgentInterface.generated.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Inc\Engine\NavMovementComponent.generated.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Inc\Engine\PawnMovementComponent.generated.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Classes\Interfaces/NetworkPredictionInterface.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Inc\Engine\NetworkPredictionInterface.generated.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Inc\Engine\CharacterMovementComponent.generated.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Public\Net/NetworkProfiler.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Public\TickTaskManagerInterface.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Public\FXSystem.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Public\AudioDevice.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\SignalProcessing\Public\DSP/SpectrumAnalyzer.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\SignalProcessing\Public\DSP/Dsp.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\SignalProcessing\Public\DSP/AudioFFT.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\SignalProcessing\Public\DSP/FFTAlgorithm.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\SignalProcessing\Public\SampleBuffer.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Public\AudioDynamicParameter.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Classes\Sound/SoundClass.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Inc\Engine\SoundClass.generated.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Classes\Sound/SoundMix.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Inc\Engine\SoundMix.generated.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Classes\Sound/SoundSourceBus.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Inc\Engine\SoundSourceBus.generated.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Public\AudioVirtualLoop.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Public\ActiveSound.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Public\Audio/AudioDebug.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\SignalProcessing\Public\DSP/VolumeFader.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Public\LevelUtils.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Public\Physics/Experimental/PhysScene_Chaos.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Public\Tickable.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Public\Physics/PhysScene.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Public\Physics\Experimental\PhysInterface_Chaos.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Public\Physics/PhysicsInterfaceUtils.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Public\PhysXPublic.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\PhysicsCore\Public\PhysXPublicCore.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\Containers/Union.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\PhysicsCore\Public\PhysicsInterfaceUtilsCore.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Experimental\Chaos\Public\Chaos/Declares.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Experimental\ChaosSolvers\Public\PhysicsProxy/SingleParticlePhysicsProxyFwd.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Experimental\ChaosSolvers\Public\Framework/Threading.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\PhysicsCore\Public\PhysicsCoreTypes.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Inc\PhysicsCore\PhysicsCoreTypes.generated.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Experimental\Chaos\Public\Chaos/PBDCollisionConstraints.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Experimental\Chaos\Public\Chaos/CollisionResolutionTypes.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Experimental\Chaos\Public\Chaos/ExternalCollisionData.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Experimental\Chaos\Public\Chaos/Framework/PhysicsProxyBase.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Experimental\Chaos\Public\Chaos/Framework/PhysicsSolverBase.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Experimental\Chaos\Public\Chaos/Framework/MultiBufferResource.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Experimental\Chaos\Public\Chaos/PBDConstraintContainer.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Experimental\Chaos\Public\Chaos/ConstraintHandle.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Experimental\Chaos\Public\Chaos/Collision/CollisionApplyType.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Experimental\Chaos\Public\Chaos\Framework/BufferedData.h
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\sstream
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\string
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\cctype
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Experimental\Chaos\Public\Chaos\BoundingVolume.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Experimental\ChaosCore\Public\Chaos/ArrayND.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Experimental\Chaos\Public\Chaos/UniformGrid.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Experimental\Chaos\Public\Chaos/BoundingVolumeUtilities.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Experimental\Chaos\Public\Chaos/Framework/Parallel.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Experimental\Chaos\Public\Chaos/ParticleHandle.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Experimental\Chaos\Public\Chaos/PBDRigidClusteredParticles.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Experimental\Chaos\Public\Chaos/PBDRigidParticles.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Experimental\Chaos\Public\Chaos/RigidParticles.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Experimental\Chaos\Public\Chaos/BVHParticles.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Experimental\Chaos\Public\Chaos/KinematicGeometryParticles.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Experimental\Chaos\Public\Chaos/PBDGeometryCollectionParticles.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Experimental\Chaos\Public\Chaos/ParticleIterator.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Experimental\Chaos\Public\Chaos/ParallelFor.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\Async/ParallelFor.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Experimental\Chaos\Public\ChaosStats.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Experimental\Chaos\Public\Chaos/ParticleDirtyFlags.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Experimental\Chaos\Public\Chaos\ParticleProperties.inl
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Experimental\Chaos\Public\Chaos\ParticlePropertiesTypes.inl
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Experimental\Chaos\Public\Chaos\ParticlePropertiesTypes.inl
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Experimental\Chaos\Public\Chaos\ParticleProperties.inl
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Experimental\Chaos\Public\Chaos\ParticlePropertiesTypes.inl
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Experimental\Chaos\Public\Chaos\ParticlePropertiesTypes.inl
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Experimental\Chaos\Public\Chaos\ParticlePropertiesTypes.inl
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Experimental\Chaos\Public\Chaos\AABBTree.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Classes\AI/AISystemBase.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Inc\Engine\AISystemBase.generated.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Classes\Camera/CameraActor.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Inc\Engine\CameraActor.generated.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Classes\Engine/NetworkObjectList.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Classes\PhysicsEngine/PhysicsConstraintComponent.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Inc\Engine\PhysicsConstraintComponent.generated.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Classes\Engine/Polys.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Inc\Engine\Polys.generated.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Classes\Components/ModelComponent.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Inc\Engine\ModelComponent.generated.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Public\ShaderCompiler.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Classes\Engine/LevelScriptBlueprint.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Inc\Engine\LevelScriptBlueprint.generated.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Classes\Engine/DemoNetDriver.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Classes\Engine/PackageMapClient.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Inc\Engine\PackageMapClient.generated.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\NetworkReplayStreaming\NetworkReplayStreaming\Public\NetworkReplayStreaming.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Json\Public\Serialization/JsonSerializerMacros.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Json\Public\Policies/PrettyJsonPrintPolicy.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Json\Public\Policies/JsonPrintPolicy.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Json\Public\Policies/CondensedJsonPrintPolicy.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Json\Public\Serialization/JsonTypes.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Json\Public\Serialization/JsonReader.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Json\Public\Serialization/JsonSerializer.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Json\Public\Dom/JsonValue.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Json\Public\Dom/JsonObject.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Json\Public\JsonGlobals.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Json\Public\Serialization/JsonWriter.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Classes\Engine/DemoNetConnection.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Inc\Engine\DemoNetConnection.generated.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Public\Net/RepLayout.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\Containers/StaticBitArray.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Net\Core\Public\Net/Core/PushModel/PushModel.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Inc\Engine\DemoNetDriver.generated.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Classes\Interfaces/Interface_PostProcessVolume.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Inc\Engine\Interface_PostProcessVolume.generated.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Classes\Materials/MaterialParameterCollectionInstance.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Inc\Engine\MaterialParameterCollectionInstance.generated.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\ProfilingDebugging/LoadTimeTracker.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\ProfilingDebugging/ScopedTimers.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\Serialization/LoadTimeTrace.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Classes\Particles/ParticleEventManager.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Classes\Particles/ParticleSystemComponent.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Inc\Engine\ParticleSystemComponent.generated.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Inc\Engine\ParticleEventManager.generated.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Private\Streaming/TextureStreamingHelpers.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Public\Net/DataChannel.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Classes\Engine/ChildConnection.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Inc\Engine\ChildConnection.generated.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Classes\Engine/LevelStreamingPersistent.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Inc\Engine\LevelStreamingPersistent.generated.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Classes\AI/Navigation/AvoidanceManager.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Inc\Engine\AvoidanceManager.generated.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Classes\PhysicsEngine/PhysicsConstraintActor.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Classes\PhysicsEngine/RigidBodyBase.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Inc\Engine\RigidBodyBase.generated.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Inc\Engine\PhysicsConstraintActor.generated.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Classes\PhysicsEngine/PhysicsCollisionHandler.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Inc\Engine\PhysicsCollisionHandler.generated.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Classes\Engine/ShadowMapTexture2D.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Inc\Engine\ShadowMapTexture2D.generated.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Classes\Components/LineBatchComponent.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Inc\Engine\LineBatchComponent.generated.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Classes\Materials/MaterialParameterCollection.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Inc\Engine\MaterialParameterCollection.generated.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Classes\PhysicsEngine/PhysicsSettings.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Classes\PhysicsEngine/PhysicsSettingsEnums.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Inc\Engine\PhysicsSettingsEnums.generated.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Inc\Engine\PhysicsSettings.generated.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\CoreUObject\Public\UObject/UObjectThreadContext.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Classes\Engine/CoreSettings.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Inc\Engine\CoreSettings.generated.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Public\Net/PerfCountersHelpers.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Public\InGamePerformanceTracker.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Classes\Engine/AssetManager.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Classes\Engine\AssetManagerTypes.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Inc\Engine\AssetManagerTypes.generated.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\CoreUObject\Public\Misc/AssetRegistryInterface.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Classes\Engine\StreamableManager.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\AssetRegistry\Public\AssetRegistryModule.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\AssetRegistry\Public\IAssetRegistry.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\AssetRegistry\Public\ARFilter.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Inc\AssetRegistry\ARFilter.generated.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Inc\AssetRegistry\IAssetRegistry.generated.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\GenericPlatform/GenericPlatformChunkInstall.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Classes\Engine\ContentEncryptionConfig.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Inc\Engine\AssetManager.generated.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Classes\Engine/HLODProxy.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Classes\Engine\LODActor.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Inc\Engine\LODActor.generated.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Inc\Engine\HLODProxy.generated.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Public\ObjectTrace.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Inc\Engine\ObjectTrace.generated.h

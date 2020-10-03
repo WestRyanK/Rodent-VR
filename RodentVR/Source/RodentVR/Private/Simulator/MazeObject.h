@@ -5,10 +5,13 @@
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
 #include "Settings/MazeObjectSettings.h"
+#include "Settings/MazeObjectType.h"
+#include "SimpleObject.h"
+#include "Settings/MazeObjectTypeHelper.h"
 #include "MazeObject.generated.h"
 
 UCLASS(Blueprintable)
-class AMazeObject : public AActor
+class AMazeObject : public ASimpleObject
 {
 	GENERATED_BODY()
 
@@ -16,13 +19,11 @@ public:
 	// Sets default values for this actor's properties
 	AMazeObject();
 
-private:
-	UPROPERTY(BlueprintGetter = GetSettings, BlueprintSetter = SetSettings)
-		UMazeObjectSettings* Settings;
-	UPROPERTY()
-		class UStaticMeshComponent* StaticMesh;
 
 public:
+	UPROPERTY(BlueprintGetter = GetSettings, BlueprintSetter = SetSettings)
+		UMazeObjectSettings* Settings;
+
 	UFUNCTION(BlueprintGetter)
 		UMazeObjectSettings* GetSettings();
 	UFUNCTION(BlueprintSetter)

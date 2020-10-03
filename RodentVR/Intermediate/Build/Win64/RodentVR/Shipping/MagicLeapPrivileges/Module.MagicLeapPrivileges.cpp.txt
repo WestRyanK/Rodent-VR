@@ -1,0 +1,13 @@
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Shipping\MagicLeapPrivileges\Definitions.MagicLeapPrivileges.h
+C:/Users/Ryan/Documents/UnrealEngine/Engine/Plugins/Lumin/MagicLeap/Source/MagicLeapPrivileges/Private/MagicLeapPrivilegesFunctionLibrary.cpp
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Plugins\Lumin\MagicLeap\Source\MagicLeapPrivileges\Public\MagicLeapPrivilegesFunctionLibrary.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Plugins\Lumin\MagicLeap\Source\MagicLeapPrivileges\Public\MagicLeapPrivilegeTypes.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Inc\MagicLeapPrivileges\MagicLeapPrivilegeTypes.generated.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Inc\MagicLeapPrivileges\MagicLeapPrivilegesFunctionLibrary.generated.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Plugins\Lumin\MagicLeap\Source\MagicLeapPrivileges\Private\MagicLeapPrivilegesModule.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Plugins\Lumin\MagicLeap\Source\MagicLeapPrivileges\Public\IMagicLeapPrivilegesModule.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\Lumin/CAPIShims/LuminAPI.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Plugins\Lumin\MagicLeap\Source\MagicLeapPrivileges\Public\MagicLeapPrivilegeUtils.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Plugins\Lumin\MLSDK\Source\MLSDK\Public\Lumin/CAPIShims/LuminAPIPrivileges.h
+C:/Users/Ryan/Documents/UnrealEngine/Engine/Plugins/Lumin/MagicLeap/Source/MagicLeapPrivileges/Private/MagicLeapPrivilegesModule.cpp
+C:/Users/Ryan/Documents/UnrealEngine/Engine/Plugins/Lumin/MagicLeap/Source/MagicLeapPrivileges/Private/MagicLeapPrivilegeUtils.cpp

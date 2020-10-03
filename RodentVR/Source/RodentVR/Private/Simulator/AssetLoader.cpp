@@ -4,8 +4,17 @@
 #include "AssetLoader.h"
 #include "AssetRegistryModule.h"
 
-FAssetRegistryModule& UAssetLoader::AssetRegistryModule = FModuleManager::LoadModuleChecked<FAssetRegistryModule>("AssetRegistry");
+FAssetRegistryModule* UAssetLoader::AssetRegistryModule = nullptr;
 TMap<TextureEnum, FString> UAssetLoader::TextureToTexturePath = TMap<TextureEnum, FString>();
+
+
+void UAssetLoader::LoadAssetRegistryModule()
+{
+	if (UAssetLoader::AssetRegistryModule == nullptr)
+	{
+		UAssetLoader::AssetRegistryModule = &FModuleManager::LoadModuleChecked<FAssetRegistryModule>("AssetRegistry");
+	}
+}
 
 EImageFormat UAssetLoader::GetImageFormatFromFileName(const FString& FileName)
 {
@@ -140,7 +149,8 @@ TArray<FAssetData> UAssetLoader::GetAssetsInPath(FString AssetPath)
 {
 	TArray<FAssetData> AssetsInPath;
 	TArray<FString> AssetPathsInPath;
-	UAssetLoader::AssetRegistryModule.Get().GetAssetsByPath(FName(*AssetPath), AssetsInPath);
+	UAssetLoader::LoadAssetRegistryModule();
+	UAssetLoader::AssetRegistryModule->Get().GetAssetsByPath(FName(*AssetPath), AssetsInPath);
 	return AssetsInPath;
 }
 

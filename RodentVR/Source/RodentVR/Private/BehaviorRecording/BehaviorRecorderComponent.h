@@ -5,6 +5,7 @@
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
 #include "Settings/RegionSettings.h"
+#include "Misc/DateTime.h"
 #include "BehaviorRecording/BehaviorSnapshot.h"
 #include "BehaviorRecorderComponent.generated.h"
 
@@ -19,12 +20,12 @@ public:
 	UBehaviorRecorderComponent();
 
 	UFUNCTION()
-	void Save(FString Filename);
+	void Save(FString Filename, FString SettingsFileName, FString MazeFileName);
 	
 	void Save();
 
 private:
-	TArray<BehaviorSnapshot> Snapshots;
+	TArray<UBehaviorSnapshot*> Snapshots;
 	float StartTimeSec;
 	FString CurrentRegion;
 	UFUNCTION()
@@ -33,6 +34,8 @@ private:
 	void OnMazeLoaded();
 	UFUNCTION()
 	void OnMazeFinished();
+	UFUNCTION()
+	FString AppendDateTimeToFileName(FString FileName, FDateTime DateTime);
 
 	UFUNCTION()
 		void RemoveDelegates();

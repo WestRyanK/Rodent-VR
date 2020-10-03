@@ -2,6 +2,7 @@
 
 
 #include "MazeSpawner.h"
+#include "Kismet/GameplayStatics.h"
 #include "Settings/MazeObjectSettings.h"
 #include "Simulator/MazeObject.h"
 #include "Simulator/StartPosition.h"

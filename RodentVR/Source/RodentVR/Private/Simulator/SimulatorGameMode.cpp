@@ -5,6 +5,7 @@
 #include "Kismet/GameplayStatics.h"
 #include "Core/RodentVRGameInstance.h"
 #include "StopConditions/StopConditionsChecker.h"
+#include "Hardware/NIDAQ/NIDAQ.h"
 #include "MazeSpawner.h"
 
 FMazeLoadedDelegate ASimulatorGameMode::OnMazeLoadedDelegate;
@@ -17,6 +18,24 @@ ASimulatorGameMode::ASimulatorGameMode()
 URodentVRSettings* ASimulatorGameMode::GetRodentVRSettings()
 {
 	return this->RodentVRSettings;
+}
+
+void ASimulatorGameMode::StopNIDAQDevices()
+{
+	if (IsValid(this->RodentVRSettings))
+	{
+		TArray<UDevice*> Devices;
+		Devices.Add(this->RodentVRSettings->GetAirPufferLeftDevice());
+		Devices.Add(this->RodentVRSettings->GetAirPufferRightDevice());
+		Devices.Append(this->RodentVRSettings->GetRewardDevices());
+		for (UDevice* Device : Devices)
+		{
+			if (IsValid(Device))
+			{
+				UNIDAQ::control_NIDAQ(false, Device->GetDevicePath());
+			}
+		}
+	}
 }
 
 void ASimulatorGameMode::SetRodentVRSettings(URodentVRSettings* RodentVRSettingsValue)
@@ -46,6 +65,7 @@ void ASimulatorGameMode::LoadNextMaze()
 	URodentVRGameInstance* GameInstance = Cast<URodentVRGameInstance>(UGameplayStatics::GetGameInstance(this));
 	if (IsValid(GameInstance))
 	{
+		this->StopNIDAQDevices();
 		this->CurrentMazeIndex++;
 		if (IsValid(this->RodentVRSettings))
 		{
@@ -74,5 +94,6 @@ void ASimulatorGameMode::OnMazeLoaded()
 
 void ASimulatorGameMode::OnMazeFinished()
 {
+	this->StopNIDAQDevices();
 	ASimulatorGameMode::OnMazeFinishedDelegate.Broadcast();
 }

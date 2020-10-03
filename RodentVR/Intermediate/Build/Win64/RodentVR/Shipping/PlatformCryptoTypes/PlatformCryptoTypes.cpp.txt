@@ -1,0 +1,4 @@
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Shipping\PlatformCryptoTypes\Definitions.PlatformCryptoTypes.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Plugins\Experimental\PlatformCrypto\Source\PlatformCryptoTypes\Public\PlatformCryptoTypes.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\Misc/IEngineCrypto.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\Features/IModularFeatures.h

@@ -1,0 +1,7 @@
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Shipping\MagicLeapIdentity\Definitions.MagicLeapIdentity.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\CoreUObject\Public\UObject/GeneratedCppIncludes.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\CoreUObject\Public\UObject/MetaData.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Plugins\Lumin\MagicLeap\Source\MagicLeapIdentity/Public/MagicLeapIdentity.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Plugins\Lumin\MagicLeap\Source\MagicLeapIdentity\Public\MagicLeapIdentityTypes.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Inc\MagicLeapIdentity\MagicLeapIdentityTypes.generated.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Inc\MagicLeapIdentity\MagicLeapIdentity.generated.h

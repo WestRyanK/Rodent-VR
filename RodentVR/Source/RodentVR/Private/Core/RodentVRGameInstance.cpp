@@ -76,13 +76,20 @@ void URodentVRGameInstance::GoToPage(PageEnum Page)
 	case PageEnum::MAINMENU:
 	case PageEnum::OPTIONS:
 	case PageEnum::OPTIONS_PLAYLIST:
-		UGameplayStatics::OpenLevel(this, "MainMenuMap", false, "?Game=/Game/Menu/MainMenuGameMode.MainMenuGameMode_C");
+		UGameplayStatics::OpenLevel(this, "MainMap", false, "?Game=/Game/Menu/MainMenuGameMode.MainMenuGameMode_C");
+		//UGameplayStatics::OpenLevel(this, "MainMenuMap", false, "?Game=/Game/Menu/MainMenuGameMode.MainMenuGameMode_C");
 		break;
 	case PageEnum::EDITOR:
-		UGameplayStatics::OpenLevel(this, "SimulatorMap", false, "?Game=/Game/Editor/EditorGameMode.EditorGameMode_C");
+		UGameplayStatics::OpenLevel(this, "MainMap", false, "?Game=/Game/Editor/EditorGameMode.EditorGameMode_C");
+		//UGameplayStatics::OpenLevel(this, "SimulatorMap", false, "?Game=/Game/Editor/EditorGameMode.EditorGameMode_C");
 		break;
 	case PageEnum::SIMULATOR:
-		UGameplayStatics::OpenLevel(this, "SimulatorMap", false, "?Game=/Game/Simulator/SimulatorGameModeBP.SimulatorGameModeBP_C");
+		UGameplayStatics::OpenLevel(this, "MainMap", false, "?Game=/Game/Simulator/SimulatorGameModeBP.SimulatorGameModeBP_C");
+		//UGameplayStatics::OpenLevel(this, "SimulatorMap", false, "?Game=/Game/Simulator/SimulatorGameModeBP.SimulatorGameModeBP_C");
+		break;
+	case PageEnum::BEHAVIORAL_ANALYSIS:
+		UGameplayStatics::OpenLevel(this, "MainMap", false, "?Game=/Game/BehavioralAnalysis/BehavioralAnalysisGameMode.BehavioralAnalysisGameMode_C");
+		//UGameplayStatics::OpenLevel(this, "SimulatorMap", false, "?Game=/Game/BehavioralAnalysis/BehavioralAnalysisGameMode.BehavioralAnalysisGameMode_C");
 		break;
 	case PageEnum::EXIT:
 		GetWorld()->GetFirstPlayerController()->ConsoleCommand("quit");

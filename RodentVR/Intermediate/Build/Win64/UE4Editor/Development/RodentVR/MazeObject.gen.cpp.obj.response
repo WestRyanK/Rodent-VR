@@ -30,8 +30,12 @@
 /wd4838
 /I .
 /I C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Source\RodentVR\Private
-/I ..\Intermediate\Build\Win64\UE4Editor\Inc\Slate
 /I Runtime
+/I Runtime\SignalProcessing\Public
+/I Runtime\SignalProcessing
+/I Runtime\SignalProcessing\Public\DSP
+/I Runtime\SignalProcessing\Public\DSP\Encoders
+/I ..\Intermediate\Build\Win64\UE4Editor\Inc\Slate
 /I Runtime\Slate\Public
 /I Runtime\Slate
 /I Runtime\Slate\Public\Framework
@@ -281,10 +285,6 @@
 /I Runtime\Experimental\FieldSystem\Source\FieldSystemCore\Public
 /I Runtime\Experimental\FieldSystem\Source\FieldSystemCore
 /I Runtime\Experimental\FieldSystem\Source\FieldSystemCore\Public\Field
-/I Runtime\SignalProcessing\Public
-/I Runtime\SignalProcessing
-/I Runtime\SignalProcessing\Public\DSP
-/I Runtime\SignalProcessing\Public\DSP\Encoders
 /I ..\Intermediate\Build\Win64\UE4Editor\Inc\AudioExtensions
 /I Runtime\AudioExtensions\Public
 /I Runtime\AudioExtensions
@@ -546,6 +546,11 @@
 /I C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Source
 /I C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\ThirdParty\NIDAQmx\Includes
 /I C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Source\RodentVR
+/I ..\Plugins\Marketplace\RuntimeTransformer\Intermediate\Build\Win64\UE4Editor\Inc\RuntimeTransformer
+/I ..\Plugins\Marketplace\RuntimeTransformer\Source
+/I ..\Plugins\Marketplace\RuntimeTransformer\Source\RuntimeTransformer\Public
+/I ..\Plugins\Marketplace\RuntimeTransformer\Source\RuntimeTransformer
+/I ..\Plugins\Marketplace\RuntimeTransformer\Source\RuntimeTransformer\Public\Gizmos
 /I ThirdParty\PhysX3\PxShared\include
 /I ThirdParty\PhysX3\PxShared\include\cudamanager
 /I ThirdParty\PhysX3\PxShared\include\filebuf
@@ -570,15 +575,16 @@
 /I ThirdParty\PhysX3\APEX_1.4\shared\general\PairFilter\include
 /I ThirdParty\PhysX3\APEX_1.4\shared\internal\include
 /I "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE"
-/I "C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um"
+/I "C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.2\include\um"
 /I "C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt"
 /I "C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared"
 /I "C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um"
 /I "C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\winrt"
-/FI"C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\UE4Editor\Development\RodentVR\PCH.RodentVR.h"
-/Yu"C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\UE4Editor\Development\RodentVR\PCH.RodentVR.h"
-/Fp"C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\UE4Editor\Development\RodentVR\PCH.RodentVR.h.pch"
+/FI"C:\Users\Ryan\Documents\UnrealEngine\Engine\Intermediate\Build\Win64\UE4Editor\Development\Engine\SharedPCH.Engine.h"
+/Yu"C:\Users\Ryan\Documents\UnrealEngine\Engine\Intermediate\Build\Win64\UE4Editor\Development\Engine\SharedPCH.Engine.h"
+/Fp"C:\Users\Ryan\Documents\UnrealEngine\Engine\Intermediate\Build\Win64\UE4Editor\Development\Engine\SharedPCH.Engine.h.pch"
 "C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\UE4Editor\Inc\RodentVR\MazeObject.gen.cpp"
+/FI"C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\UE4Editor\Development\RodentVR\Definitions.RodentVR.h"
 /Fo"C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\UE4Editor\Development\RodentVR\MazeObject.gen.cpp.obj"
 /TP
 /GR-

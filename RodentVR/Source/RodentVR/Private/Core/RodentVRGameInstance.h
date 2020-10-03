@@ -15,6 +15,7 @@ enum class PageEnum : uint8
 	OPTIONS_PLAYLIST UMETA(DisplayName = "Options - Playlist"),
 	EDITOR UMETA(DisplayName = "Editor"),
 	SIMULATOR UMETA(DisplayName = "Simulator"),
+	BEHAVIORAL_ANALYSIS UMETA(DisplayName = "Behavioral Analysis"),
 	EXIT UMETA(DisplayName = "Exit")
 };
 

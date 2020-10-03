@@ -1,7 +1,7 @@
 {
-	"BuildId": "8386587",
+	"BuildId": "1b7eb4d1-9f4d-4d88-a0d3-d4dff9aee8e7",
 	"Modules": 
 	{
-		"RodentVR": "UE4Editor-RodentVR-6925.dll"
+		"RodentVR": "UE4Editor-RodentVR.dll"
 	}
 }
