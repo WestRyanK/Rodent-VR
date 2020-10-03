@@ -3,21 +3,37 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "UObject/NoExportTypes.h"
+#include "BehaviorSnapshot.generated.h"
 
 /**
- * 
+ *
  */
-class RODENTVR_API BehaviorSnapshot
+UCLASS(Blueprintable)
+class UBehaviorSnapshot : public UObject
 {
+	GENERATED_BODY()
+
 private:
-	float Timestamp;
-	FVector Position;
-	FVector Forward;
-	FString CurrentRegion;
+	UPROPERTY(BlueprintGetter = GetTimestamp)
+		float Timestamp;
+	UPROPERTY(BlueprintGetter = GetPosition)
+		FVector Position;
+	UPROPERTY(BlueprintGetter = GetForward)
+		FVector Forward;
+	UPROPERTY(BlueprintGetter = GetCurrentRegion)
+		FString CurrentRegion;
+
 public:
-	BehaviorSnapshot(float Timestamp, FVector Position, FVector Forward, FString CurrentRegion);
-	float GetTimestamp();
-	FVector GetPosition();
-	FVector GetForward();
-	FString GetCurrentRegion();
+	UFUNCTION(BlueprintCallable)
+		static UBehaviorSnapshot* CreateBehaviorSnapshot(float TimestampVal, FVector PositionVal, FVector ForwardVal, FString CurrentRegionVal);
+
+	UFUNCTION(BlueprintGetter)
+		float GetTimestamp();
+	UFUNCTION(BlueprintGetter)
+		FVector GetPosition();
+	UFUNCTION(BlueprintGetter)
+		FVector GetForward();
+	UFUNCTION(BlueprintGetter)
+		FString GetCurrentRegion();
 };

@@ -21,10 +21,12 @@ class UAssetLoader : public UObject
 	GENERATED_BODY()
 
 private:
-	static FAssetRegistryModule& AssetRegistryModule;
+	static FAssetRegistryModule* AssetRegistryModule;
 	static TMap<TextureEnum, FString> TextureToTexturePath;
 	UFUNCTION()
 		static void LoadTextureToTexturePathMap();
+
+	static void LoadAssetRegistryModule();
 
 public:
 	UFUNCTION(BlueprintCallable)
@@ -47,6 +49,7 @@ public:
 	template <class T>
 	static T* LoadAssetFromPath(FString ActorAssetPath)
 	{
+		UAssetLoader::LoadAssetRegistryModule();
 		FStringAssetReference AssetReference(ActorAssetPath);
 		TAssetPtr<T> Asset(AssetReference);
 		T* AssetObject = Asset.LoadSynchronous();

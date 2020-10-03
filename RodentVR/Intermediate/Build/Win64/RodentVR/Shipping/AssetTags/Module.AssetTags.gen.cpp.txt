@@ -1,0 +1,7 @@
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Shipping\AssetTags\Definitions.AssetTags.h
+C:/Users/Ryan/Drive/BYU/2018_Fall/cs_497r/Rodent-VR/RodentVR/Intermediate/Build/Win64/RodentVR/Inc/AssetTags/AssetTags.init.gen.cpp
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\CoreUObject\Public\UObject/GeneratedCppIncludes.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\CoreUObject\Public\UObject/MetaData.h
+C:/Users/Ryan/Drive/BYU/2018_Fall/cs_497r/Rodent-VR/RodentVR/Intermediate/Build/Win64/RodentVR/Inc/AssetTags/AssetTagsSubsystem.gen.cpp
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Plugins\Runtime\AssetTags\Source\AssetTags/Public/AssetTagsSubsystem.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Inc\AssetTags\AssetTagsSubsystem.generated.h

@@ -10,13 +10,13 @@
 	{
 		"MajorVersion": 4,
 		"MinorVersion": 25,
-		"PatchVersion": 0,
-		"Changelist": 13144385,
-		"CompatibleChangelist": 0,
+		"PatchVersion": 1,
+		"Changelist": 0,
+		"CompatibleChangelist": 13144385,
 		"IsLicenseeVersion": 0,
 		"IsPromotedBuild": 0,
 		"BranchName": "++UE4+Release-4.25",
-		"BuildId": "13144385",
+		"BuildId": "34a206d0-3ab8-4227-a29b-e29a8151e300",
 		"BuildVersion": ""
 	},
 	"BuildProducts": [
@@ -40,6 +40,10 @@
 		},
 		{
 			"Path": "$(EngineDir)/Plugins/Marketplace/RuntimeTransformer/RuntimeTransformer.uplugin",
+			"Type": "UFS"
+		},
+		{
+			"Path": "$(ProjectDir)/Plugins/VictoryUMG/VictoryUMG.uplugin",
 			"Type": "UFS"
 		},
 		{
@@ -447,7 +451,7 @@
 			"Type": "UFS"
 		},
 		{
-			"Path": "$(EngineDir)/Content/Slate/Common/DebugBorder.PNG",
+			"Path": "$(EngineDir)/Content/Slate/Common/DebugBorder.png",
 			"Type": "UFS"
 		},
 		{
@@ -491,7 +495,7 @@
 			"Type": "UFS"
 		},
 		{
-			"Path": "$(EngineDir)/Content/Slate/Common/HeaderSplitterGrip.PNG",
+			"Path": "$(EngineDir)/Content/Slate/Common/HeaderSplitterGrip.png",
 			"Type": "UFS"
 		},
 		{
@@ -511,7 +515,7 @@
 			"Type": "UFS"
 		},
 		{
-			"Path": "$(EngineDir)/Content/Slate/Common/ProgressBar_Marquee.PNG",
+			"Path": "$(EngineDir)/Content/Slate/Common/ProgressBar_Marquee.png",
 			"Type": "UFS"
 		},
 		{
@@ -527,7 +531,7 @@
 			"Type": "UFS"
 		},
 		{
-			"Path": "$(EngineDir)/Content/Slate/Common/RoundedSelection_16x.PNG",
+			"Path": "$(EngineDir)/Content/Slate/Common/RoundedSelection_16x.png",
 			"Type": "UFS"
 		},
 		{
@@ -567,7 +571,7 @@
 			"Type": "UFS"
 		},
 		{
-			"Path": "$(EngineDir)/Content/Slate/Common/SearchGlass.PNG",
+			"Path": "$(EngineDir)/Content/Slate/Common/SearchGlass.png",
 			"Type": "UFS"
 		},
 		{
@@ -631,7 +635,7 @@
 			"Type": "UFS"
 		},
 		{
-			"Path": "$(EngineDir)/Content/Slate/Common/Spinbox.PNG",
+			"Path": "$(EngineDir)/Content/Slate/Common/Spinbox.png",
 			"Type": "UFS"
 		},
 		{
@@ -683,7 +687,7 @@
 			"Type": "UFS"
 		},
 		{
-			"Path": "$(EngineDir)/Content/Slate/Common/TextBoxLabelBorder.PNG",
+			"Path": "$(EngineDir)/Content/Slate/Common/TextBoxLabelBorder.png",
 			"Type": "UFS"
 		},
 		{
@@ -767,7 +771,7 @@
 			"Type": "UFS"
 		},
 		{
-			"Path": "$(EngineDir)/Content/Slate/Common/X.PNG",
+			"Path": "$(EngineDir)/Content/Slate/Common/X.png",
 			"Type": "UFS"
 		},
 		{
@@ -1235,7 +1239,7 @@
 			"Type": "UFS"
 		},
 		{
-			"Path": "$(EngineDir)/Content/Slate/Old/Border.PNG",
+			"Path": "$(EngineDir)/Content/Slate/Old/Border.png",
 			"Type": "UFS"
 		},
 		{
@@ -1327,7 +1331,15 @@
 			"Type": "UFS"
 		},
 		{
+			"Path": "$(EngineDir)/Content/Slate/Old/Tiles/DottedCircleBox_L.psd",
+			"Type": "UFS"
+		},
+		{
 			"Path": "$(EngineDir)/Content/Slate/Old/Tiles/DottedCircleBox_LR.png",
+			"Type": "UFS"
+		},
+		{
+			"Path": "$(EngineDir)/Content/Slate/Old/Tiles/DottedCircleBox_LR.psd",
 			"Type": "UFS"
 		},
 		{
@@ -1340,6 +1352,10 @@
 		},
 		{
 			"Path": "$(EngineDir)/Content/Slate/Old/Tiles/DottedCircleBox_R.png",
+			"Type": "UFS"
+		},
+		{
+			"Path": "$(EngineDir)/Content/Slate/Old/Tiles/DottedCircleBox_R.psd",
 			"Type": "UFS"
 		},
 		{
@@ -1407,6 +1423,10 @@
 			"Type": "UFS"
 		},
 		{
+			"Path": "$(EngineDir)/Content/Slate/Old/Tiles/pin/pin.psd",
+			"Type": "UFS"
+		},
+		{
 			"Path": "$(EngineDir)/Content/Slate/Old/Tiles/pin/ping.png",
 			"Type": "UFS"
 		},
@@ -1432,6 +1452,10 @@
 		},
 		{
 			"Path": "$(EngineDir)/Content/Slate/Old/Tiles/pin/pin_stick.png",
+			"Type": "UFS"
+		},
+		{
+			"Path": "$(EngineDir)/Content/Slate/Old/Tiles/pin/reitment.psd",
 			"Type": "UFS"
 		},
 		{

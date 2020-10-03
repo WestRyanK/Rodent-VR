@@ -1,0 +1,13 @@
+<Maze Name="CorridorMaze">
+	<BehaviorRecording Filename=""/>
+	<PlayerStart>
+		<Position X="0.000000" Y="0.000000" Z="0.000000"/>
+		<Rotation AngleY="0.000000" AngleZ="-90.000000" AngleX="0.000000"/>
+		<Scale X="1.000000" Y="1.000000" Z="1.000000"/>
+	</PlayerStart>
+	<Textures/>
+	<Regions/>
+	<MazeObjects/>
+	<StopConditions/>
+</Maze>
+

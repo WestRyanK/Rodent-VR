@@ -9,6 +9,8 @@
 #include "Settings/StartPositionSettings.h"
 #include "Settings/RegionSettings.h"
 #include "Settings/RodentVRSettings.h"
+#include "Settings/MazeObjectType.h"
+#include "Settings/MazeObjectTypeHelper.h"
 #include "Settings/MazeObjectSettings.h"
 
 
@@ -94,7 +96,7 @@ void UMazeSettingsXmlReader::LoadMazeObjects(UMazeSettings* MazeSettings, rapidx
 		for (rapidxml::xml_node<>* MazeObjectNode = MazeObjectsNode->first_node(); MazeObjectNode; MazeObjectNode = MazeObjectNode->next_sibling())
 		{
 			FString MazeObjectTypeString = UXmlFileReader::GetStringFromAttribute(MazeObjectNode, "MazeObjectType", "");
-			MazeObjectType MazeObjectType = UMazeObjectSettings::GetTypeFromString(MazeObjectTypeString);
+			MazeObjectType MazeObjectType = UMazeObjectTypeHelper::StringToObjectType(MazeObjectTypeString);
 			UTextureSettings* TextureSettings = UXmlFileReader::GetTextureSettingsFromNode(MazeObjectNode->first_node("Texture"));
 			bool CanCollide = UXmlFileReader::GetBoolFromAttribute(MazeObjectNode, "CanCollide", false);
 

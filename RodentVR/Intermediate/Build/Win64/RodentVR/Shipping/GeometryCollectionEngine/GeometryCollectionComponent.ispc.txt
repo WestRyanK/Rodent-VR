@@ -1,0 +1,3 @@
+C:\\Users\\Ryan\\Documents\\UnrealEngine\\Engine\\Source\\Runtime\\Core\\Public\\Math/Matrix.isph
+C:\\Users\\Ryan\\Documents\\UnrealEngine\\Engine\\Source\\Runtime\\Core\\Public\\Math/Vector.isph
+C:\\Users\\Ryan\\Documents\\UnrealEngine\\Engine\\Source\\Runtime\\Experimental\\GeometryCollectionEngine\\Private\\GeometryCollection\\GeometryCollectionComponent.ispc

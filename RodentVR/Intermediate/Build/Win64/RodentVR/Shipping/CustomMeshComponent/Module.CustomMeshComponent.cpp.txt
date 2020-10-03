@@ -1,0 +1,8 @@
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Shipping\CustomMeshComponent\Definitions.CustomMeshComponent.h
+C:/Users/Ryan/Documents/UnrealEngine/Engine/Plugins/Runtime/CustomMeshComponent/Source/CustomMeshComponent/Private/CustomMeshComponent.cpp
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Plugins\Runtime\CustomMeshComponent\Source\CustomMeshComponent\Classes\CustomMeshComponent.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Inc\CustomMeshComponent\CustomMeshComponent.generated.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Classes\Engine/CollisionProfile.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Inc\Engine\CollisionProfile.generated.h
+C:/Users/Ryan/Documents/UnrealEngine/Engine/Plugins/Runtime/CustomMeshComponent/Source/CustomMeshComponent/Private/CustomMeshComponentPlugin.cpp
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Plugins\Runtime\CustomMeshComponent\Source\CustomMeshComponent\Public\ICustomMeshComponentPlugin.h

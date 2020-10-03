@@ -1,0 +1,203 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="..\..\..\..\..\..\..\..\Documents\UnrealEngine\Engine\Source\Programs\Enterprise\Datasmith\DatasmithSketchUpExporter\DatasmithSketchUp2017.Target.cs" />
+    <None Include="..\..\..\..\..\..\..\..\Documents\UnrealEngine\Engine\Source\Programs\Enterprise\Datasmith\DatasmithSketchUpExporter\DatasmithSketchUp2017.Build.cs" />
+    <None Include="..\..\..\..\..\..\..\..\Documents\UnrealEngine\Engine\Source\Programs\Enterprise\Datasmith\DatasmithSketchUpExporter\DatasmithSketchUp2018.Build.cs" />
+    <None Include="..\..\..\..\..\..\..\..\Documents\UnrealEngine\Engine\Source\Programs\Enterprise\Datasmith\DatasmithSketchUpExporter\DatasmithSketchUp2019.Build.cs" />
+    <None Include="..\..\..\..\..\..\..\..\Documents\UnrealEngine\Engine\Source\Programs\Enterprise\Datasmith\DatasmithSketchUpExporter\DatasmithSketchUp2020.Build.cs" />
+    <None Include="..\..\..\..\..\..\..\..\Documents\UnrealEngine\Engine\Source\Programs\Enterprise\Datasmith\DatasmithSketchUpExporter\DatasmithSketchUpExporter.def" />
+    <Filter Include="Installer">
+      <UniqueIdentifier>{880A458D-83A5-4B0C-9388-B352714CC3D1}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\..\..\..\..\..\..\Documents\UnrealEngine\Engine\Source\Programs\Enterprise\Datasmith\DatasmithSketchUpExporter\Installer\CustomActions.wxs">
+      <Filter>Installer</Filter>
+    </None>
+    <None Include="..\..\..\..\..\..\..\..\Documents\UnrealEngine\Engine\Source\Programs\Enterprise\Datasmith\DatasmithSketchUpExporter\Installer\CustomExitDialog.wxs">
+      <Filter>Installer</Filter>
+    </None>
+    <None Include="..\..\..\..\..\..\..\..\Documents\UnrealEngine\Engine\Source\Programs\Enterprise\Datasmith\DatasmithSketchUpExporter\Installer\CustomInstallDirDlg.wxs">
+      <Filter>Installer</Filter>
+    </None>
+    <None Include="..\..\..\..\..\..\..\..\Documents\UnrealEngine\Engine\Source\Programs\Enterprise\Datasmith\DatasmithSketchUpExporter\Installer\CustomLicenseAgreementDlg.wxs">
+      <Filter>Installer</Filter>
+    </None>
+    <None Include="..\..\..\..\..\..\..\..\Documents\UnrealEngine\Engine\Source\Programs\Enterprise\Datasmith\DatasmithSketchUpExporter\Installer\CustomWelcomeDialog.wxs">
+      <Filter>Installer</Filter>
+    </None>
+    <None Include="..\..\..\..\..\..\..\..\Documents\UnrealEngine\Engine\Source\Programs\Enterprise\Datasmith\DatasmithSketchUpExporter\Installer\CustomWixUI_InstallDir.wxs">
+      <Filter>Installer</Filter>
+    </None>
+    <None Include="..\..\..\..\..\..\..\..\Documents\UnrealEngine\Engine\Source\Programs\Enterprise\Datasmith\DatasmithSketchUpExporter\Installer\GenericUiBrandDialog.wxs">
+      <Filter>Installer</Filter>
+    </None>
+    <None Include="..\..\..\..\..\..\..\..\Documents\UnrealEngine\Engine\Source\Programs\Enterprise\Datasmith\DatasmithSketchUpExporter\Installer\Installer.wixproj">
+      <Filter>Installer</Filter>
+    </None>
+    <None Include="..\..\..\..\..\..\..\..\Documents\UnrealEngine\Engine\Source\Programs\Enterprise\Datasmith\DatasmithSketchUpExporter\Installer\SketchUpExporter.wxs">
+      <Filter>Installer</Filter>
+    </None>
+    <Filter Include="Installer\Localization">
+      <UniqueIdentifier>{A11B750B-C719-4C45-9A0D-D6FE8D59191A}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\..\..\..\..\..\..\Documents\UnrealEngine\Engine\Source\Programs\Enterprise\Datasmith\DatasmithSketchUpExporter\Installer\Localization\en-us.wxl">
+      <Filter>Installer\Localization</Filter>
+    </None>
+    <Filter Include="Installer\Resources">
+      <UniqueIdentifier>{352E457C-5147-4EEB-AD40-1732F2616012}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\..\..\..\..\..\..\Documents\UnrealEngine\Engine\Source\Programs\Enterprise\Datasmith\DatasmithSketchUpExporter\Installer\Resources\Banner.bmp">
+      <Filter>Installer\Resources</Filter>
+    </None>
+    <None Include="..\..\..\..\..\..\..\..\Documents\UnrealEngine\Engine\Source\Programs\Enterprise\Datasmith\DatasmithSketchUpExporter\Installer\Resources\default_small_banner.bmp">
+      <Filter>Installer\Resources</Filter>
+    </None>
+    <None Include="..\..\..\..\..\..\..\..\Documents\UnrealEngine\Engine\Source\Programs\Enterprise\Datasmith\DatasmithSketchUpExporter\Installer\Resources\Dialog.bmp">
+      <Filter>Installer\Resources</Filter>
+    </None>
+    <None Include="..\..\..\..\..\..\..\..\Documents\UnrealEngine\Engine\Source\Programs\Enterprise\Datasmith\DatasmithSketchUpExporter\Installer\Resources\Epic_Games_logo.png">
+      <Filter>Installer\Resources</Filter>
+    </None>
+    <None Include="..\..\..\..\..\..\..\..\Documents\UnrealEngine\Engine\Source\Programs\Enterprise\Datasmith\DatasmithSketchUpExporter\Installer\Resources\Exporter Plugin End User License Agreement.docx">
+      <Filter>Installer\Resources</Filter>
+    </None>
+    <None Include="..\..\..\..\..\..\..\..\Documents\UnrealEngine\Engine\Source\Programs\Enterprise\Datasmith\DatasmithSketchUpExporter\Installer\Resources\Exporter Plugin End User License Agreement.rtf">
+      <Filter>Installer\Resources</Filter>
+    </None>
+    <None Include="..\..\..\..\..\..\..\..\Documents\UnrealEngine\Engine\Source\Programs\Enterprise\Datasmith\DatasmithSketchUpExporter\Installer\Resources\Microsoft_VC140_CRT_x64.msm">
+      <Filter>Installer\Resources</Filter>
+    </None>
+    <None Include="..\..\..\..\..\..\..\..\Documents\UnrealEngine\Engine\Source\Programs\Enterprise\Datasmith\DatasmithSketchUpExporter\Installer\Resources\Microsoft_VC140_OpenMP_x64.msm">
+      <Filter>Installer\Resources</Filter>
+    </None>
+    <None Include="..\..\..\..\..\..\..\..\Documents\UnrealEngine\Engine\Source\Programs\Enterprise\Datasmith\DatasmithSketchUpExporter\Installer\Resources\UnrealEngine.ico">
+      <Filter>Installer\Resources</Filter>
+    </None>
+    <Filter Include="Installer\Resources\Images">
+      <UniqueIdentifier>{9721DBA8-78AD-4E06-8C56-9C380D8797B6}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\..\..\..\..\..\..\Documents\UnrealEngine\Engine\Source\Programs\Enterprise\Datasmith\DatasmithSketchUpExporter\Installer\Resources\Images\Epic_Games_logo.bmp">
+      <Filter>Installer\Resources\Images</Filter>
+    </None>
+    <Filter Include="Installer\Resources\Images\Background">
+      <UniqueIdentifier>{CFD17E8A-6537-4B56-9048-E41C59F2F7E4}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\..\..\..\..\..\..\Documents\UnrealEngine\Engine\Source\Programs\Enterprise\Datasmith\DatasmithSketchUpExporter\Installer\Resources\Images\Background\28190.bmp">
+      <Filter>Installer\Resources\Images\Background</Filter>
+    </None>
+    <None Include="..\..\..\..\..\..\..\..\Documents\UnrealEngine\Engine\Source\Programs\Enterprise\Datasmith\DatasmithSketchUpExporter\Installer\Resources\Images\Background\28402.bmp">
+      <Filter>Installer\Resources\Images\Background</Filter>
+    </None>
+    <None Include="..\..\..\..\..\..\..\..\Documents\UnrealEngine\Engine\Source\Programs\Enterprise\Datasmith\DatasmithSketchUpExporter\Installer\Resources\Images\Background\28674.bmp">
+      <Filter>Installer\Resources\Images\Background</Filter>
+    </None>
+    <None Include="..\..\..\..\..\..\..\..\Documents\UnrealEngine\Engine\Source\Programs\Enterprise\Datasmith\DatasmithSketchUpExporter\Installer\Resources\Images\Background\30668.bmp">
+      <Filter>Installer\Resources\Images\Background</Filter>
+    </None>
+    <None Include="..\..\..\..\..\..\..\..\Documents\UnrealEngine\Engine\Source\Programs\Enterprise\Datasmith\DatasmithSketchUpExporter\Installer\Resources\Images\Background\30725.bmp">
+      <Filter>Installer\Resources\Images\Background</Filter>
+    </None>
+    <Filter Include="Installer\Resources\Images\General">
+      <UniqueIdentifier>{C0BFD0AD-2F23-4D63-A2CC-C4A3BD19DB33}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\..\..\..\..\..\..\Documents\UnrealEngine\Engine\Source\Programs\Enterprise\Datasmith\DatasmithSketchUpExporter\Installer\Resources\Images\General\banner.bmp">
+      <Filter>Installer\Resources\Images\General</Filter>
+    </None>
+    <None Include="..\..\..\..\..\..\..\..\Documents\UnrealEngine\Engine\Source\Programs\Enterprise\Datasmith\DatasmithSketchUpExporter\Installer\Resources\Images\General\unreal-logo.jpg">
+      <Filter>Installer\Resources\Images\General</Filter>
+    </None>
+    <Filter Include="Private">
+      <UniqueIdentifier>{A785BC13-5211-4133-A19D-DF231AEC9264}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\..\..\..\..\..\..\Documents\UnrealEngine\Engine\Source\Programs\Enterprise\Datasmith\DatasmithSketchUpExporter\Private\DatasmithSketchUpAFXDialogs.cpp">
+      <Filter>Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\..\..\..\Documents\UnrealEngine\Engine\Source\Programs\Enterprise\Datasmith\DatasmithSketchUpExporter\Private\DatasmithSketchUpCamera.cpp">
+      <Filter>Private</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\..\..\..\..\..\..\Documents\UnrealEngine\Engine\Source\Programs\Enterprise\Datasmith\DatasmithSketchUpExporter\Private\DatasmithSketchUpCamera.h">
+      <Filter>Private</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\..\..\..\..\..\..\Documents\UnrealEngine\Engine\Source\Programs\Enterprise\Datasmith\DatasmithSketchUpExporter\Private\DatasmithSketchUpComponent.cpp">
+      <Filter>Private</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\..\..\..\..\..\..\Documents\UnrealEngine\Engine\Source\Programs\Enterprise\Datasmith\DatasmithSketchUpExporter\Private\DatasmithSketchUpComponent.h">
+      <Filter>Private</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\..\..\..\..\..\..\Documents\UnrealEngine\Engine\Source\Programs\Enterprise\Datasmith\DatasmithSketchUpExporter\Private\DatasmithSketchUpDialogs.cpp">
+      <Filter>Private</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\..\..\..\..\..\..\Documents\UnrealEngine\Engine\Source\Programs\Enterprise\Datasmith\DatasmithSketchUpExporter\Private\DatasmithSketchUpDialogs.h">
+      <Filter>Private</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\..\..\..\..\..\..\Documents\UnrealEngine\Engine\Source\Programs\Enterprise\Datasmith\DatasmithSketchUpExporter\Private\DatasmithSketchUpExporter.cpp">
+      <Filter>Private</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\..\..\..\..\..\..\Documents\UnrealEngine\Engine\Source\Programs\Enterprise\Datasmith\DatasmithSketchUpExporter\Private\DatasmithSketchUpExporter.h">
+      <Filter>Private</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\..\..\..\..\..\..\Documents\UnrealEngine\Engine\Source\Programs\Enterprise\Datasmith\DatasmithSketchUpExporter\Private\DatasmithSketchUpExporterDLL.cpp">
+      <Filter>Private</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\..\..\..\..\..\..\Documents\UnrealEngine\Engine\Source\Programs\Enterprise\Datasmith\DatasmithSketchUpExporter\Private\DatasmithSketchUpExporterDLL.h">
+      <Filter>Private</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\..\..\..\..\..\..\Documents\UnrealEngine\Engine\Source\Programs\Enterprise\Datasmith\DatasmithSketchUpExporter\Private\DatasmithSketchUpExporterInterface.cpp">
+      <Filter>Private</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\..\..\..\..\..\..\Documents\UnrealEngine\Engine\Source\Programs\Enterprise\Datasmith\DatasmithSketchUpExporter\Private\DatasmithSketchUpExporterInterface.h">
+      <Filter>Private</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\..\..\..\..\..\..\Documents\UnrealEngine\Engine\Source\Programs\Enterprise\Datasmith\DatasmithSketchUpExporter\Private\DatasmithSketchUpMaterial.cpp">
+      <Filter>Private</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\..\..\..\..\..\..\Documents\UnrealEngine\Engine\Source\Programs\Enterprise\Datasmith\DatasmithSketchUpExporter\Private\DatasmithSketchUpMaterial.h">
+      <Filter>Private</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\..\..\..\..\..\..\Documents\UnrealEngine\Engine\Source\Programs\Enterprise\Datasmith\DatasmithSketchUpExporter\Private\DatasmithSketchUpMesh.cpp">
+      <Filter>Private</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\..\..\..\..\..\..\Documents\UnrealEngine\Engine\Source\Programs\Enterprise\Datasmith\DatasmithSketchUpExporter\Private\DatasmithSketchUpMesh.h">
+      <Filter>Private</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\..\..\..\..\..\..\Documents\UnrealEngine\Engine\Source\Programs\Enterprise\Datasmith\DatasmithSketchUpExporter\Private\DatasmithSketchUpMetadata.cpp">
+      <Filter>Private</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\..\..\..\..\..\..\Documents\UnrealEngine\Engine\Source\Programs\Enterprise\Datasmith\DatasmithSketchUpExporter\Private\DatasmithSketchUpMetadata.h">
+      <Filter>Private</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\..\..\..\..\..\..\Documents\UnrealEngine\Engine\Source\Programs\Enterprise\Datasmith\DatasmithSketchUpExporter\Private\DatasmithSketchUpOptions.cpp">
+      <Filter>Private</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\..\..\..\..\..\..\Documents\UnrealEngine\Engine\Source\Programs\Enterprise\Datasmith\DatasmithSketchUpExporter\Private\DatasmithSketchUpOptions.h">
+      <Filter>Private</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\..\..\..\Documents\UnrealEngine\Engine\Source\Programs\Enterprise\Datasmith\DatasmithSketchUpExporter\Private\DatasmithSketchUpSDKBegins.h">
+      <Filter>Private</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\..\..\..\Documents\UnrealEngine\Engine\Source\Programs\Enterprise\Datasmith\DatasmithSketchUpExporter\Private\DatasmithSketchUpSDKCeases.h">
+      <Filter>Private</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\..\..\..\..\..\..\Documents\UnrealEngine\Engine\Source\Programs\Enterprise\Datasmith\DatasmithSketchUpExporter\Private\DatasmithSketchUpString.cpp">
+      <Filter>Private</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\..\..\..\..\..\..\Documents\UnrealEngine\Engine\Source\Programs\Enterprise\Datasmith\DatasmithSketchUpExporter\Private\DatasmithSketchUpString.h">
+      <Filter>Private</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\..\..\..\..\..\..\Documents\UnrealEngine\Engine\Source\Programs\Enterprise\Datasmith\DatasmithSketchUpExporter\Private\DatasmithSketchUpSummary.cpp">
+      <Filter>Private</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\..\..\..\..\..\..\Documents\UnrealEngine\Engine\Source\Programs\Enterprise\Datasmith\DatasmithSketchUpExporter\Private\DatasmithSketchUpSummary.h">
+      <Filter>Private</Filter>
+    </ClInclude>
+    <Filter Include="Resources">
+      <UniqueIdentifier>{8D07264B-2FA1-4209-BCBD-914D9752880F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources\Windows">
+      <UniqueIdentifier>{8D07DF48-F38D-466C-8261-C80EB862150D}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\..\..\..\..\..\..\Documents\UnrealEngine\Engine\Source\Programs\Enterprise\Datasmith\DatasmithSketchUpExporter\Resources\Windows\resource.h">
+      <Filter>Resources\Windows</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

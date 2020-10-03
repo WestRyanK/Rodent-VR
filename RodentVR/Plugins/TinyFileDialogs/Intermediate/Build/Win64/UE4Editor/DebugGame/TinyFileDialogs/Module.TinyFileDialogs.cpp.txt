@@ -1,73 +1,73 @@
 C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Plugins\TinyFileDialogs\Intermediate\Build\Win64\UE4Editor\DebugGame\TinyFileDialogs\Definitions.TinyFileDialogs.h
 C:/Users/Ryan/Drive/BYU/2018_Fall/cs_497r/Rodent-VR/RodentVR/Plugins/TinyFileDialogs/Source/TinyFileDialogs/Private/TinyFileDialogs.cpp
 C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Plugins\TinyFileDialogs\Source\TinyFileDialogs\Public\TinyFileDialogs.h
-C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Core\Public\Core.h
-C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Core\Public\Misc/MonolithicHeaderBoilerplate.h
-C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Core\Public\GenericPlatform/GenericPlatformNamedPipe.h
-C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Core\Public\HAL/PlatformNamedPipe.h
-C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Core\Public\Windows/WindowsPlatformNamedPipe.h
-C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Core\Public\GenericPlatform/GenericPlatformCriticalSection.h
-C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Core\Public\HAL/PlatformFile.h
-C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Core\Public\Windows/WindowsPlatformFile.h
-C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Core\Public\HAL/PlatformIncludes.h
-C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Core\Public\Misc/MonolithicHeaderBoilerplate.h
-C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Core\Public\Misc/MessageDialog.h
-C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Core\Public\ProfilingDebugging/ScopedDebugInfo.h
-C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Core\Public\ProfilingDebugging/ExternalProfiler.h
-C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Core\Public\Misc/StringUtility.h
-C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Core\Public\Serialization/NameAsStringProxyArchive.h
-C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Core\Public\Containers/MRUArray.h
-C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Core\Public\Containers/TransArray.h
-C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Core\Public\Containers/ArrayBuilder.h
-C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Core\Public\Misc/SingleThreadEvent.h
-C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Core\Public\HAL/ThreadManager.h
-C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Core\Public\Containers/StaticBitArray.h
-C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Core\Public\Containers/MapBuilder.h
-C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Core\Public\HAL/ThreadingBase.h
-C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Core\Public\Internationalization/TextLocalizationManagerGlobals.h
-C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Core\Public\Internationalization/Culture.h
-C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Core\Public\Logging/LogSuppressionInterface.h
-C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Core\Public\HAL/OutputDevices.h
-C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Core\Public\Logging/LogScopedVerbosityOverride.h
-C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Core\Public\Misc/OutputDeviceNull.h
-C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Core\Public\Misc/OutputDeviceMemory.h
-C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Core\Public\Misc/OutputDeviceFile.h
-C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Core\Public\Misc/OutputDeviceDebug.h
-C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Core\Public\Misc/OutputDeviceArchiveWrapper.h
-C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Core\Public\Misc/OutputDeviceAnsiError.h
-C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Core\Public\Misc/TimeGuard.h
-C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Core\Public\Serialization/LargeMemoryWriter.h
-C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Core\Public\Serialization/LargeMemoryData.h
-C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Core\Public\Serialization/LargeMemoryReader.h
-C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Core\Public\Serialization/BufferArchive.h
-C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Core\Public\Serialization/ArrayReader.h
-C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Core\Public\Serialization/ArrayWriter.h
-C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Core\Public\Serialization/BufferWriter.h
-C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Core\Public\Misc/WildcardString.h
-C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Core\Public\Containers/CircularQueue.h
-C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Core\Public\Misc/OutputDeviceHelper.h
-C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Core\Public\Misc/ScopedSlowTask.h
-C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Core\Public\Misc/CallbackDevice.h
-C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Core\Public\Misc/LocalTimestampDirectoryVisitor.h
-C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Core\Public\UObject/BlueprintsObjectVersion.h
-C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Core\Public\UObject/BuildObjectVersion.h
-C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Core\Public\UObject/CoreObjectVersion.h
-C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Core\Public\UObject/EditorObjectVersion.h
-C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Core\Public\UObject/FrameworkObjectVersion.h
-C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Core\Public\UObject/MobileObjectVersion.h
-C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Core\Public\UObject/NetworkingObjectVersion.h
-C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Core\Public\UObject/OnlineObjectVersion.h
-C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Core\Public\UObject/PlatformObjectVersion.h
-C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Core\Public\UObject/SequencerObjectVersion.h
-C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Core\Public\UObject/VRObjectVersion.h
-C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Core\Public\Misc/OutputDeviceConsole.h
-C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Core\Public\Misc/MonitoredProcess.h
-C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Projects\Public\Interfaces/IPluginManager.h
-C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Projects\Public\PluginDescriptor.h
-C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Projects\Public\ModuleDescriptor.h
-C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Projects\Public\CustomBuildSteps.h
-C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Projects\Public\LocalizationDescriptor.h
-C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Projects\Public\PluginReferenceDescriptor.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\Core.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\Misc/MonolithicHeaderBoilerplate.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\GenericPlatform/GenericPlatformNamedPipe.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\HAL/PlatformNamedPipe.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\Windows/WindowsPlatformNamedPipe.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\GenericPlatform/GenericPlatformCriticalSection.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\HAL/PlatformFile.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\Windows/WindowsPlatformFile.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\HAL/PlatformIncludes.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\Misc/MonolithicHeaderBoilerplate.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\Misc/MessageDialog.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\ProfilingDebugging/ScopedDebugInfo.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\ProfilingDebugging/ExternalProfiler.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\Misc/StringUtility.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\Serialization/NameAsStringProxyArchive.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\Containers/MRUArray.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\Containers/TransArray.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\Containers/ArrayBuilder.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\Misc/SingleThreadEvent.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\HAL/ThreadManager.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\Containers/StaticBitArray.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\Containers/MapBuilder.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\HAL/ThreadingBase.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\Internationalization/TextLocalizationManagerGlobals.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\Internationalization/Culture.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\Logging/LogSuppressionInterface.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\HAL/OutputDevices.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\Logging/LogScopedVerbosityOverride.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\Misc/OutputDeviceNull.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\Misc/OutputDeviceMemory.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\Misc/OutputDeviceFile.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\Misc/OutputDeviceDebug.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\Misc/OutputDeviceArchiveWrapper.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\Misc/OutputDeviceAnsiError.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\Misc/TimeGuard.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\Serialization/LargeMemoryWriter.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\Serialization/LargeMemoryData.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\Serialization/LargeMemoryReader.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\Serialization/BufferArchive.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\Serialization/ArrayReader.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\Serialization/ArrayWriter.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\Serialization/BufferWriter.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\Misc/WildcardString.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\Containers/CircularQueue.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\Misc/OutputDeviceHelper.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\Misc/ScopedSlowTask.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\Misc/CallbackDevice.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\Misc/LocalTimestampDirectoryVisitor.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\UObject/BlueprintsObjectVersion.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\UObject/BuildObjectVersion.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\UObject/CoreObjectVersion.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\UObject/EditorObjectVersion.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\UObject/FrameworkObjectVersion.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\UObject/MobileObjectVersion.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\UObject/NetworkingObjectVersion.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\UObject/OnlineObjectVersion.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\UObject/PlatformObjectVersion.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\UObject/SequencerObjectVersion.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\UObject/VRObjectVersion.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\Misc/OutputDeviceConsole.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\Misc/MonitoredProcess.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Projects\Public\Interfaces/IPluginManager.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Projects\Public\PluginDescriptor.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Projects\Public\ModuleDescriptor.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Projects\Public\CustomBuildSteps.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Projects\Public\LocalizationDescriptor.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Projects\Public\PluginReferenceDescriptor.h
 C:/Users/Ryan/Drive/BYU/2018_Fall/cs_497r/Rodent-VR/RodentVR/Plugins/TinyFileDialogs/Source/TinyFileDialogs/Private/TinyFileDialogsLib.cpp
 C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Plugins\TinyFileDialogs\Source\TinyFileDialogs\Public\TinyFileDialogsLib.h
 C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Plugins\TinyFileDialogs\Intermediate\Build\Win64\UE4Editor\Inc\TinyFileDialogs\TinyFileDialogsLib.generated.h

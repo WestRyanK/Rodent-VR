@@ -1,0 +1,5 @@
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Shipping\Analytics\Definitions.Analytics.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Analytics\Analytics\Public\Analytics.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Analytics\Analytics\Public\AnalyticsProviderConfigurationDelegate.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Analytics\Analytics\Public\AnalyticsBuildType.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Analytics\Analytics\Public\Interfaces/IAnalyticsProviderModule.h

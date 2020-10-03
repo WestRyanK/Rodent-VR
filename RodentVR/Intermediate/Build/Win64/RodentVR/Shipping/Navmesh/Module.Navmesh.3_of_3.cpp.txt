@@ -1,0 +1,6 @@
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Shipping\Navmesh\Definitions.Navmesh.h
+C:/Users/Ryan/Documents/UnrealEngine/Engine/Source/Runtime/Navmesh/Private/Recast/RecastRasterization.cpp
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Navmesh\Public\Recast/Recast.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Navmesh\Public\Recast/RecastAlloc.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Navmesh\Public\Recast/RecastAssert.h
+C:/Users/Ryan/Documents/UnrealEngine/Engine/Source/Runtime/Navmesh/Private/Recast/RecastRegion.cpp

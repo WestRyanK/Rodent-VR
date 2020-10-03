@@ -3,6 +3,8 @@
 
 #include "XML/MazeSettingsXmlWriter.h"
 #include "Settings/MazeObjectSettings.h"
+#include "Settings/MazeObjectType.h"
+#include "Settings/MazeObjectTypeHelper.h"
 #include "StopConditions/EnterRegionStopCondition.h"
 #include "StopConditions/TimeLimitStopCondition.h"
 
@@ -26,7 +28,7 @@ void UMazeSettingsXmlWriter::SaveMazeSettings(UMazeSettings* MazeSettings)
 void UMazeSettingsXmlWriter::SaveBehaviorRecording(rapidxml::xml_document<>* Document, rapidxml::xml_node<>* Root, UMazeSettings* MazeSettings)
 {
 	rapidxml::xml_node<>* BehaviorRecordingNode = UXmlFileWriter::AddNode(Document, Root, "BehaviorRecording");
-	UXmlFileWriter::AddStringAttribute(Document, BehaviorRecordingNode, "Filename", MazeSettings->GetBehaviorRecordingFileName());
+	UXmlFileWriter::AddStringAttribute(Document, BehaviorRecordingNode, "FileName", MazeSettings->GetBehaviorRecordingFileName());
 }
 
 void UMazeSettingsXmlWriter::SavePlayerStart(rapidxml::xml_document<>* Document, rapidxml::xml_node<>* Root, UMazeSettings* MazeSettings)
@@ -74,7 +76,7 @@ void UMazeSettingsXmlWriter::SaveMazeObjects(rapidxml::xml_document<>* Document,
 	for (UMazeObjectSettings* MazeObject : MazeSettings->GetMazeObjects())
 	{
 		rapidxml::xml_node<>* MazeObjectNode = UXmlFileWriter::AddNode(Document, MazeObjectsNode, "MazeObject");
-		UXmlFileWriter::AddStringAttribute(Document, MazeObjectNode, "MazeObjectType", MazeObject->GetObjectTypeString());
+		UXmlFileWriter::AddStringAttribute(Document, MazeObjectNode, "MazeObjectType", UMazeObjectTypeHelper::ObjectTypeToString(MazeObject->GetObjectType()));
 		UXmlFileWriter::AddTextureNode(Document, MazeObjectNode, "Texture", MazeObject->GetTexture());
 		UXmlFileWriter::AddBoolAttribute(Document, MazeObjectNode, "CanCollide", MazeObject->GetCanCollide());
 		UXmlFileWriter::AddActorSettingsToNode(Document, MazeObjectNode, MazeObject);

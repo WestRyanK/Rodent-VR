@@ -7,19 +7,8 @@
 #include "Settings/TextureSettings.h"
 #include "Classes/Components/StaticMeshComponent.h"
 #include "Settings/ActorSettings.h"
+#include "MazeObjectType.h"
 #include "MazeObjectSettings.generated.h"
-
-UENUM(BlueprintType)
-enum class MazeObjectType : uint8
-{
-	CUBE UMETA(DisplayName = "Cube"),
-	CYLINDER UMETA(DisplayName = "Cylinder"),
-	SPHERE UMETA(DisplayName = "Sphere"),
-	CONE UMETA(DisplayName = "Cone"),
-	FIGURINE UMETA(DisplayName = "Figurine"),
-	INVALID UMETA(DisplayName = "Invalid")
-};
-
 
 UCLASS(Blueprintable)
 class UMazeObjectSettings : public UActorSettings
@@ -29,7 +18,6 @@ class UMazeObjectSettings : public UActorSettings
 public:
 	// Sets default values for this actor's properties
 	UMazeObjectSettings();
-	static MazeObjectType GetTypeFromString(FString TypeString);
 
 	UFUNCTION(BlueprintSetter)
 		void SetCanCollide(bool CanCollideValue);
@@ -39,8 +27,6 @@ public:
 		void SetObjectType(MazeObjectType ObjectTypeValue);
 	UFUNCTION(BlueprintGetter)
 		MazeObjectType GetObjectType();
-	UFUNCTION()
-		FString GetObjectTypeString();
 	UFUNCTION(BlueprintSetter)
 		void SetTexture(UTextureSettings* TextureValue);
 	UFUNCTION(BlueprintGetter)

@@ -1,6 +1,6 @@
 {
 	"FileVersion": 3,
-	"EngineAssociation": "4.25",
+	"EngineAssociation": "{2C9C739B-4029-B311-2F15-CAA96A7C0ADD}",
 	"Category": "",
 	"Description": "",
 	"Modules": [
@@ -25,6 +25,10 @@
 			"Name": "RuntimeTransformer",
 			"Enabled": true,
 			"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/product/289c74dbc9614a77b67cf0c414ca43e0"
+		},
+		{
+			"Name": "VictoryUMG",
+			"Enabled": true
 		}
 	]
 }

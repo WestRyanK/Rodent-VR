@@ -31,6 +31,9 @@ private:
 	UFUNCTION()
 		void OnMazeFinished();
 
+	UFUNCTION()
+		void StopNIDAQDevices();
+
 public:
 
 	ASimulatorGameMode();

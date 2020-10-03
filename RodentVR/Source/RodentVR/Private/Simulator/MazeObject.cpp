@@ -12,14 +12,8 @@ FName AMazeObject::GetMazeObjectTag()
 }
 
 // Sets default values
-AMazeObject::AMazeObject()
+AMazeObject::AMazeObject() : ASimpleObject()
 {
-	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
-	PrimaryActorTick.bCanEverTick = false;
-
-	this->StaticMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Static Mesh"));
-	this->RootComponent = this->StaticMesh;
-
 	this->Tags.Add(AMazeObject::MazeObjectTag);
 }
 
@@ -36,19 +30,11 @@ void AMazeObject::SetSettings(UMazeObjectSettings* SettingsValue)
 
 void AMazeObject::UpdateFromSettings()
 {
-	this->SetActorLocation(this->Settings->GetPosition());
-	this->SetActorRotation(this->Settings->GetRotation());
-	this->SetActorScale3D(this->Settings->GetScale());
+	ASimpleObject::Update(this->Settings->GetPosition(), this->Settings->GetRotation(), this->Settings->GetScale(), this->Settings->GetObjectType());
 	this->SetActorEnableCollision(this->Settings->GetCanCollide());
 
 	if (this->Settings->GetObjectType() != MazeObjectType::INVALID)
 	{
-		FString ObjectTypeString = this->Settings->GetObjectTypeString();
-		FString MeshPath = FString(TEXT("StaticMesh'/Game/Objects/") + ObjectTypeString + TEXT("Mesh.") + ObjectTypeString + TEXT("Mesh"));
-
-		UStaticMesh* Mesh = UAssetLoader::LoadAssetFromPath<UStaticMesh>(MeshPath);
-		this->StaticMesh->SetStaticMesh(Mesh);
-
 		UMaterialInstanceDynamic* Material = UAssetLoader::LoadMaterial(this->Settings->GetTexture(), this);
 		this->StaticMesh->SetMaterial(0, Material);
 	}

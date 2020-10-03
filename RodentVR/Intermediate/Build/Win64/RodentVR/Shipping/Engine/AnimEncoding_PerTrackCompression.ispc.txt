@@ -1,0 +1,6 @@
+C:\\Users\\Ryan\\Documents\\UnrealEngine\\Engine\\Source\\Runtime\\Core\\Public\\Math/Matrix.isph
+C:\\Users\\Ryan\\Documents\\UnrealEngine\\Engine\\Source\\Runtime\\Core\\Public\\Math/Quat.isph
+C:\\Users\\Ryan\\Documents\\UnrealEngine\\Engine\\Source\\Runtime\\Core\\Public\\Math/Transform.isph
+C:\\Users\\Ryan\\Documents\\UnrealEngine\\Engine\\Source\\Runtime\\Core\\Public\\Math/Vector.isph
+C:\\Users\\Ryan\\Documents\\UnrealEngine\\Engine\\Source\\Runtime\\Engine\\Private\\Animation\\AnimEncoding_PerTrackCompression.ispc
+C:\\Users\\Ryan\\Documents\\UnrealEngine\\Engine\\Source\\Runtime\\Engine\\Public\\Animation/AnimationCompression.isph

@@ -1,0 +1,10 @@
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Shipping\HttpReplayStreaming\Definitions.HttpNetworkReplayStreaming.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\NetworkReplayStreaming\HttpNetworkReplayStreaming\Public\HttpNetworkReplayStreaming.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\NetworkReplayStreaming\NetworkReplayStreaming\Public\NetworkReplayStreaming.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\Misc/NetworkVersion.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Online\HTTP\Public\Interfaces/IHttpRequest.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Online\HTTP\Public\Interfaces/IHttpBase.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Online\HTTP\Public\Interfaces/IHttpResponse.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Online\HTTP\Public\HttpModule.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Online\HTTP\Public\GenericPlatform/GenericPlatformHttp.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\ProfilingDebugging/ScopedTimers.h

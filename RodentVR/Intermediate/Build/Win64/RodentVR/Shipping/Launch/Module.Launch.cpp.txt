@@ -1,0 +1,287 @@
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Shipping\Launch\Definitions.Launch.h
+C:/Users/Ryan/Documents/UnrealEngine/Engine/Source/Runtime/Launch/Private/Launch.cpp
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Launch\Public\LaunchEngineLoop.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\HAL/ExceptionHandling.h
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\excpt.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\ProfilingDebugging/LoadTimeTracker.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\ProfilingDebugging/ScopedTimers.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\Serialization/LoadTimeTrace.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\Misc/ScopedSlowTask.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\Windows/WindowsHWrapper.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\Windows/PreWindowsApi.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\Windows/MinWindows.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\Windows.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\sdkddkver.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\windef.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\minwindef.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\winnt.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\kernelspecs.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\basetsd.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\guiddef.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\pshpack4.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\poppack.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\pshpack4.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\poppack.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\pshpack4.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\pshpack2.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\poppack.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\pshpack2.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\pshpack2.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\poppack.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\poppack.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\pshpack8.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\poppack.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\pshpack1.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\poppack.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\pshpack1.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\poppack.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\poppack.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\apiset.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\ktmtypes.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\winbase.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\apisetcconv.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\minwinbase.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\apiquery2.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\processenv.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\fileapifromapp.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\fileapi.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\debugapi.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\utilapiset.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\handleapi.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\errhandlingapi.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\fibersapi.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\namedpipeapi.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\profileapi.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\heapapi.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\ioapiset.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\synchapi.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\interlockedapi.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\processthreadsapi.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\sysinfoapi.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\memoryapi.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\enclaveapi.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\threadpoollegacyapiset.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\threadpoolapiset.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\jobapi.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\jobapi2.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\wow64apiset.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\libloaderapi.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\securitybaseapi.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\namespaceapi.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\systemtopologyapi.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\processtopologyapi.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\securityappcontainer.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\realtimeapiset.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\winerror.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\timezoneapi.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\wingdi.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\pshpack1.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\poppack.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\pshpack2.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\poppack.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\pshpack4.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\poppack.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\pshpack4.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\poppack.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\winuser.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\pshpack2.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\poppack.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\tvout.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\winnls.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\datetimeapi.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\stringapiset.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\winnls.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\wincon.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\wincontypes.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\consoleapi.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\consoleapi2.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\consoleapi3.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\winver.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\verrsrc.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\winreg.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\reason.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\winnetwk.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\wnnc.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\stralign.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\imm.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\ime_cmodes.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\Windows/PostWindowsApi.h
+C:/Users/Ryan/Documents/UnrealEngine/Engine/Source/Runtime/Launch/Private/LaunchEngineLoop.cpp
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\HAL/PlatformOutputDevices.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\Windows/WindowsPlatformOutputDevices.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\GenericPlatform/GenericPlatformOutputDevices.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\Misc/MessageDialog.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\Internationalization/TextLocalizationManagerGlobals.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\Logging/LogSuppressionInterface.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\Misc/TimeGuard.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\Misc/PathViews.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\Misc/OutputDeviceHelper.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\Misc/OutputDeviceConsole.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\HAL/FileManagerGeneric.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\Stats/StatsMallocProfilerProxy.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\ProfilingDebugging/PlatformFileTrace.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\ProfilingDebugging/CountersTrace.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\ApplicationCore\Public\HAL/PlatformSplash.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\ApplicationCore\Public\Windows/WindowsPlatformSplash.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\ApplicationCore\Public\GenericPlatform/GenericPlatformSplash.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\ApplicationCore\Public\HAL/PlatformApplicationMisc.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\ApplicationCore\Public\Windows/WindowsPlatformApplicationMisc.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\ApplicationCore\Public\GenericPlatform/GenericPlatformApplicationMisc.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\HAL/ThreadManager.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\ProfilingDebugging/ExternalProfiler.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Projects\Public\Interfaces/IPluginManager.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Projects\Public\PluginDescriptor.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Projects\Public\ModuleDescriptor.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Projects\Public\CustomBuildSteps.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Projects\Public\LocalizationDescriptor.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Projects\Public\PluginReferenceDescriptor.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Projects\Public\ProjectDescriptor.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Projects\Public\Interfaces/IProjectManager.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\Misc/UProjectInfo.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\Modules/BuildVersion.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\UObject/DevObjectVersion.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\HAL/ThreadHeartBeat.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\Misc/NetworkVersion.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\PakFile\Public\IPlatformFilePak.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\Math/BigInt.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\RSA\Public\RSA.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\Misc/IEngineCrypto.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\GenericPlatform/GenericPlatformChunkInstall.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\CoreUObject\Public\Internationalization/PackageLocalizationManager.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\CoreUObject\Public\UObject/ReferencerFinder.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Classes\Engine/GameEngine.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Slate\Public\Widgets/SViewport.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\SlateCore\Public\Input/HittestGrid.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime/MovieSceneCapture/Public/MovieSceneCaptureHandle.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Inc\Engine\GameEngine.generated.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Classes\GameFramework/GameUserSettings.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Public\Scalability.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Inc\Engine\GameUserSettings.generated.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Public\SystemSettings.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Developer\DerivedDataCache\Public\DerivedDataCacheInterface.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Public\ShaderCompiler.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Public\DistanceFieldAtlas.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Public\Internationalization/StringTable.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Inc\Engine\StringTable.generated.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Public\ParticleHelper.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Public\MeshParticleVertexFactory.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Public\ParticleVertexFactory.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Classes\Particles/ParticlePerfStats.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Public\PlatformFeatures.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Classes\DeviceProfiles/DeviceProfileManager.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Inc\Engine\DeviceProfileManager.generated.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Classes\Commandlets/Commandlet.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Inc\Engine\Commandlet.generated.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Public\EngineService.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Public\HighResScreenshot.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\CoreUObject\Public\Misc/HotReloadInterface.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\SessionServices\Public\ISessionServicesModule.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\SessionServices\Public\ISessionManager.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\SessionServices\Public\ISessionInstanceInfo.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\SessionServices\Public\ISessionInfo.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\SessionServices\Public\SessionLogMessage.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\SessionServices\Public\ISessionService.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Public\Net/OnlineEngineInterface.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Inc\Engine\OnlineEngineInterface.generated.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Public\Internationalization/EnginePackageLocalizationCache.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\CoreUObject\Public\Internationalization/PackageLocalizationCache.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\CoreUObject\Public\Internationalization/IPackageLocalizationCache.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Messaging\Public\IMessagingModule.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Classes\Engine/DemoNetDriver.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Classes\Engine/PackageMapClient.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Inc\Engine\PackageMapClient.generated.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\NetworkReplayStreaming\NetworkReplayStreaming\Public\NetworkReplayStreaming.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Classes\Engine/DemoNetConnection.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Inc\Engine\DemoNetConnection.generated.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Public\Net/RepLayout.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\Containers/StaticBitArray.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Net\Core\Public\Net/Core/PushModel/PushModel.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Inc\Engine\DemoNetDriver.generated.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\RenderCore\Public\LongGPUTask.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Public\DynamicResolutionState.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Public\EngineModule.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\MediaUtils\Public\AppMediaTimeSource.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Media\Public\IMediaTimeSource.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\HeadMountedDisplay\Public\IHeadMountedDisplayModule.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Media\Public\IMediaModule.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\HeadMountedDisplay\Public\HeadMountedDisplay.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\HeadMountedDisplay\Public\HeadMountedDisplayTypes.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Inc\HeadMountedDisplay\HeadMountedDisplayTypes.generated.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\HeadMountedDisplay\Public\IHeadMountedDisplay.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\HeadMountedDisplay\Public\LateUpdateManager.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\MRMesh\Public\MRMeshModule.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\SlateRHIRenderer\Public\Interfaces/ISlateRHIRendererModule.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\SlateRHIRenderer\Public\Interfaces\ISlate3DRenderer.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\SlateNullRenderer\Public\Interfaces/ISlateNullRendererModule.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Public\EngineFontServices.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\MoviePlayer\Public\MoviePlayer.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Public\Slate/SlateTextures.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\SlateCore\Public\Textures/SlateUpdatableTexture.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\PreLoadScreen\Public\PreLoadScreenManager.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\PreLoadScreen\Public\PreLoadScreen.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Analytics\AnalyticsET\Public\IAnalyticsProviderET.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Analytics\Analytics\Public\AnalyticsEventAttribute.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Analytics\Analytics\Public\AnalyticsConversion.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Analytics\AnalyticsET\Public\AnalyticsET.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Analytics\Analytics\Public\Interfaces/IAnalyticsProviderModule.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Analytics\Analytics\Public\AnalyticsProviderConfigurationDelegate.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Analytics\Analytics\Public\Interfaces/IAnalyticsProvider.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Slate\Public\Widgets/SVirtualWindow.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\PreLoadScreen\Public\PreLoadSlateThreading.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\InstallBundleManager\Public\InstallBundleManagerInterface.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\InstallBundleManager\Public\InstallBundleTypes.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\RenderCore\Public\ShaderPipelineCache.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\RHI\Public\PipelineFileCache.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\Misc/EmbeddedCommunication.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\Windows/AllowWindowsPlatformTypes.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\ObjBase.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\rpc.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\pshpack8.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\rpcdce.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\rpcdcep.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\rpcnsi.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\rpcnterr.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\rpcasync.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\pshpack8.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\poppack.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\poppack.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\rpcndr.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\pshpack8.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\rpcnsip.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\rpcsal.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\poppack.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\pshpack8.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\combaseapi.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\pshpack8.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\wtypesbase.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\guiddef.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\unknwnbase.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\ole2.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\pshpack8.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\oleauto.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\pshpack8.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\oaidl.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\objidl.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\unknwn.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\wtypes.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\poppack.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\coml2api.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\propidlbase.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\oleidl.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\poppack.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\objidlbase.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\guiddef.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\cguid.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\poppack.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\urlmon.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\servprov.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\msxml.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\propidl.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\poppack.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\Windows/HideWindowsPlatformTypes.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\RenderCore\Public\ProfilingDebugging/TracingProfiler.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\String/ParseTokens.h
+C:/Users/Ryan/Documents/UnrealEngine/Engine/Source/Runtime/Launch/Private/Windows/LaunchWindows.cpp
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\HAL/PlatformMallocCrash.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\GenericPlatform/GenericPlatformMallocCrash.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\shellapi.h

@@ -1,0 +1,4 @@
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Shipping\RuntimePhysXCooking\Definitions.RuntimePhysXCooking.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\PhysXCooking\Public\PhysXCooking.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\PhysicsCore\Public\IPhysXCooking.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\PhysicsCore\Public\IPhysXCookingModule.h

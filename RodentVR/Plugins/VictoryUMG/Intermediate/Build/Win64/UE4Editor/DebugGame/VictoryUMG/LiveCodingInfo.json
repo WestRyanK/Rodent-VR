@@ -1,0 +1,13 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.VictoryUMG.cpp.obj": [
+			"JoyColorWheel.cpp.obj",
+			"VictoryUMGModule.cpp.obj"
+		],
+		"Module.VictoryUMG.gen.cpp.obj": [
+			"JoyColorWheel.gen.cpp.obj",
+			"VictoryUMG.init.gen.cpp.obj"
+		]
+	}
+}

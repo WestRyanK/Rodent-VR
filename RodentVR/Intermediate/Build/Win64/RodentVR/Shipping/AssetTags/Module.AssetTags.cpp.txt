@@ -1,0 +1,12 @@
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Shipping\AssetTags\Definitions.AssetTags.h
+C:/Users/Ryan/Documents/UnrealEngine/Engine/Plugins/Runtime/AssetTags/Source/AssetTags/Private/AssetTagsModule.cpp
+C:/Users/Ryan/Documents/UnrealEngine/Engine/Plugins/Runtime/AssetTags/Source/AssetTags/Private/AssetTagsSubsystem.cpp
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Plugins\Runtime\AssetTags\Source\AssetTags\Public\AssetTagsSubsystem.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Inc\AssetTags\AssetTagsSubsystem.generated.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\AssetRegistry\Public\IAssetRegistry.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\CoreUObject\Public\Misc/AssetRegistryInterface.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\AssetRegistry\Public\ARFilter.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Inc\AssetRegistry\ARFilter.generated.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Inc\AssetRegistry\IAssetRegistry.generated.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\AssetRegistry\Public\AssetRegistryState.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\AssetRegistry\Public\AssetRegistryModule.h

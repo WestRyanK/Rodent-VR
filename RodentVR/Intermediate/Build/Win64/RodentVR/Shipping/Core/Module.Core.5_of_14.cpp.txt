@@ -1,0 +1,192 @@
+C:/Users/Ryan/Documents/UnrealEngine/Engine/Source/Runtime/Core/Private/Hash/CityHash.cpp
+C:/Users/Ryan/Documents/UnrealEngine/Engine/Source/Runtime/Core/Private/Internationalization/CamelCaseBreakIterator.cpp
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Private\Internationalization/CamelCaseBreakIterator.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\Internationalization/IBreakIterator.h
+C:/Users/Ryan/Documents/UnrealEngine/Engine/Source/Runtime/Core/Private/Internationalization/Culture.cpp
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Private\Internationalization/ICUCulture.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Private\Internationalization/CultureImplementation.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\ICU\icu4c-64_1\include\unicode/locid.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\ICU\icu4c-64_1\include\unicode/bytestream.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\ICU\icu4c-64_1\include\unicode/utypes.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\ICU\icu4c-64_1\include\unicode/umachine.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\ICU\icu4c-64_1\include\unicode/ptypes.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\ICU\icu4c-64_1\include\unicode/platform.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\ICU\icu4c-64_1\include\unicode/uconfig.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\ICU\icu4c-64_1\include\unicode/uvernum.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\ICU\icu4c-64_1\include\unicode/urename.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\ICU\icu4c-64_1\include\unicode/uversion.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\ICU\icu4c-64_1\include\unicode/utf.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\ICU\icu4c-64_1\include\unicode/utf8.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\ICU\icu4c-64_1\include\unicode/utf16.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\ICU\icu4c-64_1\include\unicode/utf_old.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\ICU\icu4c-64_1\include\unicode/utf.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\ICU\icu4c-64_1\include\unicode/uobject.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\ICU\icu4c-64_1\include\unicode/std_string.h
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\string
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\xstring
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\iosfwd
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\cstdio
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\cstring
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\cwchar
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\xmemory
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\cstdint
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\limits
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\cfloat
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\climits
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\xatomic.h
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\xutility
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\utility
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\cctype
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\ICU\icu4c-64_1\include\unicode/localpointer.h
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\memory
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\typeinfo
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\vcruntime_typeinfo.h
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\vcruntime_exception.h
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\INCLUDE\eh.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\corecrt_terminate.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\ICU\icu4c-64_1\include\unicode/strenum.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\ICU\icu4c-64_1\include\unicode/unistr.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\ICU\icu4c-64_1\include\unicode/char16ptr.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\ICU\icu4c-64_1\include\unicode/rep.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\ICU\icu4c-64_1\include\unicode/stringpiece.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\ICU\icu4c-64_1\include\unicode/putil.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\ICU\icu4c-64_1\include\unicode/uloc.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\ICU\icu4c-64_1\include\unicode/uenum.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\ICU\icu4c-64_1\include\unicode/brkiter.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\ICU\icu4c-64_1\include\unicode/chariter.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\ICU\icu4c-64_1\include\unicode/ubrk.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\ICU\icu4c-64_1\include\unicode/utext.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\ICU\icu4c-64_1\include\unicode/uchar.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\ICU\icu4c-64_1\include\unicode/stringoptions.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\ICU\icu4c-64_1\include\unicode/ucpmap.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\ICU\icu4c-64_1\include\unicode/parseerr.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\ICU\icu4c-64_1\include\unicode/umisc.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\ICU\icu4c-64_1\include\unicode/coll.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\ICU\icu4c-64_1\include\unicode/ucol.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\ICU\icu4c-64_1\include\unicode/unorm.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\ICU\icu4c-64_1\include\unicode/uiter.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\ICU\icu4c-64_1\include\unicode/unorm2.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\ICU\icu4c-64_1\include\unicode/uset.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\ICU\icu4c-64_1\include\unicode/uscript.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\ICU\icu4c-64_1\include\unicode/uniset.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\ICU\icu4c-64_1\include\unicode/unifilt.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\ICU\icu4c-64_1\include\unicode/unifunct.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\ICU\icu4c-64_1\include\unicode/unimatch.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\ICU\icu4c-64_1\include\unicode/numfmt.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\ICU\icu4c-64_1\include\unicode/format.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\ICU\icu4c-64_1\include\unicode/fmtable.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\ICU\icu4c-64_1\include\unicode/uformattable.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\ICU\icu4c-64_1\include\unicode/fieldpos.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\ICU\icu4c-64_1\include\unicode/fpositer.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\ICU\icu4c-64_1\include\unicode/parsepos.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\ICU\icu4c-64_1\include\unicode/unum.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\ICU\icu4c-64_1\include\unicode/ucurr.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\ICU\icu4c-64_1\include\unicode/udisplaycontext.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\ICU\icu4c-64_1\include\unicode/ufieldpositer.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\ICU\icu4c-64_1\include\unicode/curramt.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\ICU\icu4c-64_1\include\unicode/measure.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\ICU\icu4c-64_1\include\unicode/currunit.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\ICU\icu4c-64_1\include\unicode/measunit.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\ICU\icu4c-64_1\include\unicode/decimfmt.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\ICU\icu4c-64_1\include\unicode/dcfmtsym.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\ICU\icu4c-64_1\include\unicode/numsys.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\ICU\icu4c-64_1\include\unicode/enumset.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\ICU\icu4c-64_1\include\unicode/datefmt.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\ICU\icu4c-64_1\include\unicode/udat.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\ICU\icu4c-64_1\include\unicode/ucal.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\ICU\icu4c-64_1\include\unicode/calendar.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\ICU\icu4c-64_1\include\unicode/timezone.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\ICU\icu4c-64_1\include\unicode/ures.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\ICU\icu4c-64_1\include\unicode/plurrule.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\ICU\icu4c-64_1\include\unicode/upluralrules.h
+C:/Users/Ryan/Documents/UnrealEngine/Engine/Source/Runtime/Core/Private/Internationalization/Cultures/LeetCulture.cpp
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Private\Internationalization/Cultures/LeetCulture.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\Internationalization/ICustomCulture.h
+C:/Users/Ryan/Documents/UnrealEngine/Engine/Source/Runtime/Core/Private/Internationalization/FastDecimalFormat.cpp
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\Internationalization/FastDecimalFormat.h
+C:/Users/Ryan/Documents/UnrealEngine/Engine/Source/Runtime/Core/Private/Internationalization/GatherableTextData.cpp
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\Internationalization/GatherableTextData.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\Internationalization/InternationalizationMetadata.h
+C:/Users/Ryan/Documents/UnrealEngine/Engine/Source/Runtime/Core/Private/Internationalization/ICUBreakIterator.cpp
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Private\Internationalization/ICUBreakIterator.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Private\Internationalization/ICUTextCharacterIterator.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\ICU\icu4c-64_1\include\unicode/uchriter.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\ICU\icu4c-64_1\include\unicode/schriter.h
+C:/Users/Ryan/Documents/UnrealEngine/Engine/Source/Runtime/Core/Private/Internationalization/ICUCamelCaseBreakIterator.cpp
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\Internationalization/BreakIterator.h
+C:/Users/Ryan/Documents/UnrealEngine/Engine/Source/Runtime/Core/Private/Internationalization/ICUCharacterBoundaryIterator.cpp
+C:/Users/Ryan/Documents/UnrealEngine/Engine/Source/Runtime/Core/Private/Internationalization/ICUCulture.cpp
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\Containers/SortedMap.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Private\Internationalization/ICUUtilities.h
+C:/Users/Ryan/Documents/UnrealEngine/Engine/Source/Runtime/Core/Private/Internationalization/ICUInternationalization.cpp
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Private\Internationalization/ICUInternationalization.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\ICU\icu4c-64_1\include\unicode/gregocal.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Private\Internationalization/ICURegex.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\ICU\icu4c-64_1\include\unicode/regex.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\ICU\icu4c-64_1\include\unicode/uregex.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\ICU\icu4c-64_1\include\unicode/uclean.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\ICU\icu4c-64_1\include\unicode/udata.h
+C:/Users/Ryan/Documents/UnrealEngine/Engine/Source/Runtime/Core/Private/Internationalization/ICULineBreakIterator.cpp
+C:/Users/Ryan/Documents/UnrealEngine/Engine/Source/Runtime/Core/Private/Internationalization/ICURegex.cpp
+C:/Users/Ryan/Documents/UnrealEngine/Engine/Source/Runtime/Core/Private/Internationalization/ICUText.cpp
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\Internationalization/TextChronoFormatter.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\Internationalization/TextTransformer.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Private\Internationalization/TextHistory.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\Internationalization/ITextGenerator.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Private\Internationalization/TextData.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\ICU\icu4c-64_1\include\unicode/sortkey.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\ICU\icu4c-64_1\include\unicode/ubidi.h
+C:/Users/Ryan/Documents/UnrealEngine/Engine/Source/Runtime/Core/Private/Internationalization/ICUTextCharacterIterator.cpp
+C:/Users/Ryan/Documents/UnrealEngine/Engine/Source/Runtime/Core/Private/Internationalization/ICUUtilities.cpp
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\ICU\icu4c-64_1\include\unicode/ucnv.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\ThirdParty\ICU\icu4c-64_1\include\unicode/ucnv_err.h
+C:/Users/Ryan/Documents/UnrealEngine/Engine/Source/Runtime/Core/Private/Internationalization/ICUWordBreakIterator.cpp
+C:/Users/Ryan/Documents/UnrealEngine/Engine/Source/Runtime/Core/Private/Internationalization/Internationalization.cpp
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\Internationalization/TextLocalizationResource.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\Misc/LazySingleton.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Private\Internationalization/CustomCultureImplementation.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Private\Internationalization/TextCache.h
+C:/Users/Ryan/Documents/UnrealEngine/Engine/Source/Runtime/Core/Private/Internationalization/InternationalizationArchive.cpp
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\Internationalization/InternationalizationArchive.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\Internationalization/InternationalizationManifest.h
+C:/Users/Ryan/Documents/UnrealEngine/Engine/Source/Runtime/Core/Private/Internationalization/InternationalizationManifest.cpp
+C:/Users/Ryan/Documents/UnrealEngine/Engine/Source/Runtime/Core/Private/Internationalization/InternationalizationMetadata.cpp
+C:/Users/Ryan/Documents/UnrealEngine/Engine/Source/Runtime/Core/Private/Internationalization/LegacyCamelCaseBreakIterator.cpp
+C:/Users/Ryan/Documents/UnrealEngine/Engine/Source/Runtime/Core/Private/Internationalization/LegacyCharacterBoundaryIterator.cpp
+C:/Users/Ryan/Documents/UnrealEngine/Engine/Source/Runtime/Core/Private/Internationalization/LegacyCulture.cpp
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Private\Internationalization/LegacyCulture.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\Containers/ArrayBuilder.h
+C:/Users/Ryan/Documents/UnrealEngine/Engine/Source/Runtime/Core/Private/Internationalization/LegacyInternationalization.cpp
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Private\Internationalization/LegacyInternationalization.h
+C:/Users/Ryan/Documents/UnrealEngine/Engine/Source/Runtime/Core/Private/Internationalization/LegacyLineBreakIterator.cpp
+C:/Users/Ryan/Documents/UnrealEngine/Engine/Source/Runtime/Core/Private/Internationalization/LegacyRegex.cpp
+C:/Users/Ryan/Documents/UnrealEngine/Engine/Source/Runtime/Core/Private/Internationalization/LegacyText.cpp
+C:/Users/Ryan/Documents/UnrealEngine/Engine/Source/Runtime/Core/Private/Internationalization/LegacyWordBreakIterator.cpp
+C:/Users/Ryan/Documents/UnrealEngine/Engine/Source/Runtime/Core/Private/Internationalization/LocalizationResourceTextSource.cpp
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Private\Internationalization/LocalizationResourceTextSource.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\Internationalization/ILocalizedTextSource.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\Misc/CoreDelegates.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\Misc/AES.h
+C:/Users/Ryan/Documents/UnrealEngine/Engine/Source/Runtime/Core/Private/Internationalization/PolyglotTextData.cpp
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\Internationalization/PolyglotTextData.h
+C:/Users/Ryan/Documents/UnrealEngine/Engine/Source/Runtime/Core/Private/Internationalization/PolyglotTextSource.cpp
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Private\Internationalization/PolyglotTextSource.h
+C:/Users/Ryan/Documents/UnrealEngine/Engine/Source/Runtime/Core/Private/Internationalization/StringTableCore.cpp
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\Internationalization/StringTableCore.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\Misc/FileHelper.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\Serialization/Csv/CsvParser.h
+C:/Users/Ryan/Documents/UnrealEngine/Engine/Source/Runtime/Core/Private/Internationalization/StringTableRegistry.cpp
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\Internationalization/StringTableRegistry.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\Modules/ModuleManager.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\Modules/Boilerplate/ModuleBoilerplate.h
+C:/Users/Ryan/Documents/UnrealEngine/Engine/Source/Runtime/Core/Private/Internationalization/Text.cpp
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\Algo/Transform.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\UObject/DebugSerializationFlags.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\Internationalization/TextFormatter.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\Internationalization/ITextFormatArgumentModifier.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\Internationalization/TextNamespaceUtil.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Private\Internationalization/TextGeneratorRegistry.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\UObject/EditorObjectVersion.h
+C:/Users/Ryan/Documents/UnrealEngine/Engine/Source/Runtime/Core/Private/Internationalization/TextCache.cpp
+C:/Users/Ryan/Documents/UnrealEngine/Engine/Source/Runtime/Core/Private/Internationalization/TextFormatArgumentModifier.cpp
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Private\Internationalization/TextFormatArgumentModifier.h

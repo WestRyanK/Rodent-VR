@@ -1,0 +1,12 @@
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Shipping\NiagaraAnimNotifies\Definitions.NiagaraAnimNotifies.h
+C:/Users/Ryan/Drive/BYU/2018_Fall/cs_497r/Rodent-VR/RodentVR/Intermediate/Build/Win64/RodentVR/Inc/NiagaraAnimNotifies/AnimNotify_PlayNiagaraEffect.gen.cpp
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\CoreUObject\Public\UObject/GeneratedCppIncludes.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\CoreUObject\Public\UObject/MetaData.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Plugins\FX\Niagara\Source\NiagaraAnimNotifies/Public/AnimNotify_PlayNiagaraEffect.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Inc\NiagaraAnimNotifies\AnimNotify_PlayNiagaraEffect.generated.h
+C:/Users/Ryan/Drive/BYU/2018_Fall/cs_497r/Rodent-VR/RodentVR/Intermediate/Build/Win64/RodentVR/Inc/NiagaraAnimNotifies/AnimNotifyState_TimedNiagaraEffect.gen.cpp
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Plugins\FX\Niagara\Source\NiagaraAnimNotifies/Public/AnimNotifyState_TimedNiagaraEffect.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Classes\Animation/AnimNotifies/AnimNotifyState.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Inc\Engine\AnimNotifyState.generated.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Inc\NiagaraAnimNotifies\AnimNotifyState_TimedNiagaraEffect.generated.h
+C:/Users/Ryan/Drive/BYU/2018_Fall/cs_497r/Rodent-VR/RodentVR/Intermediate/Build/Win64/RodentVR/Inc/NiagaraAnimNotifies/NiagaraAnimNotifies.init.gen.cpp

@@ -59,6 +59,37 @@
 			}
 		},
 		{
+			"File": "../../../RodentVR/Plugins/VictoryUMG/VictoryUMG.uplugin",
+			"Descriptor": 
+			{
+				"FileVersion": 3,
+				"Version": 1,
+				"VersionName": "1.1",
+				"FriendlyName": "Victory UMG",
+				"Description": "Rama's UMG Widgets for You!",
+				"Category": "Victory Plugin",
+				"CreatedBy": "Rama",
+				"CreatedByURL": "https://forums.unrealengine.com/showthread.php?299-Wiki-Code-Tutorials",
+				"DocsURL": "",
+				"MarketplaceURL": "",
+				"SupportURL": "",
+				"EnabledByDefault": true,
+				"CanContainContent": false,
+				"Installed": true,
+				"Modules": [
+					{
+						"Name": "VictoryUMG",
+						"Type": "Runtime",
+						"LoadingPhase": "PreDefault",
+						"WhitelistPlatforms": [
+							"Win64",
+							"Win32"
+						]
+					}
+				]
+			}
+		},
+		{
 			"File": "../../../RodentVR/Plugins/TinyFileDialogs/TinyFileDialogs.uplugin",
 			"Descriptor": 
 			{

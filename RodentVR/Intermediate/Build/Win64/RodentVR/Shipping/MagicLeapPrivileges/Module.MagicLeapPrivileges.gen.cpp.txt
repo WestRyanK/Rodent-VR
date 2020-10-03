@@ -1,0 +1,10 @@
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Shipping\MagicLeapPrivileges\Definitions.MagicLeapPrivileges.h
+C:/Users/Ryan/Drive/BYU/2018_Fall/cs_497r/Rodent-VR/RodentVR/Intermediate/Build/Win64/RodentVR/Inc/MagicLeapPrivileges/MagicLeapPrivileges.init.gen.cpp
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\CoreUObject\Public\UObject/GeneratedCppIncludes.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\CoreUObject\Public\UObject/MetaData.h
+C:/Users/Ryan/Drive/BYU/2018_Fall/cs_497r/Rodent-VR/RodentVR/Intermediate/Build/Win64/RodentVR/Inc/MagicLeapPrivileges/MagicLeapPrivilegesFunctionLibrary.gen.cpp
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Plugins\Lumin\MagicLeap\Source\MagicLeapPrivileges/Public/MagicLeapPrivilegesFunctionLibrary.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Plugins\Lumin\MagicLeap\Source\MagicLeapPrivileges\Public\MagicLeapPrivilegeTypes.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Inc\MagicLeapPrivileges\MagicLeapPrivilegeTypes.generated.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Inc\MagicLeapPrivileges\MagicLeapPrivilegesFunctionLibrary.generated.h
+C:/Users/Ryan/Drive/BYU/2018_Fall/cs_497r/Rodent-VR/RodentVR/Intermediate/Build/Win64/RodentVR/Inc/MagicLeapPrivileges/MagicLeapPrivilegeTypes.gen.cpp
