@@ -1,4 +1,5 @@
 C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\AnimationCore\Public\AnimationDataSource.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\AnimationCore\Public\CCDIK.h
 C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\AnimationCore\Public\CommonAnimTypes.h
 C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\AnimationCore\Public\Constraint.h
 C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\AnimationCore\Public\EulerTransform.h
@@ -6,4 +7,3 @@ C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\AnimationCore\Public\
 C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\AnimationCore\Public\NodeChain.h
 C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\AnimationCore\Public\NodeHierarchy.h
 C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\AnimationCore\Public\TransformNoScale.h
-C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\AnimationCore\Public\CCDIK.h

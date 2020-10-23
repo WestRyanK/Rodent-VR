@@ -508,6 +508,15 @@
     <ClInclude Include="..\..\Source\RodentVR\Private\BehaviorRecording\ColorGradient.h">
       <Filter>Source\RodentVR\Private\BehaviorRecording</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\Source\RodentVR\Private\Settings\GraphicsSettings.h">
+      <Filter>Source\RodentVR\Private\Settings</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\RodentVR\Private\Settings\GraphicsQualityLevels.h">
+      <Filter>Source\RodentVR\Private\Settings</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\RodentVR\Private\Core\GraphicsSettingsUpdater.h">
+      <Filter>Source\RodentVR\Private\Core</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\Source\RodentVR\Private\BehaviorRecording\BehaviorPathNodeObject.cpp">
@@ -524,6 +533,15 @@
     </ClCompile>
     <ClCompile Include="..\..\Source\RodentVR\Private\BehaviorRecording\ColorGradient.cpp">
       <Filter>Source\RodentVR\Private\BehaviorRecording</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\RodentVR\Private\Settings\GraphicsSettings.cpp">
+      <Filter>Source\RodentVR\Private\Settings</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\RodentVR\Private\Settings\GraphicsQualityLevels.cpp">
+      <Filter>Source\RodentVR\Private\Settings</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\RodentVR\Private\Core\GraphicsSettingsUpdater.cpp">
+      <Filter>Source\RodentVR\Private\Core</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

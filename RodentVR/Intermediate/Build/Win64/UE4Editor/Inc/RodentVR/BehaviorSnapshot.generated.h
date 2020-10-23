@@ -9,6 +9,7 @@
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 struct FVector;
+class UObject;
 class UBehaviorSnapshot;
 #ifdef RODENTVR_BehaviorSnapshot_generated_h
 #error "BehaviorSnapshot.generated.h already included, missing '#pragma once' in BehaviorSnapshot.h"

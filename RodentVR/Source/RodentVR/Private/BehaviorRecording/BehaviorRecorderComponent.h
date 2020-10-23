@@ -25,6 +25,7 @@ public:
 	void Save();
 
 private:
+	UPROPERTY()
 	TArray<UBehaviorSnapshot*> Snapshots;
 	float StartTimeSec;
 	FString CurrentRegion;

@@ -33,8 +33,8 @@ void EmptyLinkFunctionForGeneratedCodeRodentVR_init() {}
 				SingletonFuncArray,
 				UE_ARRAY_COUNT(SingletonFuncArray),
 				PKG_CompiledIn | 0x00000000,
-				0x90A967A8,
-				0x272C24B7,
+				0xA3BFBFB9,
+				0x1DB75ADF,
 				METADATA_PARAMS(nullptr, 0)
 			};
 			UE4CodeGen_Private::ConstructUPackage(ReturnPackage, PackageParams);

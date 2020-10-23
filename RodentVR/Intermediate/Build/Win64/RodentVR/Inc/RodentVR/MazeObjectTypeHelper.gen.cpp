@@ -73,7 +73,7 @@ void EmptyLinkFunctionForGeneratedCodeMazeObjectTypeHelper() {}
 		{ "ModuleRelativePath", "Private/Settings/MazeObjectTypeHelper.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UMazeObjectTypeHelper_ObjectTypeToString_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UMazeObjectTypeHelper, nullptr, "ObjectTypeToString", nullptr, nullptr, sizeof(MazeObjectTypeHelper_eventObjectTypeToString_Parms), Z_Construct_UFunction_UMazeObjectTypeHelper_ObjectTypeToString_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UMazeObjectTypeHelper_ObjectTypeToString_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04022401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UMazeObjectTypeHelper_ObjectTypeToString_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UMazeObjectTypeHelper_ObjectTypeToString_Statics::Function_MetaDataParams)) };
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UMazeObjectTypeHelper_ObjectTypeToString_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UMazeObjectTypeHelper, nullptr, "ObjectTypeToString", nullptr, nullptr, sizeof(MazeObjectTypeHelper_eventObjectTypeToString_Parms), Z_Construct_UFunction_UMazeObjectTypeHelper_ObjectTypeToString_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UMazeObjectTypeHelper_ObjectTypeToString_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x14022401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UMazeObjectTypeHelper_ObjectTypeToString_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UMazeObjectTypeHelper_ObjectTypeToString_Statics::Function_MetaDataParams)) };
 	UFunction* Z_Construct_UFunction_UMazeObjectTypeHelper_ObjectTypeToString()
 	{
 		static UFunction* ReturnFunction = nullptr;
@@ -112,7 +112,7 @@ void EmptyLinkFunctionForGeneratedCodeMazeObjectTypeHelper() {}
 		{ "ModuleRelativePath", "Private/Settings/MazeObjectTypeHelper.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UMazeObjectTypeHelper_StringToObjectType_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UMazeObjectTypeHelper, nullptr, "StringToObjectType", nullptr, nullptr, sizeof(MazeObjectTypeHelper_eventStringToObjectType_Parms), Z_Construct_UFunction_UMazeObjectTypeHelper_StringToObjectType_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UMazeObjectTypeHelper_StringToObjectType_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04022401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UMazeObjectTypeHelper_StringToObjectType_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UMazeObjectTypeHelper_StringToObjectType_Statics::Function_MetaDataParams)) };
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UMazeObjectTypeHelper_StringToObjectType_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UMazeObjectTypeHelper, nullptr, "StringToObjectType", nullptr, nullptr, sizeof(MazeObjectTypeHelper_eventStringToObjectType_Parms), Z_Construct_UFunction_UMazeObjectTypeHelper_StringToObjectType_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UMazeObjectTypeHelper_StringToObjectType_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x14022401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UMazeObjectTypeHelper_StringToObjectType_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UMazeObjectTypeHelper_StringToObjectType_Statics::Function_MetaDataParams)) };
 	UFunction* Z_Construct_UFunction_UMazeObjectTypeHelper_StringToObjectType()
 	{
 		static UFunction* ReturnFunction = nullptr;
@@ -141,8 +141,8 @@ void EmptyLinkFunctionForGeneratedCodeMazeObjectTypeHelper() {}
 		(UObject* (*)())Z_Construct_UPackage__Script_RodentVR,
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_UMazeObjectTypeHelper_Statics::FuncInfo[] = {
-		{ &Z_Construct_UFunction_UMazeObjectTypeHelper_ObjectTypeToString, "ObjectTypeToString" }, // 399251662
-		{ &Z_Construct_UFunction_UMazeObjectTypeHelper_StringToObjectType, "StringToObjectType" }, // 3174365639
+		{ &Z_Construct_UFunction_UMazeObjectTypeHelper_ObjectTypeToString, "ObjectTypeToString" }, // 3963920001
+		{ &Z_Construct_UFunction_UMazeObjectTypeHelper_StringToObjectType, "StringToObjectType" }, // 770033185
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UMazeObjectTypeHelper_Statics::Class_MetaDataParams[] = {
@@ -180,7 +180,7 @@ void EmptyLinkFunctionForGeneratedCodeMazeObjectTypeHelper() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UMazeObjectTypeHelper, 3651269163);
+	IMPLEMENT_CLASS(UMazeObjectTypeHelper, 2159443850);
 	template<> RODENTVR_API UClass* StaticClass<UMazeObjectTypeHelper>()
 	{
 		return UMazeObjectTypeHelper::StaticClass();

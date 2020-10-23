@@ -106,12 +106,15 @@ void UBehaviorRecorderComponent::Save(FString FileName, FString SettingsFileName
 		for (int i = 0; i < this->Snapshots.Num(); i++)
 		{
 			UBehaviorSnapshot* Snapshot = this->Snapshots[i];
-			Output
-				<< Snapshot->GetTimestamp() << Tab
-				<< TCHAR_TO_UTF8(*(Snapshot->GetCurrentRegion())) << Tab
-				<< Snapshot->GetPosition().X << Tab << Snapshot->GetPosition().Y << Tab << Snapshot->GetPosition().Z << Tab
-				<< Snapshot->GetForward().X << Tab << Snapshot->GetForward().Y << Tab << Snapshot->GetForward().Z
-				<< std::endl;
+			if (IsValid(Snapshot))
+			{
+				Output
+					<< Snapshot->GetTimestamp() << Tab
+					<< TCHAR_TO_UTF8(*(Snapshot->GetCurrentRegion())) << Tab
+					<< Snapshot->GetPosition().X << Tab << Snapshot->GetPosition().Y << Tab << Snapshot->GetPosition().Z << Tab
+					<< Snapshot->GetForward().X << Tab << Snapshot->GetForward().Y << Tab << Snapshot->GetForward().Z
+					<< std::endl;
+			}
 		}
 		Output.close();
 	}
@@ -142,7 +145,7 @@ void UBehaviorRecorderComponent::TickComponent(float DeltaTime, ELevelTick TickT
 	FVector Forward = OwnerActor->GetActorForwardVector();
     FString RegionId = this->CurrentRegion;
 
-	UBehaviorSnapshot* Snapshot = UBehaviorSnapshot::CreateBehaviorSnapshot(Time, Position, Forward, RegionId);
+	UBehaviorSnapshot* Snapshot = UBehaviorSnapshot::CreateBehaviorSnapshot(this, Time, Position, Forward, RegionId);
 	this->Snapshots.Add(Snapshot);
 }
 

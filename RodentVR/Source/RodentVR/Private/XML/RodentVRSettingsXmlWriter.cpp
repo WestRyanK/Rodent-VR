@@ -13,6 +13,7 @@ void URodentVRSettingsXmlWriter::SaveRodentVRSettings(URodentVRSettings* Setting
 	URodentVRSettingsXmlWriter::SaveAirPuffers(Document, Root, Settings);
 	URodentVRSettingsXmlWriter::SaveRewardDevices(Document, Root, Settings);
 	URodentVRSettingsXmlWriter::SavePlaylist(Document, Root, Settings);
+	URodentVRSettingsXmlWriter::SaveGraphics(Document, Root, Settings);
 
 
 	UXmlFileWriter::SaveFile(Document, TCHAR_TO_UTF8(*Settings->GetSettingsFileName()));
@@ -35,6 +36,8 @@ void URodentVRSettingsXmlWriter::SaveBallInput(rapidxml::xml_document<>* Documen
 	UXmlFileWriter::AddStringAttribute(Document, MouseBDeviceNode, "DeviceName", Settings->GetBallInputMouseBDevice());
 	UXmlFileWriter::AddFloatAttribute(Document, MouseADeviceNode, "Multiplier", Settings->GetBallInputMouseAMultiplier());
 	UXmlFileWriter::AddFloatAttribute(Document, MouseBDeviceNode, "Multiplier", Settings->GetBallInputMouseBMultiplier());
+	UXmlFileWriter::AddBoolAttribute(Document, MouseADeviceNode, "IsOnBack", Settings->GetBallInputMouseAIsOnBack());
+	UXmlFileWriter::AddBoolAttribute(Document, MouseBDeviceNode, "IsOnRight", Settings->GetBallInputMouseBIsOnRight());
 }
 
 void URodentVRSettingsXmlWriter::SaveAirPuffers(rapidxml::xml_document<>* Document, rapidxml::xml_node<>* Root, URodentVRSettings* Settings)
@@ -61,5 +64,21 @@ void URodentVRSettingsXmlWriter::SavePlaylist(rapidxml::xml_document<>* Document
 	{
 		rapidxml::xml_node<>* MazeNode = UXmlFileWriter::AddNode(Document, PlaylistNode, "MazeFile");
 		UXmlFileWriter::AddStringAttribute(Document, MazeNode, "Path", Maze->GetMazeSettingsFileName());
+	}
+}
+
+void URodentVRSettingsXmlWriter::SaveGraphics(rapidxml::xml_document<>* Document, rapidxml::xml_node<>* Root, URodentVRSettings* Settings)
+{
+	rapidxml::xml_node<>* GraphicsNode = UXmlFileWriter::AddNode(Document, Root, "Graphics");
+	UGraphicsSettings* GraphicsSettings = Settings->GetGraphicsSettings();
+	if (IsValid(GraphicsSettings))
+	{
+		UXmlFileWriter::AddIntAttribute(Document, GraphicsNode, "TextureQuality", static_cast<int>(GraphicsSettings->GetTextureQuality()));
+		UXmlFileWriter::AddIntAttribute(Document, GraphicsNode, "ShadowQuality", static_cast<int>(GraphicsSettings->GetShadowQuality()));
+		UXmlFileWriter::AddIntAttribute(Document, GraphicsNode, "AntiAliasingQuality", static_cast<int>(GraphicsSettings->GetAntiAliasingQuality()));
+		UXmlFileWriter::AddIntAttribute(Document, GraphicsNode, "PostProcessingQuality", static_cast<int>(GraphicsSettings->GetPostProcessingQuality()));
+		UXmlFileWriter::AddIntAttribute(Document, GraphicsNode, "ScreenPercentage", GraphicsSettings->GetScreenPercentage());
+		UXmlFileWriter::AddIntAttribute(Document, GraphicsNode, "ScreenResolutionX", GraphicsSettings->GetScreenResolution().X);
+		UXmlFileWriter::AddIntAttribute(Document, GraphicsNode, "ScreenResolutionY", GraphicsSettings->GetScreenResolution().Y);
 	}
 }

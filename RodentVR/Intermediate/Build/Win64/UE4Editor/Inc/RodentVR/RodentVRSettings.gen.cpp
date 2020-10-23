@@ -20,6 +20,7 @@ void EmptyLinkFunctionForGeneratedCodeRodentVRSettings() {}
 	COREUOBJECT_API UClass* Z_Construct_UClass_UObject();
 	RODENTVR_API UClass* Z_Construct_UClass_UMazeSettings_NoRegister();
 	RODENTVR_API UClass* Z_Construct_UClass_UDevice_NoRegister();
+	RODENTVR_API UClass* Z_Construct_UClass_UGraphicsSettings_NoRegister();
 // End Cross Module References
 	struct Z_Construct_UDelegateFunction_RodentVR_RodentVRSettingsChangedDelegate__DelegateSignature_Statics
 	{
@@ -48,6 +49,13 @@ void EmptyLinkFunctionForGeneratedCodeRodentVRSettings() {}
 		P_FINISH;
 		P_NATIVE_BEGIN;
 		P_THIS->OnRodentVRSettingsChanged();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(URodentVRSettings::execGetGraphicsSettings)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(UGraphicsSettings**)Z_Param__Result=P_THIS->GetGraphicsSettings();
 		P_NATIVE_END;
 	}
 	DEFINE_FUNCTION(URodentVRSettings::execGetMazeFromPlaylistByFileName)
@@ -179,6 +187,36 @@ void EmptyLinkFunctionForGeneratedCodeRodentVRSettings() {}
 		*(UDevice**)Z_Param__Result=P_THIS->GetAirPufferLeftDevice();
 		P_NATIVE_END;
 	}
+	DEFINE_FUNCTION(URodentVRSettings::execSetBallInputMouseBIsOnRight)
+	{
+		P_GET_UBOOL(Z_Param_BallInputMouseBIsOnRightValue);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->SetBallInputMouseBIsOnRight(Z_Param_BallInputMouseBIsOnRightValue);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(URodentVRSettings::execGetBallInputMouseBIsOnRight)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(bool*)Z_Param__Result=P_THIS->GetBallInputMouseBIsOnRight();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(URodentVRSettings::execSetBallInputMouseAIsOnBack)
+	{
+		P_GET_UBOOL(Z_Param_BallInputMouseAIsOnBackValue);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->SetBallInputMouseAIsOnBack(Z_Param_BallInputMouseAIsOnBackValue);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(URodentVRSettings::execGetBallInputMouseAIsOnBack)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(bool*)Z_Param__Result=P_THIS->GetBallInputMouseAIsOnBack();
+		P_NATIVE_END;
+	}
 	DEFINE_FUNCTION(URodentVRSettings::execSetBallInputMouseBMultiplier)
 	{
 		P_GET_PROPERTY(FFloatProperty,Z_Param_BallInputMouseBMultiplierValue);
@@ -266,9 +304,12 @@ void EmptyLinkFunctionForGeneratedCodeRodentVRSettings() {}
 			{ "GetAirPufferLeftDevice", &URodentVRSettings::execGetAirPufferLeftDevice },
 			{ "GetAirPufferRightDevice", &URodentVRSettings::execGetAirPufferRightDevice },
 			{ "GetBallInputMouseADevice", &URodentVRSettings::execGetBallInputMouseADevice },
+			{ "GetBallInputMouseAIsOnBack", &URodentVRSettings::execGetBallInputMouseAIsOnBack },
 			{ "GetBallInputMouseAMultiplier", &URodentVRSettings::execGetBallInputMouseAMultiplier },
 			{ "GetBallInputMouseBDevice", &URodentVRSettings::execGetBallInputMouseBDevice },
+			{ "GetBallInputMouseBIsOnRight", &URodentVRSettings::execGetBallInputMouseBIsOnRight },
 			{ "GetBallInputMouseBMultiplier", &URodentVRSettings::execGetBallInputMouseBMultiplier },
+			{ "GetGraphicsSettings", &URodentVRSettings::execGetGraphicsSettings },
 			{ "GetMazeFromPlaylistByFileName", &URodentVRSettings::execGetMazeFromPlaylistByFileName },
 			{ "GetMazePlaylist", &URodentVRSettings::execGetMazePlaylist },
 			{ "GetRewardDeviceById", &URodentVRSettings::execGetRewardDeviceById },
@@ -282,8 +323,10 @@ void EmptyLinkFunctionForGeneratedCodeRodentVRSettings() {}
 			{ "SetAirPufferLeftDevice", &URodentVRSettings::execSetAirPufferLeftDevice },
 			{ "SetAirPufferRightDevice", &URodentVRSettings::execSetAirPufferRightDevice },
 			{ "SetBallInputMouseADevice", &URodentVRSettings::execSetBallInputMouseADevice },
+			{ "SetBallInputMouseAIsOnBack", &URodentVRSettings::execSetBallInputMouseAIsOnBack },
 			{ "SetBallInputMouseAMultiplier", &URodentVRSettings::execSetBallInputMouseAMultiplier },
 			{ "SetBallInputMouseBDevice", &URodentVRSettings::execSetBallInputMouseBDevice },
+			{ "SetBallInputMouseBIsOnRight", &URodentVRSettings::execSetBallInputMouseBIsOnRight },
 			{ "SetBallInputMouseBMultiplier", &URodentVRSettings::execSetBallInputMouseBMultiplier },
 			{ "SetSettingsFileName", &URodentVRSettings::execSetSettingsFileName },
 		};
@@ -529,6 +572,44 @@ void EmptyLinkFunctionForGeneratedCodeRodentVRSettings() {}
 		}
 		return ReturnFunction;
 	}
+	struct Z_Construct_UFunction_URodentVRSettings_GetBallInputMouseAIsOnBack_Statics
+	{
+		struct RodentVRSettings_eventGetBallInputMouseAIsOnBack_Parms
+		{
+			bool ReturnValue;
+		};
+		static void NewProp_ReturnValue_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_ReturnValue;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	void Z_Construct_UFunction_URodentVRSettings_GetBallInputMouseAIsOnBack_Statics::NewProp_ReturnValue_SetBit(void* Obj)
+	{
+		((RodentVRSettings_eventGetBallInputMouseAIsOnBack_Parms*)Obj)->ReturnValue = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_URodentVRSettings_GetBallInputMouseAIsOnBack_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(RodentVRSettings_eventGetBallInputMouseAIsOnBack_Parms), &Z_Construct_UFunction_URodentVRSettings_GetBallInputMouseAIsOnBack_Statics::NewProp_ReturnValue_SetBit, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_URodentVRSettings_GetBallInputMouseAIsOnBack_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_URodentVRSettings_GetBallInputMouseAIsOnBack_Statics::NewProp_ReturnValue,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_URodentVRSettings_GetBallInputMouseAIsOnBack_Statics::Function_MetaDataParams[] = {
+		{ "BlueprintGetter", "" },
+		{ "ModuleRelativePath", "Private/Settings/RodentVRSettings.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_URodentVRSettings_GetBallInputMouseAIsOnBack_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_URodentVRSettings, nullptr, "GetBallInputMouseAIsOnBack", nullptr, nullptr, sizeof(RodentVRSettings_eventGetBallInputMouseAIsOnBack_Parms), Z_Construct_UFunction_URodentVRSettings_GetBallInputMouseAIsOnBack_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_URodentVRSettings_GetBallInputMouseAIsOnBack_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x14020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_URodentVRSettings_GetBallInputMouseAIsOnBack_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_URodentVRSettings_GetBallInputMouseAIsOnBack_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_URodentVRSettings_GetBallInputMouseAIsOnBack()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_URodentVRSettings_GetBallInputMouseAIsOnBack_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
 	struct Z_Construct_UFunction_URodentVRSettings_GetBallInputMouseAMultiplier_Statics
 	{
 		struct RodentVRSettings_eventGetBallInputMouseAMultiplier_Parms
@@ -595,6 +676,44 @@ void EmptyLinkFunctionForGeneratedCodeRodentVRSettings() {}
 		}
 		return ReturnFunction;
 	}
+	struct Z_Construct_UFunction_URodentVRSettings_GetBallInputMouseBIsOnRight_Statics
+	{
+		struct RodentVRSettings_eventGetBallInputMouseBIsOnRight_Parms
+		{
+			bool ReturnValue;
+		};
+		static void NewProp_ReturnValue_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_ReturnValue;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	void Z_Construct_UFunction_URodentVRSettings_GetBallInputMouseBIsOnRight_Statics::NewProp_ReturnValue_SetBit(void* Obj)
+	{
+		((RodentVRSettings_eventGetBallInputMouseBIsOnRight_Parms*)Obj)->ReturnValue = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_URodentVRSettings_GetBallInputMouseBIsOnRight_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(RodentVRSettings_eventGetBallInputMouseBIsOnRight_Parms), &Z_Construct_UFunction_URodentVRSettings_GetBallInputMouseBIsOnRight_Statics::NewProp_ReturnValue_SetBit, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_URodentVRSettings_GetBallInputMouseBIsOnRight_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_URodentVRSettings_GetBallInputMouseBIsOnRight_Statics::NewProp_ReturnValue,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_URodentVRSettings_GetBallInputMouseBIsOnRight_Statics::Function_MetaDataParams[] = {
+		{ "BlueprintGetter", "" },
+		{ "ModuleRelativePath", "Private/Settings/RodentVRSettings.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_URodentVRSettings_GetBallInputMouseBIsOnRight_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_URodentVRSettings, nullptr, "GetBallInputMouseBIsOnRight", nullptr, nullptr, sizeof(RodentVRSettings_eventGetBallInputMouseBIsOnRight_Parms), Z_Construct_UFunction_URodentVRSettings_GetBallInputMouseBIsOnRight_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_URodentVRSettings_GetBallInputMouseBIsOnRight_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x14020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_URodentVRSettings_GetBallInputMouseBIsOnRight_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_URodentVRSettings_GetBallInputMouseBIsOnRight_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_URodentVRSettings_GetBallInputMouseBIsOnRight()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_URodentVRSettings_GetBallInputMouseBIsOnRight_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
 	struct Z_Construct_UFunction_URodentVRSettings_GetBallInputMouseBMultiplier_Statics
 	{
 		struct RodentVRSettings_eventGetBallInputMouseBMultiplier_Parms
@@ -625,6 +744,39 @@ void EmptyLinkFunctionForGeneratedCodeRodentVRSettings() {}
 		if (!ReturnFunction)
 		{
 			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_URodentVRSettings_GetBallInputMouseBMultiplier_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_URodentVRSettings_GetGraphicsSettings_Statics
+	{
+		struct RodentVRSettings_eventGetGraphicsSettings_Parms
+		{
+			UGraphicsSettings* ReturnValue;
+		};
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_ReturnValue;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_URodentVRSettings_GetGraphicsSettings_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(RodentVRSettings_eventGetGraphicsSettings_Parms, ReturnValue), Z_Construct_UClass_UGraphicsSettings_NoRegister, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_URodentVRSettings_GetGraphicsSettings_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_URodentVRSettings_GetGraphicsSettings_Statics::NewProp_ReturnValue,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_URodentVRSettings_GetGraphicsSettings_Statics::Function_MetaDataParams[] = {
+		{ "BlueprintGetter", "" },
+		{ "ModuleRelativePath", "Private/Settings/RodentVRSettings.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_URodentVRSettings_GetGraphicsSettings_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_URodentVRSettings, nullptr, "GetGraphicsSettings", nullptr, nullptr, sizeof(RodentVRSettings_eventGetGraphicsSettings_Parms), Z_Construct_UFunction_URodentVRSettings_GetGraphicsSettings_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_URodentVRSettings_GetGraphicsSettings_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x14020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_URodentVRSettings_GetGraphicsSettings_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_URodentVRSettings_GetGraphicsSettings_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_URodentVRSettings_GetGraphicsSettings()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_URodentVRSettings_GetGraphicsSettings_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
@@ -1055,6 +1207,44 @@ void EmptyLinkFunctionForGeneratedCodeRodentVRSettings() {}
 		}
 		return ReturnFunction;
 	}
+	struct Z_Construct_UFunction_URodentVRSettings_SetBallInputMouseAIsOnBack_Statics
+	{
+		struct RodentVRSettings_eventSetBallInputMouseAIsOnBack_Parms
+		{
+			bool BallInputMouseAIsOnBackValue;
+		};
+		static void NewProp_BallInputMouseAIsOnBackValue_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_BallInputMouseAIsOnBackValue;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	void Z_Construct_UFunction_URodentVRSettings_SetBallInputMouseAIsOnBack_Statics::NewProp_BallInputMouseAIsOnBackValue_SetBit(void* Obj)
+	{
+		((RodentVRSettings_eventSetBallInputMouseAIsOnBack_Parms*)Obj)->BallInputMouseAIsOnBackValue = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_URodentVRSettings_SetBallInputMouseAIsOnBack_Statics::NewProp_BallInputMouseAIsOnBackValue = { "BallInputMouseAIsOnBackValue", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(RodentVRSettings_eventSetBallInputMouseAIsOnBack_Parms), &Z_Construct_UFunction_URodentVRSettings_SetBallInputMouseAIsOnBack_Statics::NewProp_BallInputMouseAIsOnBackValue_SetBit, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_URodentVRSettings_SetBallInputMouseAIsOnBack_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_URodentVRSettings_SetBallInputMouseAIsOnBack_Statics::NewProp_BallInputMouseAIsOnBackValue,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_URodentVRSettings_SetBallInputMouseAIsOnBack_Statics::Function_MetaDataParams[] = {
+		{ "BlueprintSetter", "" },
+		{ "ModuleRelativePath", "Private/Settings/RodentVRSettings.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_URodentVRSettings_SetBallInputMouseAIsOnBack_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_URodentVRSettings, nullptr, "SetBallInputMouseAIsOnBack", nullptr, nullptr, sizeof(RodentVRSettings_eventSetBallInputMouseAIsOnBack_Parms), Z_Construct_UFunction_URodentVRSettings_SetBallInputMouseAIsOnBack_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_URodentVRSettings_SetBallInputMouseAIsOnBack_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_URodentVRSettings_SetBallInputMouseAIsOnBack_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_URodentVRSettings_SetBallInputMouseAIsOnBack_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_URodentVRSettings_SetBallInputMouseAIsOnBack()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_URodentVRSettings_SetBallInputMouseAIsOnBack_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
 	struct Z_Construct_UFunction_URodentVRSettings_SetBallInputMouseAMultiplier_Statics
 	{
 		struct RodentVRSettings_eventSetBallInputMouseAMultiplier_Parms
@@ -1118,6 +1308,44 @@ void EmptyLinkFunctionForGeneratedCodeRodentVRSettings() {}
 		if (!ReturnFunction)
 		{
 			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_URodentVRSettings_SetBallInputMouseBDevice_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_URodentVRSettings_SetBallInputMouseBIsOnRight_Statics
+	{
+		struct RodentVRSettings_eventSetBallInputMouseBIsOnRight_Parms
+		{
+			bool BallInputMouseBIsOnRightValue;
+		};
+		static void NewProp_BallInputMouseBIsOnRightValue_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_BallInputMouseBIsOnRightValue;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	void Z_Construct_UFunction_URodentVRSettings_SetBallInputMouseBIsOnRight_Statics::NewProp_BallInputMouseBIsOnRightValue_SetBit(void* Obj)
+	{
+		((RodentVRSettings_eventSetBallInputMouseBIsOnRight_Parms*)Obj)->BallInputMouseBIsOnRightValue = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_URodentVRSettings_SetBallInputMouseBIsOnRight_Statics::NewProp_BallInputMouseBIsOnRightValue = { "BallInputMouseBIsOnRightValue", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(RodentVRSettings_eventSetBallInputMouseBIsOnRight_Parms), &Z_Construct_UFunction_URodentVRSettings_SetBallInputMouseBIsOnRight_Statics::NewProp_BallInputMouseBIsOnRightValue_SetBit, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_URodentVRSettings_SetBallInputMouseBIsOnRight_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_URodentVRSettings_SetBallInputMouseBIsOnRight_Statics::NewProp_BallInputMouseBIsOnRightValue,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_URodentVRSettings_SetBallInputMouseBIsOnRight_Statics::Function_MetaDataParams[] = {
+		{ "BlueprintSetter", "" },
+		{ "ModuleRelativePath", "Private/Settings/RodentVRSettings.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_URodentVRSettings_SetBallInputMouseBIsOnRight_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_URodentVRSettings, nullptr, "SetBallInputMouseBIsOnRight", nullptr, nullptr, sizeof(RodentVRSettings_eventSetBallInputMouseBIsOnRight_Parms), Z_Construct_UFunction_URodentVRSettings_SetBallInputMouseBIsOnRight_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_URodentVRSettings_SetBallInputMouseBIsOnRight_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_URodentVRSettings_SetBallInputMouseBIsOnRight_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_URodentVRSettings_SetBallInputMouseBIsOnRight_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_URodentVRSettings_SetBallInputMouseBIsOnRight()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_URodentVRSettings_SetBallInputMouseBIsOnRight_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
@@ -1199,6 +1427,10 @@ void EmptyLinkFunctionForGeneratedCodeRodentVRSettings() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_GraphicsSettings_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_GraphicsSettings;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MazePlaylist_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FArrayPropertyParams NewProp_MazePlaylist;
@@ -1220,6 +1452,16 @@ void EmptyLinkFunctionForGeneratedCodeRodentVRSettings() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_AirPufferLeftDevice_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_AirPufferLeftDevice;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_BallInputMouseBIsOnRight_MetaData[];
+#endif
+		static void NewProp_BallInputMouseBIsOnRight_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_BallInputMouseBIsOnRight;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_BallInputMouseAIsOnBack_MetaData[];
+#endif
+		static void NewProp_BallInputMouseAIsOnBack_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_BallInputMouseAIsOnBack;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_BallInputMouseBMultiplier_MetaData[];
 #endif
@@ -1257,9 +1499,12 @@ void EmptyLinkFunctionForGeneratedCodeRodentVRSettings() {}
 		{ &Z_Construct_UFunction_URodentVRSettings_GetAirPufferLeftDevice, "GetAirPufferLeftDevice" }, // 3982244658
 		{ &Z_Construct_UFunction_URodentVRSettings_GetAirPufferRightDevice, "GetAirPufferRightDevice" }, // 1793022811
 		{ &Z_Construct_UFunction_URodentVRSettings_GetBallInputMouseADevice, "GetBallInputMouseADevice" }, // 2414545707
+		{ &Z_Construct_UFunction_URodentVRSettings_GetBallInputMouseAIsOnBack, "GetBallInputMouseAIsOnBack" }, // 332800398
 		{ &Z_Construct_UFunction_URodentVRSettings_GetBallInputMouseAMultiplier, "GetBallInputMouseAMultiplier" }, // 408225855
 		{ &Z_Construct_UFunction_URodentVRSettings_GetBallInputMouseBDevice, "GetBallInputMouseBDevice" }, // 915910276
+		{ &Z_Construct_UFunction_URodentVRSettings_GetBallInputMouseBIsOnRight, "GetBallInputMouseBIsOnRight" }, // 1571327496
 		{ &Z_Construct_UFunction_URodentVRSettings_GetBallInputMouseBMultiplier, "GetBallInputMouseBMultiplier" }, // 1909082975
+		{ &Z_Construct_UFunction_URodentVRSettings_GetGraphicsSettings, "GetGraphicsSettings" }, // 2889300246
 		{ &Z_Construct_UFunction_URodentVRSettings_GetMazeFromPlaylistByFileName, "GetMazeFromPlaylistByFileName" }, // 3462873454
 		{ &Z_Construct_UFunction_URodentVRSettings_GetMazePlaylist, "GetMazePlaylist" }, // 3633290246
 		{ &Z_Construct_UFunction_URodentVRSettings_GetRewardDeviceById, "GetRewardDeviceById" }, // 1113795364
@@ -1273,8 +1518,10 @@ void EmptyLinkFunctionForGeneratedCodeRodentVRSettings() {}
 		{ &Z_Construct_UFunction_URodentVRSettings_SetAirPufferLeftDevice, "SetAirPufferLeftDevice" }, // 1185043551
 		{ &Z_Construct_UFunction_URodentVRSettings_SetAirPufferRightDevice, "SetAirPufferRightDevice" }, // 587730737
 		{ &Z_Construct_UFunction_URodentVRSettings_SetBallInputMouseADevice, "SetBallInputMouseADevice" }, // 1355024357
+		{ &Z_Construct_UFunction_URodentVRSettings_SetBallInputMouseAIsOnBack, "SetBallInputMouseAIsOnBack" }, // 73247063
 		{ &Z_Construct_UFunction_URodentVRSettings_SetBallInputMouseAMultiplier, "SetBallInputMouseAMultiplier" }, // 3516650446
 		{ &Z_Construct_UFunction_URodentVRSettings_SetBallInputMouseBDevice, "SetBallInputMouseBDevice" }, // 2737155559
+		{ &Z_Construct_UFunction_URodentVRSettings_SetBallInputMouseBIsOnRight, "SetBallInputMouseBIsOnRight" }, // 1287393940
 		{ &Z_Construct_UFunction_URodentVRSettings_SetBallInputMouseBMultiplier, "SetBallInputMouseBMultiplier" }, // 1999406501
 		{ &Z_Construct_UFunction_URodentVRSettings_SetSettingsFileName, "SetSettingsFileName" }, // 3284137738
 	};
@@ -1287,6 +1534,14 @@ void EmptyLinkFunctionForGeneratedCodeRodentVRSettings() {}
 		{ "ModuleRelativePath", "Private/Settings/RodentVRSettings.h" },
 	};
 #endif
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_URodentVRSettings_Statics::NewProp_GraphicsSettings_MetaData[] = {
+		{ "BlueprintGetter", "GetGraphicsSettings" },
+		{ "Category", "RodentVRSettings" },
+		{ "ModuleRelativePath", "Private/Settings/RodentVRSettings.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_URodentVRSettings_Statics::NewProp_GraphicsSettings = { "GraphicsSettings", nullptr, (EPropertyFlags)0x0040000000000014, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(URodentVRSettings, GraphicsSettings), Z_Construct_UClass_UGraphicsSettings_NoRegister, METADATA_PARAMS(Z_Construct_UClass_URodentVRSettings_Statics::NewProp_GraphicsSettings_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_URodentVRSettings_Statics::NewProp_GraphicsSettings_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_URodentVRSettings_Statics::NewProp_MazePlaylist_MetaData[] = {
 		{ "BlueprintGetter", "GetMazePlaylist" },
@@ -1333,6 +1588,32 @@ void EmptyLinkFunctionForGeneratedCodeRodentVRSettings() {}
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_URodentVRSettings_Statics::NewProp_AirPufferLeftDevice = { "AirPufferLeftDevice", nullptr, (EPropertyFlags)0x0040000000000004, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(URodentVRSettings, AirPufferLeftDevice), Z_Construct_UClass_UDevice_NoRegister, METADATA_PARAMS(Z_Construct_UClass_URodentVRSettings_Statics::NewProp_AirPufferLeftDevice_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_URodentVRSettings_Statics::NewProp_AirPufferLeftDevice_MetaData)) };
 #if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_URodentVRSettings_Statics::NewProp_BallInputMouseBIsOnRight_MetaData[] = {
+		{ "BlueprintGetter", "GetBallInputMouseBIsOnRight" },
+		{ "BlueprintSetter", "SetBallInputMouseBIsOnRight" },
+		{ "Category", "RodentVRSettings" },
+		{ "ModuleRelativePath", "Private/Settings/RodentVRSettings.h" },
+	};
+#endif
+	void Z_Construct_UClass_URodentVRSettings_Statics::NewProp_BallInputMouseBIsOnRight_SetBit(void* Obj)
+	{
+		((URodentVRSettings*)Obj)->BallInputMouseBIsOnRight = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UClass_URodentVRSettings_Statics::NewProp_BallInputMouseBIsOnRight = { "BallInputMouseBIsOnRight", nullptr, (EPropertyFlags)0x0040000000000004, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(URodentVRSettings), &Z_Construct_UClass_URodentVRSettings_Statics::NewProp_BallInputMouseBIsOnRight_SetBit, METADATA_PARAMS(Z_Construct_UClass_URodentVRSettings_Statics::NewProp_BallInputMouseBIsOnRight_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_URodentVRSettings_Statics::NewProp_BallInputMouseBIsOnRight_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_URodentVRSettings_Statics::NewProp_BallInputMouseAIsOnBack_MetaData[] = {
+		{ "BlueprintGetter", "GetBallInputMouseAIsOnBack" },
+		{ "BlueprintSetter", "SetBallInputMouseAIsOnBack" },
+		{ "Category", "RodentVRSettings" },
+		{ "ModuleRelativePath", "Private/Settings/RodentVRSettings.h" },
+	};
+#endif
+	void Z_Construct_UClass_URodentVRSettings_Statics::NewProp_BallInputMouseAIsOnBack_SetBit(void* Obj)
+	{
+		((URodentVRSettings*)Obj)->BallInputMouseAIsOnBack = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UClass_URodentVRSettings_Statics::NewProp_BallInputMouseAIsOnBack = { "BallInputMouseAIsOnBack", nullptr, (EPropertyFlags)0x0040000000000004, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(URodentVRSettings), &Z_Construct_UClass_URodentVRSettings_Statics::NewProp_BallInputMouseAIsOnBack_SetBit, METADATA_PARAMS(Z_Construct_UClass_URodentVRSettings_Statics::NewProp_BallInputMouseAIsOnBack_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_URodentVRSettings_Statics::NewProp_BallInputMouseAIsOnBack_MetaData)) };
+#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_URodentVRSettings_Statics::NewProp_BallInputMouseBMultiplier_MetaData[] = {
 		{ "BlueprintGetter", "GetBallInputMouseBMultiplier" },
 		{ "BlueprintSetter", "SetBallInputMouseBMultiplier" },
@@ -1378,6 +1659,7 @@ void EmptyLinkFunctionForGeneratedCodeRodentVRSettings() {}
 #endif
 	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UClass_URodentVRSettings_Statics::NewProp_SettingsFileName = { "SettingsFileName", nullptr, (EPropertyFlags)0x0040000000000004, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(URodentVRSettings, SettingsFileName), METADATA_PARAMS(Z_Construct_UClass_URodentVRSettings_Statics::NewProp_SettingsFileName_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_URodentVRSettings_Statics::NewProp_SettingsFileName_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_URodentVRSettings_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_URodentVRSettings_Statics::NewProp_GraphicsSettings,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_URodentVRSettings_Statics::NewProp_MazePlaylist,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_URodentVRSettings_Statics::NewProp_MazePlaylist_Inner,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_URodentVRSettings_Statics::NewProp_RewardDevices,
@@ -1385,6 +1667,8 @@ void EmptyLinkFunctionForGeneratedCodeRodentVRSettings() {}
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_URodentVRSettings_Statics::NewProp_AirPufferFrontAngle,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_URodentVRSettings_Statics::NewProp_AirPufferRightDevice,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_URodentVRSettings_Statics::NewProp_AirPufferLeftDevice,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_URodentVRSettings_Statics::NewProp_BallInputMouseBIsOnRight,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_URodentVRSettings_Statics::NewProp_BallInputMouseAIsOnBack,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_URodentVRSettings_Statics::NewProp_BallInputMouseBMultiplier,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_URodentVRSettings_Statics::NewProp_BallInputMouseAMultiplier,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_URodentVRSettings_Statics::NewProp_BallInputMouseBDevice,
@@ -1418,7 +1702,7 @@ void EmptyLinkFunctionForGeneratedCodeRodentVRSettings() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(URodentVRSettings, 2024720581);
+	IMPLEMENT_CLASS(URodentVRSettings, 1160010102);
 	template<> RODENTVR_API UClass* StaticClass<URodentVRSettings>()
 	{
 		return URodentVRSettings::StaticClass();

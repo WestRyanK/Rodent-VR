@@ -1,9 +1,9 @@
 C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\HeadMountedDisplay\Public\HeadMountedDisplayFunctionLibrary.h
 C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\HeadMountedDisplay\Public\HeadMountedDisplayTypes.h
-C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\HeadMountedDisplay\Public\IIdentifiableXRDevice.h
 C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\HeadMountedDisplay\Public\IMotionController.h
 C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\HeadMountedDisplay\Public\MotionControllerComponent.h
 C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\HeadMountedDisplay\Public\MotionTrackedDeviceFunctionLibrary.h
 C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\HeadMountedDisplay\Public\VRNotificationsComponent.h
-C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\HeadMountedDisplay\Public\XRLoadingScreenFunctionLibrary.h
 C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\HeadMountedDisplay\Public\XRAssetFunctionLibrary.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\HeadMountedDisplay\Public\XRLoadingScreenFunctionLibrary.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\HeadMountedDisplay\Public\IIdentifiableXRDevice.h

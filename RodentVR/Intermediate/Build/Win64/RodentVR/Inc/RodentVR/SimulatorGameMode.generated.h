@@ -8,7 +8,6 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
-class URodentVRSettings;
 #ifdef RODENTVR_SimulatorGameMode_generated_h
 #error "SimulatorGameMode.generated.h already included, missing '#pragma once' in SimulatorGameMode.h"
 #endif
@@ -32,8 +31,6 @@ static inline void FMazeLoadedDelegate_DelegateWrapper(const FMulticastScriptDel
 #define RodentVR_Source_RodentVR_Private_Simulator_SimulatorGameMode_h_21_RPC_WRAPPERS \
  \
 	DECLARE_FUNCTION(execLoadNextMaze); \
-	DECLARE_FUNCTION(execSetRodentVRSettings); \
-	DECLARE_FUNCTION(execGetRodentVRSettings); \
 	DECLARE_FUNCTION(execStopNIDAQDevices); \
 	DECLARE_FUNCTION(execOnMazeFinished); \
 	DECLARE_FUNCTION(execOnMazeLoaded);
@@ -42,8 +39,6 @@ static inline void FMazeLoadedDelegate_DelegateWrapper(const FMulticastScriptDel
 #define RodentVR_Source_RodentVR_Private_Simulator_SimulatorGameMode_h_21_RPC_WRAPPERS_NO_PURE_DECLS \
  \
 	DECLARE_FUNCTION(execLoadNextMaze); \
-	DECLARE_FUNCTION(execSetRodentVRSettings); \
-	DECLARE_FUNCTION(execGetRodentVRSettings); \
 	DECLARE_FUNCTION(execStopNIDAQDevices); \
 	DECLARE_FUNCTION(execOnMazeFinished); \
 	DECLARE_FUNCTION(execOnMazeLoaded);
@@ -92,8 +87,7 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(ASimulatorGameMode); \
 
 
 #define RodentVR_Source_RodentVR_Private_Simulator_SimulatorGameMode_h_21_PRIVATE_PROPERTY_OFFSET \
-	FORCEINLINE static uint32 __PPO__StopConditionsChecker() { return STRUCT_OFFSET(ASimulatorGameMode, StopConditionsChecker); } \
-	FORCEINLINE static uint32 __PPO__RodentVRSettings() { return STRUCT_OFFSET(ASimulatorGameMode, RodentVRSettings); }
+	FORCEINLINE static uint32 __PPO__StopConditionsChecker() { return STRUCT_OFFSET(ASimulatorGameMode, StopConditionsChecker); }
 
 
 #define RodentVR_Source_RodentVR_Private_Simulator_SimulatorGameMode_h_18_PROLOG

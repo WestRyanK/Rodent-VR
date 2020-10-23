@@ -7,7 +7,7 @@
 #include "Misc/CString.h"
 
 
-void UBehaviorRecordingReader::LoadBehaviorRecordingFromFile(FString BehaviorRecordingFileName, FString& SettingsFileName, FString& MazeFileName, TArray<UBehaviorSnapshot*>& BehaviorSnapshots)
+void UBehaviorRecordingReader::LoadBehaviorRecordingFromFile(UObject* OuterObject, FString BehaviorRecordingFileName, FString& SettingsFileName, FString& MazeFileName, TArray<UBehaviorSnapshot*>& BehaviorSnapshots)
 {
 	if (FPaths::FileExists(BehaviorRecordingFileName))
 	{
@@ -34,7 +34,7 @@ void UBehaviorRecordingReader::LoadBehaviorRecordingFromFile(FString BehaviorRec
 				FVector Position = FVector(PositionX, PositionY, PositionZ);
 				FVector Forward = FVector(ForwardX, ForwardY, ForwardZ);
 
-				UBehaviorSnapshot* Snapshot = UBehaviorSnapshot::CreateBehaviorSnapshot(Timestamp, Position, Forward, CurrentRegion);
+				UBehaviorSnapshot* Snapshot = UBehaviorSnapshot::CreateBehaviorSnapshot(OuterObject, Timestamp, Position, Forward, CurrentRegion);
 
 				BehaviorSnapshots.Add(Snapshot);
 			}

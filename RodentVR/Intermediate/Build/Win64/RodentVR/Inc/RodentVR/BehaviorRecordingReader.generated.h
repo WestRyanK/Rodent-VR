@@ -8,6 +8,7 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+class UObject;
 class UBehaviorSnapshot;
 #ifdef RODENTVR_BehaviorRecordingReader_generated_h
 #error "BehaviorRecordingReader.generated.h already included, missing '#pragma once' in BehaviorRecordingReader.h"

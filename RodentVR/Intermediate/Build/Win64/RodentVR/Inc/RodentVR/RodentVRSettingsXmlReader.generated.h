@@ -14,18 +14,18 @@ class URodentVRSettings;
 #endif
 #define RODENTVR_RodentVRSettingsXmlReader_generated_h
 
-#define RodentVR_Source_RodentVR_Private_XML_RodentVRSettingsXmlReader_h_18_SPARSE_DATA
-#define RodentVR_Source_RodentVR_Private_XML_RodentVRSettingsXmlReader_h_18_RPC_WRAPPERS \
+#define RodentVR_Source_RodentVR_Private_XML_RodentVRSettingsXmlReader_h_19_SPARSE_DATA
+#define RodentVR_Source_RodentVR_Private_XML_RodentVRSettingsXmlReader_h_19_RPC_WRAPPERS \
  \
 	DECLARE_FUNCTION(execLoadRodentVRSettingsFromFile);
 
 
-#define RodentVR_Source_RodentVR_Private_XML_RodentVRSettingsXmlReader_h_18_RPC_WRAPPERS_NO_PURE_DECLS \
+#define RodentVR_Source_RodentVR_Private_XML_RodentVRSettingsXmlReader_h_19_RPC_WRAPPERS_NO_PURE_DECLS \
  \
 	DECLARE_FUNCTION(execLoadRodentVRSettingsFromFile);
 
 
-#define RodentVR_Source_RodentVR_Private_XML_RodentVRSettingsXmlReader_h_18_INCLASS_NO_PURE_DECLS \
+#define RodentVR_Source_RodentVR_Private_XML_RodentVRSettingsXmlReader_h_19_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesURodentVRSettingsXmlReader(); \
 	friend struct Z_Construct_UClass_URodentVRSettingsXmlReader_Statics; \
@@ -34,7 +34,7 @@ public: \
 	DECLARE_SERIALIZER(URodentVRSettingsXmlReader)
 
 
-#define RodentVR_Source_RodentVR_Private_XML_RodentVRSettingsXmlReader_h_18_INCLASS \
+#define RodentVR_Source_RodentVR_Private_XML_RodentVRSettingsXmlReader_h_19_INCLASS \
 private: \
 	static void StaticRegisterNativesURodentVRSettingsXmlReader(); \
 	friend struct Z_Construct_UClass_URodentVRSettingsXmlReader_Statics; \
@@ -43,7 +43,7 @@ public: \
 	DECLARE_SERIALIZER(URodentVRSettingsXmlReader)
 
 
-#define RodentVR_Source_RodentVR_Private_XML_RodentVRSettingsXmlReader_h_18_STANDARD_CONSTRUCTORS \
+#define RodentVR_Source_RodentVR_Private_XML_RodentVRSettingsXmlReader_h_19_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API URodentVRSettingsXmlReader(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(URodentVRSettingsXmlReader) \
@@ -56,7 +56,7 @@ private: \
 public:
 
 
-#define RodentVR_Source_RodentVR_Private_XML_RodentVRSettingsXmlReader_h_18_ENHANCED_CONSTRUCTORS \
+#define RodentVR_Source_RodentVR_Private_XML_RodentVRSettingsXmlReader_h_19_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API URodentVRSettingsXmlReader(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()) : Super(ObjectInitializer) { }; \
 private: \
@@ -69,28 +69,28 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(URodentVRSettingsXmlReader); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(URodentVRSettingsXmlReader)
 
 
-#define RodentVR_Source_RodentVR_Private_XML_RodentVRSettingsXmlReader_h_18_PRIVATE_PROPERTY_OFFSET
-#define RodentVR_Source_RodentVR_Private_XML_RodentVRSettingsXmlReader_h_15_PROLOG
-#define RodentVR_Source_RodentVR_Private_XML_RodentVRSettingsXmlReader_h_18_GENERATED_BODY_LEGACY \
+#define RodentVR_Source_RodentVR_Private_XML_RodentVRSettingsXmlReader_h_19_PRIVATE_PROPERTY_OFFSET
+#define RodentVR_Source_RodentVR_Private_XML_RodentVRSettingsXmlReader_h_16_PROLOG
+#define RodentVR_Source_RodentVR_Private_XML_RodentVRSettingsXmlReader_h_19_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	RodentVR_Source_RodentVR_Private_XML_RodentVRSettingsXmlReader_h_18_PRIVATE_PROPERTY_OFFSET \
-	RodentVR_Source_RodentVR_Private_XML_RodentVRSettingsXmlReader_h_18_SPARSE_DATA \
-	RodentVR_Source_RodentVR_Private_XML_RodentVRSettingsXmlReader_h_18_RPC_WRAPPERS \
-	RodentVR_Source_RodentVR_Private_XML_RodentVRSettingsXmlReader_h_18_INCLASS \
-	RodentVR_Source_RodentVR_Private_XML_RodentVRSettingsXmlReader_h_18_STANDARD_CONSTRUCTORS \
+	RodentVR_Source_RodentVR_Private_XML_RodentVRSettingsXmlReader_h_19_PRIVATE_PROPERTY_OFFSET \
+	RodentVR_Source_RodentVR_Private_XML_RodentVRSettingsXmlReader_h_19_SPARSE_DATA \
+	RodentVR_Source_RodentVR_Private_XML_RodentVRSettingsXmlReader_h_19_RPC_WRAPPERS \
+	RodentVR_Source_RodentVR_Private_XML_RodentVRSettingsXmlReader_h_19_INCLASS \
+	RodentVR_Source_RodentVR_Private_XML_RodentVRSettingsXmlReader_h_19_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define RodentVR_Source_RodentVR_Private_XML_RodentVRSettingsXmlReader_h_18_GENERATED_BODY \
+#define RodentVR_Source_RodentVR_Private_XML_RodentVRSettingsXmlReader_h_19_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	RodentVR_Source_RodentVR_Private_XML_RodentVRSettingsXmlReader_h_18_PRIVATE_PROPERTY_OFFSET \
-	RodentVR_Source_RodentVR_Private_XML_RodentVRSettingsXmlReader_h_18_SPARSE_DATA \
-	RodentVR_Source_RodentVR_Private_XML_RodentVRSettingsXmlReader_h_18_RPC_WRAPPERS_NO_PURE_DECLS \
-	RodentVR_Source_RodentVR_Private_XML_RodentVRSettingsXmlReader_h_18_INCLASS_NO_PURE_DECLS \
-	RodentVR_Source_RodentVR_Private_XML_RodentVRSettingsXmlReader_h_18_ENHANCED_CONSTRUCTORS \
+	RodentVR_Source_RodentVR_Private_XML_RodentVRSettingsXmlReader_h_19_PRIVATE_PROPERTY_OFFSET \
+	RodentVR_Source_RodentVR_Private_XML_RodentVRSettingsXmlReader_h_19_SPARSE_DATA \
+	RodentVR_Source_RodentVR_Private_XML_RodentVRSettingsXmlReader_h_19_RPC_WRAPPERS_NO_PURE_DECLS \
+	RodentVR_Source_RodentVR_Private_XML_RodentVRSettingsXmlReader_h_19_INCLASS_NO_PURE_DECLS \
+	RodentVR_Source_RodentVR_Private_XML_RodentVRSettingsXmlReader_h_19_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

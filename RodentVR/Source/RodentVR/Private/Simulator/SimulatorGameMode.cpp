@@ -15,35 +15,40 @@ ASimulatorGameMode::ASimulatorGameMode()
 {
 }
 
-URodentVRSettings* ASimulatorGameMode::GetRodentVRSettings()
-{
-	return this->RodentVRSettings;
-}
-
+//URodentVRSettings* ASimulatorGameMode::GetRodentVRSettings()
+//{
+//	return this->RodentVRSettings;
+//}
+//
 void ASimulatorGameMode::StopNIDAQDevices()
 {
-	if (IsValid(this->RodentVRSettings))
+	URodentVRGameInstance* GameInstance = Cast<URodentVRGameInstance>(UGameplayStatics::GetGameInstance(this));
+	if (IsValid(GameInstance))
 	{
-		TArray<UDevice*> Devices;
-		Devices.Add(this->RodentVRSettings->GetAirPufferLeftDevice());
-		Devices.Add(this->RodentVRSettings->GetAirPufferRightDevice());
-		Devices.Append(this->RodentVRSettings->GetRewardDevices());
-		for (UDevice* Device : Devices)
+		URodentVRSettings* RodentVRSettings = GameInstance->GetRodentVRSettings();
+		if (IsValid(RodentVRSettings))
 		{
-			if (IsValid(Device))
+			TArray<UDevice*> Devices;
+			Devices.Add(RodentVRSettings->GetAirPufferLeftDevice());
+			Devices.Add(RodentVRSettings->GetAirPufferRightDevice());
+			Devices.Append(RodentVRSettings->GetRewardDevices());
+			for (UDevice* Device : Devices)
 			{
-				UNIDAQ::control_NIDAQ(false, Device->GetDevicePath());
+				if (IsValid(Device))
+				{
+					UNIDAQ::control_NIDAQ(false, Device->GetDevicePath());
+				}
 			}
 		}
 	}
 }
 
-void ASimulatorGameMode::SetRodentVRSettings(URodentVRSettings* RodentVRSettingsValue)
-{
-	this->CurrentMazeIndex = -1;
-	this->RodentVRSettings = RodentVRSettingsValue;
-}
-
+//void ASimulatorGameMode::SetRodentVRSettings(URodentVRSettings* RodentVRSettingsValue)
+//{
+//	this->CurrentMazeIndex = -1;
+//	this->RodentVRSettings = RodentVRSettingsValue;
+//}
+//
 void ASimulatorGameMode::Tick(float DeltaSeconds)
 {
 	Super::Tick(DeltaSeconds);
@@ -67,11 +72,12 @@ void ASimulatorGameMode::LoadNextMaze()
 	{
 		this->StopNIDAQDevices();
 		this->CurrentMazeIndex++;
-		if (IsValid(this->RodentVRSettings))
+		URodentVRSettings* RodentVRSettings = GameInstance->GetRodentVRSettings();
+		if (IsValid(RodentVRSettings))
 		{
-			if (this->CurrentMazeIndex < this->RodentVRSettings->GetMazePlaylist().Num())
+			if (this->CurrentMazeIndex < RodentVRSettings->GetMazePlaylist().Num())
 			{
-				UMazeSettings* MazeSettings = this->RodentVRSettings->GetMazePlaylist()[this->CurrentMazeIndex];
+				UMazeSettings* MazeSettings = RodentVRSettings->GetMazePlaylist()[this->CurrentMazeIndex];
 				GameInstance->SetCurrentMaze(MazeSettings);
 				UMazeSpawner::SpawnMaze(this, MazeSettings, false, false);
 				this->StopConditionsChecker = NewObject<UStopConditionsChecker>();

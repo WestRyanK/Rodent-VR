@@ -5,33 +5,38 @@
 #include "Engine.h"
 #include "BallInput.h"
 #include "Settings/RodentVRSettings.h"
-#include "Simulator/SimulatorGameMode.h"
+#include "Kismet/GameplayStatics.h"
+#include "Core/RodentVRGameInstance.h"
 
-// Sets default values for this component's properties
 UBallInputComponent::UBallInputComponent()
 {
-	// Set this component to be initialized when the game starts, and to be ticked every frame.  You can turn these features
-	// off to improve performance if you don't need them.
 	PrimaryComponentTick.bCanEverTick = true;
 
 }
 
 
-// Called when the game starts
 void UBallInputComponent::BeginPlay()
 {
 	Super::BeginPlay();
 
-	UWorld* World = GetWorld();
-	if (IsValid(World))
+	URodentVRGameInstance* GameInstance = (URodentVRGameInstance*)UGameplayStatics::GetGameInstance(this);
+	if (IsValid(GameInstance))
 	{
-		ASimulatorGameMode* GameMode = (ASimulatorGameMode*)World->GetAuthGameMode();
-		if (IsValid(GameMode))
-		{
-			URodentVRSettings* RodentVRSettings = GameMode->GetRodentVRSettings();
+		URodentVRSettings* RodentVRSettings = GameInstance->GetRodentVRSettings();
 
-			this->MouseAMultiplier = RodentVRSettings->GetBallInputMouseAMultiplier();
-			this->MouseBMultiplier = RodentVRSettings->GetBallInputMouseBMultiplier();
+		if (IsValid(RodentVRSettings))
+		{
+			int MouseAFlipped = -1;
+			int MouseBFlipped = -1;
+			if (RodentVRSettings->GetBallInputMouseAIsOnBack()) {
+				MouseAFlipped = 1;
+			}
+			if (RodentVRSettings->GetBallInputMouseBIsOnRight()) {
+				MouseBFlipped = 1;
+			}
+
+			this->MouseAMultiplier = RodentVRSettings->GetBallInputMouseAMultiplier() * MouseAFlipped;
+			this->MouseBMultiplier = RodentVRSettings->GetBallInputMouseBMultiplier() * MouseBFlipped;
 
 			std::string MouseANameStr = std::string(TCHAR_TO_UTF8(*(RodentVRSettings->GetBallInputMouseADevice())));
 			std::string MouseBNameStr = std::string(TCHAR_TO_UTF8(*(RodentVRSettings->GetBallInputMouseBDevice())));
@@ -49,7 +54,6 @@ void UBallInputComponent::BeginPlay()
 }
 
 
-// Called when the game ends
 void UBallInputComponent::EndPlay(EEndPlayReason::Type EndPlayReason)
 {
 	Super::EndPlay(EndPlayReason);
@@ -58,7 +62,6 @@ void UBallInputComponent::EndPlay(EEndPlayReason::Type EndPlayReason)
 }
 
 
-// Called every frame
 void UBallInputComponent::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
@@ -66,9 +69,11 @@ void UBallInputComponent::TickComponent(float DeltaTime, ELevelTick TickType, FA
 	float x = 0;
 	float y = 0;
 	UBallInput::GetMovementDelta(&x, &y);
+	if (GEngine)
+		GEngine->AddOnScreenDebugMessage(-1, 0.5f, FColor::Yellow, TEXT("Some debug message!"));
 
-	APawn* OwnerPawn = (APawn*) this->GetOwner();
-	OwnerPawn->AddMovementInput(OwnerPawn->GetActorForwardVector(), x * this->MouseAMultiplier);
-	OwnerPawn->AddControllerYawInput(y * this->MouseBMultiplier);
+	APawn* OwnerPawn = (APawn*)this->GetOwner();
+	OwnerPawn->AddMovementInput(OwnerPawn->GetActorForwardVector(), x * this->MouseAMultiplier * 0.001f);
+	OwnerPawn->AddControllerYawInput(y * this->MouseBMultiplier * 0.001f);
 }
 

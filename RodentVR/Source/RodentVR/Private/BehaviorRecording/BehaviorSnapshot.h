@@ -26,7 +26,7 @@ private:
 
 public:
 	UFUNCTION(BlueprintCallable)
-		static UBehaviorSnapshot* CreateBehaviorSnapshot(float TimestampVal, FVector PositionVal, FVector ForwardVal, FString CurrentRegionVal);
+		static UBehaviorSnapshot* CreateBehaviorSnapshot(UObject* OuterObject, float TimestampVal, FVector PositionVal, FVector ForwardVal, FString CurrentRegionVal);
 
 	UFUNCTION(BlueprintGetter)
 		float GetTimestamp();

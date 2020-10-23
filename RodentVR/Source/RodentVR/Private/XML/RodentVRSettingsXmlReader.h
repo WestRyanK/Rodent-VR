@@ -7,6 +7,7 @@
 #include "Settings/RodentVRSettings.h"
 #include "XML/XmlFileReader.h"
 #include "XML/RapidXML/rapidxml.hpp"
+#include "Settings/GraphicsSettings.h"
 #include "RodentVRSettingsXmlReader.generated.h"
 
 /**
@@ -26,4 +27,5 @@ private:
 	static void LoadAirPuffers(URodentVRSettings* Settings, rapidxml::xml_node<>* SettingsNode);
 	static void LoadRewardDevices(URodentVRSettings* Settings, rapidxml::xml_node<>* SettingsNode);
 	static void LoadPlaylist(URodentVRSettings* Settings, rapidxml::xml_node<>* SettingsNode);
+	static void LoadGraphics(URodentVRSettings* Settings, rapidxml::xml_node<>* SettingsNode);
 };
