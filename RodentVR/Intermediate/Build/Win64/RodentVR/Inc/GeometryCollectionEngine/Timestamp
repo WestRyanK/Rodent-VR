@@ -1,7 +1,7 @@
 C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Experimental\GeometryCollectionEngine\Public\GeometryCollection\GeometryCollectionActor.h
 C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Experimental\GeometryCollectionEngine\Public\GeometryCollection\GeometryCollectionComponent.h
-C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Experimental\GeometryCollectionEngine\Public\GeometryCollection\GeometryCollectionCache.h
 C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Experimental\GeometryCollectionEngine\Public\GeometryCollection\GeometryCollectionDebugDrawActor.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Experimental\GeometryCollectionEngine\Public\GeometryCollection\GeometryCollectionCache.h
 C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Experimental\GeometryCollectionEngine\Public\GeometryCollection\GeometryCollectionDebugDrawComponent.h
 C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Experimental\GeometryCollectionEngine\Public\GeometryCollection\GeometryCollectionEngineTypes.h
 C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Experimental\GeometryCollectionEngine\Public\GeometryCollection\GeometryCollectionObject.h
@@ -9,6 +9,6 @@ C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Experimental\Geometry
 C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Experimental\GeometryCollectionEngine\Public\GeometryCollection\SkeletalMeshSimulationComponent.h
 C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Experimental\GeometryCollectionEngine\Public\GeometryCollection\StaticMeshSimulationComponent.h
 C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Experimental\GeometryCollectionEngine\Public\ChaosBlueprint.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Experimental\GeometryCollectionEngine\Public\ChaosBreakingEventFilter.h
 C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Experimental\GeometryCollectionEngine\Public\ChaosCollisionEventFilter.h
 C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Experimental\GeometryCollectionEngine\Public\ChaosTrailingEventFilter.h
-C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Experimental\GeometryCollectionEngine\Public\ChaosBreakingEventFilter.h

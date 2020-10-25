@@ -1,8 +1,8 @@
 C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\GameplayTasks\Classes\Tasks\GameplayTask_ClaimResource.h
 C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\GameplayTasks\Classes\Tasks\GameplayTask_TimeLimitedExecution.h
-C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\GameplayTasks\Classes\Tasks\GameplayTask_SpawnActor.h
-C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\GameplayTasks\Classes\Tasks\GameplayTask_WaitDelay.h
-C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\GameplayTasks\Classes\GameplayTask.h
 C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\GameplayTasks\Classes\GameplayTaskOwnerInterface.h
 C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\GameplayTasks\Classes\GameplayTaskResource.h
 C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\GameplayTasks\Classes\GameplayTasksComponent.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\GameplayTasks\Classes\Tasks\GameplayTask_SpawnActor.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\GameplayTasks\Classes\GameplayTask.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\GameplayTasks\Classes\Tasks\GameplayTask_WaitDelay.h

@@ -15,15 +15,9 @@
 		* PlaylistEntry
 	* Header Text
 	* Paragraph Text
-		* Inside DeviceWidget
-		* PlaylistEntry
 		* MazeObjectListItem
 		* Maze Object Texture
-	* Sliders
-	* TextBoxes
-		* Inside DeviceWidget
-		* Inside Slider Widget
-		* PlaylistEntry
+	* Checkboxes
 
 
 
@@ -68,4 +62,3 @@ Pressed:
 .04 		.00		10
 
 13h30 15:55
-you were going to add size modifiers to objects so you don't have to wrap them all in sizeboxes...
