@@ -26,10 +26,10 @@ void UBallInputComponent::BeginPlay()
 
 		if (IsValid(RodentVRSettings))
 		{
-			int MouseAFlipped = -1;
+			int MouseAFlipped = 1;
 			int MouseBFlipped = -1;
 			if (RodentVRSettings->GetBallInputMouseAIsOnBack()) {
-				MouseAFlipped = 1;
+				MouseAFlipped = -1;
 			}
 			if (RodentVRSettings->GetBallInputMouseBIsOnRight()) {
 				MouseBFlipped = 1;
@@ -69,8 +69,9 @@ void UBallInputComponent::TickComponent(float DeltaTime, ELevelTick TickType, FA
 	float x = 0;
 	float y = 0;
 	UBallInput::GetMovementDelta(&x, &y);
-	if (GEngine)
-		GEngine->AddOnScreenDebugMessage(-1, 0.5f, FColor::Yellow, TEXT("Some debug message!"));
+
+	//if (GEngine)
+	//	GEngine->AddOnScreenDebugMessage(-1, 0.5f, FColor::Yellow, *(FString::SanitizeFloat(x) + " " + FString::SanitizeFloat(y)));
 
 	APawn* OwnerPawn = (APawn*)this->GetOwner();
 	OwnerPawn->AddMovementInput(OwnerPawn->GetActorForwardVector(), x * this->MouseAMultiplier * 0.001f);

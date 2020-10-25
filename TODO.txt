@@ -5,6 +5,26 @@
 * Have some way to disable air puffers
 * Allow user to change ambient lighting in each maze
 * Allow switching which side the mouse is on.
+* Cancelling NewMaze still adds one
+
+* Stylize everything:
+	* Large Text Buttons
+	* Small Text Buttons
+		* BallInput - Switch, Clear
+		* File
+		* PlaylistEntry
+	* Header Text
+	* Paragraph Text
+		* Inside DeviceWidget
+		* PlaylistEntry
+		* MazeObjectListItem
+		* Maze Object Texture
+	* Sliders
+	* TextBoxes
+		* Inside DeviceWidget
+		* Inside Slider Widget
+		* PlaylistEntry
+
 
 
 DONE:
@@ -37,12 +57,15 @@ Normal:
 
 
 Hovered:
-Float linear	Float srgb	srgb
+Float srgb	Float linear	srgb
 .87		.74		222
 .64		.37		163
 .04		.00		10
 
 Pressed:
-.85 .70
-.51 .23
-.04 .00
+.85 		.70		217
+.51 		.23		130
+.04 		.00		10
+
+13h30 15:55
+you were going to add size modifiers to objects so you don't have to wrap them all in sizeboxes...
