@@ -4,9 +4,9 @@
 #include "BehaviorSnapshot.h"
 
 
-UBehaviorSnapshot* UBehaviorSnapshot::CreateBehaviorSnapshot(float TimestampVal, FVector PositionVal, FVector ForwardVal, FString CurrentRegionVal)
+UBehaviorSnapshot* UBehaviorSnapshot::CreateBehaviorSnapshot(UObject* OuterObject, float TimestampVal, FVector PositionVal, FVector ForwardVal, FString CurrentRegionVal)
 {
-	UBehaviorSnapshot* Snapshot = NewObject<UBehaviorSnapshot>();
+	UBehaviorSnapshot* Snapshot = NewObject<UBehaviorSnapshot>(OuterObject);
 	Snapshot->Timestamp = TimestampVal;
 	Snapshot->Position = PositionVal;
 	Snapshot->Forward = ForwardVal;

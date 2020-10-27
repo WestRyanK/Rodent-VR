@@ -40,37 +40,78 @@ AActor* UMazeSpawner::GetActorFromSetting(UObject* SettingValue)
 	}
 }
 
-void UMazeSpawner::SpawnMaze(UObject* WorldContextObject, UMazeSettings* MazeSettings, bool IsSpawnForEditor, bool ShowRegions)
+void UMazeSpawner::AddIfValid(TArray<AActor*>& Actors, UObject* Setting)
+{
+	if (IsValid(Setting))
+	{
+		AActor* Actor = UMazeSpawner::GetActorFromSetting(Setting);
+		if (IsValid(Actor))
+		{
+			Actors.Add(Actor);
+		}
+	}
+}
+
+TArray<AActor*> UMazeSpawner::GetActorsFromMazeSettings(UMazeSettings* MazeSettings)
+{
+	TArray<AActor*> Actors = TArray<AActor*>();
+	if (IsValid(MazeSettings))
+	{
+		UMazeSpawner::AddIfValid(Actors, MazeSettings);
+		UMazeSpawner::AddIfValid(Actors, MazeSettings->GetPlayerStart());
+		for (UMazeObjectSettings* MazeObjectSettings : MazeSettings->GetMazeObjects())
+		{
+			UMazeSpawner::AddIfValid(Actors, MazeObjectSettings);
+		}
+		for (URegionSettings* RegionSettings : MazeSettings->GetRegionSettings())
+		{
+			UMazeSpawner::AddIfValid(Actors, RegionSettings);
+		}
+	}
+
+	return Actors;
+}
+
+void UMazeSpawner::ClearSpawnedMaze(UObject* WorldContextObject)
 {
 	UMazeSpawner::ActorToSetting.Empty();
 	UMazeSpawner::SettingToActor.Empty();
 
 	UWorld* World = WorldContextObject->GetWorld();
-	UMazeSpawner::ClearWorld(World);
-	if (IsValid(MazeSettings))
-	{
-		UMazeSpawner::LoadMaze(World, MazeSettings);
-		UMazeSpawner::LoadPlayerStart(World, MazeSettings, IsSpawnForEditor);
-		UMazeSpawner::LoadMazeObjects(World, MazeSettings, IsSpawnForEditor);
-		UMazeSpawner::LoadRegions(World, MazeSettings, IsSpawnForEditor, ShowRegions);
-	}
-
-	UMazeSpawner::ReverseActorToSettingMap();
-}
-
-void UMazeSpawner::ClearWorld(UWorld* World)
-{
-	TArray<AActor*> WorldActors;
-	UGameplayStatics::GetAllActorsOfClass(World, AActor::StaticClass(), WorldActors);
-	for (AActor* Actor : WorldActors)
+	if (IsValid(World))
 	{
 
-		if (Actor->ActorHasTag(UMazeSpawner::SpawnedActorTag))
+		TArray<AActor*> WorldActors;
+		UGameplayStatics::GetAllActorsOfClass(World, AActor::StaticClass(), WorldActors);
+		for (AActor* Actor : WorldActors)
 		{
-			Actor->Destroy();
+
+			if (Actor->ActorHasTag(UMazeSpawner::SpawnedActorTag))
+			{
+				Actor->Destroy();
+			}
 		}
 	}
 }
+
+void UMazeSpawner::SpawnMaze(UObject* WorldContextObject, UMazeSettings* MazeSettings, bool IsSpawnForEditor, bool ShowRegions)
+{
+	UMazeSpawner::ClearSpawnedMaze(WorldContextObject);
+	UWorld* World = WorldContextObject->GetWorld();
+	if (IsValid(World))
+	{
+		if (IsValid(MazeSettings))
+		{
+			UMazeSpawner::LoadMaze(World, MazeSettings);
+			UMazeSpawner::LoadPlayerStart(World, MazeSettings, IsSpawnForEditor);
+			UMazeSpawner::LoadMazeObjects(World, MazeSettings, IsSpawnForEditor);
+			UMazeSpawner::LoadRegions(World, MazeSettings, IsSpawnForEditor, ShowRegions);
+		}
+
+		UMazeSpawner::ReverseActorToSettingMap();
+	}
+}
+
 
 void UMazeSpawner::LoadMaze(UWorld* World, UMazeSettings* MazeSettings)
 {
@@ -94,7 +135,7 @@ void UMazeSpawner::LoadPlayerStart(UWorld* World, UMazeSettings* MazeSettings, b
 		PlayerStart->SetActorEnableCollision(false);
 
 		APawn* PlayerPawn = World->GetFirstPlayerController()->GetPawn();
-		PlayerPawn->SetActorLocation(PlayerStartSettings->GetPosition() + FVector(0,0,40));
+		PlayerPawn->SetActorLocation(PlayerStartSettings->GetPosition() + FVector(0, 0, 40));
 		PlayerPawn->GetController()->SetControlRotation(FRotator(0, PlayerStartSettings->GetRotation().Yaw, 0));
 		PlayerPawn->SetActorRotation(PlayerStartSettings->GetRotation());
 	}

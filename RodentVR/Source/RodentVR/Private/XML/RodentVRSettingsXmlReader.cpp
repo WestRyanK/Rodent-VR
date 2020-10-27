@@ -2,6 +2,8 @@
 
 
 #include "XML/RodentVRSettingsXmlReader.h"
+#include "Settings/GraphicsQualityLevels.h"
+#include "Math/IntPoint.h"
 #include "XML/MazeSettingsXmlReader.h"
 
 
@@ -23,6 +25,7 @@ URodentVRSettings* URodentVRSettingsXmlReader::LoadRodentVRSettingsFromFile(FStr
 			URodentVRSettingsXmlReader::LoadAirPuffers(Settings, SettingsNode);
 			URodentVRSettingsXmlReader::LoadRewardDevices(Settings, SettingsNode);
 			URodentVRSettingsXmlReader::LoadPlaylist(Settings, SettingsNode);
+			URodentVRSettingsXmlReader::LoadGraphics(Settings, SettingsNode);
 		}
 	}
 
@@ -47,6 +50,11 @@ void URodentVRSettingsXmlReader::LoadBallInput(URodentVRSettings* Settings, rapi
 			float MouseBMultiplier = UXmlFileReader::GetFloatFromAttribute(MouseBNode, "Multiplier", 0.0);
 			Settings->SetBallInputMouseAMultiplier(MouseAMultiplier);
 			Settings->SetBallInputMouseBMultiplier(MouseBMultiplier);
+
+			bool MouseAIsOnBack = UXmlFileReader::GetBoolFromAttribute(MouseANode, "IsOnBack", true);
+			bool MouseBIsOnRight = UXmlFileReader::GetBoolFromAttribute(MouseBNode, "IsOnRight", true);
+			Settings->SetBallInputMouseAIsOnBack(MouseAIsOnBack);
+			Settings->SetBallInputMouseBIsOnRight(MouseBIsOnRight);
 		}
 	}
 }
@@ -95,5 +103,30 @@ void URodentVRSettingsXmlReader::LoadPlaylist(URodentVRSettings* Settings, rapid
 
 			Settings->AddMaze(MazeSettings);
 		}
+	}
+}
+
+void URodentVRSettingsXmlReader::LoadGraphics(URodentVRSettings* Settings, rapidxml::xml_node<>* SettingsNode)
+{
+	rapidxml::xml_node<>* GraphicsNode = SettingsNode->first_node("Graphics");
+	if (GraphicsNode != nullptr)
+	{
+		UGraphicsSettings* GraphicsSettings = Settings->GetGraphicsSettings();
+
+		 GraphicsQualityLevels TextureQuality = static_cast<GraphicsQualityLevels>(UXmlFileReader::GetIntFromAttribute(GraphicsNode, "TextureQuality", 0));
+		 GraphicsQualityLevels ShadowQuality = static_cast<GraphicsQualityLevels>(UXmlFileReader::GetIntFromAttribute(GraphicsNode, "ShadowQuality", 0));
+		 GraphicsQualityLevels AntiAliasingQuality = static_cast<GraphicsQualityLevels>(UXmlFileReader::GetIntFromAttribute(GraphicsNode, "AntiAliasingQuality", 0));
+		 GraphicsQualityLevels PostProcessingQuality = static_cast<GraphicsQualityLevels>(UXmlFileReader::GetIntFromAttribute(GraphicsNode, "PostProcessingQuality", 0));
+		 int ScreenPercentage = UXmlFileReader::GetIntFromAttribute(GraphicsNode, "ScreenPercentage", 100);
+		 int ScreenResolutionX = UXmlFileReader::GetIntFromAttribute(GraphicsNode, "ScreenResolutionX", 1280);
+		 int ScreenResolutionY = UXmlFileReader::GetIntFromAttribute(GraphicsNode, "ScreenResolutionY", 720);
+		 FIntPoint ScreenResolution = FIntPoint(ScreenResolutionX, ScreenResolutionY);
+
+		 GraphicsSettings->SetTextureQuality(TextureQuality);
+		 GraphicsSettings->SetShadowQuality(ShadowQuality);
+		 GraphicsSettings->SetAntiAliasingQuality(AntiAliasingQuality);
+		 GraphicsSettings->SetPostProcessingQuality(PostProcessingQuality);
+		 GraphicsSettings->SetScreenPercentage(ScreenPercentage);
+		 GraphicsSettings->SetScreenResolution(ScreenResolution);
 	}
 }

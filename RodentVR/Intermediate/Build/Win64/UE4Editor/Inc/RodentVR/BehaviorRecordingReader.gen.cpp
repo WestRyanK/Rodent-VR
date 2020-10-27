@@ -18,16 +18,18 @@ void EmptyLinkFunctionForGeneratedCodeBehaviorRecordingReader() {}
 	COREUOBJECT_API UClass* Z_Construct_UClass_UObject();
 	UPackage* Z_Construct_UPackage__Script_RodentVR();
 	RODENTVR_API UClass* Z_Construct_UClass_UBehaviorSnapshot_NoRegister();
+	COREUOBJECT_API UClass* Z_Construct_UClass_UObject_NoRegister();
 // End Cross Module References
 	DEFINE_FUNCTION(UBehaviorRecordingReader::execLoadBehaviorRecordingFromFile)
 	{
+		P_GET_OBJECT(UObject,Z_Param_OuterObject);
 		P_GET_PROPERTY(FStrProperty,Z_Param_BehaviorRecordingFileName);
 		P_GET_PROPERTY_REF(FStrProperty,Z_Param_Out_SettingsFileName);
 		P_GET_PROPERTY_REF(FStrProperty,Z_Param_Out_MazeFileName);
 		P_GET_TARRAY_REF(UBehaviorSnapshot*,Z_Param_Out_BehaviorSnapshots);
 		P_FINISH;
 		P_NATIVE_BEGIN;
-		UBehaviorRecordingReader::LoadBehaviorRecordingFromFile(Z_Param_BehaviorRecordingFileName,Z_Param_Out_SettingsFileName,Z_Param_Out_MazeFileName,Z_Param_Out_BehaviorSnapshots);
+		UBehaviorRecordingReader::LoadBehaviorRecordingFromFile(Z_Param_OuterObject,Z_Param_BehaviorRecordingFileName,Z_Param_Out_SettingsFileName,Z_Param_Out_MazeFileName,Z_Param_Out_BehaviorSnapshots);
 		P_NATIVE_END;
 	}
 	void UBehaviorRecordingReader::StaticRegisterNativesUBehaviorRecordingReader()
@@ -42,6 +44,7 @@ void EmptyLinkFunctionForGeneratedCodeBehaviorRecordingReader() {}
 	{
 		struct BehaviorRecordingReader_eventLoadBehaviorRecordingFromFile_Parms
 		{
+			UObject* OuterObject;
 			FString BehaviorRecordingFileName;
 			FString SettingsFileName;
 			FString MazeFileName;
@@ -52,6 +55,7 @@ void EmptyLinkFunctionForGeneratedCodeBehaviorRecordingReader() {}
 		static const UE4CodeGen_Private::FStrPropertyParams NewProp_MazeFileName;
 		static const UE4CodeGen_Private::FStrPropertyParams NewProp_SettingsFileName;
 		static const UE4CodeGen_Private::FStrPropertyParams NewProp_BehaviorRecordingFileName;
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_OuterObject;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
@@ -63,12 +67,14 @@ void EmptyLinkFunctionForGeneratedCodeBehaviorRecordingReader() {}
 	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UFunction_UBehaviorRecordingReader_LoadBehaviorRecordingFromFile_Statics::NewProp_MazeFileName = { "MazeFileName", nullptr, (EPropertyFlags)0x0010000000000180, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(BehaviorRecordingReader_eventLoadBehaviorRecordingFromFile_Parms, MazeFileName), METADATA_PARAMS(nullptr, 0) };
 	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UFunction_UBehaviorRecordingReader_LoadBehaviorRecordingFromFile_Statics::NewProp_SettingsFileName = { "SettingsFileName", nullptr, (EPropertyFlags)0x0010000000000180, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(BehaviorRecordingReader_eventLoadBehaviorRecordingFromFile_Parms, SettingsFileName), METADATA_PARAMS(nullptr, 0) };
 	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UFunction_UBehaviorRecordingReader_LoadBehaviorRecordingFromFile_Statics::NewProp_BehaviorRecordingFileName = { "BehaviorRecordingFileName", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(BehaviorRecordingReader_eventLoadBehaviorRecordingFromFile_Parms, BehaviorRecordingFileName), METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UBehaviorRecordingReader_LoadBehaviorRecordingFromFile_Statics::NewProp_OuterObject = { "OuterObject", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(BehaviorRecordingReader_eventLoadBehaviorRecordingFromFile_Parms, OuterObject), Z_Construct_UClass_UObject_NoRegister, METADATA_PARAMS(nullptr, 0) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UBehaviorRecordingReader_LoadBehaviorRecordingFromFile_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UBehaviorRecordingReader_LoadBehaviorRecordingFromFile_Statics::NewProp_BehaviorSnapshots,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UBehaviorRecordingReader_LoadBehaviorRecordingFromFile_Statics::NewProp_BehaviorSnapshots_Inner,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UBehaviorRecordingReader_LoadBehaviorRecordingFromFile_Statics::NewProp_MazeFileName,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UBehaviorRecordingReader_LoadBehaviorRecordingFromFile_Statics::NewProp_SettingsFileName,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UBehaviorRecordingReader_LoadBehaviorRecordingFromFile_Statics::NewProp_BehaviorRecordingFileName,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UBehaviorRecordingReader_LoadBehaviorRecordingFromFile_Statics::NewProp_OuterObject,
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UBehaviorRecordingReader_LoadBehaviorRecordingFromFile_Statics::Function_MetaDataParams[] = {
@@ -104,7 +110,7 @@ void EmptyLinkFunctionForGeneratedCodeBehaviorRecordingReader() {}
 		(UObject* (*)())Z_Construct_UPackage__Script_RodentVR,
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_UBehaviorRecordingReader_Statics::FuncInfo[] = {
-		{ &Z_Construct_UFunction_UBehaviorRecordingReader_LoadBehaviorRecordingFromFile, "LoadBehaviorRecordingFromFile" }, // 150788359
+		{ &Z_Construct_UFunction_UBehaviorRecordingReader_LoadBehaviorRecordingFromFile, "LoadBehaviorRecordingFromFile" }, // 3756392600
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UBehaviorRecordingReader_Statics::Class_MetaDataParams[] = {
@@ -142,7 +148,7 @@ void EmptyLinkFunctionForGeneratedCodeBehaviorRecordingReader() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UBehaviorRecordingReader, 2720949056);
+	IMPLEMENT_CLASS(UBehaviorRecordingReader, 1974946630);
 	template<> RODENTVR_API UClass* StaticClass<UBehaviorRecordingReader>()
 	{
 		return UBehaviorRecordingReader::StaticClass();

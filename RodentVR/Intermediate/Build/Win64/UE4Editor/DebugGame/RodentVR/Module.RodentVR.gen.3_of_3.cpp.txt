@@ -1,7 +1,12 @@
 C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\UE4Editor\DebugGame\RodentVR\Definitions.RodentVR.h
-C:/Users/Ryan/Drive/BYU/2018_Fall/cs_497r/Rodent-VR/RodentVR/Intermediate/Build/Win64/UE4Editor/Inc/RodentVR/RodentVRSettingsXmlReader.gen.cpp
+C:/Users/Ryan/Drive/BYU/2018_Fall/cs_497r/Rodent-VR/RodentVR/Intermediate/Build/Win64/UE4Editor/Inc/RodentVR/RodentVRSaveGame.gen.cpp
 C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\CoreUObject\Public\UObject/GeneratedCppIncludes.h
 C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\CoreUObject\Public\UObject/MetaData.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Source\RodentVR/Private/Core/RodentVRSaveGame.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Classes\GameFramework/SaveGame.h
+C:\Users\Ryan\Documents\UnrealEngine\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\SaveGame.generated.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\UE4Editor\Inc\RodentVR\RodentVRSaveGame.generated.h
+C:/Users/Ryan/Drive/BYU/2018_Fall/cs_497r/Rodent-VR/RodentVR/Intermediate/Build/Win64/UE4Editor/Inc/RodentVR/RodentVRSettingsXmlReader.gen.cpp
 C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Source\RodentVR/Private/XML/RodentVRSettingsXmlReader.h
 C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\CoreUObject\Public\UObject/NoExportTypes.h
 C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\CoreUObject\Public\UObject/PropertyAccessUtil.h
@@ -527,8 +532,6 @@ C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Classes\Engine
 C:\Users\Ryan\Documents\UnrealEngine\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\Polys.generated.h
 C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Classes\Sound/ReverbEffect.h
 C:\Users\Ryan\Documents\UnrealEngine\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\ReverbEffect.generated.h
-C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Classes\GameFramework/SaveGame.h
-C:\Users\Ryan\Documents\UnrealEngine\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\SaveGame.generated.h
 C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Classes\Engine/SCS_Node.h
 C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine\Classes\Engine/SimpleConstructionScript.h
 C:\Users\Ryan\Documents\UnrealEngine\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\SimpleConstructionScript.generated.h
@@ -691,6 +694,9 @@ C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Source\RodentVR\Pri
 C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\UE4Editor\Inc\RodentVR\Device.generated.h
 C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\UE4Editor\Inc\RodentVR\RegionSettings.generated.h
 C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\UE4Editor\Inc\RodentVR\MazeSettings.generated.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Source\RodentVR\Private\Settings\GraphicsSettings.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Source\RodentVR\Private\Settings\GraphicsQualityLevels.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\UE4Editor\Inc\RodentVR\GraphicsSettings.generated.h
 C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\UE4Editor\Inc\RodentVR\RodentVRSettings.generated.h
 C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Source\RodentVR\Private\XML/XmlFileReader.h
 C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Source\RodentVR\Private\XML/RapidXML/rapidxml.hpp
@@ -705,6 +711,9 @@ C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Source\RodentVR/Pri
 C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Source\RodentVR\Private\XML/XmlFileWriter.h
 C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\UE4Editor\Inc\RodentVR\XmlFileWriter.generated.h
 C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\UE4Editor\Inc\RodentVR\RodentVRSettingsXmlWriter.generated.h
+C:/Users/Ryan/Drive/BYU/2018_Fall/cs_497r/Rodent-VR/RodentVR/Intermediate/Build/Win64/UE4Editor/Inc/RodentVR/SimpleObject.gen.cpp
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Source\RodentVR/Private/Simulator/SimpleObject.h
+C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\UE4Editor\Inc\RodentVR\SimpleObject.generated.h
 C:/Users/Ryan/Drive/BYU/2018_Fall/cs_497r/Rodent-VR/RodentVR/Intermediate/Build/Win64/UE4Editor/Inc/RodentVR/StartPosition.gen.cpp
 C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Source\RodentVR/Private/Simulator/StartPosition.h
 C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\UE4Editor\Inc\RodentVR\StartPosition.generated.h

@@ -10,6 +10,7 @@ URodentVRSettings::URodentVRSettings()
 {
 	this->SetAirPufferLeftDevice(NewObject<UDevice>());
 	this->SetAirPufferRightDevice(NewObject<UDevice>());
+	this->GraphicsSettings = NewObject<UGraphicsSettings>();
 }
 
 FString URodentVRSettings::GetSettingsFileName()
@@ -81,6 +82,36 @@ void URodentVRSettings::SetBallInputMouseBMultiplier(float BallInputMouseBMultip
 {
 	bool ValueChanged = (this->BallInputMouseBMultiplier != BallInputMouseBMultiplierValue);
 	this->BallInputMouseBMultiplier = BallInputMouseBMultiplierValue;
+	if (ValueChanged)
+	{
+		this->OnRodentVRSettingsChanged();
+	}
+}
+
+bool URodentVRSettings::GetBallInputMouseAIsOnBack()
+{
+	return this->BallInputMouseAIsOnBack;
+}
+
+void URodentVRSettings::SetBallInputMouseAIsOnBack(bool BallInputMouseAIsOnBackValue)
+{
+	bool ValueChanged = (this->BallInputMouseAIsOnBack != BallInputMouseAIsOnBackValue);
+	this->BallInputMouseAIsOnBack = BallInputMouseAIsOnBackValue;
+	if (ValueChanged)
+	{
+		this->OnRodentVRSettingsChanged();
+	}
+}
+
+bool URodentVRSettings::GetBallInputMouseBIsOnRight()
+{
+	return this->BallInputMouseBIsOnRight;
+}
+
+void URodentVRSettings::SetBallInputMouseBIsOnRight(bool BallInputMouseBIsOnRightValue)
+{
+	bool ValueChanged = (this->BallInputMouseBIsOnRight != BallInputMouseBIsOnRightValue);
+	this->BallInputMouseBIsOnRight = BallInputMouseBIsOnRightValue;
 	if (ValueChanged)
 	{
 		this->OnRodentVRSettingsChanged();
@@ -192,6 +223,11 @@ void URodentVRSettings::ClearMazes()
 {
 	this->MazePlaylist.Empty();
 	this->OnRodentVRSettingsChanged();
+}
+
+UGraphicsSettings* URodentVRSettings::GetGraphicsSettings()
+{
+	return this->GraphicsSettings;
 }
 
 UMazeSettings* URodentVRSettings::GetMazeFromPlaylistByFileName(FString MazeSettingsFileName)

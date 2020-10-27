@@ -18,6 +18,7 @@ void EmptyLinkFunctionForGeneratedCodeBehaviorSnapshot() {}
 	COREUOBJECT_API UClass* Z_Construct_UClass_UObject();
 	UPackage* Z_Construct_UPackage__Script_RodentVR();
 	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FVector();
+	COREUOBJECT_API UClass* Z_Construct_UClass_UObject_NoRegister();
 // End Cross Module References
 	DEFINE_FUNCTION(UBehaviorSnapshot::execGetCurrentRegion)
 	{
@@ -49,13 +50,14 @@ void EmptyLinkFunctionForGeneratedCodeBehaviorSnapshot() {}
 	}
 	DEFINE_FUNCTION(UBehaviorSnapshot::execCreateBehaviorSnapshot)
 	{
+		P_GET_OBJECT(UObject,Z_Param_OuterObject);
 		P_GET_PROPERTY(FFloatProperty,Z_Param_TimestampVal);
 		P_GET_STRUCT(FVector,Z_Param_PositionVal);
 		P_GET_STRUCT(FVector,Z_Param_ForwardVal);
 		P_GET_PROPERTY(FStrProperty,Z_Param_CurrentRegionVal);
 		P_FINISH;
 		P_NATIVE_BEGIN;
-		*(UBehaviorSnapshot**)Z_Param__Result=UBehaviorSnapshot::CreateBehaviorSnapshot(Z_Param_TimestampVal,Z_Param_PositionVal,Z_Param_ForwardVal,Z_Param_CurrentRegionVal);
+		*(UBehaviorSnapshot**)Z_Param__Result=UBehaviorSnapshot::CreateBehaviorSnapshot(Z_Param_OuterObject,Z_Param_TimestampVal,Z_Param_PositionVal,Z_Param_ForwardVal,Z_Param_CurrentRegionVal);
 		P_NATIVE_END;
 	}
 	void UBehaviorSnapshot::StaticRegisterNativesUBehaviorSnapshot()
@@ -74,6 +76,7 @@ void EmptyLinkFunctionForGeneratedCodeBehaviorSnapshot() {}
 	{
 		struct BehaviorSnapshot_eventCreateBehaviorSnapshot_Parms
 		{
+			UObject* OuterObject;
 			float TimestampVal;
 			FVector PositionVal;
 			FVector ForwardVal;
@@ -85,6 +88,7 @@ void EmptyLinkFunctionForGeneratedCodeBehaviorSnapshot() {}
 		static const UE4CodeGen_Private::FStructPropertyParams NewProp_ForwardVal;
 		static const UE4CodeGen_Private::FStructPropertyParams NewProp_PositionVal;
 		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_TimestampVal;
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_OuterObject;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
@@ -96,12 +100,14 @@ void EmptyLinkFunctionForGeneratedCodeBehaviorSnapshot() {}
 	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UBehaviorSnapshot_CreateBehaviorSnapshot_Statics::NewProp_ForwardVal = { "ForwardVal", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(BehaviorSnapshot_eventCreateBehaviorSnapshot_Parms, ForwardVal), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(nullptr, 0) };
 	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UBehaviorSnapshot_CreateBehaviorSnapshot_Statics::NewProp_PositionVal = { "PositionVal", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(BehaviorSnapshot_eventCreateBehaviorSnapshot_Parms, PositionVal), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(nullptr, 0) };
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_UBehaviorSnapshot_CreateBehaviorSnapshot_Statics::NewProp_TimestampVal = { "TimestampVal", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(BehaviorSnapshot_eventCreateBehaviorSnapshot_Parms, TimestampVal), METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UBehaviorSnapshot_CreateBehaviorSnapshot_Statics::NewProp_OuterObject = { "OuterObject", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(BehaviorSnapshot_eventCreateBehaviorSnapshot_Parms, OuterObject), Z_Construct_UClass_UObject_NoRegister, METADATA_PARAMS(nullptr, 0) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UBehaviorSnapshot_CreateBehaviorSnapshot_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UBehaviorSnapshot_CreateBehaviorSnapshot_Statics::NewProp_ReturnValue,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UBehaviorSnapshot_CreateBehaviorSnapshot_Statics::NewProp_CurrentRegionVal,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UBehaviorSnapshot_CreateBehaviorSnapshot_Statics::NewProp_ForwardVal,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UBehaviorSnapshot_CreateBehaviorSnapshot_Statics::NewProp_PositionVal,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UBehaviorSnapshot_CreateBehaviorSnapshot_Statics::NewProp_TimestampVal,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UBehaviorSnapshot_CreateBehaviorSnapshot_Statics::NewProp_OuterObject,
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UBehaviorSnapshot_CreateBehaviorSnapshot_Statics::Function_MetaDataParams[] = {
@@ -286,7 +292,7 @@ void EmptyLinkFunctionForGeneratedCodeBehaviorSnapshot() {}
 		(UObject* (*)())Z_Construct_UPackage__Script_RodentVR,
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_UBehaviorSnapshot_Statics::FuncInfo[] = {
-		{ &Z_Construct_UFunction_UBehaviorSnapshot_CreateBehaviorSnapshot, "CreateBehaviorSnapshot" }, // 594407787
+		{ &Z_Construct_UFunction_UBehaviorSnapshot_CreateBehaviorSnapshot, "CreateBehaviorSnapshot" }, // 1700749261
 		{ &Z_Construct_UFunction_UBehaviorSnapshot_GetCurrentRegion, "GetCurrentRegion" }, // 3914872009
 		{ &Z_Construct_UFunction_UBehaviorSnapshot_GetForward, "GetForward" }, // 73686410
 		{ &Z_Construct_UFunction_UBehaviorSnapshot_GetPosition, "GetPosition" }, // 1577039170
@@ -366,7 +372,7 @@ void EmptyLinkFunctionForGeneratedCodeBehaviorSnapshot() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UBehaviorSnapshot, 1576664339);
+	IMPLEMENT_CLASS(UBehaviorSnapshot, 3039245953);
 	template<> RODENTVR_API UClass* StaticClass<UBehaviorSnapshot>()
 	{
 		return UBehaviorSnapshot::StaticClass();

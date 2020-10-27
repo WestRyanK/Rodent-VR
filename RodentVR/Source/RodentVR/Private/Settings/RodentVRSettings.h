@@ -6,6 +6,7 @@
 #include "UObject/NoExportTypes.h"
 #include "MazeSettings.h"
 #include "Device.h"
+#include "GraphicsSettings.h"
 #include "RodentVRSettings.generated.h"
 
 
@@ -27,19 +28,25 @@ private:
 	UPROPERTY(BlueprintGetter=GetBallInputMouseBDevice, BlueprintSetter=SetBallInputMouseBDevice)
 		FString BallInputMouseBDevice;
 	UPROPERTY(BlueprintGetter=GetBallInputMouseAMultiplier, BlueprintSetter=SetBallInputMouseAMultiplier)
-		float BallInputMouseAMultiplier;
+		float BallInputMouseAMultiplier = 5.0f;
 	UPROPERTY(BlueprintGetter=GetBallInputMouseBMultiplier, BlueprintSetter=SetBallInputMouseBMultiplier)
-		float BallInputMouseBMultiplier;
+		float BallInputMouseBMultiplier = 5.0f;
+	UPROPERTY(BlueprintGetter=GetBallInputMouseAIsOnBack, BlueprintSetter=SetBallInputMouseAIsOnBack)
+		bool BallInputMouseAIsOnBack = true;
+	UPROPERTY(BlueprintGetter=GetBallInputMouseBIsOnRight, BlueprintSetter=SetBallInputMouseBIsOnRight)
+		bool BallInputMouseBIsOnRight = true;
 	UPROPERTY(BlueprintGetter=GetAirPufferLeftDevice, BlueprintSetter=SetAirPufferLeftDevice)
 		UDevice* AirPufferLeftDevice;
 	UPROPERTY(BlueprintGetter=GetAirPufferRightDevice, BlueprintSetter=SetAirPufferRightDevice)
 		UDevice* AirPufferRightDevice;
 	UPROPERTY(BlueprintGetter=GetAirPufferFrontAngle, BlueprintSetter=SetAirPufferFrontAngle)
-		float AirPufferFrontAngle;
+		float AirPufferFrontAngle = 30.0f;
 	UPROPERTY(BlueprintGetter=GetRewardDevices)
 		TArray<UDevice*> RewardDevices;
 	UPROPERTY(BlueprintGetter=GetMazePlaylist)
 		TArray<UMazeSettings*> MazePlaylist;
+	UPROPERTY(BlueprintGetter = GetGraphicsSettings)
+		UGraphicsSettings* GraphicsSettings;
 
 public:
 	URodentVRSettings();
@@ -64,6 +71,16 @@ public:
 		float GetBallInputMouseBMultiplier();
 	UFUNCTION(BlueprintSetter)
 		void SetBallInputMouseBMultiplier(float BallInputMouseBMultiplierValue);
+
+	UFUNCTION(BlueprintGetter)
+		bool GetBallInputMouseAIsOnBack();
+	UFUNCTION(BlueprintSetter)
+		void SetBallInputMouseAIsOnBack(bool BallInputMouseAIsOnBackValue);
+	UFUNCTION(BlueprintGetter)
+		bool GetBallInputMouseBIsOnRight();
+	UFUNCTION(BlueprintSetter)
+		void SetBallInputMouseBIsOnRight(bool BallInputMouseBIsOnRightValue);
+
 	UFUNCTION(BlueprintGetter)
 		UDevice* GetAirPufferLeftDevice();
 	UFUNCTION(BlueprintSetter)
@@ -98,6 +115,8 @@ public:
 		void ClearMazes();
 	UFUNCTION(BlueprintCallable, BlueprintPure)
 		UMazeSettings* GetMazeFromPlaylistByFileName(FString MazeSettingsFileName);
+	UFUNCTION(BlueprintGetter)
+		UGraphicsSettings* GetGraphicsSettings();
 
 	UFUNCTION(BlueprintCallable)
 		void OnRodentVRSettingsChanged();

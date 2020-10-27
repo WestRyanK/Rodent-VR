@@ -8,9 +8,9 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
-class UObject;
-class AActor;
 class UMazeSettings;
+class AActor;
+class UObject;
 #ifdef RODENTVR_MazeSpawner_generated_h
 #error "MazeSpawner.generated.h already included, missing '#pragma once' in MazeSpawner.h"
 #endif
@@ -19,15 +19,19 @@ class UMazeSettings;
 #define RodentVR_Source_RodentVR_Private_Simulator_MazeSpawner_h_17_SPARSE_DATA
 #define RodentVR_Source_RodentVR_Private_Simulator_MazeSpawner_h_17_RPC_WRAPPERS \
  \
+	DECLARE_FUNCTION(execGetActorsFromMazeSettings); \
 	DECLARE_FUNCTION(execGetActorFromSetting); \
 	DECLARE_FUNCTION(execGetSettingFromActor); \
+	DECLARE_FUNCTION(execClearSpawnedMaze); \
 	DECLARE_FUNCTION(execSpawnMaze);
 
 
 #define RodentVR_Source_RodentVR_Private_Simulator_MazeSpawner_h_17_RPC_WRAPPERS_NO_PURE_DECLS \
  \
+	DECLARE_FUNCTION(execGetActorsFromMazeSettings); \
 	DECLARE_FUNCTION(execGetActorFromSetting); \
 	DECLARE_FUNCTION(execGetSettingFromActor); \
+	DECLARE_FUNCTION(execClearSpawnedMaze); \
 	DECLARE_FUNCTION(execSpawnMaze);
 
 

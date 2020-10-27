@@ -16,9 +16,9 @@ class UMazeObjectTypeHelper : public UObject
 	GENERATED_BODY()
 
 public:
-	UFUNCTION(BlueprintCallable)
+	UFUNCTION(BlueprintCallable, BlueprintPure)
 		static FString ObjectTypeToString(MazeObjectType ObjectType);
 	
-	UFUNCTION(BlueprintCallable)
+	UFUNCTION(BlueprintCallable, BlueprintPure)
 		static MazeObjectType StringToObjectType(FString TypeString);
 };

@@ -1,3 +1,64 @@
 * Simulator Crashing on start #### If this happens, make sure you have NI services running!
 * Enter/Leave Region should use stack
+
+* Have unreal not crash when device name is wrong
+* Have some way to disable air puffers
+* Allow user to change ambient lighting in each maze
+* Allow switching which side the mouse is on.
+* Cancelling NewMaze still adds one
+
+* Stylize everything:
+	* Large Text Buttons
+	* Small Text Buttons
+		* BallInput - Switch, Clear
+		* File
+		* PlaylistEntry
+	* Header Text
+	* Paragraph Text
+		* MazeObjectListItem
+		* Maze Object Texture
+	* Checkboxes
+
+
+
+DONE:
+* Fix time limit 70 secs crashing
+	* Garbage collection was deleting BehaviorSnapshots
+* Save Behavior is crashing
+	* Garbage collection was deleting BehaviorSnapshots
+* Put in schematic of where mouses are
+* Don't forget to save mouse device choice. Check to make sure it is actually working as well
+* Add the icon again!
+* have in the corner WASD to move, QE up down, mouse to turn 
+	* Added Viewport help tab on pages that use viewport
+* Turn down settings/allow user to change graphics settings for computer 
+* On graphics page, have it add current resolution to list of resolutions.
+	* Decided to get rid of changing resolution entirely since Windowed Fullscreen uses 
+	system's current resolution.
 * Show Regions in Editor checkbox not working
+	* Apparently, this works now???
+* List of objects in scene to delete and find
+
+
+exposure:
+0.263
+ambient intensity:
+2.537
+
+Colors:
+
+Normal:
+
+
+Hovered:
+Float srgb	Float linear	srgb
+.87		.74		222
+.64		.37		163
+.04		.00		10
+
+Pressed:
+.85 		.70		217
+.51 		.23		130
+.04 		.00		10
+
+13h30 15:55

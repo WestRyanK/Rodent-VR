@@ -1,6 +1,7 @@
 #include "RodentVRGameInstance.h"
 #include "Kismet/GameplayStatics.h"
 #include "Core/RodentVRSaveGame.h"
+#include "Core/GraphicsSettingsUpdater.h"
 #include "XML/RodentVRSettingsXmlReader.h"
 
 void URodentVRGameInstance::Init()

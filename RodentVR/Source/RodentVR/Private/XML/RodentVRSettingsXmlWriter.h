@@ -26,4 +26,6 @@ private:
 	static void SaveAirPuffers(rapidxml::xml_document<>* Document, rapidxml::xml_node<>* Root, URodentVRSettings* Settings);
 	static void SaveRewardDevices(rapidxml::xml_document<>* Document, rapidxml::xml_node<>* Root, URodentVRSettings* Settings);
 	static void SavePlaylist(rapidxml::xml_document<>* Document, rapidxml::xml_node<>* Root, URodentVRSettings* Settings);
+	static void SaveGraphics(rapidxml::xml_document<>* Document, rapidxml::xml_node<>* Root, URodentVRSettings* Settings);
+
 };

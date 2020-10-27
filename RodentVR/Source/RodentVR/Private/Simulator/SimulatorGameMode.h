@@ -23,8 +23,8 @@ class ASimulatorGameMode : public AGameMode
 private:
 	UPROPERTY()
 		UStopConditionsChecker* StopConditionsChecker;
-	UPROPERTY(BlueprintGetter = GetRodentVRSettings, BlueprintSetter = SetRodentVRSettings)
-		URodentVRSettings* RodentVRSettings;
+	//UPROPERTY(BlueprintGetter = GetRodentVRSettings, BlueprintSetter = SetRodentVRSettings)
+	//	URodentVRSettings* RodentVRSettings;
 
 	UFUNCTION()
 		void OnMazeLoaded();
@@ -39,12 +39,12 @@ public:
 	ASimulatorGameMode();
 	
 	UPROPERTY(BlueprintReadOnly)
-		int CurrentMazeIndex;
+		int CurrentMazeIndex = -1;
 
-	UFUNCTION(BlueprintGetter)
-		URodentVRSettings* GetRodentVRSettings();
-	UFUNCTION(BlueprintSetter)
-		void SetRodentVRSettings(URodentVRSettings* RodentVRSettingsValue);
+	//UFUNCTION(BlueprintGetter)
+	//	URodentVRSettings* GetRodentVRSettings();
+	//UFUNCTION(BlueprintSetter)
+	//	void SetRodentVRSettings(URodentVRSettings* RodentVRSettingsValue);
 
 	UFUNCTION(BlueprintCallable)
 		void LoadNextMaze();

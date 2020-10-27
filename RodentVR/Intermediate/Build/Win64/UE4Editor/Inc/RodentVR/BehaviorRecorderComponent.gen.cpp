@@ -19,6 +19,7 @@ void EmptyLinkFunctionForGeneratedCodeBehaviorRecorderComponent() {}
 	UPackage* Z_Construct_UPackage__Script_RodentVR();
 	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FDateTime();
 	RODENTVR_API UClass* Z_Construct_UClass_URegionSettings_NoRegister();
+	RODENTVR_API UClass* Z_Construct_UClass_UBehaviorSnapshot_NoRegister();
 // End Cross Module References
 	DEFINE_FUNCTION(UBehaviorRecorderComponent::execAddDelegates)
 	{
@@ -300,6 +301,12 @@ void EmptyLinkFunctionForGeneratedCodeBehaviorRecorderComponent() {}
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Snapshots_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FArrayPropertyParams NewProp_Snapshots;
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_Snapshots_Inner;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
 	};
@@ -324,6 +331,17 @@ void EmptyLinkFunctionForGeneratedCodeBehaviorRecorderComponent() {}
 		{ "ModuleRelativePath", "Private/BehaviorRecording/BehaviorRecorderComponent.h" },
 	};
 #endif
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UBehaviorRecorderComponent_Statics::NewProp_Snapshots_MetaData[] = {
+		{ "ModuleRelativePath", "Private/BehaviorRecording/BehaviorRecorderComponent.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UClass_UBehaviorRecorderComponent_Statics::NewProp_Snapshots = { "Snapshots", nullptr, (EPropertyFlags)0x0040000000000000, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UBehaviorRecorderComponent, Snapshots), EArrayPropertyFlags::None, METADATA_PARAMS(Z_Construct_UClass_UBehaviorRecorderComponent_Statics::NewProp_Snapshots_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UBehaviorRecorderComponent_Statics::NewProp_Snapshots_MetaData)) };
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UBehaviorRecorderComponent_Statics::NewProp_Snapshots_Inner = { "Snapshots", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, Z_Construct_UClass_UBehaviorSnapshot_NoRegister, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UBehaviorRecorderComponent_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UBehaviorRecorderComponent_Statics::NewProp_Snapshots,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UBehaviorRecorderComponent_Statics::NewProp_Snapshots_Inner,
+	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_UBehaviorRecorderComponent_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<UBehaviorRecorderComponent>::IsAbstract,
 	};
@@ -333,11 +351,11 @@ void EmptyLinkFunctionForGeneratedCodeBehaviorRecorderComponent() {}
 		&StaticCppClassTypeInfo,
 		DependentSingletons,
 		FuncInfo,
-		nullptr,
+		Z_Construct_UClass_UBehaviorRecorderComponent_Statics::PropPointers,
 		nullptr,
 		UE_ARRAY_COUNT(DependentSingletons),
 		UE_ARRAY_COUNT(FuncInfo),
-		0,
+		UE_ARRAY_COUNT(Z_Construct_UClass_UBehaviorRecorderComponent_Statics::PropPointers),
 		0,
 		0x00A000A4u,
 		METADATA_PARAMS(Z_Construct_UClass_UBehaviorRecorderComponent_Statics::Class_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UClass_UBehaviorRecorderComponent_Statics::Class_MetaDataParams))
@@ -351,7 +369,7 @@ void EmptyLinkFunctionForGeneratedCodeBehaviorRecorderComponent() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UBehaviorRecorderComponent, 3096899078);
+	IMPLEMENT_CLASS(UBehaviorRecorderComponent, 1335644821);
 	template<> RODENTVR_API UClass* StaticClass<UBehaviorRecorderComponent>()
 	{
 		return UBehaviorRecorderComponent::StaticClass();
