@@ -1,9 +1,0 @@
-C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Shipping\AppleImageUtils\Definitions.AppleImageUtils.h
-C:/Users/Ryan/Documents/UnrealEngine/Engine/Plugins/Runtime/AppleImageUtils/Source/AppleImageUtils/Private/AppleImageUtilsBlueprintProxy.cpp
-C:\Users\Ryan\Documents\UnrealEngine\Engine\Plugins\Runtime\AppleImageUtils\Source\AppleImageUtils\Public\AppleImageUtilsBlueprintProxy.h
-C:\Users\Ryan\Documents\UnrealEngine\Engine\Plugins\Runtime\AppleImageUtils\Source\AppleImageUtils\Public\AppleImageUtilsTypes.h
-C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Inc\AppleImageUtils\AppleImageUtilsTypes.generated.h
-C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Inc\AppleImageUtils\AppleImageUtilsBlueprintProxy.generated.h
-C:\Users\Ryan\Documents\UnrealEngine\Engine\Plugins\Runtime\AppleImageUtils\Source\AppleImageUtils\Public\IAppleImageUtilsPlugin.h
-C:\Users\Ryan\Documents\UnrealEngine\Engine\Plugins\Runtime\AppleImageUtils\Source\AppleImageUtils\Public\AppleImageUtilsAvailability.h
-C:/Users/Ryan/Documents/UnrealEngine/Engine/Plugins/Runtime/AppleImageUtils/Source/AppleImageUtils/Private/AppleImageUtilsPlugin.cpp

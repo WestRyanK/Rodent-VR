@@ -1,3 +1,0 @@
-C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Shipping\CharacterAI\Definitions.CharacterAI.h
-C:\Users\Ryan\Documents\UnrealEngine\Engine\Plugins\Experimental\CharacterAI\Source\CharacterAI\Public\CharacterAIModule.h
-C:\Users\Ryan\Documents\UnrealEngine\Engine\Plugins\Experimental\CharacterAI\Source\CharacterAI\Private\CharacterAIPrivate.h

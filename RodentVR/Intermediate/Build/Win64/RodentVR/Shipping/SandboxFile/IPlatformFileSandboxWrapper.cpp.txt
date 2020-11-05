@@ -1,4 +1,0 @@
-C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Shipping\SandboxFile\Definitions.SandboxFile.h
-C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\SandboxFile\Public\IPlatformFileSandboxWrapper.h
-C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\HAL/PlatformFilemanager.h
-C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\HAL/IPlatformFileModule.h

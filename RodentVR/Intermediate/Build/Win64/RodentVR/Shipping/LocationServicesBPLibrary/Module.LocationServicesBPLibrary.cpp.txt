@@ -1,8 +1,0 @@
-C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Shipping\LocationServicesBPLibrary\Definitions.LocationServicesBPLibrary.h
-C:/Users/Ryan/Documents/UnrealEngine/Engine/Plugins/Runtime/LocationServicesBPLibrary/Source/LocationServicesBPLibrary/Private/LocationServicesBPLibrary.cpp
-C:\Users\Ryan\Documents\UnrealEngine\Engine\Plugins\Runtime\LocationServicesBPLibrary\Source\LocationServicesBPLibrary\Classes\LocationServicesBPLibrary.h
-C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Inc\LocationServicesBPLibrary\LocationServicesBPLibrary.generated.h
-C:\Users\Ryan\Documents\UnrealEngine\Engine\Plugins\Runtime\LocationServicesBPLibrary\Source\LocationServicesBPLibrary\Classes\LocationServicesImpl.h
-C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Inc\LocationServicesBPLibrary\LocationServicesImpl.generated.h
-C:/Users/Ryan/Documents/UnrealEngine/Engine/Plugins/Runtime/LocationServicesBPLibrary/Source/LocationServicesBPLibrary/Private/LocationServicesBPLibraryModule.cpp
-C:\Users\Ryan\Documents\UnrealEngine\Engine\Plugins\Runtime\LocationServicesBPLibrary\Source\LocationServicesBPLibrary\Public\LocationServicesBPLibraryModule.h

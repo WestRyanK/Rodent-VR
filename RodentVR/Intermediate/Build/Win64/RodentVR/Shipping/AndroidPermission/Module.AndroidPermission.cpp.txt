@@ -1,9 +1,0 @@
-C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Shipping\AndroidPermission\Definitions.AndroidPermission.h
-C:/Users/Ryan/Documents/UnrealEngine/Engine/Plugins/Runtime/AndroidPermission/Source/AndroidPermission/Private/AndroidPermission.cpp
-C:\Users\Ryan\Documents\UnrealEngine\Engine\Plugins\Runtime\AndroidPermission\Source\AndroidPermission\Public\AndroidPermission.h
-C:\Users\Ryan\Documents\UnrealEngine\Engine\Plugins\Runtime\AndroidPermission\Source\AndroidPermission\Classes\AndroidPermissionFunctionLibrary.h
-C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Inc\AndroidPermission\AndroidPermissionFunctionLibrary.generated.h
-C:\Users\Ryan\Documents\UnrealEngine\Engine\Plugins\Runtime\AndroidPermission\Source\AndroidPermission\Classes\AndroidPermissionCallbackProxy.h
-C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Inc\AndroidPermission\AndroidPermissionCallbackProxy.generated.h
-C:/Users/Ryan/Documents/UnrealEngine/Engine/Plugins/Runtime/AndroidPermission/Source/AndroidPermission/Private/AndroidPermissionCallbackProxy.cpp
-C:/Users/Ryan/Documents/UnrealEngine/Engine/Plugins/Runtime/AndroidPermission/Source/AndroidPermission/Private/AndroidPermissionFunctionLibrary.cpp

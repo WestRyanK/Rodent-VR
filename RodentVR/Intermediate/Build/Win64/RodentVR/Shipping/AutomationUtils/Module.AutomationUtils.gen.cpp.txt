@@ -1,7 +1,0 @@
-C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Shipping\AutomationUtils\Definitions.AutomationUtils.h
-C:/Users/Ryan/Drive/BYU/2018_Fall/cs_497r/Rodent-VR/RodentVR/Intermediate/Build/Win64/RodentVR/Inc/AutomationUtils/AutomationUtils.init.gen.cpp
-C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\CoreUObject\Public\UObject/GeneratedCppIncludes.h
-C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\CoreUObject\Public\UObject/MetaData.h
-C:/Users/Ryan/Drive/BYU/2018_Fall/cs_497r/Rodent-VR/RodentVR/Intermediate/Build/Win64/RodentVR/Inc/AutomationUtils/AutomationUtilsBlueprintLibrary.gen.cpp
-C:\Users\Ryan\Documents\UnrealEngine\Engine\Plugins\Experimental\AutomationUtils\Source\AutomationUtils/Public/AutomationUtilsBlueprintLibrary.h
-C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Inc\AutomationUtils\AutomationUtilsBlueprintLibrary.generated.h

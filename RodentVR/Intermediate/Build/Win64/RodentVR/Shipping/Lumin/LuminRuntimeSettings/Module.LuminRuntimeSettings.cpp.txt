@@ -1,5 +1,0 @@
-C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Shipping\Lumin\LuminRuntimeSettings\Definitions.LuminRuntimeSettings.h
-C:/Users/Ryan/Documents/UnrealEngine/Engine/Source/Runtime/Lumin/LuminRuntimeSettings/Private/LuminRuntimeSettings.cpp
-C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Lumin\LuminRuntimeSettings\Classes\LuminRuntimeSettings.h
-C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Inc\Lumin\LuminRuntimeSettings\LuminRuntimeSettings.generated.h
-C:/Users/Ryan/Documents/UnrealEngine/Engine/Source/Runtime/Lumin/LuminRuntimeSettings/Private/LuminRuntimeSettingsModule.cpp

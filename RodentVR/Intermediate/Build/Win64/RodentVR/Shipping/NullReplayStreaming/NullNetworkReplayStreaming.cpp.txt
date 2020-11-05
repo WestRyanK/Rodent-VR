@@ -1,4 +1,0 @@
-C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Shipping\NullReplayStreaming\Definitions.NullNetworkReplayStreaming.h
-C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\NetworkReplayStreaming\NullNetworkReplayStreaming\Public\NullNetworkReplayStreaming.h
-C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\NetworkReplayStreaming\NetworkReplayStreaming\Public\NetworkReplayStreaming.h
-C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\Misc/NetworkVersion.h

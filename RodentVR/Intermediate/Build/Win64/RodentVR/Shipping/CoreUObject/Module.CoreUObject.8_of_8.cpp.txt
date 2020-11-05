@@ -1,7 +1,0 @@
-C:/Users/Ryan/Documents/UnrealEngine/Engine/Source/Runtime/CoreUObject/Private/UObject/UObjectHash.cpp
-C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Core\Public\Misc/AsciiSet.h
-C:/Users/Ryan/Documents/UnrealEngine/Engine/Source/Runtime/CoreUObject/Private/UObject/UObjectLinker.cpp
-C:/Users/Ryan/Documents/UnrealEngine/Engine/Source/Runtime/CoreUObject/Private/UObject/UObjectMarks.cpp
-C:/Users/Ryan/Documents/UnrealEngine/Engine/Source/Runtime/CoreUObject/Private/UObject/UObjectNetIndex.cpp
-C:/Users/Ryan/Documents/UnrealEngine/Engine/Source/Runtime/CoreUObject/Private/UObject/UObjectThreadContext.cpp
-C:/Users/Ryan/Documents/UnrealEngine/Engine/Source/Runtime/CoreUObject/Private/UObject/WeakObjectPtr.cpp

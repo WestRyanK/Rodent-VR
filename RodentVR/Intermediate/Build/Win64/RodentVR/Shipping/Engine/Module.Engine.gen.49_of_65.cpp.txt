@@ -1,8 +1,0 @@
-C:/Users/Ryan/Drive/BYU/2018_Fall/cs_497r/Rodent-VR/RodentVR/Intermediate/Build/Win64/RodentVR/Inc/Engine/PlatformInterfaceWebResponse.gen.cpp
-C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\CoreUObject\Public\UObject/GeneratedCppIncludes.h
-C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\CoreUObject\Public\UObject/MetaData.h
-C:\Users\Ryan\Documents\UnrealEngine\Engine\Source\Runtime\Engine/Classes/Engine/PlatformInterfaceWebResponse.h
-C:\Users\Ryan\Drive\BYU\2018_Fall\cs_497r\Rodent-VR\RodentVR\Intermediate\Build\Win64\RodentVR\Inc\Engine\PlatformInterfaceWebResponse.generated.h
-C:/Users/Ryan/Drive/BYU/2018_Fall/cs_497r/Rodent-VR/RodentVR/Intermediate/Build/Win64/RodentVR/Inc/Engine/Player.gen.cpp
-C:/Users/Ryan/Drive/BYU/2018_Fall/cs_497r/Rodent-VR/RodentVR/Intermediate/Build/Win64/RodentVR/Inc/Engine/PlayerCameraManager.gen.cpp
-C:/Users/Ryan/Drive/BYU/2018_Fall/cs_497r/Rodent-VR/RodentVR/Intermediate/Build/Win64/RodentVR/Inc/Engine/PlayerController.gen.cpp
