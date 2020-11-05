@@ -1,7 +1,7 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 #include "Window.h"
-#include "Engine/GameEngine.h"
+//#include "Engine/GameEngine.h"
 #define Debug(time, color, x) if(GEngine){GEngine->AddOnScreenDebugMessage(-1, time, color, x);}
 
 Window* Window::Instance = NULL;

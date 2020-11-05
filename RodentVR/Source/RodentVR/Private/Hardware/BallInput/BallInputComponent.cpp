@@ -2,7 +2,6 @@
 
 
 #include "BallInputComponent.h"
-#include "Engine.h"
 #include "BallInput.h"
 #include "Settings/RodentVRSettings.h"
 #include "Kismet/GameplayStatics.h"
@@ -22,35 +21,45 @@ void UBallInputComponent::BeginPlay()
 	URodentVRGameInstance* GameInstance = (URodentVRGameInstance*)UGameplayStatics::GetGameInstance(this);
 	if (IsValid(GameInstance))
 	{
+		UE_LOG(LogTemp, Log, TEXT("GameInstance is valid"));
 		URodentVRSettings* RodentVRSettings = GameInstance->GetRodentVRSettings();
-
-		if (IsValid(RodentVRSettings))
-		{
-			int MouseAFlipped = 1;
-			int MouseBFlipped = -1;
-			if (RodentVRSettings->GetBallInputMouseAIsOnBack()) {
-				MouseAFlipped = -1;
-			}
-			if (RodentVRSettings->GetBallInputMouseBIsOnRight()) {
-				MouseBFlipped = 1;
-			}
-
-			this->MouseAMultiplier = RodentVRSettings->GetBallInputMouseAMultiplier() * MouseAFlipped;
-			this->MouseBMultiplier = RodentVRSettings->GetBallInputMouseBMultiplier() * MouseBFlipped;
-
-			std::string MouseANameStr = std::string(TCHAR_TO_UTF8(*(RodentVRSettings->GetBallInputMouseADevice())));
-			std::string MouseBNameStr = std::string(TCHAR_TO_UTF8(*(RodentVRSettings->GetBallInputMouseBDevice())));
-
-			std::wstring MouseANameWstr;
-			std::wstring MouseBNameWstr;
-			MouseANameWstr.assign(MouseANameStr.begin(), MouseANameStr.end());
-			MouseBNameWstr.assign(MouseBNameStr.begin(), MouseBNameStr.end());
-
-			UBallInput::Initialize(MouseANameWstr, MouseBNameWstr);
-		}
+		this->SetBallInputSettings(RodentVRSettings);
 	}
+	else {
+		UE_LOG(LogTemp, Log, TEXT("GameInstance not valid"));
+	}
+}
 
-	UBallInput::Start();
+void UBallInputComponent::SetBallInputSettings(URodentVRSettings* Settings)
+{
+	if (IsValid(Settings))
+	{
+		int MouseAFlipped = 1;
+		int MouseBFlipped = -1;
+		if (Settings->GetBallInputMouseAIsOnBack()) {
+			MouseAFlipped = -1;
+		}
+		if (Settings->GetBallInputMouseBIsOnRight()) {
+			MouseBFlipped = 1;
+		}
+
+		this->MouseAMultiplier = Settings->GetBallInputMouseAMultiplier() * MouseAFlipped;
+		this->MouseBMultiplier = Settings->GetBallInputMouseBMultiplier() * MouseBFlipped;
+
+		std::string MouseANameStr = std::string(TCHAR_TO_UTF8(*(Settings->GetBallInputMouseADevice())));
+		std::string MouseBNameStr = std::string(TCHAR_TO_UTF8(*(Settings->GetBallInputMouseBDevice())));
+
+		std::wstring MouseANameWstr;
+		std::wstring MouseBNameWstr;
+		MouseANameWstr.assign(MouseANameStr.begin(), MouseANameStr.end());
+		MouseBNameWstr.assign(MouseBNameStr.begin(), MouseBNameStr.end());
+
+		UE_LOG(LogTemp, Log, TEXT("MouseADevice: "), *Settings->GetBallInputMouseADevice());
+		UE_LOG(LogTemp, Log, TEXT("MouseBDevice: "), *Settings->GetBallInputMouseBDevice());
+
+		UBallInput::Initialize(MouseANameWstr, MouseBNameWstr);
+		UBallInput::Start();
+	}
 }
 
 
@@ -65,16 +74,27 @@ void UBallInputComponent::EndPlay(EEndPlayReason::Type EndPlayReason)
 void UBallInputComponent::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
+	URodentVRGameInstance* GameInstance = (URodentVRGameInstance*)UGameplayStatics::GetGameInstance(this);
+	if (IsValid(GameInstance))
+	{
+		URodentVRSettings* RodentVRSettings = GameInstance->GetRodentVRSettings();
+		if (IsValid(RodentVRSettings))
+		{
 
-	float x = 0;
-	float y = 0;
-	UBallInput::GetMovementDelta(&x, &y);
+			float xMouseMovement = 0;
+			float yMouseMovement = 0;
+			UBallInput::GetMovementDelta(&xMouseMovement, &yMouseMovement);
 
-	//if (GEngine)
-	//	GEngine->AddOnScreenDebugMessage(-1, 0.5f, FColor::Yellow, *(FString::SanitizeFloat(x) + " " + FString::SanitizeFloat(y)));
+			float x = xMouseMovement * this->MouseAMultiplier * 0.001f;
+			float y = yMouseMovement * this->MouseBMultiplier * 0.001f;
 
-	APawn* OwnerPawn = (APawn*)this->GetOwner();
-	OwnerPawn->AddMovementInput(OwnerPawn->GetActorForwardVector(), x * this->MouseAMultiplier * 0.001f);
-	OwnerPawn->AddControllerYawInput(y * this->MouseBMultiplier * 0.001f);
+			//if (GEngine)
+			//	GEngine->AddOnScreenDebugMessage(-1, 0.01f, FColor::Yellow, *(FString::SanitizeFloat(x) + " " + FString::SanitizeFloat(y)));
+
+			APawn* OwnerPawn = (APawn*)this->GetOwner();
+			OwnerPawn->AddMovementInput(OwnerPawn->GetActorForwardVector(), x);
+			OwnerPawn->AddControllerYawInput(y);
+		}
+	}
 }
 

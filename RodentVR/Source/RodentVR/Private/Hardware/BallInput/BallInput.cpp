@@ -6,7 +6,6 @@
 #include <mutex>
 #include <thread>
 #include <stdexcept>
-#include "Engine/GameEngine.h"
 #define Debug(Time, Color, x) if(GEngine){GEngine->AddOnScreenDebugMessage(-1, Time, Color, x);}
 
 MouseMovementReader* MovementReader = NULL;
@@ -17,7 +16,7 @@ void UBallInput::GetMovementDelta(float* OutX, float* OutY)
 {
 	if (MovementReader == NULL)
 	{
-		Debug(10.0f, FColor::Red,TEXT("BallInput must be initialized before calling get_movement_delta()!"));
+		Debug(10.0f, FColor::Red, TEXT("BallInput must be initialized before calling get_movement_delta()!"));
 	}
 	else if (OutX != NULL && OutY != NULL)
 	{
@@ -35,7 +34,7 @@ FString UBallInput::GetCurrentDeviceName()
 {
 	const wchar_t* CurrentDeviceName = MovementReader->GetCurrentMouseName();
 	FString CurrentDevice = FString(CurrentDeviceName);
-	
+
 	return CurrentDevice;
 }
 
@@ -63,10 +62,22 @@ void UBallInput::Initialize()
 
 void UBallInput::Start()
 {
-	MovementReader->StartReader();
+	if (MovementReader != nullptr) {
+		MovementReader->StartReader();
+	}
+	else {
+		Debug(10.0f, FColor::Red, TEXT("MovementReader null when Starting reader!"));
+		UE_LOG(LogTemp, Error, TEXT("MovementReader null when Starting reader!"));
+	}
 }
 
 void UBallInput::Stop()
 {
-	MovementReader->StopReader();
+	if (MovementReader != nullptr) {
+		MovementReader->StopReader();
+	}
+	else {
+		Debug(10.0f, FColor::Red, TEXT("MovementReader null when Stopping reader!"));
+		UE_LOG(LogTemp, Error, TEXT("MovementReader null when Stopping reader!"));
+	}
 }

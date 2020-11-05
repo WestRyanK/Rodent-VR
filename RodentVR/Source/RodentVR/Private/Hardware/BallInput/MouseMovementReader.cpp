@@ -1,7 +1,6 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 #include "MouseMovementReader.h"
-#include "Engine/GameEngine.h"
 #include <String.h>
 #include <string>
 #include "RawInputDevicesReader.h"
@@ -10,7 +9,6 @@
 
 MouseMovementReader::MouseMovementReader(std::wstring MouseAName, std::wstring MouseBName)
 {
-	this->IsIdentifyMouseMode = false;
 	this->Delta[AXIS_X] = 0;
 	this->Delta[AXIS_Y] = 0;
 	this->RegisterForRawInput();
@@ -20,7 +18,6 @@ MouseMovementReader::MouseMovementReader(std::wstring MouseAName, std::wstring M
 
 MouseMovementReader::MouseMovementReader()
 {
-	this->IsIdentifyMouseMode = true;
 	this->Delta[AXIS_X] = 0;
 	this->Delta[AXIS_Y] = 0;
 	this->RegisterForRawInput();
@@ -41,25 +38,19 @@ bool MouseMovementReader::ProcessMessage(HWND Hwnd, uint32 Message, WPARAM WPara
 		{
 			this->LockMouseReader();
 
-			if (this->IsIdentifyMouseMode)
-			{
-				this->MouseAId = Raw->header.hDevice;
-				this->MouseBId = Raw->header.hDevice;
-			}
-			else
-			{
-				// TODO: I could imagine that some devices have a faster 
-				// refresh rate than other devices. Could that make it 
-				// appear that some devices are moving faster than others?
+			this->LastReceivedMouseId = Raw->header.hDevice;
 
-				if (Raw->header.hDevice == this->MouseAId)
-				{
-					this->Delta[AXIS_X] += Raw->data.mouse.lLastY;
-				}
-				else if (Raw->header.hDevice == this->MouseBId)
-				{
-					this->Delta[AXIS_Y] += Raw->data.mouse.lLastY;
-				}
+			// TODO: I could imagine that some devices have a faster 
+			// refresh rate than other devices. Could that make it 
+			// appear that some devices are moving faster than others?
+
+			if (Raw->header.hDevice == this->MouseAId)
+			{
+				this->Delta[AXIS_X] += Raw->data.mouse.lLastY;
+			}
+			else if (Raw->header.hDevice == this->MouseBId)
+			{
+				this->Delta[AXIS_Y] += Raw->data.mouse.lLastY;
 			}
 
 			this->UnlockMouseReader();
@@ -114,7 +105,7 @@ const wchar_t* MouseMovementReader::GetCurrentMouseName()
 	{
 		const wchar_t* DeviceName = RawInputDevicesReader::GetDeviceName(RawInputDeviceList[i].hDevice);
 
-		if (this->MouseAId == RawInputDeviceList[i].hDevice)
+		if (this->LastReceivedMouseId  == RawInputDeviceList[i].hDevice)
 		{
 			CurrentDeviceName = DeviceName;
 		}

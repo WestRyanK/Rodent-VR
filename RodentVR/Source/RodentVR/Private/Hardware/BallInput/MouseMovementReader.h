@@ -15,8 +15,8 @@ class RODENTVR_API MouseMovementReader : public MouseReader
 private:
 	HANDLE MouseAId = {};
 	HANDLE MouseBId = {};
+	HANDLE LastReceivedMouseId = {};
 	float Delta[2];
-	bool IsIdentifyMouseMode;
 	void SetCursorHandles(const wchar_t* MouseAName, const wchar_t* MouseBName);
 
 protected:
