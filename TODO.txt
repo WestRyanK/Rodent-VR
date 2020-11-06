@@ -8,7 +8,6 @@
 * Allow switching which side the mouse is on.
 * Cancelling NewMaze still adds one
 * Ensure you can't change settings until you create a settings file first.
-* Add version in corner of main page.
 * Fix camera turning issue on BallInput page.
 
 
@@ -31,17 +30,8 @@ DONE:
 * Show Regions in Editor checkbox not working
 	* Apparently, this works now???
 * List of objects in scene to delete and find
-* Stylize everything:
-	* Large Text Buttons
-	* Small Text Buttons
-		* BallInput - Switch, Clear
-		* File
-		* PlaylistEntry
-	* Header Text
-	* Paragraph Text
-		* MazeObjectListItem
-		* Maze Object Texture
-	* Checkboxes
+* Stylize everything
+* Add version in corner of main page.
 
 
 exposure:
