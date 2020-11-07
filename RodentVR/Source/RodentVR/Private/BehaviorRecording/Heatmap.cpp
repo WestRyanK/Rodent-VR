@@ -22,8 +22,8 @@ AHeatmap::AHeatmap()
 	this->HeatmapMesh->SetStaticMesh(Mesh);
 	
 	this->ColorGradient = NewObject<UColorGradient>();
-	this->ColorGradient->AddColorStop(0, FLinearColor(0, 255, 0, 255));
-	this->ColorGradient->AddColorStop(50, FLinearColor(255, 0, 0, 255));
+	this->ColorGradient->AddColorStop(0.0f, FLinearColor(0.0f, 1.0f, 0.0f, 1.0f));
+	this->ColorGradient->AddColorStop(50.0f, FLinearColor(1.0f, 0.0f, 0.0f, 1.0f));
 }
 
 TArray<UBehaviorSnapshot*> AHeatmap::GetSnapshots()

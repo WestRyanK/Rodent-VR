@@ -79,7 +79,7 @@ void UHeatmapTextureGenerator::DrawHeatmapInTextureData(TArray<float> Buckets, F
 
 			float BucketValue = Buckets[BucketY * BucketsWidth + BucketX];
 			FLinearColor BucketLinearColor = ColorGradient->GetColorAtValue(BucketValue);
-			FColor BucketColor = FColor((int)BucketLinearColor.R, (int)BucketLinearColor.G, (int)BucketLinearColor.B, 255);
+			FColor BucketColor = FColor((int)(BucketLinearColor.R * 255), (int)(BucketLinearColor.G * 255), (int)(BucketLinearColor.B * 255), 255);
 
 			// The buckets on the bottom of the image may go off the end.
 			int MaxY = BucketSize;

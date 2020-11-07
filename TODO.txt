@@ -2,13 +2,12 @@
 * Enter/Leave Region should use stack
 
 * Have unreal not crash when device name is wrong
-* Opening a maze with a device that doesn't exist will crash.
+* Opening a maze with a device that doesn't exist will crash. ??? Can't reproduce anymore???
 * Have some way to disable air puffers
 * Allow user to change ambient lighting in each maze
-* Allow switching which side the mouse is on.
-* Cancelling NewMaze still adds one
-* Ensure you can't change settings until you create a settings file first.
 * Fix camera turning issue on BallInput page.
+* Complete Analysis heatmap
+* Fix no exporting images on packaged build
 
 
 
@@ -32,6 +31,9 @@ DONE:
 * List of objects in scene to delete and find
 * Stylize everything
 * Add version in corner of main page.
+* Allow switching which side the mouse is on.
+* Ensure you can't change settings until you create a settings file first.
+* Cancelling NewMaze still adds one
 
 
 exposure:
@@ -55,4 +57,3 @@ Pressed:
 .51 		.23		130
 .04 		.00		10
 
-13h30 15:55
