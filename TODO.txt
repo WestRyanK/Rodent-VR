@@ -8,11 +8,19 @@
 * Fix camera turning issue on BallInput page.
 * Complete Analysis heatmap
 * Fix no exporting images on packaged build
+* Disable nidaq completely, under devices
+* Make paths relative for behavior files
+* Hide debug logging?
+* Really big behavior files crash analysis
+* Exporting images still doesn't work.
+* 1-1.5 inches off the ground
 
 
 
 
 DONE:
+* Start resolution lower
+* Didn't load graphics settings when opening file
 * Fix time limit 70 secs crashing
 	* Garbage collection was deleting BehaviorSnapshots
 * Save Behavior is crashing

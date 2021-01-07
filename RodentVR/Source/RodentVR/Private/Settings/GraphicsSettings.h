@@ -20,7 +20,7 @@ public:
 	UPROPERTY(BlueprintGetter = GetScreenResolution, BlueprintSetter = SetScreenResolution)
 		FIntPoint ScreenResolution = FIntPoint(1280, 720);
 	UPROPERTY(BlueprintGetter = GetScreenPercentage, BlueprintSetter = SetScreenPercentage)
-		int ScreenPercentage = 100;
+		int ScreenPercentage = 50;
 	UPROPERTY(BlueprintGetter = GetPostProcessingQuality, BlueprintSetter = SetPostProcessingQuality)
 		GraphicsQualityLevels PostProcessingQuality = GraphicsQualityLevels::MEDIUM;
 	UPROPERTY(BlueprintGetter = GetAntiAliasingQuality, BlueprintSetter = SetAntiAliasingQuality)
