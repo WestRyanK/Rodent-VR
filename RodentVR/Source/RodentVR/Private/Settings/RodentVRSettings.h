@@ -13,37 +13,39 @@
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FRodentVRSettingsChangedDelegate);
 
 /**
- * 
+ *
  */
 UCLASS(Blueprintable)
 class URodentVRSettings : public UObject
 {
 	GENERATED_BODY()
-	
+
 private:
-	UPROPERTY(BlueprintGetter=GetSettingsFileName, BlueprintSetter=SetSettingsFileName)
+	UPROPERTY(BlueprintGetter = GetSettingsFileName, BlueprintSetter = SetSettingsFileName)
 		FString SettingsFileName;
-	UPROPERTY(BlueprintGetter=GetBallInputMouseADevice, BlueprintSetter=SetBallInputMouseADevice)
+	UPROPERTY(BlueprintGetter = GetBallInputMouseADevice, BlueprintSetter = SetBallInputMouseADevice)
 		FString BallInputMouseADevice;
-	UPROPERTY(BlueprintGetter=GetBallInputMouseBDevice, BlueprintSetter=SetBallInputMouseBDevice)
+	UPROPERTY(BlueprintGetter = GetBallInputMouseBDevice, BlueprintSetter = SetBallInputMouseBDevice)
 		FString BallInputMouseBDevice;
-	UPROPERTY(BlueprintGetter=GetBallInputMouseAMultiplier, BlueprintSetter=SetBallInputMouseAMultiplier)
+	UPROPERTY(BlueprintGetter = GetBallInputMouseAMultiplier, BlueprintSetter = SetBallInputMouseAMultiplier)
 		float BallInputMouseAMultiplier = 5.0f;
-	UPROPERTY(BlueprintGetter=GetBallInputMouseBMultiplier, BlueprintSetter=SetBallInputMouseBMultiplier)
+	UPROPERTY(BlueprintGetter = GetBallInputMouseBMultiplier, BlueprintSetter = SetBallInputMouseBMultiplier)
 		float BallInputMouseBMultiplier = 5.0f;
-	UPROPERTY(BlueprintGetter=GetBallInputMouseAIsOnBack, BlueprintSetter=SetBallInputMouseAIsOnBack)
+	UPROPERTY(BlueprintGetter = GetBallInputMouseAIsOnBack, BlueprintSetter = SetBallInputMouseAIsOnBack)
 		bool BallInputMouseAIsOnBack = true;
-	UPROPERTY(BlueprintGetter=GetBallInputMouseBIsOnRight, BlueprintSetter=SetBallInputMouseBIsOnRight)
+	UPROPERTY(BlueprintGetter = GetBallInputMouseBIsOnRight, BlueprintSetter = SetBallInputMouseBIsOnRight)
 		bool BallInputMouseBIsOnRight = true;
-	UPROPERTY(BlueprintGetter=GetAirPufferLeftDevice, BlueprintSetter=SetAirPufferLeftDevice)
+	UPROPERTY(BlueprintGetter = GetAirPufferLeftDevice, BlueprintSetter = SetAirPufferLeftDevice)
 		UDevice* AirPufferLeftDevice;
-	UPROPERTY(BlueprintGetter=GetAirPufferRightDevice, BlueprintSetter=SetAirPufferRightDevice)
+	UPROPERTY(BlueprintGetter = GetAirPufferRightDevice, BlueprintSetter = SetAirPufferRightDevice)
 		UDevice* AirPufferRightDevice;
-	UPROPERTY(BlueprintGetter=GetAirPufferFrontAngle, BlueprintSetter=SetAirPufferFrontAngle)
+	UPROPERTY(BlueprintGetter = GetAirPufferFrontAngle, BlueprintSetter = SetAirPufferFrontAngle)
 		float AirPufferFrontAngle = 30.0f;
-	UPROPERTY(BlueprintGetter=GetRewardDevices)
+	UPROPERTY(BlueprintGetter = GetRewardDevices)
 		TArray<UDevice*> RewardDevices;
-	UPROPERTY(BlueprintGetter=GetMazePlaylist)
+	UPROPERTY(BlueprintGetter = GetIsNidaqEnabled, BlueprintSetter = SetIsNidaqEnabled)
+		bool IsNidaqEnabled = true;
+	UPROPERTY(BlueprintGetter = GetMazePlaylist)
 		TArray<UMazeSettings*> MazePlaylist;
 	UPROPERTY(BlueprintGetter = GetGraphicsSettings)
 		UGraphicsSettings* GraphicsSettings;
@@ -93,6 +95,10 @@ public:
 		float GetAirPufferFrontAngle();
 	UFUNCTION(BlueprintSetter)
 		void SetAirPufferFrontAngle(float AirPufferFrontAngleValue);
+	UFUNCTION(BlueprintGetter)
+		bool GetIsNidaqEnabled();
+	UFUNCTION(BlueprintSetter)
+		void SetIsNidaqEnabled(bool IsNidaqEnabledValue);
 	UFUNCTION(BlueprintGetter)
 		TArray<UDevice*> GetRewardDevices();
 	UFUNCTION(BlueprintCallable, BlueprintPure)

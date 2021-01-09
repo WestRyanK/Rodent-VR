@@ -163,6 +163,22 @@ void URodentVRSettings::SetAirPufferFrontAngle(float AirPufferFrontAngleValue)
 	}
 }
 
+
+bool URodentVRSettings::GetIsNidaqEnabled()
+{
+	return this->IsNidaqEnabled;
+}
+
+void URodentVRSettings::SetIsNidaqEnabled(bool IsNidaqEnabledValue)
+{
+	bool ValueChanged = (this->IsNidaqEnabled != IsNidaqEnabledValue);
+	this->IsNidaqEnabled = IsNidaqEnabledValue;
+	if (ValueChanged)
+	{
+		this->OnRodentVRSettingsChanged();
+	}
+}
+
 TArray<UDevice*> URodentVRSettings::GetRewardDevices()
 {
 	return this->RewardDevices;

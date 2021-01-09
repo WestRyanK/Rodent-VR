@@ -21,8 +21,10 @@ public:
 	static void control_NIDAQ(bool isOn, FString deviceName);
 	
 	UFUNCTION(BlueprintCallable, Category="NIDAQ")
-	static void init_NIDAQ();
+	static void init_NIDAQ(bool IsNidaqEnabledValue);
 
 private:
 	static void NIDAQ_write_digital(const char* deviceName, unsigned long data);
+
+	static bool IsNidaqEnabled;
 };

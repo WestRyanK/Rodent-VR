@@ -8,7 +8,7 @@
 * Fix camera turning issue on BallInput page.
 * Complete Analysis heatmap
 * Fix no exporting images on packaged build
-* Disable nidaq completely, under devices
+* Disable nidaq completely, under devices (Currently working on this!)
 * Make paths relative for behavior files
 * Hide debug logging?
 * Really big behavior files crash analysis

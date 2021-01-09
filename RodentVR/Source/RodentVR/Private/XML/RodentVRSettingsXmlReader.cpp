@@ -26,6 +26,10 @@ URodentVRSettings* URodentVRSettingsXmlReader::LoadRodentVRSettingsFromFile(FStr
 			URodentVRSettingsXmlReader::LoadRewardDevices(Settings, SettingsNode);
 			URodentVRSettingsXmlReader::LoadPlaylist(Settings, SettingsNode);
 			URodentVRSettingsXmlReader::LoadGraphics(Settings, SettingsNode);
+
+
+			bool IsNidaqEnabled = UXmlFileReader::GetBoolFromAttribute(SettingsNode, "IsNidaqEnabled", true);
+			Settings->SetIsNidaqEnabled(IsNidaqEnabled);
 		}
 	}
 

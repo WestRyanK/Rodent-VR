@@ -15,6 +15,8 @@ void URodentVRSettingsXmlWriter::SaveRodentVRSettings(URodentVRSettings* Setting
 	URodentVRSettingsXmlWriter::SavePlaylist(Document, Root, Settings);
 	URodentVRSettingsXmlWriter::SaveGraphics(Document, Root, Settings);
 
+	UXmlFileWriter::AddBoolAttribute(Document, Root, "IsNidaqEnabled", Settings->GetIsNidaqEnabled());
+
 
 	UXmlFileWriter::SaveFile(Document, TCHAR_TO_UTF8(*Settings->GetSettingsFileName()));
 
