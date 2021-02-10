@@ -21,6 +21,8 @@ public class RodentVR : ModuleRules
 		MinFilesUsingPrecompiledHeaderOverride = 1;
         bFasterWithoutUnity = true;
 
+		bEnableUndefinedIdentifierWarnings = false;
+
 		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore", "RuntimeTransformer" });
 
 		PrivateDependencyModuleNames.AddRange(new string[] { "SignalProcessing" });

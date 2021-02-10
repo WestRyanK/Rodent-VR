@@ -30,6 +30,8 @@ URodentVRSettings* URodentVRSettingsXmlReader::LoadRodentVRSettingsFromFile(FStr
 
 			bool IsNidaqEnabled = UXmlFileReader::GetBoolFromAttribute(SettingsNode, "IsNidaqEnabled", true);
 			Settings->SetIsNidaqEnabled(IsNidaqEnabled);
+			bool ShouldWarnIfNidaqServicesDisabled = UXmlFileReader::GetBoolFromAttribute(SettingsNode, "ShouldWarnIfNidaqServicesDisabled", true);
+			Settings->SetShouldWarnIfNidaqServicesDisabled(ShouldWarnIfNidaqServicesDisabled);
 		}
 	}
 

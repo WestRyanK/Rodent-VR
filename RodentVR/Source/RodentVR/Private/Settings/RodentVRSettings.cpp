@@ -163,6 +163,20 @@ void URodentVRSettings::SetAirPufferFrontAngle(float AirPufferFrontAngleValue)
 	}
 }
 
+bool URodentVRSettings::GetShouldWarnIfNidaqServicesDisabled()
+{
+	return this->ShouldWarnIfNidaqServicesDisabled;
+}
+
+void URodentVRSettings::SetShouldWarnIfNidaqServicesDisabled(bool ShouldWarnIfNidaqServicesDisabledValue)
+{
+	bool ValueChanged = (this->ShouldWarnIfNidaqServicesDisabled != ShouldWarnIfNidaqServicesDisabledValue);
+	this->ShouldWarnIfNidaqServicesDisabled = ShouldWarnIfNidaqServicesDisabledValue;
+	if (ValueChanged)
+	{
+		this->OnRodentVRSettingsChanged();
+	}
+}
 
 bool URodentVRSettings::GetIsNidaqEnabled()
 {

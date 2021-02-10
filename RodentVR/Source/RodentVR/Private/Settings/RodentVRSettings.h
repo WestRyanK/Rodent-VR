@@ -45,6 +45,8 @@ private:
 		TArray<UDevice*> RewardDevices;
 	UPROPERTY(BlueprintGetter = GetIsNidaqEnabled, BlueprintSetter = SetIsNidaqEnabled)
 		bool IsNidaqEnabled = true;
+	UPROPERTY(BlueprintGetter = GetShouldWarnIfNidaqServicesDisabled, BlueprintSetter = SetShouldWarnIfNidaqServicesDisabled)
+		bool ShouldWarnIfNidaqServicesDisabled = true;
 	UPROPERTY(BlueprintGetter = GetMazePlaylist)
 		TArray<UMazeSettings*> MazePlaylist;
 	UPROPERTY(BlueprintGetter = GetGraphicsSettings)
@@ -99,6 +101,10 @@ public:
 		bool GetIsNidaqEnabled();
 	UFUNCTION(BlueprintSetter)
 		void SetIsNidaqEnabled(bool IsNidaqEnabledValue);
+	UFUNCTION(BlueprintGetter)
+		bool GetShouldWarnIfNidaqServicesDisabled();
+	UFUNCTION(BlueprintSetter)
+		void SetShouldWarnIfNidaqServicesDisabled(bool ShouldWarnIfNidaqServicesDisabledValue);
 	UFUNCTION(BlueprintGetter)
 		TArray<UDevice*> GetRewardDevices();
 	UFUNCTION(BlueprintCallable, BlueprintPure)
