@@ -45,7 +45,6 @@ void UNIDAQ::NIDAQ_write_digital(const char* deviceName, unsigned long data)
 			DAQmxClearTask(taskHandle);
 		}
 		//if( DAQmxFailed(error) )
-		//	Debug(5.0f, FColor::Red, FString::Printf(TEXT("DAQmx Error: %S\n"),errBuff));
 			//printf("DAQmx Error: %s\n",errBuff);
 	}
 }

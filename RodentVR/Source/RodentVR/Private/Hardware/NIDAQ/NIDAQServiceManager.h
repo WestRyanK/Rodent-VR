@@ -23,7 +23,7 @@ enum class ServiceStatus : uint8
 };
 
 /**
- * 
+ *
  */
 UCLASS(Blueprintable)
 class UNIDAQServiceManager : public UObject
@@ -31,11 +31,14 @@ class UNIDAQServiceManager : public UObject
 	GENERATED_BODY()
 
 public:
-	UFUNCTION(BlueprintCallable, Category="NIDAQ")
-	static bool GetAreAllNidaqServicesRunning();
+	UFUNCTION(BlueprintCallable, Category = "NIDAQ")
+		static bool GetAreAllNidaqServicesRunning();
 
-	UFUNCTION(BlueprintCallable, Category="NIDAQ")
-	static bool StartAllNidaqServices();
+	UFUNCTION(BlueprintCallable, Category = "NIDAQ")
+		static bool StartAllNidaqServices();
+
+	UFUNCTION(BlueprintCallable, Category = "NIDAQ")
+		static bool GetIsProcessElevated();
 
 private:
 	static TArray<FString> NidaqServices;
@@ -43,7 +46,7 @@ private:
 	static LPCWSTR ConvertString(FString stringValue);
 
 	static ServiceStatus StartWindowsService(FString serviceName);
-	
+
 	static ServiceStatus GetServiceStatus(FString serviceName);
 
 };

@@ -37,25 +37,32 @@ void URewardDispenserComponent::TickComponent(float DeltaTime, ELevelTick TickTy
 
 void URewardDispenserComponent::DispenseReward(UDevice* Device, float RewardDeviceDispensingDurationSec)
 {
-	if (IsValid(Device))
+	URodentVRGameInstance* GameInstance = (URodentVRGameInstance*)UGameplayStatics::GetGameInstance(this);
+	if (GameInstance->GetRodentVRSettings()->GetIsNidaqEnabled())
 	{
-		UNIDAQ::control_NIDAQ(true, Device->GetDevicePath());
-
-		if (RewardDeviceDispensingDurationSec <= 0.0f || RewardDeviceDispensingDurationSec > 25.0f)
+		if (IsValid(Device))
 		{
-			RewardDeviceDispensingDurationSec = 25.0f;
+			UNIDAQ::control_NIDAQ(true, Device->GetDevicePath());
+
+			if (RewardDeviceDispensingDurationSec <= 0.0f || RewardDeviceDispensingDurationSec > 25.0f)
+			{
+				RewardDeviceDispensingDurationSec = 25.0f;
+			}
+
+			GetWorld()->GetTimerManager().SetTimer(this->DispensingTimerHandle, this, &URewardDispenserComponent::StopDispensingRewards, 1.0f, false, RewardDeviceDispensingDurationSec);
+
 		}
-
-		GetWorld()->GetTimerManager().SetTimer(this->DispensingTimerHandle, this, &URewardDispenserComponent::StopDispensingRewards, 1.0f, false, RewardDeviceDispensingDurationSec);
-
 	}
 }
 
 void URewardDispenserComponent::StopDispensingRewards()
 {
 	URodentVRGameInstance* GameInstance = (URodentVRGameInstance*)UGameplayStatics::GetGameInstance(this);
-	for (UDevice* Device : GameInstance->GetRodentVRSettings()->GetRewardDevices())
+	if (GameInstance->GetRodentVRSettings()->GetIsNidaqEnabled())
 	{
-		UNIDAQ::control_NIDAQ(false, Device->GetDevicePath());
+		for (UDevice* Device : GameInstance->GetRodentVRSettings()->GetRewardDevices())
+		{
+			UNIDAQ::control_NIDAQ(false, Device->GetDevicePath());
+		}
 	}
 }

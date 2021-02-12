@@ -5,8 +5,6 @@
 #include <string>
 #include "RawInputDevicesReader.h"
 
-#define Debug(Time, Color, x) if(GEngine){GEngine->AddOnScreenDebugMessage(-1, Time, Color, x);}
-
 MouseMovementReader::MouseMovementReader(std::wstring MouseAName, std::wstring MouseBName)
 {
 	this->Delta[AXIS_X] = 0;

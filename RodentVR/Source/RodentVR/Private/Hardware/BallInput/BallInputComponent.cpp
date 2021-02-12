@@ -88,9 +88,6 @@ void UBallInputComponent::TickComponent(float DeltaTime, ELevelTick TickType, FA
 			float x = xMouseMovement * this->MouseAMultiplier * 0.001f;
 			float y = yMouseMovement * this->MouseBMultiplier * 0.001f;
 
-			//if (GEngine)
-			//	GEngine->AddOnScreenDebugMessage(-1, 0.01f, FColor::Yellow, *(FString::SanitizeFloat(x) + " " + FString::SanitizeFloat(y)));
-
 			APawn* OwnerPawn = (APawn*)this->GetOwner();
 			OwnerPawn->AddMovementInput(OwnerPawn->GetActorForwardVector(), x);
 			OwnerPawn->AddControllerYawInput(y);

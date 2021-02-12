@@ -5,7 +5,33 @@
 
 TArray<FString> UNIDAQServiceManager::NidaqServices = { TEXT("NIApplicationWebServer64"), TEXT("niauth"), TEXT("mxssvr"), TEXT("nidevldu"), TEXT("NIDomainService"), TEXT("nimDNSResponder"), TEXT("NINetworkDiscovery"), TEXT("lkClassAds"), TEXT("nipxicmsvc"), TEXT("nipxirmu"), TEXT("niroco"), TEXT("NiSvcLoc"), TEXT("nisds"), TEXT("NISystemWebServer"), TEXT("NITaggerService") };
 
+// https://vimalshekar.github.io/codesamples/Checking-If-Admin
+bool UNIDAQServiceManager::GetIsProcessElevated()
+{
+	bool bIsElevated = false;
+	HANDLE Token = nullptr;
+	TOKEN_ELEVATION Elevation;
+	DWORD dwSize;
 
+	if (OpenProcessToken(GetCurrentProcess(), TOKEN_QUERY, &Token))
+	{
+		if (GetTokenInformation(Token, TokenElevation, &Elevation, sizeof(Elevation), &dwSize))
+		{
+			bIsElevated = (bool)Elevation.TokenIsElevated;
+		}
+	}
+	
+	if (Token)
+	{
+		CloseHandle(Token);
+		Token = nullptr;
+	}
+
+	return bIsElevated;
+}
+
+
+// https://docs.microsoft.com/en-us/windows/win32/services/starting-a-service
 bool UNIDAQServiceManager::GetAreAllNidaqServicesRunning()
 {
 	for (FString service : UNIDAQServiceManager::NidaqServices)
@@ -21,15 +47,16 @@ bool UNIDAQServiceManager::GetAreAllNidaqServicesRunning()
 
 bool UNIDAQServiceManager::StartAllNidaqServices()
 {
+	bool bWereAllServicesStarted = true;
 	for (FString service : UNIDAQServiceManager::NidaqServices)
 	{
 		ServiceStatus result = UNIDAQServiceManager::StartWindowsService(service);
 		if (result != ServiceStatus::STATUS_RUNNING && result != ServiceStatus::STATUS_ALREADY_RUNNING)
 		{
-			return false;
+			bWereAllServicesStarted = false;
 		}
 	}
-	return true;
+	return bWereAllServicesStarted;
 }
 
 LPCWSTR UNIDAQServiceManager::ConvertString(FString stringValue)

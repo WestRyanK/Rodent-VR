@@ -2,7 +2,6 @@
 
 #include "Window.h"
 //#include "Engine/GameEngine.h"
-#define Debug(time, color, x) if(GEngine){GEngine->AddOnScreenDebugMessage(-1, time, color, x);}
 
 Window* Window::Instance = NULL;
 //HMODULE module_handle = NULL;
@@ -36,7 +35,6 @@ Window::Window()
 
 LRESULT CALLBACK WndProc(HWND Hwnd, unsigned int Msg, WPARAM Wparam, LPARAM Lparam)
 {
-	Debug(1.0f, FColor::Green, TEXT("WndProc"));
 	switch (Msg)
 	{
 	case WM_CLOSE:
@@ -99,14 +97,11 @@ void Window::PumpMessages()
 	this->IsRunningMutex.lock();
 	this->IsRunning = true;
 
-	//MSG msg;
-	// TODO: GetMessage stops working when you click on the window?...
 	while (this->IsRunning)// && GetMessage(&msg, this->hwnd, 0, 0))
 	{
 		Sleep(500);
 		this->IsRunningMutex.unlock();
 
-		Debug(1.0f, FColor::Green, TEXT("Pump Messages"));
 		//TranslateMessage(&msg);
 		//DispatchMessage(&msg);
 
