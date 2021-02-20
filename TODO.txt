@@ -1,4 +1,3 @@
-* Render dots on analysis page in a different/more performant way. Perhaps billboards, SpriteGroupComponent, or MeshInstanceComponent.
 * Use nDisplay to render to multiple screens.
 * Have unreal not crash when device name is wrong
 * Have some way to disable air puffers
@@ -12,6 +11,7 @@
 
 
 DONE:
+* Render dots on analysis page in a different/more performant way. Perhaps billboards, SpriteGroupComponent, or MeshInstanceComponent.
 * Simulator Crashing on start #### If this happens, make sure you have NI services running!
 * Opening a maze with a device that doesn't exist will crash. ??? Can't reproduce anymore???
 * Fix camera turning issue on BallInput page.
