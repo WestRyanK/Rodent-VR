@@ -31,7 +31,7 @@ UMazeSettings* UMazeSettingsXmlReader::LoadMazeFromFile(FString MazeSettingsFile
 			MazeSettings->SetMazeSettingsFileName(MazeSettingsFileName);
 			UMazeSettingsXmlReader::LoadMazeName(MazeSettings, MazeNode);
 			UMazeSettingsXmlReader::LoadPlayerStart(MazeSettings, MazeNode);
-			UMazeSettingsXmlReader::LoadBehaviorRecordingFileName(MazeSettings, MazeNode);
+			UMazeSettingsXmlReader::LoadBehaviorRecording(MazeSettings, MazeNode);
 			UMazeSettingsXmlReader::LoadTextures(MazeSettings, MazeNode);
 			UMazeSettingsXmlReader::LoadRegions(MazeSettings, MazeNode, RodentVRSettings);
 			UMazeSettingsXmlReader::LoadMazeObjects(MazeSettings, MazeNode);
@@ -62,7 +62,7 @@ void UMazeSettingsXmlReader::LoadPlayerStart(UMazeSettings* MazeSettings, rapidx
 }
 
 
-void UMazeSettingsXmlReader::LoadBehaviorRecordingFileName(UMazeSettings* MazeSettings, rapidxml::xml_node<>* MazeNode)
+void UMazeSettingsXmlReader::LoadBehaviorRecording(UMazeSettings* MazeSettings, rapidxml::xml_node<>* MazeNode)
 {
 	rapidxml::xml_node<>* BehaviorRecordingNode = MazeNode->first_node("BehaviorRecording");
 
@@ -70,6 +70,9 @@ void UMazeSettingsXmlReader::LoadBehaviorRecordingFileName(UMazeSettings* MazeSe
 	{
 		FString FileName = UXmlFileReader::GetStringFromAttribute(BehaviorRecordingNode, "FileName", "");
 		MazeSettings->SetBehaviorRecordingFileName(FileName);
+
+		float TimeBetweenSnapshots = UXmlFileReader::GetFloatFromAttribute(BehaviorRecordingNode, "TimeBetweenSnapshots", 0.1f);
+		MazeSettings->SetBehaviorRecordingTimeBetweenSnapshots(TimeBetweenSnapshots);
 	}
 
 }

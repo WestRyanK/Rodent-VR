@@ -17,6 +17,12 @@ class UBehaviorRecordingReader : public UObject
 
 public:
 	UFUNCTION(BlueprintCallable)
-		static void LoadBehaviorRecordingFromFile(UObject* OuterObject, FString BehaviorRecordingFileName, FString& SettingsFileName, FString& MazeFileName, TArray<UBehaviorSnapshot*>& BehaviorSnapshots);
+		static void LoadBehaviorRecordingFromFile(
+			UObject* OuterObject,
+			FString BehaviorRecordingFileName,
+			FString& SettingsFileName,
+			FString& MazeFileName,
+			int32 LoadEveryNthSnapshot,
+			TArray<UBehaviorSnapshot*>& BehaviorSnapshots);
 	
 };

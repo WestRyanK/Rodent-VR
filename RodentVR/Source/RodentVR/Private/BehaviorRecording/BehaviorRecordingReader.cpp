@@ -7,8 +7,16 @@
 #include "Misc/CString.h"
 
 
-void UBehaviorRecordingReader::LoadBehaviorRecordingFromFile(UObject* OuterObject, FString BehaviorRecordingFileName, FString& SettingsFileName, FString& MazeFileName, TArray<UBehaviorSnapshot*>& BehaviorSnapshots)
+void UBehaviorRecordingReader::LoadBehaviorRecordingFromFile(
+	UObject* OuterObject,
+	FString BehaviorRecordingFileName,
+	FString& SettingsFileName,
+	FString& MazeFileName,
+	int32 LoadEveryNthSnapshot,
+	TArray<UBehaviorSnapshot*>& BehaviorSnapshots)
 {
+	LoadEveryNthSnapshot = FMath::Max(1, LoadEveryNthSnapshot);
+
 	if (FPaths::FileExists(BehaviorRecordingFileName))
 	{
 		TArray<FString> FileLines;
@@ -18,7 +26,7 @@ void UBehaviorRecordingReader::LoadBehaviorRecordingFromFile(UObject* OuterObjec
 			SettingsFileName = FileLines[0];
 			MazeFileName = FileLines[1];
 			BehaviorSnapshots.Empty();
-			for (int i = 3; i < FileLines.Num() - 1; i++)
+			for (int i = 3; i < FileLines.Num() - 1; i += LoadEveryNthSnapshot)
 			{
 				TArray<FString> SplitLine;
 				FileLines[i].ParseIntoArray(SplitLine, TEXT("\t"), false);

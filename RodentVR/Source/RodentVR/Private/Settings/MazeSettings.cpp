@@ -57,6 +57,16 @@ void UMazeSettings::SetBehaviorRecordingFileName(FString BehaviorRecordingFileNa
 	this->BehaviorRecordingFileName = BehaviorRecordingFileNameValue;
 }
 
+float UMazeSettings::GetBehaviorRecordingTimeBetweenSnapshots()
+{
+	return this->BehaviorRecordingTimeBetweenSnapshots;
+}
+
+void UMazeSettings::SetBehaviorRecordingTimeBetweenSnapshots(float BehaviorRecordingTimeBetweenSnapshotsValue)
+{
+	this->BehaviorRecordingTimeBetweenSnapshots = BehaviorRecordingTimeBetweenSnapshotsValue;
+}
+
 UStartPositionSettings* UMazeSettings::GetPlayerStart()
 {
 	return this->PlayerStart;

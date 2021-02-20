@@ -4,6 +4,7 @@
 #include "BehaviorPathSpawner.h"
 #include "BehaviorPathNodeObject.h"
 #include "Kismet/GameplayStatics.h"
+#include "DrawDebugHelpers.h"
 
 FName UBehaviorPathSpawner::SpawnedPathActorTag = FName("SpawnedPathActor");
 TArray<ABehaviorPathNodeObject*> UBehaviorPathSpawner::SpawnedPathActors = TArray<ABehaviorPathNodeObject*>();

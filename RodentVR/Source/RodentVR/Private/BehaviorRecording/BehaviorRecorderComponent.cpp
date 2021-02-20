@@ -16,7 +16,8 @@
 // Sets default values for this component's properties
 UBehaviorRecorderComponent::UBehaviorRecorderComponent()
 {
-	PrimaryComponentTick.bCanEverTick = true;
+	PrimaryComponentTick.bCanEverTick = false;
+	//PrimaryComponentTick.bCanEverTick = true;
 }
 
 
@@ -34,6 +35,8 @@ void UBehaviorRecorderComponent::RemoveDelegates()
 	ARegion::OnRegionEnterDelegate.Remove(this, FName("OnRegionEnter"));
 	ASimulatorGameMode::OnMazeLoadedDelegate.Remove(this, FName("OnMazeLoaded"));
 	ASimulatorGameMode::OnMazeFinishedDelegate.Remove(this, FName("OnMazeFinished"));
+
+	GetWorld()->GetTimerManager().ClearTimer(RecordBehaviorTimerHandle);
 }
 
 void UBehaviorRecorderComponent::AddDelegates()
@@ -42,6 +45,19 @@ void UBehaviorRecorderComponent::AddDelegates()
 	ARegion::OnRegionEnterDelegate.AddDynamic(this, &UBehaviorRecorderComponent::OnRegionEnter);
 	ASimulatorGameMode::OnMazeLoadedDelegate.AddDynamic(this, &UBehaviorRecorderComponent::OnMazeLoaded);
 	ASimulatorGameMode::OnMazeFinishedDelegate.AddDynamic(this, &UBehaviorRecorderComponent::OnMazeFinished);
+	
+	float TimeBetweenSnapshots = 0.0f;
+	URodentVRGameInstance* GameInstance = Cast<URodentVRGameInstance>(UGameplayStatics::GetGameInstance(this));
+	if (IsValid(GameInstance))
+	{
+		UMazeSettings* MazeSettings = GameInstance->GetCurrentMaze();
+		if (IsValid(MazeSettings))
+		{
+			TimeBetweenSnapshots = MazeSettings->GetBehaviorRecordingTimeBetweenSnapshots();
+		}
+	}
+
+	GetWorld()->GetTimerManager().SetTimer(RecordBehaviorTimerHandle, this, &UBehaviorRecorderComponent::AddSnapshot, TimeBetweenSnapshots, true);
 }
 
 void UBehaviorRecorderComponent::EndPlay(EEndPlayReason::Type EndPlayReason)
@@ -135,10 +151,13 @@ void UBehaviorRecorderComponent::OnRegionEnter(URegionSettings* RegionEntered)
 
 
 // Called every frame
-void UBehaviorRecorderComponent::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
-{
-	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
+//void UBehaviorRecorderComponent::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
+//{
+//	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
+//}
 
+void UBehaviorRecorderComponent::AddSnapshot()
+{
 	float Time = this->GetWorld()->GetTimeSeconds() - this->StartTimeSec;
 	AActor* OwnerActor = this->GetOwner();
 	FVector Position = OwnerActor->GetActorLocation();

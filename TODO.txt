@@ -1,24 +1,24 @@
-* Simulator Crashing on start #### If this happens, make sure you have NI services running!
-* Enter/Leave Region should use stack
-
+* Render dots on analysis page in a different/more performant way. Perhaps billboards, SpriteGroupComponent, or MeshInstanceComponent.
+* Use nDisplay to render to multiple screens.
 * Have unreal not crash when device name is wrong
-* Opening a maze with a device that doesn't exist will crash. ??? Can't reproduce anymore???
 * Have some way to disable air puffers
 * Allow user to change ambient lighting in each maze
-* Fix camera turning issue on BallInput page.
 * Complete Analysis heatmap
-* Fix no exporting images on packaged build
-* Disable nidaq completely, under devices (Currently working on this!)
 * Make paths relative for behavior files
-* Hide debug logging?
 * Really big behavior files crash analysis
-* Exporting images still doesn't work.
 * 1-1.5 inches off the ground
 
 
 
 
 DONE:
+* Simulator Crashing on start #### If this happens, make sure you have NI services running!
+* Opening a maze with a device that doesn't exist will crash. ??? Can't reproduce anymore???
+* Fix camera turning issue on BallInput page.
+* Disable nidaq completely, under devices (Currently working on this!)
+* Hide debug logging?
+* Exporting images still doesn't work.
+* Fix no exporting images on packaged build
 * Start resolution lower
 * Didn't load graphics settings when opening file
 * Fix time limit 70 secs crashing

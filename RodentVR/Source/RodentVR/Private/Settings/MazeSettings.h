@@ -28,6 +28,8 @@ private:
 		FString MazeSettingsFileName;
 	UPROPERTY(BlueprintGetter = GetBehaviorRecordingFileName, BlueprintSetter = SetBehaviorRecordingFileName)
 		FString BehaviorRecordingFileName;
+	UPROPERTY(BlueprintGetter = GetBehaviorRecordingTimeBetweenSnapshots, BlueprintSetter = SetBehaviorRecordingTimeBetweenSnapshots)
+		float BehaviorRecordingTimeBetweenSnapshots = 0.1f;
 	UPROPERTY(BlueprintGetter = GetPlayerStart, BlueprintSetter = SetPlayerStart)
 		UStartPositionSettings* PlayerStart;
 	UPROPERTY(BlueprintGetter = GetRegionSettings)
@@ -56,6 +58,10 @@ public:
 		FString GetBehaviorRecordingFileName();
 	UFUNCTION(BlueprintSetter)
 		void SetBehaviorRecordingFileName(FString BehaviorRecordingFileNameValue);
+	UFUNCTION(BlueprintGetter)
+		float GetBehaviorRecordingTimeBetweenSnapshots();
+	UFUNCTION(BlueprintSetter)
+		void SetBehaviorRecordingTimeBetweenSnapshots(float BehaviorRecordingTimeBetweenSnapshotsValue);
 	UFUNCTION(BlueprintGetter)
 		UStartPositionSettings* GetPlayerStart();
 	UFUNCTION(BlueprintSetter)

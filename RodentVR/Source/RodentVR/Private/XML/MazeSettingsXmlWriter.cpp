@@ -29,6 +29,7 @@ void UMazeSettingsXmlWriter::SaveBehaviorRecording(rapidxml::xml_document<>* Doc
 {
 	rapidxml::xml_node<>* BehaviorRecordingNode = UXmlFileWriter::AddNode(Document, Root, "BehaviorRecording");
 	UXmlFileWriter::AddStringAttribute(Document, BehaviorRecordingNode, "FileName", MazeSettings->GetBehaviorRecordingFileName());
+	UXmlFileWriter::AddFloatAttribute(Document, BehaviorRecordingNode, "TimeBetweenSnapshots", MazeSettings->GetBehaviorRecordingTimeBetweenSnapshots());
 }
 
 void UMazeSettingsXmlWriter::SavePlayerStart(rapidxml::xml_document<>* Document, rapidxml::xml_node<>* Root, UMazeSettings* MazeSettings)

@@ -23,7 +23,7 @@ public:
 
 private:
 	static void LoadMazeName(UMazeSettings* MazeSettings, rapidxml::xml_node<>* MazeNode);
-	static void LoadBehaviorRecordingFileName(UMazeSettings* MazeSettings, rapidxml::xml_node<>* MazeNode);
+	static void LoadBehaviorRecording(UMazeSettings* MazeSettings, rapidxml::xml_node<>* MazeNode);
 	static void LoadTextures(UMazeSettings* MazeSettings, rapidxml::xml_node<>* MazeNode);
 	static void LoadPlayerStart(UMazeSettings* MazeSettings, rapidxml::xml_node<>* MazeNode);
 	static void LoadMazeObjects(UMazeSettings* MazeSettings, rapidxml::xml_node<>* MazeNode);
