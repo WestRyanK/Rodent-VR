@@ -6,8 +6,13 @@
 #include "GameFramework/Actor.h"
 #include "Math/Color.h"
 #include "Components/InstancedStaticMeshComponent.h"
+#include "Components/StaticMeshComponent.h"
 #include "Materials/MaterialInstanceDynamic.h"
+#include "Materials/Material.h"
 #include "BehaviorSnapshot.h"
+#include "Settings/MazeObjectType.h"
+#include "Engine/StaticMesh.h"
+#include "Engine/Texture2D.h"
 #include "BehaviorPath.generated.h"
 
 UCLASS(Blueprintable)
@@ -19,10 +24,22 @@ public:
 	// Sets default values for this actor's properties
 	ABehaviorPath();
 
+	UPROPERTY(BlueprintReadOnly, EditAnywhere)
+		UStaticMesh* PathNodeMesh;
+
+	UPROPERTY()
+		UStaticMeshComponent* PathNodeMeshComponent;
+
+	UPROPERTY(BlueprintReadOnly, EditAnywhere)
+		UMaterial* Material;
+	UPROPERTY(BlueprintReadOnly, EditAnywhere)
+		UTexture2D* MaterialTexture;
+
+
 	UPROPERTY(BlueprintGetter = GetSnapshots, BlueprintSetter = SetSnapshots)
 		TArray<UBehaviorSnapshot*> Snapshots;
 	UPROPERTY(BlueprintGetter = GetPathWidth, BlueprintSetter = SetPathWidth)
-		float PathWidth = 0.1f;
+		float PathWidth = 20.0f;
 	UPROPERTY(BlueprintGetter = GetPathColor, BlueprintSetter = SetPathColor)
 		FLinearColor PathColor = FLinearColor(1.0f, 1.0f, 1.0f, 1.0f);
 	UPROPERTY(BlueprintGetter = GetIsPathVisible, BlueprintSetter = SetIsPathVisible)
@@ -45,6 +62,8 @@ public:
 	UFUNCTION(BlueprintSetter)
 		void SetIsPathVisible(bool IsPathVisibleVal);
 
+	virtual void BeginPlay();
+
 private:
 	UFUNCTION()
 		void UpdatePath();
@@ -53,6 +72,7 @@ private:
 
 	UPROPERTY()
 		UMaterialInstanceDynamic* PathMaterial = nullptr;
+
 
 	UFUNCTION()
 		FTransform GetTransformFromSnapshot(UBehaviorSnapshot* Snapshot);
