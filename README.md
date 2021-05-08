@@ -46,5 +46,5 @@ There are several steps you will need to follow in order to get this project up 
 
 I recommend opening the project this way instead of simply clicking on the uproject file because it compiles the project with the latest changes, avoiding some mishaps that can happen if you open the uproject directly.
 
-
-
+## Contributing
+In order to contribute to this repository and continue working on RodentVR, please ask Professor Yorgason to reach out to me so I can add you as a collaborator on this repository. Until you are a collaborator, you will only be able to download the repository or make a fork/copy of it, but you will not be able to modify it here on Github.
