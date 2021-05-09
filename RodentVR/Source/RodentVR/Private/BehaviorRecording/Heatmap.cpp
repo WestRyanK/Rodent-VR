@@ -20,7 +20,7 @@ AHeatmap::AHeatmap()
 
 	UStaticMesh* Mesh = UAssetLoader::LoadAssetFromPath<UStaticMesh>(MeshPath);
 	this->HeatmapMesh->SetStaticMesh(Mesh);
-	
+
 	this->ColorGradient = NewObject<UColorGradient>();
 	this->ColorGradient->AddColorStop(0.0f, FLinearColor(0.0f, 1.0f, 0.0f, 1.0f));
 	this->ColorGradient->AddColorStop(50.0f, FLinearColor(1.0f, 0.0f, 0.0f, 1.0f));
@@ -96,9 +96,13 @@ void AHeatmap::UpdateHeatmap()
 		UTexture2D* HeatmapTexture = UHeatmapTextureGenerator::CreateHeatmapTexture(HeatmapStart, HeatmapEnd, this->BucketSize, this->Snapshots, this->ColorGradient);
 
 		this->InitHeatmapMaterial();
-		this->HeatmapMaterial->SetTextureParameterValue(FName("HeatmapTexture"), HeatmapTexture);
 		this->SetActorScale3D(BoxExtent * 2.0f);
 		this->SetActorLocation(Origin);
+
+		if (IsValid(HeatmapTexture))
+		{
+			this->HeatmapMaterial->SetTextureParameterValue(FName("HeatmapTexture"), HeatmapTexture);
+		}
 	}
 }
 

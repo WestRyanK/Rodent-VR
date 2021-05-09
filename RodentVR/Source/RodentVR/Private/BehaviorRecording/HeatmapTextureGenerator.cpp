@@ -11,6 +11,13 @@
 UTexture2D* UHeatmapTextureGenerator::CreateHeatmapTexture(FVector HeatmapStart, FVector HeatmapEnd, int BucketSize, TArray<UBehaviorSnapshot*> Snapshots, UColorGradient* ColorGradient)
 {
 	FIntPoint HeatmapSize = UHeatmapTextureGenerator::GetHeatmapSize(HeatmapStart, HeatmapEnd);
+
+	if (HeatmapSize.X == 0 || HeatmapSize.Y == 0)
+	{
+		UE_LOG(LogTemp, Error, TEXT("Heatmap size must be greater than 0 width and height. (Is the maze its based on null?)"));
+		return nullptr;
+	}
+
 	FIntPoint HeatmapBucketsCount = UHeatmapTextureGenerator::GetHeatmapBucketsCount(HeatmapSize, BucketSize);
 
 	TArray<float> Buckets = UHeatmapTextureGenerator::CreateBucketsFromSnapshots(HeatmapStart, HeatmapBucketsCount, BucketSize, Snapshots);
@@ -35,7 +42,16 @@ TArray<float> UHeatmapTextureGenerator::CreateBucketsFromSnapshots(FVector Heatm
 	{
 		FVector Position = Snapshot->GetPosition();
 		FIntPoint BucketIndex = UHeatmapTextureGenerator::GetBucketIndex(HeatmapStart, BucketSize, Position);
-		Buckets[BucketIndex.Y * HeatmapBucketsCount.X + BucketIndex.X] += 1;
+		int Index = BucketIndex.Y * HeatmapBucketsCount.X + BucketIndex.X;
+		if (Buckets.IsValidIndex(Index))
+		{
+			Buckets[Index] += 1;
+		}
+		else
+		{
+			UE_LOG(LogTemp, Error, TEXT("Invalid Bucket Index: %d, max bucket index: %d"), Index, Buckets.Num());
+			return Buckets;
+		}
 	}
 
 	return Buckets;
